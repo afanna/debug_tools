@@ -2,8 +2,8 @@
   "apiVersion": "batch-postprocess-v2",
   "id": "target-effect",
   "name": "目标效果评测（倒计时）",
-  "version": "1.4.0",
-  "description": "纯规则评测倒计时卡片：只对模型渲染做可见性、规范符合与目标语义的确定性打分，输出规则证据，不做期望图与模型渲染的视觉比对；失败明细在独立样本页面查看，评分卡缩略图仅用于定位；三个维度固定构成 100 分，不适用维度记 0 分并展示原因；mock 设备时间推导的天数只作参考、不计分；素材渲染规则只做诊断、不参与计分。",
+  "version": "1.6.0",
+  "description": "纯规则评测倒计时卡片：对模型渲染做规范符合（60）与可见性（40）的确定性打分，输出规则证据，不做期望图与模型渲染的视觉比对；失败明细在独立样本页面查看，评分卡缩略图仅用于定位；两个维度固定构成 100 分，不适用维度记 0 分并展示原因；版式与素材规则只做诊断，不影响分数与结论。",
   "entrypoint": "plugin.py",
   "dependence": [],
   "timeoutSeconds": 1800,
@@ -99,13 +99,6 @@
         "sortable": true
       },
       {
-        "key": "scenario",
-        "label": "场景",
-        "type": "string",
-        "filterable": true,
-        "sortable": true
-      },
-      {
         "key": "failed",
         "label": "失败项",
         "type": "number",
@@ -154,28 +147,6 @@
         "default": 1800,
         "minimum": 60,
         "maximum": 7200
-      },
-      "repeatGates": {
-        "type": "boolean",
-        "title": "重复场景参与目标门禁",
-        "default": false,
-        "description": "每周/每月/每年/按天重复的期望日期先只展示，人工确认后再开启"
-      },
-      "todayCountsAsNext": {
-        "type": "boolean",
-        "title": "今天算下一次触发",
-        "default": false
-      },
-      "timezone": {
-        "type": "string",
-        "title": "参考时区",
-        "default": "Asia/Shanghai"
-      },
-      "expectationsPath": {
-        "type": "string",
-        "title": "显式期望文件",
-        "default": "",
-        "description": "留空时读取运行目录下的 expectations.json"
       }
     }
   }

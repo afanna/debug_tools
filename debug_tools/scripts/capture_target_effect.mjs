@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// 目标效果评测采集：把原始与注入期望后的 DSL 依次送入本地渲染器，
+// 目标效果评测采集：把原始 DSL 送入本地渲染器，
 // 采集 3x 截图、DOM 盒模型与 Web 可见性证据。不修改批跑产物。
 
 import fs from 'node:fs/promises';

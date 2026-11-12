@@ -18,7 +18,6 @@ assert SPEC is not None and SPEC.loader is not None
 plugin = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(plugin)
 
-oracle_module = plugin.te_oracle
 spec_module = plugin.te_spec
 dom_module = plugin.te_dom
 
@@ -27,18 +26,6 @@ dom_module = plugin.te_dom
 def work_dir() -> Any:
     with tempfile.TemporaryDirectory() as name:
         yield Path(name)
-
-REQUEST = {
-    "candidateDataBindings": [
-        {
-            "capabilityId": "GetDateCounter",
-            "arguments": {"targetDate": "2026-12-19"},
-            "writeResultTo": "/data/dateCounter",
-            "candidateOutputFields": ["/days", "/relationText", "/targetDateText"],
-        }
-    ],
-    "deviceInfo": {"time": "20261103090000000"},
-}
 
 
 def _component(component_id: str, component: str, **rest: Any) -> dict[str, Any]:
@@ -252,7 +239,7 @@ def _evidence(
     }
 
 
-def _injected_evidence(days: int = 46, relation: str = "还剩") -> dict[str, Any]:
+def _rendered_evidence(days: int = 46, relation: str = "还剩") -> dict[str, Any]:
     text = f"考试 {relation} {days} 天 考试日期 2026/12/19"
     return _evidence(
         text,
@@ -265,105 +252,15 @@ def _injected_evidence(days: int = 46, relation: str = "还剩") -> dict[str, An
     )
 
 
-def test_q001_oracle_derives_days_and_relation() -> None:
-    oracle = oracle_module.build_oracle("Q001", REQUEST)
-    assert oracle.scenario == "once"
-    assert oracle.reference_date == "2026-11-03"
-    assert oracle.target_date == "2026-12-19"
-    assert oracle.days == 46
-    assert oracle.relation_text == "还剩"
-    assert oracle.target_date_text == "2026/12/19"
-    assert oracle.gate is True
-    assert oracle.provenance["days"] == "derived"
-    assert oracle.write_result_to == "/data/dateCounter"
-
-
-def test_placeholder_days_are_not_judged() -> None:
-    components = plugin.te_binding.parse_genui(_genui(_q001_components()))["components"]
-    oracle = oracle_module.build_oracle("Q001", REQUEST)
-    results, _ = dom_module.evaluate_dom(
-        _injected_evidence(),
-        oracle,
-        components,
-        original=_evidence(
-            "考试 还剩 3 天 考试日期 2026/12/19",
-            [
-                _node("title_title", "考试 还剩"),
-                _node("primary_value", "3", font_size=56),
-                _node("primary_unit", "天"),
-                _node("support_item0_value", "2026/12/19"),
-            ],
-        ),
-    )
-    target_failures = [
-        item for item in results if item.rule.startswith("TARGET.") and item.status == "fail"
-    ]
-    assert target_failures == []
-
-
-def test_visible_mismatch_is_reported() -> None:
-    components = plugin.te_binding.parse_genui(_genui(_q001_components()))["components"]
-    oracle = oracle_module.build_oracle("Q001", REQUEST)
-    results, _ = dom_module.evaluate_dom(
-        _injected_evidence(days=3),
-        oracle,
-        components,
-        original=_evidence(
-            "考试 还剩 3 天 考试日期 2026/12/19",
-            [
-                _node("title_title", "考试 还剩"),
-                _node("primary_value", "3", font_size=56),
-                _node("primary_unit", "天"),
-                _node("support_item0_value", "2026/12/19"),
-            ],
-        ),
-    )
-    rules = {item.rule for item in results if item.status == "fail"}
-    assert "TARGET.DAYS_MISMATCH" in rules
-    assert "TARGET.BINDING_VALUE_MISMATCH" in rules
-
-
-def test_missing_binding_is_reported() -> None:
-    components = _q001_components()
-    components["title_title"]["content"] = "考试"
-    oracle = oracle_module.build_oracle("Q001", REQUEST)
-    results, _ = dom_module.evaluate_dom(
-        _injected_evidence(),
-        oracle,
-        components,
-        original=_injected_evidence(),
-    )
-    rules = {item.rule for item in results if item.status == "fail"}
-    assert "TARGET.BINDING_MISSING" in rules
-    missing = next(item for item in results if item.rule == "TARGET.BINDING_MISSING")
-    assert missing.evidence["path"] == "/data/dateCounter/relationText"
-
-
-def test_injection_appends_update_rows_without_touching_source() -> None:
-    source = _genui(_q001_components())
-    oracle = oracle_module.build_oracle("Q001", REQUEST)
-    injected_text, injected = oracle_module.injected_jsonl(source, oracle)
-    assert len(injected) == 3
-    assert injected[0] == {"path": "/data/dateCounter/days", "value": 46}
-    rows = [json.loads(line) for line in injected_text.splitlines() if line.strip()]
-    assert len(rows) == len([line for line in source.splitlines() if line.strip()]) + 3
-    updates = [row["updateDataModel"] for row in rows if "updateDataModel" in row]
-    assert updates[-1]["path"] == "/data/dateCounter/targetDateText"
-    assert all(update["value"] != 3 for update in updates[-3:])
-    assert "46" not in source
-
-
-def test_injection_skipped_without_write_target() -> None:
-    oracle = oracle_module.build_oracle("Q001", {"deviceInfo": {"time": "20261103090000000"}})
-    source = _genui(_q001_components())
-    injected_text, injected = oracle_module.injected_jsonl(source, oracle)
-    assert injected == []
-    assert injected_text == source
+def _days_data(days: int | None = 46) -> dict[str, Any]:
+    if days is None:
+        return {}
+    return {"data": {"dateCounter": {"days": days}}}
 
 
 def test_spec_compliant_card_passes() -> None:
     components = _compliant_components()
-    results = spec_module.evaluate_spec(components, {}, size="2x2", expected_days=46)
+    results = spec_module.evaluate_spec(components, _days_data(46), size="2x2")
     failed = [item.rule for item in results if item.status == "fail"]
     assert failed == []
     for rule in ("SPEC.RADIUS", "SPEC.PADDING", "SPEC.BG_FULL_BLEED", "SPEC.MASK"):
@@ -371,9 +268,7 @@ def test_spec_compliant_card_passes() -> None:
 
 
 def test_spec_reports_real_q001_gaps() -> None:
-    results = spec_module.evaluate_spec(
-        _q001_components(), {}, size="2x2", expected_days=46
-    )
+    results = spec_module.evaluate_spec(_q001_components(), _days_data(46), size="2x2")
     by_rule = {item.rule: item.status for item in results}
     assert by_rule["SPEC.THEME_ELIGIBLE"] == "pass"
     assert by_rule["SPEC.RADIUS"] == "pass"
@@ -399,10 +294,21 @@ def test_spec_reports_real_q001_gaps() -> None:
 def test_long_days_use_relaxed_primary_font() -> None:
     components = _compliant_components()
     components["primary_value"]["styles"]["fontSize"] = 44
-    results = spec_module.evaluate_spec(components, {}, size="2x2", expected_days=365)
+    results = spec_module.evaluate_spec(components, _days_data(365), size="2x2")
     primary = next(item for item in results if item.rule == "SPEC.PRIMARY_FONT")
     assert primary.status == "pass"
     assert primary.expected == "长数字 29–56"
+
+
+def test_short_days_require_standard_primary_font() -> None:
+    components = _compliant_components()
+    components["primary_value"]["styles"]["fontSize"] = 44
+    results = spec_module.evaluate_spec(components, _days_data(3), size="2x2")
+    primary = next(item for item in results if item.rule == "SPEC.PRIMARY_FONT")
+    assert primary.status == "fail"
+    assert primary.expected == "56 或 38"
+    assert primary.evidence["days"] == 3
+    assert primary.evidence["digits"] == 1
 
 
 # ---------------------------------------------------------------- rubric v2
@@ -412,15 +318,14 @@ def _spec_status(
     components: dict[str, Any],
     *,
     size: str = "2x2",
-    expected_days: int | None = 46,
+    data: dict[str, Any] | None = None,
     theme: dict[str, Any] | None = None,
     user_query: str = "",
 ) -> dict[str, str]:
     results = spec_module.evaluate_spec(
         components,
-        {},
+        data if data is not None else _days_data(46),
         size=size,
-        expected_days=expected_days,
         theme=theme,
         user_query=user_query,
     )
@@ -458,7 +363,7 @@ def test_spec_mask_band_and_layer_order() -> None:
     components["root"]["children"] = ["mask", "theme_base", "__genui_render_component__root"]
     result = next(
         item
-        for item in spec_module.evaluate_spec(components, {}, size="2x2", expected_days=46)
+        for item in spec_module.evaluate_spec(components, _days_data(46), size="2x2")
         if item.rule == "SPEC.MASK"
     )
     assert result.status == "fail"
@@ -468,7 +373,7 @@ def test_spec_mask_band_and_layer_order() -> None:
     components["root"]["children"] = ["theme_base", "__genui_render_component__root", "mask"]
     result = next(
         item
-        for item in spec_module.evaluate_spec(components, {}, size="2x2", expected_days=46)
+        for item in spec_module.evaluate_spec(components, _days_data(46), size="2x2")
         if item.rule == "SPEC.MASK"
     )
     assert result.status == "fail"
@@ -538,7 +443,7 @@ def test_content_type_is_internally_consistent() -> None:
         "Divider",
         styles={"width": 8, "height": 8, "backgroundColor": "#FFFFFFFF"},
     )
-    results = spec_module.evaluate_spec(pattern_only, {}, size="2x2", expected_days=46)
+    results = spec_module.evaluate_spec(pattern_only, _days_data(46), size="2x2")
     content = next(item for item in results if item.rule == "SPEC.CONTENT_TYPE")
     assert content.status == "pass"
     assert content.actual == "C5 圆球"
@@ -553,7 +458,7 @@ def test_content_type_is_internally_consistent() -> None:
 
 
 def _pattern_result(components: dict[str, Any], *, size: str = "2x2") -> Any:
-    results = spec_module.evaluate_spec(components, {}, size=size, expected_days=46)
+    results = spec_module.evaluate_spec(components, _days_data(46), size=size)
     return next(item for item in results if item.rule == "SPEC.PATTERN_GEOMETRY")
 
 
@@ -621,7 +526,7 @@ def test_action_pattern_flags_standalone_button() -> None:
         content="添加日程",
         styles={},
     )
-    results = spec_module.evaluate_spec(components, {}, size="2x2", expected_days=46)
+    results = spec_module.evaluate_spec(components, _days_data(46), size="2x2")
     action = next(item for item in results if item.rule == "SPEC.ACTION_PATTERN")
     assert action.status == "fail"
     assert action.severity == "minor"
@@ -650,9 +555,8 @@ def test_ineligible_theme_skips_spec_rules() -> None:
     profile = plugin._theme_profile("fusion-ball-battery-teal")
     results = spec_module.evaluate_spec(
         _compliant_components(),
-        {},
+        _days_data(46),
         size="2x2",
-        expected_days=46,
         theme=profile,
     )
     assert [item.rule for item in results] == ["SPEC.THEME_ELIGIBLE"]
@@ -663,9 +567,8 @@ def test_ineligible_theme_skips_spec_rules() -> None:
 def test_user_preferences_exempt_conflicting_rules() -> None:
     background = spec_module.evaluate_spec(
         _q001_components(),
-        {},
+        _days_data(46),
         size="2x2",
-        expected_days=46,
         user_query="背景用纯色，不要蒙层",
     )
     by_rule = {item.rule: item.status for item in background}
@@ -677,9 +580,8 @@ def test_user_preferences_exempt_conflicting_rules() -> None:
 
     colors = spec_module.evaluate_spec(
         _q001_components(),
-        {},
+        _days_data(46),
         size="2x2",
-        expected_days=46,
         user_query="数字用红色",
     )
     color_rules = {item.rule: item.status for item in colors}
@@ -766,104 +668,6 @@ def test_theme_extraction_matches_registry_sources() -> None:
             encoding="utf-8",
         )
         assert plugin._extract_theme_id(final_dir, {}) == theme_id
-
-
-def test_repeat_scenarios_display_only_by_default() -> None:
-    request = {
-        "candidateDataBindings": [
-            {
-                "capabilityId": "GetDateCounter",
-                "arguments": {
-                    "targetDate": "2026-11-05",
-                    "repeat": {"unit": "week"},
-                },
-                "writeResultTo": "/data/dateCounter",
-            }
-        ],
-        "deviceInfo": {"time": "20261103090000000"},
-    }
-    display = oracle_module.build_oracle("Q100", request)
-    assert display.scenario == "repeat_week"
-    assert display.days == 2
-    assert display.gate is False
-
-    gated = oracle_module.build_oracle("Q100", request, repeat_gates=True)
-    assert gated.gate is True
-    assert gated.provenance["days"] == "derived"
-
-
-def test_same_day_repeat_needs_explicit_policy() -> None:
-    request = {
-        "candidateDataBindings": [
-            {
-                "capabilityId": "GetDateCounter",
-                "arguments": {"targetDate": "2026-11-03", "repeat": {"unit": "week"}},
-                "writeResultTo": "/data/dateCounter",
-            }
-        ],
-        "deviceInfo": {"time": "20261103090000000"},
-    }
-    blocked = oracle_module.build_oracle("Q101", request, repeat_gates=True)
-    assert blocked.gate is False
-    assert blocked.days == 0
-    assert any("今天是否算下一次" in note for note in blocked.notes)
-
-    allowed = oracle_module.build_oracle(
-        "Q101", request, repeat_gates=True, today_counts_as_next=True
-    )
-    assert allowed.gate is True
-    assert allowed.relation_text == "就是今天"
-
-
-def test_lunar_and_missing_time_do_not_gate() -> None:
-    lunar = {
-        "candidateDataBindings": [
-            {
-                "capabilityId": "GetDateCounter",
-                "arguments": {"targetDate": "2026-12-19", "calendar": "lunar"},
-                "writeResultTo": "/data/dateCounter",
-            }
-        ],
-        "deviceInfo": {"time": "20261103090000000"},
-    }
-    value = oracle_module.build_oracle("Q102", lunar)
-    assert value.scenario == "lunar_once"
-    assert value.gate is False
-    assert value.days is None
-
-    no_time = oracle_module.build_oracle(
-        "Q103", {"candidateDataBindings": lunar["candidateDataBindings"]}
-    )
-    assert no_time.gate is False
-    assert no_time.days is None
-
-
-def test_explicit_expectation_override_gates() -> None:
-    request = {
-        "candidateDataBindings": [
-            {
-                "capabilityId": "GetDateCounter",
-                "arguments": {"targetDate": "2026-12-19", "calendar": "lunar"},
-                "writeResultTo": "/data/dateCounter",
-            }
-        ],
-        "deviceInfo": {"time": "20261103090000000"},
-    }
-    override = {
-        "scenario": "once",
-        "expectedDays": 46,
-        "expectedRelationText": "还剩",
-        "expectedTargetDateText": "2026/12/19",
-        "provenance": {
-            "days": "explicit",
-            "relationText": "explicit",
-            "targetDateText": "explicit",
-        },
-    }
-    value = oracle_module.build_oracle("Q104", request, override=override)
-    assert value.scenario == "once"
-    assert value.gate is True
-    assert value.days == 46
 
 
 # ---------------------------------------------------------------- 同因去重
@@ -1143,7 +947,6 @@ def _make_sample(
     *,
     components: dict[str, Any] | None = None,
     data: dict[str, Any] | None = None,
-    request: dict[str, Any] | None = None,
     blocks: dict[str, Any] | None = None,
     query: str | None = None,
 ) -> tuple[dict[str, Any], Path, Path]:
@@ -1152,9 +955,6 @@ def _make_sample(
     attempt.mkdir(parents=True)
     (attempt / "genui.jsonl").write_text(
         _genui(components or _q001_components(), data), encoding="utf-8"
-    )
-    (attempt / "request.json").write_text(
-        json.dumps(request or REQUEST, ensure_ascii=False), encoding="utf-8"
     )
     if blocks is not None:
         (attempt / "blocks.json").write_text(
@@ -1176,15 +976,16 @@ def _make_sample(
     return context, output_dir, attempt
 
 
-def test_process_sample_writes_oracle_and_injection(work_dir: Path) -> None:
+def test_process_sample_writes_static_spec(work_dir: Path) -> None:
     context, output_dir, _ = _make_sample(work_dir, components=_compliant_components())
     result = plugin.process_sample(context)
-    assert result["facts"]["expectedDays"] == 46
-    assert result["facts"]["scenario"] == "once"
-    assert (output_dir / "oracle.json").is_file()
-    assert (output_dir / "injected_genui.jsonl").is_file()
+    assert "scenario" not in result["facts"]
+    assert "expectedDays" not in result["facts"]
+    assert not (output_dir / "oracle.json").exists()
+    assert not (output_dir / "injected_genui.jsonl").exists()
     static = json.loads((output_dir / "sample_static.json").read_text(encoding="utf-8"))
-    assert len(static["injected"]) == 3
+    assert "oracle" not in static and "injected" not in static
+    assert static["rubricVersion"] == 6
 
     manifest = json.loads((PLUGIN_DIR / "plugin.json").read_text(encoding="utf-8"))
     PostprocessManager._validate_manifest(manifest, PLUGIN_DIR)
@@ -1202,24 +1003,16 @@ def test_process_sample_writes_oracle_and_injection(work_dir: Path) -> None:
 def test_evaluate_sample_with_capture_evidence(work_dir: Path) -> None:
     context, output_dir, _ = _make_sample(work_dir, components=_compliant_components())
     plugin.process_sample(context)
-    injected = _injected_evidence()
-    original = _injected_evidence(days=3, relation="还剩")
-    (output_dir / "dom_injected.json").write_text(
-        json.dumps(injected, ensure_ascii=False), encoding="utf-8"
-    )
+    evidence = _rendered_evidence()
     (output_dir / "dom_original.json").write_text(
-        json.dumps(original, ensure_ascii=False), encoding="utf-8"
+        json.dumps(evidence, ensure_ascii=False), encoding="utf-8"
     )
-    capture = {
-        ("Q001", "original"): {"ok": True},
-        ("Q001", "injected"): {"ok": True},
-    }
+    capture = {("Q001", "original"): {"ok": True}}
     verdict = plugin._evaluate_sample("Q001", output_dir, capture, 3)
     assert verdict["status"] == "success"
-    assert verdict["verdict"] == "通过（数据语义仅参考）"
+    assert verdict["verdict"] == "通过"
     assert verdict["counts"]["failed"] == 0
-    target = [item for item in verdict["results"] if item["rule"].startswith("TARGET.")]
-    assert target and all(item["status"] == "na" for item in target)
+    assert not [item for item in verdict["results"] if item["rule"].startswith("TARGET.")]
     assert (output_dir / "verdict.json").is_file()
 
 
@@ -1233,7 +1026,7 @@ def test_evaluate_sample_waives_title_ellipsis_when_dom_proves_fit(
         item for item in static["spec"] if item["rule"] == "SPEC.TITLE_ELLIPSIS"
     )
     assert declared["status"] == "fail"
-    evidence = _injected_evidence()
+    evidence = _rendered_evidence()
     evidence["schemaVersion"] = "target-dom-v2"
     title = next(node for node in evidence["nodes"] if node["id"] == "title_title")
     title.update(
@@ -1242,19 +1035,13 @@ def test_evaluate_sample_waives_title_ellipsis_when_dom_proves_fit(
         clientWidth=106.0,
         scrollWidth=108.0,
     )
-    (output_dir / "dom_injected.json").write_text(
-        json.dumps(evidence, ensure_ascii=False), encoding="utf-8"
-    )
     (output_dir / "dom_original.json").write_text(
         json.dumps(evidence, ensure_ascii=False), encoding="utf-8"
     )
     verdict = plugin._evaluate_sample(
         "Q001",
         output_dir,
-        {
-            ("Q001", "original"): {"ok": True},
-            ("Q001", "injected"): {"ok": True},
-        },
+        {("Q001", "original"): {"ok": True}},
         3,
     )
     title_rule = next(
@@ -1274,31 +1061,20 @@ def test_capture_failure_marks_sample_failed(work_dir: Path) -> None:
 def test_finalize_merges_images_and_summary(work_dir: Path) -> None:
     context, output_dir, _ = _make_sample(work_dir, components=_compliant_components())
     plugin.process_sample(context)
-    injected = _injected_evidence()
-    (output_dir / "dom_injected.json").write_text(
-        json.dumps(injected, ensure_ascii=False), encoding="utf-8"
-    )
+    evidence = _rendered_evidence()
     (output_dir / "dom_original.json").write_text(
-        json.dumps(injected, ensure_ascii=False), encoding="utf-8"
+        json.dumps(evidence, ensure_ascii=False), encoding="utf-8"
     )
-    png = output_dir / "injected.png"
     from PIL import Image
 
-    Image.new("RGB", (150, 150), (31, 31, 153)).save(png)
-    (output_dir / "original.png").write_bytes(png.read_bytes())
+    Image.new("RGB", (150, 150), (31, 31, 153)).save(output_dir / "original.png")
     verdict = plugin._evaluate_sample(
         "Q001",
         output_dir,
-        {
-            ("Q001", "original"): {"ok": True},
-            ("Q001", "injected"): {"ok": True},
-        },
+        {("Q001", "original"): {"ok": True}},
         3,
     )
-    verdict["images"] = {
-        "original": "original.png",
-        "injected": "injected.png",
-    }
+    verdict["images"] = {"original": "original.png"}
     (output_dir / "verdict.json").write_text(
         json.dumps(verdict, ensure_ascii=False), encoding="utf-8"
     )
@@ -1344,33 +1120,14 @@ def _result(rule: str, status: str) -> dict[str, Any]:
     return {"rule": rule, "status": status, "title": rule}
 
 
-def _oracle_dict(
-    *,
-    gate: bool = True,
-    provenance: dict[str, str] | None = None,
-) -> dict[str, Any]:
-    value: dict[str, Any] = {
-        "gate": gate,
-        "fields": ["/days", "/relationText", "/targetDateText"],
-    }
-    if provenance is None:
-        provenance = {
-            "days": "explicit",
-            "relationText": "explicit",
-            "targetDateText": "explicit",
-        }
-    if provenance:
-        value["provenance"] = provenance
-    return value
+def _score_context() -> dict[str, Any]:
+    return {}
 
 
 def _all_pass_results() -> list[dict[str, Any]]:
     return [
         _result(rule, "pass")
         for rule in (
-            "TARGET.DAYS_MISMATCH",
-            "TARGET.RELATION_TEXT_MISMATCH",
-            "TARGET.VISIBLE_EXPECTATION_MISSING",
             "VIS.OVERFLOW",
             "VIS.CONTRAST",
             "SPEC.RADIUS",
@@ -1381,104 +1138,52 @@ def _all_pass_results() -> list[dict[str, Any]]:
 
 
 def test_score_full_pass_is_hundred() -> None:
-    score = plugin.te_score.score_sample(_all_pass_results(), _oracle_dict())
+    score = plugin.te_score.score_sample(_all_pass_results(), _score_context())
     assert score["total"] == 100.0
     assert score["band"] == "优秀"
-    assert score["capped"] is False
+    assert score["availableWeight"] == 100.0
     dimensions = {item["key"]: item for item in score["dimensions"]}
-    assert dimensions["target"]["score"] == 25.0
-    assert dimensions["visibility"]["score"] == 37.5
-    assert dimensions["spec"]["score"] == 37.5
+    assert dimensions["spec"]["score"] == 60.0
+    assert dimensions["visibility"]["score"] == 40.0
+    assert "target" not in dimensions
     assert "asset" not in dimensions
 
 
-def test_score_target_failure_caps_at_59_9() -> None:
+def test_score_visibility_failure_deducts() -> None:
     results = _all_pass_results()
-    results[0] = _result("TARGET.DAYS_MISMATCH", "fail")
-    score = plugin.te_score.score_sample(results, _oracle_dict())
-    assert score["capped"] is True
-    assert score["total"] == 59.9
-    assert score["band"] == "不合格"
-    assert "封顶" in score["note"]
-    target = next(item for item in score["dimensions"] if item["key"] == "target")
-    assert target["score"] == 16.7
+    results[0] = _result("VIS.OVERFLOW", "fail")
+    score = plugin.te_score.score_sample(results, _score_context())
+    assert score["total"] == 80.0
+    assert plugin.te_score.dimension_score(score, "visibility") == 20.0
+    assert plugin.te_score.dimension_score(score, "spec") == 60.0
+    assert score["note"] == ""
 
 
-def test_score_ungated_target_failure_is_not_capped() -> None:
-    results = _all_pass_results()
-    results[0] = _result("TARGET.DAYS_MISMATCH", "fail")
-    score = plugin.te_score.score_sample(results, _oracle_dict(gate=False))
-    assert score["capped"] is False
-    assert score["total"] == 91.7
-
-
-def test_score_skips_target_when_expectation_is_mock_derived() -> None:
-    derived = {
-        "days": "derived",
-        "relationText": "derived",
-        "targetDateText": "derived",
-    }
-    score = plugin.te_score.score_sample(
-        _all_pass_results(), _oracle_dict(provenance=derived)
-    )
-    target = next(item for item in score["dimensions"] if item["key"] == "target")
-    assert target["applicable"] is False
-    assert target["score"] == 0.0
-    assert "mock" in target["reason"]
-    assert score["total"] == 75.0
-    assert score["availableWeight"] == 100.0
-    parts = sum(float(item["score"] or 0.0) for item in score["dimensions"])
-    assert round(parts, 1) == score["total"]
-
-
-def test_target_applicable_requires_every_field_explicit() -> None:
-    explicit = {
-        "days": "explicit",
-        "relationText": "explicit",
-        "targetDateText": "explicit",
-    }
-    assert plugin.te_score.target_applicable(_oracle_dict(provenance=explicit)) is True
-    mixed = dict(explicit, days="derived")
-    assert plugin.te_score.target_applicable(_oracle_dict(provenance=mixed)) is False
-    assert plugin.te_score.target_applicable({}) is False
-
-
-def test_settle_targets_marks_mock_expectation_as_reference_only() -> None:
-    derived = {"days": "derived", "relationText": "derived"}
-    oracle = _oracle_dict(provenance=derived)
+def test_layout_failures_are_diagnostic_only() -> None:
     results = [
-        plugin._result_from_dict(_result("TARGET.DAYS_MISMATCH", "fail")),
+        plugin._result_from_dict(_result("LAYOUT.CARD_OVERFLOW", "fail")),
         plugin._result_from_dict(_result("SPEC.MASK", "pass")),
     ]
-    settled = plugin._settle_targets(results, oracle, gate=True)
-    assert settled[0].status == "na"
-    assert settled[1].status == "pass"
-    assert plugin._verdict_text(settled, gate=True, target_scored=False) == (
-        "通过（数据语义仅参考）"
-    )
-
-
-def test_settle_targets_keeps_explicit_expectation_gated() -> None:
-    oracle = _oracle_dict()
-    results = [plugin._result_from_dict(_result("TARGET.DAYS_MISMATCH", "fail"))]
-    settled = plugin._settle_targets(results, oracle, gate=False)
-    assert settled[0].status == "pending"
+    assert plugin._sample_status(results) == "success"
+    assert plugin._verdict_text(results) == "通过"
+    assert plugin._counts(results)["failed"] == 0
+    assert plugin._issue_results(results) == []
 
 
 def test_score_pending_counts_half() -> None:
     results = [_result("VIS.CONTRAST", "pending"), _result("SPEC.MASK", "pending")]
-    score = plugin.te_score.score_sample(results, _oracle_dict(gate=False))
-    assert score["total"] == 37.6
+    score = plugin.te_score.score_sample(results, _score_context())
+    assert score["total"] == 50.0
     assert score["band"] == "不合格"
     dimension = next(item for item in score["dimensions"] if item["key"] == "visibility")
-    assert dimension["score"] == 18.8
+    assert dimension["score"] == 20.0
     assert dimension["pending"] == 1
 
 
 def test_asset_rules_are_diagnostic_only() -> None:
     results = _all_pass_results()
     results = [item for item in results if not item["rule"].startswith("ASSET.")]
-    score = plugin.te_score.score_sample(results, _oracle_dict())
+    score = plugin.te_score.score_sample(results, _score_context())
     assert score["total"] == 100.0
     assert score["availableWeight"] == 100.0
     assert all(item["key"] != "asset" for item in score["dimensions"])
@@ -1486,27 +1191,25 @@ def test_asset_rules_are_diagnostic_only() -> None:
 
     failed_asset = _all_pass_results()
     failed_asset.append(_result("ASSET.RENDERED", "fail"))
-    assert plugin.te_score.score_sample(failed_asset, _oracle_dict())["total"] == 100.0
+    assert plugin.te_score.score_sample(failed_asset, _score_context())["total"] == 100.0
 
 
 def test_score_l0_failure_is_zero() -> None:
     results = _all_pass_results() + [_result("L0.CAPTURE_FAILED", "fail")]
-    score = plugin.te_score.score_sample(results, _oracle_dict())
+    score = plugin.te_score.score_sample(results, _score_context())
     assert score["total"] == 0.0
     assert score["fatal"] is True
     assert all(item["applicable"] is False for item in score["dimensions"])
 
 
-def test_score_ignores_placeholder_rules_and_na() -> None:
-    results = [
-        _result("TARGET.DAYS_MISMATCH", "pass"),
-        _result("TARGET.BINDING_MISSING", "na"),
-        _result("SPEC.RADIUS", "na"),
-    ]
-    score = plugin.te_score.score_sample(results, _oracle_dict())
-    target = next(item for item in score["dimensions"] if item["key"] == "target")
-    assert target["checks"] == 1
-    assert target["score"] == 25.0
+def test_score_na_rules_keep_dimension_denominator() -> None:
+    results = [_result("SPEC.RADIUS", "na")]
+    score = plugin.te_score.score_sample(results, _score_context())
+    assert score["total"] == 0.0
+    assert score["availableWeight"] == 100.0
+    dimensions = {item["key"]: item for item in score["dimensions"]}
+    assert dimensions["spec"]["applicable"] is False
+    assert dimensions["visibility"]["applicable"] is False
 
 
 # ---------------------------------------------------------------- 素材渲染
@@ -1587,12 +1290,12 @@ def test_score_items_expose_rule_level_deductions() -> None:
         _result("SPEC.RADIUS", "pass"),
         _result("SPEC.MASK", "fail"),
     ]
-    score = plugin.te_score.score_sample(results, _oracle_dict(gate=False))
+    score = plugin.te_score.score_sample(results, _score_context())
     spec = next(item for item in score["dimensions"] if item["key"] == "spec")
     items = {item["rule"]: item for item in spec["items"]}
     assert items["SPEC.RADIUS"]["deduction"] == 0.0
-    assert items["SPEC.MASK"]["deduction"] == 18.8
-    assert items["SPEC.MASK"]["weight"] == 18.8
+    assert items["SPEC.MASK"]["deduction"] == 30.0
+    assert items["SPEC.MASK"]["weight"] == 30.0
     assert items["SPEC.MASK"]["status"] == "fail"
 
 
@@ -1601,23 +1304,14 @@ def test_score_items_sum_matches_dimension_loss() -> None:
         _result("VIS.TEXT_CLIPPED", "fail"),
         _result("VIS.TEXT_OVERLAP", "pending"),
         _result("VIS.CONTRAST", "pass"),
+        _result("VIS.TEXT_OVERFLOW", "pass"),
     ]
-    score = plugin.te_score.score_sample(results, _oracle_dict(gate=False))
+    score = plugin.te_score.score_sample(results, _score_context())
     visibility = next(item for item in score["dimensions"] if item["key"] == "visibility")
     loss = sum(item["deduction"] for item in visibility["items"])
-    assert visibility["score"] == 18.8
-    assert round(loss, 1) == round(37.5 - visibility["score"], 1)
+    assert visibility["score"] == 25.0
+    assert round(loss, 1) == round(40.0 - visibility["score"], 1)
     assert visibility["items"][1]["status"] == "pending"
-
-
-def test_target_items_name_expected_field() -> None:
-    results = _all_pass_results()
-    results[0] = _result("TARGET.DAYS_MISMATCH", "fail")
-    score = plugin.te_score.score_sample(results, _oracle_dict())
-    target = next(item for item in score["dimensions"] if item["key"] == "target")
-    items = {item["rule"]: item for item in target["items"]}
-    assert items["TARGET.DAYS_MISMATCH"]["deduction"] == 8.3
-    assert score["total"] == 59.9
 
 
 def test_score_rows_add_rule_titles() -> None:
@@ -1629,13 +1323,13 @@ def test_score_rows_add_rule_titles() -> None:
                 "结论": "可见性失败",
                 "总分": 79.6,
                 "等级": "良好",
-                "图片": "samples/Q001/injected.png",
+                "图片": "samples/Q001/original.png",
                 "尺寸": "2x2",
                 "维度": [
                     {
                         "key": "spec",
                         "label": "规范符合",
-                        "max": 25.0,
+                        "max": 60.0,
                         "score": 13.3,
                         "applicable": True,
                         "items": [
@@ -1691,7 +1385,6 @@ def test_report_renders_rule_deductions_text() -> None:
                 "等级": "良好",
                 "图片": "",
                 "尺寸": "2x2",
-                "目标语义": 40.0,
                 "可见性": 17.9,
                 "规范符合": 13.3,
                 "素材渲染": 10.0,
@@ -1699,7 +1392,7 @@ def test_report_renders_rule_deductions_text() -> None:
                     {
                         "key": "spec",
                         "label": "规范符合",
-                        "max": 25.0,
+                        "max": 60.0,
                         "score": 13.3,
                         "applicable": True,
                         "items": [
@@ -1722,7 +1415,7 @@ def test_report_renders_rule_deductions_text() -> None:
     assert "期望：16 或 20" in cards
     markdown = plugin._build_markdown(summary)
     assert "## 扣分明细" in markdown
-    assert "规范符合 13.3/25.0：标题 16/20fp −5.8" in markdown
+    assert "规范符合 13.3/60.0：标题 16/20fp −5.8" in markdown
     html_report = plugin._build_html(summary)
     assert "score-card" in html_report
 
@@ -1740,7 +1433,7 @@ def test_sample_table_hides_redundant_columns() -> None:
                 "样本": "Q001",
                 "状态": "failed",
                 "等级": "良好",
-                "图片": "samples/Q001/injected.png",
+                "图片": "samples/Q001/original.png",
                 "通过": 1,
                 "失败": 2,
                 "待复核": 0,
@@ -1758,33 +1451,19 @@ def test_dimension_table_groups_rules_for_expandable_details() -> None:
         "samples": [
             {
                 "维度": [
-                    {"key": "target", "label": "目标语义", "max": 25.0, "score": 25.0},
-                    {"key": "visibility", "label": "可见性", "max": 37.5, "score": 37.5},
-                    {"key": "spec", "label": "规范符合", "max": 37.5, "score": 18.8},
+                    {"key": "spec", "label": "规范符合", "max": 60.0, "score": 30.0},
+                    {"key": "visibility", "label": "可见性", "max": 40.0, "score": 40.0},
                 ]
             }
         ],
         "rules": [
             {
-                "规则": "TARGET.DAYS_MISMATCH",
-                "维度": "目标语义",
-                "细分项": "天数",
-                "含义": "天数须与期望一致",
-                "平均得分": 25.0,
-                "单条满分": 25.0,
-                "通过率": 100.0,
-                "参与样本": 1,
-                "通过": 1,
-                "失败": 0,
-                "待复核": 0,
-            },
-            {
                 "规则": "SPEC.TITLE_COLOR",
                 "维度": "规范符合",
                 "细分项": "标题颜色",
                 "含义": "标题使用主色",
-                "平均得分": 18.8,
-                "单条满分": 18.8,
+                "平均得分": 30.0,
+                "单条满分": 30.0,
                 "通过率": 50.0,
                 "参与样本": 1,
                 "通过": 1,
@@ -1794,13 +1473,13 @@ def test_dimension_table_groups_rules_for_expandable_details() -> None:
         ],
     }
     rows = plugin._dimension_table_rows(summary)
-    assert [row["维度"] for row in rows] == ["目标语义", "可见性", "规范符合"]
-    assert rows[0]["均分 / 满分"] == "25.0 / 25.0"
-    assert [item["规则"] for item in rows[0]["items"]] == ["TARGET.DAYS_MISMATCH 天数"]
+    assert [row["维度"] for row in rows] == ["规范符合", "可见性"]
+    assert rows[0]["均分 / 满分"] == "30.0 / 60.0"
+    assert [item["规则"] for item in rows[0]["items"]] == ["SPEC.TITLE_COLOR 标题颜色"]
     assert rows[1]["items"] == []
     assert rows[1]["通过率"] == "—"
-    assert rows[2]["通过率"] == "50.0%"
-    assert rows[2]["items"][0]["含义"] == "标题使用主色"
+    assert rows[0]["通过率"] == "50.0%"
+    assert rows[0]["items"][0]["含义"] == "标题使用主色"
 
 
 def test_report_puts_rule_averages_before_score_cards() -> None:
@@ -1829,47 +1508,45 @@ def test_dimension_averages_only_count_applicable_samples() -> None:
     rows = [
         {
             "维度": [
-                {"key": "target", "label": "目标语义", "max": 25.0, "score": 25.0},
-                {"key": "spec", "label": "规范符合", "max": 37.5, "score": None},
+                {"key": "spec", "label": "规范符合", "max": 60.0, "score": None},
+                {"key": "visibility", "label": "可见性", "max": 40.0, "score": 30.0},
             ]
         },
         {
             "维度": [
-                {"key": "target", "label": "目标语义", "max": 25.0, "score": None},
-                {"key": "spec", "label": "规范符合", "max": 37.5, "score": 37.5},
+                {"key": "spec", "label": "规范符合", "max": 60.0, "score": 60.0},
+                {"key": "visibility", "label": "可见性", "max": 40.0, "score": None},
             ]
         },
     ]
     averages = plugin._dimension_averages(rows)
     by_key = {item["key"]: item for item in averages}
-    assert by_key["target"]["score"] == 25.0
-    assert by_key["target"]["samples"] == 1
-    assert by_key["spec"]["score"] == 37.5
-    assert by_key["visibility"]["score"] is None
-    assert by_key["visibility"]["samples"] == 0
+    assert by_key["spec"]["score"] == 60.0
+    assert by_key["spec"]["samples"] == 1
+    assert by_key["visibility"]["score"] == 30.0
+    assert by_key["visibility"]["samples"] == 1
+    assert "target" not in by_key
     assert "asset" not in by_key
 
 
 def test_rule_metrics_average_equals_dimension_average() -> None:
     rows = []
-    for days_status in ("pass", "fail"):
-        results = _all_pass_results()
-        if days_status == "fail":
-            results[0] = _result("TARGET.DAYS_MISMATCH", "fail")
-        rows.append(plugin.te_score.score_sample(results, _oracle_dict(gate=False)))
+    for mask_status in ("pass", "fail"):
+        results = _all_pass_results() + [_result("SPEC.MASK", mask_status)]
+        rows.append(plugin.te_score.score_sample(results, _score_context()))
     metrics: dict[str, dict[str, float]] = {}
     for score in rows:
         plugin._collect_rule_metrics(score, metrics)
 
-    day = metrics["TARGET.DAYS_MISMATCH"]
-    assert day["samples"] == 2
-    assert plugin._rule_weight_text(day) == "8.3"
-    assert plugin._rule_average_text(day) == "4.2"
+    mask = metrics["SPEC.MASK"]
+    assert mask["samples"] == 2
+    assert plugin._rule_weight_text(mask) == "20.0"
+    assert plugin._rule_average_text(mask) == "10.0"
     visibility = sum(
         float(plugin._rule_average_text(metrics[rule]))
         for rule in ("VIS.OVERFLOW", "VIS.CONTRAST")
     )
-    assert round(visibility, 1) == 37.6
+    assert round(visibility, 1) == 40.0
 
 
 def test_rules_table_explains_each_sub_dimension() -> None:
@@ -1887,9 +1564,8 @@ def test_rules_table_explains_each_sub_dimension() -> None:
             }
         ],
         "counts": {"passed": 1, "failed": 0, "pending": 0},
-        "oracle": {"scenario": "anniversary", "gate": True, "fields": []},
         "score": plugin.te_score.score_sample(
-            [_result("SPEC.PRIMARY_FONT", "pass")], _oracle_dict(gate=False)
+            [_result("SPEC.PRIMARY_FONT", "pass")], _score_context()
         ),
     }
     summary = plugin._summarize([sample], {"Q001": sample}, "")
@@ -1899,8 +1575,8 @@ def test_rules_table_explains_each_sub_dimension() -> None:
     assert primary["细分项"] == "主值 56/38fp"
     assert "56fp" in primary["含义"]
     assert primary["期望示例"] == "56"
-    assert primary["单条满分"] == "37.5"
-    assert primary["平均得分"] == "37.5"
+    assert primary["单条满分"] == "60.0"
+    assert primary["平均得分"] == "60.0"
     assert primary["通过率"] == 100.0
     assert rules["ASSET.RENDERED"]["维度"] == "素材（仅诊断）"
     assert rules["ASSET.RENDERED"]["平均得分"] == "—"
@@ -1908,52 +1584,44 @@ def test_rules_table_explains_each_sub_dimension() -> None:
     table = plugin._rule_table_rows(summary["rules"])
     primary_row = next(row for row in table if "SPEC.PRIMARY_FONT" in row["细分维度"])
     assert primary_row["细分维度"] == "规范符合 · SPEC.PRIMARY_FONT 主值 56/38fp"
-    assert primary_row["均分 / 满分"] == "37.5 / 37.5"
+    assert primary_row["均分 / 满分"] == "60.0 / 60.0"
     assert primary_row["通过率"] == "100.0%"
     assert primary_row["计分样本"] == 1
 
 
-def test_summarize_marks_mock_target_as_zero_on_dashboard() -> None:
-    target = _result("TARGET.DAYS_MISMATCH", "na")
-    target.update({"expected": "46", "actual": "3"})
+def test_summarize_reports_spec_and_visibility_only() -> None:
     spec = _result("SPEC.MASK", "pass")
-    derived = {"days": "derived"}
     sample = {
         "sampleId": "Q001",
         "status": "success",
-        "verdict": "通过（数据语义仅参考）",
+        "verdict": "通过",
         "size": "2x2",
-        "results": [target, spec],
+        "results": [spec],
         "counts": {"passed": 1, "failed": 0, "pending": 0, "na": 1},
-        "oracle": {
-            "scenario": "once",
-            "gate": True,
-            "fields": ["/days"],
-            "provenance": derived,
-        },
-        "score": plugin.te_score.score_sample(
-            [target, spec], _oracle_dict(provenance=derived)
-        ),
+        "score": plugin.te_score.score_sample([spec], _score_context()),
         "images": {"original": "original.png"},
         "theme": None,
     }
     summary = plugin._summarize([{"sampleId": "Q001", "size": "2x2"}], {"Q001": sample}, "")
     groups = [row["维度"] for row in plugin._dimension_table_rows(summary)]
-    assert "数据语义（参考）" not in groups
-    assert "目标语义（不适用）" in groups
+    assert "规范符合" in groups
+    assert "可见性（不适用）" in groups
+    assert "数据语义（仅诊断）" not in groups
     row = summary["samples"][0]
-    assert row["目标语义"] == 0.0
+    assert "场景" not in row
+    assert "期望天数" not in row
+    assert row["规范符合"] == 60.0
+    assert row["可见性"] == 0.0
+    assert row["总分"] == 60.0
+    assert row["失败项"] == ""
     assert "期望天数" not in plugin._table_rows(summary["samples"])[0]
     cards = plugin._score_rows(summary)
-    assert [item["key"] for item in cards[0]["dimensions"]] == [
-        "target",
-        "visibility",
-        "spec",
-    ]
+    assert [item["key"] for item in cards[0]["dimensions"]] == ["spec", "visibility"]
     markdown = plugin._build_markdown(summary)
-    assert "| 目标语义 |" in markdown
-    assert "目标语义 0.0/25.0" in markdown
-    assert "TARGET.DAYS_MISMATCH" not in markdown
+    assert "| 规范符合 |" in markdown
+    assert "| 目标语义 |" not in markdown
+    assert "TARGET." not in markdown
+    assert all(not item["规则"].startswith("TARGET.") for item in summary["rules"])
 
 
 def _rect(x: float, y: float, width: float, height: float) -> dict[str, float]:
@@ -2125,8 +1793,7 @@ def test_layout_skips_v1_evidence_and_zero_sized_nodes() -> None:
 
 
 def test_evaluate_dom_includes_layout_diagnostics() -> None:
-    components = plugin.te_binding.parse_genui(_genui(_q001_components()))["components"]
-    oracle = oracle_module.build_oracle("Q001", REQUEST)
+    components = plugin.te_genui.parse_genui(_genui(_q001_components()))["components"]
     evidence = _v2_evidence(
         [
             _v2_node("title_title", _rect(12, 12, 126, 20), text="考试 还剩"),
@@ -2136,7 +1803,7 @@ def test_evaluate_dom_includes_layout_diagnostics() -> None:
             _v2_node("oversized_icon", _rect(100, 120, 80, 20), tag="IMG"),
         ]
     )
-    results, _ = dom_module.evaluate_dom(evidence, oracle, components)
+    results, _ = dom_module.evaluate_dom(evidence, components)
     rules = {item.rule for item in results if item.status == "pending"}
     assert "LAYOUT.CARD_OVERFLOW" in rules
 
@@ -2150,4 +1817,4 @@ def test_layout_result_is_diagnostic_only() -> None:
         severity="minor",
     )
     assert plugin._sample_status([layout]) == "success"
-    assert plugin._verdict_text([layout], True, True) == "通过"
+    assert plugin._verdict_text([layout]) == "通过"

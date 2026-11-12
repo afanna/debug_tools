@@ -1,8 +1,8 @@
 """倒计时目标效果评测后处理插件。
 
-纯规则判定：L0 产物与渲染、L2 可见性、倒计时规范符合性。按 mock 设备时间
-推导的天数只作参考、不参与计分；不做期望图与模型渲染的视觉比对，只做规则打分。
-模型不参与判定。
+纯规则判定：L0 产物与渲染、L2 可见性、倒计时规范符合性。评分只由规范符合
+（60）与可见性（40）构成；版式与素材规则只做诊断，不影响分数与结论。
+不做期望图与模型渲染的视觉比对。模型不参与判定。
 
 浏览器采集只在 process_dataset 执行一次；finalize 负责把结论与证据
 并入样本产物，供看板评分卡和独立样本详情页直接使用。
@@ -40,8 +40,7 @@ def _load_sibling(name: str) -> Any:
     return module
 
 
-te_oracle = _load_sibling("te_oracle")
-te_binding = _load_sibling("te_binding")
+te_genui = _load_sibling("te_genui")
 te_spec = _load_sibling("te_spec")
 te_layout = _load_sibling("te_layout")
 te_dom = _load_sibling("te_dom")
@@ -57,14 +56,6 @@ RULE_ORDER = [
     "L0.RESULT_STATUS",
     "L0.ARTIFACT_MISSING",
     "L0.PARSE_FAILED",
-    "TARGET.ARGUMENT_MISMATCH",
-    "TARGET.BINDING_MISSING",
-    "TARGET.BINDING_VALUE_MISMATCH",
-    "TARGET.DAYS_MISMATCH",
-    "TARGET.RELATION_TEXT_MISMATCH",
-    "TARGET.VISIBLE_EXPECTATION_MISSING",
-    "TARGET.PLACEHOLDER_VISIBLE",
-    "TARGET.SCENARIO_RULE_VIOLATION",
     "VIS.TEXT_CLIPPED",
     "VIS.TEXT_OVERFLOW",
     "VIS.TEXT_OVERLAP",
@@ -110,14 +101,6 @@ RULE_TITLES = {
     "L0.RESULT_STATUS": "样本执行状态",
     "L0.ARTIFACT_MISSING": "可渲染产物存在",
     "L0.PARSE_FAILED": "A2UI 解析",
-    "TARGET.ARGUMENT_MISMATCH": "工具参数与预期一致",
-    "TARGET.BINDING_MISSING": "期望字段被组件引用",
-    "TARGET.BINDING_VALUE_MISMATCH": "绑定值随注入变化",
-    "TARGET.DAYS_MISMATCH": "天数与参考日一致",
-    "TARGET.RELATION_TEXT_MISMATCH": "关系文案与日期差一致",
-    "TARGET.VISIBLE_EXPECTATION_MISSING": "期望文本可见",
-    "TARGET.PLACEHOLDER_VISIBLE": "无占位文案",
-    "TARGET.SCENARIO_RULE_VIOLATION": "场景规则",
     "VIS.TEXT_CLIPPED": "文字未被裁切",
     "VIS.TEXT_OVERFLOW": "文字未越出画布",
     "VIS.TEXT_OVERLAP": "文字未互相遮挡",
@@ -163,14 +146,6 @@ RULE_HINTS = {
     "L0.RESULT_STATUS": "样本本身执行成功，才继续评分",
     "L0.ARTIFACT_MISSING": "存在可渲染的最终卡片产物",
     "L0.PARSE_FAILED": "A2UI 能被解析成组件树",
-    "TARGET.ARGUMENT_MISMATCH": "生成工具收到的参数与期望一致",
-    "TARGET.BINDING_MISSING": "期望字段被组件引用，而不是写死文本",
-    "TARGET.BINDING_VALUE_MISMATCH": "注入值变化时，卡片文本随之变化",
-    "TARGET.DAYS_MISMATCH": "卡片显示的天数与期望天数一致",
-    "TARGET.RELATION_TEXT_MISMATCH": "“还剩 / 已经”等关系文案与日期差方向一致",
-    "TARGET.VISIBLE_EXPECTATION_MISSING": "注入的期望文本在卡片上真实可见",
-    "TARGET.PLACEHOLDER_VISIBLE": "卡片上不出现占位文案",
-    "TARGET.SCENARIO_RULE_VIOLATION": "场景规则成立，例如一次性倒计时不重复触发",
     "VIS.TEXT_CLIPPED": "文字没有被容器裁切或省略",
     "VIS.TEXT_OVERFLOW": "文字没有越出卡片边界",
     "VIS.TEXT_OVERLAP": "文字之间没有互相遮挡",
@@ -235,21 +210,6 @@ def _read_json(path: Path) -> dict[str, Any] | None:
 def _write_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
-def _expectation_overrides(context: dict[str, Any]) -> dict[str, dict[str, Any]]:
-    config = _config(context)
-    explicit = config.get("expectationsPath")
-    candidates = []
-    if isinstance(explicit, str) and explicit.strip():
-        candidates.append(Path(explicit.strip()))
-    run_dir = context.get("runDir")
-    if isinstance(run_dir, str):
-        candidates.append(Path(run_dir) / "expectations.json")
-    for candidate in candidates:
-        if candidate.is_file():
-            return te_oracle.load_expectations(candidate)
-    return {}
 
 
 # ---------------------------------------------------------------- 主题与偏好
@@ -447,25 +407,6 @@ def _request_query(request: dict[str, Any]) -> str:
     return ""
 
 
-def _oracle_from_dict(value: dict[str, Any]) -> Any:
-    return te_oracle.Oracle(
-        sample_id=str(value.get("sampleId") or ""),
-        scenario=str(value.get("scenario") or "unknown"),
-        timezone=str(value.get("timezone") or te_oracle.DEFAULT_TIMEZONE),
-        reference_date=value.get("referenceDate"),
-        target_date=value.get("targetDate"),
-        days=value.get("expectedDays"),
-        relation_text=value.get("expectedRelationText"),
-        target_date_text=value.get("expectedTargetDateText"),
-        write_result_to=value.get("writeResultTo"),
-        fields=list(value.get("fields") or []),
-        arguments=dict(value.get("arguments") or {}),
-        gate=bool(value.get("gate")),
-        provenance=dict(value.get("provenance") or {}),
-        notes=list(value.get("notes") or []),
-    )
-
-
 def _result_from_dict(value: dict[str, Any]) -> Any:
     return te_spec.RuleResult(
         rule=str(value.get("rule") or ""),
@@ -516,9 +457,20 @@ def _compact(value: Any, limit: int = 600) -> Any:
     return text[:limit] + "…"
 
 
-def _is_layout_rule(item: Any) -> bool:
-    """版式诊断只做观察，不影响样本状态与结论。"""
-    return str(item.rule).startswith("LAYOUT.")
+def _is_diagnostic_rule_name(rule: str) -> bool:
+    return rule.startswith("LAYOUT.")
+
+
+def _is_diagnostic_rule(item: Any) -> bool:
+    """版式诊断只做观察，不影响评分、样本状态与结论。"""
+    return _is_diagnostic_rule_name(str(item.rule))
+
+
+def _is_scored_rule(rule: str) -> bool:
+    """只有 VIS/SPEC 中非诊断规则进入评分与整批规则通过率。"""
+    if rule in te_score.DIAGNOSTIC_RULES:
+        return False
+    return rule.startswith("VIS.") or rule.startswith("SPEC.")
 
 
 def _blocking_results(results: list[Any]) -> list[Any]:
@@ -526,81 +478,65 @@ def _blocking_results(results: list[Any]) -> list[Any]:
     for item in results:
         if item.status not in {FAIL, PENDING}:
             continue
-        if _is_layout_rule(item):
+        if _is_diagnostic_rule(item):
             continue
         blocked.append(item)
     return blocked
 
 
 def _sample_status(results: list[Any]) -> str:
-    if any(item.status == FAIL and item.severity == "major" for item in results):
+    major = [
+        item
+        for item in results
+        if item.status == FAIL and item.severity == "major" and not _is_diagnostic_rule(item)
+    ]
+    if major:
         return "failed"
     if _blocking_results(results):
         return "partial"
     return "success"
 
 
-def _verdict_text(results: list[Any], gate: bool, target_scored: bool) -> str:
-    major = [item for item in results if item.status == FAIL and item.severity == "major"]
-    minor = [item for item in results if item.status == FAIL and item.severity != "major"]
+def _verdict_text(results: list[Any]) -> str:
+    major = [
+        item
+        for item in results
+        if item.status == FAIL and item.severity == "major" and not _is_diagnostic_rule(item)
+    ]
+    minor = [
+        item
+        for item in results
+        if item.status == FAIL and item.severity != "major" and not _is_diagnostic_rule(item)
+    ]
     pending = [item for item in _blocking_results(results) if item.status == PENDING]
     if any(item.rule.startswith("L0.") for item in major):
         return "L0 失败"
-    if any(item.rule.startswith("TARGET.") for item in major):
-        return "目标语义失败"
     if any(item.rule.startswith("VIS.") for item in major):
         return "可见性失败"
     if any(item.rule.startswith("SPEC.") for item in major):
         return "规范失败"
     if minor or pending:
         return "待复核"
-    if not target_scored:
-        return "通过（数据语义仅参考）"
-    if not gate:
-        return "通过（目标语义未门禁）"
     return "通过"
 
 
 def _counts(results: list[Any]) -> dict[str, int]:
+    scored = [item for item in results if not _is_diagnostic_rule(item)]
     return {
-        "passed": sum(1 for item in results if item.status == PASS),
-        "failed": sum(1 for item in results if item.status == FAIL),
-        "pending": sum(1 for item in results if item.status == PENDING),
-        "na": sum(1 for item in results if item.status == NA),
+        "passed": sum(1 for item in scored if item.status == PASS),
+        "failed": sum(1 for item in scored if item.status == FAIL),
+        "pending": sum(1 for item in scored if item.status == PENDING),
+        "na": sum(1 for item in scored if item.status == NA),
     }
 
 
-def _with_status(item: Any, status: str) -> Any:
-    return te_spec.RuleResult(
-        rule=item.rule,
-        status=status,
-        expected=item.expected,
-        actual=item.actual,
-        severity=item.severity,
-        evidence=item.evidence,
-    )
-
-
-def _settle_targets(
-    results: list[Any],
-    oracle_value: dict[str, Any],
-    gate: bool,
-) -> list[Any]:
-    """收敛目标语义项：期望来自 mock 设备时间时只作参考，显式期望才参与门禁。"""
-    target_scored = te_score.target_applicable(oracle_value)
-    updated: list[Any] = []
-    for item in results:
-        if not item.rule.startswith("TARGET."):
-            updated.append(item)
-            continue
-        if not target_scored:
-            updated.append(_with_status(item, NA))
-            continue
-        if not gate and item.status == FAIL:
-            updated.append(_with_status(item, PENDING))
-            continue
-        updated.append(item)
-    return updated
+def _issue_results(results: list[Any]) -> list[Any]:
+    """失败与待复核项只展示参与评分的规则，诊断项留在完整结果里。"""
+    return [
+        item
+        for item in results
+        if item.status in {FAIL, PENDING} and not _is_diagnostic_rule(item)
+    ]
 
 
 # ---------------------------------------------------------------- process_sample
@@ -613,7 +549,6 @@ def process_sample(context: dict[str, Any]) -> dict[str, Any]:
     size = str(sample.get("size") or "2x2")
     output_dir = Path(str(context.get("outputDir") or "."))
     output_dir.mkdir(parents=True, exist_ok=True)
-    config = _config(context)
     final_dir_value = context.get("finalAttemptDir")
     if not final_dir_value:
         return _l0_failure(output_dir, sample_id, "没有最终尝试目录")
@@ -622,19 +557,9 @@ def process_sample(context: dict[str, Any]) -> dict[str, Any]:
     if not genui_path.is_file():
         return _l0_failure(output_dir, sample_id, "最终尝试缺少 genui.jsonl")
     source = genui_path.read_text(encoding="utf-8")
-    parsed = te_binding.parse_genui(source)
+    parsed = te_genui.parse_genui(source)
     if not parsed.get("components"):
         return _l0_failure(output_dir, sample_id, "未解析到 A2UI 组件")
-    override = _expectation_overrides(context).get(sample_id)
-    oracle = te_oracle.build_oracle(
-        sample_id,
-        te_oracle.load_request(final_dir),
-        override=override,
-        repeat_gates=config.get("repeatGates") is True,
-        today_counts_as_next=config.get("todayCountsAsNext") is True,
-        timezone=str(config.get("timezone") or te_oracle.DEFAULT_TIMEZONE),
-    )
-    injected_text, injected = te_oracle.injected_jsonl(source, oracle)
     theme_id = _extract_theme_id(final_dir, parsed["components"])
     theme = _theme_profile(theme_id)
     user_query = _extract_user_query(sample, final_dir)
@@ -642,39 +567,30 @@ def process_sample(context: dict[str, Any]) -> dict[str, Any]:
         parsed["components"],
         parsed["data"],
         size=size,
-        expected_days=oracle.days,
         theme=theme,
         user_query=user_query,
     )
-    _write_json(output_dir / "oracle.json", oracle.as_dict())
-    (output_dir / "injected_genui.jsonl").write_text(injected_text, encoding="utf-8")
-    oracle_value = oracle.as_dict()
     static = {
         "sampleId": sample_id,
         "size": size,
         "rubricVersion": te_spec.RUBRIC_VERSION,
         "genuiPath": str(genui_path),
-        "oracle": oracle_value,
-        "injected": injected,
         "theme": theme,
         "userQuery": user_query,
         "spec": [item.as_dict() for item in spec_results],
     }
     _write_json(output_dir / "sample_static.json", static)
-    results = _settle_targets(list(spec_results), oracle_value, oracle.gate)
+    results = list(spec_results)
     status = _sample_status(results)
     counts = _counts(results)
-    verdict = _verdict_text(results, oracle.gate, te_score.target_applicable(oracle_value))
-    issues = [item for item in results if item.status in {FAIL, PENDING}]
+    verdict = _verdict_text(results)
+    issues = _issue_results(results)
     theme_text = _theme_text(theme)
     return {
         "status": status,
         "summary": verdict,
         "facts": {
             "verdict": verdict,
-            "scenario": oracle.scenario,
-            "gate": oracle.gate,
-            "expectedDays": oracle.days if oracle.days is not None else -1,
             "theme": theme_text,
             "size": size,
             "specApplicable": not (theme is not None and theme.get("eligible") is False),
@@ -706,16 +622,13 @@ def _l0_failure(output_dir: Path, sample_id: str, reason: str) -> dict[str, Any]
     )
     _write_json(
         output_dir / "sample_static.json",
-        {"sampleId": sample_id, "oracle": None, "spec": [result.as_dict()], "l0Error": reason},
+        {"sampleId": sample_id, "spec": [result.as_dict()], "l0Error": reason},
     )
     return {
         "status": "failed",
         "summary": f"L0 失败：{reason}",
         "facts": {
             "verdict": "L0 失败",
-            "scenario": "unknown",
-            "gate": False,
-            "expectedDays": -1,
             "passed": 0,
             "failed": 1,
             "pending": 0,
@@ -761,9 +674,6 @@ def _build_jobs(
         genui_path = Path(str(static["genuiPath"]))
         if not genui_path.is_file():
             continue
-        injected = sample_dir / "injected_genui.jsonl"
-        if not injected.is_file():
-            continue
         jobs.append(
             {
                 "id": sample_id,
@@ -775,12 +685,6 @@ def _build_jobs(
                         "source": str(genui_path),
                         "png": str(sample_dir / "original.png"),
                         "evidence": str(sample_dir / "dom_original.json"),
-                    },
-                    {
-                        "name": "injected",
-                        "source": str(injected),
-                        "png": str(sample_dir / "injected.png"),
-                        "evidence": str(sample_dir / "dom_injected.json"),
                     },
                 ],
             }
@@ -1092,53 +996,49 @@ def _evaluate_sample(
 ) -> dict[str, Any]:
     static = _read_json(sample_dir / "sample_static.json")
     if static is None:
-        return _failed_verdict(sample_id, None, ["缺少 sample_static.json"])
-    oracle_value = static.get("oracle")
-    if not isinstance(oracle_value, dict):
-        return _failed_verdict(sample_id, None, [str(static.get("l0Error") or "L0 失败")])
-    oracle = _oracle_from_dict(oracle_value)
+        return _failed_verdict(sample_id, ["缺少 sample_static.json"])
+    if static.get("l0Error"):
+        return _failed_verdict(sample_id, [str(static.get("l0Error"))])
     theme = static.get("theme") if isinstance(static.get("theme"), dict) else None
+    score_context: dict[str, Any] = {}
     if theme is not None and theme.get("eligible") is False:
-        oracle_value["specExcludedReason"] = str(
+        score_context["specExcludedReason"] = str(
             theme.get("reason") or "主题不属于图+蒙层路线，规范维度不计分"
         )
     results = [_result_from_dict(item) for item in static.get("spec") or []]
     original_item = capture.get((sample_id, "original"))
-    injected_item = capture.get((sample_id, "injected"))
-    evidence = _read_json(sample_dir / "dom_injected.json")
-    original_evidence = _read_json(sample_dir / "dom_original.json")
+    evidence = _read_json(sample_dir / "dom_original.json")
     metrics: dict[str, Any] = {}
     capture_errors: list[str] = []
-    for name, item in (("original", original_item), ("injected", injected_item)):
-        if item is None or not item.get("ok"):
-            reason = "未执行浏览器采集" if item is None else str(item.get("error") or "采集失败")
-            capture_errors.append(f"{name}: {reason}")
-    if evidence is not None:
-        parsed = te_binding.parse_genui(
-            (sample_dir / "injected_genui.jsonl").read_text(encoding="utf-8")
-            if (sample_dir / "injected_genui.jsonl").is_file()
-            else ""
+    if original_item is None or not original_item.get("ok"):
+        reason = "未执行浏览器采集" if original_item is None else str(
+            original_item.get("error") or "采集失败"
         )
-        png_path = sample_dir / "injected.png"
+        capture_errors.append(f"original: {reason}")
+    components: dict[str, Any] = {}
+    genui_path = Path(str(static.get("genuiPath") or ""))
+    if genui_path.is_file():
+        parsed = te_genui.parse_genui(genui_path.read_text(encoding="utf-8"))
+        components = parsed.get("components") or {}
+    if evidence is not None:
+        png_path = sample_dir / "original.png"
         dom_results, metrics = te_dom.evaluate_dom(
             evidence,
-            oracle,
-            parsed.get("components") or {},
-            original=original_evidence,
+            components,
             png_path=png_path if png_path.is_file() else None,
             scale=scale,
             resource_root=RESOURCE_ROOT,
             size=str(static.get("size") or "2x2"),
         )
         results.extend(dom_results)
-        results = _waive_title_ellipsis(results, evidence, parsed.get("components") or {})
+        results = _waive_title_ellipsis(results, evidence, components)
     else:
         results.append(
             te_spec.RuleResult(
                 rule="VIS.EVIDENCE_MISSING",
                 status=PENDING,
                 expected="DOM 与截图为可见性判定提供证据",
-                actual="未采集到注入后证据",
+                actual="未采集到原始渲染证据",
                 severity="major",
             )
         )
@@ -1155,13 +1055,12 @@ def _evaluate_sample(
     results = _dedupe_results(results)
     score = te_score.score_sample(
         [item.as_dict() for item in results],
-        oracle_value,
+        score_context,
     )
-    results = _settle_targets(results, oracle_value, oracle.gate)
     status = _sample_status(results)
     counts = _counts(results)
-    verdict = _verdict_text(results, oracle.gate, te_score.target_applicable(oracle_value))
-    issues = [item for item in results if item.status in {FAIL, PENDING}]
+    verdict = _verdict_text(results)
+    issues = _issue_results(results)
     payload = {
         "sampleId": sample_id,
         "status": status,
@@ -1169,16 +1068,12 @@ def _evaluate_sample(
         "size": str(static.get("size") or "2x2"),
         "rubricVersion": te_spec.RUBRIC_VERSION,
         "theme": theme,
-        "oracle": oracle_value,
         "results": [item.as_dict() for item in results],
         "metrics": metrics,
         "counts": counts,
         "score": score,
-        "images": {},
+        "images": {"original": "original.png"} if (sample_dir / "original.png").is_file() else {},
     }
-    for name in ("original", "injected"):
-        if (sample_dir / f"{name}.png").is_file():
-            payload["images"][name] = f"{name}.png"
     _write_json(sample_dir / "verdict.json", payload)
     _write_json(
         sample_dir / "issues.json",
@@ -1189,7 +1084,6 @@ def _evaluate_sample(
 
 def _failed_verdict(
     sample_id: str,
-    oracle_value: dict[str, Any] | None,
     reasons: list[str],
 ) -> dict[str, Any]:
     result = te_spec.RuleResult(
@@ -1203,14 +1097,10 @@ def _failed_verdict(
         "sampleId": sample_id,
         "status": "failed",
         "verdict": "L0 失败",
-        "oracle": oracle_value,
         "results": [result.as_dict()],
         "metrics": {},
         "counts": {"passed": 0, "failed": 1, "pending": 0, "na": 0},
-        "score": te_score.score_sample(
-            [result.as_dict()],
-            oracle_value if isinstance(oracle_value, dict) else {},
-        ),
+        "score": te_score.score_sample([result.as_dict()], {}),
         "images": {},
     }
 
@@ -1293,7 +1183,7 @@ def _summarize(
     statuses = {"success": 0, "partial": 0, "failed": 0}
     for item in samples:
         sample_id = str(item.get("sampleId") or "")
-        verdict = verdicts.get(sample_id) or _failed_verdict(sample_id, None, ["未评估"])
+        verdict = verdicts.get(sample_id) or _failed_verdict(sample_id, ["未评估"])
         statuses[verdict.get("status", "failed")] = (
             statuses.get(verdict.get("status", "failed"), 0) + 1
         )
@@ -1308,18 +1198,18 @@ def _summarize(
             if expected and not rule_expected.get(rule):
                 rule_expected[rule] = expected
         counts = verdict.get("counts") or {}
-        oracle = verdict.get("oracle") if isinstance(verdict.get("oracle"), dict) else {}
         failed_rules = [
             str(result.get("rule"))
             for result in results
             if result.get("status") == FAIL
+            and not _is_diagnostic_rule_name(str(result.get("rule") or ""))
         ]
         pending_rules = [
             str(result.get("rule"))
             for result in results
             if result.get("status") == PENDING
+            and not _is_diagnostic_rule_name(str(result.get("rule") or ""))
         ]
-        expected_days = oracle.get("expectedDays")
         score = verdict.get("score") if isinstance(verdict.get("score"), dict) else {}
         _collect_rule_metrics(score, rule_metrics)
         images = verdict.get("images") if isinstance(verdict.get("images"), dict) else {}
@@ -1330,14 +1220,11 @@ def _summarize(
                 "样本": sample_id,
                 "状态": verdict.get("status"),
                 "结论": verdict.get("verdict"),
-                "场景": oracle.get("scenario") or "unknown",
                 "主题": _theme_text(theme),
-                "期望天数": expected_days if expected_days is not None else "—",
                 "总分": score.get("total", 0.0),
                 "等级": score.get("band") or "—",
-                "目标语义": te_score.dimension_score(score, "target"),
-                "可见性": te_score.dimension_score(score, "visibility"),
                 "规范符合": te_score.dimension_score(score, "spec"),
+                "可见性": te_score.dimension_score(score, "visibility"),
                 "通过": counts.get("passed", 0),
                 "失败": counts.get("failed", 0),
                 "待复核": counts.get("pending", 0),
@@ -1367,8 +1254,9 @@ def _summarize(
         metrics = rule_metrics.get(rule)
         checked = counts["pass"] + counts["fail"] + counts["pending"]
         pass_rate = counts["pass"] / checked if checked else None
-        applicable += checked
-        passed += counts["pass"]
+        if _is_scored_rule(rule):
+            applicable += checked
+            passed += counts["pass"]
         rules.append(
             {
                 "规则": rule,
@@ -1400,7 +1288,6 @@ def _summarize(
             "failed": statuses.get("failed", 0),
             "passRate": round((passed / applicable) * 100, 1) if applicable else 0.0,
             "averageScore": round(score_total / scored, 1) if scored else 0.0,
-            "averageTarget": _average_of(dimension_averages, "target"),
             "averageVisibility": _average_of(dimension_averages, "visibility"),
             "averageSpec": _average_of(dimension_averages, "spec"),
             "specApplicable": spec_scored,
@@ -1506,7 +1393,6 @@ def _rule_dimension(rule: str) -> str:
         return "规范（仅诊断）" if prefix == "SPEC" else "素材（仅诊断）"
     return {
         "L0": "前置条件",
-        "TARGET": "数据语义（参考）",
         "VIS": "可见性",
         "SPEC": "规范符合",
         "ASSET": "素材（仅诊断）",
@@ -1580,11 +1466,7 @@ def _dataset_artifacts(summary: dict[str, Any]) -> list[dict[str, Any]]:
 
 def _dimension_table_rows(summary: dict[str, Any]) -> list[dict[str, Any]]:
     """外层按维度汇总，细则挂在 items，由看板逐维度展开。"""
-    rules = [
-        rule
-        for rule in summary.get("rules") or []
-        if isinstance(rule, dict) and rule.get("维度") != "数据语义（参考）"
-    ]
+    rules = [rule for rule in summary.get("rules") or [] if isinstance(rule, dict)]
     averages = {
         str(item.get("key")): item
         for item in _dimension_averages(summary.get("samples") or [])
@@ -1670,7 +1552,7 @@ def _rule_table_rows(rules: list[Any]) -> list[dict[str, Any]]:
     return rows
 
 
-_SAMPLE_TABLE_HIDDEN = {"维度", "图片", "等级", "通过", "失败", "待复核", "期望天数"}
+_SAMPLE_TABLE_HIDDEN = {"维度", "图片", "等级", "通过", "失败", "待复核"}
 
 
 def _table_rows(rows: list[Any]) -> list[dict[str, Any]]:
@@ -1741,7 +1623,7 @@ def _score_rows(summary: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def _score_dimensions(value: Any) -> list[dict[str, Any]]:
-    """给评分卡补上每条规则的说明；不适用维度保留 0 分与原因，保证三项相加为 100。"""
+    """给评分卡补上每条规则的说明；不适用维度保留 0 分与原因，保证两项相加为 100。"""
     rows: list[dict[str, Any]] = []
     if not isinstance(value, list):
         return rows
@@ -1820,13 +1702,12 @@ def _sample_artifacts(
     verdict: dict[str, Any],
 ) -> dict[str, Any]:
     results = [_result_from_dict(item) for item in verdict.get("results") or []]
-    issues = [item for item in results if item.status in {FAIL, PENDING}]
-    oracle = verdict.get("oracle") if isinstance(verdict.get("oracle"), dict) else {}
+    issues = _issue_results(results)
     counts = verdict.get("counts") or {}
     score = verdict.get("score") if isinstance(verdict.get("score"), dict) else {}
     deductions = _rule_deductions(score)
     theme = verdict.get("theme") if isinstance(verdict.get("theme"), dict) else None
-    # 总分、结论、场景、失败数和渲染缩略图已在上方评分卡展示，
+    # 总分、结论、失败数和渲染缩略图已在上方评分卡展示，
     # 独立样本详情页只保留规范布局进度与扣分明细。
     artifacts: list[dict[str, Any]] = [
         {
@@ -1846,8 +1727,6 @@ def _sample_artifacts(
         "summary": _score_summary(verdict.get("verdict"), score),
         "facts": {
             "verdict": str(verdict.get("verdict") or "—"),
-            "scenario": str(oracle.get("scenario") or "unknown"),
-            "gate": bool(oracle.get("gate")),
             "theme": _theme_text(theme),
             "size": str(verdict.get("size") or "—"),
             "specApplicable": te_score.dimension_score(score, "spec") is not None,
@@ -1914,10 +1793,9 @@ def _build_markdown(summary: dict[str, Any]) -> str:
         ),
         f"- 规范维度：{facts.get('specApplicable', 0)} 个样本计分，"
         f"{facts.get('specExcluded', 0)} 个样本因主题不属于 Pixso 图+蒙层路线而不计分。",
-        "- 评分口径：目标语义 25、可见性 37.5、规范符合 37.5，三项固定构成 100 分；"
-        "不适用维度记 0 分并展示原因，维度分相加即总分。目标语义只在作者显式声明"
-        "期望时计分，由 mock 设备时间推导的期望天数仅作参考、整维记 0 分；"
-        "素材规则只做诊断，不计分。待复核按半通过，显式期望未通过时总分封顶 59.9。",
+        "- 评分口径：规范符合 60、可见性 40，两项固定构成 100 分；"
+        "不适用维度记 0 分并展示原因，维度分相加即总分。版式与素材规则"
+        "只做诊断，不计分也不影响结论。待复核按半通过。",
         "- 细分项均分 = 各样本“单条满分 × 通过值”的平均，单条满分 = 维度分值 ÷ "
         "该维度适用规则数；均分按一位小数展示，同一维度下累加与维度平均可能存在 ≤0.5 的取整差。",
     ]
@@ -1929,8 +1807,6 @@ def _build_markdown(summary: dict[str, Any]) -> str:
     )
     lines.append("|---|---|---|---|---|---|---|---|")
     for rule in summary.get("rules") or []:
-        if rule.get("维度") == "数据语义（参考）":
-            continue
         rate = rule.get("通过率")
         lines.append(
             f"| {rule.get('维度')} | `{rule.get('规则')}` {rule.get('细分项')} | "
@@ -1942,17 +1818,16 @@ def _build_markdown(summary: dict[str, Any]) -> str:
         "",
         "## 样本结论",
         "",
-        "| 样本 | 主题 | 总分 | 目标语义 | 可见性 | 规范符合 | "
+        "| 样本 | 主题 | 总分 | 规范符合 | 可见性 | "
         "状态 | 结论 | 失败项 | 待复核项 |",
     ])
-    lines.append("|---|---|---|---|---|---|---|---|---|---|")
+    lines.append("|---|---|---|---|---|---|---|---|---|")
     for row in summary.get("samples") or []:
         lines.append(
             f"| `{row.get('样本')}` | {row.get('主题') or '—'} | "
             f"{_score_text(row.get('总分'))} | "
-            f"{_score_text(row.get('目标语义'))} | "
-            f"{_score_text(row.get('可见性'))} | "
             f"{_score_text(row.get('规范符合'))} | "
+            f"{_score_text(row.get('可见性'))} | "
             f"{row.get('状态')} | {row.get('结论')} | "
             f"{row.get('失败项') or '—'} | {row.get('待复核项') or '—'} |"
         )
@@ -2103,8 +1978,6 @@ def _build_html(summary: dict[str, Any]) -> str:
     facts = summary.get("facts") or {}
     rule_rows = []
     for rule in summary.get("rules") or []:
-        if rule.get("维度") == "数据语义（参考）":
-            continue
         rate = rule.get("通过率")
         rule_rows.append(
             "<tr><td>{}</td><td><code>{}</code> {}</td><td>{}</td>"
@@ -2123,14 +1996,13 @@ def _build_html(summary: dict[str, Any]) -> str:
     for row in summary.get("samples") or []:
         sample_rows.append(
             "<tr><td><code>{}</code></td><td>{}</td><td>{}</td>"
-            "<td>{}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td>"
+            "<td>{}</td><td>{}</td><td>{}</td><td>{}</td><td>{}</td>"
             "<td>{}</td></tr>".format(
                 html.escape(str(row.get("样本"))),
                 html.escape(str(row.get("主题") or "—")),
                 html.escape(_score_text(row.get("总分"))),
-                html.escape(_score_text(row.get("目标语义"))),
-                html.escape(_score_text(row.get("可见性"))),
                 html.escape(_score_text(row.get("规范符合"))),
+                html.escape(_score_text(row.get("可见性"))),
                 html.escape(str(row.get("状态"))),
                 html.escape(str(row.get("结论"))),
                 html.escape(str(row.get("失败项") or "—")),
@@ -2210,7 +2082,8 @@ table.sample-table {{ min-width:900px; }}
 <h1>倒计时目标效果评测</h1>
 <p>profile <code>{html.escape(str(summary.get("profile")))}</code>（rubric
 v{html.escape(str(summary.get("rubricVersion", 2)))}）；只做确定性规则打分，
-mock 设备时间推导的天数只作参考、不参与计分；非 Pixso 图+蒙层主题不计规范分。</p>
+评分由规范符合 60 与可见性 40 构成；版式与素材规则只做诊断、不参与计分；
+非 Pixso 图+蒙层主题不计规范分。</p>
 {capture}
 <div class="kpis">
 <div class="kpi">样本数<strong>{facts.get("total", 0)}</strong></div>
@@ -2223,9 +2096,9 @@ mock 设备时间推导的天数只作参考、不参与计分；非 Pixso 图+�
 <div class="kpis">
 {''.join(dimension_kpis)}
 </div>
-<p>评分口径：目标语义 25、可见性 37.5、规范符合 37.5，三项固定构成 100 分；不适用维度记 0 分并
-展示原因，维度分相加即总分。目标语义只在作者显式声明期望时计分，mock 推导的期望天数整维记 0 分。
-素材规则只做诊断，不计分。待复核按半通过计分；显式期望未通过时总分封顶 59.9。
+<p>评分口径：规范符合 60、可见性 40，两项固定构成 100 分；不适用维度记 0 分并
+展示原因，维度分相加即总分。版式与素材规则只做诊断，不计分也不影响结论。
+待复核按半通过计分。
 细分项“单条满分”= 所在维度分值 ÷ 该维度适用规则数，会随样本变化；“平均得分”是各样本
 单条得分的算术平均，按一位小数展示，同一维度下累加与维度平均可能存在 ≤0.5 的取整差。</p>
 <h2>细分维度明细（整批平均）</h2>
@@ -2238,7 +2111,7 @@ mock 设备时间推导的天数只作参考、不参与计分；非 Pixso 图+�
 <h2>样本结论</h2>
 <div class="table-scroll"><table class="sample-table"><thead><tr><th>样本</th>
 <th>主题</th><th>总分</th>
-<th>目标语义</th><th>可见性</th><th>规范符合</th>
+<th>规范符合</th><th>可见性</th>
 <th>状态</th><th>结论</th><th>失败项</th><th>待复核项</th></tr></thead>
 <tbody>{''.join(sample_rows)}</tbody></table></div>
 </body></html>

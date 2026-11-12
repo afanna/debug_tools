@@ -1,7 +1,7 @@
-"""倒计时卡片规范符合性规则（countdown-card-spec-v1 / rubric v4）。
+"""倒计时卡片规范符合性规则（countdown-card-spec-v1 / rubric v6）。
 
 规范来源：``D:/down/倒计时卡片规范.md``，节点树只用于补充实测值；
-两者冲突时以规范正文为准。规则只读 A2UI 组件与期望数据模型，不改产物。
+两者冲突时以规范正文为准。规则只读 A2UI 组件与卡面数据模型，不改产物。
 
 rubric v2 的决策：
 - 标题接受 T1–T4（16/20fp，副标题 16fp），主标题 100% 白、副标题 60% 白；
@@ -22,6 +22,15 @@ rubric v3 的同因去重：
 rubric v4 的总分口径：
 - 目标 25 + 可见性 37.5 + 规范 37.5 固定构成 100 分，不适用维度记 0 分；
 - 维度分相加即总分，不再按可用权重重新归一化。
+
+rubric v5 的评分范围：
+- 去掉目标语义计分与封顶，只保留规范 60 + 可见性 40 两项构成 100 分；
+- 目标语义、版式与素材规则只做诊断，不影响分数、样本状态与结论。
+
+rubric v6 的取样口径：
+- 目标语义整体退出评测，不再推导期望天数、期望日期文案或注入期望值；
+- 主值字号档位与位数上限改读卡面数据模型里的 ``days``，
+  没有该绑定或取不到数值时按“无数字绑定”判定。
 """
 
 from __future__ import annotations
@@ -30,7 +39,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 PROFILE_ID = "countdown-card-spec-v1"
-RUBRIC_VERSION = 4
+RUBRIC_VERSION = 6
 SPEC_SOURCE = "D:/down/倒计时卡片规范.md"
 UNIT_WORDS = ("天", "小时", "分钟", "秒", "个月")
 STATUS_PASS = "pass"
@@ -113,14 +122,13 @@ def evaluate_spec(
     data: dict[str, Any],
     *,
     size: str = "2x2",
-    expected_days: int | None = None,
     theme: dict[str, Any] | None = None,
     user_query: str = "",
 ) -> list[RuleResult]:
     """按规范审计单个样本。返回值顺序固定，便于报告对齐。
 
-    ``expected_days`` 来自 Oracle；存在时用它判断数字位数和主值字号档位，
-    避免继续读取批跑占位数据（占位值只表示“这里会有一个数字”）。
+    数字位数与主值字号档位只读卡面数据模型里的 ``days``（批跑占位值即
+    渲染到卡面的数字），不推导期望天数。
     ``theme`` 由调用方从主题登记表推导；明确不属于图+蒙层路线时，
     规范维度整体记为不适用，不把主题差异算成卡片失败。
     """
@@ -139,7 +147,7 @@ def evaluate_spec(
         _rule_title_font(components),
         _rule_title_ellipsis(components),
         _rule_title_color(components),
-        _rule_primary_font(components, expected_days),
+        _rule_primary_font(components, data),
         _rule_primary_color(components),
         _rule_unit_font(components),
         _rule_unit_color(components),
@@ -147,7 +155,7 @@ def evaluate_spec(
         _rule_support_color(components),
         _rule_content_type(components),
         _rule_pattern_geometry(components, size),
-        _rule_digit_limit(components, expected_days),
+        _rule_digit_limit(components, data),
         _rule_icon(components),
         _rule_action_pattern(components),
     ]
@@ -546,7 +554,19 @@ def _find_days(components: dict[str, Any]) -> tuple[str, dict[str, Any]] | None:
     return None
 
 
-def _rule_primary_font(components: dict[str, Any], expected_days: int | None) -> RuleResult:
+def _days_value(data: dict[str, Any]) -> int | None:
+    """取卡面数据模型里的 ``/data/dateCounter/days``；取不到或不是整数时返回 None。"""
+    node: Any = data
+    for part in ("data", "dateCounter", "days"):
+        if not isinstance(node, dict):
+            return None
+        node = node.get(part)
+    if isinstance(node, int) and not isinstance(node, bool):
+        return node
+    return None
+
+
+def _rule_primary_font(components: dict[str, Any], data: dict[str, Any]) -> RuleResult:
     found = _find_days(components)
     if found is None:
         if _has_pattern(components):
@@ -554,9 +574,8 @@ def _rule_primary_font(components: dict[str, Any], expected_days: int | None) ->
         return RuleResult("SPEC.PRIMARY_FONT", STATUS_FAIL, "56/38", "无数字绑定", "major")
     component_id, component = found
     actual = _as_float((component.get("styles") or {}).get("fontSize"))
-    digits = None
-    if expected_days is not None:
-        digits = len(str(abs(expected_days)))
+    days = _days_value(data)
+    digits = None if days is None else len(str(abs(days)))
     if digits is not None and digits >= 3:
         passed = actual is not None and 29.0 <= actual <= 56.0
         expected = "长数字 29–56"
@@ -569,7 +588,7 @@ def _rule_primary_font(components: dict[str, Any], expected_days: int | None) ->
         expected=expected,
         actual=str(actual),
         severity="major",
-        evidence={"component": component_id, "expectedDays": expected_days, "digits": digits},
+        evidence={"component": component_id, "days": days, "digits": digits},
     )
 
 
@@ -850,10 +869,13 @@ def _rule_pattern_geometry(components: dict[str, Any], size: str) -> RuleResult:
     )
 
 
-def _rule_digit_limit(components: dict[str, Any], expected_days: int | None) -> RuleResult:
-    if expected_days is None:
-        return RuleResult("SPEC.DIGIT_LIMIT", STATUS_NA, "最多 6 位", "无期望天数", "major")
-    digits = len(str(abs(expected_days)))
+def _rule_digit_limit(components: dict[str, Any], data: dict[str, Any]) -> RuleResult:
+    days = _days_value(data)
+    if days is None:
+        return RuleResult(
+            "SPEC.DIGIT_LIMIT", STATUS_NA, "最多 6 位", "卡面数据模型无 days", "major"
+        )
+    digits = len(str(abs(days)))
     passed = digits <= 6
     return RuleResult(
         rule="SPEC.DIGIT_LIMIT",
@@ -861,7 +883,7 @@ def _rule_digit_limit(components: dict[str, Any], expected_days: int | None) -> 
         expected="最多 6 位",
         actual=f"{digits} 位",
         severity="major",
-        evidence={"expectedDays": expected_days, "hasPrimary": _find_days(components) is not None},
+        evidence={"days": days, "hasPrimary": _find_days(components) is not None},
     )
 
 

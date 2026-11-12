@@ -1,6 +1,7 @@
-"""基于 3x 截图与 DOM 证据的目标语义、可见性和版式检查。
+"""基于 3x 截图与 DOM 证据的可见性和版式检查。
 
 所有判定只消费浏览器采集到的证据；截图不参与语义真值推断。
+目标语义已退出评分与采集，本模块不再做天数、关系文案或绑定注入比对。
 """
 
 from __future__ import annotations
@@ -10,7 +11,6 @@ import unicodedata
 from pathlib import Path
 from typing import Any
 
-from te_binding import binding_index, leaf_component_ids
 from te_layout import evaluate_layout
 from te_spec import (
     STATUS_FAIL,
@@ -21,10 +21,6 @@ from te_spec import (
     RuleResult,
 )
 
-RELATION_WORDS = ("还剩", "已过", "就是今天")
-PLACEHOLDERS = ("待同步", "待确认", "暂无数据", "暂无记录", "加载中", "placeholder")
-DATE_VARIANTS = ("{year}-{month}-{day}", "{year}.{month}.{day}", "{year}年{month}月{day}日")
-DATE_SHORT_VARIANTS = ("{month}/{day}", "{month}月{day}日")
 MIN_FONT_SIZE = 12.0
 BAR_PITCH = {"2x2": 19.34, "2x4": 33.25}
 DOT_COL_PITCH = {"2x2": 10.7, "2x4": 11.16}
@@ -42,10 +38,8 @@ def normalize_text(value: Any) -> str:
 
 def evaluate_dom(
     evidence: dict[str, Any],
-    oracle: Any,
     components: dict[str, Any],
     *,
-    original: dict[str, Any] | None = None,
     png_path: Path | None = None,
     scale: float = 3.0,
     resource_root: Path | None = None,
@@ -53,14 +47,8 @@ def evaluate_dom(
 ) -> tuple[list[RuleResult], dict[str, Any]]:
     """返回 DOM 规则结果与可展示的版式指标。"""
     results: list[RuleResult] = []
-    visible_text = normalize_text(evidence.get("visibleText"))
     nodes = _visible_leaf_nodes(evidence)
     metrics = _layout_metrics(evidence, nodes)
-    index = binding_index(components)
-    results.extend(_target_results(oracle, components, evidence, nodes, visible_text, index))
-    if original is not None:
-        results.extend(_binding_update_results(oracle, components, evidence, original, index))
-    results.extend(_placeholder_results(visible_text))
     results.extend(_web_quality_results(evidence))
     results.extend(evaluate_layout(evidence, components))
     results.extend(_font_results(nodes))
@@ -69,8 +57,6 @@ def evaluate_dom(
     results.extend(_asset_results(evidence, resource_root))
     results.extend(_pattern_pitch_results(evidence, size))
     results.extend(_unit_baseline_results(nodes))
-    if oracle.gate and oracle.relation_text in RELATION_WORDS:
-        results.extend(_scenario_results(oracle, visible_text))
     return results, metrics
 
 
@@ -88,242 +74,6 @@ def _visible_leaf_nodes(evidence: dict[str, Any]) -> list[dict[str, Any]]:
         if text:
             leaves.append(node)
     return leaves
-
-
-def _target_results(
-    oracle: Any,
-    components: dict[str, Any],
-    evidence: dict[str, Any],
-    nodes: list[dict[str, Any]],
-    visible_text: str,
-    index: dict[str, list[str]],
-) -> list[RuleResult]:
-    results: list[RuleResult] = []
-    write_to = getattr(oracle, "write_result_to", None)
-    values = oracle.card_values()
-    if not values:
-        if getattr(oracle, "gate", False):
-            results.append(
-                RuleResult(
-                    rule="TARGET.ORACLE_EMPTY",
-                    status=STATUS_NA,
-                    expected="可推导的期望值",
-                    actual="无期望值可用",
-                    severity="major",
-                )
-            )
-        return results
-    node_by_id = {
-        str(node.get("id")): node
-        for node in nodes
-        if isinstance(node.get("id"), str)
-    }
-    missing: list[str] = []
-    matched = 0
-    for field_name, expected in values.items():
-        path = f"{write_to.rstrip('/')}/{field_name}" if write_to else None
-        if path is None:
-            continue
-        token = str(expected)
-        referenced = index.get(path) or []
-        if not referenced:
-            missing.append(field_name)
-            results.append(
-                RuleResult(
-                    rule="TARGET.BINDING_MISSING",
-                    status=STATUS_FAIL,
-                    expected=f"{path} 被组件引用",
-                    actual="没有组件引用该路径",
-                    severity="major",
-                    evidence={"path": path, "field": field_name},
-                )
-            )
-            continue
-        bound_ids = leaf_component_ids(components, referenced)
-        node_text = " ".join(
-            normalize_text(node_by_id[item].get("text"))
-            for item in bound_ids
-            if item in node_by_id
-        )
-        if _contains_value(node_text, token, field_name) or _contains_value(
-            visible_text,
-            token,
-            field_name,
-        ):
-            matched += 1
-            results.append(
-                RuleResult(
-                    rule=_target_rule(field_name),
-                    status=STATUS_PASS,
-                    expected=f"可见文本包含「{token}」",
-                    actual="已匹配",
-                    severity="major",
-                    evidence={"path": path, "components": referenced},
-                )
-            )
-            continue
-        results.append(_field_mismatch(field_name, path, token, node_text, referenced))
-    if not missing and values:
-        results.append(
-            RuleResult(
-                rule="TARGET.BINDING_MISSING",
-                status=STATUS_PASS,
-                expected="全部期望字段被组件引用",
-                actual=f"{len(values)} 个字段均已引用，{matched} 个文本已匹配",
-                severity="major",
-            )
-        )
-    return results
-
-
-def _target_rule(field_name: str) -> str:
-    return {
-        "days": "TARGET.DAYS_MISMATCH",
-        "relationText": "TARGET.RELATION_TEXT_MISMATCH",
-        "targetDateText": "TARGET.VISIBLE_EXPECTATION_MISSING",
-    }.get(field_name, "TARGET.VISIBLE_EXPECTATION_MISSING")
-
-
-def _field_mismatch(
-    field_name: str,
-    path: str,
-    token: str,
-    node_text: str,
-    referenced: list[str],
-) -> RuleResult:
-    return RuleResult(
-        rule=_target_rule(field_name),
-        status=STATUS_FAIL,
-        expected=f"可见文本包含「{token}」",
-        actual=f"绑定节点文本为「{node_text[:60]}」" if node_text else "绑定节点不可见或无文本",
-        severity="major",
-        evidence={"path": path, "components": referenced},
-    )
-
-
-def _binding_update_results(
-    oracle: Any,
-    components: dict[str, Any],
-    injected: dict[str, Any],
-    original: dict[str, Any],
-    index: dict[str, list[str]],
-) -> list[RuleResult]:
-    """绑定存在但注入后文本不变，说明写死或绑定失效。"""
-    results: list[RuleResult] = []
-    write_to = getattr(oracle, "write_result_to", None)
-    if not write_to:
-        return results
-    original_nodes = _nodes_by_id(original)
-    injected_nodes = _nodes_by_id(injected)
-    checked = 0
-    for field_name, expected in oracle.card_values().items():
-        path = f"{write_to.rstrip('/')}/{field_name}"
-        referenced = index.get(path) or []
-        if not referenced:
-            continue
-        bound_ids = leaf_component_ids(components, referenced)
-        before = " ".join(
-            normalize_text(original_nodes[item].get("text"))
-            for item in bound_ids
-            if item in original_nodes
-        )
-        after = " ".join(
-            normalize_text(injected_nodes[item].get("text"))
-            for item in bound_ids
-            if item in injected_nodes
-        )
-        if not before or before == after and not _contains_value(before, str(expected), field_name):
-            results.append(
-                RuleResult(
-                    rule="TARGET.BINDING_VALUE_MISMATCH",
-                    status=STATUS_FAIL,
-                    expected=f"注入后节点文本应包含「{expected}」",
-                    actual=f"注入前后均为「{before[:60]}」",
-                    severity="major",
-                    evidence={"path": path, "components": referenced},
-                )
-            )
-            return results
-        checked += 1
-    if checked:
-        results.append(
-            RuleResult(
-                rule="TARGET.BINDING_VALUE_MISMATCH",
-                status=STATUS_PASS,
-                expected="注入后期望字段被重新渲染",
-                actual=f"{checked} 个字段注入后文本与期望一致",
-                severity="major",
-            )
-        )
-    return results
-
-
-def _nodes_by_id(evidence: dict[str, Any]) -> dict[str, dict[str, Any]]:
-    nodes = evidence.get("nodes")
-    if not isinstance(nodes, list):
-        return {}
-    return {
-        str(node.get("id")): node
-        for node in nodes
-        if isinstance(node, dict) and isinstance(node.get("id"), str)
-    }
-
-
-def _contains_value(text: str, token: str, field_name: str) -> bool:
-    if not text or not token:
-        return False
-    if field_name == "targetDateText":
-        return bool(_date_presence(text, token)[0])
-    if field_name == "days":
-        return re.search(rf"(?<!\d){re.escape(token)}(?!\d)", text) is not None
-    return token in text
-
-
-def _date_presence(text: str, token: str) -> tuple[bool, str]:
-    if token in text:
-        return True, "exact"
-    match = re.fullmatch(r"(\d{4})/(\d{1,2})/(\d{1,2})", token)
-    if match is None:
-        return False, "unknown"
-    year, month, day = match.groups()
-    parts = {"year": year, "month": f"{int(month):02d}", "day": f"{int(day):02d}"}
-    for template in DATE_VARIANTS:
-        variant = template.format(
-            year=year, month=parts["month"], day=parts["day"]
-        )
-        if variant in text:
-            return True, "variant"
-    for template in DATE_SHORT_VARIANTS:
-        variant = template.format(month=str(int(month)), day=str(int(day)))
-        if variant in text:
-            return True, "short"
-    return False, "missing"
-
-
-def _placeholder_results(visible_text: str) -> list[RuleResult]:
-    hits = [item for item in PLACEHOLDERS if item in visible_text]
-    if not hits:
-        if not visible_text:
-            return []
-        return [
-            RuleResult(
-                rule="TARGET.PLACEHOLDER_VISIBLE",
-                status=STATUS_PASS,
-                expected="不显示占位文案",
-                actual="未发现占位文案",
-                severity="major",
-            )
-        ]
-    return [
-        RuleResult(
-            rule="TARGET.PLACEHOLDER_VISIBLE",
-            status=STATUS_PENDING,
-            expected="不显示占位文案",
-            actual=", ".join(hits),
-            severity="major",
-            evidence={"placeholders": hits},
-        )
-    ]
 
 
 def _web_quality_results(evidence: dict[str, Any]) -> list[RuleResult]:
@@ -1079,32 +829,6 @@ def _as_number(value: Any) -> float | None:
     if isinstance(value, (int, float)) and not isinstance(value, bool):
         return float(value)
     return None
-
-
-def _scenario_results(oracle: Any, visible_text: str) -> list[RuleResult]:
-    expected = oracle.relation_text
-    others = [word for word in RELATION_WORDS if word != expected and word in visible_text]
-    if expected in visible_text:
-        return [
-            RuleResult(
-                rule="TARGET.SCENARIO_RULE_VIOLATION",
-                status=STATUS_PASS,
-                expected=f"关系文案「{expected}」",
-                actual="与日期差一致",
-                severity="major",
-            )
-        ]
-    if not others:
-        return []
-    return [
-        RuleResult(
-            rule="TARGET.SCENARIO_RULE_VIOLATION",
-            status=STATUS_FAIL,
-            expected=f"关系文案「{expected}」",
-            actual=f"出现「{', '.join(others)}」",
-            severity="major",
-        )
-    ]
 
 
 def _layout_metrics(evidence: dict[str, Any], nodes: list[dict[str, Any]]) -> dict[str, Any]:
