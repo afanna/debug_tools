@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import tempfile
 from pathlib import Path
 
 import pytest
@@ -820,6 +821,16 @@ def test_sample_fact_sort_keeps_missing_values_last(tmp_path: Path) -> None:
         ({"presentation": {"defaultView": "custom", "sampleFields": []}}, "defaultView"),
         (
             {
+                "presentation": {
+                    "defaultView": "table",
+                    "sampleDetail": "dialog",
+                    "sampleFields": [],
+                }
+            },
+            "sampleDetail",
+        ),
+        (
+            {
                 "outputs": [
                     {
                         "key": "late",
@@ -896,6 +907,207 @@ def test_v2_result_rejects_missing_required_artifact_and_path_escape(tmp_path: P
             scope="sample",
             asset_root=tmp_path,
         )
+
+
+def test_score_grid_rows_resolve_image_urls() -> None:
+    manifest = {
+        "apiVersion": "batch-postprocess-v2",
+        "outputs": [
+            {
+                "key": "scores",
+                "scope": "dataset",
+                "title": "卡片评分总览",
+                "dataType": "records",
+                "renderer": "score-grid",
+                "required": True,
+            }
+        ],
+    }
+    with tempfile.TemporaryDirectory() as name:
+        asset_root = Path(name)
+        target = asset_root / "samples" / "Q001" / "injected.png"
+        target.parent.mkdir(parents=True)
+        target.write_bytes(b"png")
+        normalized = PostprocessManager._normalize_result(
+            {
+                "status": "success",
+                "facts": {},
+                "artifacts": [
+                    {
+                        "key": "scores",
+                        "data": [
+                            {"sampleId": "Q001", "image": "samples/Q001/injected.png"},
+                            {"sampleId": "Q002", "image": ""},
+                        ],
+                    }
+                ],
+            },
+            manifest=manifest,
+            scope="dataset",
+            asset_root=asset_root,
+            asset_base_url="/assets",
+        )
+        row = normalized["artifacts"][0]["data"][0]
+        assert row["image"] == "samples/Q001/injected.png"
+        assert row["url"] == "/assets/samples/Q001/injected.png"
+        assert "url" not in normalized["artifacts"][0]["data"][1]
+
+        dataset_dir = asset_root / "dataset"
+        dataset_dir.mkdir()
+        (dataset_dir / "report.html").write_text("report", encoding="utf-8")
+        scoped = PostprocessManager._normalize_result(
+            {
+                "status": "success",
+                "facts": {},
+                "artifacts": [
+                    {
+                        "key": "scores",
+                        "data": [{"sampleId": "Q001", "image": "samples/Q001/injected.png"}],
+                    }
+                ],
+            },
+            manifest=manifest,
+            scope="dataset",
+            asset_root=dataset_dir,
+            asset_base_url="/plugin/dataset",
+            image_root=asset_root,
+            image_base_url="/plugin",
+        )
+        assert scoped["artifacts"][0]["data"][0]["url"] == (
+            "/plugin/samples/Q001/injected.png"
+        )
+
+        with pytest.raises(ValueError, match="评分卡图片路径无效"):
+            PostprocessManager._normalize_result(
+                {
+                    "status": "success",
+                    "facts": {},
+                    "artifacts": [
+                        {"key": "scores", "data": [{"sampleId": "Q001", "image": "../x.png"}]}
+                    ],
+                },
+                manifest=manifest,
+                scope="dataset",
+                asset_root=asset_root,
+                asset_base_url="/assets",
+            )
+
+
+def test_v2_outputs_accept_wide_flag_and_reject_non_boolean() -> None:
+    valid = [
+        {
+            "key": "rules",
+            "scope": "dataset",
+            "title": "细分维度平均",
+            "dataType": "records",
+            "renderer": "table",
+            "required": True,
+            "wide": True,
+        }
+    ]
+    PostprocessManager._validate_outputs(valid)
+    invalid = [dict(valid[0], wide="yes")]
+    with pytest.raises(ValueError, match="wide"):
+        PostprocessManager._validate_outputs(invalid)
+
+
+def test_v2_result_carries_wide_layout_flag() -> None:
+    manifest = {
+        "apiVersion": "batch-postprocess-v2",
+        "outputs": [
+            {
+                "key": "rules",
+                "scope": "dataset",
+                "title": "细分维度平均",
+                "dataType": "records",
+                "renderer": "table",
+                "required": True,
+                "wide": True,
+            }
+        ],
+    }
+    normalized = PostprocessManager._normalize_result(
+        {
+            "status": "success",
+            "facts": {},
+            "artifacts": [{"key": "rules", "data": []}],
+        },
+        manifest=manifest,
+        scope="dataset",
+    )
+    assert normalized["artifacts"][0]["wide"] is True
+
+
+def test_v2_outputs_accept_collapsible_flag_and_reject_non_boolean() -> None:
+    valid = [
+        {
+            "key": "rules",
+            "scope": "dataset",
+            "title": "细分维度平均",
+            "dataType": "records",
+            "renderer": "table",
+            "required": True,
+            "collapsible": True,
+        }
+    ]
+    PostprocessManager._validate_outputs(valid)
+    invalid = [dict(valid[0], collapsible="yes")]
+    with pytest.raises(ValueError, match="collapsible"):
+        PostprocessManager._validate_outputs(invalid)
+
+
+def test_v2_result_carries_collapsible_layout_flag() -> None:
+    manifest = {
+        "apiVersion": "batch-postprocess-v2",
+        "outputs": [
+            {
+                "key": "rules",
+                "scope": "dataset",
+                "title": "细分维度平均",
+                "dataType": "records",
+                "renderer": "table",
+                "required": True,
+                "collapsible": True,
+            }
+        ],
+    }
+    normalized = PostprocessManager._normalize_result(
+        {
+            "status": "success",
+            "facts": {},
+            "artifacts": [{"key": "rules", "data": []}],
+        },
+        manifest=manifest,
+        scope="dataset",
+    )
+    assert normalized["artifacts"][0]["collapsible"] is True
+
+
+def test_v2_result_carries_toolbar_placement_flag() -> None:
+    manifest = {
+        "apiVersion": "batch-postprocess-v2",
+        "outputs": [
+            {
+                "key": "report",
+                "scope": "dataset",
+                "title": "HTML 报告",
+                "dataType": "file",
+                "renderer": "download",
+                "required": True,
+                "toolbar": True,
+            }
+        ],
+    }
+    PostprocessManager._validate_outputs(manifest["outputs"])
+    normalized = PostprocessManager._normalize_result(
+        {"status": "success", "facts": {}, "artifacts": [{"key": "report"}]},
+        manifest=manifest,
+        scope="dataset",
+    )
+    assert normalized["artifacts"][0]["toolbar"] is True
+    invalid = [dict(manifest["outputs"][0], toolbar="yes")]
+    with pytest.raises(ValueError, match="toolbar"):
+        PostprocessManager._validate_outputs(invalid)
 
 
 @pytest.mark.asyncio

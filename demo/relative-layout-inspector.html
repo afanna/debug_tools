@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>相对布局检查器 · 交互 Demo</title>
+<style>
+:root{--bg:#F7F8FA;--panel:#FFFFFF;--line:#E3E6EB;--text:#1F2430;--muted:#6B7280;--blue:#185FA5;--blue-soft:#E6F1FB;--blue-line:#B5D4F4;--code:#F4F5F7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:13px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+.wrap{max-width:1320px;margin:0 auto;padding:20px}
+.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;margin-bottom:14px}
+h1{font-size:17px;font-weight:600;margin:0}
+.sub{font-size:12px;color:var(--muted)}
+.tag{font-size:11px;background:var(--blue-soft);color:var(--blue);border:1px solid var(--blue-line);border-radius:20px;padding:2px 10px}
+.grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,290px) minmax(0,1.15fr);gap:14px;align-items:start}
+.pane{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}
+.pane h2{font-size:13px;font-weight:600;margin:0 0 6px}
+.hint{font-size:12px;color:var(--muted);margin:0 0 12px;line-height:1.65}
+.dsl{font:12px/1.75 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;white-space:pre-wrap;background:var(--code);border-radius:8px;padding:8px;max-height:400px;overflow:auto}
+.dsl .line{display:block;padding:1px 6px;border-radius:4px;cursor:pointer}
+.dsl .line:hover{background:#EAEFF7}
+.dsl .line.active{background:#D6E8FA;outline:1px solid var(--blue-line)}
+.warn{background:#FFF8EA;border:1px solid #F0D9A8;border-radius:8px;padding:9px 10px;font-size:12px;line-height:1.65;color:#6B4E12;margin-top:10px}
+.warn b{font-weight:600}
+.scenarios{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+button{font:inherit;font-size:12px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px 10px;cursor:pointer;color:var(--text)}
+button:hover{border-color:var(--blue);color:var(--blue)}
+button.on{background:var(--blue-soft);border-color:var(--blue);color:var(--blue)}
+.stage-inner{display:flex;justify-content:center;padding:6px 0 12px}
+.card{width:240px;height:240px;box-sizing:border-box;padding:16px;display:flex;flex-direction:column;background:#E6F1FB;box-shadow:inset 0 0 0 1px #B5D4F4;border-radius:16px;position:relative;overflow:hidden}
+.card.fallback{font-family:"Courier New",monospace}
+.row{display:flex;min-width:0}
+.header{align-items:center;gap:8px}
+.value-row{align-items:baseline;gap:6px;margin-top:12px}
+[data-node-id="title"]{flex:1;min-width:0;font-size:13px;line-height:1.45;color:#0C447C}
+[data-node-id="badge"]{flex:none;width:40px;text-align:center;font-size:11px;line-height:1.5;color:#fff;background:#185FA5;border-radius:6px;padding:2px 0}
+[data-node-id="value"]{font-size:44px;font-weight:600;line-height:1.1;color:#185FA5}
+[data-node-id="unit"]{flex:1;min-width:0;font-size:12px;line-height:1.45;color:#5F5E5A}
+[data-node-id="note"]{margin-top:auto;padding:8px;font-size:11px;line-height:1.45;color:#5F5E5A;background:#fff;border-radius:8px}
+[data-node-id="button"]{margin-top:12px;padding:8px 12px;font-size:12px;line-height:1.45;color:#fff;background:#185FA5;border-radius:14px;text-align:center}
+.card.large-text [data-node-id="title"]{font-size:16px}
+.card.large-text [data-node-id="badge"]{font-size:13px}
+.card.large-text [data-node-id="value"]{font-size:52px}
+.card.large-text [data-node-id="unit"]{font-size:15px}
+.card.large-text [data-node-id="note"]{font-size:14px}
+.card.large-text [data-node-id="button"]{font-size:15px}
+#overlay{position:absolute;inset:0;pointer-events:none}
+.hl{position:absolute;border:1px solid #185FA5;background:rgba(24,95,165,.09);box-sizing:border-box}
+.ruler{position:absolute;transform:translate(-50%,-50%);background:#fff;border:1px solid #185FA5;border-radius:4px;padding:0 5px;font-size:11px;line-height:1.6;color:#0C447C;white-space:nowrap}
+.basis{font-size:11px;color:var(--muted);margin:0;padding-top:8px;border-top:1px dashed var(--line)}
+.node-head{font-size:14px;font-weight:600}
+.node-id{font-size:12px;color:var(--muted);font-weight:400;margin-left:6px}
+.sec{font-size:12px;font-weight:600;margin:14px 0 4px;color:var(--muted)}
+.cmp{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+.cmp th,.cmp td{text-align:left;padding:5px 4px;border-bottom:1px solid var(--line);vertical-align:top;word-break:break-all}
+.cmp th{color:var(--muted);font-weight:500}
+.cmp td.dslv{color:var(--muted);font-family:ui-monospace,Consolas,monospace}
+.cmp td.real{color:var(--text);font-weight:600}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:6px}
+.metric{background:var(--code);border-radius:8px;padding:7px 8px}
+.metric span{display:block;font-size:11px;color:var(--muted)}
+.metric b{display:block;font-size:16px;font-weight:600;margin-top:2px}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px solid var(--line);font-size:12px}
+.kv span:last-child{text-align:right;word-break:break-all}
+.sw{display:inline-block;width:10px;height:10px;border-radius:3px;border:1px solid var(--line);vertical-align:-1px;margin-right:5px}
+.why{background:var(--blue-soft);border:1px solid var(--blue-line);border-radius:8px;padding:9px 10px;font-size:12px;line-height:1.65;color:#0C447C;margin-top:12px}
+.delta{background:#FFF8EA;border:1px solid #F0D9A8;border-radius:8px;padding:9px 10px;font-size:12px;line-height:1.65;color:#6B4E12;margin-top:8px}
+.empty{font-size:12px;color:var(--muted);line-height:1.8;padding:8px 0}
+.foot{font-size:11px;color:var(--muted);margin-top:14px;line-height:1.7}
+@media(max-width:1000px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+<h1>相对布局检查器 · 交互 Demo</h1>
+<span class="sub">同一份 DSL 不含 x/y 坐标 · 点击卡片任意区域查看真实几何</span>
+<span class="tag" id="scene-tag">当前：标准场景 · DSL 未改动</span>
+</div>
+
+<div class="grid">
+<section class="pane">
+<h2>① DSL 声明（示意，非真实 A2UI 语法）</h2>
+<p class="hint">只有声明式属性与权重，没有任何坐标。点击某一行也能选中对应区域。</p>
+<div class="dsl" id="dsl"></div>
+<div class="warn"><b>只看 DSL 会漏掉什么</b><br>
+· <code>padding:16</code> 不是元素到卡片边的距离，中间还隔着兄弟元素与 gap<br>
+· <code>width:matchParent</code> 不等于卡片宽，要减去父级 padding<br>
+· <code>layoutWeight:1</code> 没有像素值，兄弟元素一变它就变<br>
+· <code>marginTop:auto</code> 的位置由剩余空间决定，内容换行就下移<br>
+· <code>$color.primary</code> 是 token，真实色值要渲染后才知道</div>
+</section>
+
+<section class="pane">
+<h2>② 真实渲染（相对布局）</h2>
+<p class="hint">切换的只是运行时条件，DSL 一行未改。</p>
+<div class="scenarios" id="scenes"></div>
+<div class="stage-inner">
+<div class="card" id="card" data-node-id="root">
+<div class="row header" data-node-id="header">
+<div data-node-id="title">距离结婚纪念日</div>
+<div data-node-id="badge">纪念</div>
+</div>
+<div class="row value-row" data-node-id="valueRow">
+<div data-node-id="value">18</div>
+<div data-node-id="unit">天后 · 6 月 18 日</div>
+</div>
+<div data-node-id="note">内容不会自动更新</div>
+<div data-node-id="button">查看详情</div>
+<div id="overlay"></div>
+</div>
+</div>
+<p class="basis">开发态显式测试视口 · CSS px · zoom 100% · Web 预览不等于真机避让通过</p>
+</section>
+
+<section class="pane">
+<h2>③ 点击后的真实信息</h2>
+<p class="hint">左列是 DSL 声明，右列是浏览器算出来的实际值。</p>
+<div id="panel"><div class="empty">点击中间卡片的任意区域开始检查。<br>建议先点「value」，再切换上面的场景，观察同一节点的几何如何变化。</div></div>
+</section>
+</div>
+
+<div class="foot">独立演示文件，不接入构建、不修改任何现有代码；可在确认后直接删除。<br>检查器设计口径：只读 DOM、捕获阶段点击、独立覆盖层、输出带 basis 的结构化快照。</div>
+</div>
+
+<script>
+(function(){
+'use strict';
+var card=document.getElementById('card'),ov=document.getElementById('overlay'),panel=document.getElementById('panel'),dslBox=document.getElementById('dsl'),scenesBox=document.getElementById('scenes'),sceneTag=document.getElementById('scene-tag');
+var S={on:true,selected:null,scene:'base'};
+var BASELINE={};
+
+var DSL_LINES=[
+{id:'root',text:'Column (root)   width: matchParent   height: matchParent'},
+{id:'root',text:'  padding: 16   gap: 0   background: $color.surface'},
+{id:'header',text:'  ├ Row (header)   width: matchParent   gap: 8'},
+{id:'title',text:'  │   ├ Text (title)   layoutWeight: 1   fontSize: 13'},
+{id:'badge',text:'  │   └ Text (badge)   width: 40   fontSize: 11'},
+{id:'valueRow',text:'  ├ Row (valueRow)   width: matchParent   marginTop: 12'},
+{id:'value',text:'  │   ├ Text (value)   fontSize: 44   color: $color.primary'},
+{id:'unit',text:'  │   └ Text (unit)    layoutWeight: 1   fontSize: 12'},
+{id:'note',text:'  ├ Text (note)    width: matchParent   marginTop: auto'},
+{id:'button',text:'  └ Button (button) width: matchParent  marginTop: 12'},
+{id:'none',text:''},
+{id:'none',text:'// 没有任何 x / y / left / top / 绝对坐标'}
+];
+
+var DEFAULTS={Width:'未声明（内容或权重撑开）',Height:'未声明（内容撑开）',X:'无坐标声明',Y:'无坐标声明',Padding:'未声明',Margin:'未声明',FontSize:'继承',Color:'继承'};
+var DECL={
+root:{Width:'matchParent',Height:'matchParent',Padding:'16（四边）',Color:'$color.surface'},
+header:{Width:'matchParent',X:'无坐标声明',Y:'无坐标声明',Margin:'未声明',Padding:'未声明',FontSize:'继承',Color:'继承'},
+title:{Width:'layoutWeight: 1',Padding:'未声明',Margin:'未声明',FontSize:'13',Color:'$color.title'},
+badge:{Width:'40',Padding:'2（上下）',FontSize:'11',Color:'$color.onPrimary'},
+valueRow:{Width:'matchParent',Margin:'12（上）'},
+value:{FontSize:'44',Color:'$color.primary'},
+unit:{Width:'layoutWeight: 1',FontSize:'12',Color:'$color.secondary'},
+note:{Width:'matchParent',Margin:'auto（上）',Padding:'8',FontSize:'11',Color:'$color.secondary'},
+button:{Width:'matchParent',Margin:'12（上）',Padding:'8 / 12',FontSize:'12',Color:'$color.onPrimary'}
+};
+var WHY={
+root:'整卡是 Column 相对排布，所有子节点位置由 padding、gap 和内容高度累计得到；内部可用宽 = 卡片宽 − 16×2。',
+header:'Row 的高度由最高的子元素撑开，DSL 只写了 gap:8，没有写高度；标题一旦换行，这一行就会变高。',
+title:'layoutWeight:1 表示「吃掉剩余空间」，不是像素宽度。badge 固定 40 + gap 8，标题实际宽随卡片宽和字体变化。',
+badge:'固定 40 看起来确定，但它到卡片右边的距离仍取决于 root 的 padding；它还会把 title 挤窄。',
+valueRow:'只有 marginTop:12，垂直位置 = root padding + header 实际高度 + 12。DSL 里读不出这个 y。',
+value:'字体大小是设计值 44，实际占位高度还要看 line-height 和字体度量；数据从 18 变成 108 时宽度会变，DSL 不变。',
+unit:'同样只有权重没有宽度。value 变宽后它被挤压，left 与 width 都会跟着变——这是典型的相对布局连锁反应。',
+note:'marginTop:auto 吸收剩余空间，位置由前面所有内容的高度决定；标题换行或字号放大都会改变它的 top。',
+button:'width:matchParent 的实际值是内容宽（卡片宽 − 左右 padding），不是卡片宽；底部距离由 padding 与上方内容共同决定。'
+};
+var SCENES=[
+{key:'base',label:'标准'},
+{key:'data',label:'数据刷新 18→108'},
+{key:'font',label:'字体回退'},
+{key:'viewport',label:'视口 210×210'},
+{key:'a11y',label:'系统字号放大'}
+];
+
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function q(id){return card.querySelector('[data-node-id="'+id+'"]')}
+function rgb(s){var m=String(s).match(/[\d.]+/g)||[];return [+m[0]||0,+m[1]||0,+m[2]||0,m[3]===undefined?1:+m[3]]}
+function lum(c){var a=c.slice(0,3).map(function(v){v=v/255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4)});return 0.2126*a[0]+0.7152*a[1]+0.0722*a[2]}
+function bgOf(el){while(el){var c=getComputedStyle(el).backgroundColor;if(rgb(c)[3]>0)return c;el=el.parentElement}return 'rgb(255,255,255)'}
+function contrast(f,b){var x=lum(rgb(f)),y=lum(rgb(b));return ((Math.max(x,y)+0.05)/(Math.min(x,y)+0.05)).toFixed(2)}
+
+function measure(el){
+var cr=card.getBoundingClientRect(),r=el.getBoundingClientRect(),cs=getComputedStyle(el);
+return {
+id:el.dataset.nodeId,
+left:Math.round(r.left-cr.left),top:Math.round(r.top-cr.top),
+right:Math.round(cr.right-r.right),bottom:Math.round(cr.bottom-r.bottom),
+width:Math.round(r.width),height:Math.round(r.height),
+padding:cs.padding,margin:cs.margin,fontSize:cs.fontSize,lineHeight:cs.lineHeight,fontWeight:cs.fontWeight,
+color:cs.color,backgroundColor:cs.backgroundColor,
+clientWidth:el.clientWidth,scrollWidth:el.scrollWidth,clientHeight:el.clientHeight,scrollHeight:el.scrollHeight
+};
+}
+
+function buildDsl(){
+dslBox.innerHTML=DSL_LINES.map(function(l){return '<span class="line" data-for="'+l.id+'">'+esc(l.text||' ')+'</span>'}).join('');
+dslBox.querySelectorAll('.line').forEach(function(line){
+line.addEventListener('click',function(){
+var id=line.dataset.for,el=id&&id!=='none'?q(id):null;
+if(el){select(el);}
+});
+});
+}
+function buildScenes(){
+scenesBox.innerHTML=SCENES.map(function(s){return '<button data-scene="'+s.key+'"'+(s.key===S.scene?' class="on"':'')+'>'+esc(s.label)+'</button>'}).join('');
+scenesBox.querySelectorAll('button').forEach(function(b){
+b.addEventListener('click',function(){applyScene(b.dataset.scene)});
+});
+}
+function applyScene(key){
+S.scene=key;
+card.style.width=key==='viewport'?'210px':'240px';
+card.style.height=key==='viewport'?'210px':'240px';
+card.classList.toggle('fallback',key==='font');
+card.classList.toggle('large-text',key==='a11y');
+q('value').textContent=key==='data'?'108':'18';
+var label=SCENES.filter(function(s){return s.key===key})[0].label;
+sceneTag.textContent='当前：'+label+' · DSL 未改动';
+scenesBox.querySelectorAll('button').forEach(function(b){b.classList.toggle('on',b.dataset.scene===key)});
+if(S.selected){select(S.selected);}
+}
+function computeBaseline(){
+var nodes=[card].concat(Array.from(card.querySelectorAll('[data-node-id]')));
+nodes.forEach(function(el){BASELINE[el.dataset.nodeId]=measure(el)});
+}
+function highlightDsl(id){
+dslBox.querySelectorAll('.line').forEach(function(l){l.classList.toggle('active',l.dataset.for===id)});
+}
+function ruler(x,y,v){var d=document.createElement('div');d.className='ruler';d.textContent=v;d.style.left=x+'px';d.style.top=y+'px';ov.appendChild(d)}
+function drawOverlay(m){
+ov.innerHTML='';
+var box=document.createElement('div');box.className='hl';
+box.style.left=m.left+'px';box.style.top=m.top+'px';box.style.width=m.width+'px';box.style.height=m.height+'px';
+ov.appendChild(box);
+ruler(m.left+m.width/2,m.top/2,m.top);
+ruler(m.left+m.width/2,m.top+m.height+m.bottom/2,m.bottom);
+ruler(m.left/2,m.top+m.height/2,m.left);
+ruler(m.left+m.width+m.right/2,m.top+m.height/2,m.right);
+}
+function deltaHtml(id,m){
+var b=BASELINE[id];if(!b)return '';
+var rows=[['到卡片上','top'],['到卡片左','left'],['到卡片右','right'],['到卡片下','bottom'],['宽度','width'],['高度','height']];
+var parts=[];
+rows.forEach(function(p){var d=m[p[1]]-b[p[1]];if(d!==0)parts.push(p[0]+' '+(d>0?'+':'')+d+' px')});
+if(S.scene==='base')return '<div class="delta"><b>相对标准场景</b><br>当前就是标准场景，作为比较基线。</div>';
+if(!parts.length)return '<div class="delta"><b>相对标准场景（DSL 未改动）</b><br>该节点几何没有变化，但它周围的元素可能已经变了。</div>';
+return '<div class="delta"><b>相对标准场景（DSL 未改动）</b><br>'+parts.join(' · ')+'<br>同一份声明，运行时条件一变，真实几何就变了。</div>';
+}
+function compareRows(id,m){
+var d=DECL[id]||{},g=DEFAULTS;
+function v(k){return d[k]||g[k]}
+return [
+['宽度 width',v('Width'),m.width+' px'],
+['高度 height',v('Height'),m.height+' px'],
+['到卡片左 x',v('X'),m.left+' px'],
+['到卡片上 y',v('Y'),m.top+' px'],
+['内边距 padding',v('Padding'),m.padding],
+['外边距 margin',v('Margin'),m.margin],
+['字号 fontSize',v('FontSize'),m.fontSize],
+['颜色 color',v('Color'),m.color]
+];
+}
+function renderPanel(el,m){
+var id=m.id,bg=bgOf(el),cr=contrast(m.color,bg);
+var h='<div class="node-head">'+esc(labelOf(id))+'<span class="node-id">'+esc(id)+'</span></div>';
+h+='<div class="sec">DSL 声明 vs 实际渲染</div><table class="cmp"><thead><tr><th style="width:30%">字段</th><th style="width:34%">DSL</th><th style="width:36%">实际</th></tr></thead><tbody>';
+compareRows(id,m).forEach(function(r){h+='<tr><th>'+esc(r[0])+'</th><td class="dslv">'+esc(r[1])+'</td><td class="real">'+esc(r[2])+'</td></tr>'});
+h+='</tbody></table>';
+h+='<div class="sec">到卡片四边</div><div class="metrics">';
+[['上',m.top],['右',m.right],['下',m.bottom],['左',m.left]].forEach(function(p){h+='<div class="metric"><span>'+p[0]+'</span><b>'+p[1]+'</b></div>'});
+h+='</div>';
+h+='<div class="sec">文字与颜色</div>';
+h+='<div class="kv"><span>line-height / font-weight</span><span>'+esc(m.lineHeight)+' / '+esc(m.fontWeight)+'</span></div>';
+h+='<div class="kv"><span>实际宽高占用</span><span>client '+m.clientWidth+'×'+m.clientHeight+' · scroll '+m.scrollWidth+'×'+m.scrollHeight+'</span></div>';
+h+='<div class="kv"><span><span class="sw" style="background:'+esc(m.color)+'"></span>前景色</span><span>'+esc(m.color)+'</span></div>';
+h+='<div class="kv"><span><span class="sw" style="background:'+esc(bg)+'"></span>有效背景</span><span>'+esc(bg)+'</span></div>';
+h+='<div class="kv"><span>WCAG 对比度</span><span>'+cr+' : 1 · '+(+cr>=4.5?'AA 通过':'低于 AA')+'</span></div>';
+h+='<div class="why"><b>为什么 DSL 看不准</b><br>'+esc(WHY[id]||'该节点的位置由父容器与兄弟元素共同决定。')+'</div>';
+h+=deltaHtml(id,m);
+h+='<div style="margin-top:12px"><button id="copy">复制 JSON 快照</button> <button id="clear">取消选中</button></div>';
+panel.innerHTML=h;
+document.getElementById('copy').onclick=function(){
+var snap={schemaVersion:'card-inspect-demo-v1',basis:{viewport:'explicit-test-viewport',cssPx:true,zoom:100,scene:S.scene},anchor:{nodeId:id},box:{x:m.left,y:m.top,w:m.width,h:m.height},insets:{top:m.top,right:m.right,bottom:m.bottom,left:m.left},spacing:{padding:m.padding,margin:m.margin},text:{fontSize:m.fontSize,lineHeight:m.lineHeight,color:m.color},contrastRatio:+cr,note:'DSL 不含坐标，以上数值由浏览器相对布局计算'};
+if(navigator.clipboard){navigator.clipboard.writeText(JSON.stringify(snap,null,2))}
+this.textContent='已复制';
+};
+document.getElementById('clear').onclick=clear;
+}
+function labelOf(id){
+var names={root:'整卡 Column',header:'标题行 Row',title:'标题 Text',badge:'角标 Text',valueRow:'主值行 Row',value:'主值 Text',unit:'单位 Text',note:'辅助说明 Text',button:'按钮 Button'};
+return names[id]||id;
+}
+function clear(){
+ov.innerHTML='';S.selected=null;highlightDsl('');
+panel.innerHTML='<div class="empty">点击中间卡片的任意区域开始检查。<br>建议先点「value」，再切换上面的场景，观察同一节点的几何如何变化。</div>';
+}
+function select(el){
+S.selected=el;var m=measure(el);drawOverlay(m);highlightDsl(m.id);renderPanel(el,m);
+}
+
+card.addEventListener('click',function(e){
+if(!S.on)return;
+var el=e.target.closest('[data-node-id]');
+if(!el)return;
+e.preventDefault();e.stopPropagation();select(el);
+},true);
+document.addEventListener('keydown',function(e){if(e.key==='Escape')clear()});
+
+buildDsl();buildScenes();applyScene('base');computeBaseline();
+})();
+</script>
+</body>
+</html>
