@@ -1,0 +1,21 @@
+{
+  "id": "Q481",
+  "fileName": "Q481.json",
+  "title": "当前时间",
+  "query": "把时间显示在桌面上，创建一张显示当前时间、日期、星期和农历的桌面卡片。",
+  "size": "2x2",
+  "sequence": 70,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2046.5,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00070-000",
+  "finalAttempt": 0
+}

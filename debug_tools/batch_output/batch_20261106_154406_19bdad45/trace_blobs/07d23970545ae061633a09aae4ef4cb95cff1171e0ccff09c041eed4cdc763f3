@@ -1,0 +1,8 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [
+    "夜间睡眠总时长（文本已含时间单位）"
+  ],
+  "warnings": []
+}

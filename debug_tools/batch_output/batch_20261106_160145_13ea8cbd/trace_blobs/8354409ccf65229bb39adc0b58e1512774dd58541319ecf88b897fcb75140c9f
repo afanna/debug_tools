@@ -1,0 +1,131 @@
+{
+  "approvedOmittedFactIndexes": [
+    6
+  ],
+  "capacityFits": [
+    {
+      "actualItemCount": 4,
+      "actualRowCount": 4,
+      "componentId": "content_support",
+      "componentType": "SecondaryBody",
+      "directlyFits": [
+        {
+          "itemIndex": 0,
+          "planFacts": [
+            {
+              "factIndex": 2,
+              "priority": "must",
+              "requirement": "展示当前相对湿度"
+            }
+          ],
+          "value": {
+            "label": "湿度",
+            "value": "{{ ${/data/weather/current/humidityPercent} + '%' }}"
+          }
+        },
+        {
+          "itemIndex": 1,
+          "planFacts": [
+            {
+              "factIndex": 3,
+              "priority": "must",
+              "requirement": "展示当前空气质量等级"
+            }
+          ],
+          "value": {
+            "label": "空气",
+            "value": {
+              "path": "/data/weather/current/airQuality"
+            }
+          }
+        },
+        {
+          "itemIndex": 2,
+          "planFacts": [
+            {
+              "factIndex": 4,
+              "priority": "must",
+              "requirement": "展示当前紫外线等级"
+            }
+          ],
+          "value": {
+            "label": "紫外线",
+            "value": {
+              "path": "/data/weather/current/uvIndex"
+            }
+          }
+        }
+      ],
+      "doesNotFit": [
+        {
+          "itemIndex": 3,
+          "planFacts": [
+            {
+              "factIndex": 6,
+              "priority": "should",
+              "requirement": "展示未来3天预报（逐日天气现象与温度范围）"
+            }
+          ],
+          "value": {
+            "label": "明日",
+            "value": "{{ ${/data/weather/daily/0/condition} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"
+          }
+        }
+      ],
+      "effectiveColumnCount": 1,
+      "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+      "maxRetainedRowCount": 3,
+      "overflowFactCount": 1,
+      "overflowItemCount": 1,
+      "parentAvailableHeight": 126.0,
+      "parentId": "root",
+      "rowHeights": [
+        12.0,
+        12.0,
+        12.0,
+        24.0
+      ],
+      "rowSpacing": 2.0,
+      "scope": "currentComponentItemsOnly"
+    }
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 2,
+  "consecutiveFailures": 2,
+  "fallbackAttempt": 0,
+  "fallbackAttemptLimit": 4,
+  "fallbackRemainingAttempts": 4,
+  "fallbackStage": "drop_optional_component",
+  "fingerprint": "083322a3a2375c29",
+  "instruction": "固定容量组件的超限内容在一次无损重组后仍未获得合法落点；不再等待固定第四轮，提前进入程序授权的最小 Drop。已进入条目级最小删减兜底。仅允许从 optionalDrop.componentId 指定的 SecondaryBody.items 删除 allowedItemIndexes=(3,) 对应且仍承载 allowedOmittedFactIndexes 的 doesNotFit 条目；保留该组件的其余 items、顺序、绑定、字号和父级引用。仅当删除后 items 为空时才删除组件行及其直接父级引用。不得删除其它组件、未授权事实或任何 Action；整卡必须继续保留至少一个核心信息组件。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_capacity",
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "1f040d71ac5d9690"
+  },
+  "noProgress": false,
+  "optionalDrop": {
+    "allowedItemIndexes": [
+      3
+    ],
+    "allowedOmittedFactIndexes": [
+      6
+    ],
+    "componentId": "content_support",
+    "componentType": "SecondaryBody",
+    "containsMustFacts": false,
+    "displayTexts": [],
+    "partial": true,
+    "requirements": [
+      "展示未来3天预报（逐日天气现象与温度范围）"
+    ]
+  },
+  "repairStrategy": "drop_optional_component",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

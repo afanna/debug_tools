@@ -1,0 +1,22 @@
+{
+  "title": "小艺卡片",
+  "description": "时间电量速览",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time"
+    },
+    {
+      "capabilityId": "GetPhoneBatteryInfo",
+      "arguments": {},
+      "writeResultTo": "/data/battery"
+    }
+  ]
+}

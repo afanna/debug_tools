@@ -1,0 +1,19 @@
+{
+  "title": "考试倒计时",
+  "description": "帮我做张考试倒计时卡，考试定在2026年12月19日。",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetDateCounter",
+      "arguments": {
+        "targetDate": "2026-12-19"
+      },
+      "writeResultTo": "/data/dateCounter"
+    }
+  ]
+}

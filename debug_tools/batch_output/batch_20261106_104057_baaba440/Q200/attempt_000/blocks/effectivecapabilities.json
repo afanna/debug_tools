@@ -1,0 +1,12 @@
+{
+  "data": [
+    "GetCurrentTime",
+    "GetPhoneBatteryInfo",
+    "GetCalendarEvents",
+    "GetMemoData"
+  ],
+  "event": [],
+  "asset": [
+    "photo-ux-texture-blue-diamond-wide"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "category": "layout_structure",
+  "categoryAttempt": 3,
+  "consecutiveFailures": 1,
+  "fingerprint": "90fc914b077e2fa8",
+  "instruction": "局部与父布局修复均未解决根因；放弃上一轮 Compact DSL 的旧拓扑，从已接受 Plan 的全部硬事实和动作重新构造完整 DSL。 先检查以 root 为根的完整组件树：所有引用存在、每个节点只有一个父引用、没有环或孤立节点，并核对父区允许的角色和有序 children。不得只把孤立节点挂到不接受该角色的 Region；必要时重组受控 Group 或更换合法父布局。保留全部事实、绑定、标签、单位和动作，不通过删除孤立业务节点规避错误；结构闭合后重新核算各区容量，不修改展开后的内部几何。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_structure",
+      "layout_structure",
+      "layout_structure"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "bd2cd08620cc7b3c"
+  },
+  "noProgress": false,
+  "repairStrategy": "plan_guided_recompose",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

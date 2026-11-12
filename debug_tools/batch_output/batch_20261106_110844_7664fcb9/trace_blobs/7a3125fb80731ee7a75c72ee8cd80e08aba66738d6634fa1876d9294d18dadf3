@@ -1,0 +1,54 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "DataDisplay",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前时间（时钟）; 当前日期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "农历日期"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前天气温度"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-primary-secondary-action"
+  ]
+}

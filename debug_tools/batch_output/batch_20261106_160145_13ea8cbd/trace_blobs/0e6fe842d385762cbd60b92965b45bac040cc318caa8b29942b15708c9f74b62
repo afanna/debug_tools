@@ -1,0 +1,122 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.ic_weather_monochrome",
+    "asset.emoji_default_weather_blue"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/current/temperatureText",
+        "/current/condition",
+        "/daily/0/weekday",
+        "/daily/0/temperatureRangeText",
+        "/daily/0/condition",
+        "/daily/1/weekday",
+        "/daily/1/temperatureRangeText",
+        "/daily/1/condition",
+        "/location/prefectureName",
+        "/location/districtName"
+      ],
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        },
+        "call": "clickToDeeplink"
+      },
+      "capabilityId": "event.open.weather"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.ic_weather_monochrome",
+      "asset.emoji_default_weather_blue"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/current/temperatureText",
+          "/current/condition",
+          "/daily/0/weekday",
+          "/daily/0/temperatureRangeText",
+          "/daily/0/condition",
+          "/daily/1/weekday",
+          "/daily/1/temperatureRangeText",
+          "/daily/1/condition",
+          "/location/prefectureName",
+          "/location/districtName"
+        ],
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Weather_CityCode",
+            "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.weather"
+      }
+    ],
+    "description": "查看今日及未来天气",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "HLS-AL00 7.0.0.111",
+    "size": "2x2",
+    "title": "天气预报",
+    "uid": "batch-13ea8cbd-00076-000",
+    "userQuery": "帮我添加天气预报卡片，展示当前天气和未来天气预报"
+  },
+  "description": "查看今日及未来天气",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "HLS-AL00",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261101140626120"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "HLS-AL00 7.0.0.111",
+  "session": {
+    "interactionId": "Q488-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x2",
+  "title": "天气预报",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00076-000"
+    }
+  },
+  "userQuery": "帮我添加天气预报卡片，展示当前天气和未来天气预报",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

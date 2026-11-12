@@ -1,0 +1,21 @@
+{
+  "id": "Q504",
+  "fileName": "Q504.json",
+  "title": "天气预报",
+  "query": "做一张天气预报卡片，显示当前温度和天气现象。",
+  "size": "2x2",
+  "sequence": 92,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4055.68,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4045.94,
+  "uid": "batch-13ea8cbd-00092-000",
+  "finalAttempt": 0
+}

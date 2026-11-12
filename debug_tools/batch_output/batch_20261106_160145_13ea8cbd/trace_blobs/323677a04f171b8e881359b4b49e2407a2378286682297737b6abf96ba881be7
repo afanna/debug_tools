@@ -1,0 +1,17 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 展示近期第二条日程的标题 (/data/calendar/events/1/title).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 展示近期第二条日程的开始日期与时间 (/data/calendar/events/1/dtStart).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "component content_primary_secondary: text width overflow; complete text '多云 | 星期四 25℃ / 32℃' at original font 12 needs about 150vp in one line, but its allocated text area is 132vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight.",
+    "stage": "validation"
+  }
+]

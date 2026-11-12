@@ -1,0 +1,32 @@
+{
+  "sampleId": "Q091",
+  "scenario": "repeat_year",
+  "timezone": "Asia/Shanghai",
+  "referenceDate": "2026-11-03",
+  "targetDate": "2027-05-20",
+  "expectedDays": 198,
+  "expectedRelationText": "还剩",
+  "expectedTargetDateText": "2027/05/20",
+  "writeResultTo": "/data/dateCounter",
+  "fields": [
+    "/days",
+    "/relationText",
+    "/targetDateText"
+  ],
+  "arguments": {
+    "targetDate": "2020-05-20",
+    "repeat": {
+      "unit": "year"
+    }
+  },
+  "gate": false,
+  "provenance": {
+    "targetDate": "explicit",
+    "days": "ambiguous",
+    "relationText": "ambiguous",
+    "targetDateText": "ambiguous"
+  },
+  "notes": [
+    "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+  ]
+}

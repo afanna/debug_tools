@@ -1,0 +1,14 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": [
+    "Plan fact is missing from visible DSL: 手机充电状态 (/data/phoneBattery/chargingStatusDesc).",
+    "Plan fact is missing from visible DSL: 耗电应用排行第1名应用名 (/data/powerRanking/rankingList/0/appName).",
+    "Plan fact is missing from visible DSL: 耗电应用排行第1名耗电占比 (/data/powerRanking/rankingList/0/powerText).",
+    "Plan fact is missing from visible DSL: 耗电应用排行第2名应用名 (/data/powerRanking/rankingList/1/appName).",
+    "Plan fact is missing from visible DSL: 耗电应用排行第2名耗电占比 (/data/powerRanking/rankingList/1/powerText).",
+    "Plan fact is missing from visible DSL: 耗电应用排行第3名应用名 (/data/powerRanking/rankingList/2/appName).",
+    "Plan fact is missing from visible DSL: 耗电应用排行第3名耗电占比 (/data/powerRanking/rankingList/2/powerText)."
+  ]
+}

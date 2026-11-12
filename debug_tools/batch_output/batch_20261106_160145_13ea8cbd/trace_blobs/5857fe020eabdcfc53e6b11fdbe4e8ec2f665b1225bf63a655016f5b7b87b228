@@ -1,0 +1,78 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate",
+        "/updatedAt"
+      ],
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate",
+          "/updatedAt"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/time"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "实时时间显示",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL10P 7.0.0.111",
+    "size": "2x2",
+    "title": "当前时间",
+    "uid": "batch-13ea8cbd-00054-000",
+    "userQuery": "生成一个和锁屏界面一样的时间卡片，显示当前时间、日期、星期和农历信息。"
+  },
+  "description": "实时时间显示",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261101163825247"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "session": {
+    "interactionId": "Q466-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x2",
+  "title": "当前时间",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00054-000"
+    }
+  },
+  "userQuery": "生成一个和锁屏界面一样的时间卡片，显示当前时间、日期、星期和农历信息。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

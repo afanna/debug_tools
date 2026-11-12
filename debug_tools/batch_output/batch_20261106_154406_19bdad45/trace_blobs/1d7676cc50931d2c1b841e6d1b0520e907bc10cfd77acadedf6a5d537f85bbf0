@@ -1,0 +1,5 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":8,"itemMargin":8},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/weather/current/temperatureText"},"secondaryText":"当前温度","width":"matchParent","layoutWeight":1}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/weather/current/condition"},"secondaryText":"天气现象","width":"matchParent","layoutWeight":1}]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]

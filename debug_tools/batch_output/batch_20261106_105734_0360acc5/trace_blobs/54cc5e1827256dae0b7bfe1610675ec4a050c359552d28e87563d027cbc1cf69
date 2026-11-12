@@ -1,0 +1,149 @@
+[
+  {
+    "actual": {
+      "minimumRequiredHeight": 140.0,
+      "occupancy": "__layout__content__sub=140vp+margin(0vp), gaps=0vp",
+      "overflow": 14.0,
+      "secondaryBodyFits": [
+        {
+          "actualRowCount": 4,
+          "componentId": "content_support",
+          "directlyFitsItemIndexes": [
+            0,
+            1,
+            2
+          ],
+          "doesNotFitItemIndexes": [
+            3
+          ],
+          "effectiveColumnCount": 1,
+          "maxRetainedRowCount": 3,
+          "parentAvailableHeight": 126.0,
+          "parentId": "content",
+          "rowHeights": [
+            12.0,
+            12.0,
+            12.0,
+            12.0
+          ],
+          "rowSpacing": 2.0
+        }
+      ]
+    },
+    "category": "layout",
+    "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+    "componentId": "content",
+    "evidenceSource": "expanded",
+    "expected": {
+      "heightTolerance": 2.0,
+      "maximumHeight": 126.0,
+      "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+      "preserveFixedDesignSizes": true,
+      "preserveRequiredTextAndActions": true
+    },
+    "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+    "legacyMessage": "component content: vertical layout requires at least 140vp within 126vp; it overflows by 14vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__content__sub=140vp+margin(0vp), gaps=0vp.",
+    "message": "component content: vertical layout requires at least 140vp within 126vp; it overflows by 14vp. Occupancy: __layout__content__sub=140vp+margin(0vp), gaps=0vp.",
+    "severity": "error",
+    "sourceLine": 2,
+    "validationClass": "semantic"
+  },
+  {
+    "actual": {
+      "minimumRequiredHeight": 140.0,
+      "occupancy": "content_title=12vp+margin(0vp), __layout__content__body=92vp+margin(0vp), content_action=36vp+margin(0vp), gaps=0vp",
+      "overflow": 14.0,
+      "secondaryBodyFits": [
+        {
+          "actualRowCount": 4,
+          "componentId": "content_support",
+          "directlyFitsItemIndexes": [
+            0,
+            1,
+            2
+          ],
+          "doesNotFitItemIndexes": [
+            3
+          ],
+          "effectiveColumnCount": 1,
+          "maxRetainedRowCount": 3,
+          "parentAvailableHeight": 126.0,
+          "parentId": "__layout__content__sub",
+          "rowHeights": [
+            12.0,
+            12.0,
+            12.0,
+            12.0
+          ],
+          "rowSpacing": 2.0
+        }
+      ]
+    },
+    "category": "layout",
+    "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+    "componentId": "content",
+    "evidenceSource": "expanded",
+    "expected": {
+      "heightTolerance": 2.0,
+      "maximumHeight": 126.0,
+      "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+      "preserveFixedDesignSizes": true,
+      "preserveRequiredTextAndActions": true
+    },
+    "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+    "legacyMessage": "component __layout__content__sub: vertical layout requires at least 140vp within 126vp; it overflows by 14vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: content_title=12vp+margin(0vp), __layout__content__body=92vp+margin(0vp), content_action=36vp+margin(0vp), gaps=0vp.",
+    "message": "component __layout__content__sub: vertical layout requires at least 140vp within 126vp; it overflows by 14vp. Occupancy: content_title=12vp+margin(0vp), __layout__content__body=92vp+margin(0vp), content_action=36vp+margin(0vp), gaps=0vp.",
+    "severity": "error",
+    "sourceLine": 2,
+    "validationClass": "semantic"
+  },
+  {
+    "actual": {
+      "minimumRequiredHeight": 92.0,
+      "occupancy": "content_primary=36vp+margin(0vp), content_support=54vp+margin(0vp), gaps=2vp",
+      "overflow": 14.0,
+      "secondaryBodyFits": [
+        {
+          "actualRowCount": 4,
+          "componentId": "content_support",
+          "directlyFitsItemIndexes": [
+            0,
+            1,
+            2
+          ],
+          "doesNotFitItemIndexes": [
+            3
+          ],
+          "effectiveColumnCount": 1,
+          "maxRetainedRowCount": 3,
+          "parentAvailableHeight": 78.0,
+          "parentId": "__layout__content__body",
+          "rowHeights": [
+            12.0,
+            12.0,
+            12.0,
+            12.0
+          ],
+          "rowSpacing": 2.0
+        }
+      ]
+    },
+    "category": "layout",
+    "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+    "componentId": "content",
+    "evidenceSource": "expanded",
+    "expected": {
+      "heightTolerance": 2.0,
+      "maximumHeight": 78.0,
+      "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+      "preserveFixedDesignSizes": true,
+      "preserveRequiredTextAndActions": true
+    },
+    "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+    "legacyMessage": "component __layout__content__body: vertical layout requires at least 92vp within 78vp; it overflows by 14vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: content_primary=36vp+margin(0vp), content_support=54vp+margin(0vp), gaps=2vp.",
+    "message": "component __layout__content__body: vertical layout requires at least 92vp within 78vp; it overflows by 14vp. Occupancy: content_primary=36vp+margin(0vp), content_support=54vp+margin(0vp), gaps=2vp.",
+    "severity": "error",
+    "sourceLine": 2,
+    "validationClass": "semantic"
+  }
+]

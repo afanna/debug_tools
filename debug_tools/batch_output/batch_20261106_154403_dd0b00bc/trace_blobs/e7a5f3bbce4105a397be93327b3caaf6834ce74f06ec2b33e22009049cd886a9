@@ -1,0 +1,8 @@
+["root","Layout",{"layout":"W-top-bottom","variant":"continuous"},["title","primary","details"]]
+["title","SingleLineTitle",{"title":"当前时间","icon":"resources/base/media/emoji_time.png","fontSize":12}]
+["primary","EmphasisText",{"mainText":"21:16","fontSize":18}]
+["details","TextBlock",{"items":[{"label":"日期","value":{"path":"/data/time/currentDate"}},{"label":"星期","value":{"path":"/data/time/dayOfWeek"}},{"label":"农历","value":{"path":"/data/time/lunarDate"}}]}]
+["/data/time/currentDate","示例"]
+["/data/time/dayOfWeek","示例"]
+["/data/time/lunarDate","示例"]
+["/state/ready",true]

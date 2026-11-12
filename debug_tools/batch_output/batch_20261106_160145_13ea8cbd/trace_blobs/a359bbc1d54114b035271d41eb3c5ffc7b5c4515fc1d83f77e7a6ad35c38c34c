@@ -1,0 +1,156 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.emoji_default_weather_blue",
+    "asset.emoji_earbud_case_black",
+    "asset.icon_earphone"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/location/cityCode",
+        "/location/districtName",
+        "/location/prefectureName",
+        "/current/temperatureC",
+        "/current/temperatureText",
+        "/current/condition",
+        "/current/feelsLikeC",
+        "/current/humidityPercent",
+        "/current/airQuality",
+        "/current/windDirection",
+        "/current/windLevel",
+        "/current/uvIndex",
+        "/current/coldLevel",
+        "/current/alertLevel",
+        "/daily/0/date",
+        "/daily/0/weekday",
+        "/daily/0/condition",
+        "/daily/0/temperatureRangeText",
+        "/daily/0/rainProbabilityPercent",
+        "/daily/0/airQuality",
+        "/daily/0/uvIndex",
+        "/daily/0/coldLevel",
+        "/updatedAt"
+      ],
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/isConnected",
+        "/earphoneName",
+        "/batteryLevel",
+        "/chargingStatusDesc",
+        "/leftBatteryLevel",
+        "/leftChargingStatusDesc",
+        "/rightBatteryLevel",
+        "/rightChargingStatusDesc",
+        "/updatedAt"
+      ],
+      "capabilityId": "GetEarphoneInfo",
+      "writeResultTo": "/data/earphone"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.emoji_default_weather_blue",
+      "asset.emoji_earbud_case_black",
+      "asset.icon_earphone"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/location/cityCode",
+          "/location/districtName",
+          "/location/prefectureName",
+          "/current/temperatureC",
+          "/current/temperatureText",
+          "/current/condition",
+          "/current/feelsLikeC",
+          "/current/humidityPercent",
+          "/current/airQuality",
+          "/current/windDirection",
+          "/current/windLevel",
+          "/current/uvIndex",
+          "/current/coldLevel",
+          "/current/alertLevel",
+          "/daily/0/date",
+          "/daily/0/weekday",
+          "/daily/0/condition",
+          "/daily/0/temperatureRangeText",
+          "/daily/0/rainProbabilityPercent",
+          "/daily/0/airQuality",
+          "/daily/0/uvIndex",
+          "/daily/0/coldLevel",
+          "/updatedAt"
+        ],
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      },
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/isConnected",
+          "/earphoneName",
+          "/batteryLevel",
+          "/chargingStatusDesc",
+          "/leftBatteryLevel",
+          "/leftChargingStatusDesc",
+          "/rightBatteryLevel",
+          "/rightChargingStatusDesc",
+          "/updatedAt"
+        ],
+        "capabilityId": "GetEarphoneInfo",
+        "writeResultTo": "/data/earphone"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "展示杭州当前天气和蓝牙耳机电量信息",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "ICL-AL10 7.0.0.111",
+    "size": "2x2",
+    "title": "杭州天气与耳机电量",
+    "uid": "batch-13ea8cbd-00041-000",
+    "userQuery": "帮我生成杭州天气加耳机电量的卡片。展示杭州的天气信息（当前温度、天气状况）和蓝牙耳机的电量信息（耳机盒、左右耳电量）。"
+  },
+  "description": "展示杭州当前天气和蓝牙耳机电量信息",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "ICL-AL10",
+    "prdVer": "11.7.8.340",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261105073944491"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "ICL-AL10 7.0.0.111",
+  "session": {
+    "interactionId": "Q453-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x2",
+  "title": "杭州天气与耳机电量",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00041-000"
+    }
+  },
+  "userQuery": "帮我生成杭州天气加耳机电量的卡片。展示杭州的天气信息（当前温度、天气状况）和蓝牙耳机的电量信息（耳机盒、左右耳电量）。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

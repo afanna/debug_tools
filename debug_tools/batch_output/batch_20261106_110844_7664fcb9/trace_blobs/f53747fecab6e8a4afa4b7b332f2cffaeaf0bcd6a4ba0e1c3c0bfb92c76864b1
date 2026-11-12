@@ -1,0 +1,77 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.viewCalendarEvent",
+        "assetId": null,
+        "reason": "EventCard item detail has no button icon."
+      }
+    ],
+    "title": {
+      "assetId": "asset.emoji_calendar2"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "显示当前公历日期"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "显示当前星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "显示当前农历日期"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/title",
+      "priority": "must",
+      "requirement": "显示最近日程的标题"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/startDate",
+      "priority": "must",
+      "requirement": "显示最近日程的开始日期"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/countdownDays",
+      "priority": "must",
+      "requirement": "显示最近日程的倒计时天数"
+    },
+    {
+      "actionId": "event.viewCalendarEvent",
+      "componentHints": [
+        "EventCard"
+      ],
+      "priority": "must",
+      "requirement": "点击日程查看日程详情"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom"
+  ]
+}

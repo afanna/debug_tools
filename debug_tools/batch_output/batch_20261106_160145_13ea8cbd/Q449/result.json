@@ -1,0 +1,21 @@
+{
+  "id": "Q449",
+  "fileName": "Q449.json",
+  "title": "天气",
+  "query": "做一张天气桌面卡片，显示当前天气和温度。",
+  "size": "2x2",
+  "sequence": 37,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3869.27,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3857.79,
+  "uid": "batch-13ea8cbd-00037-000",
+  "finalAttempt": 0
+}

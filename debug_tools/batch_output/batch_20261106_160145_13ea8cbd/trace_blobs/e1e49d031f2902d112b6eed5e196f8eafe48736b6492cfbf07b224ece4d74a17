@@ -1,0 +1,142 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.ic_weather_monochrome",
+    "asset.emoji_default_weather_blue"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "districtName": "宝山区",
+        "forecastDays": 3,
+        "prefectureName": "上海市"
+      },
+      "candidateOutputFields": [
+        "/location/districtName",
+        "/location/prefectureName",
+        "/current/temperatureText",
+        "/current/condition",
+        "/current/humidityPercent",
+        "/current/windDirection",
+        "/current/windLevel",
+        "/daily/0/weekday",
+        "/daily/0/condition",
+        "/daily/0/temperatureRangeText",
+        "/daily/1/weekday",
+        "/daily/1/condition",
+        "/daily/1/temperatureRangeText",
+        "/daily/2/weekday",
+        "/daily/2/condition",
+        "/daily/2/temperatureRangeText"
+      ],
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        },
+        "call": "clickToDeeplink"
+      },
+      "capabilityId": "event.open.weather"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.ic_weather_monochrome",
+      "asset.emoji_default_weather_blue"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "districtName": "宝山区",
+          "forecastDays": 3,
+          "prefectureName": "上海市"
+        },
+        "candidateOutputFields": [
+          "/location/districtName",
+          "/location/prefectureName",
+          "/current/temperatureText",
+          "/current/condition",
+          "/current/humidityPercent",
+          "/current/windDirection",
+          "/current/windLevel",
+          "/daily/0/weekday",
+          "/daily/0/condition",
+          "/daily/0/temperatureRangeText",
+          "/daily/1/weekday",
+          "/daily/1/condition",
+          "/daily/1/temperatureRangeText",
+          "/daily/2/weekday",
+          "/daily/2/condition",
+          "/daily/2/temperatureRangeText"
+        ],
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Weather_CityCode",
+            "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.weather"
+      }
+    ],
+    "description": "当前天气与未来预报",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "size": "2x4",
+    "title": "天气",
+    "uid": "batch-13ea8cbd-00070-000",
+    "userQuery": "在当前页面添加一个天气卡片到堆叠窗口中，展示当前天气信息"
+  },
+  "description": "当前天气与未来预报",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261101034747741"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q482-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x4",
+  "title": "天气",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00070-000"
+    }
+  },
+  "userQuery": "在当前页面添加一个天气卡片到堆叠窗口中，展示当前天气信息",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

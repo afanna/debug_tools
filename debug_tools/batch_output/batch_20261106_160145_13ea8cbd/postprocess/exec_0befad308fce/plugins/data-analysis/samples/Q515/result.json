@@ -1,0 +1,115 @@
+{
+  "sampleId": "Q515",
+  "status": "success",
+  "summary": "请求与最终产物分析完成",
+  "facts": {
+    "requestCount": 1,
+    "paddedCount": 1,
+    "traceKnown": 1
+  },
+  "artifacts": [
+    {
+      "key": "analysis",
+      "data": {
+        "schemaVersion": "batch-analysis-v1",
+        "sampleId": "Q515",
+        "requests": [
+          {
+            "source": "attempt_000",
+            "uid": "batch-13ea8cbd-00103-000",
+            "traceStatus": "complete",
+            "status": "success",
+            "pass1": true,
+            "pass2": true,
+            "weight": 2,
+            "phasesMs": {
+              "plan": 1961.09,
+              "generate": 1777.6399999999999,
+              "repair": 1993.4600000000005,
+              "theme": 842.8900000000003
+            },
+            "elapsedMs": 6784.38,
+            "elapsedSource": "trace.request",
+            "counts": {
+              "interfaceRetries": 0.0,
+              "repairs": 1.0,
+              "modelRetries": 0.0,
+              "planRetries": 0.0,
+              "providerFallbacks": 0.0
+            },
+            "models": [
+              {
+                "spanId": "8ea5349f96b94d77",
+                "phase": "plan",
+                "sourcePhase": "plan",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "be6efea8575b4c26",
+                "phase": "generate",
+                "sourcePhase": "initial",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "e054a2090832413a",
+                "phase": "repair",
+                "sourcePhase": "repair",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "d2c9e64b9e09437a",
+                "phase": "theme",
+                "sourcePhase": "theme",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              }
+            ],
+            "unknownMetrics": {},
+            "warnings": [],
+            "unknownReason": ""
+          }
+        ],
+        "usage": {
+          "components": [
+            "EmphasisText",
+            "EventCard",
+            "SingleLineTitle"
+          ],
+          "assets": [],
+          "events": [],
+          "data": [
+            "GetCalendarEvents",
+            "GetCurrentTime"
+          ],
+          "warnings": []
+        },
+        "warnings": []
+      },
+      "title": "样本分析",
+      "dataType": "json"
+    }
+  ]
+}

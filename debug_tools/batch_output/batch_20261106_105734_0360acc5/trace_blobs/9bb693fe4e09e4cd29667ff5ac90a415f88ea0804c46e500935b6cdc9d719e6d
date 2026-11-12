@@ -1,0 +1,18 @@
+```genui
+["root","Layout",{"layout":"W-content-side-slots","orientation":"content-left"},["content","upper","lower"]]
+["content_title","SingleLineTitle",{"title":{"path":"/data/weather/location/prefectureName"},"fontSize":12}]
+["content_primary","EmphasisText",{"mainText":{"path":"/data/weather/current/temperatureText"},"secondaryText":{"path":"/data/weather/current/condition"},"fontSize":18}]
+["content_support","SecondaryBody",{"columns":1,"items":[{"label":"区县","value":{"path":"/data/weather/location/districtName"}},{"label":"空气质量","value":{"path":"/data/weather/current/airQuality"}},{"label":"体感","value":"{{ ${/data/weather/current/feelsLikeC} + '℃' }}"},{"label":"湿度","value":"{{ ${/data/weather/current/humidityPercent} + '%' }}"}],"separator":" | ","fontSize":12}]
+["content_action","PillButton",{"label":"查看天气","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Weather_CityCode","uri":"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"}}]}]
+["content","Region",{"variant":"title-hero-support-action"},["content_title","content_primary","content_support","content_action"]]
+["upper","InfoBlock",{"variant":"slot","primaryText":{"path":"/data/weather/current/temperatureText"},"secondaryText":"当前温度"}]
+["lower","InfoBlock",{"variant":"slot","primaryText":{"path":"/data/weather/current/condition"},"secondaryText":"天气现象"}]
+["/data/weather/location/cityCode","60814"]
+["/data/weather/location/districtName","西湖区"]
+["/data/weather/location/prefectureName","杭州市"]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/current/feelsLikeC",31]
+["/data/weather/current/humidityPercent",68]
+["/data/weather/current/airQuality","良"]
+```

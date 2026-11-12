@@ -1,0 +1,65 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-content-side-slots\",\"orientation\":\"content-left\"},[\"content\",\"upper\",\"lower\"]]\n[\"content_title\",\"SingleLineTitle\",{\"title\":\"备忘录笔记\",\"fontSize\":12}]\n[\"content_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/memo/notes/0/title\"},\"secondaryText\":{\"path\":\"/data/memo/notes/0/content\"},\"fontSize\":18}]\n[\"content_support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"第二条 \",\"value\":{\"path\":\"/data/memo/notes/1/title\"}},{\"label\":\"正文 \",\"value\":{\"path\":\"/data/memo/notes/1/content\"},\"maxLines\":2}],\"fontSize\":12}]\n[\"content\",\"Region\",{\"variant\":\"title-hero-support\"},[\"content_title\",\"content_primary\",\"content_support\"]]\n[\"upper\",\"CardButton\",{\"label\":\"编辑备忘录\",\"icon\":\"resources/base/media/list_book_fill.svg\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"abilityName\":\"MainAbility\",\"bundleName\":\"com.huawei.hmos.notepad\",\"intentName\":\"ViewNote\",\"params\":{\"launchSource\":\"1\",\"launchType\":\"0\"}}}]}]\n[\"lower\",\"CardButton\",{\"label\":\"打开备忘录\",\"icon\":\"resources/base/media/list_book_fill.svg\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"abilityName\":\"MainAbility\",\"bundleName\":\"com.huawei.hmos.notepad\",\"intentName\":\"ViewNote\",\"params\":{\"launchSource\":\"1\",\"launchType\":\"0\"}}}]}]\n[\"/data/memo/notes/0/title\",\"示例\"]\n[\"/data/memo/notes/0/content\",\"示例\"]\n[\"/data/memo/notes/1/title\",\"示例\"]\n[\"/data/memo/notes/1/content\",\"示例\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_PLAN_COVERAGE_FAILED",
+      "message": "Plan action is displayed more than once in visible DSL: event.viewNote; expected 1, got 2; occurrences: upper, lower.",
+      "duplicateActions": [
+        {
+          "actionId": "event.viewNote",
+          "factIndex": 4,
+          "expectedVisibleCount": 1,
+          "actualVisibleCount": 2,
+          "occurrences": [
+            {
+              "componentId": "upper",
+              "componentType": "CardButton",
+              "property": "onClick",
+              "parentId": "root",
+              "parentRole": "W-content-side-slots.upper",
+              "fixedRequiredSlot": true,
+              "onClick": [
+                {
+                  "call": "clickToIntent",
+                  "args": {
+                    "abilityName": "MainAbility",
+                    "bundleName": "com.huawei.hmos.notepad",
+                    "intentName": "ViewNote",
+                    "params": {
+                      "launchSource": "1",
+                      "launchType": "0"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "componentId": "lower",
+              "componentType": "CardButton",
+              "property": "onClick",
+              "parentId": "root",
+              "parentRole": "W-content-side-slots.lower",
+              "fixedRequiredSlot": true,
+              "onClick": [
+                {
+                  "call": "clickToIntent",
+                  "args": {
+                    "abilityName": "MainAbility",
+                    "bundleName": "com.huawei.hmos.notepad",
+                    "intentName": "ViewNote",
+                    "params": {
+                      "launchSource": "1",
+                      "launchType": "0"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

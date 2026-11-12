@@ -1,0 +1,11 @@
+[
+  "COMPACT_STATIC_GROUP_MISMATCH: 正文有6个对象，计划含1个核心组、共1组；不能删除核心对象或以共享说明代替本条目。",
+  "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少对象名称 '工资表项目'；名称必须在本对象内可见，不能只保留无归属数值。",
+  "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '基本工资'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+  "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '奖金'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+  "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '补贴'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+  "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '扣款'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+  "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '实发工资'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+  "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+  "COMPACT_STATIC_TEXT_CAPACITY: body: SingleLineList.items 必须为1–5项；静态正文最多五条信息，标题不计入。"
+]

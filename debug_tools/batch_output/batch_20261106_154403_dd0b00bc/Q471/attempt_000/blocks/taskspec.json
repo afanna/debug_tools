@@ -1,0 +1,81 @@
+{
+  "userQuery": "创建一张天气和日历桌面卡片，显示当前天气（温度、天气现象）和近期日程安排。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.weather",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Weather_CityCode",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      }
+    },
+    {
+      "id": "event.viewCalendarEvent",
+      "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "ViewCalendarEvent",
+        "params": {
+          "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+        }
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "weather": {
+        "current": {
+          "temperatureText": {
+            "type": "string",
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃"
+          },
+          "condition": {
+            "type": "string",
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云"
+          }
+        },
+        "location": {
+          "cityCode": {
+            "type": "string",
+            "description": "城市代码，如60814代表青浦区",
+            "sampleValue": "60814"
+          }
+        }
+      },
+      "calendar": {
+        "events": [
+          {
+            "title": {
+              "type": "string",
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会"
+            },
+            "dtStart": {
+              "type": "string",
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00"
+            },
+            "startDate": {
+              "type": "string",
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06"
+            },
+            "entityId": {
+              "type": "string",
+              "description": "系统日程的全局唯一实体ID。",
+              "sampleValue": "example-event-001"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "assetCandidates": []
+}

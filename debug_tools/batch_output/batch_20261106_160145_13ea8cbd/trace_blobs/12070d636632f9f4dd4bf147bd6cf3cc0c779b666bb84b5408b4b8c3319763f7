@@ -1,0 +1,6 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":8,"itemMargin":8},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/time/currentDate"},"secondaryText":{"path":"/data/time/dayOfWeek"},"width":"matchParent","layoutWeight":1}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/time/lunarDate"},"secondaryText":"农历","width":"matchParent","layoutWeight":1}]
+["/data/time/currentDate","示例"]
+["/data/time/dayOfWeek","示例"]
+["/data/time/lunarDate","示例"]

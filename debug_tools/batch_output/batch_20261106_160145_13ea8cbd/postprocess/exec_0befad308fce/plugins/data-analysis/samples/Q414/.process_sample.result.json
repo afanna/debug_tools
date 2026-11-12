@@ -1,0 +1,128 @@
+{
+  "status": "success",
+  "summary": "请求与最终产物分析完成",
+  "facts": {
+    "requestCount": 1,
+    "paddedCount": 0,
+    "traceKnown": 1
+  },
+  "artifacts": [
+    {
+      "key": "analysis",
+      "data": {
+        "schemaVersion": "batch-analysis-v1",
+        "sampleId": "Q414",
+        "requests": [
+          {
+            "source": "attempt_000",
+            "uid": "batch-13ea8cbd-00002-000",
+            "traceStatus": "complete",
+            "status": "degraded",
+            "pass1": false,
+            "pass2": false,
+            "weight": 1,
+            "phasesMs": {
+              "plan": 2624.6,
+              "generate": 2331.0999999999995,
+              "repair": 5053.5199999999995,
+              "theme": 928.8600000000006
+            },
+            "elapsedMs": 11217.93,
+            "elapsedSource": "trace.request",
+            "counts": {
+              "interfaceRetries": 0.0,
+              "repairs": 2.0,
+              "modelRetries": 0.0,
+              "planRetries": 0.0,
+              "providerFallbacks": 0.0
+            },
+            "models": [
+              {
+                "spanId": "977d61bce9634891",
+                "phase": "plan",
+                "sourcePhase": "plan",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "7f01d9d47edc4b2d",
+                "phase": "generate",
+                "sourcePhase": "initial",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "a4f37abd815840f3",
+                "phase": "repair",
+                "sourcePhase": "repair",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "83d7e9bd3a0246d4",
+                "phase": "repair",
+                "sourcePhase": "repair",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "c27890adacea4513",
+                "phase": "theme",
+                "sourcePhase": "theme",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              }
+            ],
+            "unknownMetrics": {},
+            "warnings": [],
+            "unknownReason": ""
+          }
+        ],
+        "usage": {
+          "components": [
+            "PillButton",
+            "SingleLineTitle",
+            "TableText"
+          ],
+          "assets": [
+            "asset.figure_run",
+            "asset.ic_sportsHealth_bule"
+          ],
+          "events": [
+            "event.open.health.sport"
+          ],
+          "data": [
+            "GetHealthAndSportSummary"
+          ],
+          "warnings": []
+        },
+        "warnings": []
+      }
+    }
+  ]
+}

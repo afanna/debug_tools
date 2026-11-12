@@ -1,0 +1,20 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item0_secondaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item1_secondaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item2_secondaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

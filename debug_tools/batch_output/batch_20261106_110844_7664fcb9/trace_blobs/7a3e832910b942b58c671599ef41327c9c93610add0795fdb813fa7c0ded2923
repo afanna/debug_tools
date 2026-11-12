@@ -1,0 +1,74 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate"
+      ],
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/time"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "显示当前日期和星期",
+    "size": "2x2",
+    "title": "日期卡片",
+    "uid": "batch-7664fcb9-00005-000",
+    "userQuery": "做一张桌面日期卡片，显示当前日期、星期和农历信息。"
+  },
+  "description": "显示当前日期和星期",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261029001126212"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "session": {
+    "interactionId": "Q293-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x2",
+  "title": "日期卡片",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00005-000"
+    }
+  },
+  "userQuery": "做一张桌面日期卡片，显示当前日期、星期和农历信息。",
+  "utterance": {
+    "original": "做一张桌面日期卡片，显示当前日期、星期和农历信息。",
+    "type": "text"
+  },
+  "version": "1.0"
+}

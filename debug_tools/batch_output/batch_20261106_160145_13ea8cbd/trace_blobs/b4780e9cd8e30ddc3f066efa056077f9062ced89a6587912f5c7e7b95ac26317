@@ -1,0 +1,5 @@
+```genui
+["root","Layout",{"layout":"S-center"},["content"]]
+["content","DataDisplay",{"label":"距离12月1日","value":{"path":"/data/countdown/countdownDays"},"supportingText":"天 | 2026年12月1日"}]
+["/data/countdown/countdownDays",30]
+```

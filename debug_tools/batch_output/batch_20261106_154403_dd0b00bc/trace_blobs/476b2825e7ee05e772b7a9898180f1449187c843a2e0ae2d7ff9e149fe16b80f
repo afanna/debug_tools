@@ -1,0 +1,190 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "week1",
+      "identity": "11/2-11/8",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "week2",
+      "identity": "11/9-11/15",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        5,
+        6
+      ],
+      "id": "week3",
+      "identity": "11/16-11/22",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        7,
+        8
+      ],
+      "id": "week4",
+      "identity": "11/23-11/29",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        9,
+        10
+      ],
+      "id": "week5",
+      "identity": "11/30-12/6",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 288,
+          "start": 266
+        }
+      ],
+      "sourceText": "2026年11月2日至12月31日大小周排班"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 174,
+          "start": 115
+        },
+        {
+          "end": 379,
+          "start": 320
+        }
+      ],
+      "sourceText": "小周：11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 300,
+          "start": 289
+        }
+      ],
+      "sourceText": "小周上六休一（周日休）"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 223,
+          "start": 175
+        },
+        {
+          "end": 428,
+          "start": 380
+        }
+      ],
+      "sourceText": "大周：11/9-11/15、11/23-11/29、12/7-12/13、12/21-12/27"
+    },
+    {
+      "factIndex": 4,
+      "positions": [
+        {
+          "end": 314,
+          "start": 301
+        }
+      ],
+      "sourceText": "大周上五休二（周六周日休）"
+    },
+    {
+      "factIndex": 5,
+      "positions": [
+        {
+          "end": 174,
+          "start": 115
+        },
+        {
+          "end": 379,
+          "start": 320
+        }
+      ],
+      "sourceText": "小周：11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31"
+    },
+    {
+      "factIndex": 6,
+      "positions": [
+        {
+          "end": 300,
+          "start": 289
+        }
+      ],
+      "sourceText": "小周上六休一（周日休）"
+    },
+    {
+      "factIndex": 7,
+      "positions": [
+        {
+          "end": 223,
+          "start": 175
+        },
+        {
+          "end": 428,
+          "start": 380
+        }
+      ],
+      "sourceText": "大周：11/9-11/15、11/23-11/29、12/7-12/13、12/21-12/27"
+    },
+    {
+      "factIndex": 8,
+      "positions": [
+        {
+          "end": 314,
+          "start": 301
+        }
+      ],
+      "sourceText": "大周上五休二（周六周日休）"
+    },
+    {
+      "factIndex": 9,
+      "positions": [
+        {
+          "end": 174,
+          "start": 115
+        },
+        {
+          "end": 379,
+          "start": 320
+        }
+      ],
+      "sourceText": "小周：11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31"
+    },
+    {
+      "factIndex": 10,
+      "positions": [
+        {
+          "end": 300,
+          "start": 289
+        }
+      ],
+      "sourceText": "小周上六休一（周日休）"
+    }
+  ],
+  "version": "static-content-v1"
+}

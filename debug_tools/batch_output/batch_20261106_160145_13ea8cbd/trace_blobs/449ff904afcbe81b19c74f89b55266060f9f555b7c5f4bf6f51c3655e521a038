@@ -1,0 +1,110 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.battery_leaf_fill",
+    "asset.ic_switch"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/batterySOCText",
+        "/chargingStatusDesc",
+        "/batterySOC"
+      ],
+      "capabilityId": "GetPhoneBatteryInfo",
+      "writeResultTo": "/data/phoneBattery"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "intentName": "SetSettingSwitch",
+          "params": {
+            "appBundleName": "com.huawei.hmos.settings",
+            "itemName": "battery_saving_mode"
+          }
+        },
+        "call": "clickToIntent"
+      },
+      "capabilityId": "event.setPowerSavingMode"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.battery_leaf_fill",
+      "asset.ic_switch"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc",
+          "/batterySOC"
+        ],
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/phoneBattery"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "intentName": "SetSettingSwitch",
+            "params": {
+              "appBundleName": "com.huawei.hmos.settings",
+              "itemName": "battery_saving_mode"
+            }
+          },
+          "call": "clickToIntent"
+        },
+        "capabilityId": "event.setPowerSavingMode"
+      }
+    ],
+    "description": "查看电量，一键省电",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CLS-AL00 7.0.0.111",
+    "size": "2x2",
+    "title": "电量管理",
+    "uid": "batch-13ea8cbd-00094-000",
+    "userQuery": "创建一个手机电量管理卡片，能查看当前电量，还能一键开启省电模式"
+  },
+  "description": "查看电量，一键省电",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CLS-AL00",
+    "prdVer": "11.7.8.392",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261106011202258"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CLS-AL00 7.0.0.111",
+  "session": {
+    "interactionId": "Q506-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x2",
+  "title": "电量管理",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00094-000"
+    }
+  },
+  "userQuery": "创建一个手机电量管理卡片，能查看当前电量，还能一键开启省电模式",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

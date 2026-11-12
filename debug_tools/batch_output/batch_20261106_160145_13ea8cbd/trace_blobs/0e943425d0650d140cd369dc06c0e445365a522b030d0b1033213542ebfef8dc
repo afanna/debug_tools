@@ -1,0 +1,4 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"center","justifyContent":"center","padding":12},["content"]]
+["content","DataDisplay",{"icon":"resources/base/media/bolt_fill.svg","value":{"path":"/data/phoneBattery/batterySOCText"},"supportingText":{"path":"/data/phoneBattery/chargingStatusDesc"},"width":"matchParent"}]
+["/data/phoneBattery/batterySOCText","68%"]
+["/data/phoneBattery/chargingStatusDesc","未充电"]

@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 日期落款“＿＿＿年＿＿月＿＿日”占位未展示，避免超出正文容量。.",
+    "stage": "validation"
+  }
+]

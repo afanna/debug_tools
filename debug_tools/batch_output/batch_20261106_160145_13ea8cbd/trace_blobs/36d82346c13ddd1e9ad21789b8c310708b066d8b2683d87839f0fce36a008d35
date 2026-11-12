@@ -1,0 +1,65 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3
+      ],
+      "id": "scores",
+      "identity": "张定豪",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 80,
+          "start": 55
+        }
+      ],
+      "sourceText": "张定豪，语文87分，数学98分，英语98.75分。"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 80,
+          "start": 55
+        }
+      ],
+      "sourceText": "张定豪，语文87分，数学98分，英语98.75分。"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 80,
+          "start": 55
+        }
+      ],
+      "sourceText": "张定豪，语文87分，数学98分，英语98.75分。"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 80,
+          "start": 55
+        }
+      ],
+      "sourceText": "张定豪，语文87分，数学98分，英语98.75分。"
+    }
+  ],
+  "version": "static-content-v1"
+}

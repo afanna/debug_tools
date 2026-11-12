@@ -1,0 +1,21 @@
+{
+  "id": "Q366",
+  "fileName": "Q366.json",
+  "title": "时钟",
+  "query": "在桌面上生成一个时钟卡片，显示当前时间、日期、星期和农历信息",
+  "size": "2x2",
+  "sequence": 39,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3739.22,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3729.62,
+  "uid": "batch-7664fcb9-00039-000",
+  "finalAttempt": 0
+}

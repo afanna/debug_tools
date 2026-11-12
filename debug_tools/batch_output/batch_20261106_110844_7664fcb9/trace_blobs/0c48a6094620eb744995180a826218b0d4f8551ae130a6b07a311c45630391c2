@@ -1,0 +1,53 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/earphone/earphoneName",
+      "priority": "must",
+      "requirement": "耳机名称"
+    },
+    {
+      "componentHints": [
+        "ProgressCircleSingle",
+        "ProgressLine2",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/earphone/batteryLevel",
+      "priority": "must",
+      "requirement": "耳机盒（整体）剩余电量百分比"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/earphone/leftBatteryLevel",
+      "priority": "must",
+      "requirement": "左耳机剩余电量百分比"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/earphone/rightBatteryLevel",
+      "priority": "must",
+      "requirement": "右耳机剩余电量百分比"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/earphone/chargingStatusDesc",
+      "priority": "should",
+      "requirement": "耳机盒充电状态"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom",
+    "W-content-side-slots"
+  ]
+}

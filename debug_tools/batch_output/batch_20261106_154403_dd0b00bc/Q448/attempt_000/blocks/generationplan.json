@@ -1,0 +1,66 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-10-15"
+      },
+      "writeResultTo": "/data/countdown0",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-07-04"
+      },
+      "writeResultTo": "/data/countdown1",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-04-29"
+      },
+      "writeResultTo": "/data/countdown2",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-04-22"
+      },
+      "writeResultTo": "/data/countdown3",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-11-08"
+      },
+      "writeResultTo": "/data/countdown4",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-01-23"
+      },
+      "writeResultTo": "/data/countdown5",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": []
+}

@@ -1,0 +1,20 @@
+{
+  "category": "plan_coverage",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "7302b51eb5a9b964",
+  "instruction": "恢复缺失的 Plan 必须事实并复查其所属信息组，不删除其它已正确事实。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": false,
+    "observedCategories": [
+      "plan_coverage"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "94f7576c7a927447"
+  },
+  "noProgress": false,
+  "repairStrategy": "coverage_restore",
+  "retryTarget": "dsl_local_repair",
+  "retryable": true,
+  "scope": "information_group"
+}

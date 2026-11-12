@@ -1,0 +1,40 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "time": {
+        "currentDate": {
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "dayOfWeek": {
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "lunarDate": {
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "abilityName": "com.huawei.hmos.clock.phone",
+        "bundleName": "com.huawei.hmos.clock",
+        "intentName": "Clock",
+        "uri": ""
+      },
+      "call": "clickToDeeplink",
+      "description": "打开华为时钟应用首页。",
+      "id": "event.open.clock.alarm"
+    }
+  ],
+  "size": "2x2",
+  "userQuery": "添加时钟挂件到桌面，显示当前时间、日期、星期，点击可打开闹钟应用。"
+}

@@ -1,0 +1,128 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.ic_sportsHealth_bule",
+    "asset.emoji_calories_blue",
+    "asset.figure_run",
+    "asset.flame_fill"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/dailyDistanceText",
+        "/sleepScore",
+        "/sleepStatus",
+        "/nightSleepDurationText",
+        "/exerciseTypeName",
+        "/exerciseDurationText",
+        "/exerciseCalorieText"
+      ],
+      "capabilityId": "GetHealthAndSportSummary",
+      "writeResultTo": "/data/healthSport"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        },
+        "call": "clickToDeeplink"
+      },
+      "capabilityId": "event.open.health.sport"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.ic_sportsHealth_bule",
+      "asset.emoji_calories_blue",
+      "asset.figure_run",
+      "asset.flame_fill"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "targetDayOffset": 0
+        },
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyTotalCaloriesText",
+          "/dailyDistanceText",
+          "/sleepScore",
+          "/sleepStatus",
+          "/nightSleepDurationText",
+          "/exerciseTypeName",
+          "/exerciseDurationText",
+          "/exerciseCalorieText"
+        ],
+        "capabilityId": "GetHealthAndSportSummary",
+        "writeResultTo": "/data/healthSport"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.health.sport"
+      }
+    ],
+    "description": "运动健康卡片",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "size": "2x2",
+    "title": "运动健康",
+    "uid": "batch-13ea8cbd-00002-000",
+    "userQuery": "生成运动健康的卡片，展示今日步数、热量消耗、睡眠情况等运动健康数据"
+  },
+  "description": "运动健康卡片",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261101123925211"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q414-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x2",
+  "title": "运动健康",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00002-000"
+    }
+  },
+  "userQuery": "生成运动健康的卡片，展示今日步数、热量消耗、睡眠情况等运动健康数据",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

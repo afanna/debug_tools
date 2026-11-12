@@ -1,0 +1,93 @@
+{
+  "requestId": "batch-7664fcb9&Q289-000",
+  "status": "degraded",
+  "errorCode": "",
+  "error": {},
+  "data": {
+    "status": "degraded",
+    "artifactUrl": "https://obs.todo.local/widget/artifact_5b161a21-e9c6-41df-9646-4f8f2553f87b.md",
+    "artifactDigest": "sha256:f7cd8bff34b7daf36f7b3229a57b955e35dd768021a9b030b6d4246b58c914c1",
+    "suggestSize": "2x2",
+    "removedCapabilities": [],
+    "errorCode": "",
+    "effectiveCapabilities": {
+      "data": [
+        "ViewWeather"
+      ],
+      "event": [
+        {
+          "id": "event.open.weather",
+          "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Weather_CityCode",
+            "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+          }
+        }
+      ],
+      "asset": [
+        "asset.ic_weather_monochrome"
+      ]
+    },
+    "omittedRequirements": [
+      "第三天天气预报：星期、天气现象、温度范围"
+    ],
+    "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。"
+  },
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-7664fcb9&Q289-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-7664fcb9&Q289-000",
+          "streamType": "partial",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-7664fcb9&Q289-000",
+          "streamType": "partial",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"type\":\"result\",\"tool\":\"generateWidgetCardCompactDsl\",\"operation\":\"generateWidgetCardCompactDsl\",\"requestId\":\"batch-7664fcb9&Q289-000\",\"data\":{\"status\":\"degraded\",\"artifactUrl\":\"https://obs.todo.local/widget/artifact_5b161a21-e9c6-41df-9646-4f8f2553f87b.md\",\"artifactDigest\":\"sha256:f7cd8bff34b7daf36f7b3229a57b955e35dd768021a9b030b6d4246b58c914c1\",\"suggestSize\":\"2x2\",\"removedCapabilities\":[],\"errorCode\":\"\",\"effectiveCapabilities\":{\"data\":[\"ViewWeather\"],\"event\":[{\"id\":\"event.open.weather\",\"description\":\"打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。\",\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}],\"asset\":[\"asset.ic_weather_monochrome\"]},\"omittedRequirements\":[\"第三天天气预报：星期、天气现象、温度范围\"],\"agentInstruction\":\"已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。\"},\"status\":\"degraded\",\"errorCode\":\"\",\"error\":{}}",
+          "streamingTextId": "batch-7664fcb9&Q289-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

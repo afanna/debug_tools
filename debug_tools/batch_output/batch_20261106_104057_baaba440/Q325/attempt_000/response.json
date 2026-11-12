@@ -1,0 +1,76 @@
+{
+  "requestId": "batch-baaba440&Q325-000",
+  "status": "success",
+  "errorCode": "",
+  "error": {},
+  "data": {
+    "status": "success",
+    "artifactUrl": "https://obs.todo.local/widget/artifact_220b66cf-4c53-4d4a-902b-98ced6d0fdd5.md",
+    "artifactDigest": "sha256:d0765a00762593816aa0dc83f7f812690442c26b510621cb6aaf495e95b20bc6",
+    "suggestSize": "2x4",
+    "removedCapabilities": [],
+    "errorCode": "",
+    "effectiveCapabilities": {
+      "data": [
+        "ViewWeather",
+        "GetCurrentTime"
+      ],
+      "event": [
+        {
+          "id": "event.open.weather",
+          "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+          "call": "clickToDeeplink",
+          "args": {
+            "intentName": "Weather_CityCode",
+            "bundleName": "",
+            "abilityName": "",
+            "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+          }
+        },
+        {
+          "id": "event.open.clock.alarm",
+          "description": "打开华为时钟应用首页。",
+          "call": "clickToDeeplink",
+          "args": {
+            "intentName": "Clock",
+            "bundleName": "com.huawei.hmos.clock",
+            "abilityName": "com.huawei.hmos.clock.phone",
+            "uri": ""
+          }
+        }
+      ],
+      "asset": [
+        "photo-ux-texture-orange-diagonal-wide"
+      ]
+    },
+    "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。"
+  },
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-baaba440&Q325-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"type\":\"result\",\"tool\":\"generateWidgetCardCompactDsl\",\"operation\":\"generateWidgetCardCompactDsl\",\"requestId\":\"batch-baaba440&Q325-000\",\"data\":{\"status\":\"success\",\"artifactUrl\":\"https://obs.todo.local/widget/artifact_220b66cf-4c53-4d4a-902b-98ced6d0fdd5.md\",\"artifactDigest\":\"sha256:d0765a00762593816aa0dc83f7f812690442c26b510621cb6aaf495e95b20bc6\",\"suggestSize\":\"2x4\",\"removedCapabilities\":[],\"errorCode\":\"\",\"effectiveCapabilities\":{\"data\":[\"ViewWeather\",\"GetCurrentTime\"],\"event\":[{\"id\":\"event.open.weather\",\"description\":\"打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。\",\"call\":\"clickToDeeplink\",\"args\":{\"intentName\":\"Weather_CityCode\",\"bundleName\":\"\",\"abilityName\":\"\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}},{\"id\":\"event.open.clock.alarm\",\"description\":\"打开华为时钟应用首页。\",\"call\":\"clickToDeeplink\",\"args\":{\"intentName\":\"Clock\",\"bundleName\":\"com.huawei.hmos.clock\",\"abilityName\":\"com.huawei.hmos.clock.phone\",\"uri\":\"\"}}],\"asset\":[\"photo-ux-texture-orange-diagonal-wide\"]},\"agentInstruction\":\"已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。\"},\"status\":\"success\",\"errorCode\":\"\",\"error\":{}}",
+          "streamingTextId": "batch-baaba440&Q325-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

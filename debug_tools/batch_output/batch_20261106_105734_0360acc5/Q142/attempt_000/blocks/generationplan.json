@@ -1,0 +1,29 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "滨江区",
+        "forecastDays": 3,
+        "prefectureName": "杭州市"
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": []
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.call.phone",
+      "action": {
+        "call": "clickToApi",
+        "args": {
+          "intentName": "CallPhone",
+          "params": {
+            "phoneNumber": "1388888888"
+          }
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": []
+}

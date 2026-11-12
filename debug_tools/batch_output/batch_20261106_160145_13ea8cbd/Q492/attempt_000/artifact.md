@@ -1,0 +1,353 @@
+```cardspec
+{
+  "title": "锻炼打卡",
+  "description": "每日锻炼打卡记录",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetMemoData",
+      "arguments": {},
+      "writeResultTo": "/data/memo"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Column","children":["title","__layout__root__body"],"itemMargin":6,"styles":{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":12,"linearGradient":{"direction":"RightBottom","colors":[["#FFCBDDFE",0],["#FFF1F6FE",1]]}}},{"id":"title","component":"Row","children":["title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"title_title","component":"Text","content":"锻炼打卡","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#991F4799"}},{"id":"__layout__root__body","component":"Column","children":["__layout__root__primary_support","__layout__root__action"],"itemMargin":8,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"__layout__root__primary_support","component":"Column","children":["primary","support"],"itemMargin":2,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"primary","component":"Row","children":["primary_value","primary_unit"],"itemMargin":2,"styles":{"justifyContent":"start","alignItems":"bottom","flexShrink":0,"width":"matchParent"}},{"id":"primary_value","component":"Text","content":"{{ ${/data/memo/todoCompletedCount} }}","styles":{"height":30,"fontSize":30,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":0,"fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"primary_unit","component":"Text","content":"项","styles":{"height":17.0,"fontSize":12,"fontWeight":500,"lineHeight":1,"maxLines":1,"flexShrink":0,"fontColor":"#991F4799","padding":{"top":0,"right":0,"bottom":5,"left":0},"textOverflow":"clip"}},{"id":"support","component":"Column","children":["support_row0"],"itemMargin":2,"styles":{"width":"matchParent","alignItems":"start","flexShrink":1}},{"id":"support_item0_label","component":"Text","content":"未完成","styles":{"height":14,"fontSize":14,"fontWeight":400,"maxLines":1,"flexShrink":0,"lineHeight":1,"fontColor":"#991F4799","textOverflow":"clip"}},{"id":"support_item0_value","component":"Text","content":"{{ ${/data/memo/todoPendingCount} }}","styles":{"height":14.0,"fontSize":14,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF1F4799","layoutWeight":1,"textOverflow":"clip"}},{"id":"support_item0","component":"Row","children":["support_item0_label","support_item0_value"],"itemMargin":4,"styles":{"height":14.0,"alignItems":"top","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"support_row0","component":"Row","children":["support_item0"],"itemMargin":0,"styles":{"width":"matchParent","height":14.0,"alignItems":"top","flexShrink":0}},{"id":"__layout__root__action","component":"Column","children":["action"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","height":36,"flexShrink":0},"itemMargin":0},{"id":"action","component":"Row","children":["action_icon","action_text"],"onClick":[{"call":"clickToIntent","args":{"abilityName":"MainAbility","bundleName":"com.huawei.hmos.notepad","intentName":"ViewNote","params":{"launchSource":"1","launchType":"0"}}}],"itemMargin":8,"styles":{"height":36,"borderRadius":30,"padding":0,"flexShrink":0,"width":"matchParent","backgroundColor":"#331F4799","justifyContent":"center","alignItems":"center"}},{"id":"action_icon","component":"Image","src":"resources/base/media/checkmark_calendar_fill.svg","styles":{"width":20,"height":20,"objectFit":"contain","flexShrink":0,"fillColor":"#FF1F4799"}},{"id":"action_text","component":"Text","content":"打开备忘录","styles":{"maxWidth":96,"height":17,"fontSize":14,"fontWeight":500,"textAlign":"center","maxLines":1,"flexShrink":0,"fontColor":"#FF1F4799","textOverflow":"clip"}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"data":{"memo":{"todoCompletedCount":0,"todoPendingCount":0}}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "做一张锻炼打卡桌面卡片，展示备忘录中的待办打卡情况，显示已完成和未完成的锻炼打卡待办数量，点击可打开备忘录查看打卡记录。本轮卡片静态内容（用作展示的外部事实）：用户每天锻炼后打卡，通过备忘录待办记录锻炼打卡。",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.viewNote",
+      "description": "打开华为备忘录应用。",
+      "call": "clickToIntent",
+      "args": {
+        "abilityName": "MainAbility",
+        "bundleName": "com.huawei.hmos.notepad",
+        "intentName": "ViewNote",
+        "params": {
+          "launchSource": "1",
+          "launchType": "0"
+        }
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "memo": {
+        "todoTotalCount": {
+          "type": "integer",
+          "description": "查询到的待办总数量（已过滤已删除待办）。",
+          "sampleValue": 0
+        },
+        "todoCompletedCount": {
+          "type": "integer",
+          "description": "已完成的待办记录数。",
+          "sampleValue": 0
+        },
+        "todoPendingCount": {
+          "type": "integer",
+          "description": "未完成的待办记录数。",
+          "sampleValue": 0
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.checkmark_calendar_fill",
+      "src": "resources/base/media/checkmark_calendar_fill.svg",
+      "description": "样式：默认黑色的单色实心日历图标，内部叠加对勾并通过镂空表现细节，原始尺寸为 24×24，支持通过 fillColor 与卡片配色统一；适用：已完成日程、日程或计划确认、签到、待办完成、任务或运动打卡与健康计划。"
+    }
+  ]
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "GetMemoData"
+  ],
+  "event": [
+    {
+      "id": "event.viewNote",
+      "description": "打开华为备忘录应用。",
+      "call": "clickToIntent",
+      "args": {
+        "abilityName": "MainAbility",
+        "bundleName": "com.huawei.hmos.notepad",
+        "intentName": "ViewNote",
+        "params": {
+          "launchSource": "1",
+          "launchType": "0"
+        }
+      }
+    }
+  ],
+  "asset": [
+    "asset.checkmark_calendar_fill"
+  ]
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetMemoData",
+      "arguments": {},
+      "writeResultTo": "/data/memo",
+      "candidateOutputFields": [
+        "/todoTotalCount",
+        "/todoCompletedCount",
+        "/todoPendingCount"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.viewNote",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "abilityName": "MainAbility",
+          "bundleName": "com.huawei.hmos.notepad",
+          "intentName": "ViewNote",
+          "params": {
+            "launchSource": "1",
+            "launchType": "0"
+          }
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.checkmark_calendar_fill"
+  ]
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "9c4e2607-972c-48d2-b999-ee35735c35c3",
+  "createdAt": 1793952310925
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"S-title-primary-secondary-action"},["title","primary","support","action"]]
+["title","SingleLineTitle",{"title":"锻炼打卡","fontSize":12}]
+["primary","EmphasizedData",{"value":{"path":"/data/memo/todoCompletedCount"},"unit":"项","fontSize":30}]
+["support","SecondaryBody",{"items":[{"label":"未完成","value":{"path":"/data/memo/todoPendingCount"}}],"fontSize":14}]
+["action","PillButton",{"label":"打开备忘录","icon":"resources/base/media/checkmark_calendar_fill.svg","onClick":[{"call":"clickToIntent","args":{"abilityName":"MainAbility","bundleName":"com.huawei.hmos.notepad","intentName":"ViewNote","params":{"launchSource":"1","launchType":"0"}}}]}]
+["/data/memo/todoCompletedCount",0]
+["/data/memo/todoPendingCount",0]
+```
+```request
+{
+  "content": {
+    "size": "2x2",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "candidateAssetIds": [
+      "asset.checkmark_calendar_fill"
+    ],
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.viewNote",
+        "action": {
+          "call": "clickToIntent",
+          "args": {
+            "abilityName": "MainAbility",
+            "bundleName": "com.huawei.hmos.notepad",
+            "intentName": "ViewNote",
+            "params": {
+              "launchSource": "1",
+              "launchType": "0"
+            }
+          }
+        }
+      }
+    ],
+    "bundleName": "com.huawei.genui",
+    "description": "每日锻炼打卡记录",
+    "userQuery": "做一张锻炼打卡桌面卡片，展示备忘录中的待办打卡情况，显示已完成和未完成的锻炼打卡待办数量，点击可打开备忘录查看打卡记录。本轮卡片静态内容（用作展示的外部事实）：用户每天锻炼后打卡，通过备忘录待办记录锻炼打卡。",
+    "title": "锻炼打卡",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetMemoData",
+        "arguments": {},
+        "writeResultTo": "/data/memo",
+        "candidateOutputFields": [
+          "/todoTotalCount",
+          "/todoCompletedCount",
+          "/todoPendingCount"
+        ]
+      }
+    ]
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261102160944869"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q492-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0",
+  "size": "2x2",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "candidateAssetIds": [
+    "asset.checkmark_calendar_fill"
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.viewNote",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "abilityName": "MainAbility",
+          "bundleName": "com.huawei.hmos.notepad",
+          "intentName": "ViewNote",
+          "params": {
+            "launchSource": "1",
+            "launchType": "0"
+          }
+        }
+      }
+    }
+  ],
+  "bundleName": "com.huawei.genui",
+  "description": "每日锻炼打卡记录",
+  "userQuery": "做一张锻炼打卡桌面卡片，展示备忘录中的待办打卡情况，显示已完成和未完成的锻炼打卡待办数量，点击可打开备忘录查看打卡记录。本轮卡片静态内容（用作展示的外部事实）：用户每天锻炼后打卡，通过备忘录待办记录锻炼打卡。",
+  "title": "锻炼打卡",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetMemoData",
+      "arguments": {},
+      "writeResultTo": "/data/memo",
+      "candidateOutputFields": [
+        "/todoTotalCount",
+        "/todoCompletedCount",
+        "/todoPendingCount"
+      ]
+    }
+  ]
+}
+```
+```repair-1
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-content-action\",\"variant\":\"direct-dense\"},[\"title\",\"content\",\"action\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"锻炼打卡\",\"fontSize\":12}]\n[\"content\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/todoCompletedCount\"},\"secondaryText\":\"已完成\"}]\n[\"action\",\"PillButton\",{\"label\":\"打开备忘录\",\"icon\":\"resources/base/media/checkmark_calendar_fill.svg\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"abilityName\":\"MainAbility\",\"bundleName\":\"com.huawei.hmos.notepad\",\"intentName\":\"ViewNote\",\"params\":{\"launchSource\":\"1\",\"launchType\":\"0\"}}}]}]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/todoPendingCount\",0]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "语义布局不符合合同：节点 root：InfoBlock 必须放在已登记的小卡固定槽。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+    }
+  ]
+}
+```
+```repair-2
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-dual-info\"},[\"first\",\"second\"]]\n[\"first\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/todoCompletedCount\"},\"secondaryText\":\"已完成\"}]\n[\"second\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/todoPendingCount\"},\"secondaryText\":\"未完成\"}]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/todoPendingCount\",0]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_PLAN_COVERAGE_FAILED",
+      "message": "Plan action is missing from visible DSL: 点击打开备忘录查看打卡记录 (event.viewNote). Copy the complete call and args from the matching TaskSpec event candidate."
+    },
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "assetAssignments action 'event.viewNote' has no matching button component."
+    }
+  ]
+}
+```
+```repair-3
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-primary-secondary-action\"},[\"title\",\"primary\",\"support\",\"action\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"锻炼打卡\",\"fontSize\":12}]\n[\"primary\",\"EmphasizedData\",{\"value\":{\"path\":\"/data/memo/todoCompletedCount\"},\"unit\":\"项\",\"fontSize\":30}]\n[\"support\",\"SecondaryBody\",{\"items\":[{\"label\":\"已完成\",\"value\":{\"path\":\"/data/memo/todoCompletedCount\"}},{\"label\":\"未完成\",\"value\":{\"path\":\"/data/memo/todoPendingCount\"}}],\"columns\":1,\"fontSize\":12}]\n[\"action\",\"PillButton\",{\"label\":\"打开备忘录\",\"icon\":\"resources/base/media/checkmark_calendar_fill.svg\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"abilityName\":\"MainAbility\",\"bundleName\":\"com.huawei.hmos.notepad\",\"intentName\":\"ViewNote\",\"params\":{\"launchSource\":\"1\",\"launchType\":\"0\"}}}]}]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/todoPendingCount\",0]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_PLAN_COVERAGE_FAILED",
+      "message": "Plan fact is displayed more than once in visible DSL: 锻炼打卡待办已完成数量 (/data/memo/todoCompletedCount); expected 1, got 2; occurrences: primary (EmphasizedData).value, support (SecondaryBody).items[0].value.",
+      "duplicateFacts": [
+        {
+          "requirement": "锻炼打卡待办已完成数量",
+          "dataId": "/data/memo/todoCompletedCount",
+          "expectedVisibleCount": 1,
+          "actualVisibleCount": 2,
+          "occurrences": [
+            {
+              "componentId": "primary",
+              "componentType": "EmphasizedData",
+              "property": "value"
+            },
+            {
+              "componentId": "support",
+              "componentType": "SecondaryBody",
+              "property": "items[0].value"
+            }
+          ],
+          "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+          "requiredDisplayPositions": []
+        }
+      ]
+    }
+  ]
+}
+```
+```repair-4
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-primary-secondary-action\"},[\"title\",\"primary\",\"support\",\"action\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"锻炼打卡\",\"fontSize\":12}]\n[\"primary\",\"EmphasizedData\",{\"value\":{\"path\":\"/data/memo/todoCompletedCount\"},\"unit\":\"项\",\"fontSize\":30}]\n[\"support\",\"SecondaryBody\",{\"items\":[{\"label\":\"未完成\",\"value\":{\"path\":\"/data/memo/todoPendingCount\"}}],\"fontSize\":14}]\n[\"action\",\"PillButton\",{\"label\":\"打开备忘录\",\"icon\":\"resources/base/media/checkmark_calendar_fill.svg\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"abilityName\":\"MainAbility\",\"bundleName\":\"com.huawei.hmos.notepad\",\"intentName\":\"ViewNote\",\"params\":{\"launchSource\":\"1\",\"launchType\":\"0\"}}}]}]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/todoPendingCount\",0]",
+  "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"title\",\"__layout__root__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":12}},{\"id\":\"title\",\"component\":\"Row\",\"children\":[\"title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"title_title\",\"component\":\"Text\",\"content\":\"锻炼打卡\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"__layout__root__body\",\"component\":\"Column\",\"children\":[\"__layout__root__primary_support\",\"__layout__root__action\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__root__primary_support\",\"component\":\"Column\",\"children\":[\"primary\",\"support\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"primary\",\"component\":\"Row\",\"children\":[\"primary_value\",\"primary_unit\"],\"itemMargin\":2,\"styles\":{\"justifyContent\":\"start\",\"alignItems\":\"bottom\",\"flexShrink\":0,\"width\":\"matchParent\"}},{\"id\":\"primary_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/memo/todoCompletedCount} }}\",\"styles\":{\"height\":30,\"fontSize\":30,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"primary_unit\",\"component\":\"Text\",\"content\":\"项\",\"styles\":{\"height\":17.0,\"fontSize\":12,\"fontWeight\":500,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"padding\":{\"top\":0,\"right\":0,\"bottom\":5,\"left\":0},\"textOverflow\":\"clip\"}},{\"id\":\"support\",\"component\":\"Column\",\"children\":[\"support_row0\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"flexShrink\":1}},{\"id\":\"support_item0_label\",\"component\":\"Text\",\"content\":\"未完成\",\"styles\":{\"height\":14,\"fontSize\":14,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"lineHeight\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"support_item0_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/memo/todoPendingCount} }}\",\"styles\":{\"height\":14.0,\"fontSize\":14,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"support_item0\",\"component\":\"Row\",\"children\":[\"support_item0_label\",\"support_item0_value\"],\"itemMargin\":4,\"styles\":{\"height\":14.0,\"alignItems\":\"top\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"support_row0\",\"component\":\"Row\",\"children\":[\"support_item0\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":14.0,\"alignItems\":\"top\",\"flexShrink\":0}},{\"id\":\"__layout__root__action\",\"component\":\"Column\",\"children\":[\"action\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"height\":36,\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"action\",\"component\":\"Row\",\"children\":[\"action_icon\",\"action_text\"],\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"abilityName\":\"MainAbility\",\"bundleName\":\"com.huawei.hmos.notepad\",\"intentName\":\"ViewNote\",\"params\":{\"launchSource\":\"1\",\"launchType\":\"0\"}}}],\"itemMargin\":8,\"styles\":{\"height\":36,\"borderRadius\":30,\"padding\":0,\"flexShrink\":0,\"width\":\"matchParent\",\"backgroundColor\":\"@theme:componentSecondary/1\",\"justifyContent\":\"center\",\"alignItems\":\"center\"}},{\"id\":\"action_icon\",\"component\":\"Image\",\"src\":\"resources/base/media/checkmark_calendar_fill.svg\",\"styles\":{\"width\":20,\"height\":20,\"objectFit\":\"contain\",\"flexShrink\":0,\"fillColor\":\"@theme:primary/1\"}},{\"id\":\"action_text\",\"component\":\"Text\",\"content\":\"打开备忘录\",\"styles\":{\"maxWidth\":96,\"height\":17,\"fontSize\":14,\"fontWeight\":500,\"textAlign\":\"center\",\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"memo\":{\"todoCompletedCount\":0,\"todoPendingCount\":0}}}}}",
+  "validationErrors": []
+}
+```

@@ -1,0 +1,12 @@
+{
+  "category": "component_contract",
+  "categoryAttempt": 2,
+  "consecutiveFailures": 2,
+  "fingerprint": "73ae19dfe0d22946",
+  "instruction": "同一局部错误已经重复或上一轮 DSL 没有变化；从已接受 Plan 的全部硬事实和动作重建完整 DSL，不再修补原组件结构。",
+  "noProgress": true,
+  "repairStrategy": "plan_guided_recompose",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

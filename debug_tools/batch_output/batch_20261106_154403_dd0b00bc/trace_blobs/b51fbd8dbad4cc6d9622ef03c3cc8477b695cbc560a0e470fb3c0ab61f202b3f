@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"W-top-bottom","variant":"continuous"},["primary","details"]]
+["primary","EmphasisText",{"mainText":"12:40","secondaryText":"{{ '11 月 02 日 | 星期一 | 农历九月廿四' }}","fontSize":18}]
+["details","SummaryList",{"items":["11 月 02 日","星期一","农历九月廿四"]}]
+["/state/ready",true]

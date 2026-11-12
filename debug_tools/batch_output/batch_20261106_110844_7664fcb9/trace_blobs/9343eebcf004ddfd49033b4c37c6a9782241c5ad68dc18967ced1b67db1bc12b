@@ -1,0 +1,45 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "展示当前日期（年-月-日）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "展示当前星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "should",
+      "requirement": "展示当前农历日期"
+    },
+    {
+      "actionId": "event.open.clock.alarm",
+      "componentHints": [
+        "PillButton",
+        "CardButton"
+      ],
+      "priority": "must",
+      "requirement": "点击打开华为时钟应用首页"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content-action",
+    "S-title-primary-secondary-action"
+  ]
+}

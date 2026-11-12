@@ -1,0 +1,106 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.emoji_time"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate",
+        "/updatedAt"
+      ],
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "uri": ""
+        },
+        "call": "clickToDeeplink"
+      },
+      "capabilityId": "event.open.clock.alarm"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.emoji_time"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate",
+          "/updatedAt"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/time"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "com.huawei.hmos.clock.phone",
+            "bundleName": "com.huawei.hmos.clock",
+            "intentName": "Clock",
+            "uri": ""
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.clock.alarm"
+      }
+    ],
+    "description": "桌面时钟卡片",
+    "size": "2x2",
+    "title": "时钟",
+    "uid": "batch-7664fcb9-00039-000",
+    "userQuery": "在桌面上生成一个时钟卡片，显示当前时间、日期、星期和农历信息"
+  },
+  "description": "桌面时钟卡片",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMU-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261030154158893"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMU-AL10 7.0.0.111",
+  "session": {
+    "interactionId": "Q366-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x2",
+  "title": "时钟",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00039-000"
+    }
+  },
+  "userQuery": "在桌面上生成一个时钟卡片，显示当前时间、日期、星期和农历信息",
+  "utterance": {
+    "original": "在桌面上生成一个时钟卡片，显示当前时间、日期、星期和农历信息",
+    "type": "text"
+  },
+  "version": "1.0"
+}

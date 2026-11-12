@@ -1,0 +1,475 @@
+```cardspec
+{
+  "title": "时钟天气",
+  "description": "桌面时钟天气卡片",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "prefectureName": "潍坊市",
+        "districtName": "安丘市",
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Row","children":["left","right"],"itemMargin":12,"styles":{"width":"matchParent","height":"matchParent","padding":12,"borderRadius":20,"clip":true,"alignItems":"center","justifyContent":"start","linearGradient":{"direction":"RightBottom","colors":[["#FFCBDDFE",0],["#FFF1F6FE",1]]}}},{"id":"left","component":"Column","children":["__layout__left__sub"],"styles":{"height":"matchParent","layoutWeight":1,"padding":8,"borderRadius":16,"clip":true,"backgroundColor":"#99FFFFFF"},"itemMargin":0},{"id":"__layout__left__sub","component":"Column","children":["left_title","__layout__left__body"],"itemMargin":6,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":110.0}},{"id":"left_title","component":"Row","children":["left_title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"left_title_title","component":"Text","content":"今天","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#991F4799"}},{"id":"__layout__left__body","component":"Column","children":["__layout__left__primary","__layout__left__details"],"itemMargin":6,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"__layout__left__primary","component":"Column","children":["left_primary"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1},"itemMargin":0},{"id":"left_primary","component":"Column","children":["left_primary_main"],"itemMargin":2,"styles":{"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"width":"matchParent"}},{"id":"left_primary_main","component":"Text","content":"{{ ${/data/time/currentDate} }}","styles":{"height":18,"fontSize":18,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"__layout__left__details","component":"Column","children":["left_support"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"left_support","component":"Column","children":["left_support_row0"],"itemMargin":2,"styles":{"width":"matchParent","alignItems":"start","flexShrink":1}},{"id":"left_support_item0_value","component":"Text","content":"{{ ${/data/time/dayOfWeek} }}","styles":{"height":14.0,"fontSize":14,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF1F4799","layoutWeight":1,"textOverflow":"clip"}},{"id":"left_support_item0","component":"Row","children":["left_support_item0_value"],"itemMargin":0,"styles":{"height":14.0,"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"left_support_row0","component":"Row","children":["left_support_item0"],"itemMargin":0,"styles":{"width":"matchParent","height":14.0,"alignItems":"start","flexShrink":0}},{"id":"right","component":"Column","children":["__layout__right__sub"],"styles":{"height":"matchParent","layoutWeight":1,"padding":8,"borderRadius":16,"clip":true,"backgroundColor":"#99FFFFFF"},"itemMargin":0},{"id":"__layout__right__sub","component":"Column","children":["right_title","__layout__right__body"],"itemMargin":6,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":110.0}},{"id":"right_title","component":"Row","children":["right_title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"right_title_title","component":"Text","content":"{{ ${/data/weather/location/prefectureName} }}","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#991F4799"}},{"id":"__layout__right__body","component":"Column","children":["__layout__right__primary","__layout__right__details"],"itemMargin":6,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"__layout__right__primary","component":"Column","children":["right_primary"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1},"itemMargin":0},{"id":"right_primary","component":"Row","children":["right_primary_value"],"itemMargin":0,"styles":{"justifyContent":"start","alignItems":"bottom","flexShrink":0,"width":"matchParent"}},{"id":"right_primary_value","component":"Text","content":"{{ ${/data/weather/current/temperatureText} }}","styles":{"height":30,"fontSize":30,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":0,"fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"__layout__right__details","component":"Column","children":["right_support"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"right_support","component":"Column","children":["right_support_row0"],"itemMargin":2,"styles":{"width":"matchParent","alignItems":"start","flexShrink":1}},{"id":"right_support_item0_value","component":"Text","content":"{{ ${/data/weather/current/condition} }}","styles":{"height":14.0,"fontSize":14,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF1F4799","layoutWeight":1,"textOverflow":"clip"}},{"id":"right_support_item0","component":"Row","children":["right_support_item0_value"],"itemMargin":0,"styles":{"height":14.0,"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"right_support_row0","component":"Row","children":["right_support_item0"],"itemMargin":0,"styles":{"width":"matchParent","height":14.0,"alignItems":"start","flexShrink":0}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"data":{"time":{"currentDate":"2026-07-09","dayOfWeek":"星期四"},"weather":{"location":{"prefectureName":"上海市"},"current":{"temperatureText":"29℃","condition":"多云"}}}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "我想在桌面上创建一个同时显示时间和天气的卡片，时间用大字体显示，天气显示当前温度和天气状况，整体风格与锁屏时钟一致，颜色搭配协调美观",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.weather",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "intentName": "Weather_CityCode",
+        "bundleName": "",
+        "abilityName": "",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      }
+    },
+    {
+      "id": "event.open.clock.alarm",
+      "description": "打开华为时钟应用首页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "intentName": "Clock",
+        "bundleName": "com.huawei.hmos.clock",
+        "abilityName": "com.huawei.hmos.clock.phone",
+        "uri": ""
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "weather": {
+        "location": {
+          "cityCode": {
+            "type": "string",
+            "description": "城市代码，如60814代表青浦区",
+            "sampleValue": "60814"
+          },
+          "districtName": {
+            "type": "string",
+            "description": "区或县名称",
+            "sampleValue": "青浦区"
+          },
+          "prefectureName": {
+            "type": "string",
+            "description": "城市名称",
+            "sampleValue": "上海市"
+          }
+        },
+        "current": {
+          "temperatureC": {
+            "type": "number",
+            "description": "当前温度的纯数值，单位为摄氏度，返回值不包含单位。若直接用于文本展示，必须在数值后追加“℃”；优先使用 temperatureText。",
+            "sampleValue": 29
+          },
+          "temperatureText": {
+            "type": "string",
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃"
+          },
+          "condition": {
+            "type": "string",
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云"
+          },
+          "feelsLikeC": {
+            "type": "number",
+            "description": "当前体感温度的纯数值，单位为摄氏度，返回值不包含单位。若直接用于文本展示，必须在数值后追加“℃”。",
+            "sampleValue": 31
+          },
+          "humidityPercent": {
+            "type": "number",
+            "description": "当前相对湿度的纯数值百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”。",
+            "sampleValue": 68
+          },
+          "airQuality": {
+            "type": "string",
+            "description": "当前空气质量等级，例如“优”“良”。",
+            "sampleValue": "良"
+          },
+          "windDirection": {
+            "type": "string",
+            "description": "当前风向。",
+            "sampleValue": "东南风"
+          },
+          "windLevel": {
+            "type": "integer",
+            "description": "当前风力等级的纯整数，返回值不包含“级”。若直接用于文本展示，必须在数值后追加“级”。",
+            "sampleValue": 2
+          },
+          "uvIndex": {
+            "type": "string",
+            "description": "当前紫外线等级，例如“弱”“中等”“强”。",
+            "sampleValue": "中等"
+          },
+          "coldLevel": {
+            "type": "string",
+            "description": "感冒指数。",
+            "sampleValue": "低"
+          },
+          "alertLevel": {
+            "type": "string",
+            "description": "预警信息。当前气象预警信息，例如'暴雨橙色预警'、'高温黄色预警'、'台风蓝色预警'。无预警时为空字符串。",
+            "sampleValue": "大风蓝色预警"
+          }
+        },
+        "daily": [
+          {
+            "date": {
+              "type": "string",
+              "description": "预报日期，来源于 day_time。以端侧本次刷新日期为基准，daily[0]为明天日期，daily[1]为后天日期，不包含今天。",
+              "sampleValue": "2026-08-06"
+            },
+            "weekday": {
+              "type": "string",
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四"
+            },
+            "condition": {
+              "type": "string",
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云"
+            },
+            "temperatureRangeText": {
+              "type": "string",
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃"
+            },
+            "rainProbabilityPercent": {
+              "type": "number",
+              "description": "白天降雨概率的百分数数值，返回值不包含单位，例如 20 表示 20%；文本展示必须追加一个“%”，进度组件直接使用数值。",
+              "sampleValue": 20
+            },
+            "airQuality": {
+              "type": "string",
+              "description": "当天空气质量等级。",
+              "sampleValue": "良"
+            },
+            "uvIndex": {
+              "type": "string",
+              "description": "当天紫外线等级。",
+              "sampleValue": "中等"
+            },
+            "coldLevel": {
+              "type": "string",
+              "description": "感冒指数。",
+              "sampleValue": "低"
+            }
+          }
+        ],
+        "updatedAt": {
+          "type": "string",
+          "description": "端侧完成天气查询和归一化的时间。如：2026-06-14 15:30",
+          "sampleValue": "2026-08-06 09:00"
+        }
+      },
+      "time": {
+        "currentDate": {
+          "type": "string",
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例"
+        },
+        "dayOfWeek": {
+          "type": "string",
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例"
+        },
+        "lunarDate": {
+          "type": "string",
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "端侧完成该时间数据组装的时间戳字符串，格式如 '2026-07-09 15:30:00'。",
+          "sampleValue": "示例"
+        }
+      }
+    }
+  },
+  "assetCandidates": []
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "ViewWeather",
+    "GetCurrentTime"
+  ],
+  "event": [
+    {
+      "id": "event.open.weather",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "intentName": "Weather_CityCode",
+        "bundleName": "",
+        "abilityName": "",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      }
+    },
+    {
+      "id": "event.open.clock.alarm",
+      "description": "打开华为时钟应用首页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "intentName": "Clock",
+        "bundleName": "com.huawei.hmos.clock",
+        "abilityName": "com.huawei.hmos.clock.phone",
+        "uri": ""
+      }
+    }
+  ],
+  "asset": []
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "prefectureName": "潍坊市",
+        "districtName": "安丘市",
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": []
+    },
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time",
+      "candidateOutputFields": []
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.weather",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "intentName": "Weather_CityCode",
+          "bundleName": "",
+          "abilityName": "",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        }
+      }
+    },
+    {
+      "capabilityId": "event.open.clock.alarm",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "intentName": "Clock",
+          "bundleName": "com.huawei.hmos.clock",
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "uri": ""
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": []
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "31c81f99-89f0-4c53-bc20-b10b5daa4fce",
+  "createdAt": 1793933882822
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"W-split-panels"},["left","right"]]
+["left","Region",{"variant":"title-hero-support"},["left_title","left_primary","left_support"]]
+["left_title","SingleLineTitle",{"title":"今天","fontSize":12}]
+["left_primary","EmphasisText",{"mainText":{"path":"/data/time/currentDate"},"fontSize":18}]
+["left_support","SecondaryBody",{"items":[{"value":{"path":"/data/time/dayOfWeek"}}],"fontSize":14}]
+["right","Region",{"variant":"title-hero-support"},["right_title","right_primary","right_support"]]
+["right_title","SingleLineTitle",{"title":{"path":"/data/weather/location/prefectureName"},"fontSize":12}]
+["right_primary","EmphasizedData",{"value":{"path":"/data/weather/current/temperatureText"},"fontSize":30}]
+["right_support","SecondaryBody",{"items":[{"value":{"path":"/data/weather/current/condition"}}],"fontSize":14}]
+["/data/time/currentDate","2026-07-09"]
+["/data/time/dayOfWeek","星期四"]
+["/data/weather/location/prefectureName","上海市"]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+```
+```request
+{
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "userQuery": "我想在桌面上创建一个同时显示时间和天气的卡片，时间用大字体显示，天气显示当前温度和天气状况，整体风格与锁屏时钟一致，颜色搭配协调美观",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "ViewWeather",
+        "arguments": {
+          "prefectureName": "潍坊市",
+          "districtName": "安丘市",
+          "forecastDays": 1
+        },
+        "writeResultTo": "/data/weather"
+      },
+      {
+        "capabilityId": "GetCurrentTime",
+        "arguments": {},
+        "writeResultTo": "/data/time"
+      }
+    ],
+    "title": "时钟天气",
+    "size": "2x4",
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.weather",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "intentName": "Weather_CityCode",
+            "bundleName": "",
+            "abilityName": "",
+            "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+          }
+        }
+      },
+      {
+        "capabilityId": "event.open.clock.alarm",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "intentName": "Clock",
+            "bundleName": "com.huawei.hmos.clock",
+            "abilityName": "com.huawei.hmos.clock.phone",
+            "uri": ""
+          }
+        }
+      }
+    ],
+    "description": "桌面时钟天气卡片",
+    "candidateAssetIds": []
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261029150507408"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q325-000",
+    "isNew": true,
+    "sessionId": "batch-0360acc5"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "我想在桌面上创建一个同时显示时间和天气的卡片，时间用大字体显示，天气显示当前温度和天气状况，整体风格与锁屏时钟一致，颜色搭配协调美观",
+    "type": "text"
+  },
+  "version": "1.0",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "bundleName": "com.huawei.genui",
+  "userQuery": "我想在桌面上创建一个同时显示时间和天气的卡片，时间用大字体显示，天气显示当前温度和天气状况，整体风格与锁屏时钟一致，颜色搭配协调美观",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "prefectureName": "潍坊市",
+        "districtName": "安丘市",
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "title": "时钟天气",
+  "size": "2x4",
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.weather",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "intentName": "Weather_CityCode",
+          "bundleName": "",
+          "abilityName": "",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        }
+      }
+    },
+    {
+      "capabilityId": "event.open.clock.alarm",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "intentName": "Clock",
+          "bundleName": "com.huawei.hmos.clock",
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "uri": ""
+        }
+      }
+    }
+  ],
+  "description": "桌面时钟天气卡片",
+  "candidateAssetIds": []
+}
+```
+```repair-1
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left\",\"Region\",{\"variant\":\"title-hero-support\"},[\"left_title\",\"left_primary\",\"left_support\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":\"今天\",\"fontSize\":12}]\n[\"left_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/time/currentDate\"},\"fontSize\":18}]\n[\"left_support\",\"SecondaryBody\",{\"items\":[{\"value\":{\"path\":\"/data/time/dayOfWeek\"}}],\"fontSize\":14}]\n[\"right\",\"Region\",{\"variant\":\"title-hero-support\"},[\"right_title\",\"right_primary\",\"right_support\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"right_primary\",\"EmphasizedData\",{\"value\":{\"path\":\"/data/weather/current/temperatureText\"},\"fontSize\":30}]\n[\"right_support\",\"SecondaryBody\",{\"items\":[{\"value\":{\"path\":\"/data/weather/current/condition\"}}],\"fontSize\":14}]\n[\"/data/time/currentDate\",\"2026-07-09\"]\n[\"/data/time/dayOfWeek\",\"星期四\"]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]",
+  "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Row\",\"children\":[\"left\",\"right\"],\"itemMargin\":12,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"center\",\"justifyContent\":\"start\"}},{\"id\":\"left\",\"component\":\"Column\",\"children\":[\"__layout__left__sub\"],\"styles\":{\"height\":\"matchParent\",\"layoutWeight\":1,\"padding\":8,\"borderRadius\":16,\"clip\":true,\"backgroundColor\":\"@theme:panel/1\"},\"itemMargin\":0},{\"id\":\"__layout__left__sub\",\"component\":\"Column\",\"children\":[\"left_title\",\"__layout__left__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":110.0}},{\"id\":\"left_title\",\"component\":\"Row\",\"children\":[\"left_title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"left_title_title\",\"component\":\"Text\",\"content\":\"今天\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"__layout__left__body\",\"component\":\"Column\",\"children\":[\"__layout__left__primary\",\"__layout__left__details\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__left__primary\",\"component\":\"Column\",\"children\":[\"left_primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1},\"itemMargin\":0},{\"id\":\"left_primary\",\"component\":\"Column\",\"children\":[\"left_primary_main\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"left_primary_main\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/currentDate} }}\",\"styles\":{\"height\":18,\"fontSize\":18,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"__layout__left__details\",\"component\":\"Column\",\"children\":[\"left_support\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"left_support\",\"component\":\"Column\",\"children\":[\"left_support_row0\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"flexShrink\":1}},{\"id\":\"left_support_item0_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/dayOfWeek} }}\",\"styles\":{\"height\":14.0,\"fontSize\":14,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"left_support_item0\",\"component\":\"Row\",\"children\":[\"left_support_item0_value\"],\"itemMargin\":0,\"styles\":{\"height\":14.0,\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"left_support_row0\",\"component\":\"Row\",\"children\":[\"left_support_item0\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":14.0,\"alignItems\":\"start\",\"flexShrink\":0}},{\"id\":\"right\",\"component\":\"Column\",\"children\":[\"__layout__right__sub\"],\"styles\":{\"height\":\"matchParent\",\"layoutWeight\":1,\"padding\":8,\"borderRadius\":16,\"clip\":true,\"backgroundColor\":\"@theme:panel/1\"},\"itemMargin\":0},{\"id\":\"__layout__right__sub\",\"component\":\"Column\",\"children\":[\"right_title\",\"__layout__right__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":110.0}},{\"id\":\"right_title\",\"component\":\"Row\",\"children\":[\"right_title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"right_title_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/location/prefectureName} }}\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"__layout__right__body\",\"component\":\"Column\",\"children\":[\"__layout__right__primary\",\"__layout__right__details\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__right__primary\",\"component\":\"Column\",\"children\":[\"right_primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1},\"itemMargin\":0},{\"id\":\"right_primary\",\"component\":\"Row\",\"children\":[\"right_primary_value\"],\"itemMargin\":0,\"styles\":{\"justifyContent\":\"start\",\"alignItems\":\"bottom\",\"flexShrink\":0,\"width\":\"matchParent\"}},{\"id\":\"right_primary_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/temperatureText} }}\",\"styles\":{\"height\":30,\"fontSize\":30,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"__layout__right__details\",\"component\":\"Column\",\"children\":[\"right_support\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"right_support\",\"component\":\"Column\",\"children\":[\"right_support_row0\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"flexShrink\":1}},{\"id\":\"right_support_item0_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/condition} }}\",\"styles\":{\"height\":14.0,\"fontSize\":14,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"right_support_item0\",\"component\":\"Row\",\"children\":[\"right_support_item0_value\"],\"itemMargin\":0,\"styles\":{\"height\":14.0,\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"right_support_row0\",\"component\":\"Row\",\"children\":[\"right_support_item0\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":14.0,\"alignItems\":\"start\",\"flexShrink\":0}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"time\":{\"currentDate\":\"2026-07-09\",\"dayOfWeek\":\"星期四\"},\"weather\":{\"location\":{\"prefectureName\":\"上海市\"},\"current\":{\"temperatureText\":\"29℃\",\"condition\":\"多云\"}}}}}}",
+  "validationErrors": []
+}
+```

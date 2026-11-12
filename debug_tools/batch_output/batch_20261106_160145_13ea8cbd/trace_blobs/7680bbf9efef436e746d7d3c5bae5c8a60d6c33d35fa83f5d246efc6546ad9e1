@@ -1,0 +1,166 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.calendar_fill",
+    "asset.emoji_calendar2"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate"
+      ],
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    },
+    {
+      "arguments": {
+        "futureDays": 7
+      },
+      "candidateOutputFields": [
+        "/events/0/title",
+        "/events/0/startDate",
+        "/events/0/dtStart",
+        "/events/0/countdownDays",
+        "/events/1/title",
+        "/events/1/startDate",
+        "/events/1/dtStart",
+        "/events/1/countdownDays"
+      ],
+      "capabilityId": "GetCalendarEvents",
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "intentName": "ViewCalendarEvent",
+          "params": {
+            "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+          }
+        },
+        "call": "clickToIntent"
+      },
+      "capabilityId": "event.viewCalendarEvent"
+    },
+    {
+      "action": {
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "uri": ""
+        },
+        "call": "clickToDeeplink"
+      },
+      "capabilityId": "event.open.clock.alarm"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.calendar_fill",
+      "asset.emoji_calendar2"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/time"
+      },
+      {
+        "arguments": {
+          "futureDays": 7
+        },
+        "candidateOutputFields": [
+          "/events/0/title",
+          "/events/0/startDate",
+          "/events/0/dtStart",
+          "/events/0/countdownDays",
+          "/events/1/title",
+          "/events/1/startDate",
+          "/events/1/dtStart",
+          "/events/1/countdownDays"
+        ],
+        "capabilityId": "GetCalendarEvents",
+        "writeResultTo": "/data/calendar"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "intentName": "ViewCalendarEvent",
+            "params": {
+              "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+            }
+          },
+          "call": "clickToIntent"
+        },
+        "capabilityId": "event.viewCalendarEvent"
+      },
+      {
+        "action": {
+          "args": {
+            "abilityName": "com.huawei.hmos.clock.phone",
+            "bundleName": "com.huawei.hmos.clock",
+            "intentName": "Clock",
+            "uri": ""
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.clock.alarm"
+      }
+    ],
+    "description": "日历与日程动态展示",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "size": "2x4",
+    "title": "3D动态日历",
+    "uid": "batch-13ea8cbd-00103-000",
+    "userQuery": "做一张3D动态日历卡片，显示当前日期、星期和农历信息，同时展示最近的日程安排。"
+  },
+  "description": "日历与日程动态展示",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261102141037282"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q515-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x4",
+  "title": "3D动态日历",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00103-000"
+    }
+  },
+  "userQuery": "做一张3D动态日历卡片，显示当前日期、星期和农历信息，同时展示最近的日程安排。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

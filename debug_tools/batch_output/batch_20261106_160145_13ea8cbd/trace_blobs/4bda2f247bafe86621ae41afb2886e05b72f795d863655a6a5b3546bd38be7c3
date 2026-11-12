@@ -1,0 +1,8 @@
+["root","Layout",{"layout":"W-top-bottom","variant":"continuous"},["title","primary","details"]]
+["title","SingleLineTitle",{"title":{"path":"/data/weather/location/districtName"},"fontSize":12}]
+["primary","EmphasisText",{"mainText":{"path":"/data/weather/current/temperatureText"},"fontSize":18}]
+["details","TextBlock",{"items":[{"label":"天气","value":{"path":"/data/weather/current/condition"}},{"label":"温度","value":{"path":"/data/weather/current/temperatureText"}}]}]
+["/data/weather/location/districtName","青浦区"]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/location/cityCode","60814"]

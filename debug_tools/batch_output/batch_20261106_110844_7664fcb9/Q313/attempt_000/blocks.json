@@ -1,0 +1,259 @@
+{
+  "cardspec": {
+    "title": "每日步数",
+    "description": "运动步数速览",
+    "suggestSize": "2x2",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "dataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {
+          "targetDayOffset": 0
+        },
+        "writeResultTo": "/data/healthSport"
+      }
+    ]
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\r\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Stack\",\"children\":[\"fusionBallBackground\",\"__genui_render_component__root\"],\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":0,\"alignContent\":\"topStart\",\"clip\":true,\"borderRadius\":20,\"backgroundColor\":\"#00000000\"}},{\"id\":\"fusionBallBackground\",\"component\":\"Stack\",\"children\":[\"fusionBallLargeSlot\",\"fusionBallMediumSlot\",\"fusionBallSmallSlot\",\"fusionBallGlassLayer\"],\"styles\":{\"width\":\"100%\",\"height\":\"100%\",\"borderRadius\":20,\"alignContent\":\"topStart\",\"clip\":true}},{\"id\":\"fusionBallLargeSlot\",\"component\":\"Stack\",\"children\":[\"fusionBallLarge\"],\"styles\":{\"width\":\"112.5%\",\"height\":\"27.5%\",\"alignContent\":\"center\"}},{\"id\":\"fusionBallLarge\",\"component\":\"Divider\",\"styles\":{\"width\":\"116.666667%\",\"height\":\"477.272727%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"borderRadius\":105,\"backgroundColor\":\"#FFF24131\",\"clip\":true}},{\"id\":\"fusionBallMediumSlot\",\"component\":\"Stack\",\"children\":[\"fusionBallMedium\"],\"styles\":{\"width\":\"50%\",\"height\":\"137.5%\",\"alignContent\":\"bottom\"}},{\"id\":\"fusionBallMedium\",\"component\":\"Divider\",\"styles\":{\"width\":\"200%\",\"height\":\"72.727273%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"borderRadius\":80,\"backgroundColor\":\"#FFFF8833\",\"clip\":true}},{\"id\":\"fusionBallSmallSlot\",\"component\":\"Stack\",\"children\":[\"fusionBallSmall\"],\"styles\":{\"width\":\"121.875%\",\"height\":\"118.75%\",\"alignContent\":\"bottomEnd\"}},{\"id\":\"fusionBallSmall\",\"component\":\"Divider\",\"styles\":{\"width\":\"51.282051%\",\"height\":\"52.631579%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"borderRadius\":50,\"backgroundColor\":\"#FFE68073\",\"clip\":true}},{\"id\":\"fusionBallGlassLayer\",\"component\":\"Divider\",\"styles\":{\"width\":\"100%\",\"height\":\"100%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"backgroundColor\":\"#0DFFFFFF\",\"backdropBlur\":{\"radius\":210}}},{\"id\":\"__genui_render_component__root\",\"component\":\"Column\",\"children\":[\"content\"],\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"center\",\"justifyContent\":\"center\",\"padding\":12},\"itemMargin\":0},{\"id\":\"content\",\"component\":\"Column\",\"children\":[\"content_label\",\"content_value\",\"content_supporting\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":114,\"alignItems\":\"center\",\"justifyContent\":\"center\",\"flexShrink\":1}},{\"id\":\"content_label\",\"component\":\"Text\",\"content\":\"今日步数\",\"styles\":{\"width\":\"matchParent\",\"height\":18,\"fontSize\":12,\"fontWeight\":500,\"textAlign\":\"center\",\"maxLines\":1,\"fontColor\":\"#99FFFFFF\",\"textOverflow\":\"clip\"}},{\"id\":\"content_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/dailySteps} }}\",\"styles\":{\"height\":60,\"fontSize\":48,\"fontWeight\":700,\"textAlign\":\"center\",\"maxLines\":1,\"width\":\"matchParent\",\"fontColor\":\"#FFFFFFFF\",\"textOverflow\":\"clip\"}},{\"id\":\"content_supporting\",\"component\":\"Text\",\"content\":\"步\",\"styles\":{\"height\":20,\"fontSize\":14,\"fontWeight\":400,\"textAlign\":\"center\",\"maxLines\":1,\"width\":\"matchParent\",\"fontColor\":\"#99FFFFFF\",\"textOverflow\":\"clip\"}}]}}\r\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"healthSport\":{\"dailySteps\":6200}}}}}",
+  "schema": {
+    "schemaVersion": "widget-artifact-v2"
+  },
+  "taskspec": {
+    "userQuery": "做一张运动健康卡片，放在手机桌面首页，显示每天的运动步数。",
+    "size": "2x2",
+    "appVersion": "11.7.8.342",
+    "eventCandidates": [
+      {
+        "id": "event.open.health.sport",
+        "description": "打开华为运动健康应用的锻炼Tab页。",
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    ],
+    "dataModelSchema": {
+      "data": {
+        "healthSport": {
+          "dailySteps": {
+            "type": "integer",
+            "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+            "sampleValue": 6200
+          },
+          "dailyDistanceText": {
+            "type": "string",
+            "description": "可直接显示的日常活动总距离文本，端侧已根据数值大小换算并包含“米”或“公里”单位；展示时不得再次追加距离单位。例如“5.42 公里”或“755 米”。",
+            "sampleValue": "4.60 公里"
+          },
+          "dailyTotalCaloriesText": {
+            "type": "string",
+            "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+            "sampleValue": "420 千卡"
+          }
+        }
+      }
+    },
+    "assetCandidates": [
+      {
+        "id": "asset.figure_run",
+        "src": "resources/base/media/figure_run.svg",
+        "description": "样式：跑步人物图标，默认黑色，图形为人体奔跑动作侧视轮廓；适用：运动记录、跑步锻炼追踪、步数统计。"
+      },
+      {
+        "id": "asset.emoji_run",
+        "src": "resources/base/media/emoji_run.png",
+        "description": "样式：灰色运动上衣与深色短裤装扮的写实 3D 跑步人物，透明背景，原始尺寸为 512×512，PNG 位图需保留原色；适用：跑步记录、步数、配速或运动目标相关卡片。不适用：睡眠或泛健康卡片。"
+      }
+    ]
+  },
+  "effectivecapabilities": {
+    "data": [
+      "GetHealthAndSportSummary"
+    ],
+    "event": [
+      {
+        "id": "event.open.health.sport",
+        "description": "打开华为运动健康应用的锻炼Tab页。",
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    ],
+    "asset": [
+      "asset.figure_run",
+      "asset.emoji_run"
+    ]
+  },
+  "removedcapabilities": [],
+  "generationplan": {
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {
+          "targetDayOffset": 0
+        },
+        "writeResultTo": "/data/healthSport",
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyDistanceText",
+          "/dailyTotalCaloriesText"
+        ]
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.health.sport",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          }
+        }
+      }
+    ],
+    "candidateAssetIds": [
+      "asset.figure_run",
+      "asset.emoji_run"
+    ]
+  },
+  "meta": {
+    "apiVersion": "v1",
+    "taskSpecVersion": "task-spec-v1",
+    "cardSpecVersion": "card-spec-v1",
+    "dslProtocolVersion": "v0.9",
+    "skillVersion": "skill-widget-v1",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "generationMode": "create",
+    "artifactId": "5f2fa1e2-4b26-4d00-b25a-42e94ff939a1",
+    "createdAt": 1793934558540
+  },
+  "designcompactdsl": "[\"root\",\"Layout\",{\"layout\":\"S-center\"},[\"content\"]]\r\n[\"content\",\"DataDisplay\",{\"label\":\"今日步数\",\"value\":{\"path\":\"/data/healthSport/dailySteps\"},\"supportingText\":\"步\"}]\r\n[\"/data/healthSport/dailySteps\",6200]",
+  "request": {
+    "content": {
+      "bundleName": "com.huawei.genui",
+      "userQuery": "做一张运动健康卡片，放在手机桌面首页，显示每天的运动步数。",
+      "candidateDataBindings": [
+        {
+          "capabilityId": "GetHealthAndSportSummary",
+          "arguments": {
+            "targetDayOffset": 0
+          },
+          "writeResultTo": "/data/healthSport",
+          "candidateOutputFields": [
+            "/dailySteps",
+            "/dailyDistanceText",
+            "/dailyTotalCaloriesText"
+          ]
+        }
+      ],
+      "title": "每日步数",
+      "size": "2x2",
+      "candidateEventCandidates": [
+        {
+          "capabilityId": "event.open.health.sport",
+          "action": {
+            "call": "clickToDeeplink",
+            "args": {
+              "abilityName": "",
+              "bundleName": "",
+              "intentName": "Health",
+              "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+            }
+          }
+        }
+      ],
+      "description": "运动步数速览",
+      "candidateAssetIds": [
+        "asset.figure_run",
+        "asset.emoji_run"
+      ]
+    },
+    "deviceInfo": {
+      "countryCode": "CN",
+      "deviceFormation": "HDSpeaker",
+      "deviceType": 0,
+      "locale": "zh-CN",
+      "phoneType": "CMS-AL20",
+      "prdVer": "11.7.8.342",
+      "sysVer": "EmotionUI_9.0.0",
+      "time": "20261029101512689"
+    },
+    "pagination": {
+      "limit": 5,
+      "start": ""
+    },
+    "session": {
+      "interactionId": "Q313-000",
+      "isNew": true,
+      "sessionId": "batch-7664fcb9"
+    },
+    "userAuth": {
+      "user": {}
+    },
+    "utterance": {
+      "original": "做一张运动健康卡片，放在手机桌面首页，显示每天的运动步数。",
+      "type": "text"
+    },
+    "version": "1.0",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "bundleName": "com.huawei.genui",
+    "userQuery": "做一张运动健康卡片，放在手机桌面首页，显示每天的运动步数。",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {
+          "targetDayOffset": 0
+        },
+        "writeResultTo": "/data/healthSport",
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyDistanceText",
+          "/dailyTotalCaloriesText"
+        ]
+      }
+    ],
+    "title": "每日步数",
+    "size": "2x2",
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.health.sport",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          }
+        }
+      }
+    ],
+    "description": "运动步数速览",
+    "candidateAssetIds": [
+      "asset.figure_run",
+      "asset.emoji_run"
+    ]
+  },
+  "repair-1": {
+    "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-center\"},[\"content\"]]\n[\"content\",\"DataDisplay\",{\"label\":\"今日步数\",\"value\":{\"path\":\"/data/healthSport/dailySteps\"},\"supportingText\":\"步\"}]\n[\"/data/healthSport/dailySteps\",6200]",
+    "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"content\"],\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"center\",\"justifyContent\":\"center\",\"padding\":12},\"itemMargin\":0},{\"id\":\"content\",\"component\":\"Column\",\"children\":[\"content_label\",\"content_value\",\"content_supporting\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":114,\"alignItems\":\"center\",\"justifyContent\":\"center\",\"flexShrink\":1}},{\"id\":\"content_label\",\"component\":\"Text\",\"content\":\"今日步数\",\"styles\":{\"width\":\"matchParent\",\"height\":18,\"fontSize\":12,\"fontWeight\":500,\"textAlign\":\"center\",\"maxLines\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"content_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/dailySteps} }}\",\"styles\":{\"height\":60,\"fontSize\":48,\"fontWeight\":700,\"textAlign\":\"center\",\"maxLines\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"content_supporting\",\"component\":\"Text\",\"content\":\"步\",\"styles\":{\"height\":20,\"fontSize\":14,\"fontWeight\":400,\"textAlign\":\"center\",\"maxLines\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"healthSport\":{\"dailySteps\":6200}}}}}",
+    "validationErrors": []
+  }
+}

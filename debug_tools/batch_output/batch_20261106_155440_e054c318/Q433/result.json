@@ -1,0 +1,21 @@
+{
+  "id": "Q433",
+  "fileName": "Q433.json",
+  "title": "渡人先渡己",
+  "query": "制作一张静态文字卡片，展示以下精简版内容：爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。\n本轮卡片静态内容（用作展示的外部事实）：爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。",
+  "size": "2x2",
+  "sequence": 25,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2043.32,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00025-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,10 @@
+{
+  "errors": [
+    "Plan fact is missing from visible DSL: 今日星期 (/data/weather/daily/0/weekday).",
+    "Plan fact is missing from visible DSL: 今日白天天气现象 (/data/weather/daily/0/condition).",
+    "Plan fact is missing from visible DSL: 今日最低温与最高温范围 (/data/weather/daily/0/temperatureRangeText)."
+  ],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [],
+  "warnings": []
+}

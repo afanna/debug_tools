@@ -1,0 +1,43 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:f079b9d39a75f83c047b8cb4e024f98e4d18017a3b5f4a35da35cd106f73b848",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_d9b3a1d8-e330-4c14-9eed-68e8b5f355fe.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.ic_weather_monochrome",
+      "asset.emoji_time"
+    ],
+    "data": [
+      "ViewWeather",
+      "GetCurrentTime"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+        "id": "event.open.weather"
+      },
+      {
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "uri": ""
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为时钟应用首页。",
+        "id": "event.open.clock.alarm"
+      }
+    ]
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x2"
+}

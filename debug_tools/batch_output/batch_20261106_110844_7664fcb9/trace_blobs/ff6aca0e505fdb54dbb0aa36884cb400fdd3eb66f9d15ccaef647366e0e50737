@@ -1,0 +1,12 @@
+{
+  "category": "component_contract",
+  "categoryAttempt": 2,
+  "consecutiveFailures": 1,
+  "fingerprint": "126cb9e66f129872",
+  "instruction": "局部修复没有消除错误；保留全部事实与动作，重新组织受影响组件及其父布局，不要再次提交相同组件结构。",
+  "noProgress": false,
+  "repairStrategy": "parent_layout_recompose",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "parent_layout"
+}

@@ -1,0 +1,3595 @@
+{
+  "apiVersion": "batch-postprocess-v2",
+  "scope": "finalize",
+  "runId": "batch_20261110_200000_7e5a1b2c",
+  "run": {
+    "runId": "batch_20261110_200000_7e5a1b2c",
+    "status": "completed",
+    "startedAt": "2026-11-09T12:18:50.924308Z",
+    "finishedAt": "2026-11-09T12:42:37.421280Z",
+    "endpoint": "ws://127.0.0.1:3418/api/v1/ws/tools/generateWidgetCardCompactDsl",
+    "concurrency": 10,
+    "maxRetries": 1,
+    "timeoutSeconds": 300.0,
+    "taskId": "task_b0320f4a7776",
+    "datasetId": "countdown",
+    "datasetVersion": {
+      "current_version": "v2",
+      "update_date": "2026-11-09",
+      "history_versions": [
+        {
+          "version": "v1",
+          "update_date": "2026-11-09",
+          "commits": [],
+          "changes": [
+            "汇总三套来源并按原文去重，统一为2×2及GetDateCounter。"
+          ]
+        }
+      ]
+    },
+    "backendMode": "managed",
+    "serviceStatus": "managed_running",
+    "interrupted": false,
+    "total": 6,
+    "completed": 6,
+    "success": 6,
+    "degraded": 0,
+    "failed": 0,
+    "cancelled": 0,
+    "averageElapsedMs": 8825.85,
+    "traceWarnings": 12,
+    "samples": [
+      {
+        "id": "Q001",
+        "fileName": "Q001.json",
+        "title": "考试倒计时",
+        "query": "帮我做张考试倒计时卡，考试定在2026年12月19日。",
+        "size": "2x2",
+        "sequence": 1,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 9732.15,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 150,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 9264.61,
+        "uid": "batch-615f11cd-00001-000",
+        "generationMetrics": {
+          "firstDsl": "failed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 1,
+          "modelPhysicalCalls": 6,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              1
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              true
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              true
+            ],
+            "subjectlessWideThemeEnabled": [
+              true
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              true
+            ],
+            "squarePhotoExpansionEnabled": [
+              true
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q031",
+        "fileName": "Q031.json",
+        "title": "周三例会倒计时",
+        "query": "每周三都开例会，帮我做一张到下一次例会的倒计时卡。",
+        "size": "2x2",
+        "sequence": 31,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 4517.38,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 76,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 4463.29,
+        "uid": "batch-615f11cd-00031-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              1
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              true
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              true
+            ],
+            "subjectlessWideThemeEnabled": [
+              true
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              true
+            ],
+            "squarePhotoExpansionEnabled": [
+              true
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q061",
+        "fileName": "Q061.json",
+        "title": "农历聚餐",
+        "query": "帮我记录农历2025-06-01闰六月初一这次家庭聚餐，看看距离今天多少天。",
+        "size": "2x2",
+        "sequence": 61,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 6192.12,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 76,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 6153.07,
+        "uid": "batch-615f11cd-00061-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              1
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              true
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              true
+            ],
+            "subjectlessWideThemeEnabled": [
+              true
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              true
+            ],
+            "squarePhotoExpansionEnabled": [
+              true
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q076",
+        "fileName": "Q076.json",
+        "title": "浇水倒计时",
+        "query": "从2026年10月14日开始每2天给绿植浇水，做一张到下一次的倒计时卡。",
+        "size": "2x2",
+        "sequence": 76,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 6667.69,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 76,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 6620.45,
+        "uid": "batch-615f11cd-00076-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              1
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              true
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              true
+            ],
+            "subjectlessWideThemeEnabled": [
+              true
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              true
+            ],
+            "squarePhotoExpansionEnabled": [
+              true
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q086",
+        "fileName": "Q086.json",
+        "title": "照片备份倒计时",
+        "query": "从2026年7月1日起每两个月备份一次照片，桌面上显示距下次还有几天。",
+        "size": "2x2",
+        "sequence": 86,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 4045.88,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 76,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 4025.66,
+        "uid": "batch-615f11cd-00086-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              1
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              true
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              true
+            ],
+            "subjectlessWideThemeEnabled": [
+              true
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              true
+            ],
+            "squarePhotoExpansionEnabled": [
+              true
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q091",
+        "fileName": "Q091.json",
+        "title": "结婚纪念日倒计时",
+        "query": "我们2020年5月20日结婚，帮我做每年结婚纪念日的倒计时卡。",
+        "size": "2x2",
+        "sequence": 91,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 4979.55,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 76,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 4943.66,
+        "uid": "batch-615f11cd-00091-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              1
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              true
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              true
+            ],
+            "subjectlessWideThemeEnabled": [
+              true
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              true
+            ],
+            "squarePhotoExpansionEnabled": [
+              true
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      }
+    ],
+    "generationMetrics": {
+      "version": 1,
+      "firstDslPassRate": {
+        "numerator": 97,
+        "denominator": 209,
+        "percent": 46.41
+      },
+      "firstRequestDeliveryRate": {
+        "numerator": 161,
+        "denominator": 209,
+        "percent": 77.03
+      },
+      "finalDeliveryRate": {
+        "numerator": 195,
+        "denominator": 209,
+        "percent": 93.3
+      },
+      "preDslFailed": 0,
+      "firstDslUnknown": 0,
+      "repairRescueRate": {
+        "numerator": 64,
+        "denominator": 112,
+        "percent": 57.14
+      },
+      "batchRetryRate": {
+        "numerator": 48,
+        "denominator": 209,
+        "percent": 22.97
+      },
+      "batchRetryRescueRate": {
+        "numerator": 34,
+        "denominator": 48,
+        "percent": 70.83
+      },
+      "qualityRepairAttempts": 215,
+      "modelPhysicalCalls": 1158,
+      "repairObservedAttempts": 257,
+      "modelObservedAttempts": 257,
+      "terminalAttempts": 257,
+      "coverageObserved": 195,
+      "coverageMissing": 3,
+      "p95ElapsedMs": 19254.29,
+      "bySize": [
+        {
+          "size": "2x2",
+          "firstDslPassRate": {
+            "numerator": 97,
+            "denominator": 209,
+            "percent": 46.41
+          },
+          "firstRequestDeliveryRate": {
+            "numerator": 161,
+            "denominator": 209,
+            "percent": 77.03
+          },
+          "finalDeliveryRate": {
+            "numerator": 195,
+            "denominator": 209,
+            "percent": 93.3
+          },
+          "preDslFailed": 0,
+          "firstDslUnknown": 0,
+          "repairRescueRate": {
+            "numerator": 64,
+            "denominator": 112,
+            "percent": 57.14
+          },
+          "batchRetryRate": {
+            "numerator": 48,
+            "denominator": 209,
+            "percent": 22.97
+          },
+          "batchRetryRescueRate": {
+            "numerator": 34,
+            "denominator": 48,
+            "percent": 70.83
+          },
+          "qualityRepairAttempts": 215,
+          "modelPhysicalCalls": 1158,
+          "repairObservedAttempts": 257,
+          "modelObservedAttempts": 257,
+          "terminalAttempts": 257,
+          "coverageObserved": 195,
+          "coverageMissing": 3,
+          "p95ElapsedMs": 19254.29
+        }
+      ]
+    },
+    "observedRetryParameters": {
+      "interfaceRetryEnabled": [
+        true
+      ],
+      "interfaceExtraRetries": [
+        1
+      ],
+      "qualityRepairEnabled": [
+        true
+      ],
+      "qualityRepairMaxAttempts": [
+        1
+      ],
+      "singleStepGenerationFallbackEnabled": [
+        true
+      ],
+      "singleStepWidgetEditEnabled": [
+        true
+      ],
+      "dropPlanFactValidationEnabled": [
+        false
+      ],
+      "photoBackgroundThemeEnabled": [
+        true
+      ],
+      "subjectlessWideThemeEnabled": [
+        true
+      ],
+      "squareMusicPhotoExpansionEnabled": [
+        true
+      ],
+      "squarePhotoExpansionEnabled": [
+        true
+      ],
+      "deepseekOfficialHttpUseSdkEnabled": [
+        true
+      ],
+      "modelFailureRetryEnabled": [
+        true
+      ],
+      "modelFailureExtraRetries": [
+        1
+      ],
+      "fallbackModelFailureExtraRetries": [
+        1
+      ],
+      "fallbackEnabled": [
+        true
+      ],
+      "argumentRepairEnabled": [
+        false
+      ],
+      "argumentRepairMaxAttempts": [
+        2
+      ],
+      "argumentRepairReminderCount": [
+        1
+      ],
+      "interfaceMaxAttempts": [
+        2
+      ],
+      "planMaxAttempts": [
+        2
+      ]
+    },
+    "name": "倒计时目标效果冒烟",
+    "imported": 0
+  },
+  "runDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c",
+  "outputDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_b30b55d20d90\\plugins\\target-effect",
+  "pluginOutputDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_b30b55d20d90\\plugins\\target-effect",
+  "sampleOutputDirs": {
+    "Q001": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_b30b55d20d90\\plugins\\target-effect\\samples\\Q001",
+    "Q031": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_b30b55d20d90\\plugins\\target-effect\\samples\\Q031",
+    "Q061": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_b30b55d20d90\\plugins\\target-effect\\samples\\Q061",
+    "Q076": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_b30b55d20d90\\plugins\\target-effect\\samples\\Q076",
+    "Q086": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_b30b55d20d90\\plugins\\target-effect\\samples\\Q086",
+    "Q091": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_b30b55d20d90\\plugins\\target-effect\\samples\\Q091"
+  },
+  "datasetOutputDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_b30b55d20d90\\plugins\\target-effect\\dataset",
+  "config": {
+    "rendererBaseUrl": "http://127.0.0.1:8890/debug",
+    "captureScale": 3,
+    "captureTimeoutSeconds": 1800
+  },
+  "sampleResults": [
+    {
+      "sampleId": "Q001",
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "once",
+        "gate": true,
+        "expectedDays": 46,
+        "passed": 6,
+        "failed": 8,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "规范失败"
+            },
+            {
+              "label": "场景",
+              "value": "once"
+            },
+            {
+              "label": "期望天数",
+              "value": 46
+            },
+            {
+              "label": "门禁",
+              "value": "参与"
+            }
+          ],
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "12.0",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=None",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR",
+              "说明": "标题白色",
+              "状态": "失败",
+              "预期": "白色 100%",
+              "实际": "alpha=0.8",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "状态": "失败",
+              "预期": "56 或 38",
+              "实际": "30.0",
+              "证据": {
+                "component": "primary_value",
+                "expectedDays": 46,
+                "digits": 2
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "primary_unit"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            }
+          ],
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q001",
+            "scenario": "once",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": "2026-12-19",
+            "expectedDays": 46,
+            "expectedRelationText": "还剩",
+            "expectedTargetDateText": "2026/12/19",
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2026-12-19"
+            },
+            "gate": true,
+            "provenance": {
+              "targetDate": "explicit",
+              "days": "derived",
+              "relationText": "derived",
+              "targetDateText": "derived"
+            },
+            "notes": []
+          },
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q031",
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "repeat_week",
+        "gate": false,
+        "expectedDays": 1,
+        "passed": 6,
+        "failed": 8,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "规范失败"
+            },
+            {
+              "label": "场景",
+              "value": "repeat_week"
+            },
+            {
+              "label": "期望天数",
+              "value": 1
+            },
+            {
+              "label": "门禁",
+              "value": "仅展示"
+            }
+          ],
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "12.0",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=None",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR",
+              "说明": "标题白色",
+              "状态": "失败",
+              "预期": "白色 100%",
+              "实际": "alpha=0.8",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "状态": "失败",
+              "预期": "56 或 38",
+              "实际": "30.0",
+              "证据": {
+                "component": "primary_value",
+                "expectedDays": 1,
+                "digits": 1
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "primary_unit"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "14.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            }
+          ],
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q031",
+            "scenario": "repeat_week",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": "2026-11-04",
+            "expectedDays": 1,
+            "expectedRelationText": "还剩",
+            "expectedTargetDateText": "2026/11/04",
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2026-11-04",
+              "repeat": {
+                "unit": "week"
+              }
+            },
+            "gate": false,
+            "provenance": {
+              "targetDate": "explicit",
+              "days": "ambiguous",
+              "relationText": "ambiguous",
+              "targetDateText": "ambiguous"
+            },
+            "notes": [
+              "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+            ]
+          },
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q061",
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "lunar_once",
+        "gate": false,
+        "expectedDays": -1,
+        "passed": 6,
+        "failed": 7,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "规范失败"
+            },
+            {
+              "label": "场景",
+              "value": "lunar_once"
+            },
+            {
+              "label": "期望天数",
+              "value": "—"
+            },
+            {
+              "label": "门禁",
+              "value": "仅展示"
+            }
+          ],
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "18.0",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=clip",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "状态": "失败",
+              "预期": "56 或 38",
+              "实际": "18.0",
+              "证据": {
+                "component": "primary_main",
+                "expectedDays": null,
+                "digits": null
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "单位独立 16fp",
+              "实际": "单位与数字同一文本节点",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "14.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            }
+          ],
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q061",
+            "scenario": "lunar_once",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": null,
+            "expectedDays": null,
+            "expectedRelationText": null,
+            "expectedTargetDateText": null,
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2025-06-01",
+              "calendar": "lunar",
+              "isLeapMonth": true
+            },
+            "gate": false,
+            "provenance": {},
+            "notes": [
+              "农历日期需日历库或人工确认，本次不自动判定目标日"
+            ]
+          },
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q076",
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "repeat_day",
+        "gate": false,
+        "expectedDays": 0,
+        "passed": 6,
+        "failed": 8,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "规范失败"
+            },
+            {
+              "label": "场景",
+              "value": "repeat_day"
+            },
+            {
+              "label": "期望天数",
+              "value": 0
+            },
+            {
+              "label": "门禁",
+              "value": "仅展示"
+            }
+          ],
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "12.0",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=None",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR",
+              "说明": "标题白色",
+              "状态": "失败",
+              "预期": "白色 100%",
+              "实际": "alpha=0.8",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "状态": "失败",
+              "预期": "56 或 38",
+              "实际": "30.0",
+              "证据": {
+                "component": "days_value",
+                "expectedDays": 0,
+                "digits": 1
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "days_unit"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "target_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "target_item0_value"
+              }
+            }
+          ],
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q076",
+            "scenario": "repeat_day",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": "2026-11-03",
+            "expectedDays": 0,
+            "expectedRelationText": "就是今天",
+            "expectedTargetDateText": "2026/11/03",
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2026-10-14",
+              "repeat": {
+                "unit": "day",
+                "interval": 2
+              }
+            },
+            "gate": false,
+            "provenance": {
+              "targetDate": "explicit",
+              "days": "ambiguous",
+              "relationText": "ambiguous",
+              "targetDateText": "ambiguous"
+            },
+            "notes": [
+              "下一次触发日与参考日相同，需确认“今天是否算下一次”"
+            ]
+          },
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q086",
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "repeat_month",
+        "gate": false,
+        "expectedDays": 28,
+        "passed": 7,
+        "failed": 7,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "规范失败"
+            },
+            {
+              "label": "场景",
+              "value": "repeat_month"
+            },
+            {
+              "label": "期望天数",
+              "value": 28
+            },
+            {
+              "label": "门禁",
+              "value": "仅展示"
+            }
+          ],
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "18.0",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=clip",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "状态": "失败",
+              "预期": "56 或 38",
+              "实际": "18.0",
+              "证据": {
+                "component": "primary_main",
+                "expectedDays": 28,
+                "digits": 2
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "单位独立 16fp",
+              "实际": "单位与数字同一文本节点",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            }
+          ],
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q086",
+            "scenario": "repeat_month",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": "2026-12-01",
+            "expectedDays": 28,
+            "expectedRelationText": "还剩",
+            "expectedTargetDateText": "2026/12/01",
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2026-07-01",
+              "repeat": {
+                "unit": "month",
+                "interval": 2
+              }
+            },
+            "gate": false,
+            "provenance": {
+              "targetDate": "explicit",
+              "days": "ambiguous",
+              "relationText": "ambiguous",
+              "targetDateText": "ambiguous"
+            },
+            "notes": [
+              "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+            ]
+          },
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q091",
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "repeat_year",
+        "gate": false,
+        "expectedDays": 198,
+        "passed": 7,
+        "failed": 7,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "规范失败"
+            },
+            {
+              "label": "场景",
+              "value": "repeat_year"
+            },
+            {
+              "label": "期望天数",
+              "value": 198
+            },
+            {
+              "label": "门禁",
+              "value": "仅展示"
+            }
+          ],
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "12.0",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=None",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR",
+              "说明": "标题白色",
+              "状态": "失败",
+              "预期": "白色 100%",
+              "实际": "alpha=0.8",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "primary_unit"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            }
+          ],
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q091",
+            "scenario": "repeat_year",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": "2027-05-20",
+            "expectedDays": 198,
+            "expectedRelationText": "还剩",
+            "expectedTargetDateText": "2027/05/20",
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2020-05-20",
+              "repeat": {
+                "unit": "year"
+              }
+            },
+            "gate": false,
+            "provenance": {
+              "targetDate": "explicit",
+              "days": "ambiguous",
+              "relationText": "ambiguous",
+              "targetDateText": "ambiguous"
+            },
+            "notes": [
+              "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+            ]
+          },
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    }
+  ],
+  "datasetResult": {
+    "status": "success",
+    "summary": "目标效果评测完成：6 个样本，通过 0，待复核 0，失败 6",
+    "facts": {
+      "total": 6,
+      "passed": 0,
+      "partial": 0,
+      "failed": 6,
+      "passRate": 66.3,
+      "averageScore": 78.1,
+      "averageTarget": 40.0,
+      "averageVisibility": 17.9,
+      "averageSpec": 12.4,
+      "averageAsset": 10.0
+    },
+    "artifacts": [
+      {
+        "key": "overview",
+        "data": [
+          {
+            "label": "样本数",
+            "value": 6
+          },
+          {
+            "label": "平均总分",
+            "value": 78.1
+          },
+          {
+            "label": "平均目标语义 /40",
+            "value": "40.0"
+          },
+          {
+            "label": "平均可见性 /25",
+            "value": "17.9"
+          },
+          {
+            "label": "平均规范符合 /25",
+            "value": "12.4"
+          },
+          {
+            "label": "平均素材渲染 /10",
+            "value": "10.0"
+          },
+          {
+            "label": "通过",
+            "value": 0
+          },
+          {
+            "label": "待复核",
+            "value": 0
+          },
+          {
+            "label": "失败",
+            "value": 6
+          },
+          {
+            "label": "规则通过率",
+            "value": "66.3%"
+          }
+        ],
+        "title": "整批概览",
+        "dataType": "metrics",
+        "renderer": "kpi"
+      },
+      {
+        "key": "scores",
+        "data": [
+          {
+            "sampleId": "Q001",
+            "title": "Q001",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 79.6,
+            "band": "良好",
+            "image": "samples/Q001/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ],
+            "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_b30b55d20d90/assets/target-effect/samples/Q001/injected.png"
+          },
+          {
+            "sampleId": "Q031",
+            "title": "Q031",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 79.6,
+            "band": "良好",
+            "image": "samples/Q031/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ],
+            "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_b30b55d20d90/assets/target-effect/samples/Q031/injected.png"
+          },
+          {
+            "sampleId": "Q061",
+            "title": "Q061",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 67.3,
+            "band": "及格",
+            "image": "samples/Q061/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": null,
+                "ratio": null,
+                "checks": 0,
+                "passed": 0,
+                "pending": 0,
+                "applicable": false,
+                "reason": "未门禁"
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 12.5,
+                "ratio": 50.0,
+                "checks": 14,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ],
+            "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_b30b55d20d90/assets/target-effect/samples/Q061/injected.png"
+          },
+          {
+            "sampleId": "Q076",
+            "title": "Q076",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 79.6,
+            "band": "良好",
+            "image": "samples/Q076/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ],
+            "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_b30b55d20d90/assets/target-effect/samples/Q076/injected.png"
+          },
+          {
+            "sampleId": "Q086",
+            "title": "Q086",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 81.2,
+            "band": "良好",
+            "image": "samples/Q086/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 13.3,
+                "ratio": 53.3,
+                "checks": 15,
+                "passed": 8,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ],
+            "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_b30b55d20d90/assets/target-effect/samples/Q086/injected.png"
+          },
+          {
+            "sampleId": "Q091",
+            "title": "Q091",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 81.2,
+            "band": "良好",
+            "image": "samples/Q091/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 13.3,
+                "ratio": 53.3,
+                "checks": 15,
+                "passed": 8,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ],
+            "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_b30b55d20d90/assets/target-effect/samples/Q091/injected.png"
+          }
+        ],
+        "title": "卡片评分总览",
+        "dataType": "records",
+        "renderer": "score-grid"
+      },
+      {
+        "key": "rules",
+        "data": [
+          {
+            "规则": "TARGET.BINDING_MISSING",
+            "说明": "期望字段被组件引用",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.BINDING_VALUE_MISMATCH",
+            "说明": "绑定值随注入变化",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.DAYS_MISMATCH",
+            "说明": "天数与参考日一致",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.RELATION_TEXT_MISMATCH",
+            "说明": "关系文案与日期差一致",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.VISIBLE_EXPECTATION_MISSING",
+            "说明": "期望文本可见",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.PLACEHOLDER_VISIBLE",
+            "说明": "无占位文案",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.SCENARIO_RULE_VIOLATION",
+            "说明": "场景规则",
+            "通过": 1,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.TEXT_CLIPPED",
+            "说明": "文字未被裁切",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "VIS.TEXT_OVERFLOW",
+            "说明": "文字未越出画布",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.TEXT_OVERLAP",
+            "说明": "文字未互相遮挡",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.IMAGE_OVERFLOW",
+            "说明": "图片未越出画布",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.IMAGE_LOAD_FAILED",
+            "说明": "素材真实加载",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.FONT_TOO_SMALL",
+            "说明": "正文字号下限",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.CONTRAST_LOW",
+            "说明": "文字对比度",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "ASSET.FILE_MISSING",
+            "说明": "本地素材文件存在",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.RADIUS",
+            "说明": "圆角 20",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.PADDING",
+            "说明": "内边距 12",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.BG_FULL_BLEED",
+            "说明": "背景铺满",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.MASK",
+            "说明": "黑色蒙层 60%",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.TITLE_REQUIRED",
+            "说明": "标题必选",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.TITLE_FONT",
+            "说明": "标题 16/20fp",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.TITLE_ELLIPSIS",
+            "说明": "标题单行省略",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.TITLE_COLOR",
+            "说明": "标题白色",
+            "通过": 2,
+            "失败": 4,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 33.3
+          },
+          {
+            "规则": "SPEC.PRIMARY_FONT",
+            "说明": "主值 56/38fp",
+            "通过": 1,
+            "失败": 5,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 16.7
+          },
+          {
+            "规则": "SPEC.UNIT_FONT",
+            "说明": "单位 16fp 独立",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.SUPPORT_FONT",
+            "说明": "副文本 16fp",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.SUPPORT_COLOR",
+            "说明": "副文本 60% 白",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.CONTENT_TYPE",
+            "说明": "内容属于 C1–C5",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.PATTERN_GEOMETRY",
+            "说明": "图案几何",
+            "通过": 0,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 6,
+            "通过率": null
+          },
+          {
+            "规则": "SPEC.DIGIT_LIMIT",
+            "说明": "数字最多 6 位",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 1,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.SAFE_AREA",
+            "说明": "安全区内",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          }
+        ],
+        "title": "规则通过率",
+        "dataType": "records",
+        "renderer": "table"
+      },
+      {
+        "key": "samples",
+        "data": [
+          {
+            "样本": "Q001",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "once",
+            "期望天数": 46,
+            "总分": 79.6,
+            "等级": "良好",
+            "目标语义": 40.0,
+            "可见性": 17.9,
+            "规范符合": 11.7,
+            "素材渲染": 10.0,
+            "通过": 21,
+            "失败": 10,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+            "待复核项": "",
+            "图片": "samples/Q001/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "样本": "Q031",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_week",
+            "期望天数": 1,
+            "总分": 79.6,
+            "等级": "良好",
+            "目标语义": 40.0,
+            "可见性": 17.9,
+            "规范符合": 11.7,
+            "素材渲染": 10.0,
+            "通过": 20,
+            "失败": 10,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+            "待复核项": "",
+            "图片": "samples/Q031/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "样本": "Q061",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "lunar_once",
+            "期望天数": "—",
+            "总分": 67.3,
+            "等级": "及格",
+            "目标语义": null,
+            "可见性": 17.9,
+            "规范符合": 12.5,
+            "素材渲染": 10.0,
+            "通过": 15,
+            "失败": 9,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+            "待复核项": "",
+            "图片": "samples/Q061/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": null,
+                "ratio": null,
+                "checks": 0,
+                "passed": 0,
+                "pending": 0,
+                "applicable": false,
+                "reason": "未门禁"
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 12.5,
+                "ratio": 50.0,
+                "checks": 14,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "样本": "Q076",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_day",
+            "期望天数": 0,
+            "总分": 79.6,
+            "等级": "良好",
+            "目标语义": 40.0,
+            "可见性": 17.9,
+            "规范符合": 11.7,
+            "素材渲染": 10.0,
+            "通过": 20,
+            "失败": 10,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+            "待复核项": "",
+            "图片": "samples/Q076/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "样本": "Q086",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_month",
+            "期望天数": 28,
+            "总分": 81.2,
+            "等级": "良好",
+            "目标语义": 40.0,
+            "可见性": 17.9,
+            "规范符合": 13.3,
+            "素材渲染": 10.0,
+            "通过": 21,
+            "失败": 9,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+            "待复核项": "",
+            "图片": "samples/Q086/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 13.3,
+                "ratio": 53.3,
+                "checks": 15,
+                "passed": 8,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "样本": "Q091",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_year",
+            "期望天数": 198,
+            "总分": 81.2,
+            "等级": "良好",
+            "目标语义": 40.0,
+            "可见性": 17.9,
+            "规范符合": 13.3,
+            "素材渲染": 10.0,
+            "通过": 21,
+            "失败": 9,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+            "待复核项": "",
+            "图片": "samples/Q091/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 13.3,
+                "ratio": 53.3,
+                "checks": 15,
+                "passed": 8,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          }
+        ],
+        "title": "全部样本",
+        "dataType": "records",
+        "renderer": "table"
+      },
+      {
+        "key": "summary",
+        "data": {
+          "profile": "countdown-card-spec-v1",
+          "total": 6,
+          "samples": [
+            {
+              "样本": "Q001",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "once",
+              "期望天数": 46,
+              "总分": 79.6,
+              "等级": "良好",
+              "目标语义": 40.0,
+              "可见性": 17.9,
+              "规范符合": 11.7,
+              "素材渲染": 10.0,
+              "通过": 21,
+              "失败": 10,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+              "待复核项": "",
+              "图片": "samples/Q001/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 11.7,
+                  "ratio": 46.7,
+                  "checks": 15,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            },
+            {
+              "样本": "Q031",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "repeat_week",
+              "期望天数": 1,
+              "总分": 79.6,
+              "等级": "良好",
+              "目标语义": 40.0,
+              "可见性": 17.9,
+              "规范符合": 11.7,
+              "素材渲染": 10.0,
+              "通过": 20,
+              "失败": 10,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+              "待复核项": "",
+              "图片": "samples/Q031/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 11.7,
+                  "ratio": 46.7,
+                  "checks": 15,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            },
+            {
+              "样本": "Q061",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "lunar_once",
+              "期望天数": "—",
+              "总分": 67.3,
+              "等级": "及格",
+              "目标语义": null,
+              "可见性": 17.9,
+              "规范符合": 12.5,
+              "素材渲染": 10.0,
+              "通过": 15,
+              "失败": 9,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+              "待复核项": "",
+              "图片": "samples/Q061/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": null,
+                  "ratio": null,
+                  "checks": 0,
+                  "passed": 0,
+                  "pending": 0,
+                  "applicable": false,
+                  "reason": "未门禁"
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 12.5,
+                  "ratio": 50.0,
+                  "checks": 14,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            },
+            {
+              "样本": "Q076",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "repeat_day",
+              "期望天数": 0,
+              "总分": 79.6,
+              "等级": "良好",
+              "目标语义": 40.0,
+              "可见性": 17.9,
+              "规范符合": 11.7,
+              "素材渲染": 10.0,
+              "通过": 20,
+              "失败": 10,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+              "待复核项": "",
+              "图片": "samples/Q076/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 11.7,
+                  "ratio": 46.7,
+                  "checks": 15,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            },
+            {
+              "样本": "Q086",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "repeat_month",
+              "期望天数": 28,
+              "总分": 81.2,
+              "等级": "良好",
+              "目标语义": 40.0,
+              "可见性": 17.9,
+              "规范符合": 13.3,
+              "素材渲染": 10.0,
+              "通过": 21,
+              "失败": 9,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+              "待复核项": "",
+              "图片": "samples/Q086/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 13.3,
+                  "ratio": 53.3,
+                  "checks": 15,
+                  "passed": 8,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            },
+            {
+              "样本": "Q091",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "repeat_year",
+              "期望天数": 198,
+              "总分": 81.2,
+              "等级": "良好",
+              "目标语义": 40.0,
+              "可见性": 17.9,
+              "规范符合": 13.3,
+              "素材渲染": 10.0,
+              "通过": 21,
+              "失败": 9,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+              "待复核项": "",
+              "图片": "samples/Q091/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 13.3,
+                  "ratio": 53.3,
+                  "checks": 15,
+                  "passed": 8,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            }
+          ],
+          "rules": [
+            {
+              "规则": "TARGET.BINDING_MISSING",
+              "说明": "期望字段被组件引用",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.BINDING_VALUE_MISMATCH",
+              "说明": "绑定值随注入变化",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.DAYS_MISMATCH",
+              "说明": "天数与参考日一致",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.RELATION_TEXT_MISMATCH",
+              "说明": "关系文案与日期差一致",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.VISIBLE_EXPECTATION_MISSING",
+              "说明": "期望文本可见",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.PLACEHOLDER_VISIBLE",
+              "说明": "无占位文案",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.SCENARIO_RULE_VIOLATION",
+              "说明": "场景规则",
+              "通过": 1,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.TEXT_CLIPPED",
+              "说明": "文字未被裁切",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "VIS.TEXT_OVERFLOW",
+              "说明": "文字未越出画布",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.TEXT_OVERLAP",
+              "说明": "文字未互相遮挡",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.IMAGE_OVERFLOW",
+              "说明": "图片未越出画布",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.IMAGE_LOAD_FAILED",
+              "说明": "素材真实加载",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.FONT_TOO_SMALL",
+              "说明": "正文字号下限",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.CONTRAST_LOW",
+              "说明": "文字对比度",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "ASSET.FILE_MISSING",
+              "说明": "本地素材文件存在",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.RADIUS",
+              "说明": "圆角 20",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.PADDING",
+              "说明": "内边距 12",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.BG_FULL_BLEED",
+              "说明": "背景铺满",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.TITLE_REQUIRED",
+              "说明": "标题必选",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR",
+              "说明": "标题白色",
+              "通过": 2,
+              "失败": 4,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 33.3
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "通过": 1,
+              "失败": 5,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 16.7
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.CONTENT_TYPE",
+              "说明": "内容属于 C1–C5",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.PATTERN_GEOMETRY",
+              "说明": "图案几何",
+              "通过": 0,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 6,
+              "通过率": null
+            },
+            {
+              "规则": "SPEC.DIGIT_LIMIT",
+              "说明": "数字最多 6 位",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 1,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.SAFE_AREA",
+              "说明": "安全区内",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            }
+          ],
+          "captureError": "",
+          "facts": {
+            "total": 6,
+            "passed": 0,
+            "partial": 0,
+            "failed": 6,
+            "passRate": 66.3,
+            "averageScore": 78.1,
+            "averageTarget": 40.0,
+            "averageVisibility": 17.9,
+            "averageSpec": 12.4,
+            "averageAsset": 10.0
+          }
+        },
+        "title": "汇总 JSON",
+        "dataType": "json",
+        "renderer": "tree"
+      },
+      {
+        "key": "report",
+        "path": "report.html",
+        "alt": "目标效果评测报告",
+        "title": "HTML 报告",
+        "dataType": "file",
+        "renderer": "download",
+        "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_b30b55d20d90/assets/target-effect/dataset/report.html"
+      }
+    ]
+  },
+  "upstreamResults": []
+}

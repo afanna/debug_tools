@@ -1,0 +1,21 @@
+{
+  "id": "Q428",
+  "fileName": "Q428.json",
+  "title": "万年历",
+  "query": "做一张万年历卡片，显示当前日期、星期和农历信息。",
+  "size": "2x2",
+  "sequence": 16,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3840.87,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3805.96,
+  "uid": "batch-13ea8cbd-00016-000",
+  "finalAttempt": 0
+}

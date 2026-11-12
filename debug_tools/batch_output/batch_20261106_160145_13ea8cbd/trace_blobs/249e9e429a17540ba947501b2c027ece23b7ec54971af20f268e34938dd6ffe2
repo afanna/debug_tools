@@ -1,0 +1,39 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [
+    {
+      "description": "样式：深灰到黑色渐变的一对分体式入耳蓝牙耳机，带立体高光与透明背景，原始尺寸为 64×64，PNG 位图需保留原色；适用：蓝牙耳机连接状态、名称或左右耳电量卡片，可结合 GetEarphoneInfo 的 isConnected、earphoneName、leftBatteryLevel 和 rightBatteryLevel 展示，也可作为 event.open.settings.bluetooth 的蓝牙设置入口。图标不表示耳机当前已连接、正在充电或具有特定电量。",
+      "id": "asset.emoji_bluetooth_earbuds_black",
+      "src": "resources/base/media/emoji_bluetooth_earbuds_black.png"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "earphone": {
+        "batteryLevel": {
+          "description": "耳机盒（或整体）当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”。",
+          "sampleValue": 80,
+          "type": "integer"
+        },
+        "earphoneName": {
+          "description": "耳机的设备广播名称，如果未连接则返回'未连接耳机'。如: 'FreeBuds Pro 3'。",
+          "sampleValue": "示例耳机",
+          "type": "string"
+        },
+        "leftBatteryLevel": {
+          "description": "左耳机当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”；未连接时为 0。若直接用于文本展示，必须在数值后追加“%”。",
+          "sampleValue": 76,
+          "type": "integer"
+        },
+        "rightBatteryLevel": {
+          "description": "右耳机当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”；未连接时为 0。若直接用于文本展示，必须在数值后追加“%”。",
+          "sampleValue": 78,
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "eventCandidates": [],
+  "size": "2x2",
+  "userQuery": "把耳机电池电量放到桌面上，创建一张耳机电量卡片，显示耳机名称、耳机盒电量、左右耳电量。"
+}

@@ -1,0 +1,4 @@
+[
+  "component left_primary_main: text width overflow; complete text '计划出港2026-11-01 22:40' at original font 18 needs about 245vp in one line, but its allocated text area is 116vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight.",
+  "component right_body_main: text width overflow; complete text '2026-11-02 00:50' at original font 18 needs about 173vp in one line, but its allocated text area is 116vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight."
+]

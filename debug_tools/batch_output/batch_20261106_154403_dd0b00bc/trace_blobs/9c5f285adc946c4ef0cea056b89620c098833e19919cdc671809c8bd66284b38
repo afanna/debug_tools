@@ -1,0 +1,23 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.emoji_run"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "今日步数"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

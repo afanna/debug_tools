@@ -1,0 +1,21 @@
+{
+  "id": "Q377",
+  "fileName": "Q377.json",
+  "title": "运动步数",
+  "query": "在手机桌面创建一个显示今日运动步数的卡片，展示步数、距离和热量消耗数据",
+  "size": "2x2",
+  "sequence": 44,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4563.41,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4553.2,
+  "uid": "batch-7664fcb9-00044-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,56 @@
+{
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q464-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q464-000",
+          "streamType": "partial",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q464-000",
+          "streamType": "partial",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"message\":\"服务内部处理或校验失败。\",\"retryable\":false,\"requiredActions\":[\"STOP\"],\"agentInstruction\":\"停止本轮自动调用，并按实际失败原因回复；保留原有效来源。\",\"issues\":[]}",
+          "streamingTextId": "batch-13ea8cbd&Q464-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "7b4ccb7d-89b1-4ad2-959a-66508b53c1b4",
+  "createdAt": 1793951185212
+}

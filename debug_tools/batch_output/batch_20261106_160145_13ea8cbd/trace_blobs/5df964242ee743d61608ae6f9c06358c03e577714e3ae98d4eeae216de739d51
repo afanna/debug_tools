@@ -1,0 +1,92 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 工资表项目：扣款（超出带标题单行列表容量）.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 工资表项目：实发工资（超出带标题单行列表容量）.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": "—",
+        "category": "display",
+        "code": "COMPACT_DISPLAY_DANGLING_RANGE",
+        "evidenceSource": "expanded",
+        "expected": {
+          "range": "范围分隔符两侧均须有值；仅有一个值时不能保留分隔符"
+        },
+        "legacyMessage": "component body__static_item0_assist: time/date range ends with a dangling separator. Bind both start and end values, or remove the separator and display the available value only.",
+        "message": "时间或日期范围末尾存在悬空分隔符。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component body__static_item0_assist: time/date range ends with a dangling separator. Bind both start and end values, or remove the separator and display the available value only.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": "—",
+        "category": "display",
+        "code": "COMPACT_DISPLAY_DANGLING_RANGE",
+        "evidenceSource": "expanded",
+        "expected": {
+          "range": "范围分隔符两侧均须有值；仅有一个值时不能保留分隔符"
+        },
+        "legacyMessage": "component body__static_item1_assist: time/date range ends with a dangling separator. Bind both start and end values, or remove the separator and display the available value only.",
+        "message": "时间或日期范围末尾存在悬空分隔符。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component body__static_item1_assist: time/date range ends with a dangling separator. Bind both start and end values, or remove the separator and display the available value only.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": "—",
+        "category": "display",
+        "code": "COMPACT_DISPLAY_DANGLING_RANGE",
+        "evidenceSource": "expanded",
+        "expected": {
+          "range": "范围分隔符两侧均须有值；仅有一个值时不能保留分隔符"
+        },
+        "legacyMessage": "component body__static_item2_assist: time/date range ends with a dangling separator. Bind both start and end values, or remove the separator and display the available value only.",
+        "message": "时间或日期范围末尾存在悬空分隔符。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component body__static_item2_assist: time/date range ends with a dangling separator. Bind both start and end values, or remove the separator and display the available value only.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": "—",
+        "category": "display",
+        "code": "COMPACT_DISPLAY_DANGLING_RANGE",
+        "evidenceSource": "expanded",
+        "expected": {
+          "range": "范围分隔符两侧均须有值；仅有一个值时不能保留分隔符"
+        },
+        "legacyMessage": "component body__static_item3_assist: time/date range ends with a dangling separator. Bind both start and end values, or remove the separator and display the available value only.",
+        "message": "时间或日期范围末尾存在悬空分隔符。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component body__static_item3_assist: time/date range ends with a dangling separator. Bind both start and end values, or remove the separator and display the available value only.",
+    "stage": "validation"
+  }
+]

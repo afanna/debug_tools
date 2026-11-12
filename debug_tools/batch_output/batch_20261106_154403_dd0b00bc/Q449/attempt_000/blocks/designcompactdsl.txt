@@ -1,0 +1,7 @@
+["root","Layout",{"layout":"S-title-dual-content"},["title","temperature","condition"]]
+["title","SingleLineTitle",{"title":{"path":"/data/weather/location/prefectureName"},"fontSize":12}]
+["temperature","EmphasizedData",{"value":{"path":"/data/weather/current/temperatureText"},"fontSize":30}]
+["condition","SecondaryBody",{"items":[{"label":"天气 ","value":{"path":"/data/weather/current/condition"}}],"fontSize":14}]
+["/data/weather/location/prefectureName","上海市"]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]

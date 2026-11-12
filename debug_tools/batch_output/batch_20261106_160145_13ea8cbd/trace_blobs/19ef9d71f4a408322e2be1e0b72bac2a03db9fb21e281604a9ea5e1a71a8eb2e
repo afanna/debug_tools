@@ -1,0 +1,19 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "capabilityId": "GetHealthAndSportSummary",
+      "writeResultTo": "/data/healthSport"
+    }
+  ],
+  "description": "运动健康卡片",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "运动健康"
+}

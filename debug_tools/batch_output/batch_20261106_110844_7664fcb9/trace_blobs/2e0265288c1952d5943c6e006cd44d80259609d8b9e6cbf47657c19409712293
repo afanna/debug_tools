@@ -1,0 +1,44 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.figure_run"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData",
+        "DataDisplay"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "今日步数（纯整数，展示时追加“步”）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/healthSport/dailyTotalCaloriesText",
+      "priority": "must",
+      "requirement": "今日活动总消耗热量文本（已含千卡单位）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/healthSport/dailyDistanceText",
+      "priority": "must",
+      "requirement": "今日活动总距离文本（已含米/公里单位）"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-title-dual-content"
+  ]
+}

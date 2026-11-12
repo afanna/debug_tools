@@ -1,0 +1,6 @@
+```genui
+["root","Layout",{"layout":"S-center"},["content"]]
+["content","DataDisplay",{"icon":"resources/base/media/ic_weather_monochrome.svg","value":{"path":"/data/weather/current/temperatureText"},"supportingText":{"path":"/data/weather/current/condition"}}]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+```

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "batch-postprocess-execution-v2",
+  "executionId": "exec_7bb2da061bb4",
+  "runId": "batch_20261110_200000_7e5a1b2c",
+  "status": "partial",
+  "createdAt": "2026-11-11T12:21:41.729979Z",
+  "updatedAt": "2026-11-11T12:21:52.604059Z",
+  "startedAt": "2026-11-11T12:21:41.790998Z",
+  "finishedAt": "2026-11-11T12:21:52.605557Z",
+  "plugins": [
+    {
+      "id": "target-effect",
+      "name": "目标效果评测（倒计时）",
+      "version": "1.3.0",
+      "apiVersion": "batch-postprocess-v2",
+      "status": "partial",
+      "config": {
+        "rendererBaseUrl": "http://127.0.0.1:8890/debug"
+      },
+      "sampleCount": 6,
+      "counts": {
+        "failed": 6,
+        "skipped": 0,
+        "partial": 0,
+        "success": 0
+      },
+      "datasetResult": {
+        "status": "success",
+        "summary": "目标效果评测完成：6 个样本，通过 0，待复核 0，失败 6",
+        "facts": {
+          "total": 6,
+          "passed": 0,
+          "partial": 0,
+          "failed": 6,
+          "passRate": 77.6,
+          "averageScore": 81.5,
+          "averageTarget": null,
+          "averageVisibility": 37.5,
+          "averageSpec": 23.6,
+          "specApplicable": 6,
+          "specExcluded": 0
+        },
+        "artifactCount": 5
+      },
+      "progress": {
+        "phase": "done",
+        "completed": 1,
+        "total": 1,
+        "message": "后处理插件已完成"
+      }
+    }
+  ],
+  "error": ""
+}

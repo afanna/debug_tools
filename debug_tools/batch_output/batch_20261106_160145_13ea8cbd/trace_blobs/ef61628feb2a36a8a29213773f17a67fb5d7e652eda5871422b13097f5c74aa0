@@ -1,0 +1,51 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/weather/location/prefectureName",
+      "priority": "must",
+      "requirement": "展示当前城市名称，作为天气信息所属地点"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "展示当前温度，已含℃单位"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "展示当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/airQuality",
+      "priority": "should",
+      "requirement": "展示当前空气质量等级"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/humidityPercent",
+      "priority": "should",
+      "requirement": "展示当前湿度，需追加%单位"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-content"
+  ]
+}

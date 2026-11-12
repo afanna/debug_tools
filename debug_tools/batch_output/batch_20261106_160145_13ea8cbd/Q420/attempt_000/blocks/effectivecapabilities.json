@@ -1,0 +1,11 @@
+{
+  "data": [
+    "GetHealthAndSportSummary",
+    "GetPhoneBatteryInfo"
+  ],
+  "event": [],
+  "asset": [
+    "asset.ic_charge",
+    "asset.ic_sportsHealth_bule"
+  ]
+}

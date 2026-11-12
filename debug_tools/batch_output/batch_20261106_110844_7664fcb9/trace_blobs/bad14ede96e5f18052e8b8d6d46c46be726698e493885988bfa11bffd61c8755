@@ -1,0 +1,100 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate"
+      ],
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "uri": ""
+        },
+        "call": "clickToDeeplink"
+      },
+      "capabilityId": "event.open.clock.alarm"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/time"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "com.huawei.hmos.clock.phone",
+            "bundleName": "com.huawei.hmos.clock",
+            "intentName": "Clock",
+            "uri": ""
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.clock.alarm"
+      }
+    ],
+    "description": "当前时间日期速览",
+    "size": "2x2",
+    "title": "时间日期",
+    "uid": "batch-7664fcb9-00052-000",
+    "userQuery": "做一张桌面小组件卡片，显示当前时间和日期，点击打开闹钟应用。"
+  },
+  "description": "当前时间日期速览",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261031072042913"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMM-AL10 7.0.0.111",
+  "session": {
+    "interactionId": "Q391-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x2",
+  "title": "时间日期",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00052-000"
+    }
+  },
+  "userQuery": "做一张桌面小组件卡片，显示当前时间和日期，点击打开闹钟应用。",
+  "utterance": {
+    "original": "做一张桌面小组件卡片，显示当前时间和日期，点击打开闹钟应用。",
+    "type": "text"
+  },
+  "version": "1.0"
+}

@@ -1,0 +1,32 @@
+{
+  "title": "家庭简报",
+  "description": "展示当前时间、手机电量、近期日程和备忘录待办的家庭简报卡片",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/currentTime"
+    },
+    {
+      "capabilityId": "GetPhoneBatteryInfo",
+      "arguments": {},
+      "writeResultTo": "/data/phoneBattery"
+    },
+    {
+      "capabilityId": "GetCalendarEvents",
+      "arguments": {},
+      "writeResultTo": "/data/calendar"
+    },
+    {
+      "capabilityId": "GetMemoData",
+      "arguments": {},
+      "writeResultTo": "/data/memo"
+    }
+  ]
+}

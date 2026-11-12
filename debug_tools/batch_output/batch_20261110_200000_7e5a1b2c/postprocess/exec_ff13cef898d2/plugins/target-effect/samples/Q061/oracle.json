@@ -1,0 +1,26 @@
+{
+  "sampleId": "Q061",
+  "scenario": "lunar_once",
+  "timezone": "Asia/Shanghai",
+  "referenceDate": "2026-11-03",
+  "targetDate": null,
+  "expectedDays": null,
+  "expectedRelationText": null,
+  "expectedTargetDateText": null,
+  "writeResultTo": "/data/dateCounter",
+  "fields": [
+    "/days",
+    "/relationText",
+    "/targetDateText"
+  ],
+  "arguments": {
+    "targetDate": "2025-06-01",
+    "calendar": "lunar",
+    "isLeapMonth": true
+  },
+  "gate": false,
+  "provenance": {},
+  "notes": [
+    "农历日期需日历库或人工确认，本次不自动判定目标日"
+  ]
+}

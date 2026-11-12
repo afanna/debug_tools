@@ -1,0 +1,88 @@
+{
+  "cardSpec": {
+    "dataBindings": [
+      {
+        "arguments": {
+          "targetDate": "2027-06-21"
+        },
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown"
+      }
+    ],
+    "description": "距离目标日期的天数",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "suggestSize": "2x2",
+    "title": "倒计时"
+  },
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.ic_calender"
+    ],
+    "data": [
+      "GetCountdownDays"
+    ],
+    "event": []
+  },
+  "generationPlan": {
+    "candidateAssetIds": [
+      "asset.ic_calender"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "targetDate": "2027-06-21"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown"
+      }
+    ],
+    "candidateEventCandidates": []
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"content\"],\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"center\",\"justifyContent\":\"center\",\"padding\":12},\"itemMargin\":0},{\"id\":\"content\",\"component\":\"Column\",\"children\":[\"content_label\",\"content_value\",\"content_supporting\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":114,\"alignItems\":\"center\",\"justifyContent\":\"center\",\"flexShrink\":1}},{\"id\":\"content_label\",\"component\":\"Text\",\"content\":\"倒计时\",\"styles\":{\"width\":\"matchParent\",\"height\":18,\"fontSize\":12,\"fontWeight\":500,\"textAlign\":\"center\",\"maxLines\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"content_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/countdown/countdownDays} }}\",\"styles\":{\"height\":60,\"fontSize\":48,\"fontWeight\":700,\"textAlign\":\"center\",\"maxLines\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"content_supporting\",\"component\":\"Text\",\"content\":\"天\",\"styles\":{\"height\":20,\"fontSize\":14,\"fontWeight\":400,\"textAlign\":\"center\",\"maxLines\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"countdown\":{\"countdownDays\":30}}}}}",
+  "meta": {
+    "apiVersion": "v1",
+    "artifactId": "8fff284f-78d0-4261-b013-1a344b7d5148",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "cardSpecVersion": "card-spec-v1",
+    "createdAt": 1793952382645,
+    "dslProtocolVersion": "v0.9",
+    "generationMode": "create",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "skillVersion": "skill-widget-v1",
+    "taskSpecVersion": "task-spec-v1"
+  },
+  "removedCapabilities": [],
+  "schemaVersion": "widget-artifact-v2",
+  "taskSpec": {
+    "appVersion": "11.7.8.342",
+    "assetCandidates": [
+      {
+        "description": "样式：黄色到橙色渐变的日历图标，带顶部装订环、分隔栏与日期圆点，原始尺寸为 20×20，SVG 矢量图（保留原色，禁止染色）需保留原始渐变配色，禁止染色；适用：日程概览、近期日历事项或日期倒计时卡片，可结合 GetCalendarEvents 展示日程，也可结合 GetCountdownDays 展示目标日期倒计时，并可作为 event.viewCalendarEvent 的辅助入口图标。图标不表示存在日程、日程已完成或倒计时具体天数。",
+        "id": "asset.ic_calender",
+        "src": "resources/base/media/ic_calender.svg"
+      }
+    ],
+    "dataModelSchema": {
+      "data": {
+        "countdown": {
+          "countdownDays": {
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30,
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "eventCandidates": [],
+    "size": "2x2",
+    "userQuery": "给我在桌面设一个能看见倒计时的卡片\n\n本轮卡片静态内容（用作展示的外部事实）：\n目标日期为2027年6月21日"
+  }
+}

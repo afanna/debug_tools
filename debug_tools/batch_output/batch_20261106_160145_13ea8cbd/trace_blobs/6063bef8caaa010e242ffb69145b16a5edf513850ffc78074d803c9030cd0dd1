@@ -1,0 +1,38 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "earphone": {
+        "batteryLevel": {
+          "description": "耳机盒（或整体）当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”。",
+          "sampleValue": 80,
+          "type": "integer"
+        },
+        "chargingStatusDesc": {
+          "description": "耳机盒（或整体）当前的充电状态中文语义描述，'充电中' 或 '未充电'。",
+          "sampleValue": "未充电",
+          "type": "string"
+        },
+        "earphoneName": {
+          "description": "耳机的设备广播名称，如果未连接则返回'未连接耳机'。如: 'FreeBuds Pro 3'。",
+          "sampleValue": "示例耳机",
+          "type": "string"
+        },
+        "leftBatteryLevel": {
+          "description": "左耳机当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”；未连接时为 0。若直接用于文本展示，必须在数值后追加“%”。",
+          "sampleValue": 76,
+          "type": "integer"
+        },
+        "rightBatteryLevel": {
+          "description": "右耳机当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”；未连接时为 0。若直接用于文本展示，必须在数值后追加“%”。",
+          "sampleValue": 78,
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "eventCandidates": [],
+  "size": "2x2",
+  "userQuery": "做一张耳机小组件卡片，显示蓝牙耳机的名称、耳机盒电量、左右耳电量及充电状态。"
+}

@@ -1,0 +1,21 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "districtName": "宝山区",
+        "forecastDays": 3,
+        "prefectureName": "上海市"
+      },
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "description": "当前天气与未来预报",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x4",
+  "title": "天气"
+}

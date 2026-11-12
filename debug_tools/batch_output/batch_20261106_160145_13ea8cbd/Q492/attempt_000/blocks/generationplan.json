@@ -1,0 +1,34 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetMemoData",
+      "arguments": {},
+      "writeResultTo": "/data/memo",
+      "candidateOutputFields": [
+        "/todoTotalCount",
+        "/todoCompletedCount",
+        "/todoPendingCount"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.viewNote",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "abilityName": "MainAbility",
+          "bundleName": "com.huawei.hmos.notepad",
+          "intentName": "ViewNote",
+          "params": {
+            "launchSource": "1",
+            "launchType": "0"
+          }
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.checkmark_calendar_fill"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "target-effect",
+  "name": "目标效果评测（倒计时）",
+  "version": "1.0.0",
+  "apiVersion": "batch-postprocess-v2",
+  "status": "failed",
+  "config": {
+    "rendererBaseUrl": "http://127.0.0.1:8890/debug",
+    "captureScale": 3,
+    "captureTimeoutSeconds": 1800
+  },
+  "sampleCount": 6,
+  "counts": {
+    "success": 0,
+    "failed": 6,
+    "partial": 0,
+    "skipped": 0
+  },
+  "datasetResult": {
+    "status": "failed",
+    "summary": "ValueError: 插件评分卡图片路径无效",
+    "facts": {},
+    "artifactCount": 0
+  },
+  "progress": {
+    "phase": "done",
+    "completed": 1,
+    "total": 1,
+    "message": "ValueError: 插件评分卡图片路径无效"
+  },
+  "error": "ValueError: 插件评分卡图片路径无效"
+}

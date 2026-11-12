@@ -1,0 +1,56 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "语义布局不符合合同：节点 details：details 槽必须使用 TextBlock、TopTextBottomValue、SummaryList 或 EventCard。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "layout_structure",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "c8245b9fbda8c4cc",
+      "instruction": "只修复错误消息定位的 Layout、Region 或 Group 节点：严格按消息给出的合同调整该节点直属 children 的数量、顺序和角色，并补齐或替换错误角色。Group 整体只占一个直属角色；title-count 只占标题角色；title-content-action 的动作角色必须使用 PillButton；W-content-side-slots 的固定动作槽使用 CardButton。保持其它区域、事实、绑定、Action 及已经合法的 layout/variant 不变，不修改语义展开后的 Row/Column 几何。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "layout_structure"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "0c80c2f68c861d2b"
+      },
+      "noProgress": false,
+      "repairStrategy": "semantic_layout_contract_repair",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/time/currentDate\"},\"icon\":\"resources/base/media/emoji_time.png\",\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/time/dayOfWeek\"},\"fontSize\":18}]\n[\"details\",\"SecondaryBody\",{\"items\":[{\"label\":\"农历\",\"value\":{\"path\":\"/data/time/lunarDate\"}}],\"fontSize\":14}]\n[\"/data/time/currentDate\",\"示例\"]\n[\"/data/time/dayOfWeek\",\"示例\"]\n[\"/data/time/lunarDate\",\"示例\"]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "details: TextBlock.items requires 2 to 4 entries.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 2,
+    "selectedRepairStrategy": {
+      "category": "component_contract",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "26011abae9e5b5e1",
+      "instruction": "只修复错误组件中被定位的 Props、绑定或格式，并复查直接父容器；保留该组件其它合法属性、动态事实、事件和视觉能力，不得通过删除未报错属性、移除视觉变体或更换为弱语义组件来绕过校验。",
+      "noProgress": false,
+      "repairStrategy": "component_contract_repair",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "component"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/time/currentDate\"},\"icon\":\"resources/base/media/emoji_time.png\",\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/time/dayOfWeek\"},\"fontSize\":18}]\n[\"details\",\"TextBlock\",{\"items\":[{\"label\":\"农历\",\"value\":{\"path\":\"/data/time/lunarDate\"}}]}]\n[\"/data/time/currentDate\",\"示例\"]\n[\"/data/time/dayOfWeek\",\"示例\"]\n[\"/data/time/lunarDate\",\"示例\"]"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "id": "Q358",
+  "fileName": "Q358.json",
+  "title": "电池状态",
+  "query": "创建一张电池状态卡片，显示当前电量、充电状态、电池温度、电流、电压等电池信息。",
+  "size": "2x2",
+  "sequence": 33,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4469.92,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4463.76,
+  "uid": "batch-7664fcb9-00033-000",
+  "finalAttempt": 0
+}

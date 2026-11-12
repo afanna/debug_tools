@@ -1,0 +1,62 @@
+{
+  "requestId": "batch-13ea8cbd&Q423-000",
+  "status": "success",
+  "errorCode": "",
+  "error": {},
+  "data": {
+    "status": "success",
+    "artifactUrl": "https://obs.todo.local/widget/artifact_0bf541db-2051-468d-811a-53819e2a477c.md",
+    "artifactDigest": "sha256:1d14b6549a6a88f7d03cf8f64ad44d1c38d28986dfe24dcf0e8da5d52d5d6c92",
+    "suggestSize": "2x2",
+    "removedCapabilities": [],
+    "errorCode": "",
+    "effectiveCapabilities": {
+      "data": [
+        "GetHealthAndSportSummary"
+      ],
+      "event": [
+        {
+          "id": "event.open.health.sport",
+          "description": "打开华为运动健康应用的锻炼Tab页。",
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          }
+        }
+      ],
+      "asset": []
+    },
+    "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。"
+  },
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q423-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"type\":\"result\",\"tool\":\"generateWidgetCardCompactDsl\",\"operation\":\"generateWidgetCardCompactDsl\",\"requestId\":\"batch-13ea8cbd&Q423-000\",\"data\":{\"status\":\"success\",\"artifactUrl\":\"https://obs.todo.local/widget/artifact_0bf541db-2051-468d-811a-53819e2a477c.md\",\"artifactDigest\":\"sha256:1d14b6549a6a88f7d03cf8f64ad44d1c38d28986dfe24dcf0e8da5d52d5d6c92\",\"suggestSize\":\"2x2\",\"removedCapabilities\":[],\"errorCode\":\"\",\"effectiveCapabilities\":{\"data\":[\"GetHealthAndSportSummary\"],\"event\":[{\"id\":\"event.open.health.sport\",\"description\":\"打开华为运动健康应用的锻炼Tab页。\",\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Health\",\"uri\":\"huaweischeme://healthapp/home/sport?sportType=2\"}}],\"asset\":[]},\"agentInstruction\":\"已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。\"},\"status\":\"success\",\"errorCode\":\"\",\"error\":{}}",
+          "streamingTextId": "batch-13ea8cbd&Q423-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "TableText"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "TableText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期描述"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info"
+  ]
+}

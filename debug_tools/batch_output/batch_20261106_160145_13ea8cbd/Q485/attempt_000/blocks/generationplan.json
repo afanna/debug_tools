@@ -1,0 +1,35 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetMemoData",
+      "arguments": {},
+      "writeResultTo": "/data/memo",
+      "candidateOutputFields": [
+        "/notes/0/title",
+        "/notes/0/content",
+        "/notes/1/title",
+        "/notes/1/content"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.viewNote",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "abilityName": "MainAbility",
+          "bundleName": "com.huawei.hmos.notepad",
+          "intentName": "ViewNote",
+          "params": {
+            "launchSource": "1",
+            "launchType": "0"
+          }
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.bell_fill"
+  ]
+}

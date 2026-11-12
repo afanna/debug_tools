@@ -1,0 +1,2085 @@
+{
+  "runId": "batch_20261106_105734_0360acc5",
+  "taskId": "task_8b2e27ff6ccf",
+  "status": "completed",
+  "createdAt": "2026-11-06T02:57:34.644851Z",
+  "startedAt": "2026-11-06T02:57:34.691086Z",
+  "finishedAt": "2026-11-06T02:58:07.473735Z",
+  "queuePosition": null,
+  "backendMode": "managed",
+  "maxRetries": 0,
+  "retryConfigSnapshot": {
+    "interfaceRetryEnabled": true,
+    "interfaceExtraRetries": 1,
+    "qualityRepairEnabled": true,
+    "qualityRepairMaxAttempts": 5,
+    "singleStepGenerationFallbackEnabled": false,
+    "singleStepWidgetEditEnabled": true,
+    "dropPlanFactValidationEnabled": false,
+    "photoBackgroundThemeEnabled": false,
+    "subjectlessWideThemeEnabled": false,
+    "squareMusicPhotoExpansionEnabled": false,
+    "squarePhotoExpansionEnabled": false,
+    "deepseekOfficialHttpUseSdkEnabled": true,
+    "modelFailureRetryEnabled": true,
+    "modelFailureExtraRetries": 1,
+    "fallbackModelFailureExtraRetries": 1,
+    "fallbackEnabled": true,
+    "argumentRepairEnabled": false,
+    "argumentRepairMaxAttempts": 2,
+    "argumentRepairReminderCount": 1
+  },
+  "serviceStatus": "managed_running",
+  "total": 16,
+  "completed": 16,
+  "success": 13,
+  "degraded": 1,
+  "failed": 2,
+  "cancelled": 0,
+  "effectiveServiceConfig": {
+    "enable_daily_usage_limit": false,
+    "daily_usage_limit": 20,
+    "daily_usage_uid_whitelist": "",
+    "daily_usage_limit_exceeded_message": "今日 AI 卡片生成次数已达上限，请明天再尝试。",
+    "daily_usage_limit_unavailable_message": "本次卡片生成失败，请稍后重试。",
+    "daily_usage_slb": "",
+    "daily_usage_api_snapshot_path": "/genui-agent/v1/daily-usage/snapshot",
+    "daily_usage_api_record_path": "/genui-agent/v1/daily-usage/record-success",
+    "daily_usage_api_timeout_seconds": 3.0,
+    "enable_photo_background_theme": false,
+    "enable_subjectless_wide_theme": false,
+    "enable_square_music_photo_expansion": false,
+    "enable_square_photo_expansion": false,
+    "hag_slb_url": "",
+    "osms_prepare_url": "",
+    "osms_complete_url": "",
+    "osms_query_url": "",
+    "osms_delete_url": "",
+    "ids_query_url": "http://{{ip}}:{{port}}/hiai/ids/databus/v1/kvcommondata/query",
+    "ids_flow_control_id": "",
+    "ids_request_retry_budget_seconds": 10.0,
+    "ids_request_retry_initial_delay_seconds": 0.5,
+    "ids_request_retry_backoff_multiplier": 2.0,
+    "sts_server": "",
+    "obs_use_edge": false,
+    "obs_expire_time": 3600,
+    "asset_src_url_mapping": {},
+    "workspace_root": "D:/WorkSpace/CreateMyCard/widget_service/cloud",
+    "enable_artifact_validation": true,
+    "enable_a2ui_model_mock": false,
+    "enable_ids_mock": true,
+    "ai_widget_data_huashan_enable": false,
+    "enable_default_capability_registry_fallback": true,
+    "enable_default_protocol_profile_fallback": true,
+    "enable_validation_failure_retry": true,
+    "enable_single_step_generation_fallback": false,
+    "enable_single_step_widget_edit": true,
+    "enable_widget_edit": true,
+    "enable_drop_plan_fact_validation": false,
+    "enable_static_content_generation_policy": true,
+    "static_content_max_input_chars": 16000,
+    "static_content_max_source_chars": 2000,
+    "static_content_max_source_references": 72,
+    "static_content_max_source_positions": 512,
+    "static_content_max_output_chars": 32000,
+    "enable_artifact_download_mock": true,
+    "enable_widget_directive_commands": false,
+    "enable_compact_dsl_argument_repair_fallback": false,
+    "compact_dsl_argument_repair_reminder_count": 1,
+    "compact_dsl_argument_repair_max_attempts": 2,
+    "enable_compact_dsl_interface_retry": true,
+    "enable_design_compact_few_shots": true,
+    "enable_design_compact_few_shot_selection": false,
+    "enable_design_compact_runtime_prompt_context": false,
+    "enable_design_compact_deterministic_repair": true,
+    "compact_dsl_interface_retry_count": 1,
+    "enable_openai_fallback": true,
+    "enable_sensitive_log_fields": true,
+    "enable_generation_trace_recording": true,
+    "generation_trace_root": "workspace/traces",
+    "enable_card_template": false,
+    "model_appid": "",
+    "model_url": "",
+    "model_bid": "",
+    "model_flow_id": "",
+    "system_prompt": "@prompt:../data/protocol_profiles/design-compact-dsl-fusion/prompt_source#create",
+    "edit_system_prompt": "@prompt:../data/protocol_profiles/design-compact-dsl-fusion/prompt_source#edit",
+    "repair_system_prompt": "@prompt:../data/protocol_profiles/design-compact-dsl-fusion/prompt_source#repair",
+    "a2ui_form_model_backend": "mep",
+    "design_compact_model_backend": "openai",
+    "validation_failure_max_repair_attempts": 5,
+    "model_max_concurrency": 20,
+    "model_queue_timeout_seconds": 120,
+    "model_request_timeout_seconds": 120,
+    "model_prompt_log_preview_chars": 30,
+    "openai_master_client": "deepseek_official_http",
+    "openai_fallback_client": "llmclient",
+    "deepseek_official_http_url": "https://api.deepseek.com/chat/completions",
+    "deepseek_official_http_use_sdk": true,
+    "deepseek_official_http_model": "deepseek-flash",
+    "deepseek_official_http_temperature": 0.7,
+    "deepseek_official_http_top_p": 0.9,
+    "deepseek_official_http_max_tokens": 8192,
+    "deepseek_official_http_enable_thinking": false,
+    "aliyun_bailian_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "aliyun_bailian_model": "deepseek-v4.1-flash",
+    "aliyun_bailian_temperature": 0.7,
+    "aliyun_bailian_top_p": 0.9,
+    "aliyun_bailian_max_tokens": 8192,
+    "aliyun_bailian_enable_thinking": false,
+    "deepseek_platform_ws_url": "",
+    "deepseek_platform_sender": "superagent",
+    "deepseek_platform_model_select": false,
+    "deepseek_platform_model_name": "AGENT-DEEPSEEK-V4-FLASH",
+    "enable_model_failure_retry": true,
+    "model_failure_max_retry_attempts": 1,
+    "fallback_model_failure_max_retry_attempts": 1,
+    "model_failure_retry_initial_delay_seconds": 1.0,
+    "model_failure_retry_max_delay_seconds": 30.0,
+    "model_failure_retry_backoff_multiplier": 2.0,
+    "model_failure_retry_jitter_ratio": 0.2,
+    "deepseek_ws_url": "",
+    "deepseek_http_url": "https://api.deepseek.com/chat/completions",
+    "deepseek_model": "deepseek-ai/DeepSeek-V4-Flash",
+    "deepseek_request_id": "genui_ui",
+    "deepseek_temperature": 0.7,
+    "deepseek_top_p": 0.9,
+    "deepseek_top_k": 1,
+    "deepseek_max_tokens": 128000,
+    "deepseek_enable_thinking": false,
+    "deepseek_include_usage": true,
+    "deepseek_debug_usage": true,
+    "deepseek_recv_timeout": 120,
+    "server_host": "127.0.0.1",
+    "server_port": 3077
+  },
+  "configWarnings": [],
+  "serviceOverrides": {},
+  "serviceLogPath": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\service_logs\\service_e55af5b4ec5b.log",
+  "averageElapsedMs": 5362.74,
+  "traceWarnings": 0,
+  "summary": {
+    "runId": "batch_20261106_105734_0360acc5",
+    "status": "completed",
+    "startedAt": "2026-11-06T02:57:38.037274Z",
+    "finishedAt": "2026-11-06T02:58:07.473735Z",
+    "endpoint": "ws://127.0.0.1:3077/api/v1/ws/tools/generateWidgetCardCompactDsl",
+    "concurrency": 4,
+    "maxRetries": 0,
+    "timeoutSeconds": 300.0,
+    "taskId": "task_8b2e27ff6ccf",
+    "datasetId": "online_updated",
+    "datasetVersion": {
+      "current_version": "v8",
+      "update_date": "2026-11-05",
+      "history_versions": [
+        {
+          "update_date": "2026-10-17",
+          "commits": [
+            "2c5f8a62126a6929b44bdb62ce726c2d422136b7"
+          ],
+          "changes": [
+            "新增 119 条现网更新请求，保留原样本编号与请求结构。"
+          ],
+          "version": "v1"
+        },
+        {
+          "update_date": "2026-10-21",
+          "commits": [
+            "50519e572ce60142d8bb83fca762b810d4e0d104",
+            "2ac18c452ebd306444049800de1a69c22817f965",
+            "9f17f759b2915d58e684b5b58f324a266dc0e8e3",
+            "77e3bed646cfc44c41f129456ec5d3d2ce6520e8"
+          ],
+          "changes": [
+            "跟进 50519e57、2ac18c45 的图标下架与 9f17f759、77e3bed6 的共享素材/主题更新。",
+            "识图核对：气球用于节日倒计时改为时间、生日改为蛋糕；头戴耳机改为蓝牙入耳耳机；其余保留日历、睡眠、电池叶片、蓝牙、音乐和排行语义。",
+            "抖音品牌图标已下架，保留原使用时长诉求，采用已有沙漏，避免通用图标冒充品牌；候选素材按首次出现顺序去重。",
+            "Q002: asset.icon_tiktok → asset.hourglass_fill",
+            "Q004: asset.emoji_calendar → asset.calendar_fill",
+            "Q005: asset.emoji_activity → asset.emoji_time",
+            "Q006: asset.emoji_sleep → asset.moon_z_fill_1",
+            "Q007: asset.emoji_sleep → asset.moon_z_fill_1",
+            "Q008: asset.emoji_sleep → asset.moon_z_fill_1",
+            "Q011: asset.emoji_activity → asset.emoji_time",
+            "Q015: asset.ic_battery_leaf_color → asset.battery_leaf_fill",
+            "Q017: asset.ic_blue_teeth_color → asset.ic_Bluetooth",
+            "Q017: asset.emoji_music_2 → asset.music_fill",
+            "Q020: asset.emoji_sleep → asset.moon_z_fill_1",
+            "Q021: asset.emoji_sleep → asset.moon_z_fill_1",
+            "Q023: asset.ic_battery_leaf_color → asset.battery_leaf_fill",
+            "Q025: asset.ic_battery_leaf_color → asset.battery_leaf_fill",
+            "Q028: asset.emoji_calendar → asset.calendar_fill",
+            "Q029: asset.ic_battery_leaf_color → asset.battery_leaf_fill",
+            "Q031: asset.emoji_calendar → asset.calendar_fill",
+            "Q033: asset.ic_battery_leaf_color → asset.battery_leaf_fill",
+            "Q037: asset.emoji_earphone → asset.icon_earphone",
+            "Q038: asset.emoji_earphone → asset.icon_earphone",
+            "Q053: asset.ic_battery_leaf_color → asset.battery_leaf_fill",
+            "Q058: asset.ic_ranking2 → asset.ic_ranking",
+            "Q061: asset.ic_battery_leaf_color → asset.battery_leaf_fill",
+            "Q062: asset.ic_blue_teeth_color → asset.ic_Bluetooth",
+            "Q062: asset.emoji_music_2 → asset.music_fill",
+            "Q068: asset.emoji_earphone → asset.icon_earphone",
+            "Q073: asset.emoji_sleep → asset.moon_z_fill_1",
+            "Q075: asset.emoji_sleep → asset.moon_z_fill_1",
+            "Q077: asset.ic_battery_leaf_color → asset.battery_leaf_fill",
+            "Q078: asset.ic_battery_leaf_color → asset.battery_leaf_fill",
+            "Q079: asset.ic_battery_leaf_color → asset.battery_leaf_fill",
+            "Q096: asset.ic_blue_teeth_color → asset.ic_Bluetooth",
+            "Q096: asset.emoji_music_2 → asset.music_fill",
+            "Q103: asset.emoji_sleep → asset.moon_z_fill_1",
+            "Q119: asset.emoji_activity → asset.cake_fill"
+          ],
+          "version": "v2"
+        },
+        {
+          "version": "v3",
+          "update_date": "2026-10-21",
+          "commits": [],
+          "changes": [
+            "删除 Q036、Q112、Q113、Q115、Q117，样本总数从 119 调整为 114。",
+            "同步数据来源、参数和展示字段，共 42 条：Q006、Q007、Q008、Q009、Q010、Q013、Q020、Q021、Q022、Q027、Q032、Q034、Q037、Q038、Q039、Q040、Q041、Q042、Q043、Q044、Q047、Q048、Q055、Q057、Q071、Q072、Q073、Q075、Q076、Q080、Q081、Q082、Q089、Q093、Q095、Q098、Q099、Q103、Q110、Q118、Q121、Q124",
+            "图标并集新增候选，共 20 条：Q004、Q005、Q006、Q007、Q008、Q011、Q017、Q020、Q021、Q028、Q031、Q037、Q038、Q062、Q068、Q073、Q075、Q096、Q103、Q119",
+            "同步外层同名字段，共 94 条；包括素材、数据、事件及 Q049 用户需求，原始 utterance 记录保留。",
+            "Q004：候选素材并集新增 asset.emoji_calendar2",
+            "Q005：候选素材并集新增 asset.cake_fill",
+            "Q006：候选素材并集新增 asset.emoji_z",
+            "Q007：候选素材并集新增 asset.emoji_z",
+            "Q008：候选素材并集新增 asset.emoji_z",
+            "Q011：候选素材并集新增 asset.cake_fill",
+            "Q017：候选素材并集新增 asset.emoji_music",
+            "Q020：候选素材并集新增 asset.emoji_z",
+            "Q021：候选素材并集新增 asset.emoji_z",
+            "Q028：候选素材并集新增 asset.emoji_calendar2",
+            "Q031：候选素材并集新增 asset.emoji_calendar2",
+            "Q037：候选素材并集新增 asset.emoji_earbud_case_black",
+            "Q038：候选素材并集新增 asset.emoji_earbud_case_black",
+            "Q062：候选素材并集新增 asset.emoji_music",
+            "Q068：候选素材并集新增 asset.emoji_bluetooth_earbuds_black",
+            "Q073：候选素材并集新增 asset.emoji_z",
+            "Q075：候选素材并集新增 asset.emoji_z",
+            "Q096：候选素材并集新增 asset.emoji_music",
+            "Q103：候选素材并集新增 asset.emoji_z",
+            "Q119：候选素材并集新增 asset.ic_calender"
+          ]
+        },
+        {
+          "version": "v4",
+          "update_date": "2026-10-26",
+          "commits": [
+            "bb9203345311927ec9baa8718eb69af700e177ac"
+          ],
+          "changes": [
+            "新增 Q125-Q156 共 32 条现网请求样本，样本总数从 114 调整为 146。",
+            "补齐拨号事件 mock 号码 1388888888，共 19 条：Q018、Q030、Q047、Q052、Q054、Q055、Q057、Q076、Q080、Q082、Q088、Q122、Q124、Q131、Q139、Q142、Q145、Q147、Q155；原 phoneNumber 为空串，拨号动作在批跑与渲染时无法验证。",
+            "修正 size 与用户 query 冲突，共 4 条：Q037、Q038、Q039、Q137 由 2x2 调整为 2x4，与 query 中明确声明的 2x4 规格对齐。",
+            "content 与外层同名字段同步修改，保持两层取值一致。"
+          ]
+        },
+        {
+          "version": "v5",
+          "update_date": "2026-10-28",
+          "commits": [],
+          "changes": [
+            "新增 Q157-Q284 共 128 条现网请求样本，样本总数从 146 调整为 274。",
+            "补齐 22 条历史样本的金样本渲染结果（A2UI_DSL、Compact_DSL、Screenshot）：Q001、Q002、Q004、Q019、Q022、Q026、Q045、Q049、Q051、Q067、Q069、Q079、Q081、Q087、Q110、Q127、Q143、Q148、Q149、Q151、Q153、Q155。",
+            "Q175、Q177、Q183、Q216、Q221、Q223、Q248、Q249、Q282：asset.ic_weather_color 未在当前能力快照注册，改为 asset.ic_weather_monochrome，内容层与外层素材列表同步替换。"
+          ]
+        },
+        {
+          "version": "v6",
+          "update_date": "2026-11-01",
+          "commits": [],
+          "changes": [
+            "新增 Q285-Q412 共 128 条现网请求样本，样本总数从 274 调整为 402。",
+            "补齐 36 条在线样本的金样本产物（A2UI_DSL、Compact_DSL、Screenshot）：Q042、Q050、Q108、Q126、Q146、Q152、Q154、Q156、Q160、Q164、Q168、Q172、Q183、Q188、Q193、Q198、Q200、Q203、Q205、Q210、Q217、Q224、Q229、Q230、Q231、Q238、Q250、Q251、Q255、Q256、Q257、Q265、Q267、Q269、Q271、Q284。",
+            "Q160 按真实日期卡数据替换 A2UI/Compact 并重新渲染截图；Q271 补齐缺失的 A2UI/Compact/Screenshot。"
+          ]
+        },
+        {
+          "version": "v7",
+          "update_date": "2026-11-04",
+          "commits": [],
+          "changes": [
+            "修正 7 条现网样本的请求参数，样本总数保持 402，全部样本可通过请求校验与生成前置门禁。",
+            "Q175、Q212、Q271 的 candidateEventCandidates 按能力注册表 actionTemplate 补齐完整 action。",
+            "Q200、Q271 的 GetCurrentTime 与 GetMemoData 绑定补齐 writeResultTo，取值与金样本数据路径一致（/data/currentTime、/data/memo）。",
+            "Q211、Q276 的 GetCountdownDays 补齐必填 arguments.targetDate：Q211 取当前最近的未举办场次 2026-11-08（佛山），Q276 取需求给出的 2027-03-13。",
+            "Q254 的 sourceArtifactUrl 由外层包络移入 content，恢复编辑模式判定；该签名 URL 已于 2026-11-03 过期，编辑链路需现网重新导出后才能重放。"
+          ]
+        },
+        {
+          "update_date": "2026-11-05",
+          "commits": [],
+          "changes": [
+            "删除编辑样本 Q254：sourceArtifactUrl 签名已于 2026-11-03 过期，编辑链路无法离线复现，样本总数从 402 调整为 401。"
+          ],
+          "version": "v8"
+        }
+      ]
+    },
+    "backendMode": "managed",
+    "serviceStatus": "managed_running",
+    "interrupted": false,
+    "total": 16,
+    "completed": 16,
+    "success": 13,
+    "degraded": 1,
+    "failed": 2,
+    "cancelled": 0,
+    "averageElapsedMs": 5362.74,
+    "traceWarnings": 0,
+    "samples": [
+      {
+        "id": "Q126",
+        "fileName": "Q126.json",
+        "title": "今日天气",
+        "query": "生成一个天气卡片，包含今天的温度和是否下雨，背景是蓝色的",
+        "size": "2x2",
+        "sequence": 1,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 4422.04,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 75,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 4391.81,
+        "uid": "batch-0360acc5-00001-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q127",
+        "fileName": "Q127.json",
+        "title": "杭州西湖区天气",
+        "query": "帮我做个卡片，看杭州市西湖区现在是什么天气，点一下查看杭州天气详情。",
+        "size": "2x4",
+        "sequence": 2,
+        "status": "degraded",
+        "attemptCount": 1,
+        "elapsedMs": 10725.93,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 114,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 10020.36,
+        "uid": "batch-0360acc5-00002-000",
+        "generationMetrics": {
+          "firstDsl": "failed",
+          "requestSize": "2x4",
+          "firstRequestStatus": "degraded",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 2,
+          "modelPhysicalCalls": 5,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q133",
+        "fileName": "Q133.json",
+        "title": "运动天气卡片",
+        "query": "显示昨天的累计步数和今天的实时温度",
+        "size": "2x2",
+        "sequence": 3,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 5738.09,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 75,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 4995.03,
+        "uid": "batch-0360acc5-00003-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q142",
+        "fileName": "Q142.json",
+        "title": "实时天气",
+        "query": "生成一个实时观察的天气卡片，显示位置、实时温度、天气变化、空气质量等，并且可以一键拨打电话",
+        "size": "2x2",
+        "sequence": 4,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 5560.84,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 75,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 4782.63,
+        "uid": "batch-0360acc5-00004-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q144",
+        "fileName": "Q144.json",
+        "title": "空气质量卡片",
+        "query": "生成一个实时查看空气质量的卡片，显示当前空气质量等级和温度等信息",
+        "size": "2x2",
+        "sequence": 5,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 4294.01,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 75,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 4286.94,
+        "uid": "batch-0360acc5-00005-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q152",
+        "fileName": "Q152.json",
+        "title": "今日天气",
+        "query": "生成一个天气卡片，包含今天的温度和是否下雨，背景是绿色的",
+        "size": "2x2",
+        "sequence": 6,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 4099.9,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 75,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 4080.62,
+        "uid": "batch-0360acc5-00006-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q192",
+        "fileName": "Q192.json",
+        "title": "新年倒计时",
+        "query": "帮我生成一张新年卡片，展示距离2027年1月1日新年的倒计时天数。\n\n本轮卡片静态内容（用作展示的外部事实）：\n距离2027年1月1日新年倒计时",
+        "size": "2x2",
+        "sequence": 7,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 3921.07,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 96,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 3914.29,
+        "uid": "batch-0360acc5-00007-000",
+        "generationMetrics": {
+          "firstDsl": "failed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 1,
+          "modelPhysicalCalls": 4,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q195",
+        "fileName": "Q195.json",
+        "title": "天气和日程",
+        "query": "生成天气和日程卡片",
+        "size": "2x4",
+        "sequence": 8,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 5372.71,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 74,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 5344.63,
+        "uid": "batch-0360acc5-00008-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x4",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q200",
+        "fileName": "Q200.json",
+        "title": "家庭简报",
+        "query": "家庭简报卡片，展示当前时间、手机电量、近期日程和备忘录待办信息",
+        "size": "2x4",
+        "sequence": 9,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 7174.86,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 94,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 7168.93,
+        "uid": "batch-0360acc5-00009-000",
+        "generationMetrics": {
+          "firstDsl": "failed",
+          "requestSize": "2x4",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 1,
+          "modelPhysicalCalls": 4,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q234",
+        "fileName": "Q234.json",
+        "title": "我的日程与健康天气卡片",
+        "query": "帮我生成一张桌面卡片，显示我的日程安排、睡眠时长，以及南京未来三天的降雨概率",
+        "size": "2x2",
+        "sequence": 10,
+        "status": "failed",
+        "attemptCount": 1,
+        "elapsedMs": 3038.91,
+        "errorCode": "",
+        "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+        "artifactAvailable": false,
+        "dslAvailable": false,
+        "traceStatus": "complete",
+        "traceRecordCount": 39,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 3032.88,
+        "uid": "batch-0360acc5-00010-000",
+        "generationMetrics": {
+          "firstDsl": "before_dsl_failure",
+          "requestSize": "2x2",
+          "firstRequestStatus": "failed",
+          "firstRequestDelivered": false,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 2,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": null,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q271",
+        "fileName": "Q271.json",
+        "title": "时间天气",
+        "query": "添加小组件，展示当前时间和北京天气。\n本轮卡片静态内容（用作展示的外部事实）：\n- 当前时间、日期、星期及农历信息\n- 北京市朝阳区当前天气及未来天气预报",
+        "size": "2x2",
+        "sequence": 11,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 5048.73,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 75,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 5041.81,
+        "uid": "batch-0360acc5-00011-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q298",
+        "fileName": "Q298.json",
+        "title": "血氧监测",
+        "query": "按照用户提供的图片风格设计一个血氧显示页面卡片，显示血氧数据。图片风格为：蓝色星空背景，显示日期、时间、心率、血氧、电量信息。",
+        "size": "2x2",
+        "sequence": 12,
+        "status": "failed",
+        "attemptCount": 1,
+        "elapsedMs": 3602.38,
+        "errorCode": "",
+        "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+        "artifactAvailable": false,
+        "dslAvailable": false,
+        "traceStatus": "complete",
+        "traceRecordCount": 39,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 3520.21,
+        "uid": "batch-0360acc5-00012-000",
+        "generationMetrics": {
+          "firstDsl": "before_dsl_failure",
+          "requestSize": "2x2",
+          "firstRequestStatus": "failed",
+          "firstRequestDelivered": false,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 2,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": null,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q322",
+        "fileName": "Q322.json",
+        "title": "小艺",
+        "query": "在手机桌面创建一个快捷入口卡片，点击可以打开手电筒",
+        "size": "2x2",
+        "sequence": 13,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 4286.49,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 75,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 4279.13,
+        "uid": "batch-0360acc5-00013-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x2",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q325",
+        "fileName": "Q325.json",
+        "title": "时钟天气",
+        "query": "我想在桌面上创建一个同时显示时间和天气的卡片，时间用大字体显示，天气显示当前温度和天气状况，整体风格与锁屏时钟一致，颜色搭配协调美观",
+        "size": "2x4",
+        "sequence": 14,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 5655.85,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 94,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 5649.07,
+        "uid": "batch-0360acc5-00014-000",
+        "generationMetrics": {
+          "firstDsl": "failed",
+          "requestSize": "2x4",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 1,
+          "modelPhysicalCalls": 4,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q351",
+        "fileName": "Q351.json",
+        "title": "桌面聚合卡片",
+        "query": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。",
+        "size": "2x4",
+        "sequence": 15,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 6799.1,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 74,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 6793.67,
+        "uid": "batch-0360acc5-00015-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x4",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 3,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      },
+      {
+        "id": "Q379",
+        "fileName": "Q379.json",
+        "title": "3D日历",
+        "query": "设置一个3D效果的日历桌面卡片，展示当前日期、星期、农历信息以及近期日程安排。本轮卡片静态内容（用作展示的外部事实）：",
+        "size": "2x4",
+        "sequence": 16,
+        "status": "success",
+        "attemptCount": 1,
+        "elapsedMs": 6062.95,
+        "errorCode": "",
+        "error": "",
+        "artifactAvailable": true,
+        "dslAvailable": true,
+        "traceStatus": "complete",
+        "traceRecordCount": 85,
+        "traceSchemaVersion": "generation-trace-v2",
+        "traceDurationMs": 6056.57,
+        "uid": "batch-0360acc5-00016-000",
+        "generationMetrics": {
+          "firstDsl": "passed",
+          "requestSize": "2x4",
+          "firstRequestStatus": "success",
+          "firstRequestDelivered": true,
+          "qualityRepairAttempts": 0,
+          "modelPhysicalCalls": 4,
+          "repairObservedAttempts": 1,
+          "modelObservedAttempts": 1,
+          "terminalAttempts": 1,
+          "missingInformationWarnings": 0,
+          "retryParameters": {
+            "interfaceRetryEnabled": [
+              true
+            ],
+            "interfaceExtraRetries": [
+              1
+            ],
+            "qualityRepairEnabled": [
+              true
+            ],
+            "qualityRepairMaxAttempts": [
+              5
+            ],
+            "singleStepGenerationFallbackEnabled": [
+              false
+            ],
+            "singleStepWidgetEditEnabled": [
+              true
+            ],
+            "dropPlanFactValidationEnabled": [
+              false
+            ],
+            "photoBackgroundThemeEnabled": [
+              false
+            ],
+            "subjectlessWideThemeEnabled": [
+              false
+            ],
+            "squareMusicPhotoExpansionEnabled": [
+              false
+            ],
+            "squarePhotoExpansionEnabled": [
+              false
+            ],
+            "deepseekOfficialHttpUseSdkEnabled": [
+              true
+            ],
+            "modelFailureRetryEnabled": [
+              true
+            ],
+            "modelFailureExtraRetries": [
+              1
+            ],
+            "fallbackModelFailureExtraRetries": [
+              1
+            ],
+            "fallbackEnabled": [
+              true
+            ],
+            "argumentRepairEnabled": [
+              false
+            ],
+            "argumentRepairMaxAttempts": [
+              2
+            ],
+            "argumentRepairReminderCount": [
+              1
+            ],
+            "interfaceMaxAttempts": [
+              2
+            ],
+            "planMaxAttempts": [
+              2
+            ]
+          }
+        }
+      }
+    ],
+    "generationMetrics": {
+      "version": 1,
+      "firstDslPassRate": {
+        "numerator": 10,
+        "denominator": 14,
+        "percent": 71.43
+      },
+      "firstRequestDeliveryRate": {
+        "numerator": 14,
+        "denominator": 16,
+        "percent": 87.5
+      },
+      "finalDeliveryRate": {
+        "numerator": 14,
+        "denominator": 16,
+        "percent": 87.5
+      },
+      "preDslFailed": 2,
+      "firstDslUnknown": 0,
+      "repairRescueRate": {
+        "numerator": 4,
+        "denominator": 4,
+        "percent": 100.0
+      },
+      "batchRetryRate": {
+        "numerator": 0,
+        "denominator": 16,
+        "percent": 0.0
+      },
+      "batchRetryRescueRate": {
+        "numerator": 0,
+        "denominator": 0,
+        "percent": null
+      },
+      "qualityRepairAttempts": 5,
+      "modelPhysicalCalls": 52,
+      "repairObservedAttempts": 16,
+      "modelObservedAttempts": 16,
+      "terminalAttempts": 16,
+      "coverageObserved": 14,
+      "coverageMissing": 0,
+      "p95ElapsedMs": 10725.93,
+      "bySize": [
+        {
+          "size": "2x2",
+          "firstDslPassRate": {
+            "numerator": 7,
+            "denominator": 8,
+            "percent": 87.5
+          },
+          "firstRequestDeliveryRate": {
+            "numerator": 8,
+            "denominator": 10,
+            "percent": 80.0
+          },
+          "finalDeliveryRate": {
+            "numerator": 8,
+            "denominator": 10,
+            "percent": 80.0
+          },
+          "preDslFailed": 2,
+          "firstDslUnknown": 0,
+          "repairRescueRate": {
+            "numerator": 1,
+            "denominator": 1,
+            "percent": 100.0
+          },
+          "batchRetryRate": {
+            "numerator": 0,
+            "denominator": 10,
+            "percent": 0.0
+          },
+          "batchRetryRescueRate": {
+            "numerator": 0,
+            "denominator": 0,
+            "percent": null
+          },
+          "qualityRepairAttempts": 1,
+          "modelPhysicalCalls": 29,
+          "repairObservedAttempts": 10,
+          "modelObservedAttempts": 10,
+          "terminalAttempts": 10,
+          "coverageObserved": 8,
+          "coverageMissing": 0,
+          "p95ElapsedMs": 5738.09
+        },
+        {
+          "size": "2x4",
+          "firstDslPassRate": {
+            "numerator": 3,
+            "denominator": 6,
+            "percent": 50.0
+          },
+          "firstRequestDeliveryRate": {
+            "numerator": 6,
+            "denominator": 6,
+            "percent": 100.0
+          },
+          "finalDeliveryRate": {
+            "numerator": 6,
+            "denominator": 6,
+            "percent": 100.0
+          },
+          "preDslFailed": 0,
+          "firstDslUnknown": 0,
+          "repairRescueRate": {
+            "numerator": 3,
+            "denominator": 3,
+            "percent": 100.0
+          },
+          "batchRetryRate": {
+            "numerator": 0,
+            "denominator": 6,
+            "percent": 0.0
+          },
+          "batchRetryRescueRate": {
+            "numerator": 0,
+            "denominator": 0,
+            "percent": null
+          },
+          "qualityRepairAttempts": 4,
+          "modelPhysicalCalls": 23,
+          "repairObservedAttempts": 6,
+          "modelObservedAttempts": 6,
+          "terminalAttempts": 6,
+          "coverageObserved": 6,
+          "coverageMissing": 0,
+          "p95ElapsedMs": 10725.93
+        }
+      ]
+    },
+    "observedRetryParameters": {
+      "interfaceRetryEnabled": [
+        true
+      ],
+      "interfaceExtraRetries": [
+        1
+      ],
+      "qualityRepairEnabled": [
+        true
+      ],
+      "qualityRepairMaxAttempts": [
+        5
+      ],
+      "singleStepGenerationFallbackEnabled": [
+        false
+      ],
+      "singleStepWidgetEditEnabled": [
+        true
+      ],
+      "dropPlanFactValidationEnabled": [
+        false
+      ],
+      "photoBackgroundThemeEnabled": [
+        false
+      ],
+      "subjectlessWideThemeEnabled": [
+        false
+      ],
+      "squareMusicPhotoExpansionEnabled": [
+        false
+      ],
+      "squarePhotoExpansionEnabled": [
+        false
+      ],
+      "deepseekOfficialHttpUseSdkEnabled": [
+        true
+      ],
+      "modelFailureRetryEnabled": [
+        true
+      ],
+      "modelFailureExtraRetries": [
+        1
+      ],
+      "fallbackModelFailureExtraRetries": [
+        1
+      ],
+      "fallbackEnabled": [
+        true
+      ],
+      "argumentRepairEnabled": [
+        false
+      ],
+      "argumentRepairMaxAttempts": [
+        2
+      ],
+      "argumentRepairReminderCount": [
+        1
+      ],
+      "interfaceMaxAttempts": [
+        2
+      ],
+      "planMaxAttempts": [
+        2
+      ]
+    }
+  },
+  "continueRun": false
+}

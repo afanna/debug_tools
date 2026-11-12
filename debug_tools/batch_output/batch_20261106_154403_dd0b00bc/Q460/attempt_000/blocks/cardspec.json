@@ -1,0 +1,20 @@
+{
+  "title": "今日天气",
+  "description": "深圳天气速览",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "forecastDays": 1,
+        "prefectureName": "深圳市"
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}

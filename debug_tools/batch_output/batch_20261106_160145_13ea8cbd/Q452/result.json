@@ -1,0 +1,21 @@
+{
+  "id": "Q452",
+  "fileName": "Q452.json",
+  "title": "当前电量",
+  "query": "创建一张低电量卡片，显示当前手机电量",
+  "size": "2x2",
+  "sequence": 40,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3965.61,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3956.62,
+  "uid": "batch-13ea8cbd-00040-000",
+  "finalAttempt": 0
+}

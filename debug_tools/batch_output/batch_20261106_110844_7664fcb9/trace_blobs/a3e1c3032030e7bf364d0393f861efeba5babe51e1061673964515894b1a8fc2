@@ -1,0 +1,156 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "calendar": {
+        "events": [
+          {
+            "dtStart": {
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00",
+              "type": "string"
+            },
+            "entityId": {
+              "description": "系统日程的全局唯一实体ID。",
+              "sampleValue": "example-event-001",
+              "type": "string"
+            },
+            "startDate": {
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06",
+              "type": "string"
+            },
+            "title": {
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会",
+              "type": "string"
+            }
+          },
+          {
+            "dtStart": {
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00",
+              "type": "string"
+            },
+            "startDate": {
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06",
+              "type": "string"
+            },
+            "title": {
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会",
+              "type": "string"
+            }
+          },
+          {
+            "dtStart": {
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00",
+              "type": "string"
+            },
+            "startDate": {
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06",
+              "type": "string"
+            },
+            "title": {
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会",
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "weather": {
+        "daily": [
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            },
+            "weekday": {
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四",
+              "type": "string"
+            }
+          },
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            },
+            "weekday": {
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四",
+              "type": "string"
+            }
+          },
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            },
+            "weekday": {
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四",
+              "type": "string"
+            }
+          }
+        ],
+        "location": {
+          "cityCode": {
+            "description": "城市代码，如60814代表青浦区",
+            "sampleValue": "60814",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Weather_CityCode",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      },
+      "call": "clickToDeeplink",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "id": "event.open.weather"
+    },
+    {
+      "args": {
+        "intentName": "ViewCalendarEvent",
+        "params": {
+          "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+        }
+      },
+      "call": "clickToIntent",
+      "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+      "id": "event.viewCalendarEvent"
+    }
+  ],
+  "size": "2x4",
+  "userQuery": "将天气和日历叠加在一张卡片上，上半部分展示当前位置未来3天的天气预报（星期、天气现象、温度范围），下半部分展示最近的日程安排（日程标题、开始时间），逐条叠加展示。"
+}

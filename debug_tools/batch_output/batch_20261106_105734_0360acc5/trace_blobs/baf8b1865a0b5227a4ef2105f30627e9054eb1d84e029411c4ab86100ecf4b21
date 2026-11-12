@@ -1,0 +1,52 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前时间日期（大字显示）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    },
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前温度文本"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气状况"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/weather/location/prefectureName",
+      "priority": "should",
+      "requirement": "所在城市名称"
+    }
+  ],
+  "layoutHints": [
+    "W-split-panels",
+    "W-top-bottom"
+  ]
+}

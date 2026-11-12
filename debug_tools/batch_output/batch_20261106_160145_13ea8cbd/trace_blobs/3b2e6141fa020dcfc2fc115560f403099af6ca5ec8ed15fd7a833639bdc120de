@@ -1,0 +1,216 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "tue",
+      "identity": "周二",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "wed",
+      "identity": "周三",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        5,
+        6
+      ],
+      "id": "thu",
+      "identity": "周四",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        7,
+        8
+      ],
+      "id": "fri",
+      "identity": "周五",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        9,
+        10
+      ],
+      "id": "sat",
+      "identity": "周六",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡共同主题：一周值班安排",
+      "sourceTexts": [
+        "值班安排：周二上午上班下午休息，周四上午休息下午上班，周三周五全天上班，周六周日上午上班下午休息。"
+      ],
+      "text": "一周值班安排"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周二上午上班、下午休息",
+      "sourceTexts": [
+        "周二上午上班下午休息"
+      ],
+      "text": "周二"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周二的具体班次内容",
+      "sourceTexts": [
+        "周二上午上班下午休息"
+      ],
+      "text": "上午上班 下午休息"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周三全天上班",
+      "sourceTexts": [
+        "周三周五全天上班"
+      ],
+      "text": "周三"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周三的班次内容",
+      "sourceTexts": [
+        "周三周五全天上班"
+      ],
+      "text": "全天上班"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周四上午休息、下午上班",
+      "sourceTexts": [
+        "周四上午休息下午上班"
+      ],
+      "text": "周四"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周四的具体班次内容",
+      "sourceTexts": [
+        "周四上午休息下午上班"
+      ],
+      "text": "上午休息 下午上班"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周五全天上班",
+      "sourceTexts": [
+        "周三周五全天上班"
+      ],
+      "text": "周五"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周五的班次内容",
+      "sourceTexts": [
+        "周三周五全天上班"
+      ],
+      "text": "全天上班"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周六上午上班、下午休息",
+      "sourceTexts": [
+        "周六周日上午上班下午休息"
+      ],
+      "text": "周六"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周六的具体班次内容",
+      "sourceTexts": [
+        "周六周日上午上班下午休息"
+      ],
+      "text": "上午上班 下午休息"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [
+    "周日上午上班、下午休息（与周六安排相同，因容量未选）"
+  ],
+  "paletteFamily": "auto",
+  "presentationStyle": "rows",
+  "selectionNotes": [
+    "一周共六天有值班安排，SingleLineList最多5行，需按完整对象取舍",
+    "保留周二、周四两个半天班记录及周三、周五、周六三条，周日与周六安排相同，省略周日",
+    "周三与周五均为全天上班，分别保留为独立条目"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"W-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"一周值班安排\"}]\n[\"body\", \"SingleLineList\", {\"items\": [{\"text\": \"周二\", \"assist\": \"上午上班 下午休息\"}, {\"text\": \"周三\", \"assist\": \"全天上班\"}, {\"text\": \"周四\", \"assist\": \"上午休息 下午上班\"}, {\"text\": \"周五\", \"assist\": \"全天上班\"}, {\"text\": \"周六\", \"assist\": \"上午上班 下午休息\"}]}]\n[\"/state/ready\", true]"
+}

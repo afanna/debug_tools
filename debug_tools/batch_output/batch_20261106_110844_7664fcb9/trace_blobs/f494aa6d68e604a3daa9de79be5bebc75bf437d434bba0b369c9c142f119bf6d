@@ -1,0 +1,82 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第1名应用名 (/data/powerRanking/rankingList/0/appName).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第1名耗电占比 (/data/powerRanking/rankingList/0/powerText).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第2名应用名 (/data/powerRanking/rankingList/1/appName).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第2名耗电占比 (/data/powerRanking/rankingList/1/powerText).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第3名应用名 (/data/powerRanking/rankingList/2/appName).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第3名耗电占比 (/data/powerRanking/rankingList/2/powerText).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredWidth": 208.0,
+          "occupancy": [
+            {
+              "componentId": "right_sport_item0",
+              "margin": 0.0,
+              "minimumWidth": 64.0
+            },
+            {
+              "componentId": "right_sport_item1",
+              "margin": 0.0,
+              "minimumWidth": 64.0
+            },
+            {
+              "componentId": "right_sport_item2",
+              "margin": 0.0,
+              "minimumWidth": 64.0
+            },
+            {
+              "gaps": 16.0
+            }
+          ],
+          "overflow": 92.0
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_WIDTH_OVERFLOW",
+        "evidenceSource": "expanded",
+        "expected": {
+          "maximumWidth": 116.0,
+          "preserveFixedContent": true
+        },
+        "fixHint": "根据子项占用与可用宽度调整区域分配，或改用合法组合。保留全部必要读数、标签、绑定和动作；尺寸与字号调整须遵守对应组件的设计约束和最小可读尺寸。调整后重新校验，不能依靠裁切、遮挡或丢失内容消除报错。",
+        "legacyMessage": "component right_sport: horizontal layout requires at least 208vp within 116vp; it overflows by 92vp.",
+        "message": "component right_sport: horizontal layout requires at least 208vp within 116vp; it overflows by 92vp.",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component right_sport: horizontal layout requires at least 208vp within 116vp; it overflows by 92vp.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "Compact layout does not match scope W-plan-guided (W-top-bottom, W-split-panels, W-content-side-slots, W-four-slots): closest W-split-panels: component right_sport: TextBlock is only allowed in W-top-bottom.details for 2x4, but the current structure matches W-split-panels; switch the complete layout to W-top-bottom or replace TextBlock with a component allowed by W-split-panels. Alternatives (choose one complete variant): W-top-bottom variant 3: slot root must use Column, got Row; slot root/0 must use SingleLineTitle, got Column | W-split-panels variant 1: component right_sport: TextBlock is only allowed in W-top-bottom.details for 2x4, but the current structure matches W-split-panels; switch the complete layout to W-top-bottom or replace TextBlock with a component allowed by W-split-panels | W-content-side-slots variant 1: slot root/1.itemMargin must be 12, got None; slot root/1 must have 2 children, got 1; slot root/1/0.width must resolve to 132, got 116.0; slot root/1/0.height must resolve to 57, got 110.0; slot root/1/1 is missing | W-four-slots variant 1: slot root must use Column, got Row; slot root/0 must use Row, got Column; slot root/0.width must be 276, got 132.0; slot root/0.height must be 57, got 126.0; slot root/0.itemMargin must be 12, got None; slot root/0 must have 2 children, got 1; slot root/1 must use Row, got Column; slot root/1.width must be 276, got 132.0; slot root/1.height must be 57, got 126.0; slot root/1.itemMargin must be 12, got None; slot root/1 must have 2 children, got 1; slot root/0/0.width must resolve to 132, got 116.0; slot root/0/0.height must resolve to 57, got 110.0; slot root/0/1 is missing; slot root/1/0.width must resolve to 132, got 116.0; slot root/1/0.height must resolve to 57, got 110.0; slot root/1/1 is missing.",
+    "stage": "validation"
+  }
+]

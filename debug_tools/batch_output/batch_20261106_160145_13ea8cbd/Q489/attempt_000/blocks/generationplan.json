@@ -1,0 +1,35 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/dailyDistanceText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.sport",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.checkmark_calendar_fill",
+    "asset.figure_run",
+    "asset.flame_fill"
+  ]
+}

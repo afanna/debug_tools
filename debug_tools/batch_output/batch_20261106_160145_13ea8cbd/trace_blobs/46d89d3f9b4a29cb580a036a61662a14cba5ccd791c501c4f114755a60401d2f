@@ -1,0 +1,85 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.viewCalendarEvent",
+        "assetId": null,
+        "reason": "EventCard item detail has no button icon."
+      }
+    ],
+    "title": {
+      "assetId": "asset.emoji_calendar2"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "当前农历日期"
+    },
+    {
+      "componentHints": [
+        "Badge"
+      ],
+      "dataId": "/data/calendar/eventCount",
+      "priority": "should",
+      "requirement": "日程总数"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/title",
+      "priority": "must",
+      "requirement": "近期日程标题"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/startDate",
+      "priority": "must",
+      "requirement": "日程开始日期"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/dtStart",
+      "priority": "must",
+      "requirement": "日程开始时间"
+    },
+    {
+      "actionId": "event.viewCalendarEvent",
+      "componentHints": [
+        "EventCard"
+      ],
+      "priority": "must",
+      "requirement": "查看日程详情"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom"
+  ]
+}

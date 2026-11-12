@@ -1,0 +1,19 @@
+{
+  "title": "每日锻炼打卡",
+  "description": "每天坚持锻炼，打卡记录",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/healthSport"
+    }
+  ]
+}

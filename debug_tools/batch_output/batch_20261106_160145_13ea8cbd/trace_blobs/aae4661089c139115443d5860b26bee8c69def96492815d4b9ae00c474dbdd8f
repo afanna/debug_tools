@@ -1,0 +1,12 @@
+```genui
+["root","Layout",{"layout":"W-top-bottom","variant":"continuous"},["title","primary","details"]]
+["title","SingleLineTitle",{"title":{"path":"/data/weather/location/prefectureName"},"icon":"resources/base/media/emoji_default_weather_blue.png","fontSize":12}]
+["primary","EmphasisText",{"mainText":{"path":"/data/weather/current/temperatureText"},"secondaryText":{"path":"/data/weather/current/condition"},"fontSize":18}]
+["details","TextBlock",{"items":[{"label":"湿度","value":"{{ ${/data/weather/current/humidityPercent} + '%' }}"},{"label":"风向","value":{"path":"/data/weather/current/windDirection"}},{"label":"风力","value":"{{ ${/data/weather/current/windLevel} + '级' }}"}]}]
+["/data/weather/location/prefectureName","上海市"]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/current/humidityPercent",68]
+["/data/weather/current/windDirection","东南风"]
+["/data/weather/current/windLevel",2]
+```

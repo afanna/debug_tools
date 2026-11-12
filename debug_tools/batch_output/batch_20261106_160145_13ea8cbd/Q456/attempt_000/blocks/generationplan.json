@@ -1,0 +1,25 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetEarphoneInfo",
+      "arguments": {},
+      "writeResultTo": "/data/earphone",
+      "candidateOutputFields": [
+        "/isConnected",
+        "/earphoneName",
+        "/batteryLevel",
+        "/chargingStatusDesc",
+        "/leftBatteryLevel",
+        "/leftChargingStatusDesc",
+        "/rightBatteryLevel",
+        "/rightChargingStatusDesc"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": [
+    "asset.emoji_bluetooth_earbuds_black",
+    "asset.emoji_earbud_case_black",
+    "asset.ic_Bluetooth"
+  ]
+}

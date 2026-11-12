@@ -1,0 +1,11 @@
+{
+  "errors": [
+    "COMPACT_STATIC_CORE_MISSING: 组 core 缺少对象名称 '渡人先渡己'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "COMPACT_STATIC_CORE_MISSING: 组 core 缺少完整展示文字 '爱是向内修出的内丹；自己未曾炼成，给出的只是半剂药'；须在该对象或条目内恢复，不能从其它栏或note补足。"
+  ],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [
+    "结语“那才是真正的慈悲。渡人先渡己，自爱圆满，天地同尘”因2x2容量未选入"
+  ],
+  "warnings": []
+}

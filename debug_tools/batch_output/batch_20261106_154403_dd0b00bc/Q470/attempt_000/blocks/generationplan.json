@@ -1,0 +1,18 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-01-05"
+      },
+      "writeResultTo": "/data/countdown",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": [
+    "asset.cake_fill"
+  ]
+}

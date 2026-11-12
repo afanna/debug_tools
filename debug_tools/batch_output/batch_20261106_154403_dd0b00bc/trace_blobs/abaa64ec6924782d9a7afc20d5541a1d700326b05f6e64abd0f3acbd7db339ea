@@ -1,0 +1,17 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "距离2027年2月3日目标日期还有多少天"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

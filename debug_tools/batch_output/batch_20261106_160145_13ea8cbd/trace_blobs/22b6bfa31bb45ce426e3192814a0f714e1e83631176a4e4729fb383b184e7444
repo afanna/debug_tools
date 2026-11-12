@@ -1,0 +1,59 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.emoji_default_weather_blue"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "杭州当前温度（含℃单位）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "杭州当前天气状况"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "NumericRatioStack"
+      ],
+      "dataId": "/data/earphone/batteryLevel",
+      "priority": "must",
+      "requirement": "耳机盒电量（百分比）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "NumericRatioStack"
+      ],
+      "dataId": "/data/earphone/leftBatteryLevel",
+      "priority": "must",
+      "requirement": "左耳电量（百分比）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "NumericRatioStack"
+      ],
+      "dataId": "/data/earphone/rightBatteryLevel",
+      "priority": "must",
+      "requirement": "右耳电量（百分比）"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-title-dual-content"
+  ]
+}

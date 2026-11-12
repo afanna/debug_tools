@@ -1,0 +1,6 @@
+```genui
+["root","Layout",{"layout":"W-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"轮休表格"}]
+["body","EmphasisText",{"mainText":"1号至31号轮休安排"}]
+["/state/ready",true]
+```

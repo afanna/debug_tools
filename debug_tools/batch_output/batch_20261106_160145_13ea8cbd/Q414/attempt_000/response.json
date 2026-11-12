@@ -1,0 +1,83 @@
+{
+  "requestId": "batch-13ea8cbd&Q414-000",
+  "status": "degraded",
+  "errorCode": "",
+  "error": {},
+  "data": {
+    "status": "degraded",
+    "artifactUrl": "https://obs.todo.local/widget/artifact_71563a11-6923-49ba-9b5c-da904496d393.md",
+    "artifactDigest": "sha256:7ba20ee59e6c509fff0b37a5093b6aa569c94da5bd8626c4167c0753c8f356b9",
+    "suggestSize": "2x2",
+    "removedCapabilities": [],
+    "errorCode": "",
+    "effectiveCapabilities": {
+      "data": [
+        "GetHealthAndSportSummary"
+      ],
+      "event": [
+        {
+          "id": "event.open.health.sport",
+          "description": "打开华为运动健康应用的锻炼Tab页。",
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          }
+        }
+      ],
+      "asset": [
+        "asset.ic_sportsHealth_bule",
+        "asset.emoji_calories_blue",
+        "asset.figure_run",
+        "asset.flame_fill"
+      ]
+    },
+    "omittedRequirements": [
+      "睡眠综合得分与状态"
+    ],
+    "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。"
+  },
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q414-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q414-000",
+          "streamType": "partial",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"type\":\"result\",\"tool\":\"generateWidgetCardCompactDsl\",\"operation\":\"generateWidgetCardCompactDsl\",\"requestId\":\"batch-13ea8cbd&Q414-000\",\"data\":{\"status\":\"degraded\",\"artifactUrl\":\"https://obs.todo.local/widget/artifact_71563a11-6923-49ba-9b5c-da904496d393.md\",\"artifactDigest\":\"sha256:7ba20ee59e6c509fff0b37a5093b6aa569c94da5bd8626c4167c0753c8f356b9\",\"suggestSize\":\"2x2\",\"removedCapabilities\":[],\"errorCode\":\"\",\"effectiveCapabilities\":{\"data\":[\"GetHealthAndSportSummary\"],\"event\":[{\"id\":\"event.open.health.sport\",\"description\":\"打开华为运动健康应用的锻炼Tab页。\",\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Health\",\"uri\":\"huaweischeme://healthapp/home/sport?sportType=2\"}}],\"asset\":[\"asset.ic_sportsHealth_bule\",\"asset.emoji_calories_blue\",\"asset.figure_run\",\"asset.flame_fill\"]},\"omittedRequirements\":[\"睡眠综合得分与状态\"],\"agentInstruction\":\"已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。\"},\"status\":\"degraded\",\"errorCode\":\"\",\"error\":{}}",
+          "streamingTextId": "batch-13ea8cbd&Q414-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

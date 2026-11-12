@@ -1,0 +1,21 @@
+{
+  "id": "Q455",
+  "fileName": "Q455.json",
+  "title": "锁屏时间",
+  "query": "生成一个和锁屏界面一样的时间卡片，显示时间 12:40、日期 11 月 02 日、星期一、农历九月廿四，背景为女性照片。",
+  "size": "2x4",
+  "sequence": 43,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 19373.57,
+  "errorCode": "",
+  "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "complete",
+  "traceRecordCount": 263,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 19358.6,
+  "uid": "batch-dd0b00bc-00043-000",
+  "finalAttempt": 0
+}

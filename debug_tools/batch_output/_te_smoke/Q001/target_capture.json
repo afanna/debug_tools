@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "Q001",
+      "variant": "original",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\_te_smoke\\Q001\\original.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\_te_smoke\\Q001\\dom_original.json",
+      "imageSha256": "a906a9b7cb266367b33aa565be5f6594ed63688576cc01e9251c47b4071e5ac5",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "考试 还剩 3 天 考试日期 2026/12/19"
+    },
+    {
+      "id": "Q001",
+      "variant": "injected",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\_te_smoke\\Q001\\injected.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\_te_smoke\\Q001\\dom_injected.json",
+      "imageSha256": "c3eedb00ddc5cfaf46479566ffb00b37ecbfb8d206e6ff02f3a771c27e7d2d55",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "考试 还剩 46 天 考试日期 2026/12/19"
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "scale": 3
+}

@@ -1,0 +1,21 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [
+    {
+      "description": "样式：红白配色的写实 3D 线圈日历，带金属装订环、浅灰日期网格和卷起页角，透明背景，原始尺寸为 512×512，PNG 位图需保留原色；适用：日历事项、明确会议或计划相关卡片，不因普通时间字段匹配。",
+      "id": "asset.emoji_calendar2",
+      "src": "resources/base/media/emoji_calendar2.png"
+    },
+    {
+      "description": "样式：黄色到橙色渐变的日历图标，带顶部装订环、分隔栏与日期圆点，原始尺寸为 20×20，SVG 矢量图（保留原色，禁止染色）需保留原始渐变配色，禁止染色；适用：日程概览、近期日历事项或日期倒计时卡片，可结合 GetCalendarEvents 展示日程，也可结合 GetCountdownDays 展示目标日期倒计时，并可作为 event.viewCalendarEvent 的辅助入口图标。图标不表示存在日程、日程已完成或倒计时具体天数。",
+      "id": "asset.ic_calender",
+      "src": "resources/base/media/ic_calender.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "eventCandidates": [],
+  "size": "2x2",
+  "userQuery": "制作一个2027年适合结婚的吉日日历卡片，展示2027年各月份适合结婚的好日子"
+}

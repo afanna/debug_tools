@@ -1,0 +1,110 @@
+{
+  "apiVersion": "batch-postprocess-v2",
+  "scope": "sample",
+  "runId": "batch_20261110_200000_7e5a1b2c",
+  "sample": {
+    "id": "Q061",
+    "fileName": "Q061.json",
+    "title": "农历聚餐",
+    "query": "帮我记录农历2025-06-01闰六月初一这次家庭聚餐，看看距离今天多少天。",
+    "size": "2x2",
+    "sequence": 61,
+    "status": "success",
+    "attemptCount": 1,
+    "elapsedMs": 6192.12,
+    "errorCode": "",
+    "error": "",
+    "artifactAvailable": true,
+    "dslAvailable": true,
+    "traceStatus": "complete",
+    "traceRecordCount": 76,
+    "traceSchemaVersion": "generation-trace-v2",
+    "traceDurationMs": 6153.07,
+    "uid": "batch-615f11cd-00061-000",
+    "generationMetrics": {
+      "firstDsl": "passed",
+      "requestSize": "2x2",
+      "firstRequestStatus": "success",
+      "firstRequestDelivered": true,
+      "qualityRepairAttempts": 0,
+      "modelPhysicalCalls": 3,
+      "repairObservedAttempts": 1,
+      "modelObservedAttempts": 1,
+      "terminalAttempts": 1,
+      "missingInformationWarnings": 0,
+      "retryParameters": {
+        "interfaceRetryEnabled": [
+          true
+        ],
+        "interfaceExtraRetries": [
+          1
+        ],
+        "qualityRepairEnabled": [
+          true
+        ],
+        "qualityRepairMaxAttempts": [
+          1
+        ],
+        "singleStepGenerationFallbackEnabled": [
+          true
+        ],
+        "singleStepWidgetEditEnabled": [
+          true
+        ],
+        "dropPlanFactValidationEnabled": [
+          false
+        ],
+        "photoBackgroundThemeEnabled": [
+          true
+        ],
+        "subjectlessWideThemeEnabled": [
+          true
+        ],
+        "squareMusicPhotoExpansionEnabled": [
+          true
+        ],
+        "squarePhotoExpansionEnabled": [
+          true
+        ],
+        "deepseekOfficialHttpUseSdkEnabled": [
+          true
+        ],
+        "modelFailureRetryEnabled": [
+          true
+        ],
+        "modelFailureExtraRetries": [
+          1
+        ],
+        "fallbackModelFailureExtraRetries": [
+          1
+        ],
+        "fallbackEnabled": [
+          true
+        ],
+        "argumentRepairEnabled": [
+          false
+        ],
+        "argumentRepairMaxAttempts": [
+          2
+        ],
+        "argumentRepairReminderCount": [
+          1
+        ],
+        "interfaceMaxAttempts": [
+          2
+        ],
+        "planMaxAttempts": [
+          2
+        ]
+      }
+    }
+  },
+  "runDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c",
+  "sampleDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\Q061",
+  "finalAttemptDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\Q061\\attempt_000",
+  "outputDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_d5077bd4e869\\plugins\\target-effect\\samples\\Q061",
+  "config": {
+    "rendererBaseUrl": "http://127.0.0.1:8890/debug"
+  },
+  "upstreamResults": []
+}

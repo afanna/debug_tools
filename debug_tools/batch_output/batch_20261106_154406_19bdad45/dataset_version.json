@@ -1,0 +1,14 @@
+{
+  "current_version": "v1",
+  "update_date": "2026-11-06",
+  "history_versions": [
+    {
+      "version": "v1",
+      "update_date": "2026-11-06",
+      "commits": [],
+      "changes": [
+        "新增 Q413-Q519 共 107 条由 taskspec 还原的微服务入参样本，用于批跑与渲染验证。"
+      ]
+    }
+  ]
+}

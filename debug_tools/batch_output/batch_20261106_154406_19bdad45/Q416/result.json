@@ -1,0 +1,21 @@
+{
+  "id": "Q416",
+  "fileName": "Q416.json",
+  "title": "今日天气",
+  "query": "做一张今日天气卡片，显示当前温度和天气现象。",
+  "size": "2x2",
+  "sequence": 4,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3944.94,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3773.86,
+  "uid": "batch-19bdad45-00004-000",
+  "finalAttempt": 0
+}

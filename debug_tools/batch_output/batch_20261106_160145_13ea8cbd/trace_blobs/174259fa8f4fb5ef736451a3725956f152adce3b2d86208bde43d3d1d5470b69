@@ -1,0 +1,38 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "DataDisplay",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前温度（已含℃单位，直接展示）"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText",
+        "TableText"
+      ],
+      "priority": "must",
+      "requirement": "萧山区今日小雨转中雨，14℃~19℃",
+      "text": "萧山区今日小雨转中雨，14℃~19℃"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-content"
+  ]
+}

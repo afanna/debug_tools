@@ -1,0 +1,23 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.figure_run"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData",
+        "InfoBlock"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "展示每天的运动步数（纯整数后追加“步”）"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

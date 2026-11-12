@@ -1,0 +1,21 @@
+{
+  "id": "Q192",
+  "fileName": "Q192.json",
+  "title": "新年倒计时",
+  "query": "帮我生成一张新年卡片，展示距离2027年1月1日新年的倒计时天数。\n\n本轮卡片静态内容（用作展示的外部事实）：\n距离2027年1月1日新年倒计时",
+  "size": "2x2",
+  "sequence": 7,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3921.07,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 96,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3914.29,
+  "uid": "batch-0360acc5-00007-000",
+  "finalAttempt": 0
+}

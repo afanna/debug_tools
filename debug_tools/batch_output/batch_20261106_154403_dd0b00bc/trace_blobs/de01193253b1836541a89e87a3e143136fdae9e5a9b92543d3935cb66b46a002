@@ -1,0 +1,40 @@
+{
+  "approvedOmittedFactIndexes": [
+    0
+  ],
+  "category": "layout_structure",
+  "categoryAttempt": 2,
+  "consecutiveFailures": 1,
+  "fallbackAttempt": 0,
+  "fallbackAttemptLimit": 2,
+  "fallbackRemainingAttempts": 2,
+  "fallbackStage": "drop_optional_component",
+  "fingerprint": "c8245b9fbda8c4cc",
+  "instruction": "已进入有界删除兜底。只允许删除程序指定的一个非 Action 业务展示组件：title (SingleLineTitle)，对应信息：当前公历日期。必须同时从直接父组件 children 中移除该组件 ID，并重排其余全部 must/should 事实与 Action；本轮不得删除任何其他组件、改变动态绑定、缩字、裁切或隐藏内容。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_structure",
+      "layout_capacity",
+      "layout_structure"
+    ],
+    "revisitedTopology": true,
+    "topologyFingerprint": "0c80c2f68c861d2b"
+  },
+  "noProgress": false,
+  "optionalDrop": {
+    "allowedOmittedFactIndexes": [
+      0
+    ],
+    "componentId": "title",
+    "componentType": "SingleLineTitle",
+    "containsMustFacts": true,
+    "requirements": [
+      "当前公历日期"
+    ]
+  },
+  "repairStrategy": "drop_optional_component",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

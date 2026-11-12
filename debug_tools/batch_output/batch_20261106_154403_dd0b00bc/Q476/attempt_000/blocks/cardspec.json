@@ -1,0 +1,10 @@
+{
+  "title": "减脂食谱",
+  "description": "一周三餐安排",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ]
+}

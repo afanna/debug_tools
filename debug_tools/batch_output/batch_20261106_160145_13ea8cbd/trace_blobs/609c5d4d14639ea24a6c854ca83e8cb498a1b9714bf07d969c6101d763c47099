@@ -1,0 +1,43 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_PLAN_COVERAGE_FAILED",
+        "message": "Plan static text is not fully visible in DSL: 每日锻炼计划：俯卧撑10个、深蹲20个、开合跳30个.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component left_body: SecondaryBody is auxiliary and cannot be the only information component in the card; pair it with a core information component somewhere in the card. Titles, buttons and other SecondaryBody instances do not count.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component right_body: SecondaryBody is auxiliary and cannot be the only information component in the card; pair it with a core information component somewhere in the card. Titles, buttons and other SecondaryBody instances do not count.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "plan_coverage",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "44ed619893a74bb1",
+      "instruction": "恢复缺失的 Plan 必须事实并复查其所属信息组，不删除其它已正确事实。 当前可见业务正文只有SecondaryBody等普通标签—值文本，没有可承担核心信息的组件。若同一对象内有2–3项同级、等权、无事件／比例／强调语义的短标签—值，优先按TableText合同重组该组，由TableText承担核心信息角色；两项使用fontSize 12并预留38vp，三项使用fontSize 10并预留52vp。逐项保留label、value、完整动态绑定与对象归属；不能只把组件改名，不能将事件、比例或应强调的主值表格化。超出TableText容量的事实继续放入其它合法内容角色，只有optionalDrop或approvedOmissions明确授权的事实才能省略。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "plan_coverage"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "c5041485feecaa5a"
+      },
+      "noProgress": false,
+      "repairStrategy": "coverage_restore",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "information_group"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":\"每天坚持打卡锻炼\",\"icon\":\"resources/base/media/checkmark_calendar_fill.svg\",\"fontSize\":12}]\n[\"left_body\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"俯卧撑\",\"value\":\"10个\"},{\"label\":\"深蹲\",\"value\":\"20个\"},{\"label\":\"开合跳\",\"value\":\"30个\"}],\"fontSize\":12}]\n[\"left_action\",\"PillButton\",{\"label\":\"去锻炼\",\"icon\":\"resources/base/media/figure_run.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Health\",\"uri\":\"huaweischeme://healthapp/home/sport?sportType=2\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_body\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"今日运动\",\"fontSize\":12}]\n[\"right_body\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"步数\",\"value\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\"},{\"label\":\"热量\",\"value\":{\"path\":\"/data/healthSport/dailyTotalCaloriesText\"}}],\"fontSize\":12}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/healthSport/dailySteps\",6200]\n[\"/data/healthSport/dailyTotalCaloriesText\",\"420 千卡\"]"
+  }
+]

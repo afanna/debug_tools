@@ -1,0 +1,83 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/currentTime/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/currentTime/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "ProgressCircleSingle"
+      ],
+      "dataId": "/data/phoneBattery/batterySOCText",
+      "priority": "must",
+      "requirement": "手机剩余电量文本"
+    },
+    {
+      "componentHints": [
+        "InfoBlock"
+      ],
+      "dataId": "/data/phoneBattery/chargingStatusDesc",
+      "priority": "must",
+      "requirement": "手机充电状态"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/dtStart",
+      "priority": "must",
+      "requirement": "近期日程开始时间"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/title",
+      "priority": "must",
+      "requirement": "近期日程标题"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/eventLocation",
+      "priority": "should",
+      "requirement": "近期日程地点"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/memo/todoPendingCount",
+      "priority": "must",
+      "requirement": "备忘录未完成待办数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/memo/todoTotalCount",
+      "priority": "must",
+      "requirement": "备忘录待办总数"
+    }
+  ],
+  "layoutHints": [
+    "W-content-side-slots",
+    "W-top-bottom"
+  ]
+}

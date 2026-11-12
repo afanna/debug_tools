@@ -1,0 +1,21 @@
+{
+  "id": "Q144",
+  "fileName": "Q144.json",
+  "title": "空气质量卡片",
+  "query": "生成一个实时查看空气质量的卡片，显示当前空气质量等级和温度等信息",
+  "size": "2x2",
+  "sequence": 5,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4294.01,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4286.94,
+  "uid": "batch-0360acc5-00005-000",
+  "finalAttempt": 0
+}

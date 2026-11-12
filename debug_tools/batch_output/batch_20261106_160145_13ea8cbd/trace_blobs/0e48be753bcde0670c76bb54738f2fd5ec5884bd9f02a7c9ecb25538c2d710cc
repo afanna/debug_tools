@@ -1,0 +1,28 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "districtName": "相城区",
+        "forecastDays": 3,
+        "prefectureName": "苏州市"
+      },
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "arguments": {
+        "futureDays": 7
+      },
+      "capabilityId": "GetCalendarEvents",
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "description": "天气与日历堆叠卡片",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x4",
+  "title": "天气日历"
+}

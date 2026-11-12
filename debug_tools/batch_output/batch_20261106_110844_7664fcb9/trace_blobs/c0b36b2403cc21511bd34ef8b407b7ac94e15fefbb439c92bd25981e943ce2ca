@@ -1,0 +1,223 @@
+{
+  "cardSpec": {
+    "dataBindings": [
+      {
+        "arguments": {
+          "forecastDays": 1
+        },
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      },
+      {
+        "arguments": {},
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/phoneBattery"
+      },
+      {
+        "arguments": {},
+        "capabilityId": "GetHealthAndSportSummary",
+        "writeResultTo": "/data/healthSport"
+      },
+      {
+        "arguments": {
+          "limit": 3
+        },
+        "capabilityId": "GetAppPowerConsumptionRanking",
+        "writeResultTo": "/data/powerRanking"
+      }
+    ],
+    "description": "聚合天气、电量、健康和耗电排行的桌面卡片",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "suggestSize": "2x4",
+    "title": "桌面聚合卡片"
+  },
+  "effectiveCapabilities": {
+    "asset": [],
+    "data": [
+      "ViewWeather",
+      "GetPhoneBatteryInfo",
+      "GetHealthAndSportSummary",
+      "GetAppPowerConsumptionRanking"
+    ],
+    "event": []
+  },
+  "generationPlan": {
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "forecastDays": 1
+        },
+        "candidateOutputFields": [
+          "/current/temperatureText",
+          "/current/condition"
+        ],
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      },
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc",
+          "/batterySOC"
+        ],
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/phoneBattery"
+      },
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyTotalCaloriesText",
+          "/exerciseTypeName",
+          "/exerciseDurationText"
+        ],
+        "capabilityId": "GetHealthAndSportSummary",
+        "writeResultTo": "/data/healthSport"
+      },
+      {
+        "arguments": {
+          "limit": 3
+        },
+        "candidateOutputFields": [
+          "/rankingList/0/appName",
+          "/rankingList/0/powerText",
+          "/rankingList/1/appName",
+          "/rankingList/1/powerText",
+          "/rankingList/2/appName",
+          "/rankingList/2/powerText"
+        ],
+        "capabilityId": "GetAppPowerConsumptionRanking",
+        "writeResultTo": "/data/powerRanking"
+      }
+    ],
+    "candidateEventCandidates": []
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"title\",\"__layout__root__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"linearGradient\":{\"direction\":\"RightBottom\",\"colors\":[[\"#FFCBDDFE\",0],[\"#FFF1F6FE\",1]]}}},{\"id\":\"title\",\"component\":\"Row\",\"children\":[\"title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"title_title\",\"component\":\"Text\",\"content\":\"今日概览\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"#991F4799\"}},{\"id\":\"__layout__root__body\",\"component\":\"Column\",\"children\":[\"__layout__root__primary\",\"__layout__root__details\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__root__primary\",\"component\":\"Column\",\"children\":[\"primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"primary\",\"component\":\"Column\",\"children\":[\"primary_main\",\"primary_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"primary_main\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/temperatureText} }}\",\"styles\":{\"height\":18,\"fontSize\":18,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"#FF1F4799\",\"textOverflow\":\"clip\"}},{\"id\":\"primary_secondary\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/condition} }}\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"#FF1F4799\",\"textOverflow\":\"clip\"}},{\"id\":\"__layout__root__details\",\"component\":\"Column\",\"children\":[\"details\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1},\"itemMargin\":0},{\"id\":\"details\",\"component\":\"Row\",\"children\":[\"details_item0\",\"details_item1\",\"details_item2\",\"details_item3\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"alignItems\":\"top\",\"justifyContent\":\"start\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minHeight\":48}}},{\"id\":\"details_item0\",\"component\":\"Column\",\"children\":[\"details_item0_label_slot\",\"details_item0_value_slot\"],\"itemMargin\":2,\"styles\":{\"height\":\"matchParent\",\"backgroundColor\":\"#99FFFFFF\",\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0,\"minHeight\":0}}},{\"id\":\"details_item0_label_slot\",\"component\":\"Row\",\"children\":[\"details_item0_label\"],\"styles\":{\"width\":\"matchParent\",\"height\":18,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item0_label\",\"component\":\"Text\",\"content\":\"电量\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#991F4799\"}},{\"id\":\"details_item0_value_slot\",\"component\":\"Row\",\"children\":[\"details_item0_value\"],\"styles\":{\"width\":\"matchParent\",\"height\":16,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item0_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/phoneBattery/batterySOCText} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":10,\"fontWeight\":500,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#FF1F4799\"}},{\"id\":\"details_item1\",\"component\":\"Column\",\"children\":[\"details_item1_label_slot\",\"details_item1_value_slot\"],\"itemMargin\":2,\"styles\":{\"height\":\"matchParent\",\"backgroundColor\":\"#99FFFFFF\",\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0,\"minHeight\":0}}},{\"id\":\"details_item1_label_slot\",\"component\":\"Row\",\"children\":[\"details_item1_label\"],\"styles\":{\"width\":\"matchParent\",\"height\":18,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item1_label\",\"component\":\"Text\",\"content\":\"步数\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#991F4799\"}},{\"id\":\"details_item1_value_slot\",\"component\":\"Row\",\"children\":[\"details_item1_value\"],\"styles\":{\"width\":\"matchParent\",\"height\":16,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item1_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":10,\"fontWeight\":500,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#FF1F4799\"}},{\"id\":\"details_item2\",\"component\":\"Column\",\"children\":[\"details_item2_label_slot\",\"details_item2_value_slot\"],\"itemMargin\":2,\"styles\":{\"height\":\"matchParent\",\"backgroundColor\":\"#99FFFFFF\",\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0,\"minHeight\":0}}},{\"id\":\"details_item2_label_slot\",\"component\":\"Row\",\"children\":[\"details_item2_label\"],\"styles\":{\"width\":\"matchParent\",\"height\":18,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item2_label\",\"component\":\"Text\",\"content\":\"消耗\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#991F4799\"}},{\"id\":\"details_item2_value_slot\",\"component\":\"Row\",\"children\":[\"details_item2_value\"],\"styles\":{\"width\":\"matchParent\",\"height\":16,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item2_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/dailyTotalCaloriesText} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":10,\"fontWeight\":500,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#FF1F4799\"}},{\"id\":\"details_item3\",\"component\":\"Column\",\"children\":[\"details_item3_label_slot\",\"details_item3_value_slot\"],\"itemMargin\":2,\"styles\":{\"height\":\"matchParent\",\"backgroundColor\":\"#99FFFFFF\",\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0,\"minHeight\":0}}},{\"id\":\"details_item3_label_slot\",\"component\":\"Row\",\"children\":[\"details_item3_label\"],\"styles\":{\"width\":\"matchParent\",\"height\":18,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item3_label\",\"component\":\"Text\",\"content\":\"运动\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#991F4799\"}},{\"id\":\"details_item3_value_slot\",\"component\":\"Row\",\"children\":[\"details_item3_value\"],\"styles\":{\"width\":\"matchParent\",\"height\":16,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item3_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/exerciseTypeName} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":10,\"fontWeight\":500,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#FF1F4799\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"weather\":{\"current\":{\"temperatureText\":\"29℃\",\"condition\":\"多云\"}},\"phoneBattery\":{\"batterySOCText\":\"68%\",\"chargingStatusDesc\":\"未充电\",\"batterySOC\":68},\"healthSport\":{\"dailySteps\":6200,\"dailyTotalCaloriesText\":\"420 千卡\",\"exerciseTypeName\":\"户外跑步\",\"exerciseDurationText\":\"40分\"},\"powerRanking\":{\"rankingList\":[{\"appName\":\"示例\",\"powerText\":\"示例\"},{\"appName\":\"示例\",\"powerText\":\"示例\"},{\"appName\":\"示例\",\"powerText\":\"示例\"}]}}}}}",
+  "meta": {
+    "apiVersion": "v1",
+    "artifactId": "980ee403-58ff-4180-9edd-4a37f25a4a2c",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "cardSpecVersion": "card-spec-v1",
+    "createdAt": 1793934592107,
+    "dslProtocolVersion": "v0.9",
+    "generationMode": "create",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "skillVersion": "skill-widget-v1",
+    "sourceArtifactDigest": null,
+    "taskSpecVersion": "task-spec-v1"
+  },
+  "removedCapabilities": [],
+  "schemaVersion": "widget-artifact-v2",
+  "taskSpec": {
+    "appVersion": "11.7.8.342",
+    "assetCandidates": [],
+    "dataModelSchema": {
+      "data": {
+        "healthSport": {
+          "dailySteps": {
+            "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+            "sampleValue": 6200,
+            "type": "integer"
+          },
+          "dailyTotalCaloriesText": {
+            "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+            "sampleValue": "420 千卡",
+            "type": "string"
+          },
+          "exerciseDurationText": {
+            "description": "可直接显示的单次专业运动实际持续时长文本，已包含“小时”或“分”等时间单位；展示时不得再次追加时间单位。例如“1小时40分”。",
+            "sampleValue": "40分",
+            "type": "string"
+          },
+          "exerciseTypeName": {
+            "description": "最近一次发生的单次专业运动训练类型的中文映射名称，如“羽毛球”、“自由训练”、“户外跑步”。若无记录则返回“暂无运动”。",
+            "sampleValue": "户外跑步",
+            "type": "string"
+          }
+        },
+        "phoneBattery": {
+          "batterySOC": {
+            "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+            "sampleValue": 68,
+            "type": "integer"
+          },
+          "batterySOCText": {
+            "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+            "numericSource": "/data/phoneBattery/batterySOC",
+            "sampleValue": "68%",
+            "type": "string"
+          },
+          "chargingStatusDesc": {
+            "description": "当前设备电池的充电状态文本描述。",
+            "sampleValue": "未充电",
+            "type": "string"
+          }
+        },
+        "powerRanking": {
+          "rankingList": [
+            {
+              "appName": {
+                "description": "应用名称文本，例如：“微信”、“设置”。",
+                "sampleValue": "示例",
+                "type": "string"
+              },
+              "powerText": {
+                "description": "应用的耗电量或耗电占比格式化文本，例如：“53%”、“--”。",
+                "sampleValue": "示例",
+                "type": "string"
+              }
+            },
+            {
+              "appName": {
+                "description": "应用名称文本，例如：“微信”、“设置”。",
+                "sampleValue": "示例",
+                "type": "string"
+              },
+              "powerText": {
+                "description": "应用的耗电量或耗电占比格式化文本，例如：“53%”、“--”。",
+                "sampleValue": "示例",
+                "type": "string"
+              }
+            },
+            {
+              "appName": {
+                "description": "应用名称文本，例如：“微信”、“设置”。",
+                "sampleValue": "示例",
+                "type": "string"
+              },
+              "powerText": {
+                "description": "应用的耗电量或耗电占比格式化文本，例如：“53%”、“--”。",
+                "sampleValue": "示例",
+                "type": "string"
+              }
+            }
+          ]
+        },
+        "weather": {
+          "current": {
+            "condition": {
+              "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "temperatureText": {
+              "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+              "sampleValue": "29℃",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "eventCandidates": [],
+    "size": "2x4",
+    "userQuery": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。"
+  }
+}

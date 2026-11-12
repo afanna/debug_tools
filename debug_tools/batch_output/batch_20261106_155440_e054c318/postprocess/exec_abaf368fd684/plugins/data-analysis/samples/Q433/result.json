@@ -1,0 +1,75 @@
+{
+  "sampleId": "Q433",
+  "status": "partial",
+  "summary": "请求与最终产物分析完成",
+  "facts": {
+    "requestCount": 1,
+    "paddedCount": 0,
+    "traceKnown": 0
+  },
+  "artifacts": [
+    {
+      "key": "analysis",
+      "data": {
+        "schemaVersion": "batch-analysis-v1",
+        "sampleId": "Q433",
+        "requests": [
+          {
+            "source": "attempt_000",
+            "uid": "batch-e054c318-00025-000",
+            "traceStatus": "missing",
+            "status": "failed",
+            "pass1": null,
+            "pass2": null,
+            "weight": 1,
+            "phasesMs": {
+              "plan": null,
+              "generate": null,
+              "repair": null,
+              "theme": null
+            },
+            "elapsedMs": 2043.32,
+            "elapsedSource": "result.elapsedMs",
+            "counts": {
+              "interfaceRetries": null,
+              "repairs": null,
+              "modelRetries": null,
+              "planRetries": null,
+              "providerFallbacks": null
+            },
+            "models": [],
+            "unknownMetrics": {
+              "planMs": "没有可信的精确阶段区间",
+              "generateMs": "没有可信的精确阶段区间",
+              "repairMs": "没有可信的精确阶段区间",
+              "themeMs": "没有可信的精确阶段区间",
+              "interfaceRetries": "没有完整精确 Trace 或显式次数记录",
+              "repairs": "没有完整精确 Trace 或显式次数记录",
+              "modelRetries": "没有完整精确 Trace 或显式次数记录",
+              "planRetries": "没有完整精确 Trace 或显式次数记录",
+              "providerFallbacks": "没有完整精确 Trace 或显式次数记录",
+              "pass1": "缺少必要的接口尝试终态",
+              "pass2": "缺少必要的接口尝试终态"
+            },
+            "warnings": [
+              "未找到对应 Trace 目录"
+            ],
+            "unknownReason": "Trace 缺失、不完整或无效；缺失指标不计零"
+          }
+        ],
+        "usage": {
+          "components": null,
+          "assets": null,
+          "events": null,
+          "data": null,
+          "warnings": [
+            "产物或注册表不可读：FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\卡片\\\\query\\\\CreateMyCard\\\\debug_tools\\\\batch_output\\\\batch_20261106_155440_e054c318\\\\Q433\\\\attempt_000\\\\blocks.json'"
+          ]
+        },
+        "warnings": []
+      },
+      "title": "样本分析",
+      "dataType": "json"
+    }
+  ]
+}

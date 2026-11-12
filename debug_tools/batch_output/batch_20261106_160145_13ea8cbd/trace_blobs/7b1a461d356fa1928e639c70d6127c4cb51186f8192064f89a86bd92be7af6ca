@@ -1,0 +1,64 @@
+{
+  "capacityFits": [
+    {
+      "actualItemCount": 1,
+      "actualRowCount": 1,
+      "componentId": "left_support",
+      "componentType": "SecondaryBody",
+      "directlyFits": [],
+      "doesNotFit": [
+        {
+          "itemIndex": 0,
+          "planFacts": [
+            {
+              "factIndex": 3,
+              "priority": "must",
+              "requirement": "展示第一天天气预报的星期与温度范围"
+            },
+            {
+              "factIndex": 4,
+              "priority": "must",
+              "requirement": "展示第一天天气预报的温度范围"
+            }
+          ],
+          "value": {
+            "label": "预报 ",
+            "value": "{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"
+          }
+        }
+      ],
+      "effectiveColumnCount": 1,
+      "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+      "maxRetainedRowCount": 0,
+      "overflowFactCount": 2,
+      "overflowItemCount": 1,
+      "parentAvailableHeight": 110.0,
+      "parentId": "left",
+      "rowHeights": [
+        24.0
+      ],
+      "rowSpacing": 2.0,
+      "scope": "currentComponentItemsOnly"
+    }
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "c7b5880f33fb870f",
+  "instruction": "此前布局已失败，本轮把结构、容量、事实、动作和素材作为同一重组问题处理，不要因错误类别切换退回单点修补。先按全部保留事实和完整动作计算各区预算，比较不同合法承载组合；放不下的旧堆叠不能只改ID、间距或包装层。仅在合同允许且不是用户必需标题时移除装饰标题；不缩固定字号，不削减事实或动作。随后一起复查树闭合、事实唯一可见、动作参数准确与入口可达、动作图标分配和横纵容量。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_structure",
+      "layout_structure",
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "c42d60739a50cafa"
+  },
+  "noProgress": false,
+  "repairStrategy": "plan_guided_recompose",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

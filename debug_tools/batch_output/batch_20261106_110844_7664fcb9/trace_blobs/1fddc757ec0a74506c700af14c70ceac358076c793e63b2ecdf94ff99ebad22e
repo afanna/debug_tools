@@ -1,0 +1,22 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.calendar_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "显示农历日期"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

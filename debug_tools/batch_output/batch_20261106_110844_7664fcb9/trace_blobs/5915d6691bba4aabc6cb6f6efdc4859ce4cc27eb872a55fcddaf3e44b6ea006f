@@ -1,0 +1,106 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "districtName": "滨江区",
+        "forecastDays": 1,
+        "prefectureName": "杭州市"
+      },
+      "candidateOutputFields": [
+        "/current/temperatureText",
+        "/current/condition"
+      ],
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        },
+        "call": "clickToDeeplink"
+      },
+      "capabilityId": "event.open.weather"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "districtName": "滨江区",
+          "forecastDays": 1,
+          "prefectureName": "杭州市"
+        },
+        "candidateOutputFields": [
+          "/current/temperatureText",
+          "/current/condition"
+        ],
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Weather_CityCode",
+            "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.weather"
+      }
+    ],
+    "description": "杭州天气速览",
+    "size": "2x2",
+    "title": "今日天气",
+    "uid": "batch-7664fcb9-00050-000",
+    "userQuery": "做一张杭州今日天气卡片，显示当前温度和天气现象。"
+  },
+  "description": "杭州天气速览",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "HLS-AL00",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261031065043729"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "HLS-AL00 7.0.0.111",
+  "session": {
+    "interactionId": "Q388-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x2",
+  "title": "今日天气",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00050-000"
+    }
+  },
+  "userQuery": "做一张杭州今日天气卡片，显示当前温度和天气现象。",
+  "utterance": {
+    "original": "做一张杭州今日天气卡片，显示当前温度和天气现象。",
+    "type": "text"
+  },
+  "version": "1.0"
+}

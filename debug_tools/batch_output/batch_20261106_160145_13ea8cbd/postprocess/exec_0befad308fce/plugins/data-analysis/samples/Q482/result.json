@@ -1,0 +1,128 @@
+{
+  "sampleId": "Q482",
+  "status": "success",
+  "summary": "请求与最终产物分析完成",
+  "facts": {
+    "requestCount": 1,
+    "paddedCount": 1,
+    "traceKnown": 1
+  },
+  "artifacts": [
+    {
+      "key": "analysis",
+      "data": {
+        "schemaVersion": "batch-analysis-v1",
+        "sampleId": "Q482",
+        "requests": [
+          {
+            "source": "attempt_000",
+            "uid": "batch-13ea8cbd-00070-000",
+            "traceStatus": "complete",
+            "status": "success",
+            "pass1": true,
+            "pass2": true,
+            "weight": 2,
+            "phasesMs": {
+              "plan": 5156.49,
+              "generate": 1929.83,
+              "repair": 1921.7800000000007,
+              "theme": 607.1000000000004
+            },
+            "elapsedMs": 9721.18,
+            "elapsedSource": "trace.request",
+            "counts": {
+              "interfaceRetries": 0.0,
+              "repairs": 1.0,
+              "modelRetries": 0.0,
+              "planRetries": 1.0,
+              "providerFallbacks": 0.0
+            },
+            "models": [
+              {
+                "spanId": "a2cf52fe97394cfd",
+                "phase": "plan",
+                "sourcePhase": "plan",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "7d1144a013d343b6",
+                "phase": "plan",
+                "sourcePhase": "plan",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "1c76f73e130e4626",
+                "phase": "generate",
+                "sourcePhase": "initial",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "6c0c4ce0f285432b",
+                "phase": "repair",
+                "sourcePhase": "repair",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              },
+              {
+                "spanId": "9da341932ba74310",
+                "phase": "theme",
+                "sourcePhase": "theme",
+                "ttftMs": null,
+                "tps": null,
+                "status": "success",
+                "unknownMetrics": {
+                  "ttftMs": "没有有效首 token 传输指标",
+                  "tps": "没有有效 TPS 或输出 token / 推理时长证据"
+                }
+              }
+            ],
+            "unknownMetrics": {},
+            "warnings": [],
+            "unknownReason": ""
+          }
+        ],
+        "usage": {
+          "components": [
+            "EmphasisText",
+            "SingleLineTitle",
+            "TextBlock"
+          ],
+          "assets": [
+            "asset.emoji_default_weather_blue"
+          ],
+          "events": [],
+          "data": [
+            "ViewWeather"
+          ],
+          "warnings": []
+        },
+        "warnings": []
+      },
+      "title": "样本分析",
+      "dataType": "json"
+    }
+  ]
+}

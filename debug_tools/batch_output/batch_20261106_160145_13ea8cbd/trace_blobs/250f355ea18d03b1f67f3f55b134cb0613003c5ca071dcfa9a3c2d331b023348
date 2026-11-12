@@ -1,0 +1,8 @@
+{
+  "errors": [
+    "Plan action is displayed more than once in visible DSL: event.viewCalendarEvent; expected 1, got 2; occurrences: upper, lower."
+  ],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": []
+}

@@ -1,0 +1,87 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.viewCalendarEvent",
+        "assetId": null,
+        "reason": "EventCard item detail has no button icon."
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "唯一日历素材已分配给日程详情动作，标题不再复用"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前日期"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "农历日期"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/title",
+      "priority": "must",
+      "requirement": "日程标题"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/dtStart",
+      "priority": "must",
+      "requirement": "日程开始时间"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/startDate",
+      "priority": "must",
+      "requirement": "日程开始日期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/countdownDays",
+      "priority": "must",
+      "requirement": "距离日程开始的倒计天数"
+    },
+    {
+      "actionId": "event.viewCalendarEvent",
+      "componentHints": [
+        "EventCard",
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "查看该日程详情"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom"
+  ]
+}

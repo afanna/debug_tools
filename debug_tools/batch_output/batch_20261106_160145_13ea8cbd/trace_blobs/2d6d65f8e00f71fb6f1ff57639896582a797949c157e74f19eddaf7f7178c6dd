@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "语义布局不符合合同：节点 root：子组件数量应为 [2, 3]，实际为 1；Layout.layout='W-top-bottom' 要求的 children 角色为 [title?, primary, details]。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+    "stage": "validation"
+  }
+]

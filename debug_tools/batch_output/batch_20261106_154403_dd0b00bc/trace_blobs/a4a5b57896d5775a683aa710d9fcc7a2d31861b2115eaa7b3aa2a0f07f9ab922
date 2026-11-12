@@ -1,0 +1,62 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/countdown0/countdownDays",
+      "priority": "must",
+      "requirement": "奶奶生日公历日期10月5日及倒计时天数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/countdown1/countdownDays",
+      "priority": "must",
+      "requirement": "爷爷生日公历日期6月24日及倒计时天数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/countdown2/countdownDays",
+      "priority": "must",
+      "requirement": "爸爸生日公历日期4月19日及倒计时天数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/countdown3/countdownDays",
+      "priority": "must",
+      "requirement": "妈妈生日公历日期4月12日及倒计时天数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/countdown4/countdownDays",
+      "priority": "must",
+      "requirement": "崔景会生日公历日期10月28日及倒计时天数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/countdown5/countdownDays",
+      "priority": "must",
+      "requirement": "父母结婚纪念日公历日期1月23日及倒计时天数"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom",
+    "W-four-slots"
+  ]
+}

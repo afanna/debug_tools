@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/districtName\"},\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"fontSize\":18}]\n[\"details\",\"TextBlock\",{\"items\":[{\"label\":\"天气\",\"value\":{\"path\":\"/data/weather/current/condition\"}}]}]\n[\"/data/weather/location/districtName\",\"青浦区\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/location/cityCode\",\"60814\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "details: TextBlock.items requires 2 to 4 entries."
+    }
+  ]
+}

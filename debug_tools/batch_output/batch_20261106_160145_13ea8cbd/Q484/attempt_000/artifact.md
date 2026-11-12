@@ -1,0 +1,817 @@
+```cardspec
+{
+  "title": "天气日历",
+  "description": "天气与日历堆叠卡片",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "相城区",
+        "forecastDays": 3,
+        "prefectureName": "苏州市"
+      },
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "capabilityId": "GetCalendarEvents",
+      "arguments": {
+        "futureDays": 7
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Row","children":["left","right"],"itemMargin":12,"styles":{"width":"matchParent","height":"matchParent","padding":12,"borderRadius":20,"clip":true,"alignItems":"center","justifyContent":"start","linearGradient":{"direction":"RightBottom","colors":[["#FFCBDDFE",0],["#FFF1F6FE",1]]}}},{"id":"left","component":"Column","children":["__layout__left__sub"],"styles":{"height":"matchParent","layoutWeight":1,"padding":8,"borderRadius":16,"clip":true,"backgroundColor":"#99FFFFFF"},"itemMargin":0},{"id":"__layout__left__sub","component":"Column","children":["left_title","__layout__left__body","left_action"],"itemMargin":6,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":110.0}},{"id":"left_title","component":"Row","children":["left_title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"left_title_title","component":"Text","content":"{{ ${/data/weather/location/prefectureName} }}","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#991F4799"}},{"id":"__layout__left__body","component":"Column","children":["left_body"],"itemMargin":0,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"left_body","component":"Column","children":["left_body_main","left_body_secondary"],"itemMargin":2,"styles":{"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"width":"matchParent"}},{"id":"left_body_main","component":"Text","content":"{{ ${/data/weather/current/temperatureText} }}","styles":{"height":18,"fontSize":18,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"left_body_secondary","component":"Text","content":"{{ ${/data/weather/current/condition} }}","styles":{"height":16,"fontSize":12,"fontWeight":400,"lineHeight":1.3333333333333333,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"left_action","component":"Row","children":["left_action_icon","left_action_text"],"onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Weather_CityCode","uri":"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"}}],"itemMargin":8,"styles":{"height":36,"borderRadius":30,"padding":0,"flexShrink":0,"width":"matchParent","backgroundColor":"#331F4799","justifyContent":"center","alignItems":"center"}},{"id":"left_action_icon","component":"Image","src":"resources/base/media/ic_weather_monochrome.svg","styles":{"width":20,"height":20,"objectFit":"contain","flexShrink":0,"fillColor":"#FF1F4799"}},{"id":"left_action_text","component":"Text","content":"查看天气","styles":{"maxWidth":96,"height":17,"fontSize":14,"fontWeight":500,"textAlign":"center","maxLines":1,"flexShrink":0,"fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"right","component":"Column","children":["__layout__right__sub"],"styles":{"height":"matchParent","layoutWeight":1,"padding":8,"borderRadius":16,"clip":true,"backgroundColor":"#99FFFFFF"},"itemMargin":0},{"id":"__layout__right__sub","component":"Column","children":["right_title","__layout__right__body"],"itemMargin":6,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":110.0}},{"id":"right_title","component":"Row","children":["right_title_title","right_title_icon"],"styles":{"width":"matchParent","height":20,"flexShrink":0,"justifyContent":"spaceBetween","alignItems":"center"},"itemMargin":0},{"id":"right_title_title","component":"Text","content":"近期日程","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":1,"width":"wrapContent","layoutWeight":1,"constraintSize":{"minWidth":0},"fontColor":"#991F4799"}},{"id":"right_title_icon","component":"Image","src":"resources/base/media/calendar_fill.svg","styles":{"width":20,"height":20,"objectFit":"contain","flexShrink":0,"fillColor":"#FF1F4799"}},{"id":"__layout__right__body","component":"Column","children":["right_body"],"itemMargin":0,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"end","layoutWeight":1}},{"id":"right_body","component":"Column","children":["right_body_item0","right_body_item1"],"itemMargin":4,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","flexShrink":1,"clip":true,"height":68}},{"id":"right_body_item0","component":"Row","children":["right_body_item0_rail","right_body_item0_texts"],"itemMargin":7,"styles":{"width":"matchParent","alignItems":"top","flexShrink":0,"clip":true,"height":32}},{"id":"right_body_item0_rail","component":"Column","children":["right_body_item0_rail_dot","right_body_item0_rail_line"],"itemMargin":4,"styles":{"width":8,"padding":{"top":4,"bottom":0},"alignItems":"center","justifyContent":"start","flexShrink":0,"height":32,"clip":true}},{"id":"right_body_item0_rail_dot","component":"Divider","styles":{"width":8,"height":8,"borderRadius":4,"borderWidth":1.5,"strokeWidth":0,"color":"#00000000","flexShrink":0,"borderColor":"#FF1F4799","backgroundColor":"#00000000"}},{"id":"right_body_item0_rail_line","component":"Divider","styles":{"width":1,"strokeWidth":1,"vertical":true,"flexShrink":0,"height":16,"color":"#991F4799"}},{"id":"right_body_item0_texts","component":"Column","children":["right_body_item0_title","right_body_item0_meta"],"itemMargin":2,"styles":{"alignItems":"start","justifyContent":"start","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1,"height":32}},{"id":"right_body_item0_title","component":"Text","content":"{{ ${/data/calendar/events/0/title} }}","styles":{"width":"matchParent","fontSize":12,"fontWeight":700,"maxLines":1,"flexShrink":0,"constraintSize":{"minWidth":0,"minHeight":16},"height":16,"fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"right_body_item0_time","component":"Text","content":"{{ ${/data/calendar/events/0/dtStart} }}","styles":{"width":"matchParent","height":14,"fontSize":10,"fontWeight":400,"maxLines":1,"flexShrink":0,"constraintSize":{"minWidth":0},"fontColor":"#991F4799","textOverflow":"clip"}},{"id":"right_body_item0_meta","component":"Row","children":["right_body_item0_time"],"itemMargin":4,"styles":{"width":"matchParent","height":14,"alignItems":"center","flexShrink":0,"clip":true}},{"id":"right_body_item1","component":"Row","children":["right_body_item1_rail","right_body_item1_texts"],"itemMargin":7,"styles":{"width":"matchParent","alignItems":"top","flexShrink":0,"clip":true,"height":32}},{"id":"right_body_item1_rail","component":"Column","children":["right_body_item1_rail_dot","right_body_item1_rail_line"],"itemMargin":4,"styles":{"width":8,"padding":{"top":4,"bottom":0},"alignItems":"center","justifyContent":"start","flexShrink":0,"height":32,"clip":true}},{"id":"right_body_item1_rail_dot","component":"Divider","styles":{"width":8,"height":8,"borderRadius":4,"borderWidth":1.5,"strokeWidth":0,"color":"#00000000","flexShrink":0,"borderColor":"#FF1F4799","backgroundColor":"#00000000"}},{"id":"right_body_item1_rail_line","component":"Divider","styles":{"width":1,"strokeWidth":1,"vertical":true,"flexShrink":0,"height":16,"color":"#991F4799"}},{"id":"right_body_item1_texts","component":"Column","children":["right_body_item1_title","right_body_item1_meta"],"itemMargin":2,"styles":{"alignItems":"start","justifyContent":"start","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1,"height":32}},{"id":"right_body_item1_title","component":"Text","content":"{{ ${/data/calendar/events/1/title} }}","styles":{"width":"matchParent","fontSize":12,"fontWeight":700,"maxLines":1,"flexShrink":0,"constraintSize":{"minWidth":0,"minHeight":16},"height":16,"fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"right_body_item1_time","component":"Text","content":"{{ ${/data/calendar/events/1/dtStart} }}","styles":{"width":"matchParent","height":14,"fontSize":10,"fontWeight":400,"maxLines":1,"flexShrink":0,"constraintSize":{"minWidth":0},"fontColor":"#991F4799","textOverflow":"clip"}},{"id":"right_body_item1_meta","component":"Row","children":["right_body_item1_time"],"itemMargin":4,"styles":{"width":"matchParent","height":14,"alignItems":"center","flexShrink":0,"clip":true}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"data":{"weather":{"location":{"prefectureName":"上海市","cityCode":"60814"},"current":{"temperatureText":"29℃","condition":"多云"},"daily":[{"weekday":"星期四","temperatureRangeText":"25℃ / 32℃"}]},"calendar":{"events":[{"title":"项目例会","dtStart":"14:00","entityId":"example-event-001"},{"title":"项目例会","dtStart":"14:00"}]}}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "用户想要在桌面上设置一个天气和日历堆叠在一起的卡片，展示当前天气信息和近期日程安排。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.weather",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Weather_CityCode",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      }
+    },
+    {
+      "id": "event.viewCalendarEvent",
+      "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "ViewCalendarEvent",
+        "params": {
+          "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+        }
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "weather": {
+        "location": {
+          "prefectureName": {
+            "type": "string",
+            "description": "城市名称",
+            "sampleValue": "上海市"
+          },
+          "districtName": {
+            "type": "string",
+            "description": "区或县名称",
+            "sampleValue": "青浦区"
+          },
+          "cityCode": {
+            "type": "string",
+            "description": "城市代码，如60814代表青浦区",
+            "sampleValue": "60814"
+          }
+        },
+        "current": {
+          "temperatureText": {
+            "type": "string",
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃"
+          },
+          "condition": {
+            "type": "string",
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云"
+          }
+        },
+        "daily": [
+          {
+            "weekday": {
+              "type": "string",
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四"
+            },
+            "temperatureRangeText": {
+              "type": "string",
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃"
+            }
+          },
+          {
+            "weekday": {
+              "type": "string",
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四"
+            },
+            "temperatureRangeText": {
+              "type": "string",
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃"
+            }
+          },
+          {
+            "weekday": {
+              "type": "string",
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四"
+            },
+            "temperatureRangeText": {
+              "type": "string",
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃"
+            }
+          }
+        ]
+      },
+      "calendar": {
+        "eventCount": {
+          "type": "integer",
+          "description": "查询到的日程记录总数量。",
+          "sampleValue": 1
+        },
+        "events": [
+          {
+            "title": {
+              "type": "string",
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会"
+            },
+            "startDate": {
+              "type": "string",
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06"
+            },
+            "dtStart": {
+              "type": "string",
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00"
+            },
+            "countdownDays": {
+              "type": "integer",
+              "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+              "sampleValue": 0
+            },
+            "entityId": {
+              "type": "string",
+              "description": "系统日程的全局唯一实体ID。",
+              "sampleValue": "example-event-001"
+            }
+          },
+          {
+            "title": {
+              "type": "string",
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会"
+            },
+            "startDate": {
+              "type": "string",
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06"
+            },
+            "dtStart": {
+              "type": "string",
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00"
+            },
+            "countdownDays": {
+              "type": "integer",
+              "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+              "sampleValue": 0
+            }
+          }
+        ]
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.ic_weather_monochrome",
+      "src": "resources/base/media/ic_weather_monochrome.svg",
+      "description": "样式：黑色单色云朵图标，原始尺寸为 24×24，可随主题染成白色或黑色；选择：普通天气或天气详情需求的首选云朵图标。适用：天气卡片中配合 ViewWeather 的 current.condition 或 daily.condition 展示天气现象，也可与 event.open.weather 组成天气详情入口。图标仅表示天气主题，不代表晴、阴、雨等具体天气状态。"
+    },
+    {
+      "id": "asset.calendar_fill",
+      "src": "resources/base/media/calendar_fill.svg",
+      "description": "样式：日历实心图标，默认黑色，图形为带格线的日历本造型；适用：日程管理、日历事件查看、当日安排。"
+    },
+    {
+      "id": "asset.emoji_calendar2",
+      "src": "resources/base/media/emoji_calendar2.png",
+      "description": "样式：红白配色的写实 3D 线圈日历，带金属装订环、浅灰日期网格和卷起页角，透明背景，原始尺寸为 512×512，PNG 位图需保留原色；适用：日历事项、明确会议或计划相关卡片，不因普通时间字段匹配。"
+    }
+  ]
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "ViewWeather",
+    "GetCalendarEvents"
+  ],
+  "event": [
+    {
+      "id": "event.open.weather",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Weather_CityCode",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      }
+    },
+    {
+      "id": "event.viewCalendarEvent",
+      "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "ViewCalendarEvent",
+        "params": {
+          "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+        }
+      }
+    }
+  ],
+  "asset": [
+    "asset.ic_weather_monochrome",
+    "asset.calendar_fill",
+    "asset.emoji_calendar2"
+  ]
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "相城区",
+        "forecastDays": 3,
+        "prefectureName": "苏州市"
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": [
+        "/location/prefectureName",
+        "/location/districtName",
+        "/current/temperatureText",
+        "/current/condition",
+        "/daily/0/weekday",
+        "/daily/0/temperatureRangeText",
+        "/daily/1/weekday",
+        "/daily/1/temperatureRangeText",
+        "/daily/2/weekday",
+        "/daily/2/temperatureRangeText"
+      ]
+    },
+    {
+      "capabilityId": "GetCalendarEvents",
+      "arguments": {
+        "futureDays": 7
+      },
+      "writeResultTo": "/data/calendar",
+      "candidateOutputFields": [
+        "/eventCount",
+        "/events/0/title",
+        "/events/0/startDate",
+        "/events/0/dtStart",
+        "/events/0/countdownDays",
+        "/events/1/title",
+        "/events/1/startDate",
+        "/events/1/dtStart",
+        "/events/1/countdownDays"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.weather",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        }
+      }
+    },
+    {
+      "capabilityId": "event.viewCalendarEvent",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "intentName": "ViewCalendarEvent",
+          "params": {
+            "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+          }
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.ic_weather_monochrome",
+    "asset.calendar_fill",
+    "asset.emoji_calendar2"
+  ]
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "ca6f4038-c419-44f3-aaf5-217e784bca6f",
+  "createdAt": 1793952290063
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"W-split-panels"},["left","right"]]
+["left","Region",{"variant":"title-content-action"},["left_title","left_body","left_action"]]
+["left_title","SingleLineTitle",{"title":{"path":"/data/weather/location/prefectureName"},"fontSize":12}]
+["left_body","EmphasisText",{"mainText":{"path":"/data/weather/current/temperatureText"},"secondaryText":{"path":"/data/weather/current/condition"},"fontSize":18}]
+["left_action","PillButton",{"label":"查看天气","icon":"resources/base/media/ic_weather_monochrome.svg","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Weather_CityCode","uri":"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"}}]}]
+["right","Region",{"variant":"title-content"},["right_title","right_body"]]
+["right_title","SingleLineTitle",{"title":"近期日程","icon":"resources/base/media/calendar_fill.svg","fontSize":12}]
+["right_body","EventCard",{"items":[{"title":{"path":"/data/calendar/events/0/title"},"time":{"path":"/data/calendar/events/0/dtStart"}},{"title":{"path":"/data/calendar/events/1/title"},"time":{"path":"/data/calendar/events/1/dtStart"}}],"density":"compact"}]
+["/data/weather/location/prefectureName","上海市"]
+["/data/weather/location/cityCode","60814"]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/daily/0/weekday","星期四"]
+["/data/weather/daily/0/temperatureRangeText","25℃ / 32℃"]
+["/data/calendar/events/0/title","项目例会"]
+["/data/calendar/events/0/dtStart","14:00"]
+["/data/calendar/events/0/entityId","example-event-001"]
+["/data/calendar/events/1/title","项目例会"]
+["/data/calendar/events/1/dtStart","14:00"]
+```
+```request
+{
+  "content": {
+    "size": "2x4",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL10P 7.0.0.111",
+    "candidateAssetIds": [
+      "asset.ic_weather_monochrome",
+      "asset.calendar_fill",
+      "asset.emoji_calendar2"
+    ],
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.weather",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Weather_CityCode",
+            "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+          }
+        }
+      },
+      {
+        "capabilityId": "event.viewCalendarEvent",
+        "action": {
+          "call": "clickToIntent",
+          "args": {
+            "intentName": "ViewCalendarEvent",
+            "params": {
+              "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+            }
+          }
+        }
+      }
+    ],
+    "bundleName": "com.huawei.genui",
+    "description": "天气与日历堆叠卡片",
+    "userQuery": "用户想要在桌面上设置一个天气和日历堆叠在一起的卡片，展示当前天气信息和近期日程安排。",
+    "title": "天气日历",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "ViewWeather",
+        "arguments": {
+          "districtName": "相城区",
+          "forecastDays": 3,
+          "prefectureName": "苏州市"
+        },
+        "writeResultTo": "/data/weather",
+        "candidateOutputFields": [
+          "/location/prefectureName",
+          "/location/districtName",
+          "/current/temperatureText",
+          "/current/condition",
+          "/daily/0/weekday",
+          "/daily/0/temperatureRangeText",
+          "/daily/1/weekday",
+          "/daily/1/temperatureRangeText",
+          "/daily/2/weekday",
+          "/daily/2/temperatureRangeText"
+        ]
+      },
+      {
+        "capabilityId": "GetCalendarEvents",
+        "arguments": {
+          "futureDays": 7
+        },
+        "writeResultTo": "/data/calendar",
+        "candidateOutputFields": [
+          "/eventCount",
+          "/events/0/title",
+          "/events/0/startDate",
+          "/events/0/dtStart",
+          "/events/0/countdownDays",
+          "/events/1/title",
+          "/events/1/startDate",
+          "/events/1/dtStart",
+          "/events/1/countdownDays"
+        ]
+      }
+    ]
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261101003522301"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q484-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0",
+  "size": "2x4",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "candidateAssetIds": [
+    "asset.ic_weather_monochrome",
+    "asset.calendar_fill",
+    "asset.emoji_calendar2"
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.weather",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        }
+      }
+    },
+    {
+      "capabilityId": "event.viewCalendarEvent",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "intentName": "ViewCalendarEvent",
+          "params": {
+            "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+          }
+        }
+      }
+    }
+  ],
+  "bundleName": "com.huawei.genui",
+  "description": "天气与日历堆叠卡片",
+  "userQuery": "用户想要在桌面上设置一个天气和日历堆叠在一起的卡片，展示当前天气信息和近期日程安排。",
+  "title": "天气日历",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "相城区",
+        "forecastDays": 3,
+        "prefectureName": "苏州市"
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": [
+        "/location/prefectureName",
+        "/location/districtName",
+        "/current/temperatureText",
+        "/current/condition",
+        "/daily/0/weekday",
+        "/daily/0/temperatureRangeText",
+        "/daily/1/weekday",
+        "/daily/1/temperatureRangeText",
+        "/daily/2/weekday",
+        "/daily/2/temperatureRangeText"
+      ]
+    },
+    {
+      "capabilityId": "GetCalendarEvents",
+      "arguments": {
+        "futureDays": 7
+      },
+      "writeResultTo": "/data/calendar",
+      "candidateOutputFields": [
+        "/eventCount",
+        "/events/0/title",
+        "/events/0/startDate",
+        "/events/0/dtStart",
+        "/events/0/countdownDays",
+        "/events/1/title",
+        "/events/1/startDate",
+        "/events/1/dtStart",
+        "/events/1/countdownDays"
+      ]
+    }
+  ]
+}
+```
+```repair-1
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"left_body\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_support\",\"SecondaryBody\",{\"items\":[{\"label\":\"预报 \",\"value\":\"{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}\"}],\"fontSize\":14}]\n[\"left_action\",\"PillButton\",{\"label\":\"查看天气\",\"icon\":\"resources/base/media/ic_weather_monochrome.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-hero-support-action\"},[\"left_title\",\"left_body\",\"left_support\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"近期日程\",\"icon\":\"resources/base/media/calendar_fill.svg\",\"fontSize\":12}]\n[\"right_body\",\"EventCard\",{\"items\":[{\"title\":{\"path\":\"/data/calendar/events/0/title\"},\"time\":{\"path\":\"/data/calendar/events/0/dtStart\"}},{\"title\":{\"path\":\"/data/calendar/events/1/title\"},\"time\":{\"path\":\"/data/calendar/events/1/dtStart\"}}],\"density\":\"compact\"}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/daily/0/weekday\",\"星期四\"]\n[\"/data/weather/daily/0/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/calendar/events/0/title\",\"项目例会\"]\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/data/calendar/events/1/title\",\"项目例会\"]\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]\n[\"/data/calendar/events/1/entityId\",\"example-event-002\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "语义布局不符合合同：节点 left：当前父区域不支持 Region.variant（实际为 'title-hero-support-action'）；紧凑版 Region 允许的变体：center, title-content, title-content-action, title-hero-support。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+    }
+  ]
+}
+```
+```repair-2
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"left_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_support\",\"SecondaryBody\",{\"items\":[{\"label\":\"预报 \",\"value\":\"{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}\"}],\"fontSize\":14}]\n[\"left_content\",\"Group\",{\"variant\":\"hero-support\"},[\"left_primary\",\"left_support\"]]\n[\"left_action\",\"PillButton\",{\"label\":\"查看天气\",\"icon\":\"resources/base/media/ic_weather_monochrome.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_content\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"近期日程\",\"icon\":\"resources/base/media/calendar_fill.svg\",\"fontSize\":12}]\n[\"right_body\",\"EventCard\",{\"items\":[{\"title\":{\"path\":\"/data/calendar/events/0/title\"},\"time\":{\"path\":\"/data/calendar/events/0/dtStart\"}},{\"title\":{\"path\":\"/data/calendar/events/1/title\"},\"time\":{\"path\":\"/data/calendar/events/1/dtStart\"}}],\"density\":\"compact\"}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/daily/0/weekday\",\"星期四\"]\n[\"/data/weather/daily/0/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/calendar/events/0/title\",\"项目例会\"]\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/data/calendar/events/1/title\",\"项目例会\"]\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]\n[\"/data/calendar/events/1/entityId\",\"example-event-002\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component left: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__left__sub=122vp+margin(0vp), gaps=0vp.",
+      "compactDiagnostics": [
+        {
+          "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+          "validationClass": "semantic",
+          "category": "layout",
+          "severity": "error",
+          "message": "component left: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Occupancy: __layout__left__sub=122vp+margin(0vp), gaps=0vp.",
+          "legacyMessage": "component left: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__left__sub=122vp+margin(0vp), gaps=0vp.",
+          "expected": {
+            "maximumHeight": 110.0,
+            "heightTolerance": 2.0,
+            "preserveFixedDesignSizes": true,
+            "preserveRequiredTextAndActions": true,
+            "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+          },
+          "actual": {
+            "minimumRequiredHeight": 122.0,
+            "overflow": 12.0,
+            "occupancy": "__layout__left__sub=122vp+margin(0vp), gaps=0vp",
+            "secondaryBodyFits": [
+              {
+                "componentId": "left_support",
+                "parentId": "left",
+                "actualRowCount": 1,
+                "maxRetainedRowCount": 0,
+                "effectiveColumnCount": 1,
+                "rowHeights": [
+                  24.0
+                ],
+                "rowSpacing": 2.0,
+                "directlyFitsItemIndexes": [],
+                "doesNotFitItemIndexes": [
+                  0
+                ],
+                "parentAvailableHeight": 110.0
+              }
+            ]
+          },
+          "evidenceSource": "expanded",
+          "componentId": "left",
+          "sourceLine": 2,
+          "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+        }
+      ],
+      "capacityFits": [
+        {
+          "componentId": "left_support",
+          "componentType": "SecondaryBody",
+          "actualItemCount": 1,
+          "actualRowCount": 1,
+          "maxRetainedRowCount": 0,
+          "effectiveColumnCount": 1,
+          "rowHeights": [
+            24.0
+          ],
+          "rowSpacing": 2.0,
+          "parentId": "left",
+          "parentAvailableHeight": 110.0,
+          "directlyFits": [],
+          "doesNotFit": [
+            {
+              "itemIndex": 0,
+              "value": {
+                "label": "预报 ",
+                "value": "{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"
+              },
+              "planFacts": [
+                {
+                  "factIndex": 3,
+                  "requirement": "展示第一天天气预报的星期与温度范围",
+                  "priority": "must"
+                },
+                {
+                  "factIndex": 4,
+                  "requirement": "展示第一天天气预报的温度范围",
+                  "priority": "must"
+                }
+              ]
+            }
+          ],
+          "overflowItemCount": 1,
+          "overflowFactCount": 2,
+          "scope": "currentComponentItemsOnly",
+          "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。"
+        }
+      ]
+    },
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component __layout__left__sub: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_title=12vp+margin(0vp), __layout__left__body=62vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp.",
+      "compactDiagnostics": [
+        {
+          "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+          "validationClass": "semantic",
+          "category": "layout",
+          "severity": "error",
+          "message": "component __layout__left__sub: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Occupancy: left_title=12vp+margin(0vp), __layout__left__body=62vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp.",
+          "legacyMessage": "component __layout__left__sub: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_title=12vp+margin(0vp), __layout__left__body=62vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp.",
+          "expected": {
+            "maximumHeight": 110.0,
+            "heightTolerance": 2.0,
+            "preserveFixedDesignSizes": true,
+            "preserveRequiredTextAndActions": true,
+            "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+          },
+          "actual": {
+            "minimumRequiredHeight": 122.0,
+            "overflow": 12.0,
+            "occupancy": "left_title=12vp+margin(0vp), __layout__left__body=62vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp",
+            "secondaryBodyFits": [
+              {
+                "componentId": "left_support",
+                "parentId": "__layout__left__sub",
+                "actualRowCount": 1,
+                "maxRetainedRowCount": 0,
+                "effectiveColumnCount": 1,
+                "rowHeights": [
+                  24.0
+                ],
+                "rowSpacing": 2.0,
+                "directlyFitsItemIndexes": [],
+                "doesNotFitItemIndexes": [
+                  0
+                ],
+                "parentAvailableHeight": 110.0
+              }
+            ]
+          },
+          "evidenceSource": "expanded",
+          "componentId": "left",
+          "sourceLine": 2,
+          "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+        }
+      ]
+    },
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component __layout__left__body: vertical layout requires at least 62vp within 50vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_content=62vp+margin(0vp), gaps=0vp.",
+      "compactDiagnostics": [
+        {
+          "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+          "validationClass": "semantic",
+          "category": "layout",
+          "severity": "error",
+          "message": "component __layout__left__body: vertical layout requires at least 62vp within 50vp; it overflows by 12vp. Occupancy: left_content=62vp+margin(0vp), gaps=0vp.",
+          "legacyMessage": "component __layout__left__body: vertical layout requires at least 62vp within 50vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_content=62vp+margin(0vp), gaps=0vp.",
+          "expected": {
+            "maximumHeight": 50.0,
+            "heightTolerance": 2.0,
+            "preserveFixedDesignSizes": true,
+            "preserveRequiredTextAndActions": true,
+            "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+          },
+          "actual": {
+            "minimumRequiredHeight": 62.0,
+            "overflow": 12.0,
+            "occupancy": "left_content=62vp+margin(0vp), gaps=0vp",
+            "secondaryBodyFits": [
+              {
+                "componentId": "left_support",
+                "parentId": "__layout__left__body",
+                "actualRowCount": 1,
+                "maxRetainedRowCount": 0,
+                "effectiveColumnCount": 1,
+                "rowHeights": [
+                  24.0
+                ],
+                "rowSpacing": 2.0,
+                "directlyFitsItemIndexes": [],
+                "doesNotFitItemIndexes": [
+                  0
+                ],
+                "parentAvailableHeight": 50.0
+              }
+            ]
+          },
+          "evidenceSource": "expanded",
+          "componentId": "left",
+          "sourceLine": 2,
+          "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+        }
+      ]
+    },
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "/data/calendar/events/1/entityId: path is not declared by TaskSpec.dataModelSchema; remove it or use a declared field.",
+      "compactDiagnostics": [
+        {
+          "code": "COMPACT_CROSS_FILE_UNDECLARED_PATH",
+          "validationClass": "semantic",
+          "category": "cross_file",
+          "severity": "error",
+          "message": "路径 /data/calendar/events/1/entityId 未在本轮数据 schema 中声明。",
+          "legacyMessage": "/data/calendar/events/1/entityId: path is not declared by TaskSpec.dataModelSchema; remove it or use a declared field.",
+          "expected": {
+            "declaredByTaskSchema": true
+          },
+          "actual": {
+            "path": "/data/calendar/events/1/entityId",
+            "declared": false
+          },
+          "evidenceSource": "validation",
+          "sourceLine": 22,
+          "fixHint": "对照本轮已声明的数据字段修正引用，保留用户必需内容；不要改写服务端的数据声明。"
+        }
+      ]
+    }
+  ]
+}
+```
+```repair-3
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-content-side-slots\",\"orientation\":\"content-left\"},[\"content\",\"upper\",\"lower\"]]\n[\"content_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"content_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":\"{{ ${/data/weather/current/condition} + ' | ' + ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}\",\"fontSize\":18}]\n[\"content\",\"Region\",{\"variant\":\"title-content\"},[\"content_title\",\"content_primary\"]]\n[\"upper\",\"InfoBlock\",{\"variant\":\"slot\",\"primaryText\":{\"path\":\"/data/calendar/events/0/title\"},\"secondaryText\":\"{{ ${/data/calendar/events/0/dtStart} }}\"}]\n[\"lower\",\"CardButton\",{\"label\":\"查看天气\",\"icon\":\"resources/base/media/ic_weather_monochrome.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/daily/0/weekday\",\"星期四\"]\n[\"/data/weather/daily/0/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/calendar/events/0/title\",\"项目例会\"]\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/data/calendar/events/1/title\",\"项目例会\"]\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component content_primary_secondary: text width overflow; complete text '多云 | 星期四 25℃ / 32℃' at original font 12 needs about 150vp in one line, but its allocated text area is 132vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight."
+    }
+  ]
+}
+```
+```repair-4
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"left_body\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_action\",\"PillButton\",{\"label\":\"查看天气\",\"icon\":\"resources/base/media/ic_weather_monochrome.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_body\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"近期日程\",\"icon\":\"resources/base/media/calendar_fill.svg\",\"fontSize\":12}]\n[\"right_body\",\"EventCard\",{\"items\":[{\"title\":{\"path\":\"/data/calendar/events/0/title\"},\"time\":{\"path\":\"/data/calendar/events/0/dtStart\"}},{\"title\":{\"path\":\"/data/calendar/events/1/title\"},\"time\":{\"path\":\"/data/calendar/events/1/dtStart\"}}],\"density\":\"compact\"}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/daily/0/weekday\",\"星期四\"]\n[\"/data/weather/daily/0/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/calendar/events/0/title\",\"项目例会\"]\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/data/calendar/events/1/title\",\"项目例会\"]\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]",
+  "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Row\",\"children\":[\"left\",\"right\"],\"itemMargin\":12,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"center\",\"justifyContent\":\"start\"}},{\"id\":\"left\",\"component\":\"Column\",\"children\":[\"__layout__left__sub\"],\"styles\":{\"height\":\"matchParent\",\"layoutWeight\":1,\"padding\":8,\"borderRadius\":16,\"clip\":true,\"backgroundColor\":\"@theme:panel/1\"},\"itemMargin\":0},{\"id\":\"__layout__left__sub\",\"component\":\"Column\",\"children\":[\"left_title\",\"__layout__left__body\",\"left_action\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":110.0}},{\"id\":\"left_title\",\"component\":\"Row\",\"children\":[\"left_title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"left_title_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/location/prefectureName} }}\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"__layout__left__body\",\"component\":\"Column\",\"children\":[\"left_body\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"left_body\",\"component\":\"Column\",\"children\":[\"left_body_main\",\"left_body_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"left_body_main\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/temperatureText} }}\",\"styles\":{\"height\":18,\"fontSize\":18,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"left_body_secondary\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/condition} }}\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"left_action\",\"component\":\"Row\",\"children\":[\"left_action_icon\",\"left_action_text\"],\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}],\"itemMargin\":8,\"styles\":{\"height\":36,\"borderRadius\":30,\"padding\":0,\"flexShrink\":0,\"width\":\"matchParent\",\"backgroundColor\":\"@theme:componentSecondary/1\",\"justifyContent\":\"center\",\"alignItems\":\"center\"}},{\"id\":\"left_action_icon\",\"component\":\"Image\",\"src\":\"resources/base/media/ic_weather_monochrome.svg\",\"styles\":{\"width\":20,\"height\":20,\"objectFit\":\"contain\",\"flexShrink\":0,\"fillColor\":\"@theme:primary/1\"}},{\"id\":\"left_action_text\",\"component\":\"Text\",\"content\":\"查看天气\",\"styles\":{\"maxWidth\":96,\"height\":17,\"fontSize\":14,\"fontWeight\":500,\"textAlign\":\"center\",\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"right\",\"component\":\"Column\",\"children\":[\"__layout__right__sub\"],\"styles\":{\"height\":\"matchParent\",\"layoutWeight\":1,\"padding\":8,\"borderRadius\":16,\"clip\":true,\"backgroundColor\":\"@theme:panel/1\"},\"itemMargin\":0},{\"id\":\"__layout__right__sub\",\"component\":\"Column\",\"children\":[\"right_title\",\"__layout__right__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":110.0}},{\"id\":\"right_title\",\"component\":\"Row\",\"children\":[\"right_title_title\",\"right_title_icon\"],\"styles\":{\"width\":\"matchParent\",\"height\":20,\"flexShrink\":0,\"justifyContent\":\"spaceBetween\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"right_title_title\",\"component\":\"Text\",\"content\":\"近期日程\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":1,\"width\":\"wrapContent\",\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0},\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"right_title_icon\",\"component\":\"Image\",\"src\":\"resources/base/media/calendar_fill.svg\",\"styles\":{\"width\":20,\"height\":20,\"objectFit\":\"contain\",\"flexShrink\":0,\"fillColor\":\"@theme:graphicPrimary/1\"}},{\"id\":\"__layout__right__body\",\"component\":\"Column\",\"children\":[\"right_body\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"end\",\"layoutWeight\":1}},{\"id\":\"right_body\",\"component\":\"Column\",\"children\":[\"right_body_item0\",\"right_body_item1\"],\"itemMargin\":4,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"clip\":true,\"height\":68}},{\"id\":\"right_body_item0\",\"component\":\"Row\",\"children\":[\"right_body_item0_rail\",\"right_body_item0_texts\"],\"itemMargin\":7,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"top\",\"flexShrink\":0,\"clip\":true,\"height\":32}},{\"id\":\"right_body_item0_rail\",\"component\":\"Column\",\"children\":[\"right_body_item0_rail_dot\",\"right_body_item0_rail_line\"],\"itemMargin\":4,\"styles\":{\"width\":8,\"padding\":{\"top\":4,\"bottom\":0},\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0,\"height\":32,\"clip\":true}},{\"id\":\"right_body_item0_rail_dot\",\"component\":\"Divider\",\"styles\":{\"width\":8,\"height\":8,\"borderRadius\":4,\"borderWidth\":1.5,\"strokeWidth\":0,\"color\":\"@theme:transparent/1\",\"flexShrink\":0,\"borderColor\":\"@theme:primary/1\",\"backgroundColor\":\"@theme:transparent/1\"}},{\"id\":\"right_body_item0_rail_line\",\"component\":\"Divider\",\"styles\":{\"width\":1,\"strokeWidth\":1,\"vertical\":true,\"flexShrink\":0,\"height\":16,\"color\":\"@theme:primary/0.6\"}},{\"id\":\"right_body_item0_texts\",\"component\":\"Column\",\"children\":[\"right_body_item0_title\",\"right_body_item0_meta\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"height\":32}},{\"id\":\"right_body_item0_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/0/title} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0,\"minHeight\":16},\"height\":16,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_item0_time\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/0/dtStart} }}\",\"styles\":{\"width\":\"matchParent\",\"height\":14,\"fontSize\":10,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0},\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_item0_meta\",\"component\":\"Row\",\"children\":[\"right_body_item0_time\"],\"itemMargin\":4,\"styles\":{\"width\":\"matchParent\",\"height\":14,\"alignItems\":\"center\",\"flexShrink\":0,\"clip\":true}},{\"id\":\"right_body_item1\",\"component\":\"Row\",\"children\":[\"right_body_item1_rail\",\"right_body_item1_texts\"],\"itemMargin\":7,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"top\",\"flexShrink\":0,\"clip\":true,\"height\":32}},{\"id\":\"right_body_item1_rail\",\"component\":\"Column\",\"children\":[\"right_body_item1_rail_dot\",\"right_body_item1_rail_line\"],\"itemMargin\":4,\"styles\":{\"width\":8,\"padding\":{\"top\":4,\"bottom\":0},\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0,\"height\":32,\"clip\":true}},{\"id\":\"right_body_item1_rail_dot\",\"component\":\"Divider\",\"styles\":{\"width\":8,\"height\":8,\"borderRadius\":4,\"borderWidth\":1.5,\"strokeWidth\":0,\"color\":\"@theme:transparent/1\",\"flexShrink\":0,\"borderColor\":\"@theme:primary/1\",\"backgroundColor\":\"@theme:transparent/1\"}},{\"id\":\"right_body_item1_rail_line\",\"component\":\"Divider\",\"styles\":{\"width\":1,\"strokeWidth\":1,\"vertical\":true,\"flexShrink\":0,\"height\":16,\"color\":\"@theme:primary/0.6\"}},{\"id\":\"right_body_item1_texts\",\"component\":\"Column\",\"children\":[\"right_body_item1_title\",\"right_body_item1_meta\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"height\":32}},{\"id\":\"right_body_item1_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/1/title} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0,\"minHeight\":16},\"height\":16,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_item1_time\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/1/dtStart} }}\",\"styles\":{\"width\":\"matchParent\",\"height\":14,\"fontSize\":10,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0},\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_item1_meta\",\"component\":\"Row\",\"children\":[\"right_body_item1_time\"],\"itemMargin\":4,\"styles\":{\"width\":\"matchParent\",\"height\":14,\"alignItems\":\"center\",\"flexShrink\":0,\"clip\":true}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"weather\":{\"location\":{\"prefectureName\":\"上海市\",\"cityCode\":\"60814\"},\"current\":{\"temperatureText\":\"29℃\",\"condition\":\"多云\"},\"daily\":[{\"weekday\":\"星期四\",\"temperatureRangeText\":\"25℃ / 32℃\"}]},\"calendar\":{\"events\":[{\"title\":\"项目例会\",\"dtStart\":\"14:00\",\"entityId\":\"example-event-001\"},{\"title\":\"项目例会\",\"dtStart\":\"14:00\"}]}}}}}",
+  "validationErrors": []
+}
+```

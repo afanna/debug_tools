@@ -1,0 +1,5 @@
+["root","Layout",{"layout":"S-title-dual-content"},["title","primary","support"]]
+["title","SingleLineTitle",{"title":"退休倒计时","fontSize":12}]
+["primary","EmphasizedData",{"value":{"path":"/data/countdown/countdownDays"},"unit":"天","fontSize":30}]
+["support","SecondaryBody",{"items":[{"label":"目标日期","value":"2034 年 9 月 30 日","maxLines":2}],"columns":1,"fontSize":12}]
+["/data/countdown/countdownDays",30]

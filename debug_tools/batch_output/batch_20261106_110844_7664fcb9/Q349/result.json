@@ -1,0 +1,21 @@
+{
+  "id": "Q349",
+  "fileName": "Q349.json",
+  "title": "异常天气关怀",
+  "query": "生成一个在异常天气时能对家人进行关怀提醒的卡片，卡片上显示天气和温度的变化，具备天气预警功能，有一个可以直接联系家人的电话按钮，电话号码是15251852906",
+  "size": "2x4",
+  "sequence": 29,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 8655.73,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 94,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 8649.71,
+  "uid": "batch-7664fcb9-00029-000",
+  "finalAttempt": 0
+}

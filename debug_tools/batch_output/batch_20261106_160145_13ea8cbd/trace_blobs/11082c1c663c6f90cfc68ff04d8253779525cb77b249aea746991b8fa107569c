@@ -1,0 +1,8 @@
+{
+  "errors": [
+    "Plan action is missing from visible DSL: 点击打开备忘录查看打卡记录 (event.viewNote). Copy the complete call and args from the matching TaskSpec event candidate."
+  ],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": []
+}

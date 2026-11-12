@@ -1,0 +1,62 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.viewCalendarEvent",
+        "assetId": "asset.alarm_fill_1"
+      }
+    ],
+    "title": {
+      "assetId": "asset.airplane_fill_1"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "priority": "must",
+      "requirement": "展示航班号 FU6686",
+      "text": "航班号FU6686"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "priority": "must",
+      "requirement": "展示航线：郑州新郑国际机场→厦门高崎国际机场",
+      "text": "郑州新郑国际机场→厦门高崎国际机场"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "priority": "must",
+      "requirement": "展示计划出港时间 2026-11-01 22:40",
+      "text": "计划出港2026-11-01 22:40"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "priority": "must",
+      "requirement": "展示计划到港时间 2026-11-02 00:50",
+      "text": "计划到港2026-11-02 00:50"
+    },
+    {
+      "actionId": "event.viewCalendarEvent",
+      "componentHints": [
+        "PillButton",
+        "CardButton"
+      ],
+      "priority": "must",
+      "requirement": "点击查看该日程详情"
+    }
+  ],
+  "layoutHints": [
+    "W-content-side-slots"
+  ]
+}

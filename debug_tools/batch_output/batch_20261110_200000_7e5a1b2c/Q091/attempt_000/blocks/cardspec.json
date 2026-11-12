@@ -1,0 +1,22 @@
+{
+  "title": "结婚纪念日倒计时",
+  "description": "我们2020年5月20日结婚，帮我做每年结婚纪念日的倒计时卡。",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetDateCounter",
+      "arguments": {
+        "targetDate": "2020-05-20",
+        "repeat": {
+          "unit": "year"
+        }
+      },
+      "writeResultTo": "/data/dateCounter"
+    }
+  ]
+}

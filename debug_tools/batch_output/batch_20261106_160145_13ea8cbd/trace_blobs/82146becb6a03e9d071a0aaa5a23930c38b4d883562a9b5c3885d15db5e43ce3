@@ -1,0 +1,25 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "距离2026年12月1日的剩余天数，数值后追加“天”"
+    },
+    {
+      "componentHints": [
+        "DataDisplay",
+        "SecondaryBody"
+      ],
+      "priority": "must",
+      "requirement": "目标日期为2026年12月1日",
+      "text": "2026年12月1日"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

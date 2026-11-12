@@ -1,0 +1,21 @@
+{
+  "id": "Q436",
+  "fileName": "Q436.json",
+  "title": "倒计时",
+  "query": "做一张倒计时卡片，显示距离目标日期的天数。本轮卡片静态内容（用作展示的外部事实）：倒计时卡片",
+  "size": "2x2",
+  "sequence": 24,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4438.35,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4423.61,
+  "uid": "batch-13ea8cbd-00024-000",
+  "finalAttempt": 0
+}

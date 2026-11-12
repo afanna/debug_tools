@@ -1,0 +1,22 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 周三至周日三餐具体安排未展示.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 部分关键提醒（饮水、加餐、少油炸等）未全部展示.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item0_secondaryText: static text exceeds its 252vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item1_secondaryText: static text exceeds its 252vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  }
+]

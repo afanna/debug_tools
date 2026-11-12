@@ -1,0 +1,9 @@
+{
+  "errors": [
+    "Plan fact is missing from visible DSL: 耳机左耳电量 (/data/earphone/leftBatteryLevel).",
+    "Plan fact is missing from visible DSL: 耳机右耳电量 (/data/earphone/rightBatteryLevel)."
+  ],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [],
+  "warnings": []
+}

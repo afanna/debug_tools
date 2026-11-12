@@ -1,0 +1,19 @@
+{
+  "title": "退休倒计时",
+  "description": "距离退休还有",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2034-09-30"
+      },
+      "writeResultTo": "/data/countdown"
+    }
+  ]
+}

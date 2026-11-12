@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "batch-postprocess-execution-v2",
+  "executionId": "exec_0befad308fce",
+  "runId": "batch_20261106_160145_13ea8cbd",
+  "status": "partial",
+  "createdAt": "2026-11-06T08:02:10.750861Z",
+  "updatedAt": "2026-11-06T08:06:58.336267Z",
+  "startedAt": "2026-11-06T08:06:31.650539Z",
+  "finishedAt": "2026-11-06T08:06:58.338267Z",
+  "plugins": [
+    {
+      "id": "browser-capture",
+      "name": "浏览器截图",
+      "version": "3.0.0",
+      "apiVersion": "batch-postprocess-v2",
+      "status": "failed",
+      "config": {},
+      "sampleCount": 0,
+      "counts": {
+        "skipped": 0,
+        "partial": 0,
+        "success": 0,
+        "failed": 0
+      },
+      "datasetResult": {
+        "status": "failed",
+        "summary": "ToolchainError: 显式配置的 Node.js 不存在：C:\\Tools\\DevEco Studio\\tools\\node\\node.exe",
+        "facts": {},
+        "artifactCount": 0
+      },
+      "error": "ToolchainError: 显式配置的 Node.js 不存在：C:\\Tools\\DevEco Studio\\tools\\node\\node.exe"
+    },
+    {
+      "id": "data-analysis",
+      "name": "数据分析",
+      "version": "3.0.0",
+      "apiVersion": "batch-postprocess-v2",
+      "status": "partial",
+      "config": {},
+      "sampleCount": 107,
+      "counts": {
+        "skipped": 0,
+        "partial": 4,
+        "success": 103,
+        "failed": 0
+      },
+      "datasetResult": {
+        "status": "success",
+        "summary": "已分析 107 个样本，缺失指标保持未知",
+        "facts": {
+          "sampleCount": 107
+        },
+        "artifactCount": 4
+      },
+      "progress": {
+        "phase": "done",
+        "completed": 1,
+        "total": 1,
+        "message": "后处理插件已完成"
+      }
+    },
+    {
+      "id": "browser-gallery",
+      "name": "浏览器渲染画廊",
+      "version": "3.0.0",
+      "apiVersion": "batch-postprocess-v2",
+      "status": "failed",
+      "config": {},
+      "sampleCount": 0,
+      "counts": {
+        "skipped": 0,
+        "partial": 0,
+        "success": 0,
+        "failed": 0
+      },
+      "datasetResult": {
+        "status": "failed",
+        "summary": "ValueError: 后处理插件依赖执行失败: browser-capture",
+        "facts": {},
+        "artifactCount": 0
+      },
+      "error": "ValueError: 后处理插件依赖执行失败: browser-capture"
+    }
+  ],
+  "error": ""
+}

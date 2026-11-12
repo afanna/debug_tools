@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "summary": "ToolchainError: 显式配置的 Node.js 不存在：C:\\Tools\\DevEco Studio\\tools\\node\\node.exe",
+  "facts": {},
+  "artifacts": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q485",
+  "fileName": "Q485.json",
+  "title": "我的备忘录",
+  "query": "生成一个我的备忘录卡片，显示备忘录笔记的标题和正文内容",
+  "size": "2x2",
+  "sequence": 73,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4687.22,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4666.22,
+  "uid": "batch-13ea8cbd-00073-000",
+  "finalAttempt": 0
+}

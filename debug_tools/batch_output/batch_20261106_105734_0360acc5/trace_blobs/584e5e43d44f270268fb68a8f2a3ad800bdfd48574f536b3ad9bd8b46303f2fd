@@ -1,0 +1,12 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 当前公历日期 (/data/currentTime/currentDate).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 当前星期 (/data/currentTime/dayOfWeek).",
+    "stage": "validation"
+  }
+]

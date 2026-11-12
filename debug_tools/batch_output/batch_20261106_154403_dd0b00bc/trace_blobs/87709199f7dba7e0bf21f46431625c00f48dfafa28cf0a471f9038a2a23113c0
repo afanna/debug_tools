@@ -1,0 +1,22 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 待办明细标题 (/data/memo/todos/0/title).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 待办明细标题 (/data/memo/todos/1/title).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 待办完成状态 (/data/memo/todos/0/isComplete).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 待办完成状态 (/data/memo/todos/1/isComplete).",
+    "stage": "validation"
+  }
+]

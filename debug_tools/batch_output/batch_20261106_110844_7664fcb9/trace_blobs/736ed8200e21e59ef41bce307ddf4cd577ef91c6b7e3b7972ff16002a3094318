@@ -1,0 +1,31 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:cf1da42d9cbb70e2779138adc7b85c7b320bfc66754135a88f7bef4078b3637d",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_ad996729-7674-4e95-9dd7-20dc921e8991.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.ic_weatherWarning",
+      "asset.ic_call_bule"
+    ],
+    "data": [
+      "ViewWeather"
+    ],
+    "event": [
+      {
+        "args": {
+          "intentName": "CallPhone",
+          "params": {
+            "phoneNumber": "15251852906"
+          }
+        },
+        "call": "clickToApi",
+        "description": "点击跳转至华为电话应用中指定号码的拨号界面。",
+        "id": "event.call.phone"
+      }
+    ]
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x4"
+}

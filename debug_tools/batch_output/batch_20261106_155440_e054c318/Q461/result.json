@@ -1,0 +1,21 @@
+{
+  "id": "Q461",
+  "fileName": "Q461.json",
+  "title": "时间卡片",
+  "query": "生成一个漂亮的桌面时间卡片，显示当前时间、日期、星期和农历，点击打开闹钟",
+  "size": "2x2",
+  "sequence": 51,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2044.83,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00051-000",
+  "finalAttempt": 0
+}

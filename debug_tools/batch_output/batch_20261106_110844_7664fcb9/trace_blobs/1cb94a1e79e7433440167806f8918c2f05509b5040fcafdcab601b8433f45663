@@ -1,0 +1,233 @@
+{
+  "cardSpec": {
+    "dataBindings": [
+      {
+        "arguments": {
+          "forecastDays": 5
+        },
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      }
+    ],
+    "description": "多日天气预报",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "suggestSize": "2x4",
+    "title": "多日天气"
+  },
+  "effectiveCapabilities": {
+    "asset": [],
+    "data": [
+      "ViewWeather"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+        "id": "event.open.weather"
+      }
+    ]
+  },
+  "generationPlan": {
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "forecastDays": 5
+        },
+        "candidateOutputFields": [
+          "/current/temperatureText",
+          "/current/condition",
+          "/daily/0/weekday",
+          "/daily/0/condition",
+          "/daily/0/temperatureRangeText",
+          "/daily/1/weekday",
+          "/daily/1/condition",
+          "/daily/1/temperatureRangeText",
+          "/daily/2/weekday",
+          "/daily/2/condition",
+          "/daily/2/temperatureRangeText",
+          "/daily/3/weekday",
+          "/daily/3/condition",
+          "/daily/3/temperatureRangeText",
+          "/daily/4/weekday",
+          "/daily/4/condition",
+          "/daily/4/temperatureRangeText"
+        ],
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Weather_CityCode",
+            "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.weather"
+      }
+    ]
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"title\",\"__layout__root__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"linearGradient\":{\"direction\":\"RightBottom\",\"colors\":[[\"#FFCBDDFE\",0],[\"#FFF1F6FE\",1]]}}},{\"id\":\"title\",\"component\":\"Row\",\"children\":[\"title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"title_title\",\"component\":\"Text\",\"content\":\"未来三天天气\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"#991F4799\"}},{\"id\":\"__layout__root__body\",\"component\":\"Column\",\"children\":[\"__layout__root__primary\",\"__layout__root__details\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__root__primary\",\"component\":\"Column\",\"children\":[\"primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"primary\",\"component\":\"Column\",\"children\":[\"primary_main\",\"primary_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"primary_main\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/temperatureText} }}\",\"styles\":{\"height\":18,\"fontSize\":18,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"#FF1F4799\",\"textOverflow\":\"clip\"}},{\"id\":\"primary_secondary\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/condition} }}\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"#FF1F4799\",\"textOverflow\":\"clip\"}},{\"id\":\"__layout__root__details\",\"component\":\"Column\",\"children\":[\"details\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1},\"itemMargin\":0},{\"id\":\"details\",\"component\":\"Row\",\"children\":[\"details_item0\",\"details_item1\",\"details_item2\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"alignItems\":\"top\",\"justifyContent\":\"start\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minHeight\":48}}},{\"id\":\"details_item0\",\"component\":\"Column\",\"children\":[\"details_item0_label_slot\",\"details_item0_value_slot\"],\"itemMargin\":2,\"styles\":{\"height\":\"matchParent\",\"backgroundColor\":\"#99FFFFFF\",\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0,\"minHeight\":0}}},{\"id\":\"details_item0_label_slot\",\"component\":\"Row\",\"children\":[\"details_item0_label\"],\"styles\":{\"width\":\"matchParent\",\"height\":18,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item0_label\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/condition} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#991F4799\"}},{\"id\":\"details_item0_value_slot\",\"component\":\"Row\",\"children\":[\"details_item0_value\"],\"styles\":{\"width\":\"matchParent\",\"height\":16,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item0_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/daily/0/temperatureRangeText} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":10,\"fontWeight\":500,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#FF1F4799\"}},{\"id\":\"details_item1\",\"component\":\"Column\",\"children\":[\"details_item1_label_slot\",\"details_item1_value_slot\"],\"itemMargin\":2,\"styles\":{\"height\":\"matchParent\",\"backgroundColor\":\"#99FFFFFF\",\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0,\"minHeight\":0}}},{\"id\":\"details_item1_label_slot\",\"component\":\"Row\",\"children\":[\"details_item1_label\"],\"styles\":{\"width\":\"matchParent\",\"height\":18,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item1_label\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/daily/1/weekday} + ' ' + ${/data/weather/daily/1/condition} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#991F4799\"}},{\"id\":\"details_item1_value_slot\",\"component\":\"Row\",\"children\":[\"details_item1_value\"],\"styles\":{\"width\":\"matchParent\",\"height\":16,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item1_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/daily/1/temperatureRangeText} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":10,\"fontWeight\":500,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#FF1F4799\"}},{\"id\":\"details_item2\",\"component\":\"Column\",\"children\":[\"details_item2_label_slot\",\"details_item2_value_slot\"],\"itemMargin\":2,\"styles\":{\"height\":\"matchParent\",\"backgroundColor\":\"#99FFFFFF\",\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0,\"minHeight\":0}}},{\"id\":\"details_item2_label_slot\",\"component\":\"Row\",\"children\":[\"details_item2_label\"],\"styles\":{\"width\":\"matchParent\",\"height\":18,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item2_label\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/daily/2/weekday} + ' ' + ${/data/weather/daily/2/condition} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#991F4799\"}},{\"id\":\"details_item2_value_slot\",\"component\":\"Row\",\"children\":[\"details_item2_value\"],\"styles\":{\"width\":\"matchParent\",\"height\":16,\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item2_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/daily/2/temperatureRangeText} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":10,\"fontWeight\":500,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#FF1F4799\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"weather\":{\"current\":{\"temperatureText\":\"29℃\",\"condition\":\"多云\"},\"daily\":[{\"weekday\":\"星期四\",\"condition\":\"多云\",\"temperatureRangeText\":\"25℃ / 32℃\"},{\"weekday\":\"星期四\",\"condition\":\"多云\",\"temperatureRangeText\":\"25℃ / 32℃\"},{\"weekday\":\"星期四\",\"condition\":\"多云\",\"temperatureRangeText\":\"25℃ / 32℃\"}]}}}}}",
+  "meta": {
+    "apiVersion": "v1",
+    "artifactId": "fa9aface-843f-45eb-b383-7f094e66e431",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "cardSpecVersion": "card-spec-v1",
+    "createdAt": 1793934614122,
+    "dslProtocolVersion": "v0.9",
+    "generationMode": "create",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "skillVersion": "skill-widget-v1",
+    "sourceArtifactDigest": null,
+    "taskSpecVersion": "task-spec-v1"
+  },
+  "removedCapabilities": [],
+  "schemaVersion": "widget-artifact-v2",
+  "taskSpec": {
+    "appVersion": "11.7.8.342",
+    "assetCandidates": [],
+    "dataModelSchema": {
+      "data": {
+        "weather": {
+          "current": {
+            "condition": {
+              "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "temperatureText": {
+              "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+              "sampleValue": "29℃",
+              "type": "string"
+            }
+          },
+          "daily": [
+            {
+              "condition": {
+                "description": "白天天气现象，来源于weather_icon。",
+                "sampleValue": "多云",
+                "type": "string"
+              },
+              "temperatureRangeText": {
+                "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+                "sampleValue": "25℃ / 32℃",
+                "type": "string"
+              },
+              "weekday": {
+                "description": "星期文本，例如“星期日”。",
+                "sampleValue": "星期四",
+                "type": "string"
+              }
+            },
+            {
+              "condition": {
+                "description": "白天天气现象，来源于weather_icon。",
+                "sampleValue": "多云",
+                "type": "string"
+              },
+              "temperatureRangeText": {
+                "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+                "sampleValue": "25℃ / 32℃",
+                "type": "string"
+              },
+              "weekday": {
+                "description": "星期文本，例如“星期日”。",
+                "sampleValue": "星期四",
+                "type": "string"
+              }
+            },
+            {
+              "condition": {
+                "description": "白天天气现象，来源于weather_icon。",
+                "sampleValue": "多云",
+                "type": "string"
+              },
+              "temperatureRangeText": {
+                "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+                "sampleValue": "25℃ / 32℃",
+                "type": "string"
+              },
+              "weekday": {
+                "description": "星期文本，例如“星期日”。",
+                "sampleValue": "星期四",
+                "type": "string"
+              }
+            },
+            {
+              "condition": {
+                "description": "白天天气现象，来源于weather_icon。",
+                "sampleValue": "多云",
+                "type": "string"
+              },
+              "temperatureRangeText": {
+                "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+                "sampleValue": "25℃ / 32℃",
+                "type": "string"
+              },
+              "weekday": {
+                "description": "星期文本，例如“星期日”。",
+                "sampleValue": "星期四",
+                "type": "string"
+              }
+            },
+            {
+              "condition": {
+                "description": "白天天气现象，来源于weather_icon。",
+                "sampleValue": "多云",
+                "type": "string"
+              },
+              "temperatureRangeText": {
+                "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+                "sampleValue": "25℃ / 32℃",
+                "type": "string"
+              },
+              "weekday": {
+                "description": "星期文本，例如“星期日”。",
+                "sampleValue": "星期四",
+                "type": "string"
+              }
+            }
+          ],
+          "location": {
+            "cityCode": {
+              "description": "城市代码，如60814代表青浦区",
+              "sampleValue": "60814",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "eventCandidates": [
+      {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+        "id": "event.open.weather"
+      }
+    ],
+    "size": "2x4",
+    "userQuery": "生成一个桌面天气卡片，显示多日天气预报，展示未来几天的天气情况和温度。"
+  }
+}

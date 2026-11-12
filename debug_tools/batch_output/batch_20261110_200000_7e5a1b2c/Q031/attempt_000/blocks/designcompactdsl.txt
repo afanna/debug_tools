@@ -1,0 +1,7 @@
+["root","Layout",{"layout":"S-title-dual-content"},["title","primary","support"]]
+["title","SingleLineTitle",{"title":"{{ '每周三例会 ' + ${/data/dateCounter/relationText} }}","icon":"resources/base/media/calendar_fill.svg","fontSize":12}]
+["primary","EmphasizedData",{"value":{"path":"/data/dateCounter/days"},"unit":"天","fontSize":30}]
+["support","SecondaryBody",{"items":[{"label":"日期 ","value":{"path":"/data/dateCounter/targetDateText"}}],"fontSize":14}]
+["/data/dateCounter/days",3]
+["/data/dateCounter/relationText","还剩"]
+["/data/dateCounter/targetDateText","2026/11/09"]

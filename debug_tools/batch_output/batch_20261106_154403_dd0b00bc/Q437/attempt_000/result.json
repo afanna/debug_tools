@@ -1,0 +1,30 @@
+{
+  "attempt": 0,
+  "uid": "batch-dd0b00bc-00025-000",
+  "status": "success",
+  "errorCode": "",
+  "error": "",
+  "elapsedMs": 7199.49,
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "blockNames": [
+    "cardspec",
+    "designcompactdsl",
+    "effectivecapabilities",
+    "generationplan",
+    "genui",
+    "meta",
+    "removedcapabilities",
+    "repair-1",
+    "repair-2",
+    "repair-3",
+    "request",
+    "schema",
+    "taskspec"
+  ],
+  "traceStatus": "complete",
+  "traceRecordCount": 138,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7192.36,
+  "completed": true
+}

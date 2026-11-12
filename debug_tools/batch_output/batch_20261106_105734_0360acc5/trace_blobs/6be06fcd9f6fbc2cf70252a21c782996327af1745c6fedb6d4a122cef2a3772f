@@ -1,0 +1,50 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/weather/location/districtName",
+      "priority": "must",
+      "requirement": "显示当前位置（城市/区名称）"
+    },
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "显示实时温度"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "显示当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/airQuality",
+      "priority": "must",
+      "requirement": "显示当前空气质量等级"
+    },
+    {
+      "actionId": "event.call.phone",
+      "componentHints": [
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "一键拨打电话"
+    }
+  ],
+  "layoutHints": [
+    "S-title-primary-secondary-action",
+    "S-title-content-action"
+  ]
+}

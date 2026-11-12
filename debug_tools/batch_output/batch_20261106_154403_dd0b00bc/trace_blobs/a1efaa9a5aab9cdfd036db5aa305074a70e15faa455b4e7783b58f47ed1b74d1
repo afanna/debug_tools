@@ -1,0 +1,19 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "targetDate": "2027-02-06"
+      },
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown"
+    }
+  ],
+  "description": "距离春节还有多少天",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "春节倒计时"
+}

@@ -1,0 +1,19 @@
+{
+  "data": [
+    "GetCurrentTime"
+  ],
+  "event": [
+    {
+      "id": "event.openFlashlight",
+      "description": "点击后打开手机手电筒",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "OpenFlashlight",
+        "params": {}
+      }
+    }
+  ],
+  "asset": [
+    "asset.ic_flashlight"
+  ]
+}

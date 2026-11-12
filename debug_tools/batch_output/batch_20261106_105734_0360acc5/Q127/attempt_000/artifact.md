@@ -1,0 +1,387 @@
+```cardspec
+{
+  "title": "杭州西湖区天气",
+  "description": "查看杭州市西湖区当前天气，点击查看杭州天气详情",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "西湖区",
+        "forecastDays": 1,
+        "prefectureName": "杭州市"
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Row","children":["left","right"],"itemMargin":12,"styles":{"width":"matchParent","height":"matchParent","padding":12,"borderRadius":20,"clip":true,"alignItems":"center","justifyContent":"start","linearGradient":{"direction":"RightBottom","colors":[["#FFCBDDFE",0],["#FFF1F6FE",1]]}}},{"id":"left","component":"Column","children":["__layout__left__sub"],"styles":{"height":"matchParent","layoutWeight":1,"padding":8,"borderRadius":16,"clip":true,"backgroundColor":"#99FFFFFF"},"itemMargin":0},{"id":"__layout__left__sub","component":"Column","children":["left_title","__layout__left__body","left_action"],"itemMargin":6,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":110.0}},{"id":"left_title","component":"Row","children":["left_title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"left_title_title","component":"Text","content":"{{ ${/data/weather/location/prefectureName} }}","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#991F4799"}},{"id":"__layout__left__body","component":"Column","children":["left_body"],"itemMargin":0,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"left_body","component":"Column","children":["left_body_main","left_body_secondary"],"itemMargin":2,"styles":{"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"width":"matchParent"}},{"id":"left_body_main","component":"Text","content":"{{ ${/data/weather/current/temperatureText} }}","styles":{"height":18,"fontSize":18,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"left_body_secondary","component":"Text","content":"{{ ${/data/weather/current/condition} }}","styles":{"height":16,"fontSize":12,"fontWeight":400,"lineHeight":1.3333333333333333,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"left_action","component":"Button","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Weather_CityCode","uri":"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"}}],"label":"查看天气","styles":{"height":36,"borderRadius":30,"padding":0,"flexShrink":0,"width":"matchParent","backgroundColor":"#331F4799","fontColor":"#FF1F4799","fontSize":14,"fontWeight":500,"textAlign":"center"}},{"id":"right","component":"Column","children":["__layout__right__sub"],"styles":{"height":"matchParent","layoutWeight":1,"padding":8,"borderRadius":16,"clip":true,"backgroundColor":"#99FFFFFF"},"itemMargin":0},{"id":"__layout__right__sub","component":"Column","children":["right_title","__layout__right__body"],"itemMargin":6,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":110.0}},{"id":"right_title","component":"Row","children":["right_title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"right_title_title","component":"Text","content":"天气详情","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#991F4799"}},{"id":"__layout__right__body","component":"Column","children":["right_body"],"itemMargin":0,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"end","layoutWeight":1}},{"id":"right_body","component":"Column","children":["right_body_row0","right_body_row1","right_body_row2"],"itemMargin":2,"styles":{"width":"matchParent","alignItems":"start","flexShrink":1}},{"id":"right_body_item0_label","component":"Text","content":"区县","styles":{"height":12,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":0,"lineHeight":1,"fontColor":"#991F4799","textOverflow":"clip"}},{"id":"right_body_item0_value","component":"Text","content":"{{ ${/data/weather/location/districtName} }}","styles":{"height":12.0,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF1F4799","layoutWeight":1,"textOverflow":"clip"}},{"id":"right_body_item0","component":"Row","children":["right_body_item0_label","right_body_item0_value"],"itemMargin":4,"styles":{"height":12.0,"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"right_body_row0","component":"Row","children":["right_body_item0"],"itemMargin":0,"styles":{"width":"matchParent","height":12.0,"alignItems":"start","flexShrink":0}},{"id":"right_body_item1_label","component":"Text","content":"空气质量","styles":{"height":12,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":0,"lineHeight":1,"fontColor":"#991F4799","textOverflow":"clip"}},{"id":"right_body_item1_value","component":"Text","content":"{{ ${/data/weather/current/airQuality} }}","styles":{"height":12.0,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF1F4799","layoutWeight":1,"textOverflow":"clip"}},{"id":"right_body_item1","component":"Row","children":["right_body_item1_label","right_body_item1_value"],"itemMargin":4,"styles":{"height":12.0,"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"right_body_row1","component":"Row","children":["right_body_item1"],"itemMargin":0,"styles":{"width":"matchParent","height":12.0,"alignItems":"start","flexShrink":0}},{"id":"right_body_item2_label","component":"Text","content":"体感","styles":{"height":12,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":0,"lineHeight":1,"fontColor":"#991F4799","textOverflow":"clip"}},{"id":"right_body_item2_value","component":"Text","content":"{{ ${/data/weather/current/feelsLikeC} + '℃' }}","styles":{"height":12.0,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF1F4799","layoutWeight":1,"textOverflow":"clip"}},{"id":"right_body_item2","component":"Row","children":["right_body_item2_label","right_body_item2_value"],"itemMargin":4,"styles":{"height":12.0,"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"right_body_row2","component":"Row","children":["right_body_item2"],"itemMargin":0,"styles":{"width":"matchParent","height":12.0,"alignItems":"start","flexShrink":0}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"data":{"weather":{"location":{"cityCode":"60814","districtName":"西湖区","prefectureName":"杭州市"},"current":{"temperatureText":"29℃","condition":"多云","feelsLikeC":31,"airQuality":"良"}}}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "帮我做个卡片，看杭州市西湖区现在是什么天气，点一下查看杭州天气详情。",
+  "size": "2x4",
+  "appVersion": "11.9.9.300",
+  "eventCandidates": [
+    {
+      "id": "event.open.weather",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Weather_CityCode",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "weather": {
+        "location": {
+          "cityCode": {
+            "type": "string",
+            "description": "城市代码，如60814代表青浦区",
+            "sampleValue": "60814"
+          },
+          "districtName": {
+            "type": "string",
+            "description": "区或县名称",
+            "sampleValue": "青浦区"
+          },
+          "prefectureName": {
+            "type": "string",
+            "description": "城市名称",
+            "sampleValue": "上海市"
+          }
+        },
+        "current": {
+          "temperatureC": {
+            "type": "number",
+            "description": "当前温度的纯数值，单位为摄氏度，返回值不包含单位。若直接用于文本展示，必须在数值后追加“℃”；优先使用 temperatureText。",
+            "sampleValue": 29
+          },
+          "temperatureText": {
+            "type": "string",
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃"
+          },
+          "condition": {
+            "type": "string",
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云"
+          },
+          "feelsLikeC": {
+            "type": "number",
+            "description": "当前体感温度的纯数值，单位为摄氏度，返回值不包含单位。若直接用于文本展示，必须在数值后追加“℃”。",
+            "sampleValue": 31
+          },
+          "humidityPercent": {
+            "type": "number",
+            "description": "当前相对湿度的纯数值百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”。",
+            "sampleValue": 68
+          },
+          "airQuality": {
+            "type": "string",
+            "description": "当前空气质量等级，例如“优”“良”。",
+            "sampleValue": "良"
+          },
+          "windDirection": {
+            "type": "string",
+            "description": "当前风向。",
+            "sampleValue": "东南风"
+          },
+          "windLevel": {
+            "type": "integer",
+            "description": "当前风力等级的纯整数，返回值不包含“级”。若直接用于文本展示，必须在数值后追加“级”。",
+            "sampleValue": 2
+          },
+          "uvIndex": {
+            "type": "string",
+            "description": "当前紫外线等级，例如“弱”“中等”“强”。",
+            "sampleValue": "中等"
+          },
+          "coldLevel": {
+            "type": "string",
+            "description": "感冒指数。",
+            "sampleValue": "低"
+          },
+          "alertLevel": {
+            "type": "string",
+            "description": "预警信息。当前气象预警信息，例如'暴雨橙色预警'、'高温黄色预警'、'台风蓝色预警'。无预警时为空字符串。",
+            "sampleValue": "大风蓝色预警"
+          }
+        },
+        "daily": [
+          {
+            "date": {
+              "type": "string",
+              "description": "预报日期，来源于 day_time。以端侧本次刷新日期为基准，daily[0]为明天日期，daily[1]为后天日期，不包含今天。",
+              "sampleValue": "2026-08-06"
+            },
+            "weekday": {
+              "type": "string",
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四"
+            },
+            "condition": {
+              "type": "string",
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云"
+            },
+            "temperatureRangeText": {
+              "type": "string",
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃"
+            },
+            "rainProbabilityPercent": {
+              "type": "number",
+              "description": "白天降雨概率的百分数数值，返回值不包含单位，例如 20 表示 20%；文本展示必须追加一个“%”，进度组件直接使用数值。",
+              "sampleValue": 20
+            },
+            "airQuality": {
+              "type": "string",
+              "description": "当天空气质量等级。",
+              "sampleValue": "良"
+            },
+            "uvIndex": {
+              "type": "string",
+              "description": "当天紫外线等级。",
+              "sampleValue": "中等"
+            },
+            "coldLevel": {
+              "type": "string",
+              "description": "感冒指数。",
+              "sampleValue": "低"
+            }
+          }
+        ],
+        "updatedAt": {
+          "type": "string",
+          "description": "端侧完成天气查询和归一化的时间。如：2026-06-14 15:30",
+          "sampleValue": "2026-08-06 09:00"
+        }
+      }
+    }
+  },
+  "assetCandidates": []
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "ViewWeather"
+  ],
+  "event": [
+    {
+      "id": "event.open.weather",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Weather_CityCode",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      }
+    }
+  ],
+  "asset": []
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "西湖区",
+        "forecastDays": 1,
+        "prefectureName": "杭州市"
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": []
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.weather",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": []
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "683401aa-d796-480c-96b4-8160f1700ffb",
+  "createdAt": 1793933868123
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"W-split-panels"},["left","right"]]
+["left","Region",{"variant":"title-content-action"},["left_title","left_body","left_action"]]
+["left_title","SingleLineTitle",{"title":{"path":"/data/weather/location/prefectureName"},"fontSize":12}]
+["left_body","EmphasisText",{"mainText":{"path":"/data/weather/current/temperatureText"},"secondaryText":{"path":"/data/weather/current/condition"},"fontSize":18}]
+["left_action","PillButton",{"label":"查看天气","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Weather_CityCode","uri":"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"}}]}]
+["right","Region",{"variant":"title-content"},["right_title","right_body"]]
+["right_title","SingleLineTitle",{"title":"天气详情","fontSize":12}]
+["right_body","SecondaryBody",{"items":[{"label":"区县","value":{"path":"/data/weather/location/districtName"}},{"label":"空气质量","value":{"path":"/data/weather/current/airQuality"}},{"label":"体感","value":"{{ ${/data/weather/current/feelsLikeC} + '℃' }}"}],"separator":" | ","fontSize":14}]
+["/data/weather/location/cityCode","60814"]
+["/data/weather/location/districtName","西湖区"]
+["/data/weather/location/prefectureName","杭州市"]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/current/feelsLikeC",31]
+["/data/weather/current/airQuality","良"]
+```
+```request
+{
+  "content": {
+    "title": "杭州西湖区天气",
+    "description": "查看杭州市西湖区当前天气，点击查看杭州天气详情",
+    "userQuery": "帮我做个卡片，看杭州市西湖区现在是什么天气，点一下查看杭州天气详情。",
+    "size": "2x4",
+    "bundleName": "com.huawei.genui",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "SGT-AL10 7.0.0.111",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "ViewWeather",
+        "arguments": {
+          "districtName": "西湖区",
+          "forecastDays": 1,
+          "prefectureName": "杭州市"
+        },
+        "writeResultTo": "/data/weather"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.weather",
+        "action": {
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Weather_CityCode",
+            "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+          },
+          "call": "clickToDeeplink"
+        }
+      }
+    ],
+    "candidateAssetIds": []
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "SGT-AL10",
+    "prdVer": "11.9.9.300",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261020114814782"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q127-000",
+    "isNew": true,
+    "sessionId": "batch-0360acc5"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0",
+  "cardSize": "2x4",
+  "dataCapabilities": [
+    {
+      "id": "ViewWeather",
+      "inputParams": {
+        "districtName": "西湖区",
+        "forecastDays": 1,
+        "prefectureName": "杭州市"
+      }
+    }
+  ],
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "SGT-AL10 7.0.0.111",
+  "bundleName": "com.huawei.genui",
+  "description": "查看杭州市西湖区当前天气，点击查看杭州天气详情",
+  "userQuery": "帮我做个卡片，看杭州市西湖区现在是什么天气，点一下查看杭州天气详情。",
+  "title": "杭州西湖区天气",
+  "eventCapabilities": [
+    {
+      "actionTemplate": {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        },
+        "call": "clickToDeeplink"
+      },
+      "id": "event.open.weather"
+    }
+  ]
+}
+```
+```repair-1
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"left_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_support\",\"SecondaryBody\",{\"items\":[{\"label\":\"区县\",\"value\":{\"path\":\"/data/weather/location/districtName\"}},{\"label\":\"空气质量\",\"value\":{\"path\":\"/data/weather/current/airQuality\"}}],\"separator\":\" | \",\"fontSize\":14}]\n[\"left_action\",\"PillButton\",{\"label\":\"查看天气\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_primary\",\"left_support\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"体感与湿度\",\"fontSize\":12}]\n[\"right_body\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"体感温度\",\"value\":\"{{ ${/data/weather/current/feelsLikeC} + '℃' }}\"},{\"label\":\"相对湿度\",\"value\":\"{{ ${/data/weather/current/humidityPercent} + '%' }}\"}],\"fontSize\":12}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/location/districtName\",\"西湖区\"]\n[\"/data/weather/location/prefectureName\",\"杭州市\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/current/feelsLikeC\",31]\n[\"/data/weather/current/humidityPercent\",68]\n[\"/data/weather/current/airQuality\",\"良\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "语义布局不符合合同：节点 left：子组件数量应为 [3]，实际为 4；Region.variant='title-content-action' 要求的 children 角色为 [title, content, PillButton]。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+    }
+  ]
+}
+```
+```repair-2
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"left_body\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_action\",\"PillButton\",{\"label\":\"查看天气\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_body\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"天气详情\",\"fontSize\":12}]\n[\"right_body\",\"SecondaryBody\",{\"items\":[{\"label\":\"区县\",\"value\":{\"path\":\"/data/weather/location/districtName\"}},{\"label\":\"空气质量\",\"value\":{\"path\":\"/data/weather/current/airQuality\"}},{\"label\":\"体感\",\"value\":\"{{ ${/data/weather/current/feelsLikeC} + '℃' }}\"}],\"separator\":\" | \",\"fontSize\":14}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/location/districtName\",\"西湖区\"]\n[\"/data/weather/location/prefectureName\",\"杭州市\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/current/feelsLikeC\",31]\n[\"/data/weather/current/airQuality\",\"良\"]",
+  "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Row\",\"children\":[\"left\",\"right\"],\"itemMargin\":12,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"center\",\"justifyContent\":\"start\"}},{\"id\":\"left\",\"component\":\"Column\",\"children\":[\"__layout__left__sub\"],\"styles\":{\"height\":\"matchParent\",\"layoutWeight\":1,\"padding\":8,\"borderRadius\":16,\"clip\":true,\"backgroundColor\":\"@theme:panel/1\"},\"itemMargin\":0},{\"id\":\"__layout__left__sub\",\"component\":\"Column\",\"children\":[\"left_title\",\"__layout__left__body\",\"left_action\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":110.0}},{\"id\":\"left_title\",\"component\":\"Row\",\"children\":[\"left_title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"left_title_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/location/prefectureName} }}\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"__layout__left__body\",\"component\":\"Column\",\"children\":[\"left_body\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"left_body\",\"component\":\"Column\",\"children\":[\"left_body_main\",\"left_body_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"left_body_main\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/temperatureText} }}\",\"styles\":{\"height\":18,\"fontSize\":18,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"left_body_secondary\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/condition} }}\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"left_action\",\"component\":\"Button\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}],\"label\":\"查看天气\",\"styles\":{\"height\":36,\"borderRadius\":30,\"padding\":0,\"flexShrink\":0,\"width\":\"matchParent\",\"backgroundColor\":\"@theme:componentSecondary/1\",\"fontColor\":\"@theme:primary/1\",\"fontSize\":14,\"fontWeight\":500,\"textAlign\":\"center\"}},{\"id\":\"right\",\"component\":\"Column\",\"children\":[\"__layout__right__sub\"],\"styles\":{\"height\":\"matchParent\",\"layoutWeight\":1,\"padding\":8,\"borderRadius\":16,\"clip\":true,\"backgroundColor\":\"@theme:panel/1\"},\"itemMargin\":0},{\"id\":\"__layout__right__sub\",\"component\":\"Column\",\"children\":[\"right_title\",\"__layout__right__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":110.0}},{\"id\":\"right_title\",\"component\":\"Row\",\"children\":[\"right_title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"right_title_title\",\"component\":\"Text\",\"content\":\"天气详情\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"__layout__right__body\",\"component\":\"Column\",\"children\":[\"right_body\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"end\",\"layoutWeight\":1}},{\"id\":\"right_body\",\"component\":\"Column\",\"children\":[\"right_body_row0\",\"right_body_row1\",\"right_body_row2\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"flexShrink\":1}},{\"id\":\"right_body_item0_label\",\"component\":\"Text\",\"content\":\"区县\",\"styles\":{\"height\":12,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"lineHeight\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_item0_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/location/districtName} }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"right_body_item0\",\"component\":\"Row\",\"children\":[\"right_body_item0_label\",\"right_body_item0_value\"],\"itemMargin\":4,\"styles\":{\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"right_body_row0\",\"component\":\"Row\",\"children\":[\"right_body_item0\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":0}},{\"id\":\"right_body_item1_label\",\"component\":\"Text\",\"content\":\"空气质量\",\"styles\":{\"height\":12,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"lineHeight\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_item1_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/airQuality} }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"right_body_item1\",\"component\":\"Row\",\"children\":[\"right_body_item1_label\",\"right_body_item1_value\"],\"itemMargin\":4,\"styles\":{\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"right_body_row1\",\"component\":\"Row\",\"children\":[\"right_body_item1\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":0}},{\"id\":\"right_body_item2_label\",\"component\":\"Text\",\"content\":\"体感\",\"styles\":{\"height\":12,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"lineHeight\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_item2_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/weather/current/feelsLikeC} + '℃' }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"right_body_item2\",\"component\":\"Row\",\"children\":[\"right_body_item2_label\",\"right_body_item2_value\"],\"itemMargin\":4,\"styles\":{\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"right_body_row2\",\"component\":\"Row\",\"children\":[\"right_body_item2\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":0}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"weather\":{\"location\":{\"cityCode\":\"60814\",\"districtName\":\"西湖区\",\"prefectureName\":\"杭州市\"},\"current\":{\"temperatureText\":\"29℃\",\"condition\":\"多云\",\"feelsLikeC\":31,\"airQuality\":\"良\"}}}}}}",
+  "validationErrors": []
+}
+```

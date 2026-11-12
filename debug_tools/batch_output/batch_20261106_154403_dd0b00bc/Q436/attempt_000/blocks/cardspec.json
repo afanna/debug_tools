@@ -1,0 +1,19 @@
+{
+  "title": "倒计时",
+  "description": "倒计时天数",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-11-02"
+      },
+      "writeResultTo": "/data/countdown"
+    }
+  ]
+}

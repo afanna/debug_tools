@@ -1,0 +1,292 @@
+```cardspec
+{
+  "title": "时钟",
+  "description": "时间与闹钟",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Row","children":["content","__layout__root__slots"],"itemMargin":12,"styles":{"width":"matchParent","height":"matchParent","padding":12,"borderRadius":20,"clip":true,"alignItems":"center","justifyContent":"start","linearGradient":{"direction":"RightBottom","colors":[["#FFCBDDFE",0],["#FFF1F6FE",1]]}}},{"id":"content","component":"Column","children":["__layout__content__sub"],"styles":{"height":"matchParent","layoutWeight":1},"itemMargin":0},{"id":"__layout__content__sub","component":"Column","children":["content_title","__layout__content__body"],"itemMargin":8,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":126.0}},{"id":"content_title","component":"Row","children":["content_title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"content_title_title","component":"Text","content":"当前日期","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#991F4799"}},{"id":"__layout__content__body","component":"Column","children":["__layout__content__primary","__layout__content__details"],"itemMargin":8,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"__layout__content__primary","component":"Column","children":["content_primary"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1},"itemMargin":0},{"id":"content_primary","component":"Column","children":["content_primary_main"],"itemMargin":2,"styles":{"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"width":"matchParent"}},{"id":"content_primary_main","component":"Text","content":"{{ ${/data/time/currentDate} }}","styles":{"height":18,"fontSize":18,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"__layout__content__details","component":"Column","children":["content_support"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"content_support","component":"Column","children":["content_support_row0"],"itemMargin":2,"styles":{"width":"matchParent","alignItems":"start","flexShrink":1}},{"id":"content_support_item0_label","component":"Text","content":"农历","styles":{"height":14,"fontSize":14,"fontWeight":400,"maxLines":1,"flexShrink":0,"lineHeight":1,"fontColor":"#991F4799","textOverflow":"clip"}},{"id":"content_support_item0_value","component":"Text","content":"{{ ${/data/time/lunarDate} }}","styles":{"height":14.0,"fontSize":14,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF1F4799","layoutWeight":1,"textOverflow":"clip"}},{"id":"content_support_item0","component":"Row","children":["content_support_item0_label","content_support_item0_value"],"itemMargin":4,"styles":{"height":14.0,"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"content_support_row0","component":"Row","children":["content_support_item0"],"itemMargin":0,"styles":{"width":"matchParent","height":14.0,"alignItems":"start","flexShrink":0}},{"id":"__layout__root__slots","component":"Column","children":["upper_region_shell","lower_region_shell"],"itemMargin":12,"styles":{"height":"matchParent","layoutWeight":1}},{"id":"upper","component":"Column","children":["upper_text"],"itemMargin":0,"styles":{"padding":{"left":8,"right":8},"borderRadius":16,"alignItems":"start","justifyContent":"center","clip":true,"flexShrink":0,"width":"matchParent","height":"matchParent","backgroundColor":"#99FFFFFF"}},{"id":"upper_text","component":"Column","children":["upper_primary","upper_secondary"],"itemMargin":2,"styles":{"alignItems":"start","justifyContent":"start","flexShrink":1,"constraintSize":{"minWidth":0},"height":"matchParent","padding":{"top":8},"width":"matchParent"}},{"id":"upper_primary","component":"Text","content":"{{ ${/data/time/dayOfWeek} }}","styles":{"height":19,"fontSize":14,"fontWeight":700,"maxLines":1,"flexShrink":1,"constraintSize":{"minWidth":0},"width":"matchParent","lineHeight":1.3571428571428572,"fontColor":"#FF1F4799","textOverflow":"clip"}},{"id":"upper_secondary","component":"Text","content":"星期","styles":{"height":16,"fontSize":12,"fontWeight":500,"maxLines":1,"textOverflow":"ellipsis","flexShrink":1,"constraintSize":{"minWidth":0},"width":"matchParent","lineHeight":1.3333333333333333,"fontColor":"#991F4799"}},{"id":"lower","component":"Row","children":["lower_label","lower_visual"],"itemMargin":8,"onClick":[{"call":"clickToDeeplink","args":{"abilityName":"com.huawei.hmos.clock.phone","bundleName":"com.huawei.hmos.clock","intentName":"Clock","uri":""}}],"styles":{"width":"matchParent","height":"matchParent","padding":{"left":12,"right":12,"top":7,"bottom":7},"borderRadius":16,"backgroundColor":"#99FFFFFF","alignItems":"center","justifyContent":"spaceBetween","flexShrink":0,"constraintSize":{"minWidth":0,"minHeight":48}}},{"id":"lower_label","component":"Text","content":"打开闹钟","styles":{"height":20,"fontSize":14,"fontWeight":700,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1,"fontColor":"#FF1F4799"}},{"id":"lower_visual","component":"Image","src":"resources/base/media/alarm_fill_1.svg","styles":{"width":24,"height":24,"objectFit":"contain","flexShrink":0,"fillColor":"#FF1F4799"}},{"id":"upper_region_shell","component":"Column","children":["upper"],"itemMargin":0,"styles":{"layoutWeight":57.0,"width":"matchParent","alignItems":"start","justifyContent":"start"}},{"id":"lower_region_shell","component":"Column","children":["lower"],"itemMargin":0,"styles":{"layoutWeight":57.0,"width":"matchParent","alignItems":"start","justifyContent":"start"}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"data":{"time":{"currentDate":"示例","dayOfWeek":"示例","lunarDate":"示例"}}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "生成一个时钟大卡片，显示当前时间、日期、星期和农历信息，风格类似锁屏界面的时间显示，点击可打开闹钟应用。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.clock.alarm",
+      "description": "打开华为时钟应用首页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "com.huawei.hmos.clock.phone",
+        "bundleName": "com.huawei.hmos.clock",
+        "intentName": "Clock",
+        "uri": ""
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "time": {
+        "currentDate": {
+          "type": "string",
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例"
+        },
+        "dayOfWeek": {
+          "type": "string",
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例"
+        },
+        "lunarDate": {
+          "type": "string",
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "端侧完成该时间数据组装的时间戳字符串，格式如 '2026-07-09 15:30:00'。",
+          "sampleValue": "示例"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.emoji_time",
+      "src": "resources/base/media/emoji_time.png",
+      "description": "样式：蓝色圆形外框与浅蓝表盘组成的写实 3D 时钟，白色指针和刻度清晰，透明背景，原始尺寸为 512×512，PNG 位图需保留原色；适用：当前时间、计时或时长统计相关卡片。不适用：只含时间字段的日程或会议卡片。"
+    },
+    {
+      "id": "asset.alarm_fill_1",
+      "src": "resources/base/media/alarm_fill_1.svg",
+      "description": "样式：默认黑色的单色闹钟实心图标，内部通过镂空表现表盘指针，支持通过 fillColor 与卡片配色统一；适用：闹钟设置、定时提醒、日程提醒。"
+    }
+  ]
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "GetCurrentTime"
+  ],
+  "event": [
+    {
+      "id": "event.open.clock.alarm",
+      "description": "打开华为时钟应用首页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "com.huawei.hmos.clock.phone",
+        "bundleName": "com.huawei.hmos.clock",
+        "intentName": "Clock",
+        "uri": ""
+      }
+    }
+  ],
+  "asset": [
+    "asset.emoji_time",
+    "asset.alarm_fill_1"
+  ]
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time",
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate",
+        "/updatedAt"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.clock.alarm",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "uri": ""
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.emoji_time",
+    "asset.alarm_fill_1"
+  ]
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "a6fb86e5-c7a6-4ca7-8f80-f388af6be25a",
+  "createdAt": 1793952360171
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"W-content-side-slots","orientation":"content-left"},["content","upper","lower"]]
+["content","Region",{"variant":"title-hero-support"},["content_title","content_primary","content_support"]]
+["content_title","SingleLineTitle",{"title":"当前日期","fontSize":12}]
+["content_primary","EmphasisText",{"mainText":{"path":"/data/time/currentDate"},"fontSize":18}]
+["content_support","SecondaryBody",{"items":[{"label":"农历 ","value":{"path":"/data/time/lunarDate"}}],"fontSize":14}]
+["upper","InfoBlock",{"variant":"slot","primaryText":{"path":"/data/time/dayOfWeek"},"secondaryText":"星期","surfaceRole":"panel"}]
+["lower","CardButton",{"label":"打开闹钟","icon":"resources/base/media/alarm_fill_1.svg","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"com.huawei.hmos.clock.phone","bundleName":"com.huawei.hmos.clock","intentName":"Clock","uri":""}}]}]
+["/data/time/currentDate","示例"]
+["/data/time/dayOfWeek","示例"]
+["/data/time/lunarDate","示例"]
+```
+```request
+{
+  "content": {
+    "size": "2x4",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL10P 7.0.0.111",
+    "candidateAssetIds": [
+      "asset.emoji_time",
+      "asset.alarm_fill_1"
+    ],
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.clock.alarm",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "com.huawei.hmos.clock.phone",
+            "bundleName": "com.huawei.hmos.clock",
+            "intentName": "Clock",
+            "uri": ""
+          }
+        }
+      }
+    ],
+    "bundleName": "com.huawei.genui",
+    "description": "时间与闹钟",
+    "userQuery": "生成一个时钟大卡片，显示当前时间、日期、星期和农历信息，风格类似锁屏界面的时间显示，点击可打开闹钟应用。",
+    "title": "时钟",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetCurrentTime",
+        "arguments": {},
+        "writeResultTo": "/data/time",
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate",
+          "/updatedAt"
+        ]
+      }
+    ]
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261101163903816"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q510-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0",
+  "size": "2x4",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "candidateAssetIds": [
+    "asset.emoji_time",
+    "asset.alarm_fill_1"
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.clock.alarm",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "uri": ""
+        }
+      }
+    }
+  ],
+  "bundleName": "com.huawei.genui",
+  "description": "时间与闹钟",
+  "userQuery": "生成一个时钟大卡片，显示当前时间、日期、星期和农历信息，风格类似锁屏界面的时间显示，点击可打开闹钟应用。",
+  "title": "时钟",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time",
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate",
+        "/updatedAt"
+      ]
+    }
+  ]
+}
+```
+```repair-1
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-content-side-slots\",\"orientation\":\"content-left\"},[\"content\",\"upper\",\"lower\"]]\n[\"content_title\",\"SingleLineTitle\",{\"title\":\"当前日期\",\"icon\":\"resources/base/media/emoji_time.png\",\"fontSize\":12}]\n[\"content_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/time/currentDate\"},\"fontSize\":18}]\n[\"content_support\",\"SecondaryBody\",{\"items\":[{\"label\":\"农历 \",\"value\":{\"path\":\"/data/time/lunarDate\"}}],\"fontSize\":14}]\n[\"content\",\"Region\",{\"variant\":\"title-hero-support\"},[\"content_title\",\"content_primary\",\"content_support\"]]\n[\"upper\",\"InfoBlock\",{\"variant\":\"slot\",\"primaryText\":{\"path\":\"/data/time/dayOfWeek\"},\"secondaryText\":\"星期\",\"surfaceRole\":\"panel\"}]\n[\"lower\",\"CardButton\",{\"label\":\"打开闹钟\",\"icon\":\"resources/base/media/alarm_fill_1.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"com.huawei.hmos.clock.phone\",\"bundleName\":\"com.huawei.hmos.clock\",\"intentName\":\"Clock\",\"uri\":\"\"}}]}]\n[\"/data/time/currentDate\",\"示例\"]\n[\"/data/time/dayOfWeek\",\"示例\"]\n[\"/data/time/lunarDate\",\"示例\"]",
+  "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Row\",\"children\":[\"content\",\"__layout__root__slots\"],\"itemMargin\":12,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"center\",\"justifyContent\":\"start\"}},{\"id\":\"content\",\"component\":\"Column\",\"children\":[\"__layout__content__sub\"],\"styles\":{\"height\":\"matchParent\",\"layoutWeight\":1},\"itemMargin\":0},{\"id\":\"__layout__content__sub\",\"component\":\"Column\",\"children\":[\"content_title\",\"__layout__content__body\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":126.0}},{\"id\":\"content_title\",\"component\":\"Row\",\"children\":[\"content_title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"content_title_title\",\"component\":\"Text\",\"content\":\"当前日期\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"__layout__content__body\",\"component\":\"Column\",\"children\":[\"__layout__content__primary\",\"__layout__content__details\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__content__primary\",\"component\":\"Column\",\"children\":[\"content_primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1},\"itemMargin\":0},{\"id\":\"content_primary\",\"component\":\"Column\",\"children\":[\"content_primary_main\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"content_primary_main\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/currentDate} }}\",\"styles\":{\"height\":18,\"fontSize\":18,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"__layout__content__details\",\"component\":\"Column\",\"children\":[\"content_support\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"content_support\",\"component\":\"Column\",\"children\":[\"content_support_row0\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"flexShrink\":1}},{\"id\":\"content_support_item0_label\",\"component\":\"Text\",\"content\":\"农历\",\"styles\":{\"height\":14,\"fontSize\":14,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"lineHeight\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"content_support_item0_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/lunarDate} }}\",\"styles\":{\"height\":14.0,\"fontSize\":14,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"content_support_item0\",\"component\":\"Row\",\"children\":[\"content_support_item0_label\",\"content_support_item0_value\"],\"itemMargin\":4,\"styles\":{\"height\":14.0,\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"content_support_row0\",\"component\":\"Row\",\"children\":[\"content_support_item0\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":14.0,\"alignItems\":\"start\",\"flexShrink\":0}},{\"id\":\"__layout__root__slots\",\"component\":\"Column\",\"children\":[\"upper_region_shell\",\"lower_region_shell\"],\"itemMargin\":12,\"styles\":{\"height\":\"matchParent\",\"layoutWeight\":1}},{\"id\":\"upper\",\"component\":\"Column\",\"children\":[\"upper_text\"],\"itemMargin\":0,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"clip\":true,\"flexShrink\":0,\"width\":\"matchParent\",\"height\":\"matchParent\",\"backgroundColor\":\"@theme:panel/1\"}},{\"id\":\"upper_text\",\"component\":\"Column\",\"children\":[\"upper_primary\",\"upper_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"height\":\"matchParent\",\"padding\":{\"top\":8},\"width\":\"matchParent\"}},{\"id\":\"upper_primary\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/dayOfWeek} }}\",\"styles\":{\"height\":19,\"fontSize\":14,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"lineHeight\":1.3571428571428572,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"upper_secondary\",\"component\":\"Text\",\"content\":\"星期\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"lineHeight\":1.3333333333333333,\"fontColor\":\"@theme:primary/0.6\"}},{\"id\":\"lower\",\"component\":\"Row\",\"children\":[\"lower_label\",\"lower_visual\"],\"itemMargin\":8,\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"com.huawei.hmos.clock.phone\",\"bundleName\":\"com.huawei.hmos.clock\",\"intentName\":\"Clock\",\"uri\":\"\"}}],\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":{\"left\":12,\"right\":12,\"top\":7,\"bottom\":7},\"borderRadius\":16,\"backgroundColor\":\"@theme:panel/1\",\"alignItems\":\"center\",\"justifyContent\":\"spaceBetween\",\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0,\"minHeight\":48}}},{\"id\":\"lower_label\",\"component\":\"Text\",\"content\":\"打开闹钟\",\"styles\":{\"height\":20,\"fontSize\":14,\"fontWeight\":700,\"textAlign\":\"start\",\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"fontColor\":\"@theme:primary/1\"}},{\"id\":\"lower_visual\",\"component\":\"Image\",\"src\":\"resources/base/media/alarm_fill_1.svg\",\"styles\":{\"width\":24,\"height\":24,\"objectFit\":\"contain\",\"flexShrink\":0,\"fillColor\":\"@theme:primary/1\"}},{\"id\":\"upper_region_shell\",\"component\":\"Column\",\"children\":[\"upper\"],\"itemMargin\":0,\"styles\":{\"layoutWeight\":57.0,\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\"}},{\"id\":\"lower_region_shell\",\"component\":\"Column\",\"children\":[\"lower\"],\"itemMargin\":0,\"styles\":{\"layoutWeight\":57.0,\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"time\":{\"currentDate\":\"示例\",\"dayOfWeek\":\"示例\",\"lunarDate\":\"示例\"}}}}}",
+  "validationErrors": []
+}
+```

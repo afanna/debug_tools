@@ -1,0 +1,21 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "districtName": "滨江区",
+        "forecastDays": 1,
+        "prefectureName": "杭州市"
+      },
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "description": "杭州天气速览",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "今日天气"
+}

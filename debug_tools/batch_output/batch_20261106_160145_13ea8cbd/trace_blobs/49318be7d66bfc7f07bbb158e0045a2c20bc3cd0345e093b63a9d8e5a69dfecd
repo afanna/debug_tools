@@ -1,0 +1,8 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [
+    "周日上午上班、下午休息（与周六安排相同，因容量未选）"
+  ],
+  "warnings": []
+}

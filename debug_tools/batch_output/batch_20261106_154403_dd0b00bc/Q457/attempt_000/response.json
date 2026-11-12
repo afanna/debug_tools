@@ -1,0 +1,30 @@
+{
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-dd0b00bc&Q457-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"message\":\"参数校验未通过。\",\"retryable\":true,\"requiredActions\":[\"REFRESH_CAPABILITIES\"],\"agentInstruction\":\"按 requiredActions 修正全部 issues 后提交完整 invoke.arguments 重试，沿用既有预算。\",\"issues\":[{\"path\":\"/candidateAssetIds/0\",\"message\":\"素材 ID 未在当前注册表中声明。请重新获取能力概述，使用本轮返回的 ID。\"}]}",
+          "streamingTextId": "batch-dd0b00bc&Q457-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

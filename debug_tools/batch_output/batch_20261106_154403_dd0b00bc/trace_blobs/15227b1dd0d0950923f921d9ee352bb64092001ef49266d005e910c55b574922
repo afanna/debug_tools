@@ -1,0 +1,6 @@
+["root","Column",{"width":"matchParent","height":"matchParent","padding":{"top":12.0,"bottom":12.0,"left":0,"right":0},"itemMargin":6.0,"borderRadius":20.0,"clip":true,"alignItems":"start","justifyContent":"start","_staticLayout":"W-static-content"},["__layout__root__static_header","__layout__root__static_body"]]
+["__layout__root__static_header","Column",{"width":"matchParent","alignItems":"start","justifyContent":"start","padding":{"left":12.0,"right":12.0},"height":16.0},["header"]]
+["header","SingleLineTitle",{"title":"11/2–12/31 大小周排班"}]
+["__layout__root__static_body","Column",{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"end","itemMargin":6.0,"padding":{"left":12.0,"right":12.0}},["body"]]
+["body","SingleLineList",{"items":[{"text":"11/2-11/8 · 11/2–11/8","assist":"小周·周日休"},{"text":"11/9-11/15 · 11/9–11/15","assist":"大周·周六日休"},{"text":"11/16-11/22 · 11/16–11/22","assist":"小周·周日休"},{"text":"11/23-11/29 · 11/23–11/29","assist":"大周·周六日休"},{"text":"11/30-12/6 · 11/30–12/6","assist":"小周·周日休"}]}]
+["/state/ready",true]

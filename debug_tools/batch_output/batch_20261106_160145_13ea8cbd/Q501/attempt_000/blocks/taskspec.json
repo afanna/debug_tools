@@ -1,0 +1,21 @@
+{
+  "userQuery": "制作一张我的训练计划桌面卡片，展示一周四练的胸背腿肩分化训练安排。本轮卡片静态内容（用作展示的外部事实）：我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。每次训练包含热身、主项训练和拉伸放松。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.figure_run",
+      "src": "resources/base/media/figure_run.svg",
+      "description": "样式：跑步人物图标，默认黑色，图形为人体奔跑动作侧视轮廓；适用：运动记录、跑步锻炼追踪、步数统计。"
+    },
+    {
+      "id": "asset.flame_fill",
+      "src": "resources/base/media/flame_fill.svg",
+      "description": "样式：默认黑色的单色实心火焰图标；适用：运动热量消耗、燃烧、火焰或加热状态。"
+    }
+  ]
+}

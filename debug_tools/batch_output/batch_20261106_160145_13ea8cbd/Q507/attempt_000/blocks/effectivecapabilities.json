@@ -1,0 +1,12 @@
+{
+  "data": [
+    "GetHealthAndSportSummary"
+  ],
+  "event": [],
+  "asset": [
+    "asset.ic_sportsHealth_bule",
+    "asset.figure_run",
+    "asset.flame_fill",
+    "asset.moon_z_fill_1"
+  ]
+}

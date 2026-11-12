@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"距离2029年9月1日还有多少天（纯整数天数，展示时追加“天”）","priority":"must","dataId":"/data/countdown/countdownDays","componentHints":["DataDisplay","EmphasizedData"]}],"layoutHints":["S-center"]}}

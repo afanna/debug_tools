@@ -1,0 +1,8 @@
+```genui
+["root","Layout",{"layout":"S-title-content-action"},["title","content","action"]]
+["title","SingleLineTitle",{"title":"我的记忆","fontSize":12}]
+["content","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/noteCount"},"secondaryText":"笔记"}]
+["action","PillButton",{"label":"打开备忘录","icon":"resources/base/media/bell_fill.svg","onClick":[{"call":"clickToIntent","args":{"abilityName":"MainAbility","bundleName":"com.huawei.hmos.notepad","intentName":"ViewNote","params":{"launchSource":"1","launchType":"0"}}}]}]
+["/data/memo/noteCount",0]
+["/data/memo/todoPendingCount",0]
+```

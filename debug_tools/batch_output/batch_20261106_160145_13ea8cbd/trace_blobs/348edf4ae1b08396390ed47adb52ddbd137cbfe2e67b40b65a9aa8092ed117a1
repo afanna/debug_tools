@@ -1,0 +1,14 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 耳机左耳电量 (/data/earphone/leftBatteryLevel).",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 耳机右耳电量 (/data/earphone/rightBatteryLevel).",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "id": "Q413",
+  "fileName": "Q413.json",
+  "title": "今日天气",
+  "query": "把天气桌面卡片放在手机桌面上，显示当前天气温度和天气现象。",
+  "size": "2x2",
+  "sequence": 1,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 6746.05,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 6686.32,
+  "uid": "batch-13ea8cbd-00001-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,28 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "districtName": "雨花台区",
+        "forecastDays": 1,
+        "prefectureName": "南京市"
+      },
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "arguments": {
+        "targetDayOffset": -1
+      },
+      "capabilityId": "GetHealthAndSportSummary",
+      "writeResultTo": "/data/healthSport"
+    }
+  ],
+  "description": "展示昨天的累计步数和今天的实时温度",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "运动天气卡片"
+}

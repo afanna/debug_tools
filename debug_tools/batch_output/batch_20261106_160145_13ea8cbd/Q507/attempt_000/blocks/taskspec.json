@@ -1,0 +1,64 @@
+{
+  "userQuery": "打开穿戴卡，展示运动健康数据（步数、热量、距离、睡眠等）",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "health": {
+        "dailySteps": {
+          "type": "integer",
+          "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+          "sampleValue": 6200
+        },
+        "dailyTotalCaloriesText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+          "sampleValue": "420 千卡"
+        },
+        "dailyDistanceText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总距离文本，端侧已根据数值大小换算并包含“米”或“公里”单位；展示时不得再次追加距离单位。例如“5.42 公里”或“755 米”。",
+          "sampleValue": "4.60 公里"
+        },
+        "sleepScore": {
+          "type": "integer",
+          "description": "睡眠综合得分，取值范围 0-100。",
+          "sampleValue": 82
+        },
+        "sleepStatus": {
+          "type": "string",
+          "description": "基于得分智能生成的睡眠状态语义判定，包括：'优秀'、'良好'、'一般'、'较差'。",
+          "sampleValue": "良好"
+        },
+        "nightSleepDurationText": {
+          "type": "string",
+          "description": "可直接显示的夜间正式睡眠总时长文本，已包含“小时”或“分”等时间单位；展示时不得再次追加时间单位。例如“7小时1分”。",
+          "sampleValue": "7小时1分"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.ic_sportsHealth_bule",
+      "src": "resources/base/media/ic_sportsHealth_bule.svg",
+      "description": "样式：蓝色纵向渐变圆形底上的白色运动火焰图标，原始尺寸为 20×20，SVG 矢量图（保留原色，禁止染色）需保留原始渐变配色，禁止染色；适用：运动健康、日常活动或锻炼摘要卡片，可结合 GetHealthAndSportSummary 展示步数、热量、距离和运动记录，也可作为 event.open.health.sport、event.open.health.sportsRecord、event.open.health.activityRecord 或 event.open.health.workoutDuration 的辅助入口图标。图标不表示运动目标已达成或用户当前正在运动。"
+    },
+    {
+      "id": "asset.figure_run",
+      "src": "resources/base/media/figure_run.svg",
+      "description": "样式：跑步人物图标，默认黑色，图形为人体奔跑动作侧视轮廓；适用：运动记录、跑步锻炼追踪、步数统计。"
+    },
+    {
+      "id": "asset.flame_fill",
+      "src": "resources/base/media/flame_fill.svg",
+      "description": "样式：默认黑色的单色实心火焰图标；适用：运动热量消耗、燃烧、火焰或加热状态。"
+    },
+    {
+      "id": "asset.moon_z_fill_1",
+      "src": "resources/base/media/moon_z_fill_1.svg",
+      "description": "样式：月亮加Z睡眠实心图标，默认黑色，图形为月牙旁附带字母Z表示入睡；适用：睡眠模式开启、休息提醒、晚安场景。"
+    }
+  ]
+}

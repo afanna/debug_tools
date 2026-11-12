@@ -1,0 +1,16 @@
+```genui
+["root","Layout",{"layout":"S-title-dual-content"},["title","current","forecast"]]
+["title","SingleLineTitle",{"title":"天气预报","icon":"resources/base/media/ic_weather_monochrome.svg","fontSize":12}]
+["current","Group",{"variant":"hero-support"},["current_primary","current_support"]]
+["current_primary","EmphasisText",{"mainText":{"path":"/data/weather/current/temperatureText"},"fontSize":18}]
+["current_support","SecondaryBody",{"items":[{"value":{"path":"/data/weather/current/condition"}}],"fontSize":14}]
+["forecast","SecondaryBody",{"columns":1,"items":[{"value":"{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/condition} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"},{"value":"{{ ${/data/weather/daily/1/weekday} + ' ' + ${/data/weather/daily/1/condition} + ' ' + ${/data/weather/daily/1/temperatureRangeText} }}"}],"fontSize":12}]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/daily/0/weekday","星期四"]
+["/data/weather/daily/0/temperatureRangeText","25℃ / 32℃"]
+["/data/weather/daily/0/condition","多云"]
+["/data/weather/daily/1/weekday","星期四"]
+["/data/weather/daily/1/temperatureRangeText","25℃ / 32℃"]
+["/data/weather/daily/1/condition","多云"]
+```

@@ -1,0 +1,746 @@
+{
+  "cardspec": {
+    "title": "家人纪念日",
+    "description": "家人重要日子提醒",
+    "suggestSize": "2x4",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "dataBindings": [
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-10-05"
+        },
+        "writeResultTo": "/data/countdown0"
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-06-24"
+        },
+        "writeResultTo": "/data/countdown1"
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-04-19"
+        },
+        "writeResultTo": "/data/countdown2"
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-04-12"
+        },
+        "writeResultTo": "/data/countdown3"
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-10-28"
+        },
+        "writeResultTo": "/data/countdown4"
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-01-23"
+        },
+        "writeResultTo": "/data/countdown5"
+      }
+    ]
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\r\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"title\",\"__layout__root__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"linearGradient\":{\"direction\":\"RightBottom\",\"colors\":[[\"#FFFFE0CC\",0],[\"#FFFFF7F2\",1]]}}},{\"id\":\"title\",\"component\":\"Row\",\"children\":[\"title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"title_title\",\"component\":\"Text\",\"content\":\"家人重要日子倒计时\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"#998C4B1C\"}},{\"id\":\"__layout__root__body\",\"component\":\"Column\",\"children\":[\"__layout__root__primary\",\"__layout__root__details\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__root__primary\",\"component\":\"Column\",\"children\":[\"primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"primary\",\"component\":\"Column\",\"children\":[\"primary_row0\",\"primary_row1\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"flexShrink\":1}},{\"id\":\"primary_item0_value\",\"component\":\"Text\",\"content\":\"{{ '爸爸生日 4月19日 · 还有 ' + ${/data/countdown2/countdownDays} + ' 天' }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"#FF8C4B1C\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"primary_item0\",\"component\":\"Row\",\"children\":[\"primary_item0_value\"],\"itemMargin\":0,\"styles\":{\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"primary_row0\",\"component\":\"Row\",\"children\":[\"primary_item0\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":0}},{\"id\":\"primary_item1_value\",\"component\":\"Text\",\"content\":\"{{ '妈妈生日 4月12日 · 还有 ' + ${/data/countdown3/countdownDays} + ' 天' }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"#FF8C4B1C\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"primary_item1\",\"component\":\"Row\",\"children\":[\"primary_item1_value\"],\"itemMargin\":0,\"styles\":{\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"primary_row1\",\"component\":\"Row\",\"children\":[\"primary_item1\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":0}},{\"id\":\"__layout__root__details\",\"component\":\"Column\",\"children\":[\"details\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1},\"itemMargin\":0},{\"id\":\"details\",\"component\":\"Column\",\"children\":[\"details_item0\",\"details_item1\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"end\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minHeight\":64}}},{\"id\":\"details_item0\",\"component\":\"Row\",\"children\":[\"details_item0_text\"],\"styles\":{\"width\":\"matchParent\",\"height\":28,\"padding\":{\"left\":12,\"right\":12},\"borderRadius\":8,\"backgroundColor\":\"#99FFFFFF\",\"alignItems\":\"center\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item0_text\",\"component\":\"Text\",\"content\":\"{{ '崔景会生日 10月28日 · 还有 ' + ${/data/countdown4/countdownDays} + ' 天' }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#FF8C4B1C\"}},{\"id\":\"details_item1\",\"component\":\"Row\",\"children\":[\"details_item1_text\"],\"styles\":{\"width\":\"matchParent\",\"height\":28,\"padding\":{\"left\":12,\"right\":12},\"borderRadius\":8,\"backgroundColor\":\"#99FFFFFF\",\"alignItems\":\"center\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item1_text\",\"component\":\"Text\",\"content\":\"{{ '父母结婚纪念日 1月23日 · 还有 ' + ${/data/countdown5/countdownDays} + ' 天' }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"#FF8C4B1C\"}}]}}\r\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"countdown0\":{\"countdownDays\":30},\"countdown1\":{\"countdownDays\":30},\"countdown2\":{\"countdownDays\":30},\"countdown3\":{\"countdownDays\":30},\"countdown4\":{\"countdownDays\":30},\"countdown5\":{\"countdownDays\":30}}}}}",
+  "schema": {
+    "schemaVersion": "widget-artifact-v2"
+  },
+  "taskspec": {
+    "userQuery": "制作一张家人重要日子倒计时卡片，标注每位家人的名字和对应的公历日期，每天自动更新倒计时天数。奶奶生日：2027年10月5日（农历九月初六）；爷爷生日：2027年6月24日（农历五月二十）；爸爸生日：2027年4月19日（农历三月十三）；妈妈生日：2027年4月12日（农历三月初六）；崔景会生日：2027年10月28日（农历九月廿九）；父母结婚纪念日：2027年1月23日（农历腊月十六）。\n本轮卡片静态内容（用作展示的外部事实）：奶奶生日10月5日、爷爷生日6月24日、爸爸生日4月19日、妈妈生日4月12日、崔景会生日10月28日、父母结婚纪念日1月23日",
+    "size": "2x4",
+    "appVersion": "11.7.8.342",
+    "eventCandidates": [],
+    "dataModelSchema": {
+      "data": {
+        "countdown0": {
+          "countdownDays": {
+            "type": "integer",
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30
+          }
+        },
+        "countdown1": {
+          "countdownDays": {
+            "type": "integer",
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30
+          }
+        },
+        "countdown2": {
+          "countdownDays": {
+            "type": "integer",
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30
+          }
+        },
+        "countdown3": {
+          "countdownDays": {
+            "type": "integer",
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30
+          }
+        },
+        "countdown4": {
+          "countdownDays": {
+            "type": "integer",
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30
+          }
+        },
+        "countdown5": {
+          "countdownDays": {
+            "type": "integer",
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30
+          }
+        }
+      }
+    },
+    "assetCandidates": []
+  },
+  "effectivecapabilities": {
+    "data": [
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays"
+    ],
+    "event": [],
+    "asset": []
+  },
+  "removedcapabilities": [],
+  "generationplan": {
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-10-05"
+        },
+        "writeResultTo": "/data/countdown0",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-06-24"
+        },
+        "writeResultTo": "/data/countdown1",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-04-19"
+        },
+        "writeResultTo": "/data/countdown2",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-04-12"
+        },
+        "writeResultTo": "/data/countdown3",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-10-28"
+        },
+        "writeResultTo": "/data/countdown4",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-01-23"
+        },
+        "writeResultTo": "/data/countdown5",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      }
+    ],
+    "candidateEventCandidates": [],
+    "candidateAssetIds": []
+  },
+  "meta": {
+    "apiVersion": "v1",
+    "taskSpecVersion": "task-spec-v1",
+    "cardSpecVersion": "card-spec-v1",
+    "dslProtocolVersion": "v0.9",
+    "skillVersion": "skill-widget-v1",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "generationMode": "create",
+    "artifactId": "e9a6d0bd-6fa0-4ec8-9ca7-6895e8a0c5d0",
+    "createdAt": 1793952129346
+  },
+  "designcompactdsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\r\n[\"title\",\"SingleLineTitle\",{\"title\":\"家人重要日子倒计时\",\"fontSize\":12}]\r\n[\"primary\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"value\":\"{{ '爸爸生日 4月19日 · 还有 ' + ${/data/countdown2/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '妈妈生日 4月12日 · 还有 ' + ${/data/countdown3/countdownDays} + ' 天' }}\"}],\"fontSize\":12}]\r\n[\"details\",\"SummaryList\",{\"items\":[\"{{ '崔景会生日 10月28日 · 还有 ' + ${/data/countdown4/countdownDays} + ' 天' }}\",\"{{ '父母结婚纪念日 1月23日 · 还有 ' + ${/data/countdown5/countdownDays} + ' 天' }}\"]}]\r\n[\"/data/countdown0/countdownDays\",30]\r\n[\"/data/countdown1/countdownDays\",30]\r\n[\"/data/countdown2/countdownDays\",30]\r\n[\"/data/countdown3/countdownDays\",30]\r\n[\"/data/countdown4/countdownDays\",30]\r\n[\"/data/countdown5/countdownDays\",30]",
+  "request": {
+    "content": {
+      "size": "2x4",
+      "functionName": "generateWidgetCardCompactDsl",
+      "romVersion": "CMS-AL20 7.0.0.111",
+      "candidateAssetIds": [],
+      "candidateEventCandidates": [],
+      "bundleName": "com.huawei.genui",
+      "description": "家人重要日子提醒",
+      "userQuery": "制作一张家人重要日子倒计时卡片，标注每位家人的名字和对应的公历日期，每天自动更新倒计时天数。奶奶生日：2027年10月5日（农历九月初六）；爷爷生日：2027年6月24日（农历五月二十）；爸爸生日：2027年4月19日（农历三月十三）；妈妈生日：2027年4月12日（农历三月初六）；崔景会生日：2027年10月28日（农历九月廿九）；父母结婚纪念日：2027年1月23日（农历腊月十六）。\n本轮卡片静态内容（用作展示的外部事实）：奶奶生日10月5日、爷爷生日6月24日、爸爸生日4月19日、妈妈生日4月12日、崔景会生日10月28日、父母结婚纪念日1月23日",
+      "title": "家人纪念日",
+      "candidateDataBindings": [
+        {
+          "capabilityId": "GetCountdownDays",
+          "arguments": {
+            "targetDate": "2027-10-05"
+          },
+          "writeResultTo": "/data/countdown0",
+          "candidateOutputFields": [
+            "/countdownDays"
+          ]
+        },
+        {
+          "capabilityId": "GetCountdownDays",
+          "arguments": {
+            "targetDate": "2027-06-24"
+          },
+          "writeResultTo": "/data/countdown1",
+          "candidateOutputFields": [
+            "/countdownDays"
+          ]
+        },
+        {
+          "capabilityId": "GetCountdownDays",
+          "arguments": {
+            "targetDate": "2027-04-19"
+          },
+          "writeResultTo": "/data/countdown2",
+          "candidateOutputFields": [
+            "/countdownDays"
+          ]
+        },
+        {
+          "capabilityId": "GetCountdownDays",
+          "arguments": {
+            "targetDate": "2027-04-12"
+          },
+          "writeResultTo": "/data/countdown3",
+          "candidateOutputFields": [
+            "/countdownDays"
+          ]
+        },
+        {
+          "capabilityId": "GetCountdownDays",
+          "arguments": {
+            "targetDate": "2027-10-28"
+          },
+          "writeResultTo": "/data/countdown4",
+          "candidateOutputFields": [
+            "/countdownDays"
+          ]
+        },
+        {
+          "capabilityId": "GetCountdownDays",
+          "arguments": {
+            "targetDate": "2027-01-23"
+          },
+          "writeResultTo": "/data/countdown5",
+          "candidateOutputFields": [
+            "/countdownDays"
+          ]
+        }
+      ]
+    },
+    "deviceInfo": {
+      "countryCode": "CN",
+      "deviceFormation": "HDSpeaker",
+      "deviceType": 0,
+      "locale": "zh-CN",
+      "phoneType": "CMS-AL20",
+      "prdVer": "11.7.8.342",
+      "sysVer": "EmotionUI_9.0.0",
+      "time": "20261103015456794"
+    },
+    "pagination": {
+      "limit": 5,
+      "start": ""
+    },
+    "session": {
+      "interactionId": "Q418-000",
+      "isNew": true,
+      "sessionId": "batch-13ea8cbd"
+    },
+    "userAuth": {
+      "user": {}
+    },
+    "utterance": {
+      "original": "",
+      "type": "text"
+    },
+    "version": "1.0",
+    "size": "2x4",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "candidateAssetIds": [],
+    "candidateEventCandidates": [],
+    "bundleName": "com.huawei.genui",
+    "description": "家人重要日子提醒",
+    "userQuery": "制作一张家人重要日子倒计时卡片，标注每位家人的名字和对应的公历日期，每天自动更新倒计时天数。奶奶生日：2027年10月5日（农历九月初六）；爷爷生日：2027年6月24日（农历五月二十）；爸爸生日：2027年4月19日（农历三月十三）；妈妈生日：2027年4月12日（农历三月初六）；崔景会生日：2027年10月28日（农历九月廿九）；父母结婚纪念日：2027年1月23日（农历腊月十六）。\n本轮卡片静态内容（用作展示的外部事实）：奶奶生日10月5日、爷爷生日6月24日、爸爸生日4月19日、妈妈生日4月12日、崔景会生日10月28日、父母结婚纪念日1月23日",
+    "title": "家人纪念日",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-10-05"
+        },
+        "writeResultTo": "/data/countdown0",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-06-24"
+        },
+        "writeResultTo": "/data/countdown1",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-04-19"
+        },
+        "writeResultTo": "/data/countdown2",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-04-12"
+        },
+        "writeResultTo": "/data/countdown3",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-10-28"
+        },
+        "writeResultTo": "/data/countdown4",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-01-23"
+        },
+        "writeResultTo": "/data/countdown5",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      }
+    ]
+  },
+  "repair-1": {
+    "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"家人重要日子倒计时\",\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":\"{{ '奶奶生日 10月5日 · 还有 ' + ${/data/countdown0/countdownDays} + ' 天' }}\",\"secondaryText\":\"{{ '爷爷生日 6月24日 · 还有 ' + ${/data/countdown1/countdownDays} + ' 天' }}\",\"fontSize\":18}]\n[\"details\",\"SummaryList\",{\"items\":[\"{{ '爸爸生日 4月19日 · 还有 ' + ${/data/countdown2/countdownDays} + ' 天' }}\",\"{{ '妈妈生日 4月12日 · 还有 ' + ${/data/countdown3/countdownDays} + ' 天' }}\",\"{{ '崔景会生日 10月28日 · 还有 ' + ${/data/countdown4/countdownDays} + ' 天' }}\"]}]\n[\"/data/countdown0/countdownDays\",30]\n[\"/data/countdown1/countdownDays\",30]\n[\"/data/countdown2/countdownDays\",30]\n[\"/data/countdown3/countdownDays\",30]\n[\"/data/countdown4/countdownDays\",30]\n[\"/data/countdown5/countdownDays\",30]",
+    "generatedDsl": "",
+    "validationErrors": [
+      {
+        "stage": "validation",
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component root: vertical layout requires at least 156vp within 126vp; it overflows by 30vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: title=12vp+margin(0vp), __layout__root__body=138vp+margin(0vp), gaps=6vp.",
+        "compactDiagnostics": [
+          {
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "validationClass": "semantic",
+            "category": "layout",
+            "severity": "error",
+            "message": "component root: vertical layout requires at least 156vp within 126vp; it overflows by 30vp. Occupancy: title=12vp+margin(0vp), __layout__root__body=138vp+margin(0vp), gaps=6vp.",
+            "legacyMessage": "component root: vertical layout requires at least 156vp within 126vp; it overflows by 30vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: title=12vp+margin(0vp), __layout__root__body=138vp+margin(0vp), gaps=6vp.",
+            "expected": {
+              "maximumHeight": 126.0,
+              "heightTolerance": 2.0,
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+            },
+            "actual": {
+              "minimumRequiredHeight": 156.0,
+              "overflow": 30.0,
+              "occupancy": "title=12vp+margin(0vp), __layout__root__body=138vp+margin(0vp), gaps=6vp"
+            },
+            "evidenceSource": "expanded",
+            "componentId": "root",
+            "sourceLine": 1,
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+          }
+        ]
+      },
+      {
+        "stage": "validation",
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component __layout__root__body: vertical layout requires at least 138vp within 108vp; it overflows by 30vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp.",
+        "compactDiagnostics": [
+          {
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "validationClass": "semantic",
+            "category": "layout",
+            "severity": "error",
+            "message": "component __layout__root__body: vertical layout requires at least 138vp within 108vp; it overflows by 30vp. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp.",
+            "legacyMessage": "component __layout__root__body: vertical layout requires at least 138vp within 108vp; it overflows by 30vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp.",
+            "expected": {
+              "maximumHeight": 108.0,
+              "heightTolerance": 2.0,
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+            },
+            "actual": {
+              "minimumRequiredHeight": 138.0,
+              "overflow": 30.0,
+              "occupancy": "__layout__root__primary=36vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp"
+            },
+            "evidenceSource": "expanded",
+            "componentId": "root",
+            "sourceLine": 1,
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+          }
+        ]
+      },
+      {
+        "stage": "validation",
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component __layout__root__details: vertical layout requires at least 102vp within 72vp; it overflows by 30vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details=102vp+margin(0vp), gaps=0vp.",
+        "compactDiagnostics": [
+          {
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "validationClass": "semantic",
+            "category": "layout",
+            "severity": "error",
+            "message": "component __layout__root__details: vertical layout requires at least 102vp within 72vp; it overflows by 30vp. Occupancy: details=102vp+margin(0vp), gaps=0vp.",
+            "legacyMessage": "component __layout__root__details: vertical layout requires at least 102vp within 72vp; it overflows by 30vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details=102vp+margin(0vp), gaps=0vp.",
+            "expected": {
+              "maximumHeight": 72.0,
+              "heightTolerance": 2.0,
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+            },
+            "actual": {
+              "minimumRequiredHeight": 102.0,
+              "overflow": 30.0,
+              "occupancy": "details=102vp+margin(0vp), gaps=0vp"
+            },
+            "evidenceSource": "expanded",
+            "componentId": "root",
+            "sourceLine": 1,
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+          }
+        ]
+      },
+      {
+        "stage": "validation",
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component details: vertical layout requires at least 100vp within 72vp; it overflows by 28vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp.",
+        "compactDiagnostics": [
+          {
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "validationClass": "semantic",
+            "category": "layout",
+            "severity": "error",
+            "message": "component details: vertical layout requires at least 100vp within 72vp; it overflows by 28vp. Occupancy: details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp.",
+            "legacyMessage": "component details: vertical layout requires at least 100vp within 72vp; it overflows by 28vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp.",
+            "expected": {
+              "maximumHeight": 72.0,
+              "heightTolerance": 2.0,
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+            },
+            "actual": {
+              "minimumRequiredHeight": 100.0,
+              "overflow": 28.0,
+              "occupancy": "details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp"
+            },
+            "evidenceSource": "expanded",
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+          }
+        ]
+      },
+      {
+        "stage": "validation",
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component primary_main: text width overflow; complete text '奶奶生日 10月5日 · 还有 30 天' at original font 18 needs about 288vp in one line, but its allocated text area is 276vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight."
+      }
+    ]
+  },
+  "repair-2": {
+    "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"家人重要日子倒计时\",\"fontSize\":12}]\n[\"primary\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"value\":\"{{ '奶奶生日 10月5日 · 还有 ' + ${/data/countdown0/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '爷爷生日 6月24日 · 还有 ' + ${/data/countdown1/countdownDays} + ' 天' }}\"}],\"fontSize\":12}]\n[\"details\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"value\":\"{{ '爸爸生日 4月19日 · 还有 ' + ${/data/countdown2/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '妈妈生日 4月12日 · 还有 ' + ${/data/countdown3/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '崔景会生日 10月28日 · 还有 ' + ${/data/countdown4/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '父母结婚纪念日 1月23日 · 还有 ' + ${/data/countdown5/countdownDays} + ' 天' }}\"}],\"fontSize\":12}]\n[\"/data/countdown0/countdownDays\",30]\n[\"/data/countdown1/countdownDays\",30]\n[\"/data/countdown2/countdownDays\",30]\n[\"/data/countdown3/countdownDays\",30]\n[\"/data/countdown4/countdownDays\",30]\n[\"/data/countdown5/countdownDays\",30]",
+    "generatedDsl": "",
+    "validationErrors": [
+      {
+        "stage": "validation",
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "语义布局不符合合同：节点 details：details 槽必须使用 TextBlock、TopTextBottomValue、SummaryList 或 EventCard。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+      }
+    ]
+  },
+  "repair-3": {
+    "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"家人重要日子倒计时\",\"fontSize\":12}]\n[\"primary\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"value\":\"{{ '奶奶生日 10月5日 · 还有 ' + ${/data/countdown0/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '爷爷生日 6月24日 · 还有 ' + ${/data/countdown1/countdownDays} + ' 天' }}\"}],\"fontSize\":12}]\n[\"details\",\"SummaryList\",{\"items\":[\"{{ '爸爸生日 4月19日 · 还有 ' + ${/data/countdown2/countdownDays} + ' 天' }}\",\"{{ '妈妈生日 4月12日 · 还有 ' + ${/data/countdown3/countdownDays} + ' 天' }}\",\"{{ '崔景会生日 10月28日 · 还有 ' + ${/data/countdown4/countdownDays} + ' 天' }}\"]}]\n[\"/data/countdown0/countdownDays\",30]\n[\"/data/countdown1/countdownDays\",30]\n[\"/data/countdown2/countdownDays\",30]\n[\"/data/countdown3/countdownDays\",30]\n[\"/data/countdown4/countdownDays\",30]\n[\"/data/countdown5/countdownDays\",30]",
+    "generatedDsl": "",
+    "validationErrors": [
+      {
+        "stage": "validation",
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component root: vertical layout requires at least 146vp within 126vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: title=12vp+margin(0vp), __layout__root__body=128vp+margin(0vp), gaps=6vp.",
+        "compactDiagnostics": [
+          {
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "validationClass": "semantic",
+            "category": "layout",
+            "severity": "error",
+            "message": "component root: vertical layout requires at least 146vp within 126vp; it overflows by 20vp. Occupancy: title=12vp+margin(0vp), __layout__root__body=128vp+margin(0vp), gaps=6vp.",
+            "legacyMessage": "component root: vertical layout requires at least 146vp within 126vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: title=12vp+margin(0vp), __layout__root__body=128vp+margin(0vp), gaps=6vp.",
+            "expected": {
+              "maximumHeight": 126.0,
+              "heightTolerance": 2.0,
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+            },
+            "actual": {
+              "minimumRequiredHeight": 146.0,
+              "overflow": 20.0,
+              "occupancy": "title=12vp+margin(0vp), __layout__root__body=128vp+margin(0vp), gaps=6vp",
+              "secondaryBodyFits": [
+                {
+                  "componentId": "primary",
+                  "parentId": "root",
+                  "actualRowCount": 2,
+                  "maxRetainedRowCount": 0,
+                  "effectiveColumnCount": 1,
+                  "rowHeights": [
+                    12.0,
+                    12.0
+                  ],
+                  "rowSpacing": 2.0,
+                  "directlyFitsItemIndexes": [],
+                  "doesNotFitItemIndexes": [
+                    0,
+                    1
+                  ],
+                  "parentAvailableHeight": 126.0
+                }
+              ]
+            },
+            "evidenceSource": "expanded",
+            "componentId": "root",
+            "sourceLine": 1,
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+          }
+        ],
+        "capacityFits": [
+          {
+            "componentId": "primary",
+            "componentType": "SecondaryBody",
+            "actualItemCount": 2,
+            "actualRowCount": 2,
+            "maxRetainedRowCount": 0,
+            "effectiveColumnCount": 1,
+            "rowHeights": [
+              12.0,
+              12.0
+            ],
+            "rowSpacing": 2.0,
+            "parentId": "root",
+            "parentAvailableHeight": 126.0,
+            "directlyFits": [],
+            "doesNotFit": [
+              {
+                "itemIndex": 0,
+                "value": {
+                  "value": "{{ '奶奶生日 10月5日 · 还有 ' + ${/data/countdown0/countdownDays} + ' 天' }}"
+                },
+                "planFacts": [
+                  {
+                    "factIndex": 0,
+                    "requirement": "奶奶生日的倒计时天数",
+                    "priority": "must"
+                  }
+                ]
+              },
+              {
+                "itemIndex": 1,
+                "value": {
+                  "value": "{{ '爷爷生日 6月24日 · 还有 ' + ${/data/countdown1/countdownDays} + ' 天' }}"
+                },
+                "planFacts": [
+                  {
+                    "factIndex": 1,
+                    "requirement": "爷爷生日的倒计时天数",
+                    "priority": "must"
+                  }
+                ]
+              }
+            ],
+            "overflowItemCount": 2,
+            "overflowFactCount": 2,
+            "scope": "currentComponentItemsOnly",
+            "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。"
+          }
+        ]
+      },
+      {
+        "stage": "validation",
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component __layout__root__body: vertical layout requires at least 128vp within 108vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__root__primary=26vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp.",
+        "compactDiagnostics": [
+          {
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "validationClass": "semantic",
+            "category": "layout",
+            "severity": "error",
+            "message": "component __layout__root__body: vertical layout requires at least 128vp within 108vp; it overflows by 20vp. Occupancy: __layout__root__primary=26vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp.",
+            "legacyMessage": "component __layout__root__body: vertical layout requires at least 128vp within 108vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__root__primary=26vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp.",
+            "expected": {
+              "maximumHeight": 108.0,
+              "heightTolerance": 2.0,
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+            },
+            "actual": {
+              "minimumRequiredHeight": 128.0,
+              "overflow": 20.0,
+              "occupancy": "__layout__root__primary=26vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp",
+              "secondaryBodyFits": [
+                {
+                  "componentId": "primary",
+                  "parentId": "__layout__root__body",
+                  "actualRowCount": 2,
+                  "maxRetainedRowCount": 0,
+                  "effectiveColumnCount": 1,
+                  "rowHeights": [
+                    12.0,
+                    12.0
+                  ],
+                  "rowSpacing": 2.0,
+                  "directlyFitsItemIndexes": [],
+                  "doesNotFitItemIndexes": [
+                    0,
+                    1
+                  ],
+                  "parentAvailableHeight": 108.0
+                }
+              ]
+            },
+            "evidenceSource": "expanded",
+            "componentId": "root",
+            "sourceLine": 1,
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+          }
+        ]
+      },
+      {
+        "stage": "validation",
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component __layout__root__details: vertical layout requires at least 102vp within 82vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details=102vp+margin(0vp), gaps=0vp.",
+        "compactDiagnostics": [
+          {
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "validationClass": "semantic",
+            "category": "layout",
+            "severity": "error",
+            "message": "component __layout__root__details: vertical layout requires at least 102vp within 82vp; it overflows by 20vp. Occupancy: details=102vp+margin(0vp), gaps=0vp.",
+            "legacyMessage": "component __layout__root__details: vertical layout requires at least 102vp within 82vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details=102vp+margin(0vp), gaps=0vp.",
+            "expected": {
+              "maximumHeight": 82.0,
+              "heightTolerance": 2.0,
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+            },
+            "actual": {
+              "minimumRequiredHeight": 102.0,
+              "overflow": 20.0,
+              "occupancy": "details=102vp+margin(0vp), gaps=0vp"
+            },
+            "evidenceSource": "expanded",
+            "componentId": "root",
+            "sourceLine": 1,
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+          }
+        ]
+      },
+      {
+        "stage": "validation",
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component details: vertical layout requires at least 100vp within 82vp; it overflows by 18vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp.",
+        "compactDiagnostics": [
+          {
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "validationClass": "semantic",
+            "category": "layout",
+            "severity": "error",
+            "message": "component details: vertical layout requires at least 100vp within 82vp; it overflows by 18vp. Occupancy: details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp.",
+            "legacyMessage": "component details: vertical layout requires at least 100vp within 82vp; it overflows by 18vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp.",
+            "expected": {
+              "maximumHeight": 82.0,
+              "heightTolerance": 2.0,
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+            },
+            "actual": {
+              "minimumRequiredHeight": 100.0,
+              "overflow": 18.0,
+              "occupancy": "details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp"
+            },
+            "evidenceSource": "expanded",
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+          }
+        ]
+      }
+    ]
+  },
+  "repair-4": {
+    "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"家人重要日子倒计时\",\"fontSize\":12}]\n[\"primary\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"value\":\"{{ '爸爸生日 4月19日 · 还有 ' + ${/data/countdown2/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '妈妈生日 4月12日 · 还有 ' + ${/data/countdown3/countdownDays} + ' 天' }}\"}],\"fontSize\":12}]\n[\"details\",\"SummaryList\",{\"items\":[\"{{ '崔景会生日 10月28日 · 还有 ' + ${/data/countdown4/countdownDays} + ' 天' }}\",\"{{ '父母结婚纪念日 1月23日 · 还有 ' + ${/data/countdown5/countdownDays} + ' 天' }}\"]}]\n[\"/data/countdown0/countdownDays\",30]\n[\"/data/countdown1/countdownDays\",30]\n[\"/data/countdown2/countdownDays\",30]\n[\"/data/countdown3/countdownDays\",30]\n[\"/data/countdown4/countdownDays\",30]\n[\"/data/countdown5/countdownDays\",30]",
+    "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"title\",\"__layout__root__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\"}},{\"id\":\"title\",\"component\":\"Row\",\"children\":[\"title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"title_title\",\"component\":\"Text\",\"content\":\"家人重要日子倒计时\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"__layout__root__body\",\"component\":\"Column\",\"children\":[\"__layout__root__primary\",\"__layout__root__details\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__root__primary\",\"component\":\"Column\",\"children\":[\"primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"primary\",\"component\":\"Column\",\"children\":[\"primary_row0\",\"primary_row1\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"flexShrink\":1}},{\"id\":\"primary_item0_value\",\"component\":\"Text\",\"content\":\"{{ '爸爸生日 4月19日 · 还有 ' + ${/data/countdown2/countdownDays} + ' 天' }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"primary_item0\",\"component\":\"Row\",\"children\":[\"primary_item0_value\"],\"itemMargin\":0,\"styles\":{\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"primary_row0\",\"component\":\"Row\",\"children\":[\"primary_item0\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":0}},{\"id\":\"primary_item1_value\",\"component\":\"Text\",\"content\":\"{{ '妈妈生日 4月12日 · 还有 ' + ${/data/countdown3/countdownDays} + ' 天' }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"primary_item1\",\"component\":\"Row\",\"children\":[\"primary_item1_value\"],\"itemMargin\":0,\"styles\":{\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"primary_row1\",\"component\":\"Row\",\"children\":[\"primary_item1\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"start\",\"flexShrink\":0}},{\"id\":\"__layout__root__details\",\"component\":\"Column\",\"children\":[\"details\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1},\"itemMargin\":0},{\"id\":\"details\",\"component\":\"Column\",\"children\":[\"details_item0\",\"details_item1\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"end\",\"layoutWeight\":1,\"flexShrink\":1,\"constraintSize\":{\"minHeight\":64}}},{\"id\":\"details_item0\",\"component\":\"Row\",\"children\":[\"details_item0_text\"],\"styles\":{\"width\":\"matchParent\",\"height\":28,\"padding\":{\"left\":12,\"right\":12},\"borderRadius\":8,\"backgroundColor\":\"@theme:panel/1\",\"alignItems\":\"center\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item0_text\",\"component\":\"Text\",\"content\":\"{{ '崔景会生日 10月28日 · 还有 ' + ${/data/countdown4/countdownDays} + ' 天' }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"@theme:primary/1\"}},{\"id\":\"details_item1\",\"component\":\"Row\",\"children\":[\"details_item1_text\"],\"styles\":{\"width\":\"matchParent\",\"height\":28,\"padding\":{\"left\":12,\"right\":12},\"borderRadius\":8,\"backgroundColor\":\"@theme:panel/1\",\"alignItems\":\"center\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"details_item1_text\",\"component\":\"Text\",\"content\":\"{{ '父母结婚纪念日 1月23日 · 还有 ' + ${/data/countdown5/countdownDays} + ' 天' }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"fontColor\":\"@theme:primary/1\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"countdown0\":{\"countdownDays\":30},\"countdown1\":{\"countdownDays\":30},\"countdown2\":{\"countdownDays\":30},\"countdown3\":{\"countdownDays\":30},\"countdown4\":{\"countdownDays\":30},\"countdown5\":{\"countdownDays\":30}}}}}",
+    "validationErrors": []
+  }
+}

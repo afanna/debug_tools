@@ -1,0 +1,25 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time",
+      "candidateOutputFields": []
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.openFlashlight",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "intentName": "OpenFlashlight",
+          "params": {}
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.ic_flashlight"
+  ]
+}

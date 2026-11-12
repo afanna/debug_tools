@@ -1,0 +1,22 @@
+{
+  "id": "browser-capture",
+  "name": "浏览器截图",
+  "version": "3.0.0",
+  "apiVersion": "batch-postprocess-v2",
+  "status": "failed",
+  "config": {},
+  "sampleCount": 0,
+  "counts": {
+    "skipped": 0,
+    "partial": 0,
+    "success": 0,
+    "failed": 0
+  },
+  "datasetResult": {
+    "status": "failed",
+    "summary": "ToolchainError: 显式配置的 Node.js 不存在：C:\\Tools\\DevEco Studio\\tools\\node\\node.exe",
+    "facts": {},
+    "artifactCount": 0
+  },
+  "error": "ToolchainError: 显式配置的 Node.js 不存在：C:\\Tools\\DevEco Studio\\tools\\node\\node.exe"
+}

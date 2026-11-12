@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "summary": "ValueError: 后处理插件依赖执行失败: browser-capture",
+  "facts": {},
+  "artifacts": []
+}

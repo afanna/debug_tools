@@ -1,0 +1,21 @@
+{
+  "title": "天气",
+  "description": "天气卡片",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "雁塔区",
+        "forecastDays": 3,
+        "prefectureName": "西安市"
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}

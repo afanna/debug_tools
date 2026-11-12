@@ -1,0 +1,965 @@
+{
+  "status": "success",
+  "summary": "已分析 107 个样本，缺失指标保持未知",
+  "facts": {
+    "sampleCount": 107
+  },
+  "artifacts": [
+    {
+      "key": "statistics",
+      "data": {
+        "schemaVersion": "batch-analysis-v1",
+        "sampleCount": 107,
+        "requestCount": 107,
+        "paddedCount": 92,
+        "effectiveCount": 199,
+        "pass1": {
+          "hits": 92,
+          "count": 107,
+          "rate": 0.8598130841121495
+        },
+        "pass2": {
+          "hits": 94,
+          "count": 107,
+          "rate": 0.8785046728971962
+        },
+        "elapsedMs": {
+          "sum": 1285722.64,
+          "count": 199,
+          "mean": 6460.917788944723
+        },
+        "planMs": {
+          "sum": 519770.45,
+          "count": 199,
+          "mean": 2611.911809045226
+        },
+        "generateMs": {
+          "sum": 358069.33,
+          "count": 199,
+          "mean": 1799.3433668341709
+        },
+        "repairMs": {
+          "sum": 192277.86000000002,
+          "count": 199,
+          "mean": 966.2204020100503
+        },
+        "themeMs": {
+          "sum": 186199.25,
+          "count": 199,
+          "mean": 935.6746231155779
+        },
+        "interfaceRetries": {
+          "sum": 2.0,
+          "count": 199,
+          "mean": 0.010050251256281407
+        },
+        "repairs": {
+          "sum": 104.0,
+          "count": 199,
+          "mean": 0.5226130653266332
+        },
+        "modelRetries": {
+          "sum": 0.0,
+          "count": 199,
+          "mean": 0.0
+        },
+        "planRetries": {
+          "sum": 33.0,
+          "count": 199,
+          "mean": 0.1658291457286432
+        },
+        "providerFallbacks": {
+          "sum": 0.0,
+          "count": 199,
+          "mean": 0.0
+        },
+        "models": {
+          "all": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          },
+          "plan": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          },
+          "generate": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          },
+          "repair": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          },
+          "theme": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          },
+          "unknown": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          }
+        },
+        "usage": {
+          "components": {
+            "count": 103,
+            "used": 101,
+            "rate": 0.9805825242718447,
+            "items": [
+              {
+                "id": "CardButton",
+                "count": 2,
+                "rate": 0.019417475728155338
+              },
+              {
+                "id": "DataDisplay",
+                "count": 20,
+                "rate": 0.1941747572815534
+              },
+              {
+                "id": "EmphasisText",
+                "count": 39,
+                "rate": 0.3786407766990291
+              },
+              {
+                "id": "EmphasizedData",
+                "count": 17,
+                "rate": 0.1650485436893204
+              },
+              {
+                "id": "EventCard",
+                "count": 4,
+                "rate": 0.038834951456310676
+              },
+              {
+                "id": "InfoBlock",
+                "count": 9,
+                "rate": 0.08737864077669903
+              },
+              {
+                "id": "PillButton",
+                "count": 10,
+                "rate": 0.0970873786407767
+              },
+              {
+                "id": "SecondaryBody",
+                "count": 47,
+                "rate": 0.4563106796116505
+              },
+              {
+                "id": "SingleLineTitle",
+                "count": 74,
+                "rate": 0.7184466019417476
+              },
+              {
+                "id": "SummaryList",
+                "count": 2,
+                "rate": 0.019417475728155338
+              },
+              {
+                "id": "TableText",
+                "count": 4,
+                "rate": 0.038834951456310676
+              },
+              {
+                "id": "TextBlock",
+                "count": 9,
+                "rate": 0.08737864077669903
+              }
+            ]
+          },
+          "assets": {
+            "count": 103,
+            "used": 38,
+            "rate": 0.36893203883495146,
+            "items": [
+              {
+                "id": "asset.alarm_fill_1",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "asset.battery_leaf_fill",
+                "count": 2,
+                "rate": 0.019417475728155338
+              },
+              {
+                "id": "asset.bell_fill",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "asset.bolt_fill",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "asset.cake_fill",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "asset.calendar_fill",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "asset.checkmark_calendar_fill",
+                "count": 2,
+                "rate": 0.019417475728155338
+              },
+              {
+                "id": "asset.emoji_bluetooth_earbuds_black",
+                "count": 2,
+                "rate": 0.019417475728155338
+              },
+              {
+                "id": "asset.emoji_calendar2",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "asset.emoji_default_weather_blue",
+                "count": 2,
+                "rate": 0.019417475728155338
+              },
+              {
+                "id": "asset.emoji_location_blue",
+                "count": 2,
+                "rate": 0.019417475728155338
+              },
+              {
+                "id": "asset.emoji_run",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "asset.emoji_time",
+                "count": 10,
+                "rate": 0.0970873786407767
+              },
+              {
+                "id": "asset.figure_run",
+                "count": 2,
+                "rate": 0.019417475728155338
+              },
+              {
+                "id": "asset.ic_charge",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "asset.ic_sportsHealth_bule",
+                "count": 6,
+                "rate": 0.05825242718446602
+              },
+              {
+                "id": "asset.ic_switch",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "asset.ic_weather_monochrome",
+                "count": 5,
+                "rate": 0.04854368932038835
+              },
+              {
+                "id": "asset.list_book_fill",
+                "count": 2,
+                "rate": 0.019417475728155338
+              },
+              {
+                "id": "asset.moon_z_fill_1",
+                "count": 1,
+                "rate": 0.009708737864077669
+              }
+            ]
+          },
+          "events": {
+            "count": 103,
+            "used": 18,
+            "rate": 0.17475728155339806,
+            "items": [
+              {
+                "id": "event.open.clock.alarm",
+                "count": 4,
+                "rate": 0.038834951456310676
+              },
+              {
+                "id": "event.open.health.sport",
+                "count": 4,
+                "rate": 0.038834951456310676
+              },
+              {
+                "id": "event.open.weather",
+                "count": 6,
+                "rate": 0.05825242718446602
+              },
+              {
+                "id": "event.setPowerSavingMode",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "event.viewCalendarEvent",
+                "count": 1,
+                "rate": 0.009708737864077669
+              },
+              {
+                "id": "event.viewNote",
+                "count": 2,
+                "rate": 0.019417475728155338
+              }
+            ]
+          },
+          "data": {
+            "count": 103,
+            "used": 89,
+            "rate": 0.8640776699029126,
+            "items": [
+              {
+                "id": "GetCalendarEvents",
+                "count": 4,
+                "rate": 0.038834951456310676
+              },
+              {
+                "id": "GetCountdownDays",
+                "count": 17,
+                "rate": 0.1650485436893204
+              },
+              {
+                "id": "GetCurrentTime",
+                "count": 28,
+                "rate": 0.27184466019417475
+              },
+              {
+                "id": "GetEarphoneInfo",
+                "count": 5,
+                "rate": 0.04854368932038835
+              },
+              {
+                "id": "GetHealthAndSportSummary",
+                "count": 10,
+                "rate": 0.0970873786407767
+              },
+              {
+                "id": "GetMemoData",
+                "count": 6,
+                "rate": 0.05825242718446602
+              },
+              {
+                "id": "GetPhoneBatteryInfo",
+                "count": 5,
+                "rate": 0.04854368932038835
+              },
+              {
+                "id": "ViewWeather",
+                "count": 25,
+                "rate": 0.24271844660194175
+              }
+            ]
+          }
+        }
+      },
+      "title": "数据集统计",
+      "dataType": "json"
+    },
+    {
+      "key": "overview",
+      "data": [
+        {
+          "label": "实际请求",
+          "value": 107
+        },
+        {
+          "label": "补齐记录",
+          "value": 92
+        },
+        {
+          "label": "有效统计记录",
+          "value": 199
+        },
+        {
+          "label": "pass@1",
+          "value": 85.98130841121495,
+          "unit": "%",
+          "description": "有效实际请求 107"
+        },
+        {
+          "label": "pass@2",
+          "value": 87.85046728971963,
+          "unit": "%",
+          "description": "有效实际请求 107"
+        },
+        {
+          "label": "计划平均耗时",
+          "value": 2611.911809045226,
+          "unit": "ms",
+          "description": "有效记录 199"
+        },
+        {
+          "label": "生成平均耗时",
+          "value": 1799.3433668341709,
+          "unit": "ms",
+          "description": "有效记录 199"
+        },
+        {
+          "label": "修复平均耗时",
+          "value": 966.2204020100503,
+          "unit": "ms",
+          "description": "有效记录 199"
+        },
+        {
+          "label": "主题平均耗时",
+          "value": 935.6746231155779,
+          "unit": "ms",
+          "description": "有效记录 199"
+        },
+        {
+          "label": "接口端到端平均耗时",
+          "value": 6460.917788944723,
+          "unit": "ms",
+          "description": "有效记录 199"
+        },
+        {
+          "label": "平均接口重试",
+          "value": 0.010050251256281407,
+          "unit": "次",
+          "description": "有效记录 199"
+        },
+        {
+          "label": "平均质量修复",
+          "value": 0.5226130653266332,
+          "unit": "次",
+          "description": "有效记录 199"
+        },
+        {
+          "label": "平均模型失败重试",
+          "value": 0.0,
+          "unit": "次",
+          "description": "有效记录 199"
+        },
+        {
+          "label": "平均计划重试",
+          "value": 0.1658291457286432,
+          "unit": "次",
+          "description": "有效记录 199"
+        },
+        {
+          "label": "平均提供方切换",
+          "value": 0.0,
+          "unit": "次",
+          "description": "有效记录 199"
+        },
+        {
+          "label": "模型 TTFT",
+          "value": null,
+          "unit": "ms",
+          "description": "有效物理调用 0"
+        },
+        {
+          "label": "模型 TPS",
+          "value": null,
+          "unit": "token/s",
+          "description": "有效物理调用 0"
+        },
+        {
+          "label": "components 类别使用率",
+          "value": 98.05825242718447,
+          "unit": "%",
+          "description": "使用 101 / 可分析 103"
+        },
+        {
+          "label": "assets 类别使用率",
+          "value": 36.89320388349515,
+          "unit": "%",
+          "description": "使用 38 / 可分析 103"
+        },
+        {
+          "label": "events 类别使用率",
+          "value": 17.475728155339805,
+          "unit": "%",
+          "description": "使用 18 / 可分析 103"
+        },
+        {
+          "label": "data 类别使用率",
+          "value": 86.40776699029125,
+          "unit": "%",
+          "description": "使用 89 / 可分析 103"
+        }
+      ],
+      "title": "统计覆盖",
+      "dataType": "metrics",
+      "renderer": "kpi"
+    },
+    {
+      "key": "usage",
+      "data": [
+        {
+          "category": "components",
+          "id": "CardButton",
+          "count": 2,
+          "rate": 0.019417475728155338,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "DataDisplay",
+          "count": 20,
+          "rate": 0.1941747572815534,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "EmphasisText",
+          "count": 39,
+          "rate": 0.3786407766990291,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "EmphasizedData",
+          "count": 17,
+          "rate": 0.1650485436893204,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "EventCard",
+          "count": 4,
+          "rate": 0.038834951456310676,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "InfoBlock",
+          "count": 9,
+          "rate": 0.08737864077669903,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "PillButton",
+          "count": 10,
+          "rate": 0.0970873786407767,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "SecondaryBody",
+          "count": 47,
+          "rate": 0.4563106796116505,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "SingleLineTitle",
+          "count": 74,
+          "rate": 0.7184466019417476,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "SummaryList",
+          "count": 2,
+          "rate": 0.019417475728155338,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "TableText",
+          "count": 4,
+          "rate": 0.038834951456310676,
+          "denominator": 103
+        },
+        {
+          "category": "components",
+          "id": "TextBlock",
+          "count": 9,
+          "rate": 0.08737864077669903,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.alarm_fill_1",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.battery_leaf_fill",
+          "count": 2,
+          "rate": 0.019417475728155338,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.bell_fill",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.bolt_fill",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.cake_fill",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.calendar_fill",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.checkmark_calendar_fill",
+          "count": 2,
+          "rate": 0.019417475728155338,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.emoji_bluetooth_earbuds_black",
+          "count": 2,
+          "rate": 0.019417475728155338,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.emoji_calendar2",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.emoji_default_weather_blue",
+          "count": 2,
+          "rate": 0.019417475728155338,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.emoji_location_blue",
+          "count": 2,
+          "rate": 0.019417475728155338,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.emoji_run",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.emoji_time",
+          "count": 10,
+          "rate": 0.0970873786407767,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.figure_run",
+          "count": 2,
+          "rate": 0.019417475728155338,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.ic_charge",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.ic_sportsHealth_bule",
+          "count": 6,
+          "rate": 0.05825242718446602,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.ic_switch",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.ic_weather_monochrome",
+          "count": 5,
+          "rate": 0.04854368932038835,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.list_book_fill",
+          "count": 2,
+          "rate": 0.019417475728155338,
+          "denominator": 103
+        },
+        {
+          "category": "assets",
+          "id": "asset.moon_z_fill_1",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "events",
+          "id": "event.open.clock.alarm",
+          "count": 4,
+          "rate": 0.038834951456310676,
+          "denominator": 103
+        },
+        {
+          "category": "events",
+          "id": "event.open.health.sport",
+          "count": 4,
+          "rate": 0.038834951456310676,
+          "denominator": 103
+        },
+        {
+          "category": "events",
+          "id": "event.open.weather",
+          "count": 6,
+          "rate": 0.05825242718446602,
+          "denominator": 103
+        },
+        {
+          "category": "events",
+          "id": "event.setPowerSavingMode",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "events",
+          "id": "event.viewCalendarEvent",
+          "count": 1,
+          "rate": 0.009708737864077669,
+          "denominator": 103
+        },
+        {
+          "category": "events",
+          "id": "event.viewNote",
+          "count": 2,
+          "rate": 0.019417475728155338,
+          "denominator": 103
+        },
+        {
+          "category": "data",
+          "id": "GetCalendarEvents",
+          "count": 4,
+          "rate": 0.038834951456310676,
+          "denominator": 103
+        },
+        {
+          "category": "data",
+          "id": "GetCountdownDays",
+          "count": 17,
+          "rate": 0.1650485436893204,
+          "denominator": 103
+        },
+        {
+          "category": "data",
+          "id": "GetCurrentTime",
+          "count": 28,
+          "rate": 0.27184466019417475,
+          "denominator": 103
+        },
+        {
+          "category": "data",
+          "id": "GetEarphoneInfo",
+          "count": 5,
+          "rate": 0.04854368932038835,
+          "denominator": 103
+        },
+        {
+          "category": "data",
+          "id": "GetHealthAndSportSummary",
+          "count": 10,
+          "rate": 0.0970873786407767,
+          "denominator": 103
+        },
+        {
+          "category": "data",
+          "id": "GetMemoData",
+          "count": 6,
+          "rate": 0.05825242718446602,
+          "denominator": 103
+        },
+        {
+          "category": "data",
+          "id": "GetPhoneBatteryInfo",
+          "count": 5,
+          "rate": 0.04854368932038835,
+          "denominator": 103
+        },
+        {
+          "category": "data",
+          "id": "ViewWeather",
+          "count": 25,
+          "rate": 0.24271844660194175,
+          "denominator": 103
+        }
+      ],
+      "title": "实际使用比例",
+      "dataType": "records",
+      "renderer": "table"
+    },
+    {
+      "key": "models",
+      "data": [
+        {
+          "phase": "all",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "all",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "plan",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "plan",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "generate",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "generate",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "repair",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "repair",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "theme",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "theme",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "unknown",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "unknown",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        }
+      ],
+      "title": "模型分阶段性能",
+      "dataType": "records",
+      "renderer": "table"
+    }
+  ]
+}

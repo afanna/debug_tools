@@ -1,0 +1,21 @@
+{
+  "id": "Q309",
+  "fileName": "Q309.json",
+  "title": "日历",
+  "query": "帮我生成一张日历图片\n\n本轮卡片静态内容（用作展示的外部事实）：",
+  "size": "2x2",
+  "sequence": 14,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4097.91,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4090.88,
+  "uid": "batch-7664fcb9-00014-000",
+  "finalAttempt": 0
+}

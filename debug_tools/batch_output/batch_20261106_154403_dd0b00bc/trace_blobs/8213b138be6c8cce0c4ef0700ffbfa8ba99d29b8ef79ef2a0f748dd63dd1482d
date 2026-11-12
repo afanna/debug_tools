@@ -1,0 +1,76 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate"
+      ],
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/time"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "桌面时间卡片",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "size": "2x2",
+    "title": "时间卡片",
+    "uid": "batch-dd0b00bc-00034-000",
+    "userQuery": "恢复桌面时间卡片，显示当前时间、日期、星期和农历信息。"
+  },
+  "description": "桌面时间卡片",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261102023606930"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q446-000",
+    "isNew": true,
+    "sessionId": "batch-dd0b00bc"
+  },
+  "size": "2x2",
+  "title": "时间卡片",
+  "userAuth": {
+    "user": {
+      "userId": "batch-dd0b00bc-00034-000"
+    }
+  },
+  "userQuery": "恢复桌面时间卡片，显示当前时间、日期、星期和农历信息。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

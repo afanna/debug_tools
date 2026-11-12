@@ -1,0 +1,21 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "districtName": "雁塔区",
+        "forecastDays": 3,
+        "prefectureName": "西安市"
+      },
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "description": "天气卡片",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "天气"
+}

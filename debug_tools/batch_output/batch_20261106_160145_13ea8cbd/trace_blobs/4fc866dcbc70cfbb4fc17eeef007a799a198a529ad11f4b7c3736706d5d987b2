@@ -1,0 +1,144 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.list_book_fill"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/noteCount",
+        "/favoriteNoteCount",
+        "/notes/0/title",
+        "/notes/0/content",
+        "/notes/0/modifiedTimeText",
+        "/notes/1/title",
+        "/notes/1/content",
+        "/notes/1/modifiedTimeText",
+        "/todoTotalCount",
+        "/todoCompletedCount",
+        "/todoPendingCount",
+        "/todos/0/title",
+        "/todos/0/isComplete",
+        "/todos/0/reminderTimeText",
+        "/todos/1/title",
+        "/todos/1/isComplete",
+        "/todos/1/reminderTimeText",
+        "/hasReminderToday",
+        "/nextReminderTimeText"
+      ],
+      "capabilityId": "GetMemoData",
+      "writeResultTo": "/data/memo"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "abilityName": "MainAbility",
+          "bundleName": "com.huawei.hmos.notepad",
+          "intentName": "ViewNote",
+          "params": {
+            "launchSource": "1",
+            "launchType": "0"
+          }
+        },
+        "call": "clickToIntent"
+      },
+      "capabilityId": "event.viewNote"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.list_book_fill"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/noteCount",
+          "/favoriteNoteCount",
+          "/notes/0/title",
+          "/notes/0/content",
+          "/notes/0/modifiedTimeText",
+          "/notes/1/title",
+          "/notes/1/content",
+          "/notes/1/modifiedTimeText",
+          "/todoTotalCount",
+          "/todoCompletedCount",
+          "/todoPendingCount",
+          "/todos/0/title",
+          "/todos/0/isComplete",
+          "/todos/0/reminderTimeText",
+          "/todos/1/title",
+          "/todos/1/isComplete",
+          "/todos/1/reminderTimeText",
+          "/hasReminderToday",
+          "/nextReminderTimeText"
+        ],
+        "capabilityId": "GetMemoData",
+        "writeResultTo": "/data/memo"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "MainAbility",
+            "bundleName": "com.huawei.hmos.notepad",
+            "intentName": "ViewNote",
+            "params": {
+              "launchSource": "1",
+              "launchType": "0"
+            }
+          },
+          "call": "clickToIntent"
+        },
+        "capabilityId": "event.viewNote"
+      }
+    ],
+    "description": "备忘录速览",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "size": "2x4",
+    "title": "备忘录",
+    "uid": "batch-13ea8cbd-00055-000",
+    "userQuery": "在手机主屏幕生成一个备忘录卡片，展示备忘录笔记内容，点击卡片可跳转到备忘录应用进行编辑。"
+  },
+  "description": "备忘录速览",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261103000016694"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q467-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x4",
+  "title": "备忘录",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00055-000"
+    }
+  },
+  "userQuery": "在手机主屏幕生成一个备忘录卡片，展示备忘录笔记内容，点击卡片可跳转到备忘录应用进行编辑。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

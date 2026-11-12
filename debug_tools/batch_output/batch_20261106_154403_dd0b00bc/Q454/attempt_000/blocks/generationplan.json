@@ -1,0 +1,54 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time",
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate"
+      ]
+    },
+    {
+      "capabilityId": "GetPhoneBatteryInfo",
+      "arguments": {},
+      "writeResultTo": "/data/battery",
+      "candidateOutputFields": [
+        "/batterySOCText",
+        "/chargingStatusDesc",
+        "/batterySOC"
+      ]
+    },
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {},
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": [
+        "/current/temperatureText",
+        "/current/condition",
+        "/location/prefectureName"
+      ]
+    },
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/health",
+      "candidateOutputFields": [
+        "/exerciseTypeName"
+      ]
+    },
+    {
+      "capabilityId": "GetEarphoneInfo",
+      "arguments": {},
+      "writeResultTo": "/data/earphone",
+      "candidateOutputFields": [
+        "/earphoneName",
+        "/leftBatteryLevel",
+        "/rightBatteryLevel"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": []
+}

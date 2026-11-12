@@ -1,0 +1,8 @@
+["root","Layout",{"layout":"S-title-dual-content"},["title","primary","support"]]
+["title","SingleLineTitle",{"title":{"path":"/data/memo/notes/0/title"},"icon":"resources/base/media/bell_fill.svg","fontSize":12}]
+["primary","EmphasisText",{"mainText":{"path":"/data/memo/notes/0/content"},"fontSize":18}]
+["support","SecondaryBody",{"items":[{"label":"另一条 ","value":{"path":"/data/memo/notes/1/title"}},{"value":{"path":"/data/memo/notes/1/content"},"maxLines":2}],"columns":1,"fontSize":12}]
+["/data/memo/notes/0/title","示例"]
+["/data/memo/notes/0/content","示例"]
+["/data/memo/notes/1/title","示例"]
+["/data/memo/notes/1/content","示例"]

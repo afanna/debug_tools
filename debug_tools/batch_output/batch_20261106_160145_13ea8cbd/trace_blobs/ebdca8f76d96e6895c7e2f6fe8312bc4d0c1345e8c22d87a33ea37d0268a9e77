@@ -1,0 +1,4 @@
+["root","Column",{"width":"matchParent","height":"matchParent","padding":{"top":12.0,"bottom":12.0,"left":0,"right":0},"itemMargin":6.0,"borderRadius":20.0,"clip":true,"alignItems":"start","justifyContent":"start","_staticLayout":"S-static-content"},["__layout__root__static_body"]]
+["__layout__root__static_body","Column",{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"end","itemMargin":6.0,"padding":{"left":12.0,"right":12.0}},["body"]]
+["body","TextList",{"items":[{"primaryText":"中国石化","secondaryText":"2026年上半年纳税","value":"1,656.94亿元"},{"primaryText":"中国石油","secondaryText":"2026年上半年纳税","value":"1,322.72亿元"},{"primaryText":"工商银行","secondaryText":"2026年上半年纳税","value":"831.82亿元"}]}]
+["/state/ready",true]

@@ -1,0 +1,21 @@
+{
+  "id": "Q510",
+  "fileName": "Q510.json",
+  "title": "时钟",
+  "query": "生成一个时钟大卡片，显示当前时间、日期、星期和农历信息，风格类似锁屏界面的时间显示，点击可打开闹钟应用。",
+  "size": "2x4",
+  "sequence": 98,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7603.63,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 94,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7388.57,
+  "uid": "batch-13ea8cbd-00098-000",
+  "finalAttempt": 0
+}

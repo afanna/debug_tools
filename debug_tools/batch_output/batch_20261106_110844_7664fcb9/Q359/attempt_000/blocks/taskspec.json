@@ -1,0 +1,10 @@
+{
+  "userQuery": "制作一个轮休表格卡片，从1号到31号，展示轮休安排。本轮卡片静态内容（用作展示的外部事实）：轮休表格，从1号到31号",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "assetCandidates": []
+}

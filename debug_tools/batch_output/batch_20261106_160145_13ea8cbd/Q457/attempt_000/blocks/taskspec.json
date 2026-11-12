@@ -1,0 +1,16 @@
+{
+  "userQuery": "在桌面生成快递取件码提醒卡片，展示京东配送的2个包裹取件信息：取件码9-4-0046和9-2-0060，取件地点樟村22栋。本轮卡片静态内容（用作展示的外部事实）：京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.envelope_badge_dot_fill",
+      "src": "resources/base/media/envelope_badge_dot_fill.svg",
+      "description": "样式：默认黑色的单色实心信封图标，右上叠加圆点徽标，原始尺寸为 26×24；适用：新消息、未读提醒、邮件通知、日历邀请与备忘录共享通知。"
+    }
+  ]
+}

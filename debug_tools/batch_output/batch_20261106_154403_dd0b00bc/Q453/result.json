@@ -1,0 +1,21 @@
+{
+  "id": "Q453",
+  "fileName": "Q453.json",
+  "title": "杭州天气与耳机电量",
+  "query": "帮我生成杭州天气加耳机电量的卡片。展示杭州的天气信息（当前温度、天气状况）和蓝牙耳机的电量信息（耳机盒、左右耳电量）。",
+  "size": "2x2",
+  "sequence": 41,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 6899.38,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 92,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 6849.13,
+  "uid": "batch-dd0b00bc-00041-000",
+  "finalAttempt": 0
+}

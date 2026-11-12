@@ -1,0 +1,161 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.envelope_badge_dot_fill"
+    }
+  },
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "pickup",
+      "identity": "樟村22栋",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "pkg_1",
+      "identity": "9-4-0046",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        5,
+        6
+      ],
+      "id": "pkg_2",
+      "identity": "9-2-0060",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡主题：京东配送包裹取件码提醒",
+      "sourceTexts": [
+        "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+      ],
+      "text": "京东包裹取件码"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "两包裹共同取件地点樟村22栋",
+      "sourceTexts": [
+        "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+      ],
+      "text": "取件地点"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "取件地点名称樟村22栋",
+      "sourceTexts": [
+        "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+      ],
+      "text": "樟村22栋"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "包裹一取件码9-4-0046",
+      "sourceTexts": [
+        "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+      ],
+      "text": "取件码1"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "包裹一取件码数值9-4-0046",
+      "sourceTexts": [
+        "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+      ],
+      "text": "9-4-0046"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "包裹二取件码9-2-0060",
+      "sourceTexts": [
+        "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+      ],
+      "text": "取件码2"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "包裹二取件码数值9-2-0060",
+      "sourceTexts": [
+        "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+      ],
+      "text": "9-2-0060"
+    }
+  ],
+  "layoutHints": [
+    "S-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "rows",
+  "selectionNotes": [
+    "标题过长导致换行，改为简短主题“京东包裹取件码”，地点与两个取件码放入正文",
+    "采用rows结构：短标签加短值可单行完整读取，符合SingleLineList条件",
+    "正文三行：取件地点、两个取件码，均单行可读",
+    "两个取件码完整保留，未改变归属与数值"
+  ],
+  "staticPresentationFeedback": [
+    "Compact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_assist 完整文字需要 2 行，43.6vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。",
+    "Compact DSL validation failed:\n- 语义布局不符合合同：节点 body：TextList 含标题区时最多两项；当前三项时，若 SingleLineTitle 只是可省略共同主题或其信息已在正文完整可见，优先删除 header/SingleLineTitle 并保留三项 TextList；若标题承载尚未在正文出现的必要主体、范围或条件，先将该事实完整迁入首条或在 Plan 重新组织，不要为保留标题删除正文项。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.emoji_bluetooth_earbuds_black"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/earphoneName",
+        "/batteryLevel",
+        "/leftBatteryLevel",
+        "/rightBatteryLevel"
+      ],
+      "capabilityId": "GetEarphoneInfo",
+      "writeResultTo": "/data/earphone"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.emoji_bluetooth_earbuds_black"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/earphoneName",
+          "/batteryLevel",
+          "/leftBatteryLevel",
+          "/rightBatteryLevel"
+        ],
+        "capabilityId": "GetEarphoneInfo",
+        "writeResultTo": "/data/earphone"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "耳机电池状态速览",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMU-AL10 7.0.0.111",
+    "size": "2x2",
+    "title": "耳机电量",
+    "uid": "batch-13ea8cbd-00086-000",
+    "userQuery": "把耳机电池电量放到桌面上，创建一张耳机电量卡片，显示耳机名称、耳机盒电量、左右耳电量。"
+  },
+  "description": "耳机电池状态速览",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMU-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261103050155168"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMU-AL10 7.0.0.111",
+  "session": {
+    "interactionId": "Q498-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x2",
+  "title": "耳机电量",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00086-000"
+    }
+  },
+  "userQuery": "把耳机电池电量放到桌面上，创建一张耳机电量卡片，显示耳机名称、耳机盒电量、左右耳电量。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

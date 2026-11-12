@@ -1,0 +1,5 @@
+[
+  "info_required[1].componentHints removed alternatives because SingleLineTitle is the exclusive title component.",
+  "info_required[2].componentHints removed alternatives because SingleLineTitle is the exclusive title component.",
+  "W-top-bottom was removed from layoutHints because the 2x4 Plan contains an Action and this layout has no legal action slot; action-compatible layout hints were supplied."
+]

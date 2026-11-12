@@ -1,0 +1,227 @@
+{
+  "capacityFits": [
+    {
+      "actualItemCount": 4,
+      "actualRowCount": 4,
+      "componentId": "support",
+      "componentType": "SecondaryBody",
+      "directlyFits": [
+        {
+          "itemIndex": 0,
+          "planFacts": [
+            {
+              "factIndex": 3,
+              "priority": "must",
+              "requirement": "当前相对湿度"
+            }
+          ],
+          "value": {
+            "label": "湿度 ",
+            "maxLines": 1,
+            "value": "{{ ${/data/weather/current/humidityPercent} + '%' }}"
+          }
+        },
+        {
+          "itemIndex": 1,
+          "planFacts": [
+            {
+              "factIndex": 4,
+              "priority": "must",
+              "requirement": "未来天气预报（逐日星期、天气现象、温度范围）"
+            },
+            {
+              "factIndex": 5,
+              "priority": "must",
+              "requirement": "未来天气预报第一日天气现象"
+            },
+            {
+              "factIndex": 6,
+              "priority": "must",
+              "requirement": "未来天气预报第一日温度范围"
+            },
+            {
+              "factIndex": 7,
+              "priority": "must",
+              "requirement": "未来天气预报第二日星期"
+            },
+            {
+              "factIndex": 8,
+              "priority": "must",
+              "requirement": "未来天气预报第二日天气现象"
+            },
+            {
+              "factIndex": 9,
+              "priority": "must",
+              "requirement": "未来天气预报第二日温度范围"
+            },
+            {
+              "factIndex": 10,
+              "priority": "must",
+              "requirement": "未来天气预报第三日星期"
+            },
+            {
+              "factIndex": 11,
+              "priority": "must",
+              "requirement": "未来天气预报第三日天气现象"
+            },
+            {
+              "factIndex": 12,
+              "priority": "must",
+              "requirement": "未来天气预报第三日温度范围"
+            }
+          ],
+          "value": {
+            "label": "预报 ",
+            "maxLines": 2,
+            "value": "{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/condition} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"
+          }
+        },
+        {
+          "itemIndex": 2,
+          "planFacts": [
+            {
+              "factIndex": 4,
+              "priority": "must",
+              "requirement": "未来天气预报（逐日星期、天气现象、温度范围）"
+            },
+            {
+              "factIndex": 5,
+              "priority": "must",
+              "requirement": "未来天气预报第一日天气现象"
+            },
+            {
+              "factIndex": 6,
+              "priority": "must",
+              "requirement": "未来天气预报第一日温度范围"
+            },
+            {
+              "factIndex": 7,
+              "priority": "must",
+              "requirement": "未来天气预报第二日星期"
+            },
+            {
+              "factIndex": 8,
+              "priority": "must",
+              "requirement": "未来天气预报第二日天气现象"
+            },
+            {
+              "factIndex": 9,
+              "priority": "must",
+              "requirement": "未来天气预报第二日温度范围"
+            },
+            {
+              "factIndex": 10,
+              "priority": "must",
+              "requirement": "未来天气预报第三日星期"
+            },
+            {
+              "factIndex": 11,
+              "priority": "must",
+              "requirement": "未来天气预报第三日天气现象"
+            },
+            {
+              "factIndex": 12,
+              "priority": "must",
+              "requirement": "未来天气预报第三日温度范围"
+            }
+          ],
+          "value": {
+            "label": "预报 ",
+            "maxLines": 2,
+            "value": "{{ ${/data/weather/daily/1/weekday} + ' ' + ${/data/weather/daily/1/condition} + ' ' + ${/data/weather/daily/1/temperatureRangeText} }}"
+          }
+        }
+      ],
+      "doesNotFit": [
+        {
+          "itemIndex": 3,
+          "planFacts": [
+            {
+              "factIndex": 4,
+              "priority": "must",
+              "requirement": "未来天气预报（逐日星期、天气现象、温度范围）"
+            },
+            {
+              "factIndex": 5,
+              "priority": "must",
+              "requirement": "未来天气预报第一日天气现象"
+            },
+            {
+              "factIndex": 6,
+              "priority": "must",
+              "requirement": "未来天气预报第一日温度范围"
+            },
+            {
+              "factIndex": 7,
+              "priority": "must",
+              "requirement": "未来天气预报第二日星期"
+            },
+            {
+              "factIndex": 8,
+              "priority": "must",
+              "requirement": "未来天气预报第二日天气现象"
+            },
+            {
+              "factIndex": 9,
+              "priority": "must",
+              "requirement": "未来天气预报第二日温度范围"
+            },
+            {
+              "factIndex": 10,
+              "priority": "must",
+              "requirement": "未来天气预报第三日星期"
+            },
+            {
+              "factIndex": 11,
+              "priority": "must",
+              "requirement": "未来天气预报第三日天气现象"
+            },
+            {
+              "factIndex": 12,
+              "priority": "must",
+              "requirement": "未来天气预报第三日温度范围"
+            }
+          ],
+          "value": {
+            "label": "预报 ",
+            "maxLines": 2,
+            "value": "{{ ${/data/weather/daily/2/weekday} + ' ' + ${/data/weather/daily/2/condition} + ' ' + ${/data/weather/daily/2/temperatureRangeText} }}"
+          }
+        }
+      ],
+      "effectiveColumnCount": 1,
+      "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+      "maxRetainedRowCount": 3,
+      "overflowFactCount": 9,
+      "overflowItemCount": 1,
+      "parentAvailableHeight": 126.0,
+      "parentId": "root",
+      "rowHeights": [
+        12.0,
+        24.0,
+        24.0,
+        24.0
+      ],
+      "rowSpacing": 2.0,
+      "scope": "currentComponentItemsOnly"
+    }
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "16202d1bde9bfdd1",
+  "instruction": "重算受影响信息组的完整高度与间距，改用能闭合的合法子布局组合。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": false,
+    "observedCategories": [
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "9a25cf0b7fe2e142"
+  },
+  "noProgress": false,
+  "repairStrategy": "rebudget",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "sublayout"
+}

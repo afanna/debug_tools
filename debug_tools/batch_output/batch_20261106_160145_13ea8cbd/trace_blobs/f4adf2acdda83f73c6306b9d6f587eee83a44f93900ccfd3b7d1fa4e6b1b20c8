@@ -1,0 +1,41 @@
+{
+  "approvedOmittedFactIndexes": [
+    2
+  ],
+  "category": "layout_structure",
+  "categoryAttempt": 3,
+  "consecutiveFailures": 2,
+  "fallbackAttempt": 0,
+  "fallbackAttemptLimit": 2,
+  "fallbackRemainingAttempts": 2,
+  "fallbackStage": "drop_optional_component",
+  "fingerprint": "9fca55c926cb875e",
+  "instruction": "已进入有界删除兜底。只允许删除程序指定的一个非 Action 业务展示组件：title (SingleLineTitle)，对应信息：所在区县名称。必须同时从直接父组件 children 中移除该组件 ID，并重排其余全部 must/should 事实与 Action；本轮不得删除任何其他组件、改变动态绑定、缩字、裁切或隐藏内容。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_structure",
+      "plan_coverage",
+      "layout_structure",
+      "layout_structure"
+    ],
+    "revisitedTopology": true,
+    "topologyFingerprint": "b379a587e6bba101"
+  },
+  "noProgress": true,
+  "optionalDrop": {
+    "allowedOmittedFactIndexes": [
+      2
+    ],
+    "componentId": "title",
+    "componentType": "SingleLineTitle",
+    "containsMustFacts": false,
+    "requirements": [
+      "所在区县名称"
+    ]
+  },
+  "repairStrategy": "drop_optional_component",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

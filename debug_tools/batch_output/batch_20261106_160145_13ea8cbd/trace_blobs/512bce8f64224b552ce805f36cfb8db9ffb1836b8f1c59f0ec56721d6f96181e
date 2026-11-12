@@ -1,0 +1,7 @@
+{
+  "errors": [],
+  "warnings": [
+    "/data/countdown0: declared data capability is not used by any component.",
+    "/data/countdown1: declared data capability is not used by any component."
+  ]
+}

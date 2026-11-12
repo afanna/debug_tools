@@ -1,0 +1,91 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.health.sleep",
+        "assetId": "asset.moon_z_fill_1"
+      },
+      {
+        "actionId": "event.open.clock.alarmTab",
+        "assetId": "asset.alarm_fill_1"
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "两个候选素材已分别分配给睡眠详情与闹钟动作，无剩余匹配标题图标"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock"
+      ],
+      "dataId": "/data/healthSport/nightSleepDurationText",
+      "priority": "must",
+      "requirement": "每日睡眠总时长"
+    },
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "InfoBlock",
+        "ProgressCircleSingle"
+      ],
+      "dataId": "/data/healthSport/sleepScore",
+      "priority": "must",
+      "requirement": "睡眠综合得分"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/healthSport/sleepStatus",
+      "priority": "must",
+      "requirement": "睡眠状态判定"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock",
+        "TextBlock"
+      ],
+      "dataId": "/data/healthSport/fallAsleepTimeText",
+      "priority": "should",
+      "requirement": "入睡时刻"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock",
+        "TextBlock"
+      ],
+      "dataId": "/data/healthSport/wakeupTimeText",
+      "priority": "should",
+      "requirement": "醒来时刻"
+    },
+    {
+      "actionId": "event.open.health.sleep",
+      "componentHints": [
+        "PillButton",
+        "CardButton"
+      ],
+      "priority": "must",
+      "requirement": "点击查看睡眠详情"
+    },
+    {
+      "actionId": "event.open.clock.alarmTab",
+      "componentHints": [
+        "PillButton",
+        "CardButton"
+      ],
+      "priority": "must",
+      "requirement": "设置早睡闹钟"
+    }
+  ],
+  "layoutHints": [
+    "W-content-side-slots",
+    "W-split-panels"
+  ]
+}

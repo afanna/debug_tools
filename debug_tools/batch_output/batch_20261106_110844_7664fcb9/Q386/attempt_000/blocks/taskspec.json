@@ -1,0 +1,77 @@
+{
+  "userQuery": "制作一张3D动态日历桌面卡片，显示当前日期、星期和农历信息，同时展示最近的日程安排，点击日程可查看日程详情。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.viewCalendarEvent",
+      "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "ViewCalendarEvent",
+        "params": {
+          "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+        }
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "time": {
+        "currentDate": {
+          "type": "string",
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例"
+        },
+        "dayOfWeek": {
+          "type": "string",
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例"
+        },
+        "lunarDate": {
+          "type": "string",
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例"
+        }
+      },
+      "calendar": {
+        "events": [
+          {
+            "title": {
+              "type": "string",
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会"
+            },
+            "startDate": {
+              "type": "string",
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06"
+            },
+            "countdownDays": {
+              "type": "integer",
+              "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+              "sampleValue": 0
+            },
+            "entityId": {
+              "type": "string",
+              "description": "系统日程的全局唯一实体ID。",
+              "sampleValue": "example-event-001"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.calendar_fill",
+      "src": "resources/base/media/calendar_fill.svg",
+      "description": "样式：日历实心图标，默认黑色，图形为带格线的日历本造型；适用：日程管理、日历事件查看、当日安排。"
+    },
+    {
+      "id": "asset.emoji_calendar2",
+      "src": "resources/base/media/emoji_calendar2.png",
+      "description": "样式：红白配色的写实 3D 线圈日历，带金属装订环、浅灰日期网格和卷起页角，透明背景，原始尺寸为 512×512，PNG 位图需保留原色；适用：日历事项、明确会议或计划相关卡片，不因普通时间字段匹配。"
+    }
+  ]
+}

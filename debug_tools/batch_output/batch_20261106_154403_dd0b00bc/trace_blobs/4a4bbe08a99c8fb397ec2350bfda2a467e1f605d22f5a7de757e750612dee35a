@@ -1,0 +1,357 @@
+[
+  {
+    "actual": {
+      "contentGroups": [
+        {
+          "factIndexes": [
+            0
+          ],
+          "id": "title",
+          "identity": null,
+          "kind": "shared"
+        },
+        {
+          "factIndexes": [
+            1,
+            2
+          ],
+          "id": "week1",
+          "identity": "11/2-11/8",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            3,
+            4
+          ],
+          "id": "week2",
+          "identity": "11/9-11/15",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            5,
+            6
+          ],
+          "id": "week3",
+          "identity": "11/16-11/22",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            7,
+            8
+          ],
+          "id": "week4",
+          "identity": "11/23-11/29",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            9,
+            10
+          ],
+          "id": "week5",
+          "identity": "11/30-12/6",
+          "kind": "object"
+        }
+      ]
+    },
+    "category": "display",
+    "code": "COMPACT_STATIC_CORE_MISSING",
+    "evidenceSource": "validation",
+    "expected": {
+      "coreOmissionAllowed": false,
+      "sameObjectCoverage": true
+    },
+    "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+    "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 week1 缺少对象名称 '11/2-11/8'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 week1 缺少对象名称 '11/2-11/8'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "severity": "error",
+    "validationClass": "semantic"
+  },
+  {
+    "actual": {
+      "contentGroups": [
+        {
+          "factIndexes": [
+            0
+          ],
+          "id": "title",
+          "identity": null,
+          "kind": "shared"
+        },
+        {
+          "factIndexes": [
+            1,
+            2
+          ],
+          "id": "week1",
+          "identity": "11/2-11/8",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            3,
+            4
+          ],
+          "id": "week2",
+          "identity": "11/9-11/15",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            5,
+            6
+          ],
+          "id": "week3",
+          "identity": "11/16-11/22",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            7,
+            8
+          ],
+          "id": "week4",
+          "identity": "11/23-11/29",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            9,
+            10
+          ],
+          "id": "week5",
+          "identity": "11/30-12/6",
+          "kind": "object"
+        }
+      ]
+    },
+    "category": "display",
+    "code": "COMPACT_STATIC_CORE_MISSING",
+    "evidenceSource": "validation",
+    "expected": {
+      "coreOmissionAllowed": false,
+      "sameObjectCoverage": true
+    },
+    "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+    "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 week2 缺少对象名称 '11/9-11/15'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 week2 缺少对象名称 '11/9-11/15'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "severity": "error",
+    "validationClass": "semantic"
+  },
+  {
+    "actual": {
+      "contentGroups": [
+        {
+          "factIndexes": [
+            0
+          ],
+          "id": "title",
+          "identity": null,
+          "kind": "shared"
+        },
+        {
+          "factIndexes": [
+            1,
+            2
+          ],
+          "id": "week1",
+          "identity": "11/2-11/8",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            3,
+            4
+          ],
+          "id": "week2",
+          "identity": "11/9-11/15",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            5,
+            6
+          ],
+          "id": "week3",
+          "identity": "11/16-11/22",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            7,
+            8
+          ],
+          "id": "week4",
+          "identity": "11/23-11/29",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            9,
+            10
+          ],
+          "id": "week5",
+          "identity": "11/30-12/6",
+          "kind": "object"
+        }
+      ]
+    },
+    "category": "display",
+    "code": "COMPACT_STATIC_CORE_MISSING",
+    "evidenceSource": "validation",
+    "expected": {
+      "coreOmissionAllowed": false,
+      "sameObjectCoverage": true
+    },
+    "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+    "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 week3 缺少对象名称 '11/16-11/22'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 week3 缺少对象名称 '11/16-11/22'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "severity": "error",
+    "validationClass": "semantic"
+  },
+  {
+    "actual": {
+      "contentGroups": [
+        {
+          "factIndexes": [
+            0
+          ],
+          "id": "title",
+          "identity": null,
+          "kind": "shared"
+        },
+        {
+          "factIndexes": [
+            1,
+            2
+          ],
+          "id": "week1",
+          "identity": "11/2-11/8",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            3,
+            4
+          ],
+          "id": "week2",
+          "identity": "11/9-11/15",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            5,
+            6
+          ],
+          "id": "week3",
+          "identity": "11/16-11/22",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            7,
+            8
+          ],
+          "id": "week4",
+          "identity": "11/23-11/29",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            9,
+            10
+          ],
+          "id": "week5",
+          "identity": "11/30-12/6",
+          "kind": "object"
+        }
+      ]
+    },
+    "category": "display",
+    "code": "COMPACT_STATIC_CORE_MISSING",
+    "evidenceSource": "validation",
+    "expected": {
+      "coreOmissionAllowed": false,
+      "sameObjectCoverage": true
+    },
+    "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+    "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 week4 缺少对象名称 '11/23-11/29'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 week4 缺少对象名称 '11/23-11/29'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "severity": "error",
+    "validationClass": "semantic"
+  },
+  {
+    "actual": {
+      "contentGroups": [
+        {
+          "factIndexes": [
+            0
+          ],
+          "id": "title",
+          "identity": null,
+          "kind": "shared"
+        },
+        {
+          "factIndexes": [
+            1,
+            2
+          ],
+          "id": "week1",
+          "identity": "11/2-11/8",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            3,
+            4
+          ],
+          "id": "week2",
+          "identity": "11/9-11/15",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            5,
+            6
+          ],
+          "id": "week3",
+          "identity": "11/16-11/22",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            7,
+            8
+          ],
+          "id": "week4",
+          "identity": "11/23-11/29",
+          "kind": "object"
+        },
+        {
+          "factIndexes": [
+            9,
+            10
+          ],
+          "id": "week5",
+          "identity": "11/30-12/6",
+          "kind": "object"
+        }
+      ]
+    },
+    "category": "display",
+    "code": "COMPACT_STATIC_CORE_MISSING",
+    "evidenceSource": "validation",
+    "expected": {
+      "coreOmissionAllowed": false,
+      "sameObjectCoverage": true
+    },
+    "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+    "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 week5 缺少对象名称 '11/30-12/6'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 week5 缺少对象名称 '11/30-12/6'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "severity": "error",
+    "validationClass": "semantic"
+  }
+]

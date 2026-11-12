@@ -1,0 +1,22 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 12/7-12/13 大周（周六周日休息）.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 12/14-12/20 小周（周日休息）.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 12/21-12/27 大周（周六周日休息）.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 12/28-12/31 小周（周日休息）.",
+    "stage": "validation"
+  }
+]

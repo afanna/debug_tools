@@ -1,0 +1,21 @@
+{
+  "title": "农历聚餐",
+  "description": "帮我记录农历2025-06-01闰六月初一这次家庭聚餐，看看距离今天多少天。",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetDateCounter",
+      "arguments": {
+        "targetDate": "2025-06-01",
+        "calendar": "lunar",
+        "isLeapMonth": true
+      },
+      "writeResultTo": "/data/dateCounter"
+    }
+  ]
+}

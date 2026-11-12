@@ -1,0 +1,21 @@
+{
+  "id": "Q500",
+  "fileName": "Q500.json",
+  "title": "今日日期",
+  "query": "在我的页面（当前打开的页面）上添加日期显示，显示当前日期、星期和农历信息。",
+  "size": "2x2",
+  "sequence": 86,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2041.25,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00086-000",
+  "finalAttempt": 0
+}

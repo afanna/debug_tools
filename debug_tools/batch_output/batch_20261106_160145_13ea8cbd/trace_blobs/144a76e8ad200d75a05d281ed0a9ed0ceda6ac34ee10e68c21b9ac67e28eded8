@@ -1,0 +1,10 @@
+{
+  "description": "展示当前时间、日期、星期和农历的桌面时间卡片",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "时间卡片"
+}

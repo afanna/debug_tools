@@ -1,0 +1,55 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "ProgressCircleSingle",
+        "InfoBlock"
+      ],
+      "dataId": "/data/phoneBattery/batterySOCText",
+      "priority": "must",
+      "requirement": "当前手机剩余电量（已含%单位）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/phoneBattery/chargingStatusDesc",
+      "priority": "must",
+      "requirement": "当前充电状态"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/phoneBattery/batteryTemperatureText",
+      "priority": "must",
+      "requirement": "电池温度（已含℃单位）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/phoneBattery/nowCurrentText",
+      "priority": "must",
+      "requirement": "电池电流（已含mA单位）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/phoneBattery/voltageText",
+      "priority": "must",
+      "requirement": "电池电压（已含V单位）"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-content"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "forecastDays": 3
+      },
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "description": "查看当前天气和未来预报",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "天气"
+}

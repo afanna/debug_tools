@@ -1,0 +1,9 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [
+    "奶奶生日的倒计时天数",
+    "爷爷生日的倒计时天数"
+  ],
+  "warnings": []
+}

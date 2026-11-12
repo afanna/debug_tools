@@ -1,0 +1,15 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "距离目标日期的天数（纯整数，展示时追加“天”）"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "EventCard item detail must not reserve a button icon.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "args": {
+            "intentName": "ViewCalendarEvent",
+            "params": {
+              "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+            }
+          },
+          "call": "clickToIntent"
+        },
+        "category": "effective",
+        "code": "COMPACT_EVENT_ITEM_MISMATCH",
+        "componentId": "details",
+        "evidenceSource": "validation",
+        "expected": {
+          "detailCandidates": [
+            {
+              "args": {
+                "intentName": "ViewCalendarEvent",
+                "params": {
+                  "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+                }
+              },
+              "call": "clickToIntent"
+            }
+          ],
+          "recordPaths": []
+        },
+        "fixHint": "保留当前日程条目的展示内容，从本轮候选复制与该条记录相同数组路径和下标的完整详情 handler。不要改成其它条目的参数、静态样例 ID 或新增操作。",
+        "legacyMessage": "component details.items[0].onClick: must match an allowed calendar detail handler for the same displayed array record; copy its complete call and args.",
+        "message": "日程条目的详情点击未匹配同一记录的合法候选。",
+        "propertyPath": "/items/0/onClick",
+        "severity": "error",
+        "sourceLine": 4,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component details.items[0].onClick: must match an allowed calendar detail handler for the same displayed array record; copy its complete call and args.",
+    "stage": "validation"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "abilityName": "com.huawei.hmos.clock.phone",
+        "bundleName": "com.huawei.hmos.clock",
+        "intentName": "Clock",
+        "uri": ""
+      },
+      "call": "clickToDeeplink",
+      "description": "打开华为时钟应用首页。",
+      "id": "event.open.clock.alarm"
+    }
+  ],
+  "size": "2x2",
+  "userQuery": "生成一个漂亮的桌面时间卡片，显示当前时间、日期、星期和农历，点击打开闹钟"
+}

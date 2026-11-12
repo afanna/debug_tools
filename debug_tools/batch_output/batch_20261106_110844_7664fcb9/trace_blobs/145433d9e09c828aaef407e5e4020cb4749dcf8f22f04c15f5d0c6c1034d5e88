@@ -1,0 +1,60 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.emoji_time"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前时间（大号数字时钟主值）; 当前日期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "星期"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前温度"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/airQuality",
+      "priority": "must",
+      "requirement": "空气质量"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom",
+    "W-split-panels"
+  ]
+}

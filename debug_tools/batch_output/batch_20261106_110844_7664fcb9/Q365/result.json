@@ -1,0 +1,21 @@
+{
+  "id": "Q365",
+  "fileName": "Q365.json",
+  "title": "运动步数",
+  "query": "在首页显示运动步数，创建一张展示今日步数的运动健康卡片",
+  "size": "2x2",
+  "sequence": 38,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5871.42,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 96,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5862.24,
+  "uid": "batch-7664fcb9-00038-000",
+  "finalAttempt": 0
+}

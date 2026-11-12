@@ -1,0 +1,48 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "content: numeric DataDisplay requires a text label.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "component_contract",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "58934bb127a569c3",
+      "instruction": "只修复错误组件中被定位的 Props、绑定或格式，并复查直接父容器；保留该组件其它合法属性、动态事实、事件和视觉能力，不得通过删除未报错属性、移除视觉变体或更换为弱语义组件来绕过校验。",
+      "noProgress": false,
+      "repairStrategy": "component_contract_repair",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "component"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"S-center\"},[\"content\"]]\n[\"content\",\"DataDisplay\",{\"icon\":\"resources/base/media/emoji_run.png\",\"value\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\",\"supportingText\":\"今日步数\"}]\n[\"/data/healthSport/dailySteps\",6200]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "content: DataDisplay requires exactly one of label or icon.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 2,
+    "selectedRepairStrategy": {
+      "category": "component_contract",
+      "categoryAttempt": 2,
+      "consecutiveFailures": 1,
+      "fingerprint": "211f5096e7c8eb33",
+      "instruction": "局部修复没有消除错误；保留全部事实与动作，重新组织受影响组件及其父布局，不要再次提交相同组件结构。",
+      "noProgress": false,
+      "repairStrategy": "parent_layout_recompose",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"S-center\"},[\"content\"]]\n[\"content\",\"DataDisplay\",{\"label\":\"今日步数\",\"icon\":\"resources/base/media/emoji_run.png\",\"value\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\",\"supportingText\":\"步\"}]\n[\"/data/healthSport/dailySteps\",6200]"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "id": "Q394",
+  "fileName": "Q394.json",
+  "title": "天气时钟",
+  "query": "生成天气时钟卡片，显示当前时间、日期、星期、农历和当前天气温度及天气现象。",
+  "size": "2x2",
+  "sequence": 55,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4264.39,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4230.6,
+  "uid": "batch-7664fcb9-00055-000",
+  "finalAttempt": 0
+}

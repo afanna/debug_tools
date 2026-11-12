@@ -1,0 +1,58 @@
+{
+  "bundleName": "com.huawei.genui",
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "实时查看当前空气质量等级、温度、湿度等天气信息",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "size": "2x2",
+    "title": "空气质量卡片",
+    "uid": "batch-0360acc5-00005-000",
+    "userQuery": "生成一个实时查看空气质量的卡片，显示当前空气质量等级和温度等信息"
+  },
+  "dataCapabilityIds": [
+    "ViewWeather"
+  ],
+  "description": "实时查看当前空气质量等级、温度、湿度等天气信息",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.339",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261016085007614"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q144-000",
+    "isNew": true,
+    "sessionId": "batch-0360acc5"
+  },
+  "title": "空气质量卡片",
+  "userAuth": {
+    "user": {
+      "userId": "batch-0360acc5-00005-000"
+    }
+  },
+  "userQuery": "生成一个实时查看空气质量的卡片，显示当前空气质量等级和温度等信息",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

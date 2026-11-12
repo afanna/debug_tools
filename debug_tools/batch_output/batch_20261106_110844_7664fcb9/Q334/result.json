@@ -1,0 +1,21 @@
+{
+  "id": "Q334",
+  "fileName": "Q334.json",
+  "title": "生日贺卡",
+  "query": "帮我制作一个于田县喀拉克尔乡初级中学学生生日贺卡，要求：精简打气，适合初中生，内容：亲爱的同学：\n      祝你生日快乐！\n       今天是你＿＿周岁。愿你感恩党、感恩祖国，勤学上进、学业有成；强健体魄、阳光成长；与各族同学像石榴籽一样紧紧相拥，铸牢中华民族共同体意识，共筑中国梦！\n＿＿＿年＿＿月＿＿日\n\n本轮卡片静态内容（用作展示的外部事实）：\n亲爱的同学：祝你生日快乐！今天是你＿＿周岁。愿你感恩党、感恩祖国，勤学上进、学业有成；强健体魄、阳光成长；与各族同学像石榴籽一样紧紧相拥，铸牢中华民族共同体意识，共筑中国梦！＿＿＿年＿＿月＿＿日",
+  "size": "2x2",
+  "sequence": 23,
+  "status": "degraded",
+  "attemptCount": 1,
+  "elapsedMs": 8193.34,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 86,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 8186.98,
+  "uid": "batch-7664fcb9-00023-000",
+  "finalAttempt": 0
+}

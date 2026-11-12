@@ -1,0 +1,25 @@
+[
+  {
+    "actual": {
+      "property": "icon",
+      "src": "asset.figure_run"
+    },
+    "category": "effective",
+    "code": "COMPACT_ASSET_NOT_ALLOWED",
+    "componentId": "header",
+    "evidenceSource": "validation",
+    "expected": {
+      "allowedSources": [
+        "resources/base/media/figure_run.svg",
+        "resources/base/media/flame_fill.svg"
+      ]
+    },
+    "fixHint": "从本轮素材候选中选择与原意相符的资源路径，修正对应素材属性；不要编造路径或用网络地址替代。",
+    "legacyMessage": "component header.props.icon: asset must use an original src from TaskSpec.assetCandidates.",
+    "message": "组件 header 的 icon 引用了本轮候选范围以外的素材。",
+    "propertyPath": "/icon",
+    "severity": "error",
+    "sourceLine": 2,
+    "validationClass": "semantic"
+  }
+]

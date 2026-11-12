@@ -1,0 +1,46 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.setPowerSavingMode",
+        "assetId": "asset.ic_switch"
+      }
+    ],
+    "title": {
+      "assetId": "asset.battery_leaf_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "ProgressCircleSingle",
+        "EmphasisText"
+      ],
+      "dataId": "/data/phoneBattery/batterySOCText",
+      "priority": "must",
+      "requirement": "当前手机电量百分比（已含%单位）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/phoneBattery/chargingStatusDesc",
+      "priority": "should",
+      "requirement": "当前充电状态"
+    },
+    {
+      "actionId": "event.setPowerSavingMode",
+      "componentHints": [
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "一键开启省电模式"
+    }
+  ],
+  "layoutHints": [
+    "S-title-primary-secondary-action",
+    "S-title-content-action"
+  ]
+}

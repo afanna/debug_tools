@@ -1,0 +1,21 @@
+{
+  "id": "Q482",
+  "fileName": "Q482.json",
+  "title": "天气",
+  "query": "在当前页面添加一个天气卡片到堆叠窗口中，展示当前天气信息",
+  "size": "2x4",
+  "sequence": 70,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 9729.72,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 105,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 9721.18,
+  "uid": "batch-13ea8cbd-00070-000",
+  "finalAttempt": 0
+}

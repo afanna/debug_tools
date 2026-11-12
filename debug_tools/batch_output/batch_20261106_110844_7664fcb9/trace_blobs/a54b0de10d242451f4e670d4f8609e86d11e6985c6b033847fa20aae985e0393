@@ -1,0 +1,27 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {},
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "GetPhoneBatteryInfo",
+      "writeResultTo": "/data/battery"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "GetDailyMostUsage",
+      "writeResultTo": "/data/steps"
+    }
+  ],
+  "description": "时间日期电量步数简报",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x4",
+  "title": "桌面信息"
+}

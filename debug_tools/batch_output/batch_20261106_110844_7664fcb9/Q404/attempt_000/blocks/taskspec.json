@@ -1,0 +1,10 @@
+{
+  "userQuery": "创建一张桌面卡片，展示图片中的密码信息。本轮卡片静态内容（用作展示的外部事实）：图片显示操作成功，密码为 88122092，类型为永久。",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "assetCandidates": []
+}

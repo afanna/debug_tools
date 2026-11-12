@@ -1,0 +1,15 @@
+[
+  {
+    "category": "layout",
+    "code": "COMPACT_STATIC_TEXT_CAPACITY",
+    "expected": {
+      "completeTextFits": true,
+      "fontSizeUnchanged": true
+    },
+    "fixHint": "按组件固定文字规格及实际可用宽度修复被指出的字段；保持已接受文字与对象归属，必要时更换静态语义组件或重新分配主副字段；不修改字体、行高或固定间距，不用maxLines隐藏内容。",
+    "legacyMessage": "COMPACT_STATIC_TEXT_CAPACITY: body: COMPACT_STATIC_TEXT_CAPACITY: body.item0_text 占用100.8vp，扣除背板内边距与间距后item0_assist无可用宽度；保持完整标签和值，换用能分层承载的合法组件。",
+    "message": "COMPACT_STATIC_TEXT_CAPACITY: body: COMPACT_STATIC_TEXT_CAPACITY: body.item0_text 占用100.8vp，扣除背板内边距与间距后item0_assist无可用宽度；保持完整标签和值，换用能分层承载的合法组件。",
+    "severity": "error",
+    "validationClass": "semantic"
+  }
+]

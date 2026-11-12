@@ -1,0 +1,21 @@
+{
+  "id": "Q386",
+  "fileName": "Q386.json",
+  "title": "3D动态日历",
+  "query": "制作一张3D动态日历桌面卡片，显示当前日期、星期和农历信息，同时展示最近的日程安排，点击日程可查看日程详情。",
+  "size": "2x4",
+  "sequence": 49,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7391.32,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 94,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7380.69,
+  "uid": "batch-7664fcb9-00049-000",
+  "finalAttempt": 0
+}

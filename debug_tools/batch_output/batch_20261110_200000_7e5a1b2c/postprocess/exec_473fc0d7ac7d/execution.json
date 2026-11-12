@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "batch-postprocess-execution-v2",
+  "executionId": "exec_473fc0d7ac7d",
+  "runId": "batch_20261110_200000_7e5a1b2c",
+  "status": "failed",
+  "createdAt": "2026-11-10T12:16:44.565161Z",
+  "updatedAt": "2026-11-10T12:16:53.326903Z",
+  "startedAt": "2026-11-10T12:16:44.597023Z",
+  "finishedAt": "2026-11-10T12:16:53.327437Z",
+  "plugins": [
+    {
+      "id": "target-effect",
+      "name": "目标效果评测（倒计时）",
+      "version": "1.0.0",
+      "apiVersion": "batch-postprocess-v2",
+      "status": "failed",
+      "config": {
+        "rendererBaseUrl": "http://127.0.0.1:8890/debug",
+        "captureScale": 3,
+        "captureTimeoutSeconds": 1800
+      },
+      "sampleCount": 6,
+      "counts": {
+        "success": 0,
+        "failed": 6,
+        "partial": 0,
+        "skipped": 0
+      },
+      "datasetResult": {
+        "status": "failed",
+        "summary": "ValueError: 插件评分卡图片路径无效",
+        "facts": {},
+        "artifactCount": 0
+      },
+      "progress": {
+        "phase": "done",
+        "completed": 1,
+        "total": 1,
+        "message": "ValueError: 插件评分卡图片路径无效"
+      },
+      "error": "ValueError: 插件评分卡图片路径无效"
+    }
+  ],
+  "error": ""
+}

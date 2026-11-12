@@ -1,0 +1,21 @@
+{
+  "id": "Q514",
+  "fileName": "Q514.json",
+  "title": "耳机电量",
+  "query": "查看耳机电量，显示耳机名称、耳机盒电量、左右耳电量及充电状态。",
+  "size": "2x2",
+  "sequence": 102,
+  "status": "degraded",
+  "attemptCount": 1,
+  "elapsedMs": 12881.0,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 144,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 12858.89,
+  "uid": "batch-13ea8cbd-00102-000",
+  "finalAttempt": 0
+}

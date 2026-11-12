@@ -1,0 +1,21 @@
+{
+  "id": "Q133",
+  "fileName": "Q133.json",
+  "title": "运动天气卡片",
+  "query": "显示昨天的累计步数和今天的实时温度",
+  "size": "2x2",
+  "sequence": 3,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 1154.1,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-baaba440-00003-000",
+  "finalAttempt": 0
+}

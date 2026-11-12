@@ -1,0 +1,73 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "calendar": {
+        "eventCount": {
+          "description": "查询到的日程记录总数量。",
+          "sampleValue": 1,
+          "type": "integer"
+        },
+        "events": [
+          {
+            "countdownDays": {
+              "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+              "sampleValue": 0,
+              "type": "integer"
+            },
+            "startDate": {
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06",
+              "type": "string"
+            },
+            "title": {
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会",
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "time": {
+        "currentDate": {
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "dayOfWeek": {
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "lunarDate": {
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例",
+          "type": "string"
+        }
+      },
+      "weather": {
+        "current": {
+          "airQuality": {
+            "description": "当前空气质量等级，例如“优”“良”。",
+            "sampleValue": "良",
+            "type": "string"
+          },
+          "condition": {
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云",
+            "type": "string"
+          },
+          "temperatureText": {
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "eventCandidates": [],
+  "size": "2x4",
+  "userQuery": "创建一张美观的桌面卡片，结合当前壁纸风格，展示今日天气、当前时间和近期日程，整体设计要好看、协调，参考百变卡片风格，让桌面更美观。"
+}

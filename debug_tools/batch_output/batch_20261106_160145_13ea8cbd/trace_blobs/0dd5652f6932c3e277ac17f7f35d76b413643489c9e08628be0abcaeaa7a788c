@@ -1,0 +1,10 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "eventCandidates": [],
+  "size": "2x4",
+  "userQuery": "把当前屏幕上六（3）班成绩表中张定豪同学的成绩做成一张小卡片保存下来。本轮卡片静态内容（用作展示的外部事实）：张定豪，语文87分，数学98分，英语98.75分。"
+}

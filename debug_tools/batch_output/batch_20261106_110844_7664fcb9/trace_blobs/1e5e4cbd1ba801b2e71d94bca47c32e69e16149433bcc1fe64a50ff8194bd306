@@ -1,0 +1,135 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.weather",
+        "assetId": null,
+        "reason": "Whole-card detail has no button icon."
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "唯一素材已分配给动作按钮，标题无剩余匹配图标"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前温度"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/weather/current/airQuality",
+      "priority": "must",
+      "requirement": "当前空气质量等级"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/weather/current/humidityPercent",
+      "priority": "must",
+      "requirement": "当前相对湿度"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/weather/daily/0/weekday",
+      "priority": "must",
+      "requirement": "未来天气预报（逐日星期、天气现象、温度范围）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/0/condition",
+      "priority": "must",
+      "requirement": "未来天气预报第一日天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/0/temperatureRangeText",
+      "priority": "must",
+      "requirement": "未来天气预报第一日温度范围"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/1/weekday",
+      "priority": "must",
+      "requirement": "未来天气预报第二日星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/1/condition",
+      "priority": "must",
+      "requirement": "未来天气预报第二日天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/1/temperatureRangeText",
+      "priority": "must",
+      "requirement": "未来天气预报第二日温度范围"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/2/weekday",
+      "priority": "must",
+      "requirement": "未来天气预报第三日星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/2/condition",
+      "priority": "must",
+      "requirement": "未来天气预报第三日天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/2/temperatureRangeText",
+      "priority": "must",
+      "requirement": "未来天气预报第三日温度范围"
+    },
+    {
+      "actionId": "event.open.weather",
+      "priority": "must",
+      "requirement": "打开鄂尔多斯市东胜区天气详情"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content"
+  ],
+  "wholeCardActionId": "event.open.weather"
+}

@@ -1,0 +1,250 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "语义布局不符合合同：节点 lower：引用了不存在的组件。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "layout_structure",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "e3387f314b93723f",
+      "instruction": "修复违反合同的父布局结构，重新分配完整信息组和动作槽。 先检查以 root 为根的完整组件树：所有引用存在、每个节点只有一个父引用、没有环或孤立节点，并核对父区允许的角色和有序 children。不得只把孤立节点挂到不接受该角色的 Region；必要时重组受控 Group 或更换合法父布局。保留全部事实、绑定、标签、单位和动作，不通过删除孤立业务节点规避错误；结构闭合后重新核算各区容量，不修改展开后的内部几何。\n\n当前失败 DSL 的可执行定位：不存在的引用为 root.children[2]=lower。\nW-content-side-slots 的直属角色必须是 [内容 Region, 上固定槽, 下固定槽]；动作固定槽使用 CardButton。\n修复步骤：一次性检查同一父节点的全部 children；将不存在的 ID 替换为语义对应的现有组件 ID，或补建该 ID 的完整组件行，二者只能选一；随后删除未使用的旧行，并复查所有节点从 root 可达、仅有一个父引用且角色类型正确。不要只修复首个报错引用。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "layout_structure"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "8ff538cf626572d6"
+      },
+      "noProgress": false,
+      "repairStrategy": "parent_layout_recompose",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-content-side-slots\",\"orientation\":\"content-left\"},[\"content\",\"upper\",\"lower\"]]\n[\"content_title\",\"SingleLineTitle\",{\"title\":\"航班号FU6686\",\"icon\":\"resources/base/media/airplane_fill_1.svg\",\"fontSize\":12}]\n[\"content_primary\",\"EmphasisText\",{\"mainText\":\"郑州新郑国际机场→厦门高崎国际机场\",\"fontSize\":18}]\n[\"content_support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"计划出港 \",\"value\":\"2026-11-01 22:40\"},{\"label\":\"计划到港 \",\"value\":\"2026-11-02 00:50\"}],\"fontSize\":12}]\n[\"content\",\"Region\",{\"variant\":\"title-hero-support\"},[\"content_title\",\"content_primary\",\"content_support\"]]\n[\"upper\",\"CardButton\",{\"label\":\"查看日程\",\"icon\":\"resources/base/media/alarm_fill_1.svg\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"intentName\":\"ViewCalendarEvent\",\"params\":{\"entityId\":\"{{ ${/data/calendar/events/0/entityId} }}\"}}}]}]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/state/ready\",true]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_PLAN_COVERAGE_FAILED",
+        "duplicateActions": [
+          {
+            "actionId": "event.viewCalendarEvent",
+            "actualVisibleCount": 2,
+            "expectedVisibleCount": 1,
+            "factIndex": 4,
+            "occurrences": [
+              {
+                "componentId": "upper",
+                "componentType": "CardButton",
+                "fixedRequiredSlot": true,
+                "onClick": [
+                  {
+                    "args": {
+                      "intentName": "ViewCalendarEvent",
+                      "params": {
+                        "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+                      }
+                    },
+                    "call": "clickToIntent"
+                  }
+                ],
+                "parentId": "root",
+                "parentRole": "W-content-side-slots.upper",
+                "property": "onClick"
+              },
+              {
+                "componentId": "lower",
+                "componentType": "CardButton",
+                "fixedRequiredSlot": true,
+                "onClick": [
+                  {
+                    "args": {
+                      "intentName": "ViewCalendarEvent",
+                      "params": {
+                        "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+                      }
+                    },
+                    "call": "clickToIntent"
+                  }
+                ],
+                "parentId": "root",
+                "parentRole": "W-content-side-slots.lower",
+                "property": "onClick"
+              }
+            ]
+          }
+        ],
+        "message": "Plan action is displayed more than once in visible DSL: event.viewCalendarEvent; expected 1, got 2; occurrences: upper, lower.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component content_primary_main: text width overflow; complete text '郑州新郑国际机场→厦门高崎国际机场' at original font 18 needs about 306vp in one line, but its allocated text area is 132vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 2,
+    "selectedRepairStrategy": {
+      "category": "plan_coverage",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "ad12c5ae620469bd",
+      "instruction": "逐项修复 duplicateActions 中同一完整 onClick 的重复入口，核对 occurrences、父角色和fixedRequiredSlot；最终保留一个完整入口以及原事件数组、参数、动态绑定、标签和图标。不同参数、开关值或绑定的动作不得合并；不得删除任何独立 Action。可选动作移除后同步合法父变体；固定槽不能直接删 children、清空事件或放入占位内容，按 repairStrategy.scope 调整必要父布局和已有独立信息的落位，不复制信息或虚构动作填槽。保留字号、独立事实和数据行，冲突父区外不变；完整复查动作、信息、组件、结构及容量。不新增重试额度。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": true,
+        "observedCategories": [
+          "layout_structure",
+          "plan_coverage"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "59e78efd2b65c437"
+      },
+      "noProgress": false,
+      "repairStrategy": "parent_layout_recompose",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-content-side-slots\",\"orientation\":\"content-left\"},[\"content\",\"upper\",\"lower\"]]\n[\"content_title\",\"SingleLineTitle\",{\"title\":\"航班号FU6686\",\"icon\":\"resources/base/media/airplane_fill_1.svg\",\"fontSize\":12}]\n[\"content_primary\",\"EmphasisText\",{\"mainText\":\"郑州新郑国际机场→厦门高崎国际机场\",\"fontSize\":18}]\n[\"content_support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"计划出港 \",\"value\":\"2026-11-01 22:40\"},{\"label\":\"计划到港 \",\"value\":\"2026-11-02 00:50\"}],\"fontSize\":12}]\n[\"content\",\"Region\",{\"variant\":\"title-hero-support\"},[\"content_title\",\"content_primary\",\"content_support\"]]\n[\"upper\",\"CardButton\",{\"label\":\"查看日程\",\"icon\":\"resources/base/media/alarm_fill_1.svg\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"intentName\":\"ViewCalendarEvent\",\"params\":{\"entityId\":\"{{ ${/data/calendar/events/0/entityId} }}\"}}}]}]\n[\"lower\",\"CardButton\",{\"label\":\"查看日程\",\"icon\":\"resources/base/media/alarm_fill_1.svg\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"intentName\":\"ViewCalendarEvent\",\"params\":{\"entityId\":\"{{ ${/data/calendar/events/0/entityId} }}\"}}}]}]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/state/ready\",true]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "EventCard item detail must not reserve a button icon.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "compactDiagnostics": [
+          {
+            "actual": {
+              "args": {
+                "intentName": "ViewCalendarEvent",
+                "params": {
+                  "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+                }
+              },
+              "call": "clickToIntent"
+            },
+            "category": "effective",
+            "code": "COMPACT_EVENT_ITEM_MISMATCH",
+            "componentId": "details",
+            "evidenceSource": "validation",
+            "expected": {
+              "detailCandidates": [
+                {
+                  "args": {
+                    "intentName": "ViewCalendarEvent",
+                    "params": {
+                      "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+                    }
+                  },
+                  "call": "clickToIntent"
+                }
+              ],
+              "recordPaths": []
+            },
+            "fixHint": "保留当前日程条目的展示内容，从本轮候选复制与该条记录相同数组路径和下标的完整详情 handler。不要改成其它条目的参数、静态样例 ID 或新增操作。",
+            "legacyMessage": "component details.items[0].onClick: must match an allowed calendar detail handler for the same displayed array record; copy its complete call and args.",
+            "message": "日程条目的详情点击未匹配同一记录的合法候选。",
+            "propertyPath": "/items/0/onClick",
+            "severity": "error",
+            "sourceLine": 4,
+            "validationClass": "semantic"
+          }
+        ],
+        "message": "component details.items[0].onClick: must match an allowed calendar detail handler for the same displayed array record; copy its complete call and args.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 3,
+    "selectedRepairStrategy": {
+      "category": "component_contract",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "73ae19dfe0d22946",
+      "instruction": "只修复错误组件中被定位的 Props、绑定或格式，并复查直接父容器；保留该组件其它合法属性、动态事实、事件和视觉能力，不得通过删除未报错属性、移除视觉变体或更换为弱语义组件来绕过校验。",
+      "noProgress": false,
+      "repairStrategy": "component_contract_repair",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "component"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"航班号FU6686\",\"icon\":\"resources/base/media/airplane_fill_1.svg\",\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":\"郑州新郑国际机场→厦门高崎国际机场\",\"secondaryText\":\"计划出港 2026-11-01 22:40 | 计划到港 2026-11-02 00:50\",\"fontSize\":18}]\n[\"details\",\"EventCard\",{\"items\":[{\"title\":\"航班FU6686\",\"time\":\"2026-11-01 22:40 - 2026-11-02 00:50\",\"location\":\"郑州新郑国际机场→厦门高崎国际机场\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"intentName\":\"ViewCalendarEvent\",\"params\":{\"entityId\":\"{{ ${/data/calendar/events/0/entityId} }}\"}}}]}]}]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/state/ready\",true]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "EventCard item detail must not reserve a button icon.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "compactDiagnostics": [
+          {
+            "actual": {
+              "args": {
+                "intentName": "ViewCalendarEvent",
+                "params": {
+                  "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+                }
+              },
+              "call": "clickToIntent"
+            },
+            "category": "effective",
+            "code": "COMPACT_EVENT_ITEM_MISMATCH",
+            "componentId": "details",
+            "evidenceSource": "validation",
+            "expected": {
+              "detailCandidates": [
+                {
+                  "args": {
+                    "intentName": "ViewCalendarEvent",
+                    "params": {
+                      "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+                    }
+                  },
+                  "call": "clickToIntent"
+                }
+              ],
+              "recordPaths": []
+            },
+            "fixHint": "保留当前日程条目的展示内容，从本轮候选复制与该条记录相同数组路径和下标的完整详情 handler。不要改成其它条目的参数、静态样例 ID 或新增操作。",
+            "legacyMessage": "component details.items[0].onClick: must match an allowed calendar detail handler for the same displayed array record; copy its complete call and args.",
+            "message": "日程条目的详情点击未匹配同一记录的合法候选。",
+            "propertyPath": "/items/0/onClick",
+            "severity": "error",
+            "sourceLine": 4,
+            "validationClass": "semantic"
+          }
+        ],
+        "message": "component details.items[0].onClick: must match an allowed calendar detail handler for the same displayed array record; copy its complete call and args.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 4,
+    "selectedRepairStrategy": {
+      "category": "component_contract",
+      "categoryAttempt": 2,
+      "consecutiveFailures": 2,
+      "fingerprint": "73ae19dfe0d22946",
+      "instruction": "同一局部错误已经重复或上一轮 DSL 没有变化；从已接受 Plan 的全部硬事实和动作重建完整 DSL，不再修补原组件结构。",
+      "noProgress": true,
+      "repairStrategy": "plan_guided_recompose",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "full_dsl"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"航班号FU6686\",\"icon\":\"resources/base/media/airplane_fill_1.svg\",\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":\"郑州新郑国际机场→厦门高崎国际机场\",\"secondaryText\":\"计划出港 2026-11-01 22:40 | 计划到港 2026-11-02 00:50\",\"fontSize\":18}]\n[\"details\",\"EventCard\",{\"items\":[{\"title\":\"航班FU6686\",\"time\":\"2026-11-01 22:40 - 2026-11-02 00:50\",\"location\":\"郑州新郑国际机场→厦门高崎国际机场\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"intentName\":\"ViewCalendarEvent\",\"params\":{\"entityId\":\"{{ ${/data/calendar/events/0/entityId} }}\"}}}]}]}]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/state/ready\",true]"
+  }
+]

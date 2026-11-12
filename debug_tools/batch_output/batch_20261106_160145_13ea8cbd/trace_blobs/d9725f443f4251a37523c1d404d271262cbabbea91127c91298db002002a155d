@@ -1,0 +1,96 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "core",
+      "identity": null,
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 57,
+          "start": 21
+        },
+        {
+          "end": 114,
+          "start": 78
+        }
+      ],
+      "sourceText": "爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 57,
+          "start": 21
+        },
+        {
+          "end": 114,
+          "start": 78
+        }
+      ],
+      "sourceText": "爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 57,
+          "start": 21
+        },
+        {
+          "end": 114,
+          "start": 78
+        }
+      ],
+      "sourceText": "爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 57,
+          "start": 21
+        },
+        {
+          "end": 114,
+          "start": 78
+        }
+      ],
+      "sourceText": "爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。"
+    },
+    {
+      "factIndex": 4,
+      "positions": [
+        {
+          "end": 57,
+          "start": 21
+        },
+        {
+          "end": 114,
+          "start": 78
+        }
+      ],
+      "sourceText": "爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。"
+    }
+  ],
+  "version": "static-content-v1"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q486",
+  "fileName": "Q486.json",
+  "title": "时间天气",
+  "query": "创建一张大尺寸时间天气卡片，时钟时间字体最大最醒目，显示当前时间、日期、星期、农历，同时显示当前所在位置的天气（温度、天气现象）和地点名称。",
+  "size": "2x4",
+  "sequence": 74,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 10692.35,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 105,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 10682.17,
+  "uid": "batch-13ea8cbd-00074-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,280 @@
+```cardspec
+{
+  "title": "运动步数",
+  "description": "运动步数卡片",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/healthSport"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Column","children":["title","__layout__root__body"],"itemMargin":6,"styles":{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":12,"linearGradient":{"direction":"RightBottom","colors":[["#FFDBCCFF",0],["#FFF6F2FF",1]]}}},{"id":"title","component":"Row","children":["title_title","title_icon"],"styles":{"width":"matchParent","height":20,"flexShrink":0,"justifyContent":"spaceBetween","alignItems":"center"},"itemMargin":0},{"id":"title_title","component":"Text","content":"今日运动","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":1,"width":"wrapContent","layoutWeight":1,"constraintSize":{"minWidth":0},"fontColor":"#99563D99"}},{"id":"title_icon","component":"Image","src":"resources/base/media/emoji_run.png","styles":{"width":20,"height":20,"objectFit":"contain","flexShrink":0}},{"id":"__layout__root__body","component":"Column","children":["__layout__root__primary","__layout__root__support"],"itemMargin":8,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"__layout__root__primary","component":"Column","children":["steps"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1,"flexShrink":0},"itemMargin":0},{"id":"steps","component":"Row","children":["steps_value"],"itemMargin":0,"styles":{"justifyContent":"start","alignItems":"bottom","flexShrink":0,"width":"matchParent"}},{"id":"steps_value","component":"Text","content":"{{ ${/data/healthSport/dailySteps} + '步' }}","styles":{"height":30,"fontSize":30,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":0,"fontColor":"#FF563D99","textOverflow":"clip"}},{"id":"__layout__root__support","component":"Column","children":["details"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"details","component":"Column","children":["details_row0","details_row1"],"itemMargin":2,"styles":{"width":"matchParent","alignItems":"start","flexShrink":1}},{"id":"details_item0_label","component":"Text","content":"距离","styles":{"height":12,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":0,"lineHeight":1,"fontColor":"#99563D99","textOverflow":"clip"}},{"id":"details_item0_value","component":"Text","content":"{{ ${/data/healthSport/dailyDistanceText} }}","styles":{"height":12.0,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF563D99","layoutWeight":1,"textOverflow":"clip"}},{"id":"details_item0","component":"Row","children":["details_item0_label","details_item0_value"],"itemMargin":4,"styles":{"height":12.0,"alignItems":"top","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"details_row0","component":"Row","children":["details_item0"],"itemMargin":0,"styles":{"width":"matchParent","height":12.0,"alignItems":"top","flexShrink":0}},{"id":"details_item1_label","component":"Text","content":"热量","styles":{"height":12,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":0,"lineHeight":1,"fontColor":"#99563D99","textOverflow":"clip"}},{"id":"details_item1_value","component":"Text","content":"{{ ${/data/healthSport/dailyTotalCaloriesText} }}","styles":{"height":12.0,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF563D99","layoutWeight":1,"textOverflow":"clip"}},{"id":"details_item1","component":"Row","children":["details_item1_label","details_item1_value"],"itemMargin":4,"styles":{"height":12.0,"alignItems":"top","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"details_row1","component":"Row","children":["details_item1"],"itemMargin":0,"styles":{"width":"matchParent","height":12.0,"alignItems":"top","flexShrink":0}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"data":{"healthSport":{"dailySteps":6200,"dailyDistanceText":"4.60 公里","dailyTotalCaloriesText":"420 千卡"}}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "在手机桌面创建一个显示今日运动步数的卡片，展示步数、距离和热量消耗数据",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.health.sport",
+      "description": "打开华为运动健康应用的锻炼Tab页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "healthSport": {
+        "dailySteps": {
+          "type": "integer",
+          "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+          "sampleValue": 6200
+        },
+        "dailyDistanceText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总距离文本，端侧已根据数值大小换算并包含“米”或“公里”单位；展示时不得再次追加距离单位。例如“5.42 公里”或“755 米”。",
+          "sampleValue": "4.60 公里"
+        },
+        "dailyTotalCaloriesText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+          "sampleValue": "420 千卡"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.emoji_run",
+      "src": "resources/base/media/emoji_run.png",
+      "description": "样式：灰色运动上衣与深色短裤装扮的写实 3D 跑步人物，透明背景，原始尺寸为 512×512，PNG 位图需保留原色；适用：跑步记录、步数、配速或运动目标相关卡片。不适用：睡眠或泛健康卡片。"
+    },
+    {
+      "id": "asset.ic_sportsHealth_bule",
+      "src": "resources/base/media/ic_sportsHealth_bule.svg",
+      "description": "样式：蓝色纵向渐变圆形底上的白色运动火焰图标，原始尺寸为 20×20，SVG 矢量图（保留原色，禁止染色）需保留原始渐变配色，禁止染色；适用：运动健康、日常活动或锻炼摘要卡片，可结合 GetHealthAndSportSummary 展示步数、热量、距离和运动记录，也可作为 event.open.health.sport、event.open.health.sportsRecord、event.open.health.activityRecord 或 event.open.health.workoutDuration 的辅助入口图标。图标不表示运动目标已达成或用户当前正在运动。"
+    }
+  ]
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "GetHealthAndSportSummary"
+  ],
+  "event": [
+    {
+      "id": "event.open.health.sport",
+      "description": "打开华为运动健康应用的锻炼Tab页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+      }
+    }
+  ],
+  "asset": [
+    "asset.emoji_run",
+    "asset.ic_sportsHealth_bule"
+  ]
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyDistanceText",
+        "/dailyTotalCaloriesText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.sport",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.emoji_run",
+    "asset.ic_sportsHealth_bule"
+  ]
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "72d4fcfa-0bce-400d-ab4a-83124bd12c33",
+  "createdAt": 1793934613373
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"S-title-dual-content"},["title","steps","details"]]
+["title","SingleLineTitle",{"title":"今日运动","icon":"resources/base/media/emoji_run.png","fontSize":12}]
+["steps","EmphasizedData",{"value":"{{ ${/data/healthSport/dailySteps} + '步' }}","fontSize":30}]
+["details","SecondaryBody",{"items":[{"label":"距离","value":{"path":"/data/healthSport/dailyDistanceText"}},{"label":"热量","value":{"path":"/data/healthSport/dailyTotalCaloriesText"}}],"separator":" | ","fontSize":14}]
+["/data/healthSport/dailySteps",6200]
+["/data/healthSport/dailyDistanceText","4.60 公里"]
+["/data/healthSport/dailyTotalCaloriesText","420 千卡"]
+```
+```request
+{
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "userQuery": "在手机桌面创建一个显示今日运动步数的卡片，展示步数、距离和热量消耗数据",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {
+          "targetDayOffset": 0
+        },
+        "writeResultTo": "/data/healthSport",
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyDistanceText",
+          "/dailyTotalCaloriesText"
+        ]
+      }
+    ],
+    "title": "运动步数",
+    "size": "2x2",
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.health.sport",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          }
+        }
+      }
+    ],
+    "description": "运动步数卡片",
+    "candidateAssetIds": [
+      "asset.emoji_run",
+      "asset.ic_sportsHealth_bule"
+    ]
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261031010555949"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q377-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "在手机桌面创建一个显示今日运动步数的卡片，展示步数、距离和热量消耗数据",
+    "type": "text"
+  },
+  "version": "1.0",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "bundleName": "com.huawei.genui",
+  "userQuery": "在手机桌面创建一个显示今日运动步数的卡片，展示步数、距离和热量消耗数据",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyDistanceText",
+        "/dailyTotalCaloriesText"
+      ]
+    }
+  ],
+  "title": "运动步数",
+  "size": "2x2",
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.sport",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    }
+  ],
+  "description": "运动步数卡片",
+  "candidateAssetIds": [
+    "asset.emoji_run",
+    "asset.ic_sportsHealth_bule"
+  ]
+}
+```

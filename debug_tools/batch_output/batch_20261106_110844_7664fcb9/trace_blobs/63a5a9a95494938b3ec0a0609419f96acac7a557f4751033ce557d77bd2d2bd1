@@ -1,0 +1,7 @@
+```genui
+["root","Layout",{"layout":"S-center"},["content"]]
+["content","DataDisplay",{"label":"今日步数","value":{"path":"/data/healthSport/dailySteps"},"supportingText":"步"}]
+["/data/healthSport/dailySteps",6200]
+["/data/healthSport/dailyDistanceText","4.60 公里"]
+["/data/healthSport/dailyTotalCaloriesText","420 千卡"]
+```

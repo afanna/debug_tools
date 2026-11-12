@@ -1,0 +1,36 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/health",
+      "candidateOutputFields": []
+    },
+    {
+      "capabilityId": "GetPhoneBatteryInfo",
+      "arguments": {},
+      "writeResultTo": "/data/battery",
+      "candidateOutputFields": [
+        "/batterySOCText",
+        "/batterySOC"
+      ]
+    },
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time",
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek"
+      ]
+    },
+    {
+      "capabilityId": "GetEarphoneInfo",
+      "arguments": {},
+      "writeResultTo": "/data/earphone",
+      "candidateOutputFields": []
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": []
+}

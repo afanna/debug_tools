@@ -1,0 +1,9 @@
+{
+  "errors": [
+    "Plan fact is displayed more than once in visible DSL: 日程标题 (/data/calendar/events/0/title); expected 1, got 2; occurrences: primary_body (EmphasisText).mainText, details (EventCard).items[0].title.",
+    "Plan fact is missing from visible DSL: 距离日程开始的倒计天数 (/data/calendar/events/0/countdownDays)."
+  ],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [],
+  "warnings": []
+}

@@ -1,0 +1,34 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/dailyDistanceText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.activityRecord",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/router/openwith?address=com.huawei.health.h5.sports-record?h5pro=true&urlType=4&pName=com.huawei.health&path=ActiveRecord"
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.ic_sportsHealth_bule",
+    "asset.figure_run"
+  ]
+}

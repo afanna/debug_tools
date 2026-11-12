@@ -1,0 +1,13 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": [
+    "Plan fact is missing from visible DSL: 未来第1天星期 (/data/weather/daily/0/weekday).",
+    "Plan fact is missing from visible DSL: 未来第1天天气现象 (/data/weather/daily/0/condition).",
+    "Plan fact is missing from visible DSL: 未来第2天天气现象 (/data/weather/daily/1/condition).",
+    "Plan fact is missing from visible DSL: 未来第2天温度范围 (/data/weather/daily/1/temperatureRangeText).",
+    "Plan fact is missing from visible DSL: 未来第3天星期 (/data/weather/daily/2/weekday).",
+    "Plan fact is missing from visible DSL: 未来第3天天气现象 (/data/weather/daily/2/condition)."
+  ]
+}

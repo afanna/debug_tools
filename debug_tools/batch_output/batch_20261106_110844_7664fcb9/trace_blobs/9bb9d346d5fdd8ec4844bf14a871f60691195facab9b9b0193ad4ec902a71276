@@ -1,0 +1,26 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-primary-secondary-action"
+  ]
+}

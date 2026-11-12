@@ -1,0 +1,12 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan action is missing from visible DSL: 打开天气应用当前城市页 (event.open.weather). Copy the complete call and args from the matching TaskSpec event candidate.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "assetAssignments action 'event.open.weather' has no matching button component.",
+    "stage": "validation"
+  }
+]

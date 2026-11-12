@@ -1,0 +1,21 @@
+{
+  "id": "Q291",
+  "fileName": "Q291.json",
+  "title": "2027结婚吉日",
+  "query": "制作一个2027年适合结婚的吉日日历卡片，展示2027年各月份适合结婚的好日子",
+  "size": "2x2",
+  "sequence": 4,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 1770.76,
+  "errorCode": "",
+  "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "complete",
+  "traceRecordCount": 28,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 990.36,
+  "uid": "batch-7664fcb9-00004-000",
+  "finalAttempt": 0
+}

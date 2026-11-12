@@ -1,0 +1,18 @@
+{
+  "userQuery": "给我生成一个在桌面上的倒计时，时间是现在到11月13号早上7点",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "countdown": {
+        "countdownDays": {
+          "type": "integer",
+          "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+          "sampleValue": 30
+        }
+      }
+    }
+  },
+  "assetCandidates": []
+}

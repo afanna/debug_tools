@@ -1,0 +1,78 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/earphoneName",
+        "/batteryLevel",
+        "/leftBatteryLevel",
+        "/rightBatteryLevel",
+        "/chargingStatusDesc"
+      ],
+      "capabilityId": "GetEarphoneInfo",
+      "writeResultTo": "/data/earphone"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/earphoneName",
+          "/batteryLevel",
+          "/leftBatteryLevel",
+          "/rightBatteryLevel",
+          "/chargingStatusDesc"
+        ],
+        "capabilityId": "GetEarphoneInfo",
+        "writeResultTo": "/data/earphone"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "耳机电量速览",
+    "size": "2x4",
+    "title": "蓝牙耳机",
+    "uid": "batch-7664fcb9-00002-000",
+    "userQuery": "创建一张蓝牙耳机卡片，显示耳机名称和电量信息，使用大卡片尺寸。"
+  },
+  "description": "耳机电量速览",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261028160452487"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "session": {
+    "interactionId": "Q287-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x4",
+  "title": "蓝牙耳机",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00002-000"
+    }
+  },
+  "userQuery": "创建一张蓝牙耳机卡片，显示耳机名称和电量信息，使用大卡片尺寸。",
+  "utterance": {
+    "original": "创建一张蓝牙耳机卡片，显示耳机名称和电量信息，使用大卡片尺寸。",
+    "type": "text"
+  },
+  "version": "1.0"
+}

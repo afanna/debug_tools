@@ -1,0 +1,33 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:e62a8dcc316835ca3e29aa5f09fef30adaf1d11ea8b225c1b499ad658c23df02",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_73974ae4-e9bb-4981-9a80-5961f3200ed1.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.emoji_time",
+      "asset.ic_weather_monochrome",
+      "asset.emoji_default_weather_blue"
+    ],
+    "data": [
+      "GetCurrentTime",
+      "ViewWeather"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+        "id": "event.open.weather"
+      }
+    ]
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x4"
+}

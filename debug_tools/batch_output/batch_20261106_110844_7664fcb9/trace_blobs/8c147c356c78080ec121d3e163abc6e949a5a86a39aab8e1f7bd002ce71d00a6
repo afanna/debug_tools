@@ -1,0 +1,32 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:06a980e08da543d11defff0111d6dda5b0be075dd5cc93177d881d55222f179b",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_ba152b0e-e229-4ffb-9538-bdd17ee004d2.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.figure_run",
+      "asset.emoji_run",
+      "asset.ic_sportsHealth_bule"
+    ],
+    "data": [
+      "GetHealthAndSportSummary"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/router/openwith?address=com.huawei.health.h5.sports-record?h5pro=true&urlType=4&pName=com.huawei.health&path=ActiveRecord"
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为运动健康应用的活动记录页。",
+        "id": "event.open.health.activityRecord"
+      }
+    ]
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x2"
+}

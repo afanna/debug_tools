@@ -1,0 +1,21 @@
+{
+  "id": "Q471",
+  "fileName": "Q471.json",
+  "title": "天气日历",
+  "query": "创建一张天气和日历桌面卡片，显示当前天气（温度、天气现象）和近期日程安排。",
+  "size": "2x4",
+  "sequence": 59,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4919.24,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 74,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4904.19,
+  "uid": "batch-dd0b00bc-00059-000",
+  "finalAttempt": 0
+}

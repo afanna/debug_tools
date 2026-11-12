@@ -1,0 +1,40 @@
+{
+  "approvedOmittedFactIndexes": [
+    1
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fallbackAttempt": 0,
+  "fallbackAttemptLimit": 1,
+  "fallbackRemainingAttempts": 1,
+  "fallbackStage": "drop_optional_component",
+  "fingerprint": "f231a0907b234e86",
+  "instruction": "已进入有界删除兜底。只允许删除程序指定的一个非 Action 业务展示组件：left_primary (EmphasisText)，对应信息：展示计划出港时间 2026-11-01 22:40。必须同时从直接父组件 children 中移除该组件 ID，并重排其余全部 must/should 事实与 Action；本轮不得删除任何其他组件、改变动态绑定、缩字、裁切或隐藏内容。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_structure",
+      "layout_structure",
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "54a1cc4213359279"
+  },
+  "noProgress": false,
+  "optionalDrop": {
+    "allowedOmittedFactIndexes": [
+      1
+    ],
+    "componentId": "left_primary",
+    "componentType": "EmphasisText",
+    "containsMustFacts": true,
+    "requirements": [
+      "展示计划出港时间 2026-11-01 22:40"
+    ]
+  },
+  "repairStrategy": "drop_optional_component",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

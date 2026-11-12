@@ -1,0 +1,112 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "shared_title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "small_week",
+      "identity": "小周",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "big_week",
+      "identity": "大周",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡主题：2026年11月2日至12月31日大小周排班",
+      "sourceTexts": [
+        "2026年11月2日至12月31日大小周排班"
+      ],
+      "text": "2026年11-12月大小周排班"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "小周周次区间：11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31",
+      "sourceTexts": [
+        "小周：11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31"
+      ],
+      "text": "11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "小周上六休一，周日休息",
+      "sourceTexts": [
+        "小周上六休一（周日休）"
+      ],
+      "text": "上六休一，周日休"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "大周周次区间：11/9-11/15、11/23-11/29、12/7-12/13、12/21-12/27",
+      "sourceTexts": [
+        "大周：11/9-11/15、11/23-11/29、12/7-12/13、12/21-12/27"
+      ],
+      "text": "11/9-11/15、11/23-11/29、12/7-12/13、12/21-12/27"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "大周上五休二，周六周日休息",
+      "sourceTexts": [
+        "大周上五休二（周六周日休）"
+      ],
+      "text": "上五休二，周六周日休"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "records",
+  "selectionNotes": [
+    "静态排班事实，按小周/大周两类记录组织，保留全部周次区间与休息日规则。",
+    "2x4 卡片容量有限，选用带标题的两条 TextList：小周与本周次区间，大周与本周次区间。",
+    "休息日规则放入各条副文本，保留上六休一/上五休二的必要限定。"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"W-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"2026年11-12月大小周排班\"}]\n[\"body\", \"TextList\", {\"items\": [{\"primaryText\": \"小周 · 上六休一，周日休\", \"secondaryText\": \"11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31\"}, {\"primaryText\": \"大周 · 上五休二，周六周日休\", \"secondaryText\": \"11/9-11/15、11/23-11/29、12/7-12/13、12/21-12/27\"}]}]\n[\"/state/ready\", true]",
+  "staticPresentationFeedback": [
+    "正式组件UX允许省略号，原候选仍可用；以下仅为完整文字展示压力，不是新增发布门禁或事实删减授权。请在既有Plan机会中核对必要信息的完整展示：\nCompact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_secondaryText 完整文字需要 2 行，252vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。"
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 今日活动距离文本（已含单位） (/data/healthSport/dailyDistanceText).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 今日活动消耗热量文本（已含单位） (/data/healthSport/dailyTotalCaloriesText).",
+    "stage": "validation"
+  }
+]

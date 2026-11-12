@@ -1,0 +1,28 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "DataDisplay",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "东莞今日天气现象（晴）"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData",
+        "DataDisplay"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "东莞今日气温范围 23℃~31℃"
+    }
+  ],
+  "layoutHints": [
+    "S-center",
+    "S-title-content"
+  ]
+}

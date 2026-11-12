@@ -1,0 +1,6 @@
+```genui
+["root","Layout",{"layout":"W-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"月份中英文对照"}]
+["body","SingleLineList",{"items":[{"text":"1-3月","assist":"January-February-March"},{"text":"4-6月","assist":"April-May-June"},{"text":"7-9月","assist":"July-August-September"},{"text":"10-12月","assist":"October-November-December"}]}]
+["/state/ready",true]
+```

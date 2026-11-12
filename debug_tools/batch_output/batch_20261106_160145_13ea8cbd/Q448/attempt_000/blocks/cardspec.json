@@ -1,0 +1,54 @@
+{
+  "title": "家人纪念日",
+  "description": "家人重要日子提醒",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-10-15"
+      },
+      "writeResultTo": "/data/countdown0"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-07-04"
+      },
+      "writeResultTo": "/data/countdown1"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-04-29"
+      },
+      "writeResultTo": "/data/countdown2"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-04-22"
+      },
+      "writeResultTo": "/data/countdown3"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-11-08"
+      },
+      "writeResultTo": "/data/countdown4"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-01-23"
+      },
+      "writeResultTo": "/data/countdown5"
+    }
+  ]
+}

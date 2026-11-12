@@ -1,0 +1,21 @@
+{
+  "id": "Q368",
+  "fileName": "Q368.json",
+  "title": "3D动态日历",
+  "query": "在桌面放一个3D动态日历卡片，显示当前日期、星期和农历信息，具有3D动态视觉效果。本轮卡片静态内容（用作展示的外部事实）：无",
+  "size": "2x2",
+  "sequence": 40,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3888.23,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3880.83,
+  "uid": "batch-7664fcb9-00040-000",
+  "finalAttempt": 0
+}

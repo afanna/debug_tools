@@ -1,0 +1,50 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 手机充电状态 (/data/phoneBattery/chargingStatusDesc).",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第1名应用名 (/data/powerRanking/rankingList/0/appName).",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第1名耗电占比 (/data/powerRanking/rankingList/0/powerText).",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第2名应用名 (/data/powerRanking/rankingList/1/appName).",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第2名耗电占比 (/data/powerRanking/rankingList/1/powerText).",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第3名应用名 (/data/powerRanking/rankingList/2/appName).",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 耗电应用排行第3名耗电占比 (/data/powerRanking/rankingList/2/powerText).",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "/data/powerRanking: declared data capability is not used by any component.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

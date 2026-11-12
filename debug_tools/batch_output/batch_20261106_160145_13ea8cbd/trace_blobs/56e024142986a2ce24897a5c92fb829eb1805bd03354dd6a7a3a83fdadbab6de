@@ -1,0 +1,196 @@
+{
+  "businessSummary": {
+    "businesses": [
+      "battery"
+    ],
+    "complete": true,
+    "firstBusiness": "battery",
+    "hasUnknown": false,
+    "primaryBusiness": null,
+    "primaryRegionId": null,
+    "regions": [
+      {
+        "businesses": [
+          "battery"
+        ],
+        "firstBusiness": "battery",
+        "hasUnknown": false,
+        "id": "content",
+        "role": null,
+        "singleBusiness": "battery"
+      }
+    ],
+    "singleBusiness": "battery",
+    "source": "final-visible-content"
+  },
+  "candidates": [
+    "fusion-ball-battery-teal"
+  ],
+  "defaultPalette": "blue",
+  "deviceGeometryKnown": false,
+  "finalValidationErrors": [],
+  "foregroundSignature": "44eaf83907048440572fe0e167e7130da45e15355af3295193f9364c856df110",
+  "fusionEligibility": {
+    "actionCount": 0,
+    "allowedTokens": [
+      "fusion-ball-battery-teal"
+    ],
+    "businessCount": 1,
+    "conditionalFusionTokens": [
+      "fusion-ball-schedule-blue",
+      "fusion-ball-sleep-violet",
+      "fusion-ball-sport-orange"
+    ],
+    "layoutId": "S-center",
+    "palettePreferenceTokens": [],
+    "reason": null,
+    "visibleBusinesses": {
+      "businesses": [
+        "battery"
+      ],
+      "firstBusiness": "battery",
+      "hasUnknown": false,
+      "singleBusiness": "battery"
+    },
+    "visibleDataPaths": [
+      "/data/phoneBattery/batterySOCText",
+      "/data/phoneBattery/chargingStatusDesc"
+    ],
+    "visibleFieldCount": 2
+  },
+  "geometryCheckBasis": "foreground-structure",
+  "geometryUnchanged": true,
+  "layoutEvidence": {
+    "basis": "layout-only",
+    "complete": false,
+    "deviceGeometryKnown": false,
+    "reason": "图片主题已关闭"
+  },
+  "modelCandidates": [
+    "gradient-blue",
+    "gradient-purple",
+    "gradient-warm",
+    "solid-blue",
+    "solid-purple",
+    "solid-warm",
+    "fusion-ball-battery-teal",
+    "fusion-ball-schedule-blue",
+    "fusion-ball-sleep-violet",
+    "fusion-ball-sport-orange"
+  ],
+  "modelPreferences": [],
+  "outputSize": "2x2",
+  "photoAssetExclusions": [],
+  "photoSelection": {},
+  "preferenceStatus": "confirmed",
+  "preferenceWarning": null,
+  "rejected": {
+    "fusion-ball-schedule-blue": "默认融球门禁未通过，且没有对应的肯定色系偏好",
+    "fusion-ball-sleep-violet": "默认融球门禁未通过，且没有对应的肯定色系偏好",
+    "fusion-ball-sport-orange": "默认融球门禁未通过，且没有对应的肯定色系偏好",
+    "gradient-blue": "已有更高优先级的合格主题",
+    "gradient-purple": "已有更高优先级的合格主题",
+    "gradient-warm": "已有更高优先级的合格主题",
+    "photo-ux-airplane-tarmac-wide": "尺寸不匹配",
+    "photo-ux-birds-countdown-square": "图片主题已关闭",
+    "photo-ux-car-night-lake-square": "图片主题已关闭",
+    "photo-ux-car-night-lake-wide": "尺寸不匹配",
+    "photo-ux-concert-stage-wide": "尺寸不匹配",
+    "photo-ux-cumulus-blue-square": "图片主题已关闭",
+    "photo-ux-cumulus-blue-wide": "尺寸不匹配",
+    "photo-ux-digital-wave-wide": "尺寸不匹配",
+    "photo-ux-fireworks-square": "图片主题已关闭",
+    "photo-ux-glass-hourglass-square": "图片主题已关闭",
+    "photo-ux-glass-hourglass-wide": "尺寸不匹配",
+    "photo-ux-gradient-wide": "尺寸不匹配",
+    "photo-ux-hourglass-square": "图片主题已关闭",
+    "photo-ux-ice-wide": "尺寸不匹配",
+    "photo-ux-meeting-room-brown-chairs-square": "图片主题已关闭",
+    "photo-ux-meeting-room-square": "图片主题已关闭",
+    "photo-ux-metal-gear-square": "图片主题已关闭",
+    "photo-ux-metal-gear-wide": "尺寸不匹配",
+    "photo-ux-mountain-sunset-lake-square": "图片主题已关闭",
+    "photo-ux-mountain-sunset-lake-wide": "尺寸不匹配",
+    "photo-ux-pink-sunset-lake-square": "图片主题已关闭",
+    "photo-ux-pink-sunset-lake-wide": "尺寸不匹配",
+    "photo-ux-sand-arch-square": "图片主题已关闭",
+    "photo-ux-sleep-new-square": "图片主题已关闭",
+    "photo-ux-sleep-new-wide": "尺寸不匹配",
+    "photo-ux-sleep-square": "图片主题已关闭",
+    "photo-ux-sleep-wide": "尺寸不匹配",
+    "photo-ux-sport-center-wide": "尺寸不匹配",
+    "photo-ux-starry-sky-square": "图片主题已关闭",
+    "photo-ux-starry-sky-wide": "尺寸不匹配",
+    "photo-ux-texture-blue-circles-square": "图片主题已关闭",
+    "photo-ux-texture-blue-diagonal-square": "图片主题已关闭",
+    "photo-ux-texture-blue-diagonal-wide": "尺寸不匹配",
+    "photo-ux-texture-blue-diamond-square": "图片主题已关闭",
+    "photo-ux-texture-blue-diamond-wide": "尺寸不匹配",
+    "photo-ux-texture-orange-circles-square": "图片主题已关闭",
+    "photo-ux-texture-orange-diagonal-square": "图片主题已关闭",
+    "photo-ux-texture-orange-diagonal-wide": "尺寸不匹配",
+    "photo-ux-texture-orange-diamond-square": "图片主题已关闭",
+    "photo-ux-texture-orange-diamond-wide": "尺寸不匹配",
+    "photo-ux-texture-purple-circles-square": "图片主题已关闭",
+    "photo-ux-texture-purple-diagonal-square": "图片主题已关闭",
+    "photo-ux-texture-purple-diagonal-wide": "尺寸不匹配",
+    "photo-ux-texture-purple-diamond-square": "图片主题已关闭",
+    "photo-ux-texture-purple-diamond-wide": "尺寸不匹配",
+    "photo-ux-violin-stage-square": "图片主题已关闭",
+    "solid-blue": "已有更高优先级的合格主题",
+    "solid-purple": "已有更高优先级的合格主题",
+    "solid-warm": "已有更高优先级的合格主题"
+  },
+  "selectorError": null,
+  "sourceSize": "2x2",
+  "subjectlessWideGate": null,
+  "theme": {
+    "background": {
+      "ballColors": {
+        "large": "#FF1F9985",
+        "medium": "#FF24B3B3",
+        "small": "#FF5AB38E"
+      },
+      "blurRadius": 210,
+      "glassColor": "#0DFFFFFF",
+      "shellColor": "#00000000"
+    },
+    "businessDescription": "耳机、手机电量",
+    "content": {
+      "explicitTextAlpha": {
+        "secondary": 204,
+        "tertiary": 153
+      },
+      "panelBySize": {
+        "2x2": "#33FFFFFF"
+      },
+      "roles": {
+        "componentSecondary": "#33FFFFFF",
+        "componentTertiary": "#1AFFFFFF",
+        "graphicPrimary": "#FFFFFFFF",
+        "graphicSecondary": "#CCFFFFFF",
+        "graphicTertiary": "#99FFFFFF",
+        "primary": "#FFFFFFFF",
+        "secondary": "#CCFFFFFF",
+        "tertiary": "#99FFFFFF"
+      }
+    },
+    "description": "耳机、手机电量；简洁单业务融球，白色内容。",
+    "enabled": true,
+    "id": "fusion-ball-battery-teal",
+    "kind": "fusion",
+    "name": "电量青绿融球",
+    "paletteFamilies": [
+      "green",
+      "cyan"
+    ],
+    "pool": "standard",
+    "sizes": [
+      "2x2"
+    ]
+  },
+  "themeId": "fusion-ball-battery-teal",
+  "unmetPreferences": [],
+  "userColors": {},
+  "userPreferences": []
+}

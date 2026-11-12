@@ -1,0 +1,16 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "距离11月13日早上7点的倒计时天数"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

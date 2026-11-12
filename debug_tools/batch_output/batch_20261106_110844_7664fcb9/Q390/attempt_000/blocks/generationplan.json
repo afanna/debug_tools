@@ -1,0 +1,18 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/currentTime",
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": [
+    "asset.calendar_fill"
+  ]
+}

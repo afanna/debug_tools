@@ -1,0 +1,21 @@
+{
+  "id": "Q462",
+  "fileName": "Q462.json",
+  "title": "工资表",
+  "query": "创建一张通用的工资表卡片，包含姓名、基本工资、奖金、补贴、扣款、实发工资等项目，展示通用的工资表格式。本轮卡片静态内容（用作展示的外部事实）：通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资",
+  "size": "2x4",
+  "sequence": 50,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 9993.98,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 109,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 9986.53,
+  "uid": "batch-dd0b00bc-00050-000",
+  "finalAttempt": 0
+}

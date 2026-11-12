@@ -1,0 +1,21 @@
+{
+  "id": "Q446",
+  "fileName": "Q446.json",
+  "title": "时间卡片",
+  "query": "恢复桌面时间卡片，显示当前时间、日期、星期和农历信息。",
+  "size": "2x2",
+  "sequence": 34,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5622.09,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 86,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5605.86,
+  "uid": "batch-dd0b00bc-00034-000",
+  "finalAttempt": 0
+}

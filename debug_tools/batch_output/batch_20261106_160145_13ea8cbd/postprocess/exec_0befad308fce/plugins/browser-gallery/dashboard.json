@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "batch-postprocess-dashboard-v2",
+  "runId": "batch_20261106_160145_13ea8cbd",
+  "executionId": "exec_0befad308fce",
+  "plugin": {
+    "id": "browser-gallery",
+    "name": "浏览器渲染画廊",
+    "version": "3.0.0",
+    "apiVersion": "batch-postprocess-v2"
+  },
+  "status": "failed",
+  "presentation": {
+    "defaultView": "gallery",
+    "sampleFields": [
+      {
+        "key": "captureStatus",
+        "label": "截图状态",
+        "type": "string",
+        "filterable": true,
+        "sortable": true
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "key": "browser-capture",
+      "scope": "sample",
+      "title": "渲染截图",
+      "dataType": "image",
+      "required": false,
+      "renderer": "gallery"
+    },
+    {
+      "key": "browser-gallery",
+      "scope": "dataset",
+      "title": "浏览器渲染画廊",
+      "dataType": "link",
+      "required": true,
+      "renderer": "link"
+    }
+  ],
+  "datasetResult": {
+    "status": "failed",
+    "summary": "ValueError: 后处理插件依赖执行失败: browser-capture",
+    "facts": {},
+    "artifacts": []
+  },
+  "counts": {
+    "skipped": 0,
+    "partial": 0,
+    "success": 0,
+    "failed": 0
+  },
+  "totalSamples": 0,
+  "sourceTotalSamples": 107,
+  "selection": {},
+  "samples": [],
+  "error": "ValueError: 后处理插件依赖执行失败: browser-capture"
+}

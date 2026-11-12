@@ -1,0 +1,9 @@
+{
+  "data": [
+    "GetCurrentTime"
+  ],
+  "event": [],
+  "asset": [
+    "asset.calendar_fill"
+  ]
+}

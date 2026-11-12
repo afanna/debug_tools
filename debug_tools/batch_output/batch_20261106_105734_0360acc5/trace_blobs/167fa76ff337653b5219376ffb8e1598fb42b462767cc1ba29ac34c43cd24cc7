@@ -1,0 +1,28 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.openFlashlight",
+        "assetId": "asset.ic_flashlight"
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "无独立标题，动作图标已使用唯一候选素材"
+    }
+  },
+  "info_required": [
+    {
+      "actionId": "event.openFlashlight",
+      "componentHints": [
+        "CardButton",
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "点击打开手机手电筒"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content-action"
+  ]
+}

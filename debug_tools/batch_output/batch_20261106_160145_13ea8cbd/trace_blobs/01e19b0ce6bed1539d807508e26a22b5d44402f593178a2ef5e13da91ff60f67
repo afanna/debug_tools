@@ -1,0 +1,37 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {},
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "GetPhoneBatteryInfo",
+      "writeResultTo": "/data/battery"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "GetHealthAndSportSummary",
+      "writeResultTo": "/data/health"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "GetEarphoneInfo",
+      "writeResultTo": "/data/earphone"
+    }
+  ],
+  "description": "时间天气音乐速览",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x4",
+  "title": "桌面卡片"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q509",
+  "fileName": "Q509.json",
+  "title": "运动健康",
+  "query": "帮我把运动健康添加在小组件上，展示今日步数、活动热量、活动距离等运动健康数据",
+  "size": "2x2",
+  "sequence": 97,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5738.06,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5681.7,
+  "uid": "batch-13ea8cbd-00097-000",
+  "finalAttempt": 0
+}

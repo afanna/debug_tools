@@ -1,0 +1,107 @@
+{
+  "capacityFits": [
+    {
+      "actualItemCount": 4,
+      "actualRowCount": 4,
+      "componentId": "content_support",
+      "componentType": "SecondaryBody",
+      "directlyFits": [
+        {
+          "itemIndex": 0,
+          "planFacts": [
+            {
+              "factIndex": 2,
+              "priority": "must",
+              "requirement": "展示当前相对湿度"
+            }
+          ],
+          "value": {
+            "label": "湿度",
+            "value": "{{ ${/data/weather/current/humidityPercent} + '%' }}"
+          }
+        },
+        {
+          "itemIndex": 1,
+          "planFacts": [
+            {
+              "factIndex": 3,
+              "priority": "must",
+              "requirement": "展示当前空气质量等级"
+            }
+          ],
+          "value": {
+            "label": "空气",
+            "value": {
+              "path": "/data/weather/current/airQuality"
+            }
+          }
+        },
+        {
+          "itemIndex": 2,
+          "planFacts": [
+            {
+              "factIndex": 4,
+              "priority": "must",
+              "requirement": "展示当前紫外线等级"
+            }
+          ],
+          "value": {
+            "label": "紫外线",
+            "value": {
+              "path": "/data/weather/current/uvIndex"
+            }
+          }
+        }
+      ],
+      "doesNotFit": [
+        {
+          "itemIndex": 3,
+          "planFacts": [
+            {
+              "factIndex": 6,
+              "priority": "should",
+              "requirement": "展示未来3天预报（逐日天气现象与温度范围）"
+            }
+          ],
+          "value": {
+            "label": "明日",
+            "value": "{{ ${/data/weather/daily/0/condition} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"
+          }
+        }
+      ],
+      "effectiveColumnCount": 1,
+      "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+      "maxRetainedRowCount": 3,
+      "overflowFactCount": 1,
+      "overflowItemCount": 1,
+      "parentAvailableHeight": 126.0,
+      "parentId": "root",
+      "rowHeights": [
+        12.0,
+        12.0,
+        12.0,
+        24.0
+      ],
+      "rowSpacing": 2.0,
+      "scope": "currentComponentItemsOnly"
+    }
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "083322a3a2375c29",
+  "instruction": "重算受影响信息组的完整高度与间距，改用能闭合的合法子布局组合。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": false,
+    "observedCategories": [
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "5710b4b9134e5a2d"
+  },
+  "noProgress": false,
+  "repairStrategy": "rebudget",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "sublayout"
+}

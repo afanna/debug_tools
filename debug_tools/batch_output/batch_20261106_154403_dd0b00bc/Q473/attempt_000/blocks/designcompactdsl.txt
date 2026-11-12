@@ -1,0 +1,7 @@
+["root","Layout",{"layout":"S-title-dual-content"},["title","primary","support"]]
+["title","SingleLineTitle",{"title":"当前日期","icon":"resources/base/media/emoji_time.png","fontSize":12}]
+["primary","EmphasisText",{"mainText":{"path":"/data/time/currentDate"},"secondaryText":{"path":"/data/time/dayOfWeek"},"fontSize":18}]
+["support","SecondaryBody",{"items":[{"label":"农历 ","value":{"path":"/data/time/lunarDate"}}],"fontSize":14}]
+["/data/time/currentDate","示例"]
+["/data/time/dayOfWeek","示例"]
+["/data/time/lunarDate","示例"]

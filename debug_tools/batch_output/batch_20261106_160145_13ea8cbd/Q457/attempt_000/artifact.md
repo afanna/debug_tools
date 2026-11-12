@@ -1,0 +1,145 @@
+```cardspec
+{
+  "title": "快递取件提醒",
+  "description": "京东2个包裹待取",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Column","children":["__layout__root__static_body"],"itemMargin":6.0,"styles":{"width":"matchParent","height":"matchParent","padding":{"top":12.0,"bottom":12.0,"left":0,"right":0},"borderRadius":20.0,"clip":true,"alignItems":"start","justifyContent":"start","linearGradient":{"direction":"RightBottom","colors":[["#FFDBCCFF",0],["#FFF6F2FF",1]]}}},{"id":"__layout__root__static_body","component":"Column","children":["body"],"itemMargin":6.0,"styles":{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"end","padding":{"left":12.0,"right":12.0}}},{"id":"body","component":"Column","children":["body__static_item0","body__static_divider0","body__static_item1","body__static_divider1","body__static_item2"],"itemMargin":6.0,"styles":{"width":"matchParent","height":125.0,"alignItems":"start","justifyContent":"start","flexShrink":0}},{"id":"body__static_item0_primaryText","component":"Text","content":"樟村22栋","styles":{"fontSize":12.0,"fontWeight":500,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":"matchParent","flexShrink":1,"fontColor":"#FF563D99","textOverflow":"ellipsis","constraintSize":{"minWidth":0},"wordBreak":"normal"}},{"id":"body__static_item0_secondaryText","component":"Text","content":"取件地点","styles":{"fontSize":10.0,"fontWeight":400,"lineHeight":1.3,"maxLines":1,"height":13.0,"width":"matchParent","flexShrink":1,"fontColor":"#99563D99","textOverflow":"ellipsis","constraintSize":{"minWidth":0},"wordBreak":"normal"}},{"id":"body__static_item0_main","component":"Column","children":["body__static_item0_primaryText","body__static_item0_secondaryText"],"itemMargin":4.0,"styles":{"height":33.0,"alignItems":"start","justifyContent":"start","flexShrink":1,"layoutWeight":1,"constraintSize":{"minWidth":0}}},{"id":"body__static_item0_badge","component":"Text","content":"1","styles":{"fontSize":10.0,"fontWeight":500,"lineHeight":1.6,"maxLines":1,"height":16.0,"width":16.0,"flexShrink":0,"fontColor":"#FF563D99","textAlign":"center","backgroundColor":"#33563D99","borderRadius":8.0,"textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item0_text","component":"Row","children":["body__static_item0_main"],"itemMargin":0.0,"styles":{"height":33.0,"layoutWeight":1,"alignItems":"center","flexShrink":0,"constraintSize":{"minWidth":0}}},{"id":"body__static_item0","component":"Row","children":["body__static_item0_badge","body__static_item0_text"],"itemMargin":8.0,"styles":{"width":"matchParent","height":33.0,"alignItems":"center","flexShrink":0}},{"id":"body__static_divider0","component":"Divider","styles":{"width":"matchParent","height":1.0,"strokeWidth":1.0,"flexShrink":0,"color":"#1F563D99"}},{"id":"body__static_item1_primaryText","component":"Text","content":"9-4-0046","styles":{"fontSize":12.0,"fontWeight":500,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":"matchParent","flexShrink":1,"fontColor":"#FF563D99","textOverflow":"ellipsis","constraintSize":{"minWidth":0},"wordBreak":"normal"}},{"id":"body__static_item1_secondaryText","component":"Text","content":"取件码1","styles":{"fontSize":10.0,"fontWeight":400,"lineHeight":1.3,"maxLines":1,"height":13.0,"width":"matchParent","flexShrink":1,"fontColor":"#99563D99","textOverflow":"ellipsis","constraintSize":{"minWidth":0},"wordBreak":"normal"}},{"id":"body__static_item1_main","component":"Column","children":["body__static_item1_primaryText","body__static_item1_secondaryText"],"itemMargin":4.0,"styles":{"height":33.0,"alignItems":"start","justifyContent":"start","flexShrink":1,"layoutWeight":1,"constraintSize":{"minWidth":0}}},{"id":"body__static_item1_badge","component":"Text","content":"2","styles":{"fontSize":10.0,"fontWeight":500,"lineHeight":1.6,"maxLines":1,"height":16.0,"width":16.0,"flexShrink":0,"fontColor":"#FF563D99","textAlign":"center","backgroundColor":"#33563D99","borderRadius":8.0,"textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item1_text","component":"Row","children":["body__static_item1_main"],"itemMargin":0.0,"styles":{"height":33.0,"layoutWeight":1,"alignItems":"center","flexShrink":0,"constraintSize":{"minWidth":0}}},{"id":"body__static_item1","component":"Row","children":["body__static_item1_badge","body__static_item1_text"],"itemMargin":8.0,"styles":{"width":"matchParent","height":33.0,"alignItems":"center","flexShrink":0}},{"id":"body__static_divider1","component":"Divider","styles":{"width":"matchParent","height":1.0,"strokeWidth":1.0,"flexShrink":0,"color":"#1F563D99"}},{"id":"body__static_item2_primaryText","component":"Text","content":"9-2-0060","styles":{"fontSize":12.0,"fontWeight":500,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":"matchParent","flexShrink":1,"fontColor":"#FF563D99","textOverflow":"ellipsis","constraintSize":{"minWidth":0},"wordBreak":"normal"}},{"id":"body__static_item2_secondaryText","component":"Text","content":"取件码2","styles":{"fontSize":10.0,"fontWeight":400,"lineHeight":1.3,"maxLines":1,"height":13.0,"width":"matchParent","flexShrink":1,"fontColor":"#99563D99","textOverflow":"ellipsis","constraintSize":{"minWidth":0},"wordBreak":"normal"}},{"id":"body__static_item2_main","component":"Column","children":["body__static_item2_primaryText","body__static_item2_secondaryText"],"itemMargin":4.0,"styles":{"height":33.0,"alignItems":"start","justifyContent":"start","flexShrink":1,"layoutWeight":1,"constraintSize":{"minWidth":0}}},{"id":"body__static_item2_badge","component":"Text","content":"3","styles":{"fontSize":10.0,"fontWeight":500,"lineHeight":1.6,"maxLines":1,"height":16.0,"width":16.0,"flexShrink":0,"fontColor":"#FF563D99","textAlign":"center","backgroundColor":"#33563D99","borderRadius":8.0,"textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item2_text","component":"Row","children":["body__static_item2_main"],"itemMargin":0.0,"styles":{"height":33.0,"layoutWeight":1,"alignItems":"center","flexShrink":0,"constraintSize":{"minWidth":0}}},{"id":"body__static_item2","component":"Row","children":["body__static_item2_badge","body__static_item2_text"],"itemMargin":8.0,"styles":{"width":"matchParent","height":33.0,"alignItems":"center","flexShrink":0}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"state":{"ready":true}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "在桌面生成快递取件码提醒卡片，展示京东配送的2个包裹取件信息：取件码9-4-0046和9-2-0060，取件地点樟村22栋。本轮卡片静态内容（用作展示的外部事实）：京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.envelope_badge_dot_fill",
+      "src": "resources/base/media/envelope_badge_dot_fill.svg",
+      "description": "样式：默认黑色的单色实心信封图标，右上叠加圆点徽标，原始尺寸为 26×24；适用：新消息、未读提醒、邮件通知、日历邀请与备忘录共享通知。"
+    }
+  ]
+}
+```
+```effectivecapabilities
+{
+  "data": [],
+  "event": [],
+  "asset": [
+    "asset.envelope_badge_dot_fill"
+  ]
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": [
+    "asset.envelope_badge_dot_fill"
+  ]
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "515a4d8d-613c-43a1-b7bb-37e07bc0fb32",
+  "createdAt": 1793952210762
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"S-static-content"},["body"]]
+["body","TextList",{"items":[{"primaryText":"樟村22栋","secondaryText":"取件地点"},{"primaryText":"9-4-0046","secondaryText":"取件码1"},{"primaryText":"9-2-0060","secondaryText":"取件码2"}]}]
+["/state/ready",true]
+```
+```request
+{
+  "content": {
+    "size": "2x2",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "HLS-AL00 7.0.0.111",
+    "candidateAssetIds": [
+      "asset.envelope_badge_dot_fill"
+    ],
+    "candidateEventCandidates": [],
+    "bundleName": "com.huawei.genui",
+    "description": "京东2个包裹待取",
+    "userQuery": "在桌面生成快递取件码提醒卡片，展示京东配送的2个包裹取件信息：取件码9-4-0046和9-2-0060，取件地点樟村22栋。本轮卡片静态内容（用作展示的外部事实）：京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。",
+    "title": "快递取件提醒",
+    "candidateDataBindings": []
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "HLS-AL00",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261103044834808"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q457-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0",
+  "size": "2x2",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "HLS-AL00 7.0.0.111",
+  "candidateAssetIds": [
+    "asset.envelope_badge_dot_fill"
+  ],
+  "candidateEventCandidates": [],
+  "bundleName": "com.huawei.genui",
+  "description": "京东2个包裹待取",
+  "userQuery": "在桌面生成快递取件码提醒卡片，展示京东配送的2个包裹取件信息：取件码9-4-0046和9-2-0060，取件地点樟村22栋。本轮卡片静态内容（用作展示的外部事实）：京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。",
+  "title": "快递取件提醒",
+  "candidateDataBindings": []
+}
+```
+```repair-1
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-static-content\"},[\"body\"]]\n[\"body\",\"TextList\",{\"items\":[{\"primaryText\":\"樟村22栋\",\"secondaryText\":\"取件地点\"},{\"primaryText\":\"9-4-0046\",\"secondaryText\":\"取件码1\"},{\"primaryText\":\"9-2-0060\",\"secondaryText\":\"取件码2\"}]}]\n[\"/state/ready\",true]",
+  "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"__layout__root__static_body\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":{\"top\":12.0,\"bottom\":12.0,\"left\":0,\"right\":0},\"borderRadius\":20.0,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\"}},{\"id\":\"__layout__root__static_body\",\"component\":\"Column\",\"children\":[\"body\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1,\"alignItems\":\"start\",\"justifyContent\":\"end\",\"padding\":{\"left\":12.0,\"right\":12.0}}},{\"id\":\"body\",\"component\":\"Column\",\"children\":[\"body__static_item0\",\"body__static_divider0\",\"body__static_item1\",\"body__static_divider1\",\"body__static_item2\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"height\":125.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0}},{\"id\":\"body__static_item0_primaryText\",\"component\":\"Text\",\"content\":\"樟村22栋\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0_secondaryText\",\"component\":\"Text\",\"content\":\"取件地点\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":400,\"lineHeight\":1.3,\"maxLines\":1,\"height\":13.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0_main\",\"component\":\"Column\",\"children\":[\"body__static_item0_primaryText\",\"body__static_item0_secondaryText\"],\"itemMargin\":4.0,\"styles\":{\"height\":33.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item0_badge\",\"component\":\"Text\",\"content\":\"1\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":500,\"lineHeight\":1.6,\"maxLines\":1,\"height\":16.0,\"width\":16.0,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textAlign\":\"center\",\"backgroundColor\":\"@theme:primary/0.2\",\"borderRadius\":8.0,\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0_text\",\"component\":\"Row\",\"children\":[\"body__static_item0_main\"],\"itemMargin\":0.0,\"styles\":{\"height\":33.0,\"layoutWeight\":1,\"alignItems\":\"center\",\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item0\",\"component\":\"Row\",\"children\":[\"body__static_item0_badge\",\"body__static_item0_text\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":33.0,\"alignItems\":\"center\",\"flexShrink\":0}},{\"id\":\"body__static_divider0\",\"component\":\"Divider\",\"styles\":{\"width\":\"matchParent\",\"height\":1.0,\"strokeWidth\":1.0,\"flexShrink\":0,\"color\":\"@theme:primary/0.12\"}},{\"id\":\"body__static_item1_primaryText\",\"component\":\"Text\",\"content\":\"9-4-0046\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1_secondaryText\",\"component\":\"Text\",\"content\":\"取件码1\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":400,\"lineHeight\":1.3,\"maxLines\":1,\"height\":13.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1_main\",\"component\":\"Column\",\"children\":[\"body__static_item1_primaryText\",\"body__static_item1_secondaryText\"],\"itemMargin\":4.0,\"styles\":{\"height\":33.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item1_badge\",\"component\":\"Text\",\"content\":\"2\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":500,\"lineHeight\":1.6,\"maxLines\":1,\"height\":16.0,\"width\":16.0,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textAlign\":\"center\",\"backgroundColor\":\"@theme:primary/0.2\",\"borderRadius\":8.0,\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1_text\",\"component\":\"Row\",\"children\":[\"body__static_item1_main\"],\"itemMargin\":0.0,\"styles\":{\"height\":33.0,\"layoutWeight\":1,\"alignItems\":\"center\",\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item1\",\"component\":\"Row\",\"children\":[\"body__static_item1_badge\",\"body__static_item1_text\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":33.0,\"alignItems\":\"center\",\"flexShrink\":0}},{\"id\":\"body__static_divider1\",\"component\":\"Divider\",\"styles\":{\"width\":\"matchParent\",\"height\":1.0,\"strokeWidth\":1.0,\"flexShrink\":0,\"color\":\"@theme:primary/0.12\"}},{\"id\":\"body__static_item2_primaryText\",\"component\":\"Text\",\"content\":\"9-2-0060\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item2_secondaryText\",\"component\":\"Text\",\"content\":\"取件码2\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":400,\"lineHeight\":1.3,\"maxLines\":1,\"height\":13.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item2_main\",\"component\":\"Column\",\"children\":[\"body__static_item2_primaryText\",\"body__static_item2_secondaryText\"],\"itemMargin\":4.0,\"styles\":{\"height\":33.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item2_badge\",\"component\":\"Text\",\"content\":\"3\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":500,\"lineHeight\":1.6,\"maxLines\":1,\"height\":16.0,\"width\":16.0,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textAlign\":\"center\",\"backgroundColor\":\"@theme:primary/0.2\",\"borderRadius\":8.0,\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item2_text\",\"component\":\"Row\",\"children\":[\"body__static_item2_main\"],\"itemMargin\":0.0,\"styles\":{\"height\":33.0,\"layoutWeight\":1,\"alignItems\":\"center\",\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item2\",\"component\":\"Row\",\"children\":[\"body__static_item2_badge\",\"body__static_item2_text\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":33.0,\"alignItems\":\"center\",\"flexShrink\":0}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"state\":{\"ready\":true}}}}",
+  "validationErrors": []
+}
+```

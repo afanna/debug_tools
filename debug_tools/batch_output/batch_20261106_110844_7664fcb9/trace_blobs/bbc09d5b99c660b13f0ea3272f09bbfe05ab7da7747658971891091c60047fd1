@@ -1,0 +1,12 @@
+{
+  "category": "component_contract",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "384f2fee71f70789",
+  "instruction": "只修复错误组件中被定位的 Props、绑定或格式，并复查直接父容器；保留该组件其它合法属性、动态事实、事件和视觉能力，不得通过删除未报错属性、移除视觉变体或更换为弱语义组件来绕过校验。 SecondaryBody.items[].label 只能保留原本就是静态文字的标签；动态 label 必须与同项现有 value 按原显示顺序合并为一个完整的 items[].value Expression，并保留全部原始绑定。不得把动态内容静态化、删除或改写为样例值。",
+  "noProgress": false,
+  "repairStrategy": "component_contract_repair",
+  "retryTarget": "dsl_local_repair",
+  "retryable": true,
+  "scope": "component"
+}

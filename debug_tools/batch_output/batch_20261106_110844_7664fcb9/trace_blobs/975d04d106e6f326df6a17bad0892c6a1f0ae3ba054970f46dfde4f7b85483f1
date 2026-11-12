@@ -1,0 +1,43 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "schedule",
+      "identity": "轮休安排",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 58,
+          "start": 46
+        }
+      ],
+      "sourceText": "轮休表格，从1号到31号"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 58,
+          "start": 46
+        }
+      ],
+      "sourceText": "轮休表格，从1号到31号"
+    }
+  ],
+  "version": "static-content-v1"
+}

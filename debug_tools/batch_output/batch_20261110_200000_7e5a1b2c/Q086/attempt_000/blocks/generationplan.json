@@ -1,0 +1,25 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetDateCounter",
+      "arguments": {
+        "targetDate": "2026-07-01",
+        "repeat": {
+          "unit": "month",
+          "interval": 2
+        }
+      },
+      "writeResultTo": "/data/dateCounter",
+      "candidateOutputFields": [
+        "/days",
+        "/relationText",
+        "/targetDateText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": [
+    "asset.stopwatch_fill",
+    "asset.calendar_fill"
+  ]
+}

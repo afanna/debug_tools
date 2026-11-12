@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-dual-content\"},[\"title\",\"primary\",\"support\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"备忘录\",\"icon\":\"resources/base/media/list_book_fill.svg\",\"fontSize\":12}]\n[\"primary\",\"Group\",{\"variant\":\"peer-pair\"},[\"primary_left\",\"primary_right\"]]\n[\"primary_left\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/noteCount\"},\"secondaryText\":\"笔记\"}]\n[\"primary_right\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/todoTotalCount\"},\"secondaryText\":\"待办\"}]\n[\"support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"未完成 \",\"value\":{\"path\":\"/data/memo/todoPendingCount\"}},{\"label\":\"已完成 \",\"value\":{\"path\":\"/data/memo/todoCompletedCount\"}},{\"label\":\"笔记 \",\"value\":{\"path\":\"/data/memo/notes/0/title\"}},{\"label\":\"待办 \",\"value\":{\"path\":\"/data/memo/todos/0/title\"}}],\"fontSize\":12}]\n[\"/data/memo/noteCount\",0]\n[\"/data/memo/todoTotalCount\",0]\n[\"/data/memo/todoPendingCount\",0]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/notes/0/title\",\"示例\"]\n[\"/data/memo/todos/0/title\",\"示例\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "语义布局不符合合同：节点 primary：小卡 Group 只能包含同一区域内的只读内容。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+    }
+  ]
+}

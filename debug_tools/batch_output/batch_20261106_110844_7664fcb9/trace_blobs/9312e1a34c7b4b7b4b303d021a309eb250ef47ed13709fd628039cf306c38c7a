@@ -1,0 +1,56 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.cake_fill"
+  ],
+  "candidateDataBindings": [],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.cake_fill"
+    ],
+    "candidateDataBindings": [],
+    "candidateEventCandidates": [],
+    "description": "生日贺卡",
+    "size": "2x2",
+    "title": "生日快乐",
+    "uid": "batch-7664fcb9-00017-000",
+    "userQuery": "制作一张生日贺卡，上面写明祝沈大哥生日快乐。本轮卡片静态内容（用作展示的外部事实）：祝沈大哥生日快乐"
+  },
+  "description": "生日贺卡",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261029132737963"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q320-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x2",
+  "title": "生日快乐",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00017-000"
+    }
+  },
+  "userQuery": "制作一张生日贺卡，上面写明祝沈大哥生日快乐。本轮卡片静态内容（用作展示的外部事实）：祝沈大哥生日快乐",
+  "utterance": {
+    "original": "制作一张生日贺卡，上面写明祝沈大哥生日快乐。本轮卡片静态内容（用作展示的外部事实）：祝沈大哥生日快乐",
+    "type": "text"
+  },
+  "version": "1.0"
+}

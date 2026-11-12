@@ -1,0 +1,19 @@
+{
+  "taskId": "task_c7a035921651",
+  "name": "mock-check-Q126",
+  "datasetId": "online_updated",
+  "sampleIds": [
+    "Q126"
+  ],
+  "sampleCount": 1,
+  "requestOverrides": {},
+  "concurrency": 4,
+  "maxRetries": 0,
+  "timeoutSeconds": 300.0,
+  "backendMode": "managed",
+  "toolWsBaseUrl": "",
+  "serviceConfig": {},
+  "serviceConfigVersion": 2,
+  "createdAt": "2026-11-06T02:56:55.309159Z",
+  "updatedAt": "2026-11-06T02:56:55.340920Z"
+}

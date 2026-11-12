@@ -1,0 +1,285 @@
+{
+  "sampleId": "Q061",
+  "size": "2x2",
+  "rubricVersion": 3,
+  "genuiPath": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\Q061\\attempt_000\\genui.jsonl",
+  "oracle": {
+    "sampleId": "Q061",
+    "scenario": "lunar_once",
+    "timezone": "Asia/Shanghai",
+    "referenceDate": "2026-11-03",
+    "targetDate": null,
+    "expectedDays": null,
+    "expectedRelationText": null,
+    "expectedTargetDateText": null,
+    "writeResultTo": "/data/dateCounter",
+    "fields": [
+      "/days",
+      "/relationText",
+      "/targetDateText"
+    ],
+    "arguments": {
+      "targetDate": "2025-06-01",
+      "calendar": "lunar",
+      "isLeapMonth": true
+    },
+    "gate": false,
+    "provenance": {},
+    "notes": [
+      "农历日期需日历库或人工确认，本次不自动判定目标日"
+    ]
+  },
+  "injected": [],
+  "theme": {
+    "id": "photo-ux-texture-blue-diagonal-square",
+    "name": "蓝色无主体纹理 · 斜纹",
+    "kind": "photo",
+    "eligible": true,
+    "reason": ""
+  },
+  "userQuery": "帮我记录农历2025-06-01闰六月初一这次家庭聚餐，看看距离今天多少天。",
+  "spec": [
+    {
+      "rule": "SPEC.THEME_ELIGIBLE",
+      "status": "pass",
+      "expected": "Pixso 图 + 60% 黑蒙层路线",
+      "actual": "photo-ux-texture-blue-diagonal-square（photo）属于图+蒙层路线",
+      "severity": "minor",
+      "evidence": {
+        "theme": "photo-ux-texture-blue-diagonal-square",
+        "kind": "photo"
+      }
+    },
+    {
+      "rule": "SPEC.RADIUS",
+      "status": "pass",
+      "expected": "20",
+      "actual": "20",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.CLIP",
+      "status": "pass",
+      "expected": "true",
+      "actual": "root=True, content=True",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.PADDING",
+      "status": "pass",
+      "expected": "12",
+      "actual": "12.0",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.BG_FULL_BLEED",
+      "status": "pass",
+      "expected": "铺满的背景图",
+      "actual": "__post_theme_base",
+      "severity": "major",
+      "evidence": {
+        "images": [
+          "__post_theme_base"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.BG_SINGLE",
+      "status": "pass",
+      "expected": "单张满铺背景图",
+      "actual": "__post_theme_base",
+      "severity": "minor",
+      "evidence": {
+        "images": [
+          "__post_theme_base"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.BG_FIT",
+      "status": "pass",
+      "expected": "fill 或 cover",
+      "actual": "fill",
+      "severity": "minor",
+      "evidence": {
+        "objectFit": [
+          "fill"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.MASK",
+      "status": "fail",
+      "expected": "黑色蒙层 60%（55%–70%）",
+      "actual": "未找到黑色蒙层",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.TITLE_REQUIRED",
+      "status": "pass",
+      "expected": "存在标题区",
+      "actual": "title_title",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.TITLE_FONT",
+      "status": "fail",
+      "expected": "主 16 或 20，副 16",
+      "actual": "主 12.0",
+      "severity": "major",
+      "evidence": {
+        "component": "title_title",
+        "subtitle": null
+      }
+    },
+    {
+      "rule": "SPEC.TITLE_ELLIPSIS",
+      "status": "fail",
+      "expected": "maxLines=1 且 textOverflow=ellipsis",
+      "actual": "未设置：title_title",
+      "severity": "major",
+      "evidence": {
+        "components": [
+          "title_title"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.TITLE_COLOR",
+      "status": "fail",
+      "expected": "主 100% 白，副 60% 白",
+      "actual": "主 alpha=0.8",
+      "severity": "minor",
+      "evidence": {
+        "component": "title_title",
+        "subtitle": null
+      }
+    },
+    {
+      "rule": "SPEC.PRIMARY_FONT",
+      "status": "fail",
+      "expected": "56 或 38",
+      "actual": "18.0",
+      "severity": "major",
+      "evidence": {
+        "component": "primary_main",
+        "expectedDays": null,
+        "digits": null
+      }
+    },
+    {
+      "rule": "SPEC.PRIMARY_COLOR",
+      "status": "pass",
+      "expected": "白色 100%/90%",
+      "actual": "alpha=1.0",
+      "severity": "minor",
+      "evidence": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "rule": "SPEC.UNIT_FONT",
+      "status": "fail",
+      "expected": "单位独立 16fp",
+      "actual": "单位与数字同一文本节点",
+      "severity": "major",
+      "evidence": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "rule": "SPEC.UNIT_COLOR",
+      "status": "na",
+      "expected": "白色 60%",
+      "actual": "无独立单位",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.SUPPORT_FONT",
+      "status": "fail",
+      "expected": "16",
+      "actual": "support_item0_value=14.0, support_item0_label=14.0",
+      "severity": "major",
+      "evidence": {
+        "failed": [
+          "support_item0_value",
+          "support_item0_label"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.SUPPORT_COLOR",
+      "status": "fail",
+      "expected": "白色 60%",
+      "actual": "support_item0_value alpha=1.0",
+      "severity": "minor",
+      "evidence": {
+        "failed": [
+          "support_item0_value alpha=1.0"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.CONTENT_TYPE",
+      "status": "pass",
+      "expected": "C1–C5 之一",
+      "actual": "C3 小数字",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.PATTERN_GEOMETRY",
+      "status": "na",
+      "expected": "图案几何",
+      "actual": "非图案类",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.DIGIT_LIMIT",
+      "status": "na",
+      "expected": "最多 6 位",
+      "actual": "无期望天数",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.ICON",
+      "status": "pass",
+      "expected": "图标不超过 20×20，且为白色",
+      "actual": "1 个图标符合",
+      "severity": "minor",
+      "evidence": {
+        "icons": [
+          "title_icon"
+        ],
+        "bad": []
+      }
+    },
+    {
+      "rule": "SPEC.ACTION_PATTERN",
+      "status": "pass",
+      "expected": "整卡点击，不放独立按钮",
+      "actual": "未发现独立按钮",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.USER_PREFERENCE",
+      "status": "pass",
+      "expected": "用户未显式要求与 Pixso 冲突的样式",
+      "actual": "未发现与 Pixso 冲突的显式样式偏好",
+      "severity": "minor",
+      "evidence": {
+        "categories": [],
+        "rules": []
+      }
+    }
+  ]
+}

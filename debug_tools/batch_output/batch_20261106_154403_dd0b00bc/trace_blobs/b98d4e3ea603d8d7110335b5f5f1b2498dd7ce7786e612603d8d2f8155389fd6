@@ -1,0 +1,31 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.cake_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "老爸生日倒计时天数（纯整数，展示时追加“天”）"
+    },
+    {
+      "componentHints": [
+        "DataDisplay",
+        "SecondaryBody"
+      ],
+      "priority": "must",
+      "requirement": "老爸生日日期：2027年1月5日",
+      "text": "2027年1月5日"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

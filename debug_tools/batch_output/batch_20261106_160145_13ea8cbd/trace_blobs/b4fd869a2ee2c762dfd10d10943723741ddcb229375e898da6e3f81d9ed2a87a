@@ -1,0 +1,20 @@
+{
+  "category": "layout_structure",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "681a5ef01313c613",
+  "instruction": "修复违反合同的父布局结构，重新分配完整信息组和动作槽。 先检查以 root 为根的完整组件树：所有引用存在、每个节点只有一个父引用、没有环或孤立节点，并核对父区允许的角色和有序 children。不得只把孤立节点挂到不接受该角色的 Region；必要时重组受控 Group 或更换合法父布局。保留全部事实、绑定、标签、单位和动作，不通过删除孤立业务节点规避错误；结构闭合后重新核算各区容量，不修改展开后的内部几何。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": false,
+    "observedCategories": [
+      "layout_structure"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": null
+  },
+  "noProgress": false,
+  "repairStrategy": "parent_layout_recompose",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "parent_layout"
+}

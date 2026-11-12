@@ -1,0 +1,51 @@
+{
+  "userQuery": "做一张运动健康卡片，放在手机桌面首页，显示每天的运动步数。",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.health.sport",
+      "description": "打开华为运动健康应用的锻炼Tab页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "healthSport": {
+        "dailySteps": {
+          "type": "integer",
+          "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+          "sampleValue": 6200
+        },
+        "dailyDistanceText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总距离文本，端侧已根据数值大小换算并包含“米”或“公里”单位；展示时不得再次追加距离单位。例如“5.42 公里”或“755 米”。",
+          "sampleValue": "4.60 公里"
+        },
+        "dailyTotalCaloriesText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+          "sampleValue": "420 千卡"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.figure_run",
+      "src": "resources/base/media/figure_run.svg",
+      "description": "样式：跑步人物图标，默认黑色，图形为人体奔跑动作侧视轮廓；适用：运动记录、跑步锻炼追踪、步数统计。"
+    },
+    {
+      "id": "asset.emoji_run",
+      "src": "resources/base/media/emoji_run.png",
+      "description": "样式：灰色运动上衣与深色短裤装扮的写实 3D 跑步人物，透明背景，原始尺寸为 512×512，PNG 位图需保留原色；适用：跑步记录、步数、配速或运动目标相关卡片。不适用：睡眠或泛健康卡片。"
+    }
+  ]
+}

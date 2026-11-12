@@ -1,0 +1,21 @@
+{
+  "id": "Q499",
+  "fileName": "Q499.json",
+  "title": "月份中英对照",
+  "query": "生成一份从1月到12月的中英文对照方便记忆的卡片。本轮卡片静态内容（用作展示的外部事实）：1月 January (Jan) | 2月 February (Feb) | 3月 March (Mar) | 4月 April (Apr) | 5月 May | 6月 June (Jun) | 7月 July (Jul) | 8月 August (Aug) | 9月 September (Sep) | 10月 October (Oct) | 11月 November (Nov) | 12月 December (Dec)",
+  "size": "2x4",
+  "sequence": 90,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2040.57,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00090-000",
+  "finalAttempt": 0
+}

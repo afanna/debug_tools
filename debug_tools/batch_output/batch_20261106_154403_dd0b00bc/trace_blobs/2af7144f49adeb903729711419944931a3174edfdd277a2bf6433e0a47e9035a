@@ -1,0 +1,11 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": [
+    "Plan fact is missing from visible DSL: 待办明细标题 (/data/memo/todos/0/title).",
+    "Plan fact is missing from visible DSL: 待办明细标题 (/data/memo/todos/1/title).",
+    "Plan fact is missing from visible DSL: 待办完成状态 (/data/memo/todos/0/isComplete).",
+    "Plan fact is missing from visible DSL: 待办完成状态 (/data/memo/todos/1/isComplete)."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": null,
+      "reason": "无标题事实，不使用标题图标"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "ProgressCircleSingle"
+      ],
+      "dataId": "/data/phoneBattery/batterySOCText",
+      "priority": "must",
+      "requirement": "手机当前剩余电量"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/phoneBattery/chargingStatusDesc",
+      "priority": "must",
+      "requirement": "手机当前充电状态"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "今日累计步数"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info"
+  ]
+}

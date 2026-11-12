@@ -1,0 +1,54 @@
+{
+  "title": "重要日期倒计时",
+  "description": "多个重要农历日期倒计时",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-10-05"
+      },
+      "writeResultTo": "/data/countdown0"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-06-24"
+      },
+      "writeResultTo": "/data/countdown1"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-04-19"
+      },
+      "writeResultTo": "/data/countdown2"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2028-01-12"
+      },
+      "writeResultTo": "/data/countdown3"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-04-12"
+      },
+      "writeResultTo": "/data/countdown4"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-10-28"
+      },
+      "writeResultTo": "/data/countdown5"
+    }
+  ]
+}

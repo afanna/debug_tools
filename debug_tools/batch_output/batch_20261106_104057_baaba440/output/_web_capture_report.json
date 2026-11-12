@@ -1,0 +1,185 @@
+{
+  "source": "C:/Users/afan/AppData/Local/Temp/qoder_card_e2e/render_src",
+  "baseUrl": "http://127.0.0.1:8888/debug",
+  "zoom": 100,
+  "deviceScaleFactor": 3,
+  "sizeSources": [
+    "D:/卡片/query/CreateMyCard/debug_tools/Datasets/online_updated"
+  ],
+  "total": 14,
+  "success": 14,
+  "failed": 0,
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "items": [
+    {
+      "name": "Q126.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q126.json",
+      "file": "Q126.png",
+      "cardSize": "2x2",
+      "rendererMode": "A2UI",
+      "cssWidth": 150,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 387
+    },
+    {
+      "name": "Q127.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q127.json",
+      "file": "Q127.png",
+      "cardSize": "2x4",
+      "rendererMode": "A2UI",
+      "cssWidth": 300,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 262
+    },
+    {
+      "name": "Q133.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q133.json",
+      "file": "Q133.png",
+      "cardSize": "2x2",
+      "rendererMode": "A2UI",
+      "cssWidth": 150,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 159
+    },
+    {
+      "name": "Q142.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q142.json",
+      "file": "Q142.png",
+      "cardSize": "2x2",
+      "rendererMode": "A2UI",
+      "cssWidth": 150,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 160
+    },
+    {
+      "name": "Q144.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q144.json",
+      "file": "Q144.png",
+      "cardSize": "2x2",
+      "rendererMode": "A2UI",
+      "cssWidth": 150,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 208
+    },
+    {
+      "name": "Q152.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q152.json",
+      "file": "Q152.png",
+      "cardSize": "2x2",
+      "rendererMode": "A2UI",
+      "cssWidth": 150,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 178
+    },
+    {
+      "name": "Q192.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q192.json",
+      "file": "Q192.png",
+      "cardSize": "2x2",
+      "rendererMode": "A2UI",
+      "cssWidth": 150,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 171
+    },
+    {
+      "name": "Q195.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q195.json",
+      "file": "Q195.png",
+      "cardSize": "2x4",
+      "rendererMode": "A2UI",
+      "cssWidth": 300,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 177
+    },
+    {
+      "name": "Q200.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q200.json",
+      "file": "Q200.png",
+      "cardSize": "2x4",
+      "rendererMode": "A2UI",
+      "cssWidth": 300,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 187
+    },
+    {
+      "name": "Q271.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q271.json",
+      "file": "Q271.png",
+      "cardSize": "2x2",
+      "rendererMode": "A2UI",
+      "cssWidth": 150,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 205
+    },
+    {
+      "name": "Q322.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q322.json",
+      "file": "Q322.png",
+      "cardSize": "2x2",
+      "rendererMode": "A2UI",
+      "cssWidth": 150,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 676
+    },
+    {
+      "name": "Q325.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q325.json",
+      "file": "Q325.png",
+      "cardSize": "2x4",
+      "rendererMode": "A2UI",
+      "cssWidth": 300,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 178
+    },
+    {
+      "name": "Q351.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q351.json",
+      "file": "Q351.png",
+      "cardSize": "2x4",
+      "rendererMode": "A2UI",
+      "cssWidth": 300,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 191
+    },
+    {
+      "name": "Q379.jsonl",
+      "status": "success",
+      "sizeSource": "meta:Q379.json",
+      "file": "Q379.png",
+      "cardSize": "2x4",
+      "rendererMode": "A2UI",
+      "cssWidth": 300,
+      "cssHeight": 150,
+      "brokenImages": 0,
+      "ms": 705
+    }
+  ]
+}

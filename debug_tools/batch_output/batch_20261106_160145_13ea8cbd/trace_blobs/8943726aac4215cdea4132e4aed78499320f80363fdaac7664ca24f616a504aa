@@ -1,0 +1,97 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "q1",
+      "identity": "1-3月",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        2
+      ],
+      "id": "q2",
+      "identity": "4-6月",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3
+      ],
+      "id": "q3",
+      "identity": "7-9月",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        4
+      ],
+      "id": "q4",
+      "identity": "10-12月",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 98,
+          "start": 45
+        }
+      ],
+      "sourceText": "1月 January (Jan) | 2月 February (Feb) | 3月 March (Mar)"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 98,
+          "start": 45
+        }
+      ],
+      "sourceText": "1月 January (Jan) | 2月 February (Feb) | 3月 March (Mar)"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 140,
+          "start": 101
+        }
+      ],
+      "sourceText": "4月 April (Apr) | 5月 May | 6月 June (Jun)"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 195,
+          "start": 143
+        }
+      ],
+      "sourceText": "7月 July (Jul) | 8月 August (Aug) | 9月 September (Sep)"
+    },
+    {
+      "factIndex": 4,
+      "positions": [
+        {
+          "end": 257,
+          "start": 198
+        }
+      ],
+      "sourceText": "10月 October (Oct) | 11月 November (Nov) | 12月 December (Dec)"
+    }
+  ],
+  "version": "static-content-v1"
+}

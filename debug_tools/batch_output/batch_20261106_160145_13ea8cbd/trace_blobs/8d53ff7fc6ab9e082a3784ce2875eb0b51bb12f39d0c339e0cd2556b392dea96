@@ -1,0 +1,3 @@
+[
+  "COMPACT_STATIC_TEXT_CAPACITY: 正文至少有一个object组，不能将全部正文移到shared标题或说明。"
+]

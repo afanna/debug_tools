@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"显示农历日期","priority":"must","dataId":"/data/time/lunarDate","componentHints":["DataDisplay","EmphasisText","SingleLineTitle"]}],"layoutHints":["S-center"],"assetAssignments":{"actions":[],"title":{"assetId":"asset.calendar_fill","reason":"日历图标与农历日期主题语义匹配"}}}}

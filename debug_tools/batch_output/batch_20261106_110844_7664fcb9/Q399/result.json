@@ -1,0 +1,21 @@
+{
+  "id": "Q399",
+  "fileName": "Q399.json",
+  "title": "B站追剧",
+  "query": "将B站追剧列表做成桌面卡片，展示我追的剧集信息。本轮卡片静态内容（用作展示的外部事实）：B站追剧列表",
+  "size": "2x2",
+  "sequence": 57,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 1248.0,
+  "errorCode": "",
+  "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "complete",
+  "traceRecordCount": 28,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 1240.46,
+  "uid": "batch-7664fcb9-00057-000",
+  "finalAttempt": 0
+}

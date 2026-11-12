@@ -1,0 +1,500 @@
+{
+  "schemaVersion": "target-dom-v1",
+  "surface": {
+    "x": 0,
+    "y": 0,
+    "width": 150,
+    "height": 150
+  },
+  "visibleText": "周三例会 还剩 6 天",
+  "nodes": [
+    {
+      "id": "root",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "周三例会 还剩 6 天",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(31, 31, 153)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": {
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/7016f2bb9242499a99b3439c2fb2ed26/fe04c25a2ecd41ea94617315efd39925.jpg",
+        "naturalWidth": 600,
+        "naturalHeight": 600,
+        "complete": true,
+        "ariaLabel": null,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 150,
+          "height": 150
+        }
+      }
+    },
+    {
+      "id": "reference_background",
+      "tag": "IMG",
+      "leaf": true,
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": {
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/7016f2bb9242499a99b3439c2fb2ed26/fe04c25a2ecd41ea94617315efd39925.jpg",
+        "naturalWidth": 600,
+        "naturalHeight": 600,
+        "complete": true,
+        "ariaLabel": null,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 150,
+          "height": 150
+        }
+      }
+    },
+    {
+      "id": "reference_mask",
+      "tag": "DIV",
+      "leaf": true,
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0.6)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "reference_content",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "周三例会 还剩 6 天",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "12px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "reference_title",
+      "tag": "P",
+      "leaf": true,
+      "text": "周三例会",
+      "box": {
+        "x": 12,
+        "y": 12,
+        "width": 126,
+        "height": 27
+      },
+      "style": {
+        "fontSize": 20,
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "20px",
+        "textOverflow": "ellipsis",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 27,
+      "scrollWidth": 126,
+      "scrollHeight": 27,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "reference_spacer",
+      "tag": "DIV",
+      "leaf": true,
+      "text": "",
+      "box": {
+        "x": 12,
+        "y": 39,
+        "width": 126,
+        "height": 43
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 43,
+      "scrollWidth": 126,
+      "scrollHeight": 43,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "reference_primary",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "还剩 6 天",
+      "box": {
+        "x": 12,
+        "y": 82,
+        "width": 126,
+        "height": 56
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 56,
+      "scrollWidth": 126,
+      "scrollHeight": 56,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "reference_relation",
+      "tag": "P",
+      "leaf": true,
+      "text": "还剩",
+      "box": {
+        "x": 12,
+        "y": 117,
+        "width": 32,
+        "height": 21
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.6)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "16px",
+        "textOverflow": "ellipsis",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px 0px 8px"
+      },
+      "clientWidth": 32,
+      "clientHeight": 21,
+      "scrollWidth": 32,
+      "scrollHeight": 24,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "reference_days",
+      "tag": "P",
+      "leaf": true,
+      "text": "6",
+      "box": {
+        "x": 46,
+        "y": 82,
+        "width": 33.65625,
+        "height": 56
+      },
+      "style": {
+        "fontSize": 56,
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "56px",
+        "textOverflow": "ellipsis",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 34,
+      "clientHeight": 56,
+      "scrollWidth": 34,
+      "scrollHeight": 65,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "reference_unit",
+      "tag": "P",
+      "leaf": true,
+      "text": "天",
+      "box": {
+        "x": 81.65625,
+        "y": 117,
+        "width": 16,
+        "height": 21
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.6)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "16px",
+        "textOverflow": "ellipsis",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px 0px 8px"
+      },
+      "clientWidth": 16,
+      "clientHeight": 21,
+      "scrollWidth": 16,
+      "scrollHeight": 24,
+      "visible": true,
+      "image": null
+    }
+  ],
+  "devicePixelRatio": 3,
+  "webQuality": {
+    "schemaVersion": "web-quality-v1",
+    "complete": true,
+    "findings": [
+      {
+        "rule_id": "GEOMETRY.CLIP_TEXT",
+        "severity": "P1",
+        "evidence_type": "程序已证实",
+        "components": [
+          "reference_title:4"
+        ],
+        "message": "Web 渲染中文字被裁剪或省略",
+        "evidence": {
+          "component": "reference_title",
+          "text": "周三例会",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 126,
+            "height": 27
+          },
+          "textRects": [
+            {
+              "x": 12,
+              "y": 9,
+              "width": 80,
+              "height": 26
+            }
+          ],
+          "clientWidth": 126,
+          "scrollWidth": 126,
+          "clientHeight": 27,
+          "scrollHeight": 27
+        }
+      },
+      {
+        "rule_id": "GEOMETRY.CLIP_TEXT",
+        "severity": "P1",
+        "evidence_type": "程序已证实",
+        "components": [
+          "reference_relation:7"
+        ],
+        "message": "Web 渲染中文字被裁剪或省略",
+        "evidence": {
+          "component": "reference_relation",
+          "text": "还剩",
+          "box": {
+            "x": 12,
+            "y": 117,
+            "width": 32,
+            "height": 21
+          },
+          "textRects": [
+            {
+              "x": 12,
+              "y": 114,
+              "width": 32,
+              "height": 21
+            }
+          ],
+          "clientWidth": 32,
+          "scrollWidth": 32,
+          "clientHeight": 21,
+          "scrollHeight": 24
+        }
+      },
+      {
+        "rule_id": "GEOMETRY.CLIP_TEXT",
+        "severity": "P1",
+        "evidence_type": "程序已证实",
+        "components": [
+          "reference_days:8"
+        ],
+        "message": "Web 渲染中文字被裁剪或省略",
+        "evidence": {
+          "component": "reference_days",
+          "text": "6",
+          "box": {
+            "x": 46,
+            "y": 82,
+            "width": 33.65625,
+            "height": 56
+          },
+          "textRects": [
+            {
+              "x": 46,
+              "y": 73,
+              "width": 33.65625,
+              "height": 74
+            }
+          ],
+          "clientWidth": 34,
+          "scrollWidth": 34,
+          "clientHeight": 56,
+          "scrollHeight": 65
+        }
+      },
+      {
+        "rule_id": "GEOMETRY.CLIP_TEXT",
+        "severity": "P1",
+        "evidence_type": "程序已证实",
+        "components": [
+          "reference_unit:9"
+        ],
+        "message": "Web 渲染中文字被裁剪或省略",
+        "evidence": {
+          "component": "reference_unit",
+          "text": "天",
+          "box": {
+            "x": 81.65625,
+            "y": 117,
+            "width": 16,
+            "height": 21
+          },
+          "textRects": [
+            {
+              "x": 81.65625,
+              "y": 114,
+              "width": 16,
+              "height": 21
+            }
+          ],
+          "clientWidth": 16,
+          "scrollWidth": 16,
+          "clientHeight": 21,
+          "scrollHeight": 24
+        }
+      }
+    ],
+    "frame": {
+      "x": 0,
+      "y": 0,
+      "width": 150,
+      "height": 150
+    },
+    "measuredTextNodes": 4,
+    "measuredImages": 1,
+    "excludedScrollable": 0,
+    "coverage": [
+      "text-clipping",
+      "card-boundary",
+      "text-overlap-candidates",
+      "image-loading",
+      "parser-warnings"
+    ],
+    "limitations": [
+      "不验证真实端侧功能及 Query 语义完整性",
+      "不验证品牌色板与整体审美",
+      "滚动区域、隐藏态和字形级遮挡不作通过结论"
+    ]
+  },
+  "imageSha256": "3456a8f1fd200003b2d1b9ca69d95cd33b846e8058bc1898d8064514bcbdba3c",
+  "sourceSha256": "469b68b48952462daa564d5ebe6b1a826c99b0384de13bd6f419c1d2d40cdedf"
+}

@@ -1,0 +1,105 @@
+{
+  "userQuery": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "weather": {
+        "current": {
+          "temperatureText": {
+            "type": "string",
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃"
+          },
+          "condition": {
+            "type": "string",
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云"
+          }
+        }
+      },
+      "phoneBattery": {
+        "batterySOCText": {
+          "type": "string",
+          "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+          "sampleValue": "68%",
+          "numericSource": "/data/phoneBattery/batterySOC"
+        },
+        "chargingStatusDesc": {
+          "type": "string",
+          "description": "当前设备电池的充电状态文本描述。",
+          "sampleValue": "未充电"
+        },
+        "batterySOC": {
+          "type": "integer",
+          "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+          "sampleValue": 68
+        }
+      },
+      "healthSport": {
+        "dailySteps": {
+          "type": "integer",
+          "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+          "sampleValue": 6200
+        },
+        "dailyTotalCaloriesText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+          "sampleValue": "420 千卡"
+        },
+        "exerciseTypeName": {
+          "type": "string",
+          "description": "最近一次发生的单次专业运动训练类型的中文映射名称，如“羽毛球”、“自由训练”、“户外跑步”。若无记录则返回“暂无运动”。",
+          "sampleValue": "户外跑步"
+        },
+        "exerciseDurationText": {
+          "type": "string",
+          "description": "可直接显示的单次专业运动实际持续时长文本，已包含“小时”或“分”等时间单位；展示时不得再次追加时间单位。例如“1小时40分”。",
+          "sampleValue": "40分"
+        }
+      },
+      "powerRanking": {
+        "rankingList": [
+          {
+            "appName": {
+              "type": "string",
+              "description": "应用名称文本，例如：“微信”、“设置”。",
+              "sampleValue": "示例"
+            },
+            "powerText": {
+              "type": "string",
+              "description": "应用的耗电量或耗电占比格式化文本，例如：“53%”、“--”。",
+              "sampleValue": "示例"
+            }
+          },
+          {
+            "appName": {
+              "type": "string",
+              "description": "应用名称文本，例如：“微信”、“设置”。",
+              "sampleValue": "示例"
+            },
+            "powerText": {
+              "type": "string",
+              "description": "应用的耗电量或耗电占比格式化文本，例如：“53%”、“--”。",
+              "sampleValue": "示例"
+            }
+          },
+          {
+            "appName": {
+              "type": "string",
+              "description": "应用名称文本，例如：“微信”、“设置”。",
+              "sampleValue": "示例"
+            },
+            "powerText": {
+              "type": "string",
+              "description": "应用的耗电量或耗电占比格式化文本，例如：“53%”、“--”。",
+              "sampleValue": "示例"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "assetCandidates": []
+}

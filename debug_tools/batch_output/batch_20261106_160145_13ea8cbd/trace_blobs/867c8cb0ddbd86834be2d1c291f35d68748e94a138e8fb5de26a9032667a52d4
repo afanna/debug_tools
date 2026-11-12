@@ -1,0 +1,19 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "targetDate": "2027-01-08"
+      },
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown"
+    }
+  ],
+  "description": "我的生日倒计时",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "生日倒计时"
+}

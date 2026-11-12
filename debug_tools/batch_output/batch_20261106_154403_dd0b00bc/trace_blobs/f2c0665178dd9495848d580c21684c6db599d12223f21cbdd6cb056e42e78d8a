@@ -1,0 +1,98 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "语义布局不符合合同：节点 primary：小卡 Group 只能包含同一区域内的只读内容。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "layout_structure",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "c98de11521ae74e1",
+      "instruction": "只修复错误消息定位的 Layout、Region 或 Group 节点：严格按消息给出的合同调整该节点直属 children 的数量、顺序和角色，并补齐或替换错误角色。Group 整体只占一个直属角色；title-count 只占标题角色；title-content-action 的动作角色必须使用 PillButton；W-content-side-slots 的固定动作槽使用 CardButton。保持其它区域、事实、绑定、Action 及已经合法的 layout/variant 不变，不修改语义展开后的 Row/Column 几何。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "layout_structure"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "7b9d80e82e4ba736"
+      },
+      "noProgress": false,
+      "repairStrategy": "semantic_layout_contract_repair",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-dual-content\"},[\"title\",\"primary\",\"support\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"备忘录\",\"icon\":\"resources/base/media/list_book_fill.svg\",\"fontSize\":12}]\n[\"primary\",\"Group\",{\"variant\":\"peer-pair\"},[\"primary_left\",\"primary_right\"]]\n[\"primary_left\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/noteCount\"},\"secondaryText\":\"笔记\"}]\n[\"primary_right\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/todoTotalCount\"},\"secondaryText\":\"待办\"}]\n[\"support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"未完成 \",\"value\":{\"path\":\"/data/memo/todoPendingCount\"}},{\"label\":\"已完成 \",\"value\":{\"path\":\"/data/memo/todoCompletedCount\"}},{\"label\":\"笔记 \",\"value\":{\"path\":\"/data/memo/notes/0/title\"}},{\"label\":\"待办 \",\"value\":{\"path\":\"/data/memo/todos/0/title\"}}],\"fontSize\":12}]\n[\"/data/memo/noteCount\",0]\n[\"/data/memo/todoTotalCount\",0]\n[\"/data/memo/todoPendingCount\",0]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/notes/0/title\",\"示例\"]\n[\"/data/memo/todos/0/title\",\"示例\"]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component primary_main: text width overflow; complete text '笔记 0 · 待办 0' at original font 18 needs about 155vp in one line, but its allocated text area is 126vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 2,
+    "selectedRepairStrategy": {
+      "category": "layout_capacity",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "c3479e3d285f0306",
+      "instruction": "此前布局已失败，本轮把结构、容量、事实、动作和素材作为同一重组问题处理，不要因错误类别切换退回单点修补。先按全部保留事实和完整动作计算各区预算，比较不同合法承载组合；放不下的旧堆叠不能只改ID、间距或包装层。仅在合同允许且不是用户必需标题时移除装饰标题；不缩固定字号，不削减事实或动作。随后一起复查树闭合、事实唯一可见、动作参数准确与入口可达、动作图标分配和横纵容量。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": true,
+        "observedCategories": [
+          "layout_structure",
+          "layout_capacity"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "5710b4b9134e5a2d"
+      },
+      "noProgress": false,
+      "repairStrategy": "plan_guided_recompose",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "full_dsl"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-dual-content\"},[\"title\",\"primary\",\"support\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"备忘录\",\"icon\":\"resources/base/media/list_book_fill.svg\",\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":\"{{ '笔记 ' + ${/data/memo/noteCount} + ' · 待办 ' + ${/data/memo/todoTotalCount} }}\",\"fontSize\":18}]\n[\"support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"未完成 \",\"value\":{\"path\":\"/data/memo/todoPendingCount\"}},{\"label\":\"已完成 \",\"value\":{\"path\":\"/data/memo/todoCompletedCount\"}},{\"label\":\"笔记 \",\"value\":{\"path\":\"/data/memo/notes/0/title\"}},{\"label\":\"待办 \",\"value\":{\"path\":\"/data/memo/todos/0/title\"}}],\"fontSize\":12}]\n[\"/data/memo/noteCount\",0]\n[\"/data/memo/todoTotalCount\",0]\n[\"/data/memo/todoPendingCount\",0]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/notes/0/title\",\"示例\"]\n[\"/data/memo/todos/0/title\",\"示例\"]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "语义布局不符合合同：节点 primary：小卡 Group 只能包含同一区域内的只读内容。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 3,
+    "selectedRepairStrategy": {
+      "category": "layout_structure",
+      "categoryAttempt": 2,
+      "consecutiveFailures": 1,
+      "fingerprint": "c98de11521ae74e1",
+      "instruction": "只修复错误消息定位的 Layout、Region 或 Group 节点：严格按消息给出的合同调整该节点直属 children 的数量、顺序和角色，并补齐或替换错误角色。Group 整体只占一个直属角色；title-count 只占标题角色；title-content-action 的动作角色必须使用 PillButton；W-content-side-slots 的固定动作槽使用 CardButton。保持其它区域、事实、绑定、Action 及已经合法的 layout/variant 不变，不修改语义展开后的 Row/Column 几何。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": true,
+        "observedCategories": [
+          "layout_structure",
+          "layout_capacity",
+          "layout_structure"
+        ],
+        "revisitedTopology": true,
+        "topologyFingerprint": "7b9d80e82e4ba736"
+      },
+      "noProgress": false,
+      "repairStrategy": "semantic_layout_contract_repair",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-dual-content\"},[\"title\",\"primary\",\"support\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"备忘录\",\"icon\":\"resources/base/media/list_book_fill.svg\",\"fontSize\":12}]\n[\"primary\",\"Group\",{\"variant\":\"peer-pair\"},[\"primary_left\",\"primary_right\"]]\n[\"primary_left\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/noteCount\"},\"secondaryText\":\"笔记\"}]\n[\"primary_right\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/todoTotalCount\"},\"secondaryText\":\"待办\"}]\n[\"support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"未完成 \",\"value\":{\"path\":\"/data/memo/todoPendingCount\"}},{\"label\":\"已完成 \",\"value\":{\"path\":\"/data/memo/todoCompletedCount\"}},{\"label\":\"笔记 \",\"value\":{\"path\":\"/data/memo/notes/0/title\"}},{\"label\":\"待办 \",\"value\":{\"path\":\"/data/memo/todos/0/title\"}}],\"fontSize\":12}]\n[\"/data/memo/noteCount\",0]\n[\"/data/memo/todoTotalCount\",0]\n[\"/data/memo/todoPendingCount\",0]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/notes/0/title\",\"示例\"]\n[\"/data/memo/todos/0/title\",\"示例\"]"
+  }
+]

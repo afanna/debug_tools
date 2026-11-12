@@ -1,0 +1,21 @@
+{
+  "id": "Q439",
+  "fileName": "Q439.json",
+  "title": "我的记忆",
+  "query": "生成一个我的记忆卡片，展示我的备忘录笔记和待办信息",
+  "size": "2x2",
+  "sequence": 27,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 11359.41,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 130,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 11350.2,
+  "uid": "batch-dd0b00bc-00027-000",
+  "finalAttempt": 0
+}

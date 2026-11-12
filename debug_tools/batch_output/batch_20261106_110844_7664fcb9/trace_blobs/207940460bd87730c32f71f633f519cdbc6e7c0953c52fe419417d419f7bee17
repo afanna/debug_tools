@@ -1,0 +1,7 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":12,"itemMargin":6},["title","__layout__root__content"]]
+["title","SingleLineTitle",{"title":"时间","fontSize":12,"width":"matchParent"}]
+["__layout__root__content","Column",{"width":"matchParent","alignItems":"start","justifyContent":"end","layoutWeight":1},["content"]]
+["content","TableText",{"items":[{"label":"日期","value":{"path":"/data/time/currentDate"}},{"label":"星期","value":{"path":"/data/time/dayOfWeek"}},{"label":"农历","value":{"path":"/data/time/lunarDate"}}],"fontSize":10,"width":"matchParent"}]
+["/data/time/currentDate","示例"]
+["/data/time/dayOfWeek","示例"]
+["/data/time/lunarDate","示例"]

@@ -1,0 +1,37 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 未来第1天星期 (/data/weather/daily/0/weekday).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 未来第1天天气现象 (/data/weather/daily/0/condition).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 未来第2天天气现象 (/data/weather/daily/1/condition).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 未来第2天温度范围 (/data/weather/daily/1/temperatureRangeText).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 未来第3天星期 (/data/weather/daily/2/weekday).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 未来第3天天气现象 (/data/weather/daily/2/condition).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item1_label: TextBlock.label exceeds its 70.6667vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  }
+]

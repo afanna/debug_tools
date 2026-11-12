@@ -1,0 +1,79 @@
+{
+  "cardSpec": {
+    "dataBindings": [
+      {
+        "arguments": {
+          "targetDate": "2027-02-06"
+        },
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown"
+      }
+    ],
+    "description": "距离春节还有多少天",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "suggestSize": "2x2",
+    "title": "春节倒计时"
+  },
+  "effectiveCapabilities": {
+    "asset": [],
+    "data": [
+      "GetCountdownDays"
+    ],
+    "event": []
+  },
+  "generationPlan": {
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "targetDate": "2027-02-06"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown"
+      }
+    ],
+    "candidateEventCandidates": []
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Stack\",\"children\":[\"fusionBallBackground\",\"__genui_render_component__root\"],\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":0,\"alignContent\":\"topStart\",\"clip\":true,\"borderRadius\":20,\"backgroundColor\":\"#00000000\"}},{\"id\":\"fusionBallBackground\",\"component\":\"Stack\",\"children\":[\"fusionBallLargeSlot\",\"fusionBallMediumSlot\",\"fusionBallSmallSlot\",\"fusionBallGlassLayer\"],\"styles\":{\"width\":\"100%\",\"height\":\"100%\",\"borderRadius\":20,\"alignContent\":\"topStart\",\"clip\":true}},{\"id\":\"fusionBallLargeSlot\",\"component\":\"Stack\",\"children\":[\"fusionBallLarge\"],\"styles\":{\"width\":\"112.5%\",\"height\":\"27.5%\",\"alignContent\":\"center\"}},{\"id\":\"fusionBallLarge\",\"component\":\"Divider\",\"styles\":{\"width\":\"116.666667%\",\"height\":\"477.272727%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"borderRadius\":105,\"backgroundColor\":\"#FFF24131\",\"clip\":true}},{\"id\":\"fusionBallMediumSlot\",\"component\":\"Stack\",\"children\":[\"fusionBallMedium\"],\"styles\":{\"width\":\"50%\",\"height\":\"137.5%\",\"alignContent\":\"bottom\"}},{\"id\":\"fusionBallMedium\",\"component\":\"Divider\",\"styles\":{\"width\":\"200%\",\"height\":\"72.727273%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"borderRadius\":80,\"backgroundColor\":\"#FFFF8833\",\"clip\":true}},{\"id\":\"fusionBallSmallSlot\",\"component\":\"Stack\",\"children\":[\"fusionBallSmall\"],\"styles\":{\"width\":\"121.875%\",\"height\":\"118.75%\",\"alignContent\":\"bottomEnd\"}},{\"id\":\"fusionBallSmall\",\"component\":\"Divider\",\"styles\":{\"width\":\"51.282051%\",\"height\":\"52.631579%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"borderRadius\":50,\"backgroundColor\":\"#FFE68073\",\"clip\":true}},{\"id\":\"fusionBallGlassLayer\",\"component\":\"Divider\",\"styles\":{\"width\":\"100%\",\"height\":\"100%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"backgroundColor\":\"#0DFFFFFF\",\"backdropBlur\":{\"radius\":210}}},{\"id\":\"__genui_render_component__root\",\"component\":\"Column\",\"children\":[\"title\",\"body_flow\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":12}},{\"id\":\"title\",\"component\":\"Row\",\"children\":[\"title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"title_title\",\"component\":\"Text\",\"content\":\"春节倒计时\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"#CCFFFFFF\"}},{\"id\":\"body_flow\",\"component\":\"Column\",\"children\":[\"content_flow\"],\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1,\"alignItems\":\"start\",\"justifyContent\":\"end\"},\"itemMargin\":0},{\"id\":\"content_flow\",\"component\":\"Column\",\"children\":[\"primary\",\"support\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1,\"alignItems\":\"start\",\"justifyContent\":\"start\"}},{\"id\":\"primary\",\"component\":\"Row\",\"children\":[\"primary_value\",\"primary_unit\"],\"itemMargin\":2,\"styles\":{\"justifyContent\":\"start\",\"alignItems\":\"bottom\",\"flexShrink\":0,\"width\":\"matchParent\"}},{\"id\":\"primary_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/countdown/countdownDays} }}\",\"styles\":{\"height\":30,\"fontSize\":30,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"#FFFFFFFF\",\"textOverflow\":\"clip\"}},{\"id\":\"primary_unit\",\"component\":\"Text\",\"content\":\"天\",\"styles\":{\"height\":13.75,\"fontSize\":12,\"fontWeight\":500,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"#99FFFFFF\",\"padding\":{\"top\":0,\"right\":0,\"bottom\":1.75,\"left\":0},\"textOverflow\":\"clip\"}},{\"id\":\"support\",\"component\":\"Column\",\"children\":[\"support_row0\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"flexShrink\":1}},{\"id\":\"support_item0_value\",\"component\":\"Text\",\"content\":\"2027年春节是2月6日\",\"styles\":{\"height\":24.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":2,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"#99FFFFFF\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"support_item0\",\"component\":\"Row\",\"children\":[\"support_item0_value\"],\"itemMargin\":0,\"styles\":{\"height\":24.0,\"alignItems\":\"top\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"support_row0\",\"component\":\"Row\",\"children\":[\"support_item0\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":24.0,\"alignItems\":\"top\",\"flexShrink\":0}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"countdown\":{\"countdownDays\":30}}}}}",
+  "meta": {
+    "apiVersion": "v1",
+    "artifactId": "3d29c0dd-c9dc-44fc-b6b8-b7122061148a",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "cardSpecVersion": "card-spec-v1",
+    "createdAt": 1793951171139,
+    "dslProtocolVersion": "v0.9",
+    "generationMode": "create",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "skillVersion": "skill-widget-v1",
+    "sourceArtifactDigest": null,
+    "taskSpecVersion": "task-spec-v1"
+  },
+  "removedCapabilities": [],
+  "schemaVersion": "widget-artifact-v2",
+  "taskSpec": {
+    "appVersion": "11.7.8.342",
+    "assetCandidates": [],
+    "dataModelSchema": {
+      "data": {
+        "countdown": {
+          "countdownDays": {
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30,
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "eventCandidates": [],
+    "size": "2x2",
+    "userQuery": "制作一张春节倒计时卡片，显示距离春节还有多少天。目标日期为2027年2月6日（春节）。本轮卡片静态内容（用作展示的外部事实）：2027年春节是2月6日。"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "approvedOmittedFactIndexes": [
+    3
+  ],
+  "category": "component_contract",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fallbackAttempt": 0,
+  "fallbackAttemptLimit": 4,
+  "fallbackRemainingAttempts": 4,
+  "fallbackStage": "drop_optional_component",
+  "fingerprint": "99d227e29a5e65b4",
+  "instruction": "TableText.items 已超过组件合同允许的三项；不再执行普通组件属性修复，直接进入程序授权的最小 Drop。已进入 TableText 条目级最小删减兜底。当前表格超过三项合同上限，或三行表格在目标布局中容量失败；仅允许从 optionalDrop.componentId 指定的 TableText.items 删除 allowedItemIndexes=(3,) 对应且仍承载 allowedOmittedFactIndexes 的一行。若删除后仍超过三项，等待程序下一轮继续授权；保留其余行的顺序、绑定、字号和父级引用，不得删除整个 TableText、其它组件、未授权事实或任何 Action。",
+  "noProgress": false,
+  "optionalDrop": {
+    "allowedItemIndexes": [
+      3
+    ],
+    "allowedOmittedFactIndexes": [
+      3
+    ],
+    "componentId": "content",
+    "componentType": "TableText",
+    "containsMustFacts": false,
+    "displayTexts": [],
+    "partial": true,
+    "requirements": [
+      "睡眠综合得分与状态"
+    ]
+  },
+  "repairStrategy": "drop_optional_component",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

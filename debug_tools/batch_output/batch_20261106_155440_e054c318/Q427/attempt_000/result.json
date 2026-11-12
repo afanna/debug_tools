@@ -1,0 +1,16 @@
+{
+  "attempt": 0,
+  "uid": "batch-e054c318-00017-000",
+  "status": "failed",
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "elapsedMs": 2040.83,
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "blockNames": [],
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "completed": false
+}

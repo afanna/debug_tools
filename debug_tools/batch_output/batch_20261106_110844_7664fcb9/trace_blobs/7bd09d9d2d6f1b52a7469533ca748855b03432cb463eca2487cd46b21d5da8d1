@@ -1,0 +1,13 @@
+```genui
+["root","Layout",{"layout":"W-top-bottom","variant":"continuous"},["primary","details"]]
+["primary","EmphasisText",{"mainText":{"path":"/data/time/currentDate"},"secondaryText":{"path":"/data/time/dayOfWeek"},"fontSize":18}]
+["details","Group",{"variant":"peer-pair"},["details_left","details_right"]]
+["details_left","InfoBlock",{"variant":"slot","primaryText":{"path":"/data/battery/batterySOCText"},"secondaryText":"手机电量","visual":{"type":"progressCircle","icon":"resources/base/media/ic_fallback_light.svg"}}]
+["details_right","InfoBlock",{"variant":"slot","primaryText":{"path":"/data/battery/chargingStatusDesc"},"secondaryText":"充电状态"}]
+["/data/time/currentDate","2026-07-09"]
+["/data/time/dayOfWeek","星期四"]
+["/data/time/lunarDate","五月廿六"]
+["/data/battery/batterySOCText","68%"]
+["/data/battery/chargingStatusDesc","未充电"]
+["/data/battery/batterySOC",68]
+```

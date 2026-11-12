@@ -1,0 +1,26 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "districtName": "安丘市",
+        "forecastDays": 1,
+        "prefectureName": "潍坊市"
+      },
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "description": "桌面时钟天气卡片",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x4",
+  "title": "时钟天气"
+}

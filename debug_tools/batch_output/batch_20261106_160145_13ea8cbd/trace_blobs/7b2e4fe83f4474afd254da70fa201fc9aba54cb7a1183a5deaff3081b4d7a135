@@ -1,0 +1,18 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:755cd3dd1bc0b33d4a469b0f2f2a02942019c07373d1fa2cda3029c4c7c3a938",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_a52686b8-ae92-49db-9edc-cb617a87b705.md",
+  "effectiveCapabilities": {
+    "asset": [],
+    "data": [],
+    "event": []
+  },
+  "errorCode": "",
+  "omittedRequirements": [
+    "工资表项目：扣款（超出带标题单行列表容量）",
+    "工资表项目：实发工资（超出带标题单行列表容量）"
+  ],
+  "removedCapabilities": [],
+  "status": "degraded",
+  "suggestSize": "2x4"
+}

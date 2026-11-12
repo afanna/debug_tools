@@ -1,0 +1,59 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "schedule",
+      "identity": "轮休安排",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡主题：轮休表格",
+      "sourceTexts": [
+        "轮休表格，从1号到31号"
+      ],
+      "text": "轮休表格"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "body",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "轮休安排覆盖1号到31号",
+      "sourceTexts": [
+        "轮休表格，从1号到31号"
+      ],
+      "text": "1号至31号轮休安排"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "content",
+  "selectionNotes": [
+    "输入仅提供表格主题与日期范围，未提供每日具体轮休人员或班次，故不虚构逐日安排。",
+    "采用标题加单一结论的强调结构，完整保留1号至31号的日期范围。"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"W-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"轮休表格\"}]\n[\"body\", \"EmphasisText\", {\"mainText\": \"1号至31号轮休安排\"}]\n[\"/state/ready\", true]"
+}

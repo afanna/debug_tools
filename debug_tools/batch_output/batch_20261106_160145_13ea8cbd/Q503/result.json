@@ -1,0 +1,21 @@
+{
+  "id": "Q503",
+  "fileName": "Q503.json",
+  "title": "时间",
+  "query": "在桌面添加一个时间卡片，显示当前时间、日期、星期和农历。",
+  "size": "2x2",
+  "sequence": 91,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4592.47,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 86,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4565.81,
+  "uid": "batch-13ea8cbd-00091-000",
+  "finalAttempt": 0
+}

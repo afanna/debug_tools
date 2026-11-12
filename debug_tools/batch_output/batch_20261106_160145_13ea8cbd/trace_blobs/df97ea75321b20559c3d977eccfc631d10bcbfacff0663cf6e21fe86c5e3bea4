@@ -1,0 +1,20 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 11月12日及之后全部会议日程未展示.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item0_primaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item1_primaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

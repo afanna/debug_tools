@@ -1,0 +1,16 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前时间数字时钟读数（时:分），作为卡片核心显示内容"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

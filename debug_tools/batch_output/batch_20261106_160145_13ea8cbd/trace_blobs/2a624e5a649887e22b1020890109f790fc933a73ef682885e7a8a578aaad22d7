@@ -1,0 +1,3 @@
+[
+  "component content_primary_secondary: text width overflow; complete text '多云 | 星期四 25℃ / 32℃' at original font 12 needs about 150vp in one line, but its allocated text area is 132vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight."
+]

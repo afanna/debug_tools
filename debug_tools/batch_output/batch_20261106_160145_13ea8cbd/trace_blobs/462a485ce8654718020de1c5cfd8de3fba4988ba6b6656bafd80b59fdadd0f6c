@@ -1,0 +1,69 @@
+{
+  "capacityFits": [
+    {
+      "actualItemCount": 1,
+      "actualRowCount": 1,
+      "componentId": "left_support",
+      "componentType": "SecondaryBody",
+      "directlyFits": [],
+      "doesNotFit": [
+        {
+          "itemIndex": 0,
+          "planFacts": [
+            {
+              "factIndex": 3,
+              "priority": "must",
+              "requirement": "展示第一天天气预报的星期与温度范围"
+            },
+            {
+              "factIndex": 4,
+              "priority": "must",
+              "requirement": "展示第一天天气预报的温度范围"
+            }
+          ],
+          "value": {
+            "label": "预报 ",
+            "value": "{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"
+          }
+        }
+      ],
+      "effectiveColumnCount": 1,
+      "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+      "maxRetainedRowCount": 0,
+      "overflowFactCount": 2,
+      "overflowItemCount": 1,
+      "parentAvailableHeight": 110.0,
+      "parentId": "left",
+      "rowHeights": [
+        24.0
+      ],
+      "rowSpacing": 2.0,
+      "scope": "currentComponentItemsOnly"
+    }
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 2,
+  "consecutiveFailures": 1,
+  "fallbackAttempt": 0,
+  "fallbackAttemptLimit": 2,
+  "fallbackRemainingAttempts": 2,
+  "fallbackStage": "compact_component",
+  "fingerprint": "aca1018fbebab3f8",
+  "instruction": "正常布局修复与完整 DSL 重组仍未闭合；进入 compact_component 无损紧凑组件替换阶段。按修复合同改用语义兼容且占位更小的已登记组件、合并同对象辅助信息，并在当前尺寸合法布局内重新分配；必须保留全部事实、动态绑定和 Action，不得删除、静态化、缩字、裁切或隐藏内容。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_structure",
+      "layout_structure",
+      "layout_capacity",
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "50d1039369a885bc"
+  },
+  "noProgress": false,
+  "repairStrategy": "compact_component",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

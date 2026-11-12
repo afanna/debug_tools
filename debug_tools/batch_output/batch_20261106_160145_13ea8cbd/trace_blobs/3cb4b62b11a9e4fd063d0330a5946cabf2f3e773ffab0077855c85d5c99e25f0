@@ -1,0 +1,6 @@
+```genui
+["root","Layout",{"layout":"W-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"六（3）班 张定豪成绩"}]
+["body","SingleLineList",{"items":[{"text":"语文","assist":"87分"},{"text":"数学","assist":"98分"},{"text":"英语","assist":"98.75分"}]}]
+["/state/ready",true]
+```

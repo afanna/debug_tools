@@ -1,0 +1,42 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/dailyDistanceText",
+        "/sleepScore",
+        "/sleepStatus",
+        "/nightSleepDurationText",
+        "/exerciseTypeName",
+        "/exerciseDurationText",
+        "/exerciseCalorieText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.sport",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.ic_sportsHealth_bule",
+    "asset.emoji_calories_blue",
+    "asset.figure_run",
+    "asset.flame_fill"
+  ]
+}

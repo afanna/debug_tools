@@ -1,0 +1,108 @@
+{
+  "apiVersion": "batch-postprocess-v2",
+  "scope": "sample",
+  "runId": "batch_20261106_160145_13ea8cbd",
+  "sample": {
+    "id": "Q468",
+    "fileName": "Q468.json",
+    "title": "春节倒计时",
+    "query": "做一张春节倒计时卡片，显示距离2027年2月6日春节还有多少天。本轮卡片静态内容（用作展示的外部事实）：2027年春节是2月6日。",
+    "size": "2x2",
+    "sequence": 56,
+    "status": "success",
+    "attemptCount": 1,
+    "elapsedMs": 4115.22,
+    "errorCode": "",
+    "error": "",
+    "artifactAvailable": true,
+    "dslAvailable": true,
+    "traceStatus": "complete",
+    "traceRecordCount": 96,
+    "traceSchemaVersion": "generation-trace-v2",
+    "traceDurationMs": 4106.46,
+    "uid": "batch-13ea8cbd-00056-000",
+    "generationMetrics": {
+      "firstDsl": "failed",
+      "requestSize": "2x2",
+      "firstRequestStatus": "success",
+      "firstRequestDelivered": true,
+      "qualityRepairAttempts": 1,
+      "modelPhysicalCalls": 4,
+      "repairObservedAttempts": 1,
+      "modelObservedAttempts": 1,
+      "terminalAttempts": 1,
+      "missingInformationWarnings": 1,
+      "retryParameters": {
+        "interfaceRetryEnabled": [
+          true
+        ],
+        "interfaceExtraRetries": [
+          1
+        ],
+        "qualityRepairEnabled": [
+          true
+        ],
+        "qualityRepairMaxAttempts": [
+          5
+        ],
+        "singleStepGenerationFallbackEnabled": [
+          false
+        ],
+        "singleStepWidgetEditEnabled": [
+          true
+        ],
+        "dropPlanFactValidationEnabled": [
+          false
+        ],
+        "photoBackgroundThemeEnabled": [
+          false
+        ],
+        "subjectlessWideThemeEnabled": [
+          false
+        ],
+        "squareMusicPhotoExpansionEnabled": [
+          false
+        ],
+        "squarePhotoExpansionEnabled": [
+          false
+        ],
+        "deepseekOfficialHttpUseSdkEnabled": [
+          true
+        ],
+        "modelFailureRetryEnabled": [
+          true
+        ],
+        "modelFailureExtraRetries": [
+          1
+        ],
+        "fallbackModelFailureExtraRetries": [
+          1
+        ],
+        "fallbackEnabled": [
+          true
+        ],
+        "argumentRepairEnabled": [
+          false
+        ],
+        "argumentRepairMaxAttempts": [
+          2
+        ],
+        "argumentRepairReminderCount": [
+          1
+        ],
+        "interfaceMaxAttempts": [
+          2
+        ],
+        "planMaxAttempts": [
+          2
+        ]
+      }
+    }
+  },
+  "runDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd",
+  "sampleDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q468",
+  "finalAttemptDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q468\\attempt_000",
+  "outputDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\postprocess\\exec_0befad308fce\\plugins\\data-analysis\\samples\\Q468",
+  "config": {},
+  "upstreamResults": []
+}

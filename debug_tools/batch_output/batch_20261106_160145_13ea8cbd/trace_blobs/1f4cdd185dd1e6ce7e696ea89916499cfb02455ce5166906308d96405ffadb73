@@ -1,0 +1,6 @@
+["root","Column",{"width":"matchParent","height":"matchParent","padding":{"top":12.0,"bottom":12.0,"left":0,"right":0},"itemMargin":6.0,"borderRadius":20.0,"clip":true,"alignItems":"start","justifyContent":"start","_staticLayout":"S-static-content"},["__layout__root__static_header","__layout__root__static_body"]]
+["__layout__root__static_header","Column",{"width":"matchParent","alignItems":"start","justifyContent":"start","padding":{"left":12.0,"right":12.0},"height":16.0},["header"]]
+["header","SingleLineTitle",{"title":"向内修爱"}]
+["__layout__root__static_body","Column",{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"start","itemMargin":6.0,"padding":{"left":12.0,"right":12.0}},["body"]]
+["body","EmphasisText",{"mainText":"爱是向内修出的内丹","secondaryText":"自己未曾炼成，给出的也只是半剂药；先把自己活成一道光，渡人先渡己","width":"matchParent","height":"matchParent","layoutWeight":1}]
+["/state/ready",true]

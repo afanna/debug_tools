@@ -1,0 +1,27 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 11月7日 PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 11月12日 AI CPP特训营（上海）.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 11月13日及以后的全部会议、学习班与赞助活动记录.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item0_secondaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item1_secondaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  }
+]

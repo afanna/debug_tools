@@ -1,0 +1,51 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "greeting",
+      "identity": "沈大哥",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 21,
+          "start": 13
+        },
+        {
+          "end": 50,
+          "start": 42
+        }
+      ],
+      "sourceText": "祝沈大哥生日快乐"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 21,
+          "start": 13
+        },
+        {
+          "end": 50,
+          "start": 42
+        }
+      ],
+      "sourceText": "祝沈大哥生日快乐"
+    }
+  ],
+  "version": "static-content-v1"
+}

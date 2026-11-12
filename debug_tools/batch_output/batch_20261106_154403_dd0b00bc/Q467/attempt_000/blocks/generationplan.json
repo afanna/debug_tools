@@ -1,0 +1,50 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetMemoData",
+      "arguments": {},
+      "writeResultTo": "/data/memo",
+      "candidateOutputFields": [
+        "/noteCount",
+        "/favoriteNoteCount",
+        "/notes/0/title",
+        "/notes/0/content",
+        "/notes/0/modifiedTimeText",
+        "/notes/1/title",
+        "/notes/1/content",
+        "/notes/1/modifiedTimeText",
+        "/todoTotalCount",
+        "/todoCompletedCount",
+        "/todoPendingCount",
+        "/todos/0/title",
+        "/todos/0/isComplete",
+        "/todos/0/reminderTimeText",
+        "/todos/1/title",
+        "/todos/1/isComplete",
+        "/todos/1/reminderTimeText",
+        "/hasReminderToday",
+        "/nextReminderTimeText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.viewNote",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "abilityName": "MainAbility",
+          "bundleName": "com.huawei.hmos.notepad",
+          "intentName": "ViewNote",
+          "params": {
+            "launchSource": "1",
+            "launchType": "0"
+          }
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.list_book_fill"
+  ]
+}

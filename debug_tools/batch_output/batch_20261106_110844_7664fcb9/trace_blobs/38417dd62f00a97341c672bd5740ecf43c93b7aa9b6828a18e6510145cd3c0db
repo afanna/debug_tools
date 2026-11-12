@@ -1,0 +1,16 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "距离2029年9月1日还有多少天（纯整数天数，展示时追加“天”）"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

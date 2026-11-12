@@ -1,0 +1,10 @@
+{
+  "data": [
+    "ViewWeather",
+    "GetHealthAndSportSummary"
+  ],
+  "event": [],
+  "asset": [
+    "photo-ux-texture-orange-diagonal-square"
+  ]
+}

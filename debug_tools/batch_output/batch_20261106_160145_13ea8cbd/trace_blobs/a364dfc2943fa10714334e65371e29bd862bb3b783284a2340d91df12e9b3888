@@ -1,0 +1,54 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "targetDate": "2027-10-05"
+      },
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown0"
+    },
+    {
+      "arguments": {
+        "targetDate": "2027-06-24"
+      },
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown1"
+    },
+    {
+      "arguments": {
+        "targetDate": "2027-04-19"
+      },
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown2"
+    },
+    {
+      "arguments": {
+        "targetDate": "2027-04-12"
+      },
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown3"
+    },
+    {
+      "arguments": {
+        "targetDate": "2027-10-28"
+      },
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown4"
+    },
+    {
+      "arguments": {
+        "targetDate": "2027-01-23"
+      },
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown5"
+    }
+  ],
+  "description": "家人重要日子提醒",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x4",
+  "title": "家人纪念日"
+}

@@ -1,0 +1,6 @@
+["root","Column",{"width":"matchParent","height":"matchParent","padding":{"top":12.0,"bottom":12.0,"left":0,"right":0},"itemMargin":6.0,"borderRadius":20.0,"clip":true,"alignItems":"start","justifyContent":"start","_staticLayout":"W-static-content"},["__layout__root__static_header","__layout__root__static_body"]]
+["__layout__root__static_header","Column",{"width":"matchParent","alignItems":"start","justifyContent":"start","padding":{"left":12.0,"right":12.0},"height":16.0},["header"]]
+["header","SingleLineTitle",{"title":"月份中英文对照"}]
+["__layout__root__static_body","Column",{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"end","itemMargin":6.0,"padding":{"left":12.0,"right":12.0}},["body"]]
+["body","SingleLineList",{"items":[{"text":"1-3月","assist":"January-February-March"},{"text":"4-6月","assist":"April-May-June"},{"text":"7-9月","assist":"July-August-September"},{"text":"10-12月","assist":"October-November-December"}]}]
+["/state/ready",true]

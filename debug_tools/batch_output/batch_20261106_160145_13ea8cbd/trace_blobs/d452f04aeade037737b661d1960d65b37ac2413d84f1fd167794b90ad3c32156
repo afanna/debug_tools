@@ -1,0 +1,34 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "显示当前日期"
+    },
+    {
+      "componentHints": [
+        "DataDisplay",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "显示当前星期"
+    },
+    {
+      "actionId": "event.open.clock.alarm",
+      "componentHints": [
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "点击打开闹钟应用"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content-action",
+    "S-title-primary-secondary-action"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q458",
+  "fileName": "Q458.json",
+  "title": "今日天气",
+  "query": "做一张辉县市今日天气桌面卡片，显示当前温度和天气现象。",
+  "size": "2x2",
+  "sequence": 46,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4100.3,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4089.53,
+  "uid": "batch-13ea8cbd-00046-000",
+  "finalAttempt": 0
+}

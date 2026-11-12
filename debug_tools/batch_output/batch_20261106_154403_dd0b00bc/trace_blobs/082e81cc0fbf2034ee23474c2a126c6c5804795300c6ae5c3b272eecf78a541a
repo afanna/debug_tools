@@ -1,0 +1,203 @@
+{
+  "cardSpec": {
+    "dataBindings": [
+      {
+        "arguments": {
+          "targetDate": "2026-10-15"
+        },
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown0"
+      },
+      {
+        "arguments": {
+          "targetDate": "2026-07-04"
+        },
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown1"
+      },
+      {
+        "arguments": {
+          "targetDate": "2026-04-29"
+        },
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown2"
+      },
+      {
+        "arguments": {
+          "targetDate": "2026-04-22"
+        },
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown3"
+      },
+      {
+        "arguments": {
+          "targetDate": "2026-11-08"
+        },
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown4"
+      },
+      {
+        "arguments": {
+          "targetDate": "2027-01-23"
+        },
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown5"
+      }
+    ],
+    "description": "家人重要日子提醒",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "suggestSize": "2x4",
+    "title": "家人纪念日"
+  },
+  "effectiveCapabilities": {
+    "asset": [],
+    "data": [
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays"
+    ],
+    "event": []
+  },
+  "generationPlan": {
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "targetDate": "2026-10-15"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown0"
+      },
+      {
+        "arguments": {
+          "targetDate": "2026-07-04"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown1"
+      },
+      {
+        "arguments": {
+          "targetDate": "2026-04-29"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown2"
+      },
+      {
+        "arguments": {
+          "targetDate": "2026-04-22"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown3"
+      },
+      {
+        "arguments": {
+          "targetDate": "2026-11-08"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown4"
+      },
+      {
+        "arguments": {
+          "targetDate": "2027-01-23"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown5"
+      }
+    ],
+    "candidateEventCandidates": []
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"__layout__root__row0\",\"__layout__root__row1\"],\"itemMargin\":12,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\"}},{\"id\":\"__layout__root__row0\",\"component\":\"Row\",\"children\":[\"top_left\",\"top_right\"],\"itemMargin\":12,\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1}},{\"id\":\"top_left\",\"component\":\"Column\",\"children\":[\"top_left_text\"],\"itemMargin\":0,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"clip\":true,\"flexShrink\":0,\"height\":\"matchParent\",\"backgroundColor\":\"@theme:panel/1\",\"layoutWeight\":1}},{\"id\":\"top_left_text\",\"component\":\"Column\",\"children\":[\"top_left_primary\",\"top_left_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"height\":\"matchParent\",\"padding\":{\"top\":8},\"width\":\"matchParent\"}},{\"id\":\"top_left_primary\",\"component\":\"Text\",\"content\":\"{{ ${/data/countdown0/countdownDays} + '天' }}\",\"styles\":{\"height\":19,\"fontSize\":14,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"lineHeight\":1.3571428571428572,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"top_left_secondary\",\"component\":\"Text\",\"content\":\"奶奶生日 10月15日\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"lineHeight\":1.3333333333333333,\"fontColor\":\"@theme:primary/0.6\"}},{\"id\":\"top_right\",\"component\":\"Column\",\"children\":[\"top_right_text\"],\"itemMargin\":0,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"clip\":true,\"flexShrink\":0,\"height\":\"matchParent\",\"backgroundColor\":\"@theme:panel/1\",\"layoutWeight\":1}},{\"id\":\"top_right_text\",\"component\":\"Column\",\"children\":[\"top_right_primary\",\"top_right_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"height\":\"matchParent\",\"padding\":{\"top\":8},\"width\":\"matchParent\"}},{\"id\":\"top_right_primary\",\"component\":\"Text\",\"content\":\"{{ ${/data/countdown1/countdownDays} + '天' }}\",\"styles\":{\"height\":19,\"fontSize\":14,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"lineHeight\":1.3571428571428572,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"top_right_secondary\",\"component\":\"Text\",\"content\":\"爷爷生日 7月4日\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"lineHeight\":1.3333333333333333,\"fontColor\":\"@theme:primary/0.6\"}},{\"id\":\"__layout__root__row1\",\"component\":\"Row\",\"children\":[\"bottom_left\",\"bottom_right\"],\"itemMargin\":12,\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1}},{\"id\":\"bottom_left\",\"component\":\"Column\",\"children\":[\"bottom_left_text\"],\"itemMargin\":0,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"clip\":true,\"flexShrink\":0,\"height\":\"matchParent\",\"backgroundColor\":\"@theme:panel/1\",\"layoutWeight\":1}},{\"id\":\"bottom_left_text\",\"component\":\"Column\",\"children\":[\"bottom_left_primary\",\"bottom_left_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"height\":\"matchParent\",\"padding\":{\"top\":8},\"width\":\"matchParent\"}},{\"id\":\"bottom_left_primary\",\"component\":\"Text\",\"content\":\"{{ ${/data/countdown2/countdownDays} + '天' }}\",\"styles\":{\"height\":19,\"fontSize\":14,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"lineHeight\":1.3571428571428572,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"bottom_left_secondary\",\"component\":\"Text\",\"content\":\"爸爸生日 4月29日\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"lineHeight\":1.3333333333333333,\"fontColor\":\"@theme:primary/0.6\"}},{\"id\":\"bottom_right\",\"component\":\"Column\",\"children\":[\"bottom_right_text\"],\"itemMargin\":0,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"clip\":true,\"flexShrink\":0,\"height\":\"matchParent\",\"backgroundColor\":\"@theme:panel/1\",\"layoutWeight\":1}},{\"id\":\"bottom_right_text\",\"component\":\"Column\",\"children\":[\"bottom_right_primary\",\"bottom_right_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"height\":\"matchParent\",\"padding\":{\"top\":8},\"width\":\"matchParent\"}},{\"id\":\"bottom_right_primary\",\"component\":\"Text\",\"content\":\"{{ ${/data/countdown3/countdownDays} + '天' }}\",\"styles\":{\"height\":19,\"fontSize\":14,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"lineHeight\":1.3571428571428572,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"bottom_right_secondary\",\"component\":\"Text\",\"content\":\"妈妈生日 4月22日\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"lineHeight\":1.3333333333333333,\"fontColor\":\"@theme:primary/0.6\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"countdown0\":{\"countdownDays\":30},\"countdown1\":{\"countdownDays\":30},\"countdown2\":{\"countdownDays\":30},\"countdown3\":{\"countdownDays\":30},\"countdown4\":{\"countdownDays\":30},\"countdown5\":{\"countdownDays\":30}}}}}",
+  "meta": {
+    "apiVersion": "v1",
+    "artifactId": "8965f5e7-aa0e-4501-ab9d-5727f6b88e7e",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "cardSpecVersion": "card-spec-v1",
+    "createdAt": 1793951118319,
+    "dslProtocolVersion": "v0.9",
+    "generationMode": "create",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "skillVersion": "skill-widget-v1",
+    "taskSpecVersion": "task-spec-v1"
+  },
+  "removedCapabilities": [],
+  "schemaVersion": "widget-artifact-v2",
+  "taskSpec": {
+    "appVersion": "11.7.8.342",
+    "assetCandidates": [],
+    "dataModelSchema": {
+      "data": {
+        "countdown0": {
+          "countdownDays": {
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30,
+            "type": "integer"
+          }
+        },
+        "countdown1": {
+          "countdownDays": {
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30,
+            "type": "integer"
+          }
+        },
+        "countdown2": {
+          "countdownDays": {
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30,
+            "type": "integer"
+          }
+        },
+        "countdown3": {
+          "countdownDays": {
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30,
+            "type": "integer"
+          }
+        },
+        "countdown4": {
+          "countdownDays": {
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30,
+            "type": "integer"
+          }
+        },
+        "countdown5": {
+          "countdownDays": {
+            "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+            "sampleValue": 30,
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "eventCandidates": [],
+    "size": "2x4",
+    "userQuery": "制作一张家人重要日子倒计时卡片，标注每位家人的名字和对应的公历日期。奶奶生日：2026年10月15日（农历九月初六）；爷爷生日：2026年7月4日（农历五月二十）；爸爸生日：2026年4月29日（农历三月十三）；妈妈生日：2026年4月22日（农历三月初六）；崔景会生日：2026年11月8日（农历九月三十）；父母结婚纪念日：2027年1月23日（农历腊月十六）。\n本轮卡片静态内容（用作展示的外部事实）：奶奶生日10月15日、爷爷生日7月4日、爸爸生日4月29日、妈妈生日4月22日、崔景会生日11月8日、父母结婚纪念日1月23日"
+  }
+}

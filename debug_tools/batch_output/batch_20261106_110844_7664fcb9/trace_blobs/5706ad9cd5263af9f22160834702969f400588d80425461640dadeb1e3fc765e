@@ -1,0 +1,60 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.clock.alarm",
+        "assetId": null,
+        "reason": "emoji_time 为时钟主题图标，更适合标题或内容视觉；动作“打开时钟”无专属准确图标，按钮使用文字动作。"
+      }
+    ],
+    "title": {
+      "assetId": "asset.emoji_time"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期（年-月-日）"
+    },
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "中文星期描述"
+    },
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "传统农历日期"
+    },
+    {
+      "actionId": "event.open.clock.alarm",
+      "componentHints": [
+        "PillButton",
+        "CardButton",
+        "CircleButton"
+      ],
+      "priority": "must",
+      "requirement": "打开华为时钟应用首页"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content-action",
+    "S-title-anchor"
+  ]
+}

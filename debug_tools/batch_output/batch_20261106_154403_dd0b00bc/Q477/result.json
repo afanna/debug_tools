@@ -1,0 +1,21 @@
+{
+  "id": "Q477",
+  "fileName": "Q477.json",
+  "title": "天气预报",
+  "query": "把那个大框框设置天气预报，显示当前天气和温度。",
+  "size": "2x4",
+  "sequence": 65,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 12452.76,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 170,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 12443.9,
+  "uid": "batch-dd0b00bc-00065-000",
+  "finalAttempt": 0
+}

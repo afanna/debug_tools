@@ -1,0 +1,26 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "距离春节还有多少天（纯整数，展示时追加“天”）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "priority": "should",
+      "requirement": "目标日期说明：2027年春节是2月6日",
+      "text": "2027年春节是2月6日"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

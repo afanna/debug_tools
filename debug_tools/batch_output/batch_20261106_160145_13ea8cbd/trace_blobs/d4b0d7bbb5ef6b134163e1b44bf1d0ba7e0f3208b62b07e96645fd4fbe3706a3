@@ -1,0 +1,8 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": [
+    "Plan fact is missing from visible DSL: 父母结婚纪念日的倒计时天数 (/data/countdown5/countdownDays)."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/exerciseTypeName",
+        "/exerciseStartTimeText",
+        "/exerciseEndTimeText",
+        "/exerciseDurationText"
+      ],
+      "capabilityId": "GetHealthAndSportSummary",
+      "writeResultTo": "/data/healthSport"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        },
+        "call": "clickToDeeplink"
+      },
+      "capabilityId": "event.open.health.sport"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/exerciseTypeName",
+          "/exerciseStartTimeText",
+          "/exerciseEndTimeText",
+          "/exerciseDurationText"
+        ],
+        "capabilityId": "GetHealthAndSportSummary",
+        "writeResultTo": "/data/healthSport"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.health.sport"
+      }
+    ],
+    "description": "快速记录饮食，管理热量营养",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL10P 7.0.0.111",
+    "size": "2x2",
+    "title": "吃前拍一拍",
+    "uid": "batch-dd0b00bc-00011-000",
+    "userQuery": "创建一张桌面卡片，显示最近一次运动类型、开始时间、结束时间和时长，点击可跳转到运动健康应用的锻炼Tab页。"
+  },
+  "description": "快速记录饮食，管理热量营养",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261103012658411"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "session": {
+    "interactionId": "Q423-000",
+    "isNew": true,
+    "sessionId": "batch-dd0b00bc"
+  },
+  "size": "2x2",
+  "title": "吃前拍一拍",
+  "userAuth": {
+    "user": {
+      "userId": "batch-dd0b00bc-00011-000"
+    }
+  },
+  "userQuery": "创建一张桌面卡片，显示最近一次运动类型、开始时间、结束时间和时长，点击可跳转到运动健康应用的锻炼Tab页。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

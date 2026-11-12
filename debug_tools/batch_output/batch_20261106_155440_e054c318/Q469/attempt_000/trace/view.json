@@ -1,0 +1,25 @@
+{
+  "viewVersion": "trace-view-v2",
+  "uid": "batch-e054c318-00060-000",
+  "traceId": "",
+  "sourceSchemaVersion": "",
+  "status": "missing",
+  "timingMode": "exact",
+  "recordCount": 0,
+  "summary": {
+    "totalDurationMs": 0.0,
+    "nodeCount": 0,
+    "failedNodeCount": 0,
+    "inputTokens": 0,
+    "completionTokens": 0,
+    "firstTokenLatencyMs": null,
+    "modelPhysicalCalls": 0,
+    "totalTokens": 0,
+    "firstTokenMs": null,
+    "retryCount": 0
+  },
+  "nodes": [],
+  "warnings": [
+    "未找到对应 Trace 目录"
+  ]
+}

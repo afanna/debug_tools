@@ -1,0 +1,36 @@
+{
+  "title": "桌面聚合卡片",
+  "description": "聚合天气、电量、健康和耗电排行的桌面卡片",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "capabilityId": "GetPhoneBatteryInfo",
+      "arguments": {},
+      "writeResultTo": "/data/phoneBattery"
+    },
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/healthSport"
+    },
+    {
+      "capabilityId": "GetAppPowerConsumptionRanking",
+      "arguments": {
+        "limit": 3
+      },
+      "writeResultTo": "/data/powerRanking"
+    }
+  ]
+}

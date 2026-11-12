@@ -1,0 +1,92 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.weather",
+        "assetId": null,
+        "reason": "Whole-card detail has no button icon."
+      }
+    ],
+    "title": {
+      "assetId": "asset.emoji_location_blue"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "DataDisplay",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "展示当前温度（含℃单位）"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "展示当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock",
+        "TableText"
+      ],
+      "dataId": "/data/weather/current/humidityPercent",
+      "priority": "must",
+      "requirement": "展示当前相对湿度"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock",
+        "TableText"
+      ],
+      "dataId": "/data/weather/current/airQuality",
+      "priority": "must",
+      "requirement": "展示当前空气质量等级"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock",
+        "TableText"
+      ],
+      "dataId": "/data/weather/current/uvIndex",
+      "priority": "must",
+      "requirement": "展示当前紫外线等级"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/weather/location/districtName",
+      "priority": "must",
+      "requirement": "展示查询地点（包头市青山区）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/weather/daily/0/condition",
+      "priority": "should",
+      "requirement": "展示未来3天预报（逐日天气现象与温度范围）"
+    },
+    {
+      "actionId": "event.open.weather",
+      "priority": "must",
+      "requirement": "点击卡片打开天气应用查看详情"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content"
+  ],
+  "wholeCardActionId": "event.open.weather"
+}

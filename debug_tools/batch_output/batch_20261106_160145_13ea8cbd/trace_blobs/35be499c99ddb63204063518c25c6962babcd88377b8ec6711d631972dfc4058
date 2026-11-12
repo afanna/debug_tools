@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"距离2026年12月1日的剩余天数，数值后追加“天”","priority":"must","dataId":"/data/countdown/countdownDays","componentHints":["DataDisplay","EmphasizedData"]},{"requirement":"目标日期为2026年12月1日","priority":"must","text":"2026年12月1日","componentHints":["DataDisplay","SecondaryBody"]}],"layoutHints":["S-center"]}}

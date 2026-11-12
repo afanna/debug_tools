@@ -1,0 +1,951 @@
+{
+  "schemaVersion": "target-dom-v1",
+  "surface": {
+    "x": 0,
+    "y": 0,
+    "width": 150,
+    "height": 150
+  },
+  "visibleText": "绿植浇水 就是今天 0 天 下次浇水 2026/11/03",
+  "nodes": [
+    {
+      "id": "root",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "绿植浇水 就是今天 0 天 下次浇水 2026/11/03",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(31, 31, 153)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": {
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/833c5de3326049de993cc193a526df84/cbfe92acc718409aae519be674465497.jpg",
+        "naturalWidth": 600,
+        "naturalHeight": 600,
+        "complete": true,
+        "ariaLabel": null,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 150,
+          "height": 150
+        }
+      }
+    },
+    {
+      "id": "__post_theme_background",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": {
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/833c5de3326049de993cc193a526df84/cbfe92acc718409aae519be674465497.jpg",
+        "naturalWidth": 600,
+        "naturalHeight": 600,
+        "complete": true,
+        "ariaLabel": null,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 150,
+          "height": 150
+        }
+      }
+    },
+    {
+      "id": "fusionBallBackground",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 183,
+      "scrollHeight": 206,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallLargeSlot",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 168.75,
+        "height": 41.25
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 169,
+      "clientHeight": 41,
+      "scrollWidth": 183,
+      "scrollHeight": 119,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallLarge",
+      "tag": "DIV",
+      "leaf": true,
+      "text": "",
+      "box": {
+        "x": -14.0625,
+        "y": -77.8125,
+        "width": 196.875,
+        "height": 196.875
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(31, 31, 153)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 197,
+      "clientHeight": 197,
+      "scrollWidth": 197,
+      "scrollHeight": 197,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallMediumSlot",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 75,
+        "height": 206.25
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 75,
+      "clientHeight": 206,
+      "scrollWidth": 113,
+      "scrollHeight": 206,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallMedium",
+      "tag": "DIV",
+      "leaf": true,
+      "text": "",
+      "box": {
+        "x": -37.5,
+        "y": 56.25,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(43, 101, 217)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallSmallSlot",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 182.8125,
+        "height": 178.125
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 183,
+      "clientHeight": 178,
+      "scrollWidth": 183,
+      "scrollHeight": 178,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallSmall",
+      "tag": "DIV",
+      "leaf": true,
+      "text": "",
+      "box": {
+        "x": 89.0625,
+        "y": 84.375,
+        "width": 93.75,
+        "height": 93.75
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(87, 174, 217)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 94,
+      "clientHeight": 94,
+      "scrollWidth": 94,
+      "scrollHeight": 94,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallGlassLayer",
+      "tag": "DIV",
+      "leaf": true,
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(255, 255, 255, 0.05)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "__post_theme_base",
+      "tag": "IMG",
+      "leaf": true,
+      "text": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": {
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/833c5de3326049de993cc193a526df84/cbfe92acc718409aae519be674465497.jpg",
+        "naturalWidth": 600,
+        "naturalHeight": 600,
+        "complete": true,
+        "ariaLabel": null,
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 150,
+          "height": 150
+        }
+      }
+    },
+    {
+      "id": "__genui_render_component__root",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "绿植浇水 就是今天 0 天 下次浇水 2026/11/03",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "12px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": {
+        "src": "/resources/base/media/stopwatch_fill.svg",
+        "naturalWidth": 24,
+        "naturalHeight": 24,
+        "complete": true,
+        "ariaLabel": null,
+        "box": {
+          "x": 118,
+          "y": 12,
+          "width": 20,
+          "height": 20
+        }
+      }
+    },
+    {
+      "id": "title",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "绿植浇水 就是今天",
+      "box": {
+        "x": 12,
+        "y": 12,
+        "width": 126,
+        "height": 20
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 20,
+      "scrollWidth": 126,
+      "scrollHeight": 24,
+      "visible": true,
+      "image": {
+        "src": "/resources/base/media/stopwatch_fill.svg",
+        "naturalWidth": 24,
+        "naturalHeight": 24,
+        "complete": true,
+        "ariaLabel": null,
+        "box": {
+          "x": 118,
+          "y": 12,
+          "width": 20,
+          "height": 20
+        }
+      }
+    },
+    {
+      "id": "title_title",
+      "tag": "P",
+      "leaf": true,
+      "text": "绿植浇水 就是今天",
+      "box": {
+        "x": 12,
+        "y": 16,
+        "width": 106,
+        "height": 12
+      },
+      "style": {
+        "fontSize": 12,
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.8)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "12px",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 106,
+      "clientHeight": 12,
+      "scrollWidth": 106,
+      "scrollHeight": 14,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "title_icon",
+      "tag": "SPAN",
+      "leaf": true,
+      "text": "",
+      "box": {
+        "x": 118,
+        "y": 12,
+        "width": 20,
+        "height": 20
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 20,
+      "clientHeight": 20,
+      "scrollWidth": 20,
+      "scrollHeight": 24,
+      "visible": true,
+      "image": {
+        "src": "/resources/base/media/stopwatch_fill.svg",
+        "naturalWidth": 24,
+        "naturalHeight": 24,
+        "complete": true,
+        "ariaLabel": null,
+        "box": {
+          "x": 118,
+          "y": 12,
+          "width": 20,
+          "height": 20
+        }
+      }
+    },
+    {
+      "id": "__layout__root__body",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "0 天 下次浇水 2026/11/03",
+      "box": {
+        "x": 12,
+        "y": 38,
+        "width": 126,
+        "height": 100
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 100,
+      "scrollWidth": 126,
+      "scrollHeight": 100,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "__layout__root__primary",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "0 天",
+      "box": {
+        "x": 12,
+        "y": 38,
+        "width": 126,
+        "height": 80
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 80,
+      "scrollWidth": 126,
+      "scrollHeight": 80,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "days",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "0 天",
+      "box": {
+        "x": 12,
+        "y": 38,
+        "width": 126,
+        "height": 30
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 30,
+      "scrollWidth": 126,
+      "scrollHeight": 30,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "days_value",
+      "tag": "P",
+      "leaf": true,
+      "text": "0",
+      "box": {
+        "x": 12,
+        "y": 38,
+        "width": 18.03125,
+        "height": 30
+      },
+      "style": {
+        "fontSize": 30,
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "30px",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 18,
+      "clientHeight": 30,
+      "scrollWidth": 18,
+      "scrollHeight": 35,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "days_unit",
+      "tag": "P",
+      "leaf": true,
+      "text": "天",
+      "box": {
+        "x": 32.03125,
+        "y": 54.25,
+        "width": 12,
+        "height": 13.75
+      },
+      "style": {
+        "fontSize": 12,
+        "fontWeight": "500",
+        "color": "rgba(255, 255, 255, 0.6)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "12px",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px 0px 1.75px"
+      },
+      "clientWidth": 12,
+      "clientHeight": 14,
+      "scrollWidth": 12,
+      "scrollHeight": 14,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "__layout__root__support",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "下次浇水 2026/11/03",
+      "box": {
+        "x": 12,
+        "y": 126,
+        "width": 126,
+        "height": 12
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 12,
+      "scrollWidth": 126,
+      "scrollHeight": 12,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "target",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "下次浇水 2026/11/03",
+      "box": {
+        "x": 12,
+        "y": 126,
+        "width": 126,
+        "height": 12
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 12,
+      "scrollWidth": 126,
+      "scrollHeight": 12,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "target_row0",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "下次浇水 2026/11/03",
+      "box": {
+        "x": 12,
+        "y": 126,
+        "width": 126,
+        "height": 12
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 12,
+      "scrollWidth": 126,
+      "scrollHeight": 12,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "target_item0",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "下次浇水 2026/11/03",
+      "box": {
+        "x": 12,
+        "y": 126,
+        "width": 126,
+        "height": 12
+      },
+      "style": {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 12,
+      "scrollWidth": 126,
+      "scrollHeight": 12,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "target_item0_label",
+      "tag": "P",
+      "leaf": true,
+      "text": "下次浇水",
+      "box": {
+        "x": 12,
+        "y": 126,
+        "width": 48,
+        "height": 12
+      },
+      "style": {
+        "fontSize": 12,
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.6)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "12px",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 48,
+      "clientHeight": 12,
+      "scrollWidth": 48,
+      "scrollHeight": 14,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "target_item0_value",
+      "tag": "P",
+      "leaf": true,
+      "text": "2026/11/03",
+      "box": {
+        "x": 64,
+        "y": 126,
+        "width": 74,
+        "height": 12
+      },
+      "style": {
+        "fontSize": 12,
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "12px",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px"
+      },
+      "clientWidth": 74,
+      "clientHeight": 12,
+      "scrollWidth": 74,
+      "scrollHeight": 14,
+      "visible": true,
+      "image": null
+    }
+  ],
+  "devicePixelRatio": 3,
+  "webQuality": {
+    "schemaVersion": "web-quality-v1",
+    "complete": true,
+    "findings": [
+      {
+        "rule_id": "GEOMETRY.CLIP_TEXT",
+        "severity": "P1",
+        "evidence_type": "程序已证实",
+        "components": [
+          "days_value:18"
+        ],
+        "message": "Web 渲染中文字被裁剪或省略",
+        "evidence": {
+          "component": "days_value",
+          "text": "0",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 18.03125,
+            "height": 30
+          },
+          "textRects": [
+            {
+              "x": 12,
+              "y": 33,
+              "width": 18.03125,
+              "height": 40
+            }
+          ],
+          "clientWidth": 18,
+          "scrollWidth": 18,
+          "clientHeight": 30,
+          "scrollHeight": 35
+        }
+      }
+    ],
+    "frame": {
+      "x": 0,
+      "y": 0,
+      "width": 150,
+      "height": 150
+    },
+    "measuredTextNodes": 5,
+    "measuredImages": 2,
+    "excludedScrollable": 0,
+    "coverage": [
+      "text-clipping",
+      "card-boundary",
+      "text-overlap-candidates",
+      "image-loading",
+      "parser-warnings"
+    ],
+    "limitations": [
+      "不验证真实端侧功能及 Query 语义完整性",
+      "不验证品牌色板与整体审美",
+      "滚动区域、隐藏态和字形级遮挡不作通过结论"
+    ]
+  },
+  "imageSha256": "33a6e0ef4beec3b4174a17761f588f145654307cb6fcab96f37cfeac6549ebcb",
+  "sourceSha256": "075ff44610566e018ae0351a0abc5ab80bf1be5c0cd0ef2ed25f417696f04737"
+}

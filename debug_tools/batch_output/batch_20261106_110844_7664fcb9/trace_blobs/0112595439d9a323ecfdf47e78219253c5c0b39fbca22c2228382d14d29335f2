@@ -1,0 +1,8 @@
+["root","Layout",{"layout":"S-title-primary-secondary-action"},["title","primary","support","action"]]
+["title","SingleLineTitle",{"title":"当前时间","fontSize":12}]
+["primary","EmphasisText",{"mainText":{"path":"/data/time/currentDate"},"secondaryText":{"path":"/data/time/dayOfWeek"},"fontSize":18}]
+["support","SecondaryBody",{"items":[{"label":"农历 ","value":{"path":"/data/time/lunarDate"}}],"fontSize":14}]
+["action","PillButton",{"label":"打开时钟","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"com.huawei.hmos.clock.phone","bundleName":"com.huawei.hmos.clock","intentName":"Clock","uri":""}}]}]
+["/data/time/currentDate","示例"]
+["/data/time/dayOfWeek","示例"]
+["/data/time/lunarDate","示例"]

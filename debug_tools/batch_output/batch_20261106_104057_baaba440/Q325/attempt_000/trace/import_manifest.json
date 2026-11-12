@@ -1,0 +1,10 @@
+{
+  "viewVersion": "trace-view-v2",
+  "uid": "batch-baaba440-00013-000",
+  "sourceSchemaVersion": "",
+  "status": "missing",
+  "recordCount": 0,
+  "warnings": [
+    "未找到对应 Trace 目录"
+  ]
+}

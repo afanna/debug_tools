@@ -1,0 +1,109 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "pwd_title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "pwd",
+      "identity": "密码",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡共同主题：密码信息",
+      "sourceTexts": [
+        "图片显示操作成功，密码为 88122092，类型为永久。"
+      ],
+      "text": "密码信息"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "密码为 88122092",
+      "sourceTexts": [
+        "图片显示操作成功，密码为 88122092，类型为永久。"
+      ],
+      "text": "密码"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "密码值为 88122092",
+      "sourceTexts": [
+        "图片显示操作成功，密码为 88122092，类型为永久。"
+      ],
+      "text": "88122092"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "类型：永久",
+      "sourceTexts": [
+        "图片显示操作成功，密码为 88122092，类型为永久。"
+      ],
+      "text": "类型"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "永久",
+      "sourceTexts": [
+        "图片显示操作成功，密码为 88122092，类型为永久。"
+      ],
+      "text": "永久"
+    }
+  ],
+  "layoutHints": [
+    "S-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "rows",
+  "selectionNotes": [
+    "改用SingleLineList：密码与类型均为短标签加短值，可单行完整读取。",
+    "操作成功为过程状态，非用户所需密码信息，不单独展示。"
+  ],
+  "staticPresentationFeedback": [
+    "Compact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: COMPACT_STATIC_TEXT_CAPACITY: body.item0_assist 关键读数 '88122092；' 超过 31vp；保持数值、日期时间和单位完整，改用更宽正文或列表，不能拆数字或缩字。",
+    "Compact DSL validation failed:\n- COMPACT_STATIC_CORE_MISSING: 组 pwd 缺少完整展示文字 '类型'；须在该对象或条目内恢复，不能从其它栏或note补足。"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "data": [
+    "GetPhoneBatteryInfo"
+  ],
+  "event": [],
+  "asset": [
+    "asset.bolt_fill"
+  ]
+}

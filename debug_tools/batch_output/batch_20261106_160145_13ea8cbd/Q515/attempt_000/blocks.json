@@ -1,0 +1,423 @@
+{
+  "cardspec": {
+    "title": "3D动态日历",
+    "description": "日历与日程动态展示",
+    "suggestSize": "2x4",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "dataBindings": [
+      {
+        "capabilityId": "GetCurrentTime",
+        "arguments": {},
+        "writeResultTo": "/data/time"
+      },
+      {
+        "capabilityId": "GetCalendarEvents",
+        "arguments": {
+          "futureDays": 7
+        },
+        "writeResultTo": "/data/calendar"
+      }
+    ]
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\r\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"title\",\"__layout__root__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"linearGradient\":{\"direction\":\"RightBottom\",\"colors\":[[\"#FFFFE0CC\",0],[\"#FFFFF7F2\",1]]}}},{\"id\":\"title\",\"component\":\"Row\",\"children\":[\"title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"title_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/currentDate} }}\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"#998C4B1C\"}},{\"id\":\"__layout__root__body\",\"component\":\"Column\",\"children\":[\"__layout__root__primary\",\"__layout__root__details\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__root__primary\",\"component\":\"Column\",\"children\":[\"primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"primary\",\"component\":\"Column\",\"children\":[\"primary_main\",\"primary_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"primary_main\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/dayOfWeek} }}\",\"styles\":{\"height\":18,\"fontSize\":18,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"#FF8C4B1C\",\"textOverflow\":\"clip\"}},{\"id\":\"primary_secondary\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/lunarDate} }}\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"#FF8C4B1C\",\"textOverflow\":\"clip\"}},{\"id\":\"__layout__root__details\",\"component\":\"Column\",\"children\":[\"details\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1},\"itemMargin\":0},{\"id\":\"details\",\"component\":\"Column\",\"children\":[\"details_item0\",\"details_item1\"],\"itemMargin\":4,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"clip\":true,\"height\":68}},{\"id\":\"details_item0\",\"component\":\"Row\",\"children\":[\"details_item0_rail\",\"details_item0_texts\"],\"itemMargin\":7,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"top\",\"flexShrink\":0,\"clip\":true,\"height\":32}},{\"id\":\"details_item0_rail\",\"component\":\"Column\",\"children\":[\"details_item0_rail_dot\",\"details_item0_rail_line\"],\"itemMargin\":4,\"styles\":{\"width\":8,\"padding\":{\"top\":4,\"bottom\":0},\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0,\"height\":32,\"clip\":true}},{\"id\":\"details_item0_rail_dot\",\"component\":\"Divider\",\"styles\":{\"width\":8,\"height\":8,\"borderRadius\":4,\"borderWidth\":1.5,\"strokeWidth\":0,\"color\":\"#00000000\",\"flexShrink\":0,\"borderColor\":\"#FF8C4B1C\",\"backgroundColor\":\"#00000000\"}},{\"id\":\"details_item0_rail_line\",\"component\":\"Divider\",\"styles\":{\"width\":1,\"strokeWidth\":1,\"vertical\":true,\"flexShrink\":0,\"height\":16,\"color\":\"#998C4B1C\"}},{\"id\":\"details_item0_texts\",\"component\":\"Column\",\"children\":[\"details_item0_title\",\"details_item0_meta\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"height\":32}},{\"id\":\"details_item0_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/0/title} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0,\"minHeight\":16},\"height\":16,\"fontColor\":\"#FF8C4B1C\",\"textOverflow\":\"clip\"}},{\"id\":\"details_item0_time\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/0/startDate} + ' ' + ${/data/calendar/events/0/dtStart} }}\",\"styles\":{\"width\":\"matchParent\",\"height\":14,\"fontSize\":10,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0},\"fontColor\":\"#998C4B1C\",\"textOverflow\":\"clip\"}},{\"id\":\"details_item0_meta\",\"component\":\"Row\",\"children\":[\"details_item0_time\"],\"itemMargin\":4,\"styles\":{\"width\":\"matchParent\",\"height\":14,\"alignItems\":\"center\",\"flexShrink\":0,\"clip\":true}},{\"id\":\"details_item1\",\"component\":\"Row\",\"children\":[\"details_item1_rail\",\"details_item1_texts\"],\"itemMargin\":7,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"top\",\"flexShrink\":0,\"clip\":true,\"height\":32}},{\"id\":\"details_item1_rail\",\"component\":\"Column\",\"children\":[\"details_item1_rail_dot\",\"details_item1_rail_line\"],\"itemMargin\":4,\"styles\":{\"width\":8,\"padding\":{\"top\":4,\"bottom\":0},\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0,\"height\":32,\"clip\":true}},{\"id\":\"details_item1_rail_dot\",\"component\":\"Divider\",\"styles\":{\"width\":8,\"height\":8,\"borderRadius\":4,\"borderWidth\":1.5,\"strokeWidth\":0,\"color\":\"#00000000\",\"flexShrink\":0,\"borderColor\":\"#FF8C4B1C\",\"backgroundColor\":\"#00000000\"}},{\"id\":\"details_item1_rail_line\",\"component\":\"Divider\",\"styles\":{\"width\":1,\"strokeWidth\":1,\"vertical\":true,\"flexShrink\":0,\"height\":16,\"color\":\"#998C4B1C\"}},{\"id\":\"details_item1_texts\",\"component\":\"Column\",\"children\":[\"details_item1_title\",\"details_item1_meta\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"height\":32}},{\"id\":\"details_item1_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/1/title} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0,\"minHeight\":16},\"height\":16,\"fontColor\":\"#FF8C4B1C\",\"textOverflow\":\"clip\"}},{\"id\":\"details_item1_time\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/1/startDate} + ' ' + ${/data/calendar/events/1/dtStart} }}\",\"styles\":{\"width\":\"matchParent\",\"height\":14,\"fontSize\":10,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0},\"fontColor\":\"#998C4B1C\",\"textOverflow\":\"clip\"}},{\"id\":\"details_item1_meta\",\"component\":\"Row\",\"children\":[\"details_item1_time\"],\"itemMargin\":4,\"styles\":{\"width\":\"matchParent\",\"height\":14,\"alignItems\":\"center\",\"flexShrink\":0,\"clip\":true}}]}}\r\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"time\":{\"currentDate\":\"示例\",\"dayOfWeek\":\"示例\",\"lunarDate\":\"示例\"},\"calendar\":{\"events\":[{\"title\":\"项目例会\",\"startDate\":\"08-06\",\"dtStart\":\"14:00\"},{\"title\":\"项目例会\",\"startDate\":\"08-06\",\"dtStart\":\"14:00\"}]}}}}}",
+  "schema": {
+    "schemaVersion": "widget-artifact-v2"
+  },
+  "taskspec": {
+    "userQuery": "做一张3D动态日历卡片，显示当前日期、星期和农历信息，同时展示最近的日程安排。",
+    "size": "2x4",
+    "appVersion": "11.7.8.342",
+    "eventCandidates": [
+      {
+        "id": "event.viewCalendarEvent",
+        "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+        "call": "clickToIntent",
+        "args": {
+          "intentName": "ViewCalendarEvent",
+          "params": {
+            "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+          }
+        }
+      },
+      {
+        "id": "event.open.clock.alarm",
+        "description": "打开华为时钟应用首页。",
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "uri": ""
+        }
+      }
+    ],
+    "dataModelSchema": {
+      "data": {
+        "time": {
+          "currentDate": {
+            "type": "string",
+            "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+            "sampleValue": "示例"
+          },
+          "dayOfWeek": {
+            "type": "string",
+            "description": "中文的星期描述，例如 '星期四'。",
+            "sampleValue": "示例"
+          },
+          "lunarDate": {
+            "type": "string",
+            "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+            "sampleValue": "示例"
+          }
+        },
+        "calendar": {
+          "events": [
+            {
+              "title": {
+                "type": "string",
+                "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+                "sampleValue": "项目例会"
+              },
+              "startDate": {
+                "type": "string",
+                "description": "日程开始日期格式化文本，例如 '07-03'。",
+                "sampleValue": "08-06"
+              },
+              "dtStart": {
+                "type": "string",
+                "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+                "sampleValue": "14:00"
+              },
+              "countdownDays": {
+                "type": "integer",
+                "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+                "sampleValue": 0
+              },
+              "entityId": {
+                "type": "string",
+                "description": "系统日程的全局唯一实体ID。",
+                "sampleValue": "example-event-001"
+              }
+            },
+            {
+              "title": {
+                "type": "string",
+                "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+                "sampleValue": "项目例会"
+              },
+              "startDate": {
+                "type": "string",
+                "description": "日程开始日期格式化文本，例如 '07-03'。",
+                "sampleValue": "08-06"
+              },
+              "dtStart": {
+                "type": "string",
+                "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+                "sampleValue": "14:00"
+              },
+              "countdownDays": {
+                "type": "integer",
+                "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+                "sampleValue": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    "assetCandidates": [
+      {
+        "id": "asset.calendar_fill",
+        "src": "resources/base/media/calendar_fill.svg",
+        "description": "样式：日历实心图标，默认黑色，图形为带格线的日历本造型；适用：日程管理、日历事件查看、当日安排。"
+      },
+      {
+        "id": "asset.emoji_calendar2",
+        "src": "resources/base/media/emoji_calendar2.png",
+        "description": "样式：红白配色的写实 3D 线圈日历，带金属装订环、浅灰日期网格和卷起页角，透明背景，原始尺寸为 512×512，PNG 位图需保留原色；适用：日历事项、明确会议或计划相关卡片，不因普通时间字段匹配。"
+      }
+    ]
+  },
+  "effectivecapabilities": {
+    "data": [
+      "GetCurrentTime",
+      "GetCalendarEvents"
+    ],
+    "event": [
+      {
+        "id": "event.viewCalendarEvent",
+        "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+        "call": "clickToIntent",
+        "args": {
+          "intentName": "ViewCalendarEvent",
+          "params": {
+            "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+          }
+        }
+      },
+      {
+        "id": "event.open.clock.alarm",
+        "description": "打开华为时钟应用首页。",
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "uri": ""
+        }
+      }
+    ],
+    "asset": [
+      "asset.calendar_fill",
+      "asset.emoji_calendar2"
+    ]
+  },
+  "removedcapabilities": [],
+  "generationplan": {
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetCurrentTime",
+        "arguments": {},
+        "writeResultTo": "/data/time",
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate"
+        ]
+      },
+      {
+        "capabilityId": "GetCalendarEvents",
+        "arguments": {
+          "futureDays": 7
+        },
+        "writeResultTo": "/data/calendar",
+        "candidateOutputFields": [
+          "/events/0/title",
+          "/events/0/startDate",
+          "/events/0/dtStart",
+          "/events/0/countdownDays",
+          "/events/1/title",
+          "/events/1/startDate",
+          "/events/1/dtStart",
+          "/events/1/countdownDays"
+        ]
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.viewCalendarEvent",
+        "action": {
+          "call": "clickToIntent",
+          "args": {
+            "intentName": "ViewCalendarEvent",
+            "params": {
+              "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+            }
+          }
+        }
+      },
+      {
+        "capabilityId": "event.open.clock.alarm",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "com.huawei.hmos.clock.phone",
+            "bundleName": "com.huawei.hmos.clock",
+            "intentName": "Clock",
+            "uri": ""
+          }
+        }
+      }
+    ],
+    "candidateAssetIds": [
+      "asset.calendar_fill",
+      "asset.emoji_calendar2"
+    ]
+  },
+  "meta": {
+    "apiVersion": "v1",
+    "taskSpecVersion": "task-spec-v1",
+    "cardSpecVersion": "card-spec-v1",
+    "dslProtocolVersion": "v0.9",
+    "skillVersion": "skill-widget-v1",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "generationMode": "create",
+    "artifactId": "97d46ba1-7aab-4623-905e-35778628dab0",
+    "createdAt": 1793952370856
+  },
+  "designcompactdsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\r\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/time/currentDate\"},\"fontSize\":12}]\r\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/time/dayOfWeek\"},\"secondaryText\":{\"path\":\"/data/time/lunarDate\"},\"fontSize\":18}]\r\n[\"details\",\"EventCard\",{\"items\":[{\"title\":{\"path\":\"/data/calendar/events/0/title\"},\"time\":\"{{ ${/data/calendar/events/0/startDate} + ' ' + ${/data/calendar/events/0/dtStart} }}\"},{\"title\":{\"path\":\"/data/calendar/events/1/title\"},\"time\":\"{{ ${/data/calendar/events/1/startDate} + ' ' + ${/data/calendar/events/1/dtStart} }}\"}],\"density\":\"compact\"}]\r\n[\"/data/time/currentDate\",\"示例\"]\r\n[\"/data/time/dayOfWeek\",\"示例\"]\r\n[\"/data/time/lunarDate\",\"示例\"]\r\n[\"/data/calendar/events/0/title\",\"项目例会\"]\r\n[\"/data/calendar/events/0/startDate\",\"08-06\"]\r\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\r\n[\"/data/calendar/events/1/title\",\"项目例会\"]\r\n[\"/data/calendar/events/1/startDate\",\"08-06\"]\r\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]",
+  "request": {
+    "content": {
+      "size": "2x4",
+      "functionName": "generateWidgetCardCompactDsl",
+      "romVersion": "CMS-AL20 7.0.0.111",
+      "candidateAssetIds": [
+        "asset.calendar_fill",
+        "asset.emoji_calendar2"
+      ],
+      "candidateEventCandidates": [
+        {
+          "capabilityId": "event.viewCalendarEvent",
+          "action": {
+            "call": "clickToIntent",
+            "args": {
+              "intentName": "ViewCalendarEvent",
+              "params": {
+                "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+              }
+            }
+          }
+        },
+        {
+          "capabilityId": "event.open.clock.alarm",
+          "action": {
+            "call": "clickToDeeplink",
+            "args": {
+              "abilityName": "com.huawei.hmos.clock.phone",
+              "bundleName": "com.huawei.hmos.clock",
+              "intentName": "Clock",
+              "uri": ""
+            }
+          }
+        }
+      ],
+      "bundleName": "com.huawei.genui",
+      "description": "日历与日程动态展示",
+      "userQuery": "做一张3D动态日历卡片，显示当前日期、星期和农历信息，同时展示最近的日程安排。",
+      "title": "3D动态日历",
+      "candidateDataBindings": [
+        {
+          "capabilityId": "GetCurrentTime",
+          "arguments": {},
+          "writeResultTo": "/data/time",
+          "candidateOutputFields": [
+            "/currentDate",
+            "/dayOfWeek",
+            "/lunarDate"
+          ]
+        },
+        {
+          "capabilityId": "GetCalendarEvents",
+          "arguments": {
+            "futureDays": 7
+          },
+          "writeResultTo": "/data/calendar",
+          "candidateOutputFields": [
+            "/events/0/title",
+            "/events/0/startDate",
+            "/events/0/dtStart",
+            "/events/0/countdownDays",
+            "/events/1/title",
+            "/events/1/startDate",
+            "/events/1/dtStart",
+            "/events/1/countdownDays"
+          ]
+        }
+      ]
+    },
+    "deviceInfo": {
+      "countryCode": "CN",
+      "deviceFormation": "HDSpeaker",
+      "deviceType": 0,
+      "locale": "zh-CN",
+      "phoneType": "CMS-AL20",
+      "prdVer": "11.7.8.342",
+      "sysVer": "EmotionUI_9.0.0",
+      "time": "20261102141037282"
+    },
+    "pagination": {
+      "limit": 5,
+      "start": ""
+    },
+    "session": {
+      "interactionId": "Q515-000",
+      "isNew": true,
+      "sessionId": "batch-13ea8cbd"
+    },
+    "userAuth": {
+      "user": {}
+    },
+    "utterance": {
+      "original": "",
+      "type": "text"
+    },
+    "version": "1.0",
+    "size": "2x4",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "candidateAssetIds": [
+      "asset.calendar_fill",
+      "asset.emoji_calendar2"
+    ],
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.viewCalendarEvent",
+        "action": {
+          "call": "clickToIntent",
+          "args": {
+            "intentName": "ViewCalendarEvent",
+            "params": {
+              "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+            }
+          }
+        }
+      },
+      {
+        "capabilityId": "event.open.clock.alarm",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "com.huawei.hmos.clock.phone",
+            "bundleName": "com.huawei.hmos.clock",
+            "intentName": "Clock",
+            "uri": ""
+          }
+        }
+      }
+    ],
+    "bundleName": "com.huawei.genui",
+    "description": "日历与日程动态展示",
+    "userQuery": "做一张3D动态日历卡片，显示当前日期、星期和农历信息，同时展示最近的日程安排。",
+    "title": "3D动态日历",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetCurrentTime",
+        "arguments": {},
+        "writeResultTo": "/data/time",
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate"
+        ]
+      },
+      {
+        "capabilityId": "GetCalendarEvents",
+        "arguments": {
+          "futureDays": 7
+        },
+        "writeResultTo": "/data/calendar",
+        "candidateOutputFields": [
+          "/events/0/title",
+          "/events/0/startDate",
+          "/events/0/dtStart",
+          "/events/0/countdownDays",
+          "/events/1/title",
+          "/events/1/startDate",
+          "/events/1/dtStart",
+          "/events/1/countdownDays"
+        ]
+      }
+    ]
+  },
+  "repair-1": {
+    "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/time/currentDate\"},\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/time/dayOfWeek\"},\"secondaryText\":{\"path\":\"/data/time/lunarDate\"},\"fontSize\":18}]\n[\"details\",\"EventCard\",{\"items\":[{\"title\":{\"path\":\"/data/calendar/events/0/title\"},\"time\":\"{{ ${/data/calendar/events/0/startDate} + ' ' + ${/data/calendar/events/0/dtStart} }}\"},{\"title\":{\"path\":\"/data/calendar/events/1/title\"},\"time\":\"{{ ${/data/calendar/events/1/startDate} + ' ' + ${/data/calendar/events/1/dtStart} }}\"}],\"density\":\"compact\"}]\n[\"/data/time/currentDate\",\"示例\"]\n[\"/data/time/dayOfWeek\",\"示例\"]\n[\"/data/time/lunarDate\",\"示例\"]\n[\"/data/calendar/events/0/title\",\"项目例会\"]\n[\"/data/calendar/events/0/startDate\",\"08-06\"]\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\n[\"/data/calendar/events/1/title\",\"项目例会\"]\n[\"/data/calendar/events/1/startDate\",\"08-06\"]\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]",
+    "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"title\",\"__layout__root__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\"}},{\"id\":\"title\",\"component\":\"Row\",\"children\":[\"title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"title_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/currentDate} }}\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"__layout__root__body\",\"component\":\"Column\",\"children\":[\"__layout__root__primary\",\"__layout__root__details\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__root__primary\",\"component\":\"Column\",\"children\":[\"primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"primary\",\"component\":\"Column\",\"children\":[\"primary_main\",\"primary_secondary\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"primary_main\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/dayOfWeek} }}\",\"styles\":{\"height\":18,\"fontSize\":18,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"primary_secondary\",\"component\":\"Text\",\"content\":\"{{ ${/data/time/lunarDate} }}\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"flexShrink\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"__layout__root__details\",\"component\":\"Column\",\"children\":[\"details\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1},\"itemMargin\":0},{\"id\":\"details\",\"component\":\"Column\",\"children\":[\"details_item0\",\"details_item1\"],\"itemMargin\":4,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"clip\":true,\"height\":68}},{\"id\":\"details_item0\",\"component\":\"Row\",\"children\":[\"details_item0_rail\",\"details_item0_texts\"],\"itemMargin\":7,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"top\",\"flexShrink\":0,\"clip\":true,\"height\":32}},{\"id\":\"details_item0_rail\",\"component\":\"Column\",\"children\":[\"details_item0_rail_dot\",\"details_item0_rail_line\"],\"itemMargin\":4,\"styles\":{\"width\":8,\"padding\":{\"top\":4,\"bottom\":0},\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0,\"height\":32,\"clip\":true}},{\"id\":\"details_item0_rail_dot\",\"component\":\"Divider\",\"styles\":{\"width\":8,\"height\":8,\"borderRadius\":4,\"borderWidth\":1.5,\"strokeWidth\":0,\"color\":\"@theme:transparent/1\",\"flexShrink\":0,\"borderColor\":\"@theme:primary/1\",\"backgroundColor\":\"@theme:transparent/1\"}},{\"id\":\"details_item0_rail_line\",\"component\":\"Divider\",\"styles\":{\"width\":1,\"strokeWidth\":1,\"vertical\":true,\"flexShrink\":0,\"height\":16,\"color\":\"@theme:primary/0.6\"}},{\"id\":\"details_item0_texts\",\"component\":\"Column\",\"children\":[\"details_item0_title\",\"details_item0_meta\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"height\":32}},{\"id\":\"details_item0_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/0/title} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0,\"minHeight\":16},\"height\":16,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"details_item0_time\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/0/startDate} + ' ' + ${/data/calendar/events/0/dtStart} }}\",\"styles\":{\"width\":\"matchParent\",\"height\":14,\"fontSize\":10,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0},\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"details_item0_meta\",\"component\":\"Row\",\"children\":[\"details_item0_time\"],\"itemMargin\":4,\"styles\":{\"width\":\"matchParent\",\"height\":14,\"alignItems\":\"center\",\"flexShrink\":0,\"clip\":true}},{\"id\":\"details_item1\",\"component\":\"Row\",\"children\":[\"details_item1_rail\",\"details_item1_texts\"],\"itemMargin\":7,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"top\",\"flexShrink\":0,\"clip\":true,\"height\":32}},{\"id\":\"details_item1_rail\",\"component\":\"Column\",\"children\":[\"details_item1_rail_dot\",\"details_item1_rail_line\"],\"itemMargin\":4,\"styles\":{\"width\":8,\"padding\":{\"top\":4,\"bottom\":0},\"alignItems\":\"center\",\"justifyContent\":\"start\",\"flexShrink\":0,\"height\":32,\"clip\":true}},{\"id\":\"details_item1_rail_dot\",\"component\":\"Divider\",\"styles\":{\"width\":8,\"height\":8,\"borderRadius\":4,\"borderWidth\":1.5,\"strokeWidth\":0,\"color\":\"@theme:transparent/1\",\"flexShrink\":0,\"borderColor\":\"@theme:primary/1\",\"backgroundColor\":\"@theme:transparent/1\"}},{\"id\":\"details_item1_rail_line\",\"component\":\"Divider\",\"styles\":{\"width\":1,\"strokeWidth\":1,\"vertical\":true,\"flexShrink\":0,\"height\":16,\"color\":\"@theme:primary/0.6\"}},{\"id\":\"details_item1_texts\",\"component\":\"Column\",\"children\":[\"details_item1_title\",\"details_item1_meta\"],\"itemMargin\":2,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"height\":32}},{\"id\":\"details_item1_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/1/title} }}\",\"styles\":{\"width\":\"matchParent\",\"fontSize\":12,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0,\"minHeight\":16},\"height\":16,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"details_item1_time\",\"component\":\"Text\",\"content\":\"{{ ${/data/calendar/events/1/startDate} + ' ' + ${/data/calendar/events/1/dtStart} }}\",\"styles\":{\"width\":\"matchParent\",\"height\":14,\"fontSize\":10,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0},\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"details_item1_meta\",\"component\":\"Row\",\"children\":[\"details_item1_time\"],\"itemMargin\":4,\"styles\":{\"width\":\"matchParent\",\"height\":14,\"alignItems\":\"center\",\"flexShrink\":0,\"clip\":true}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"time\":{\"currentDate\":\"示例\",\"dayOfWeek\":\"示例\",\"lunarDate\":\"示例\"},\"calendar\":{\"events\":[{\"title\":\"项目例会\",\"startDate\":\"08-06\",\"dtStart\":\"14:00\"},{\"title\":\"项目例会\",\"startDate\":\"08-06\",\"dtStart\":\"14:00\"}]}}}}}",
+    "validationErrors": []
+  }
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "Component rows must form one tree rooted at root. Unreachable component(s): left_battery. Attach each component to a reachable parent's children list.",
+    "stage": "validation"
+  }
+]

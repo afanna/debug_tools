@@ -1,0 +1,21 @@
+{
+  "id": "Q362",
+  "fileName": "Q362.json",
+  "title": "时间天气",
+  "query": "创建一张桌面卡片，显示当前时间、日期、星期，以及河间当前温度、天气现象、大风预警，并显示未来3天的天气预报。",
+  "size": "2x4",
+  "sequence": 36,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 10878.29,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 115,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 10866.27,
+  "uid": "batch-7664fcb9-00036-000",
+  "finalAttempt": 0
+}

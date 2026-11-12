@@ -1,0 +1,108 @@
+{
+  "apiVersion": "batch-postprocess-v2",
+  "scope": "sample",
+  "runId": "batch_20261106_160145_13ea8cbd",
+  "sample": {
+    "id": "Q492",
+    "fileName": "Q492.json",
+    "title": "锻炼打卡",
+    "query": "做一张锻炼打卡桌面卡片，展示备忘录中的待办打卡情况，显示已完成和未完成的锻炼打卡待办数量，点击可打开备忘录查看打卡记录。本轮卡片静态内容（用作展示的外部事实）：用户每天锻炼后打卡，通过备忘录待办记录锻炼打卡。",
+    "size": "2x2",
+    "sequence": 80,
+    "status": "success",
+    "attemptCount": 1,
+    "elapsedMs": 11249.29,
+    "errorCode": "",
+    "error": "",
+    "artifactAvailable": true,
+    "dslAvailable": true,
+    "traceStatus": "complete",
+    "traceRecordCount": 151,
+    "traceSchemaVersion": "generation-trace-v2",
+    "traceDurationMs": 11237.74,
+    "uid": "batch-13ea8cbd-00080-000",
+    "generationMetrics": {
+      "firstDsl": "failed",
+      "requestSize": "2x2",
+      "firstRequestStatus": "success",
+      "firstRequestDelivered": true,
+      "qualityRepairAttempts": 4,
+      "modelPhysicalCalls": 7,
+      "repairObservedAttempts": 1,
+      "modelObservedAttempts": 1,
+      "terminalAttempts": 1,
+      "missingInformationWarnings": 0,
+      "retryParameters": {
+        "interfaceRetryEnabled": [
+          true
+        ],
+        "interfaceExtraRetries": [
+          1
+        ],
+        "qualityRepairEnabled": [
+          true
+        ],
+        "qualityRepairMaxAttempts": [
+          5
+        ],
+        "singleStepGenerationFallbackEnabled": [
+          false
+        ],
+        "singleStepWidgetEditEnabled": [
+          true
+        ],
+        "dropPlanFactValidationEnabled": [
+          false
+        ],
+        "photoBackgroundThemeEnabled": [
+          false
+        ],
+        "subjectlessWideThemeEnabled": [
+          false
+        ],
+        "squareMusicPhotoExpansionEnabled": [
+          false
+        ],
+        "squarePhotoExpansionEnabled": [
+          false
+        ],
+        "deepseekOfficialHttpUseSdkEnabled": [
+          true
+        ],
+        "modelFailureRetryEnabled": [
+          true
+        ],
+        "modelFailureExtraRetries": [
+          1
+        ],
+        "fallbackModelFailureExtraRetries": [
+          1
+        ],
+        "fallbackEnabled": [
+          true
+        ],
+        "argumentRepairEnabled": [
+          false
+        ],
+        "argumentRepairMaxAttempts": [
+          2
+        ],
+        "argumentRepairReminderCount": [
+          1
+        ],
+        "interfaceMaxAttempts": [
+          2
+        ],
+        "planMaxAttempts": [
+          2
+        ]
+      }
+    }
+  },
+  "runDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd",
+  "sampleDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q492",
+  "finalAttemptDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q492\\attempt_000",
+  "outputDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\postprocess\\exec_0befad308fce\\plugins\\data-analysis\\samples\\Q492",
+  "config": {},
+  "upstreamResults": []
+}

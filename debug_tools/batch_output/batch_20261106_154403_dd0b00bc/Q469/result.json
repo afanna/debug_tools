@@ -1,0 +1,21 @@
+{
+  "id": "Q469",
+  "fileName": "Q469.json",
+  "title": "备忘录",
+  "query": "在手机主屏幕放一个可视化备忘录卡片，展示备忘录笔记和待办事项的汇总信息，包括笔记总数、最近笔记列表、待办总数及待办明细。",
+  "size": "2x4",
+  "sequence": 57,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 10189.29,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 105,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 10175.0,
+  "uid": "batch-dd0b00bc-00057-000",
+  "finalAttempt": 0
+}

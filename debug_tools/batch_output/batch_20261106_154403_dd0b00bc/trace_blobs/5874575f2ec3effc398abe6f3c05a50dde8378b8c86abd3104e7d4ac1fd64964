@@ -1,0 +1,87 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [
+    {
+      "description": "样式：默认黑色的单色实心书册图标，内部带列表与文字线条，原始尺寸为 24×24；适用：目录、清单、记录册、备忘录列表、日程列表与健康记录列表。",
+      "id": "asset.list_book_fill",
+      "src": "resources/base/media/list_book_fill.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "memo": {
+        "favoriteNoteCount": {
+          "description": "收藏笔记数。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "hasReminderToday": {
+          "description": "今日是否存在未完成的提醒待办。true代表今日有提醒，false代表今日无提醒。",
+          "sampleValue": false,
+          "type": "boolean"
+        },
+        "nextReminderTimeText": {
+          "description": "最近一次未过期未完成提醒的格式化时间，格式为 'HH:mm'，如 '14:30'；无提醒则显示 '--:--'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "noteCount": {
+          "description": "查询到的笔记总数量（已过滤已删除笔记）。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "notes": [
+          {
+            "title": {
+              "description": "笔记标题，若无标题则回退为'无标题'。",
+              "sampleValue": "示例",
+              "type": "string"
+            }
+          }
+        ],
+        "todoCompletedCount": {
+          "description": "已完成的待办记录数。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "todoPendingCount": {
+          "description": "未完成的待办记录数。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "todoTotalCount": {
+          "description": "查询到的待办总数量（已过滤已删除待办）。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "todos": [
+          {
+            "title": {
+              "description": "待办标题，若无标题则回退为'无标题'。",
+              "sampleValue": "示例",
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "abilityName": "MainAbility",
+        "bundleName": "com.huawei.hmos.notepad",
+        "intentName": "ViewNote",
+        "params": {
+          "launchSource": "1",
+          "launchType": "0"
+        }
+      },
+      "call": "clickToIntent",
+      "description": "打开华为备忘录应用。",
+      "id": "event.viewNote"
+    }
+  ],
+  "size": "2x2",
+  "userQuery": "在桌面上创建备忘录卡片，展示备忘录笔记和待办信息。"
+}

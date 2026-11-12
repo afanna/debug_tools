@@ -1,0 +1,48 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock",
+        "DataDisplay"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前天气温度（已含℃单位）"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前时间：星期"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前时间：日期"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-title-dual-content"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.emoji_calendar2"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "星期信息"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "农历日期"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/title",
+      "priority": "must",
+      "requirement": "日程1标题"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/dtStart",
+      "priority": "must",
+      "requirement": "日程1开始日期与时间"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/startDate",
+      "priority": "must",
+      "requirement": "日程1开始日期文本"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/1/title",
+      "priority": "must",
+      "requirement": "日程2标题"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/1/dtStart",
+      "priority": "must",
+      "requirement": "日程2开始日期与时间"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/1/startDate",
+      "priority": "must",
+      "requirement": "日程2开始日期文本"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom"
+  ]
+}

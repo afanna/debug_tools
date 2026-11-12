@@ -1,0 +1,7 @@
+["root","Column",{"width":"matchParent","height":"matchParent","padding":12,"borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","itemMargin":6},["__layout__root__body"]]
+["__layout__root__body","Column",{"width":"matchParent","itemMargin":8,"alignItems":"start","justifyContent":"start","layoutWeight":1},["__layout__root__primary","__layout__root__details"]]
+["__layout__root__primary","Column",{"width":"matchParent","alignItems":"start","justifyContent":"start","flexShrink":0},["primary"]]
+["primary","EmphasisText",{"mainText":"12:40","secondaryText":"{{ '11 月 02 日 | 星期一 | 农历九月廿四' }}","fontSize":18}]
+["__layout__root__details","Column",{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1},["details"]]
+["details","SummaryList",{"items":["11 月 02 日","星期一","农历九月廿四"]}]
+["/state/ready",true]

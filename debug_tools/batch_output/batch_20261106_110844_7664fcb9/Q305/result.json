@@ -1,0 +1,21 @@
+{
+  "id": "Q305",
+  "fileName": "Q305.json",
+  "title": "天气时间",
+  "query": "在桌面添加一个天气时间卡片，展示当前天气和当前时间",
+  "size": "2x2",
+  "sequence": 11,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7569.46,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 117,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7563.66,
+  "uid": "batch-7664fcb9-00011-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,136 @@
+{
+  "approvedOmittedFactIndexes": [
+    7
+  ],
+  "capacityFits": [
+    {
+      "actualItemCount": 4,
+      "actualRowCount": 4,
+      "componentId": "content_support",
+      "componentType": "SecondaryBody",
+      "directlyFits": [
+        {
+          "itemIndex": 0,
+          "planFacts": [
+            {
+              "factIndex": 1,
+              "priority": "must",
+              "requirement": "城市名称（杭州市）与区县名称（西湖区），用于标识当前天气地点"
+            },
+            {
+              "factIndex": 2,
+              "priority": "must",
+              "requirement": "区县名称，作为地点限定"
+            }
+          ],
+          "value": {
+            "label": "区县",
+            "value": {
+              "path": "/data/weather/location/districtName"
+            }
+          }
+        },
+        {
+          "itemIndex": 1,
+          "planFacts": [
+            {
+              "factIndex": 5,
+              "priority": "should",
+              "requirement": "当前空气质量等级"
+            }
+          ],
+          "value": {
+            "label": "空气质量",
+            "value": {
+              "path": "/data/weather/current/airQuality"
+            }
+          }
+        },
+        {
+          "itemIndex": 2,
+          "planFacts": [
+            {
+              "factIndex": 6,
+              "priority": "should",
+              "requirement": "当前体感温度"
+            }
+          ],
+          "value": {
+            "label": "体感",
+            "value": "{{ ${/data/weather/current/feelsLikeC} + '℃' }}"
+          }
+        }
+      ],
+      "doesNotFit": [
+        {
+          "itemIndex": 3,
+          "planFacts": [
+            {
+              "factIndex": 7,
+              "priority": "should",
+              "requirement": "当前相对湿度"
+            }
+          ],
+          "value": {
+            "label": "湿度",
+            "value": "{{ ${/data/weather/current/humidityPercent} + '%' }}"
+          }
+        }
+      ],
+      "effectiveColumnCount": 1,
+      "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+      "maxRetainedRowCount": 3,
+      "overflowFactCount": 1,
+      "overflowItemCount": 1,
+      "parentAvailableHeight": 126.0,
+      "parentId": "content",
+      "rowHeights": [
+        12.0,
+        12.0,
+        12.0,
+        12.0
+      ],
+      "rowSpacing": 2.0,
+      "scope": "currentComponentItemsOnly"
+    }
+  ],
+  "category": "layout_structure",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fallbackAttempt": 0,
+  "fallbackAttemptLimit": 4,
+  "fallbackRemainingAttempts": 4,
+  "fallbackStage": "drop_optional_component",
+  "fingerprint": "9d0513d1092e3f11",
+  "instruction": "固定容量组件的超限内容在一次无损重组后仍未获得合法落点；不再等待固定第四轮，提前进入程序授权的最小 Drop。已进入条目级最小删减兜底。仅允许从 optionalDrop.componentId 指定的 SecondaryBody.items 删除 allowedItemIndexes=(1,) 对应且仍承载 allowedOmittedFactIndexes 的 doesNotFit 条目；保留该组件的其余 items、顺序、绑定、字号和父级引用。仅当删除后 items 为空时才删除组件行及其直接父级引用。不得删除其它组件、未授权事实或任何 Action；整卡必须继续保留至少一个核心信息组件。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_capacity",
+      "layout_structure"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "243ef72414417714"
+  },
+  "noProgress": false,
+  "optionalDrop": {
+    "allowedItemIndexes": [
+      1
+    ],
+    "allowedOmittedFactIndexes": [
+      7
+    ],
+    "componentId": "right_body",
+    "componentType": "SecondaryBody",
+    "containsMustFacts": false,
+    "displayTexts": [],
+    "partial": true,
+    "requirements": [
+      "当前相对湿度"
+    ]
+  },
+  "repairStrategy": "drop_optional_component",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

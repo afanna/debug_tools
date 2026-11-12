@@ -1,0 +1,49 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.emoji_bluetooth_earbuds_black"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/earphone/earphoneName",
+      "priority": "must",
+      "requirement": "耳机名称"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/earphone/batteryLevel",
+      "priority": "must",
+      "requirement": "耳机盒电量百分比"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/earphone/leftBatteryLevel",
+      "priority": "must",
+      "requirement": "左耳电量百分比"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/earphone/rightBatteryLevel",
+      "priority": "must",
+      "requirement": "右耳电量百分比"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content",
+    "S-dual-info"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "attempt": 0,
+  "uid": "batch-baaba440-00009-000",
+  "status": "success",
+  "errorCode": "",
+  "error": "",
+  "elapsedMs": 1054.39,
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "blockNames": [
+    "cardspec",
+    "designcompactdsl",
+    "effectivecapabilities",
+    "generationplan",
+    "genui",
+    "meta",
+    "removedcapabilities",
+    "request",
+    "schema",
+    "taskspec"
+  ],
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "completed": true
+}

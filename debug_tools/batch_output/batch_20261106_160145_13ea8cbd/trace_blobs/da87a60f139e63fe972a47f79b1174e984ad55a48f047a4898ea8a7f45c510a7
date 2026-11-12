@@ -1,0 +1,29 @@
+{
+  "artifactDigest": "",
+  "artifactUrl": "",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.emoji_time"
+    ],
+    "data": [
+      "GetCurrentTime"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "uri": ""
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为时钟应用首页。",
+        "id": "event.open.clock.alarm"
+      }
+    ]
+  },
+  "errorCode": "A2UI_GENERATION_FAILED",
+  "removedCapabilities": [],
+  "status": "failed",
+  "suggestSize": "2x4"
+}

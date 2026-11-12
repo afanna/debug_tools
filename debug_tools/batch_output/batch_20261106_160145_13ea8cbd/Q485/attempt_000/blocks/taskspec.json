@@ -1,0 +1,60 @@
+{
+  "userQuery": "生成一个我的备忘录卡片，显示备忘录笔记的标题和正文内容",
+  "size": "2x2",
+  "appVersion": "11.7.9.300",
+  "eventCandidates": [
+    {
+      "id": "event.viewNote",
+      "description": "打开华为备忘录应用。",
+      "call": "clickToIntent",
+      "args": {
+        "abilityName": "MainAbility",
+        "bundleName": "com.huawei.hmos.notepad",
+        "intentName": "ViewNote",
+        "params": {
+          "launchSource": "1",
+          "launchType": "0"
+        }
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "memo": {
+        "notes": [
+          {
+            "title": {
+              "type": "string",
+              "description": "笔记标题，若无标题则回退为'无标题'。",
+              "sampleValue": "示例"
+            },
+            "content": {
+              "type": "string",
+              "description": "笔记正文（可截断），若无正文则为空字符串。",
+              "sampleValue": "示例"
+            }
+          },
+          {
+            "title": {
+              "type": "string",
+              "description": "笔记标题，若无标题则回退为'无标题'。",
+              "sampleValue": "示例"
+            },
+            "content": {
+              "type": "string",
+              "description": "笔记正文（可截断），若无正文则为空字符串。",
+              "sampleValue": "示例"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.bell_fill",
+      "src": "resources/base/media/bell_fill.svg",
+      "description": "样式：默认黑色的单色实心铃铛图标，采用经典吊铃造型，底部带铃舌，原始尺寸为 24×24；适用：通知提醒、消息提示、备忘录提醒、闹钟响铃或开启状态，以及日历事项提醒。"
+    }
+  ]
+}

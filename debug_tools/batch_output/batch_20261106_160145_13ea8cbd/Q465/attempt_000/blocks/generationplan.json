@@ -1,0 +1,50 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "forecastDays": 3
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": [
+        "/location/districtName",
+        "/location/prefectureName",
+        "/current/temperatureC",
+        "/current/temperatureText",
+        "/current/condition",
+        "/current/feelsLikeC",
+        "/current/humidityPercent",
+        "/current/airQuality",
+        "/current/windDirection",
+        "/current/windLevel",
+        "/current/uvIndex",
+        "/current/coldLevel",
+        "/current/alertLevel",
+        "/daily/0/date",
+        "/daily/0/weekday",
+        "/daily/0/condition",
+        "/daily/0/temperatureRangeText",
+        "/daily/0/rainProbabilityPercent",
+        "/daily/0/airQuality",
+        "/daily/0/uvIndex",
+        "/daily/0/coldLevel",
+        "/updatedAt"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.weather",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": []
+}

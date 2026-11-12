@@ -1,0 +1,21 @@
+{
+  "id": "Q450",
+  "fileName": "Q450.json",
+  "title": "时钟",
+  "query": "创建一张横版2x4尺寸的桌面时钟卡片，重点突出显示当前时间，同时展示日期、星期和农历信息。",
+  "size": "2x4",
+  "sequence": 38,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5700.13,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 85,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5690.7,
+  "uid": "batch-dd0b00bc-00038-000",
+  "finalAttempt": 0
+}

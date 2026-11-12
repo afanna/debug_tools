@@ -1,0 +1,49 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "宝山区",
+        "forecastDays": 3,
+        "prefectureName": "上海市"
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": [
+        "/location/districtName",
+        "/location/prefectureName",
+        "/current/temperatureText",
+        "/current/condition",
+        "/current/humidityPercent",
+        "/current/windDirection",
+        "/current/windLevel",
+        "/daily/0/weekday",
+        "/daily/0/condition",
+        "/daily/0/temperatureRangeText",
+        "/daily/1/weekday",
+        "/daily/1/condition",
+        "/daily/1/temperatureRangeText",
+        "/daily/2/weekday",
+        "/daily/2/condition",
+        "/daily/2/temperatureRangeText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.weather",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.ic_weather_monochrome",
+    "asset.emoji_default_weather_blue"
+  ]
+}

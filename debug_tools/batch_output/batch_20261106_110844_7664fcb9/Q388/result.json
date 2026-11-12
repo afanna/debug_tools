@@ -1,0 +1,21 @@
+{
+  "id": "Q388",
+  "fileName": "Q388.json",
+  "title": "今日天气",
+  "query": "做一张杭州今日天气卡片，显示当前温度和天气现象。",
+  "size": "2x2",
+  "sequence": 50,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3289.27,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3281.34,
+  "uid": "batch-7664fcb9-00050-000",
+  "finalAttempt": 0
+}

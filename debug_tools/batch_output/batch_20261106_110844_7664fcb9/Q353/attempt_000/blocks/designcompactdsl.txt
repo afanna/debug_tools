@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"S-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"取件提醒"}]
+["body","EmphasisText",{"mainText":"取件码 34-4-2009","secondaryText":"新天地华庭3座2单元妈妈驿站；明天下午6:10提醒拿快递"}]
+["/state/ready",true]

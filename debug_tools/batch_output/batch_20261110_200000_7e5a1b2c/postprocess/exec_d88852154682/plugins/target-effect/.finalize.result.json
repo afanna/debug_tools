@@ -1,0 +1,6427 @@
+{
+  "status": "success",
+  "summary": "目标效果评测完成：6 个样本，通过 0，待复核 0，失败 6",
+  "sampleResults": [
+    {
+      "sampleId": "Q001",
+      "status": "failed",
+      "summary": "可见性失败 · 79.6 分",
+      "facts": {
+        "verdict": "可见性失败",
+        "scenario": "once",
+        "gate": true,
+        "score": 79.6,
+        "scoreTarget": 40.0,
+        "scoreVisibility": 17.9,
+        "scoreSpec": 11.7,
+        "scoreAsset": 10.0,
+        "passed": 21,
+        "failed": 10,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "score",
+          "data": [
+            {
+              "label": "总分",
+              "value": "79.6 · 良好"
+            },
+            {
+              "label": "目标语义",
+              "value": "40.0 / 40.0"
+            },
+            {
+              "label": "可见性",
+              "value": "17.9 / 25.0"
+            },
+            {
+              "label": "规范符合",
+              "value": "11.7 / 25.0"
+            },
+            {
+              "label": "素材渲染",
+              "value": "10.0 / 10.0"
+            }
+          ]
+        },
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "可见性失败"
+            },
+            {
+              "label": "场景",
+              "value": "once"
+            },
+            {
+              "label": "期望天数",
+              "value": 46
+            },
+            {
+              "label": "门禁",
+              "value": "参与"
+            },
+            {
+              "label": "失败 / 待复核",
+              "value": "10 / 0"
+            }
+          ]
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "12.0",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=None",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR",
+              "说明": "标题白色",
+              "状态": "失败",
+              "预期": "白色 100%",
+              "实际": "alpha=0.8",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "状态": "失败",
+              "预期": "56 或 38",
+              "实际": "30.0",
+              "证据": {
+                "component": "primary_value",
+                "expectedDays": 46,
+                "digits": 2
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "primary_unit"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "VIS.TEXT_CLIPPED",
+              "说明": "文字未被裁切",
+              "状态": "失败",
+              "预期": "对应可见性规则通过",
+              "实际": "Web 渲染中文字被裁剪或省略",
+              "证据": {
+                "findings": [
+                  {
+                    "components": [
+                      "primary_value:18"
+                    ],
+                    "source": "GEOMETRY.CLIP_TEXT",
+                    "text": "46",
+                    "box": {
+                      "x": 12,
+                      "y": 38,
+                      "width": 36.0625,
+                      "height": 30
+                    },
+                    "component": "primary_value"
+                  }
+                ],
+                "count": 1
+              }
+            },
+            {
+              "规则": "VIS.CONTRAST_LOW",
+              "说明": "文字对比度",
+              "状态": "失败",
+              "预期": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+              "实际": "5 个文本节点对比度偏低",
+              "证据": {
+                "nodes": [
+                  {
+                    "id": "title_title",
+                    "ratio": 2.32,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "primary_value",
+                    "ratio": 1.55,
+                    "threshold": 3.0,
+                    "status": "fail",
+                    "variance": 0.4
+                  },
+                  {
+                    "id": "primary_unit",
+                    "ratio": 1.79,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "support_item0_label",
+                    "ratio": 1.5,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "support_item0_value",
+                    "ratio": 1.56,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q001",
+            "scenario": "once",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": "2026-12-19",
+            "expectedDays": 46,
+            "expectedRelationText": "还剩",
+            "expectedTargetDateText": "2026/12/19",
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2026-12-19"
+            },
+            "gate": true,
+            "provenance": {
+              "targetDate": "explicit",
+              "days": "derived",
+              "relationText": "derived",
+              "targetDateText": "derived"
+            },
+            "notes": []
+          }
+        },
+        {
+          "key": "evidence",
+          "data": {
+            "oracle": {
+              "sampleId": "Q001",
+              "scenario": "once",
+              "timezone": "Asia/Shanghai",
+              "referenceDate": "2026-11-03",
+              "targetDate": "2026-12-19",
+              "expectedDays": 46,
+              "expectedRelationText": "还剩",
+              "expectedTargetDateText": "2026/12/19",
+              "writeResultTo": "/data/dateCounter",
+              "fields": [
+                "/days",
+                "/relationText",
+                "/targetDateText"
+              ],
+              "arguments": {
+                "targetDate": "2026-12-19"
+              },
+              "gate": true,
+              "provenance": {
+                "targetDate": "explicit",
+                "days": "derived",
+                "relationText": "derived",
+                "targetDateText": "derived"
+              },
+              "notes": []
+            },
+            "results": [
+              {
+                "rule": "SPEC.RADIUS",
+                "status": "pass",
+                "expected": "20",
+                "actual": "20",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PADDING",
+                "status": "pass",
+                "expected": "12",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.BG_FULL_BLEED",
+                "status": "pass",
+                "expected": "铺满的背景图",
+                "actual": "__post_theme_base",
+                "severity": "major",
+                "evidence": {
+                  "images": [
+                    "__post_theme_base"
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.MASK",
+                "status": "fail",
+                "expected": "黑色蒙层 60%",
+                "actual": "最接近的黑色层 无 alpha=0.00",
+                "severity": "major",
+                "evidence": {
+                  "component": "",
+                  "alpha": 0.0
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_REQUIRED",
+                "status": "pass",
+                "expected": "存在标题区",
+                "actual": "title_title",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.TITLE_FONT",
+                "status": "fail",
+                "expected": "16 或 20",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_ELLIPSIS",
+                "status": "fail",
+                "expected": "maxLines=1 且 textOverflow=ellipsis",
+                "actual": "maxLines=1, textOverflow=None",
+                "severity": "major",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_COLOR",
+                "status": "fail",
+                "expected": "白色 100%",
+                "actual": "alpha=0.8",
+                "severity": "minor",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.PRIMARY_FONT",
+                "status": "fail",
+                "expected": "56 或 38",
+                "actual": "30.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_value",
+                  "expectedDays": 46,
+                  "digits": 2
+                }
+              },
+              {
+                "rule": "SPEC.UNIT_FONT",
+                "status": "fail",
+                "expected": "16",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_unit"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_FONT",
+                "status": "fail",
+                "expected": "16",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "support_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_COLOR",
+                "status": "fail",
+                "expected": "白色 60%",
+                "actual": "alpha=1.0",
+                "severity": "minor",
+                "evidence": {
+                  "component": "support_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.CONTENT_TYPE",
+                "status": "pass",
+                "expected": "C1–C5 之一",
+                "actual": "C3 小数字",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PATTERN_GEOMETRY",
+                "status": "na",
+                "expected": "图案几何",
+                "actual": "非图案类",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.DIGIT_LIMIT",
+                "status": "pass",
+                "expected": "最多 6 位",
+                "actual": "2 位",
+                "severity": "major",
+                "evidence": {
+                  "expectedDays": 46,
+                  "hasPrimary": true
+                }
+              },
+              {
+                "rule": "TARGET.DAYS_MISMATCH",
+                "status": "pass",
+                "expected": "可见文本包含「46」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/days",
+                  "components": [
+                    "primary_value"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.RELATION_TEXT_MISMATCH",
+                "status": "pass",
+                "expected": "可见文本包含「还剩」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/relationText",
+                  "components": [
+                    "title_title"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.VISIBLE_EXPECTATION_MISSING",
+                "status": "pass",
+                "expected": "可见文本包含「2026/12/19」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/targetDateText",
+                  "components": [
+                    "support_item0_value"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.BINDING_MISSING",
+                "status": "pass",
+                "expected": "全部期望字段被组件引用",
+                "actual": "3 个字段均已引用，3 个文本已匹配",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.BINDING_VALUE_MISMATCH",
+                "status": "pass",
+                "expected": "注入后期望字段被重新渲染",
+                "actual": "3 个字段注入后文本与期望一致",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.PLACEHOLDER_VISIBLE",
+                "status": "pass",
+                "expected": "不显示占位文案",
+                "actual": "未发现占位文案",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_CLIPPED",
+                "status": "fail",
+                "expected": "对应可见性规则通过",
+                "actual": "Web 渲染中文字被裁剪或省略",
+                "severity": "major",
+                "evidence": {
+                  "findings": [
+                    {
+                      "components": [
+                        "primary_value:18"
+                      ],
+                      "source": "GEOMETRY.CLIP_TEXT",
+                      "text": "46",
+                      "box": {
+                        "x": 12,
+                        "y": 38,
+                        "width": 36.0625,
+                        "height": 30
+                      },
+                      "component": "primary_value"
+                    }
+                  ],
+                  "count": 1
+                }
+              },
+              {
+                "rule": "VIS.TEXT_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_OVERLAP",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_LOAD_FAILED",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.FONT_TOO_SMALL",
+                "status": "pass",
+                "expected": "正文字号 ≥ 12",
+                "actual": "全部文本达到下限",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.CONTRAST_LOW",
+                "status": "fail",
+                "expected": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+                "actual": "5 个文本节点对比度偏低",
+                "severity": "major",
+                "evidence": {
+                  "nodes": [
+                    {
+                      "id": "title_title",
+                      "ratio": 2.32,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "primary_value",
+                      "ratio": 1.55,
+                      "threshold": 3.0,
+                      "status": "fail",
+                      "variance": 0.4
+                    },
+                    {
+                      "id": "primary_unit",
+                      "ratio": 1.79,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "support_item0_label",
+                      "ratio": 1.5,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "support_item0_value",
+                      "ratio": 1.56,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    }
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.SAFE_AREA",
+                "status": "pass",
+                "expected": "全部文本在 inset(12) 内",
+                "actual": "全部在安全区",
+                "severity": "major",
+                "evidence": {
+                  "outside": [],
+                  "surface": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 150,
+                    "height": 150
+                  }
+                }
+              },
+              {
+                "rule": "ASSET.FILE_MISSING",
+                "status": "pass",
+                "expected": "本地素材文件存在",
+                "actual": "1 个本地素材均已找到",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "ASSET.RENDERED",
+                "status": "pass",
+                "expected": "本地素材已加载并输出可见像素",
+                "actual": "1 个本地素材均已渲染",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.SCENARIO_RULE_VIOLATION",
+                "status": "pass",
+                "expected": "关系文案「还剩」",
+                "actual": "与日期差一致",
+                "severity": "major",
+                "evidence": {}
+              }
+            ],
+            "metrics": {
+              "primary": {
+                "id": "primary_value",
+                "fontSize": 30.0,
+                "text": "46",
+                "areaRatio": 0.0481
+              },
+              "fontSizes": [
+                12.0,
+                30.0
+              ],
+              "icons": [
+                {
+                  "id": "root",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_background",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_base",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__genui_render_component__root",
+                  "src": "/resources/base/media/stopwatch_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title",
+                  "src": "/resources/base/media/stopwatch_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title_icon",
+                  "src": "/resources/base/media/stopwatch_fill.svg",
+                  "naturalWidth": 24
+                }
+              ],
+              "leafTextCount": 5
+            },
+            "counts": {
+              "passed": 21,
+              "failed": 10,
+              "pending": 0,
+              "na": 1
+            },
+            "score": {
+              "total": 79.6,
+              "band": "良好",
+              "dimensions": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 11.7,
+                  "ratio": 46.7,
+                  "checks": 15,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ],
+              "fatal": false,
+              "note": "",
+              "targetGated": true,
+              "availableWeight": 100.0,
+              "capped": false
+            }
+          }
+        },
+        {
+          "key": "original-image",
+          "path": "original.png",
+          "alt": "Q001 原始数据模型渲染"
+        },
+        {
+          "key": "injected-image",
+          "path": "injected.png",
+          "alt": "Q001 注入期望值后的渲染"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q031",
+      "status": "failed",
+      "summary": "可见性失败 · 79.6 分",
+      "facts": {
+        "verdict": "可见性失败",
+        "scenario": "repeat_week",
+        "gate": false,
+        "score": 79.6,
+        "scoreTarget": 40.0,
+        "scoreVisibility": 17.9,
+        "scoreSpec": 11.7,
+        "scoreAsset": 10.0,
+        "passed": 20,
+        "failed": 10,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "score",
+          "data": [
+            {
+              "label": "总分",
+              "value": "79.6 · 良好"
+            },
+            {
+              "label": "目标语义",
+              "value": "40.0 / 40.0"
+            },
+            {
+              "label": "可见性",
+              "value": "17.9 / 25.0"
+            },
+            {
+              "label": "规范符合",
+              "value": "11.7 / 25.0"
+            },
+            {
+              "label": "素材渲染",
+              "value": "10.0 / 10.0"
+            }
+          ]
+        },
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "可见性失败"
+            },
+            {
+              "label": "场景",
+              "value": "repeat_week"
+            },
+            {
+              "label": "期望天数",
+              "value": 1
+            },
+            {
+              "label": "门禁",
+              "value": "仅展示"
+            },
+            {
+              "label": "失败 / 待复核",
+              "value": "10 / 0"
+            }
+          ]
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "12.0",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=None",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR",
+              "说明": "标题白色",
+              "状态": "失败",
+              "预期": "白色 100%",
+              "实际": "alpha=0.8",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "状态": "失败",
+              "预期": "56 或 38",
+              "实际": "30.0",
+              "证据": {
+                "component": "primary_value",
+                "expectedDays": 1,
+                "digits": 1
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "primary_unit"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "14.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "VIS.TEXT_CLIPPED",
+              "说明": "文字未被裁切",
+              "状态": "失败",
+              "预期": "对应可见性规则通过",
+              "实际": "3 处：Web 渲染中文字被裁剪或省略",
+              "证据": {
+                "findings": [
+                  {
+                    "components": [
+                      "primary_value:18"
+                    ],
+                    "source": "GEOMETRY.CLIP_TEXT",
+                    "text": "1",
+                    "box": {
+                      "x": 12,
+                      "y": 38,
+                      "width": 18.03125,
+                      "height": 30
+                    },
+                    "component": "primary_value"
+                  },
+                  {
+                    "components": [
+                      "support_item0_label:24"
+                    ],
+                    "source": "GEOMETRY.CLIP_TEXT",
+                    "text": "日期",
+                    "box": {
+                      "x": 12,
+                      "y": 124,
+                      "width": 28,
+                      "height": 14
+                    },
+                    "component": "support_item0_label"
+                  },
+                  {
+                    "components": [
+                      "support_item0_value:25"
+                    ],
+                    "source": "GEOMETRY.CLIP_TEXT",
+                    "text": "2026/11/04",
+                    "box": {
+                      "x": 44,
+                      "y": 124,
+                      "width": 94,
+                      "height": 14
+                    },
+                    "component": "support_item0_value"
+                  }
+                ],
+                "count": 3
+              }
+            },
+            {
+              "规则": "VIS.CONTRAST_LOW",
+              "说明": "文字对比度",
+              "状态": "失败",
+              "预期": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+              "实际": "5 个文本节点对比度偏低",
+              "证据": {
+                "nodes": [
+                  {
+                    "id": "title_title",
+                    "ratio": 1.82,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "primary_value",
+                    "ratio": 2.68,
+                    "threshold": 3.0,
+                    "status": "fail",
+                    "variance": 0.3
+                  },
+                  {
+                    "id": "primary_unit",
+                    "ratio": 1.9,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "support_item0_label",
+                    "ratio": 1.49,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "support_item0_value",
+                    "ratio": 1.6,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q031",
+            "scenario": "repeat_week",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": "2026-11-04",
+            "expectedDays": 1,
+            "expectedRelationText": "还剩",
+            "expectedTargetDateText": "2026/11/04",
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2026-11-04",
+              "repeat": {
+                "unit": "week"
+              }
+            },
+            "gate": false,
+            "provenance": {
+              "targetDate": "explicit",
+              "days": "ambiguous",
+              "relationText": "ambiguous",
+              "targetDateText": "ambiguous"
+            },
+            "notes": [
+              "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+            ]
+          }
+        },
+        {
+          "key": "evidence",
+          "data": {
+            "oracle": {
+              "sampleId": "Q031",
+              "scenario": "repeat_week",
+              "timezone": "Asia/Shanghai",
+              "referenceDate": "2026-11-03",
+              "targetDate": "2026-11-04",
+              "expectedDays": 1,
+              "expectedRelationText": "还剩",
+              "expectedTargetDateText": "2026/11/04",
+              "writeResultTo": "/data/dateCounter",
+              "fields": [
+                "/days",
+                "/relationText",
+                "/targetDateText"
+              ],
+              "arguments": {
+                "targetDate": "2026-11-04",
+                "repeat": {
+                  "unit": "week"
+                }
+              },
+              "gate": false,
+              "provenance": {
+                "targetDate": "explicit",
+                "days": "ambiguous",
+                "relationText": "ambiguous",
+                "targetDateText": "ambiguous"
+              },
+              "notes": [
+                "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+              ]
+            },
+            "results": [
+              {
+                "rule": "SPEC.RADIUS",
+                "status": "pass",
+                "expected": "20",
+                "actual": "20",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PADDING",
+                "status": "pass",
+                "expected": "12",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.BG_FULL_BLEED",
+                "status": "pass",
+                "expected": "铺满的背景图",
+                "actual": "__post_theme_base",
+                "severity": "major",
+                "evidence": {
+                  "images": [
+                    "__post_theme_base"
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.MASK",
+                "status": "fail",
+                "expected": "黑色蒙层 60%",
+                "actual": "最接近的黑色层 无 alpha=0.00",
+                "severity": "major",
+                "evidence": {
+                  "component": "",
+                  "alpha": 0.0
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_REQUIRED",
+                "status": "pass",
+                "expected": "存在标题区",
+                "actual": "title_title",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.TITLE_FONT",
+                "status": "fail",
+                "expected": "16 或 20",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_ELLIPSIS",
+                "status": "fail",
+                "expected": "maxLines=1 且 textOverflow=ellipsis",
+                "actual": "maxLines=1, textOverflow=None",
+                "severity": "major",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_COLOR",
+                "status": "fail",
+                "expected": "白色 100%",
+                "actual": "alpha=0.8",
+                "severity": "minor",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.PRIMARY_FONT",
+                "status": "fail",
+                "expected": "56 或 38",
+                "actual": "30.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_value",
+                  "expectedDays": 1,
+                  "digits": 1
+                }
+              },
+              {
+                "rule": "SPEC.UNIT_FONT",
+                "status": "fail",
+                "expected": "16",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_unit"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_FONT",
+                "status": "fail",
+                "expected": "16",
+                "actual": "14.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "support_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_COLOR",
+                "status": "fail",
+                "expected": "白色 60%",
+                "actual": "alpha=1.0",
+                "severity": "minor",
+                "evidence": {
+                  "component": "support_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.CONTENT_TYPE",
+                "status": "pass",
+                "expected": "C1–C5 之一",
+                "actual": "C3 小数字",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PATTERN_GEOMETRY",
+                "status": "na",
+                "expected": "图案几何",
+                "actual": "非图案类",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.DIGIT_LIMIT",
+                "status": "pass",
+                "expected": "最多 6 位",
+                "actual": "1 位",
+                "severity": "major",
+                "evidence": {
+                  "expectedDays": 1,
+                  "hasPrimary": true
+                }
+              },
+              {
+                "rule": "TARGET.DAYS_MISMATCH",
+                "status": "pass",
+                "expected": "可见文本包含「1」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/days",
+                  "components": [
+                    "primary_value"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.RELATION_TEXT_MISMATCH",
+                "status": "pass",
+                "expected": "可见文本包含「还剩」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/relationText",
+                  "components": [
+                    "title_title"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.VISIBLE_EXPECTATION_MISSING",
+                "status": "pass",
+                "expected": "可见文本包含「2026/11/04」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/targetDateText",
+                  "components": [
+                    "support_item0_value"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.BINDING_MISSING",
+                "status": "pass",
+                "expected": "全部期望字段被组件引用",
+                "actual": "3 个字段均已引用，3 个文本已匹配",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.BINDING_VALUE_MISMATCH",
+                "status": "pass",
+                "expected": "注入后期望字段被重新渲染",
+                "actual": "3 个字段注入后文本与期望一致",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.PLACEHOLDER_VISIBLE",
+                "status": "pass",
+                "expected": "不显示占位文案",
+                "actual": "未发现占位文案",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_CLIPPED",
+                "status": "fail",
+                "expected": "对应可见性规则通过",
+                "actual": "3 处：Web 渲染中文字被裁剪或省略",
+                "severity": "major",
+                "evidence": {
+                  "findings": [
+                    {
+                      "components": [
+                        "primary_value:18"
+                      ],
+                      "source": "GEOMETRY.CLIP_TEXT",
+                      "text": "1",
+                      "box": {
+                        "x": 12,
+                        "y": 38,
+                        "width": 18.03125,
+                        "height": 30
+                      },
+                      "component": "primary_value"
+                    },
+                    {
+                      "components": [
+                        "support_item0_label:24"
+                      ],
+                      "source": "GEOMETRY.CLIP_TEXT",
+                      "text": "日期",
+                      "box": {
+                        "x": 12,
+                        "y": 124,
+                        "width": 28,
+                        "height": 14
+                      },
+                      "component": "support_item0_label"
+                    },
+                    {
+                      "components": [
+                        "support_item0_value:25"
+                      ],
+                      "source": "GEOMETRY.CLIP_TEXT",
+                      "text": "2026/11/04",
+                      "box": {
+                        "x": 44,
+                        "y": 124,
+                        "width": 94,
+                        "height": 14
+                      },
+                      "component": "support_item0_value"
+                    }
+                  ],
+                  "count": 3
+                }
+              },
+              {
+                "rule": "VIS.TEXT_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_OVERLAP",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_LOAD_FAILED",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.FONT_TOO_SMALL",
+                "status": "pass",
+                "expected": "正文字号 ≥ 12",
+                "actual": "全部文本达到下限",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.CONTRAST_LOW",
+                "status": "fail",
+                "expected": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+                "actual": "5 个文本节点对比度偏低",
+                "severity": "major",
+                "evidence": {
+                  "nodes": [
+                    {
+                      "id": "title_title",
+                      "ratio": 1.82,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "primary_value",
+                      "ratio": 2.68,
+                      "threshold": 3.0,
+                      "status": "fail",
+                      "variance": 0.3
+                    },
+                    {
+                      "id": "primary_unit",
+                      "ratio": 1.9,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "support_item0_label",
+                      "ratio": 1.49,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "support_item0_value",
+                      "ratio": 1.6,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    }
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.SAFE_AREA",
+                "status": "pass",
+                "expected": "全部文本在 inset(12) 内",
+                "actual": "全部在安全区",
+                "severity": "major",
+                "evidence": {
+                  "outside": [],
+                  "surface": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 150,
+                    "height": 150
+                  }
+                }
+              },
+              {
+                "rule": "ASSET.FILE_MISSING",
+                "status": "pass",
+                "expected": "本地素材文件存在",
+                "actual": "1 个本地素材均已找到",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "ASSET.RENDERED",
+                "status": "pass",
+                "expected": "本地素材已加载并输出可见像素",
+                "actual": "1 个本地素材均已渲染",
+                "severity": "major",
+                "evidence": {}
+              }
+            ],
+            "metrics": {
+              "primary": {
+                "id": "primary_value",
+                "fontSize": 30.0,
+                "text": "1",
+                "areaRatio": 0.024
+              },
+              "fontSizes": [
+                12.0,
+                14.0,
+                30.0
+              ],
+              "icons": [
+                {
+                  "id": "root",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/7016f2bb9242499a99b3439c2fb2ed26/fe04c25a2ecd41ea94617315efd39925.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_background",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/7016f2bb9242499a99b3439c2fb2ed26/fe04c25a2ecd41ea94617315efd39925.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_base",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/7016f2bb9242499a99b3439c2fb2ed26/fe04c25a2ecd41ea94617315efd39925.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__genui_render_component__root",
+                  "src": "/resources/base/media/calendar_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title",
+                  "src": "/resources/base/media/calendar_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title_icon",
+                  "src": "/resources/base/media/calendar_fill.svg",
+                  "naturalWidth": 24
+                }
+              ],
+              "leafTextCount": 5
+            },
+            "counts": {
+              "passed": 20,
+              "failed": 10,
+              "pending": 0,
+              "na": 1
+            },
+            "score": {
+              "total": 79.6,
+              "band": "良好",
+              "dimensions": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 11.7,
+                  "ratio": 46.7,
+                  "checks": 15,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ],
+              "fatal": false,
+              "note": "",
+              "targetGated": false,
+              "availableWeight": 100.0,
+              "capped": false
+            }
+          }
+        },
+        {
+          "key": "original-image",
+          "path": "original.png",
+          "alt": "Q031 原始数据模型渲染"
+        },
+        {
+          "key": "injected-image",
+          "path": "injected.png",
+          "alt": "Q031 注入期望值后的渲染"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q061",
+      "status": "failed",
+      "summary": "可见性失败 · 67.3 分",
+      "facts": {
+        "verdict": "可见性失败",
+        "scenario": "lunar_once",
+        "gate": false,
+        "score": 67.3,
+        "scoreTarget": null,
+        "scoreVisibility": 17.9,
+        "scoreSpec": 12.5,
+        "scoreAsset": 10.0,
+        "passed": 15,
+        "failed": 9,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "score",
+          "data": [
+            {
+              "label": "总分",
+              "value": "67.3 · 及格"
+            },
+            {
+              "label": "目标语义",
+              "value": "—"
+            },
+            {
+              "label": "可见性",
+              "value": "17.9 / 25.0"
+            },
+            {
+              "label": "规范符合",
+              "value": "12.5 / 25.0"
+            },
+            {
+              "label": "素材渲染",
+              "value": "10.0 / 10.0"
+            }
+          ]
+        },
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "可见性失败"
+            },
+            {
+              "label": "场景",
+              "value": "lunar_once"
+            },
+            {
+              "label": "期望天数",
+              "value": "—"
+            },
+            {
+              "label": "门禁",
+              "value": "仅展示"
+            },
+            {
+              "label": "失败 / 待复核",
+              "value": "9 / 0"
+            }
+          ]
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "18.0",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=clip",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "状态": "失败",
+              "预期": "56 或 38",
+              "实际": "18.0",
+              "证据": {
+                "component": "primary_main",
+                "expectedDays": null,
+                "digits": null
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "单位独立 16fp",
+              "实际": "单位与数字同一文本节点",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "14.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "VIS.TEXT_CLIPPED",
+              "说明": "文字未被裁切",
+              "状态": "失败",
+              "预期": "对应可见性规则通过",
+              "实际": "3 处：Web 渲染中文字被裁剪或省略",
+              "证据": {
+                "findings": [
+                  {
+                    "components": [
+                      "primary_main:18"
+                    ],
+                    "source": "GEOMETRY.CLIP_TEXT",
+                    "text": "还剩 3天",
+                    "box": {
+                      "x": 12,
+                      "y": 38,
+                      "width": 126,
+                      "height": 18
+                    },
+                    "component": "primary_main"
+                  },
+                  {
+                    "components": [
+                      "support_item0_label:23"
+                    ],
+                    "source": "GEOMETRY.CLIP_TEXT",
+                    "text": "日期",
+                    "box": {
+                      "x": 12,
+                      "y": 124,
+                      "width": 28,
+                      "height": 14
+                    },
+                    "component": "support_item0_label"
+                  },
+                  {
+                    "components": [
+                      "support_item0_value:24"
+                    ],
+                    "source": "GEOMETRY.CLIP_TEXT",
+                    "text": "2026/11/09",
+                    "box": {
+                      "x": 44,
+                      "y": 124,
+                      "width": 94,
+                      "height": 14
+                    },
+                    "component": "support_item0_value"
+                  }
+                ],
+                "count": 3
+              }
+            },
+            {
+              "规则": "VIS.CONTRAST_LOW",
+              "说明": "文字对比度",
+              "状态": "失败",
+              "预期": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+              "实际": "4 个文本节点对比度偏低",
+              "证据": {
+                "nodes": [
+                  {
+                    "id": "title_title",
+                    "ratio": 2.23,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "primary_main",
+                    "ratio": 1.88,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.3
+                  },
+                  {
+                    "id": "support_item0_label",
+                    "ratio": 1.54,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "support_item0_value",
+                    "ratio": 1.62,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q061",
+            "scenario": "lunar_once",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": null,
+            "expectedDays": null,
+            "expectedRelationText": null,
+            "expectedTargetDateText": null,
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2025-06-01",
+              "calendar": "lunar",
+              "isLeapMonth": true
+            },
+            "gate": false,
+            "provenance": {},
+            "notes": [
+              "农历日期需日历库或人工确认，本次不自动判定目标日"
+            ]
+          }
+        },
+        {
+          "key": "evidence",
+          "data": {
+            "oracle": {
+              "sampleId": "Q061",
+              "scenario": "lunar_once",
+              "timezone": "Asia/Shanghai",
+              "referenceDate": "2026-11-03",
+              "targetDate": null,
+              "expectedDays": null,
+              "expectedRelationText": null,
+              "expectedTargetDateText": null,
+              "writeResultTo": "/data/dateCounter",
+              "fields": [
+                "/days",
+                "/relationText",
+                "/targetDateText"
+              ],
+              "arguments": {
+                "targetDate": "2025-06-01",
+                "calendar": "lunar",
+                "isLeapMonth": true
+              },
+              "gate": false,
+              "provenance": {},
+              "notes": [
+                "农历日期需日历库或人工确认，本次不自动判定目标日"
+              ]
+            },
+            "results": [
+              {
+                "rule": "SPEC.RADIUS",
+                "status": "pass",
+                "expected": "20",
+                "actual": "20",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PADDING",
+                "status": "pass",
+                "expected": "12",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.BG_FULL_BLEED",
+                "status": "pass",
+                "expected": "铺满的背景图",
+                "actual": "__post_theme_base",
+                "severity": "major",
+                "evidence": {
+                  "images": [
+                    "__post_theme_base"
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.MASK",
+                "status": "fail",
+                "expected": "黑色蒙层 60%",
+                "actual": "最接近的黑色层 无 alpha=0.00",
+                "severity": "major",
+                "evidence": {
+                  "component": "",
+                  "alpha": 0.0
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_REQUIRED",
+                "status": "pass",
+                "expected": "存在标题区",
+                "actual": "primary_main",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.TITLE_FONT",
+                "status": "fail",
+                "expected": "16 或 20",
+                "actual": "18.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_main"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_ELLIPSIS",
+                "status": "fail",
+                "expected": "maxLines=1 且 textOverflow=ellipsis",
+                "actual": "maxLines=1, textOverflow=clip",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_main"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_COLOR",
+                "status": "pass",
+                "expected": "白色 100%",
+                "actual": "alpha=1.0",
+                "severity": "minor",
+                "evidence": {
+                  "component": "primary_main"
+                }
+              },
+              {
+                "rule": "SPEC.PRIMARY_FONT",
+                "status": "fail",
+                "expected": "56 或 38",
+                "actual": "18.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_main",
+                  "expectedDays": null,
+                  "digits": null
+                }
+              },
+              {
+                "rule": "SPEC.UNIT_FONT",
+                "status": "fail",
+                "expected": "单位独立 16fp",
+                "actual": "单位与数字同一文本节点",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_main"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_FONT",
+                "status": "fail",
+                "expected": "16",
+                "actual": "14.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "support_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_COLOR",
+                "status": "fail",
+                "expected": "白色 60%",
+                "actual": "alpha=1.0",
+                "severity": "minor",
+                "evidence": {
+                  "component": "support_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.CONTENT_TYPE",
+                "status": "pass",
+                "expected": "C1–C5 之一",
+                "actual": "C3 小数字",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PATTERN_GEOMETRY",
+                "status": "na",
+                "expected": "图案几何",
+                "actual": "非图案类",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.DIGIT_LIMIT",
+                "status": "na",
+                "expected": "最多 6 位",
+                "actual": "无期望天数",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.PLACEHOLDER_VISIBLE",
+                "status": "pass",
+                "expected": "不显示占位文案",
+                "actual": "未发现占位文案",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_CLIPPED",
+                "status": "fail",
+                "expected": "对应可见性规则通过",
+                "actual": "3 处：Web 渲染中文字被裁剪或省略",
+                "severity": "major",
+                "evidence": {
+                  "findings": [
+                    {
+                      "components": [
+                        "primary_main:18"
+                      ],
+                      "source": "GEOMETRY.CLIP_TEXT",
+                      "text": "还剩 3天",
+                      "box": {
+                        "x": 12,
+                        "y": 38,
+                        "width": 126,
+                        "height": 18
+                      },
+                      "component": "primary_main"
+                    },
+                    {
+                      "components": [
+                        "support_item0_label:23"
+                      ],
+                      "source": "GEOMETRY.CLIP_TEXT",
+                      "text": "日期",
+                      "box": {
+                        "x": 12,
+                        "y": 124,
+                        "width": 28,
+                        "height": 14
+                      },
+                      "component": "support_item0_label"
+                    },
+                    {
+                      "components": [
+                        "support_item0_value:24"
+                      ],
+                      "source": "GEOMETRY.CLIP_TEXT",
+                      "text": "2026/11/09",
+                      "box": {
+                        "x": 44,
+                        "y": 124,
+                        "width": 94,
+                        "height": 14
+                      },
+                      "component": "support_item0_value"
+                    }
+                  ],
+                  "count": 3
+                }
+              },
+              {
+                "rule": "VIS.TEXT_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_OVERLAP",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_LOAD_FAILED",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.FONT_TOO_SMALL",
+                "status": "pass",
+                "expected": "正文字号 ≥ 12",
+                "actual": "全部文本达到下限",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.CONTRAST_LOW",
+                "status": "fail",
+                "expected": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+                "actual": "4 个文本节点对比度偏低",
+                "severity": "major",
+                "evidence": {
+                  "nodes": [
+                    {
+                      "id": "title_title",
+                      "ratio": 2.23,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "primary_main",
+                      "ratio": 1.88,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.3
+                    },
+                    {
+                      "id": "support_item0_label",
+                      "ratio": 1.54,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "support_item0_value",
+                      "ratio": 1.62,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    }
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.SAFE_AREA",
+                "status": "pass",
+                "expected": "全部文本在 inset(12) 内",
+                "actual": "全部在安全区",
+                "severity": "major",
+                "evidence": {
+                  "outside": [],
+                  "surface": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 150,
+                    "height": 150
+                  }
+                }
+              },
+              {
+                "rule": "ASSET.FILE_MISSING",
+                "status": "pass",
+                "expected": "本地素材文件存在",
+                "actual": "1 个本地素材均已找到",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "ASSET.RENDERED",
+                "status": "pass",
+                "expected": "本地素材已加载并输出可见像素",
+                "actual": "1 个本地素材均已渲染",
+                "severity": "major",
+                "evidence": {}
+              }
+            ],
+            "metrics": {
+              "primary": {
+                "id": "primary_main",
+                "fontSize": 18.0,
+                "text": "还剩 3天",
+                "areaRatio": 0.1008
+              },
+              "fontSizes": [
+                12.0,
+                14.0,
+                18.0
+              ],
+              "icons": [
+                {
+                  "id": "root",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_background",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_base",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__genui_render_component__root",
+                  "src": "/resources/base/media/calendar_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title",
+                  "src": "/resources/base/media/calendar_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title_icon",
+                  "src": "/resources/base/media/calendar_fill.svg",
+                  "naturalWidth": 24
+                }
+              ],
+              "leafTextCount": 4
+            },
+            "counts": {
+              "passed": 15,
+              "failed": 9,
+              "pending": 0,
+              "na": 2
+            },
+            "score": {
+              "total": 67.3,
+              "band": "及格",
+              "dimensions": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": null,
+                  "ratio": null,
+                  "checks": 0,
+                  "passed": 0,
+                  "pending": 0,
+                  "applicable": false,
+                  "reason": "未门禁"
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 12.5,
+                  "ratio": 50.0,
+                  "checks": 14,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ],
+              "fatal": false,
+              "note": "",
+              "targetGated": false,
+              "availableWeight": 60.0,
+              "capped": false
+            }
+          }
+        },
+        {
+          "key": "original-image",
+          "path": "original.png",
+          "alt": "Q061 原始数据模型渲染"
+        },
+        {
+          "key": "injected-image",
+          "path": "injected.png",
+          "alt": "Q061 注入期望值后的渲染"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q076",
+      "status": "failed",
+      "summary": "可见性失败 · 79.6 分",
+      "facts": {
+        "verdict": "可见性失败",
+        "scenario": "repeat_day",
+        "gate": false,
+        "score": 79.6,
+        "scoreTarget": 40.0,
+        "scoreVisibility": 17.9,
+        "scoreSpec": 11.7,
+        "scoreAsset": 10.0,
+        "passed": 20,
+        "failed": 10,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "score",
+          "data": [
+            {
+              "label": "总分",
+              "value": "79.6 · 良好"
+            },
+            {
+              "label": "目标语义",
+              "value": "40.0 / 40.0"
+            },
+            {
+              "label": "可见性",
+              "value": "17.9 / 25.0"
+            },
+            {
+              "label": "规范符合",
+              "value": "11.7 / 25.0"
+            },
+            {
+              "label": "素材渲染",
+              "value": "10.0 / 10.0"
+            }
+          ]
+        },
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "可见性失败"
+            },
+            {
+              "label": "场景",
+              "value": "repeat_day"
+            },
+            {
+              "label": "期望天数",
+              "value": 0
+            },
+            {
+              "label": "门禁",
+              "value": "仅展示"
+            },
+            {
+              "label": "失败 / 待复核",
+              "value": "10 / 0"
+            }
+          ]
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "12.0",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=None",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR",
+              "说明": "标题白色",
+              "状态": "失败",
+              "预期": "白色 100%",
+              "实际": "alpha=0.8",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "状态": "失败",
+              "预期": "56 或 38",
+              "实际": "30.0",
+              "证据": {
+                "component": "days_value",
+                "expectedDays": 0,
+                "digits": 1
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "days_unit"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "target_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "target_item0_value"
+              }
+            },
+            {
+              "规则": "VIS.TEXT_CLIPPED",
+              "说明": "文字未被裁切",
+              "状态": "失败",
+              "预期": "对应可见性规则通过",
+              "实际": "Web 渲染中文字被裁剪或省略",
+              "证据": {
+                "findings": [
+                  {
+                    "components": [
+                      "days_value:18"
+                    ],
+                    "source": "GEOMETRY.CLIP_TEXT",
+                    "text": "0",
+                    "box": {
+                      "x": 12,
+                      "y": 38,
+                      "width": 18.03125,
+                      "height": 30
+                    },
+                    "component": "days_value"
+                  }
+                ],
+                "count": 1
+              }
+            },
+            {
+              "规则": "VIS.CONTRAST_LOW",
+              "说明": "文字对比度",
+              "状态": "失败",
+              "预期": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+              "实际": "5 个文本节点对比度偏低",
+              "证据": {
+                "nodes": [
+                  {
+                    "id": "title_title",
+                    "ratio": 1.54,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "days_value",
+                    "ratio": 1.26,
+                    "threshold": 3.0,
+                    "status": "fail",
+                    "variance": 0.3
+                  },
+                  {
+                    "id": "days_unit",
+                    "ratio": 1.54,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.1
+                  },
+                  {
+                    "id": "target_item0_label",
+                    "ratio": 1.41,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.1
+                  },
+                  {
+                    "id": "target_item0_value",
+                    "ratio": 1.47,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q076",
+            "scenario": "repeat_day",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": "2026-11-03",
+            "expectedDays": 0,
+            "expectedRelationText": "就是今天",
+            "expectedTargetDateText": "2026/11/03",
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2026-10-14",
+              "repeat": {
+                "unit": "day",
+                "interval": 2
+              }
+            },
+            "gate": false,
+            "provenance": {
+              "targetDate": "explicit",
+              "days": "ambiguous",
+              "relationText": "ambiguous",
+              "targetDateText": "ambiguous"
+            },
+            "notes": [
+              "下一次触发日与参考日相同，需确认“今天是否算下一次”"
+            ]
+          }
+        },
+        {
+          "key": "evidence",
+          "data": {
+            "oracle": {
+              "sampleId": "Q076",
+              "scenario": "repeat_day",
+              "timezone": "Asia/Shanghai",
+              "referenceDate": "2026-11-03",
+              "targetDate": "2026-11-03",
+              "expectedDays": 0,
+              "expectedRelationText": "就是今天",
+              "expectedTargetDateText": "2026/11/03",
+              "writeResultTo": "/data/dateCounter",
+              "fields": [
+                "/days",
+                "/relationText",
+                "/targetDateText"
+              ],
+              "arguments": {
+                "targetDate": "2026-10-14",
+                "repeat": {
+                  "unit": "day",
+                  "interval": 2
+                }
+              },
+              "gate": false,
+              "provenance": {
+                "targetDate": "explicit",
+                "days": "ambiguous",
+                "relationText": "ambiguous",
+                "targetDateText": "ambiguous"
+              },
+              "notes": [
+                "下一次触发日与参考日相同，需确认“今天是否算下一次”"
+              ]
+            },
+            "results": [
+              {
+                "rule": "SPEC.RADIUS",
+                "status": "pass",
+                "expected": "20",
+                "actual": "20",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PADDING",
+                "status": "pass",
+                "expected": "12",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.BG_FULL_BLEED",
+                "status": "pass",
+                "expected": "铺满的背景图",
+                "actual": "__post_theme_base",
+                "severity": "major",
+                "evidence": {
+                  "images": [
+                    "__post_theme_base"
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.MASK",
+                "status": "fail",
+                "expected": "黑色蒙层 60%",
+                "actual": "最接近的黑色层 无 alpha=0.00",
+                "severity": "major",
+                "evidence": {
+                  "component": "",
+                  "alpha": 0.0
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_REQUIRED",
+                "status": "pass",
+                "expected": "存在标题区",
+                "actual": "title_title",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.TITLE_FONT",
+                "status": "fail",
+                "expected": "16 或 20",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_ELLIPSIS",
+                "status": "fail",
+                "expected": "maxLines=1 且 textOverflow=ellipsis",
+                "actual": "maxLines=1, textOverflow=None",
+                "severity": "major",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_COLOR",
+                "status": "fail",
+                "expected": "白色 100%",
+                "actual": "alpha=0.8",
+                "severity": "minor",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.PRIMARY_FONT",
+                "status": "fail",
+                "expected": "56 或 38",
+                "actual": "30.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "days_value",
+                  "expectedDays": 0,
+                  "digits": 1
+                }
+              },
+              {
+                "rule": "SPEC.UNIT_FONT",
+                "status": "fail",
+                "expected": "16",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "days_unit"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_FONT",
+                "status": "fail",
+                "expected": "16",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "target_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_COLOR",
+                "status": "fail",
+                "expected": "白色 60%",
+                "actual": "alpha=1.0",
+                "severity": "minor",
+                "evidence": {
+                  "component": "target_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.CONTENT_TYPE",
+                "status": "pass",
+                "expected": "C1–C5 之一",
+                "actual": "C3 小数字",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PATTERN_GEOMETRY",
+                "status": "na",
+                "expected": "图案几何",
+                "actual": "非图案类",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.DIGIT_LIMIT",
+                "status": "pass",
+                "expected": "最多 6 位",
+                "actual": "1 位",
+                "severity": "major",
+                "evidence": {
+                  "expectedDays": 0,
+                  "hasPrimary": true
+                }
+              },
+              {
+                "rule": "TARGET.DAYS_MISMATCH",
+                "status": "pass",
+                "expected": "可见文本包含「0」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/days",
+                  "components": [
+                    "days_value"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.RELATION_TEXT_MISMATCH",
+                "status": "pass",
+                "expected": "可见文本包含「就是今天」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/relationText",
+                  "components": [
+                    "title_title"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.VISIBLE_EXPECTATION_MISSING",
+                "status": "pass",
+                "expected": "可见文本包含「2026/11/03」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/targetDateText",
+                  "components": [
+                    "target_item0_value"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.BINDING_MISSING",
+                "status": "pass",
+                "expected": "全部期望字段被组件引用",
+                "actual": "3 个字段均已引用，3 个文本已匹配",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.BINDING_VALUE_MISMATCH",
+                "status": "pass",
+                "expected": "注入后期望字段被重新渲染",
+                "actual": "3 个字段注入后文本与期望一致",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.PLACEHOLDER_VISIBLE",
+                "status": "pass",
+                "expected": "不显示占位文案",
+                "actual": "未发现占位文案",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_CLIPPED",
+                "status": "fail",
+                "expected": "对应可见性规则通过",
+                "actual": "Web 渲染中文字被裁剪或省略",
+                "severity": "major",
+                "evidence": {
+                  "findings": [
+                    {
+                      "components": [
+                        "days_value:18"
+                      ],
+                      "source": "GEOMETRY.CLIP_TEXT",
+                      "text": "0",
+                      "box": {
+                        "x": 12,
+                        "y": 38,
+                        "width": 18.03125,
+                        "height": 30
+                      },
+                      "component": "days_value"
+                    }
+                  ],
+                  "count": 1
+                }
+              },
+              {
+                "rule": "VIS.TEXT_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_OVERLAP",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_LOAD_FAILED",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.FONT_TOO_SMALL",
+                "status": "pass",
+                "expected": "正文字号 ≥ 12",
+                "actual": "全部文本达到下限",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.CONTRAST_LOW",
+                "status": "fail",
+                "expected": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+                "actual": "5 个文本节点对比度偏低",
+                "severity": "major",
+                "evidence": {
+                  "nodes": [
+                    {
+                      "id": "title_title",
+                      "ratio": 1.54,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "days_value",
+                      "ratio": 1.26,
+                      "threshold": 3.0,
+                      "status": "fail",
+                      "variance": 0.3
+                    },
+                    {
+                      "id": "days_unit",
+                      "ratio": 1.54,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.1
+                    },
+                    {
+                      "id": "target_item0_label",
+                      "ratio": 1.41,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.1
+                    },
+                    {
+                      "id": "target_item0_value",
+                      "ratio": 1.47,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    }
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.SAFE_AREA",
+                "status": "pass",
+                "expected": "全部文本在 inset(12) 内",
+                "actual": "全部在安全区",
+                "severity": "major",
+                "evidence": {
+                  "outside": [],
+                  "surface": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 150,
+                    "height": 150
+                  }
+                }
+              },
+              {
+                "rule": "ASSET.FILE_MISSING",
+                "status": "pass",
+                "expected": "本地素材文件存在",
+                "actual": "1 个本地素材均已找到",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "ASSET.RENDERED",
+                "status": "pass",
+                "expected": "本地素材已加载并输出可见像素",
+                "actual": "1 个本地素材均已渲染",
+                "severity": "major",
+                "evidence": {}
+              }
+            ],
+            "metrics": {
+              "primary": {
+                "id": "days_value",
+                "fontSize": 30.0,
+                "text": "0",
+                "areaRatio": 0.024
+              },
+              "fontSizes": [
+                12.0,
+                30.0
+              ],
+              "icons": [
+                {
+                  "id": "root",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/833c5de3326049de993cc193a526df84/cbfe92acc718409aae519be674465497.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_background",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/833c5de3326049de993cc193a526df84/cbfe92acc718409aae519be674465497.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_base",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/833c5de3326049de993cc193a526df84/cbfe92acc718409aae519be674465497.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__genui_render_component__root",
+                  "src": "/resources/base/media/stopwatch_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title",
+                  "src": "/resources/base/media/stopwatch_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title_icon",
+                  "src": "/resources/base/media/stopwatch_fill.svg",
+                  "naturalWidth": 24
+                }
+              ],
+              "leafTextCount": 5
+            },
+            "counts": {
+              "passed": 20,
+              "failed": 10,
+              "pending": 0,
+              "na": 1
+            },
+            "score": {
+              "total": 79.6,
+              "band": "良好",
+              "dimensions": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 11.7,
+                  "ratio": 46.7,
+                  "checks": 15,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ],
+              "fatal": false,
+              "note": "",
+              "targetGated": false,
+              "availableWeight": 100.0,
+              "capped": false
+            }
+          }
+        },
+        {
+          "key": "original-image",
+          "path": "original.png",
+          "alt": "Q076 原始数据模型渲染"
+        },
+        {
+          "key": "injected-image",
+          "path": "injected.png",
+          "alt": "Q076 注入期望值后的渲染"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q086",
+      "status": "failed",
+      "summary": "可见性失败 · 81.2 分",
+      "facts": {
+        "verdict": "可见性失败",
+        "scenario": "repeat_month",
+        "gate": false,
+        "score": 81.2,
+        "scoreTarget": 40.0,
+        "scoreVisibility": 17.9,
+        "scoreSpec": 13.3,
+        "scoreAsset": 10.0,
+        "passed": 21,
+        "failed": 9,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "score",
+          "data": [
+            {
+              "label": "总分",
+              "value": "81.2 · 良好"
+            },
+            {
+              "label": "目标语义",
+              "value": "40.0 / 40.0"
+            },
+            {
+              "label": "可见性",
+              "value": "17.9 / 25.0"
+            },
+            {
+              "label": "规范符合",
+              "value": "13.3 / 25.0"
+            },
+            {
+              "label": "素材渲染",
+              "value": "10.0 / 10.0"
+            }
+          ]
+        },
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "可见性失败"
+            },
+            {
+              "label": "场景",
+              "value": "repeat_month"
+            },
+            {
+              "label": "期望天数",
+              "value": 28
+            },
+            {
+              "label": "门禁",
+              "value": "仅展示"
+            },
+            {
+              "label": "失败 / 待复核",
+              "value": "9 / 0"
+            }
+          ]
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "18.0",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=clip",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "状态": "失败",
+              "预期": "56 或 38",
+              "实际": "18.0",
+              "证据": {
+                "component": "primary_main",
+                "expectedDays": 28,
+                "digits": 2
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "单位独立 16fp",
+              "实际": "单位与数字同一文本节点",
+              "证据": {
+                "component": "primary_main"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "VIS.TEXT_CLIPPED",
+              "说明": "文字未被裁切",
+              "状态": "失败",
+              "预期": "对应可见性规则通过",
+              "实际": "Web 渲染中文字被裁剪或省略",
+              "证据": {
+                "findings": [
+                  {
+                    "components": [
+                      "primary_main:18"
+                    ],
+                    "source": "GEOMETRY.CLIP_TEXT",
+                    "text": "还剩 28 天",
+                    "box": {
+                      "x": 12,
+                      "y": 38,
+                      "width": 126,
+                      "height": 18
+                    },
+                    "component": "primary_main"
+                  }
+                ],
+                "count": 1
+              }
+            },
+            {
+              "规则": "VIS.CONTRAST_LOW",
+              "说明": "文字对比度",
+              "状态": "失败",
+              "预期": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+              "实际": "4 个文本节点对比度偏低",
+              "证据": {
+                "nodes": [
+                  {
+                    "id": "title_title",
+                    "ratio": 2.35,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "primary_main",
+                    "ratio": 1.71,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.3
+                  },
+                  {
+                    "id": "support_item0_label",
+                    "ratio": 1.55,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "support_item0_value",
+                    "ratio": 1.55,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q086",
+            "scenario": "repeat_month",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": "2026-12-01",
+            "expectedDays": 28,
+            "expectedRelationText": "还剩",
+            "expectedTargetDateText": "2026/12/01",
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2026-07-01",
+              "repeat": {
+                "unit": "month",
+                "interval": 2
+              }
+            },
+            "gate": false,
+            "provenance": {
+              "targetDate": "explicit",
+              "days": "ambiguous",
+              "relationText": "ambiguous",
+              "targetDateText": "ambiguous"
+            },
+            "notes": [
+              "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+            ]
+          }
+        },
+        {
+          "key": "evidence",
+          "data": {
+            "oracle": {
+              "sampleId": "Q086",
+              "scenario": "repeat_month",
+              "timezone": "Asia/Shanghai",
+              "referenceDate": "2026-11-03",
+              "targetDate": "2026-12-01",
+              "expectedDays": 28,
+              "expectedRelationText": "还剩",
+              "expectedTargetDateText": "2026/12/01",
+              "writeResultTo": "/data/dateCounter",
+              "fields": [
+                "/days",
+                "/relationText",
+                "/targetDateText"
+              ],
+              "arguments": {
+                "targetDate": "2026-07-01",
+                "repeat": {
+                  "unit": "month",
+                  "interval": 2
+                }
+              },
+              "gate": false,
+              "provenance": {
+                "targetDate": "explicit",
+                "days": "ambiguous",
+                "relationText": "ambiguous",
+                "targetDateText": "ambiguous"
+              },
+              "notes": [
+                "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+              ]
+            },
+            "results": [
+              {
+                "rule": "SPEC.RADIUS",
+                "status": "pass",
+                "expected": "20",
+                "actual": "20",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PADDING",
+                "status": "pass",
+                "expected": "12",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.BG_FULL_BLEED",
+                "status": "pass",
+                "expected": "铺满的背景图",
+                "actual": "__post_theme_base",
+                "severity": "major",
+                "evidence": {
+                  "images": [
+                    "__post_theme_base"
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.MASK",
+                "status": "fail",
+                "expected": "黑色蒙层 60%",
+                "actual": "最接近的黑色层 无 alpha=0.00",
+                "severity": "major",
+                "evidence": {
+                  "component": "",
+                  "alpha": 0.0
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_REQUIRED",
+                "status": "pass",
+                "expected": "存在标题区",
+                "actual": "primary_main",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.TITLE_FONT",
+                "status": "fail",
+                "expected": "16 或 20",
+                "actual": "18.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_main"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_ELLIPSIS",
+                "status": "fail",
+                "expected": "maxLines=1 且 textOverflow=ellipsis",
+                "actual": "maxLines=1, textOverflow=clip",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_main"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_COLOR",
+                "status": "pass",
+                "expected": "白色 100%",
+                "actual": "alpha=1.0",
+                "severity": "minor",
+                "evidence": {
+                  "component": "primary_main"
+                }
+              },
+              {
+                "rule": "SPEC.PRIMARY_FONT",
+                "status": "fail",
+                "expected": "56 或 38",
+                "actual": "18.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_main",
+                  "expectedDays": 28,
+                  "digits": 2
+                }
+              },
+              {
+                "rule": "SPEC.UNIT_FONT",
+                "status": "fail",
+                "expected": "单位独立 16fp",
+                "actual": "单位与数字同一文本节点",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_main"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_FONT",
+                "status": "fail",
+                "expected": "16",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "support_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_COLOR",
+                "status": "fail",
+                "expected": "白色 60%",
+                "actual": "alpha=1.0",
+                "severity": "minor",
+                "evidence": {
+                  "component": "support_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.CONTENT_TYPE",
+                "status": "pass",
+                "expected": "C1–C5 之一",
+                "actual": "C3 小数字",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PATTERN_GEOMETRY",
+                "status": "na",
+                "expected": "图案几何",
+                "actual": "非图案类",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.DIGIT_LIMIT",
+                "status": "pass",
+                "expected": "最多 6 位",
+                "actual": "2 位",
+                "severity": "major",
+                "evidence": {
+                  "expectedDays": 28,
+                  "hasPrimary": true
+                }
+              },
+              {
+                "rule": "TARGET.DAYS_MISMATCH",
+                "status": "pass",
+                "expected": "可见文本包含「28」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/days",
+                  "components": [
+                    "primary_main"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.RELATION_TEXT_MISMATCH",
+                "status": "pass",
+                "expected": "可见文本包含「还剩」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/relationText",
+                  "components": [
+                    "primary_main"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.VISIBLE_EXPECTATION_MISSING",
+                "status": "pass",
+                "expected": "可见文本包含「2026/12/01」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/targetDateText",
+                  "components": [
+                    "support_item0_value"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.BINDING_MISSING",
+                "status": "pass",
+                "expected": "全部期望字段被组件引用",
+                "actual": "3 个字段均已引用，3 个文本已匹配",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.BINDING_VALUE_MISMATCH",
+                "status": "pass",
+                "expected": "注入后期望字段被重新渲染",
+                "actual": "3 个字段注入后文本与期望一致",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.PLACEHOLDER_VISIBLE",
+                "status": "pass",
+                "expected": "不显示占位文案",
+                "actual": "未发现占位文案",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_CLIPPED",
+                "status": "fail",
+                "expected": "对应可见性规则通过",
+                "actual": "Web 渲染中文字被裁剪或省略",
+                "severity": "major",
+                "evidence": {
+                  "findings": [
+                    {
+                      "components": [
+                        "primary_main:18"
+                      ],
+                      "source": "GEOMETRY.CLIP_TEXT",
+                      "text": "还剩 28 天",
+                      "box": {
+                        "x": 12,
+                        "y": 38,
+                        "width": 126,
+                        "height": 18
+                      },
+                      "component": "primary_main"
+                    }
+                  ],
+                  "count": 1
+                }
+              },
+              {
+                "rule": "VIS.TEXT_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_OVERLAP",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_LOAD_FAILED",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.FONT_TOO_SMALL",
+                "status": "pass",
+                "expected": "正文字号 ≥ 12",
+                "actual": "全部文本达到下限",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.CONTRAST_LOW",
+                "status": "fail",
+                "expected": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+                "actual": "4 个文本节点对比度偏低",
+                "severity": "major",
+                "evidence": {
+                  "nodes": [
+                    {
+                      "id": "title_title",
+                      "ratio": 2.35,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "primary_main",
+                      "ratio": 1.71,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.3
+                    },
+                    {
+                      "id": "support_item0_label",
+                      "ratio": 1.55,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "support_item0_value",
+                      "ratio": 1.55,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    }
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.SAFE_AREA",
+                "status": "pass",
+                "expected": "全部文本在 inset(12) 内",
+                "actual": "全部在安全区",
+                "severity": "major",
+                "evidence": {
+                  "outside": [],
+                  "surface": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 150,
+                    "height": 150
+                  }
+                }
+              },
+              {
+                "rule": "ASSET.FILE_MISSING",
+                "status": "pass",
+                "expected": "本地素材文件存在",
+                "actual": "1 个本地素材均已找到",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "ASSET.RENDERED",
+                "status": "pass",
+                "expected": "本地素材已加载并输出可见像素",
+                "actual": "1 个本地素材均已渲染",
+                "severity": "major",
+                "evidence": {}
+              }
+            ],
+            "metrics": {
+              "primary": {
+                "id": "primary_main",
+                "fontSize": 18.0,
+                "text": "还剩 28 天",
+                "areaRatio": 0.1008
+              },
+              "fontSizes": [
+                12.0,
+                18.0
+              ],
+              "icons": [
+                {
+                  "id": "root",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_background",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_base",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__genui_render_component__root",
+                  "src": "/resources/base/media/stopwatch_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title",
+                  "src": "/resources/base/media/stopwatch_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title_icon",
+                  "src": "/resources/base/media/stopwatch_fill.svg",
+                  "naturalWidth": 24
+                }
+              ],
+              "leafTextCount": 4
+            },
+            "counts": {
+              "passed": 21,
+              "failed": 9,
+              "pending": 0,
+              "na": 1
+            },
+            "score": {
+              "total": 81.2,
+              "band": "良好",
+              "dimensions": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 13.3,
+                  "ratio": 53.3,
+                  "checks": 15,
+                  "passed": 8,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ],
+              "fatal": false,
+              "note": "",
+              "targetGated": false,
+              "availableWeight": 100.0,
+              "capped": false
+            }
+          }
+        },
+        {
+          "key": "original-image",
+          "path": "original.png",
+          "alt": "Q086 原始数据模型渲染"
+        },
+        {
+          "key": "injected-image",
+          "path": "injected.png",
+          "alt": "Q086 注入期望值后的渲染"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q091",
+      "status": "failed",
+      "summary": "可见性失败 · 81.2 分",
+      "facts": {
+        "verdict": "可见性失败",
+        "scenario": "repeat_year",
+        "gate": false,
+        "score": 81.2,
+        "scoreTarget": 40.0,
+        "scoreVisibility": 17.9,
+        "scoreSpec": 13.3,
+        "scoreAsset": 10.0,
+        "passed": 21,
+        "failed": 9,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "score",
+          "data": [
+            {
+              "label": "总分",
+              "value": "81.2 · 良好"
+            },
+            {
+              "label": "目标语义",
+              "value": "40.0 / 40.0"
+            },
+            {
+              "label": "可见性",
+              "value": "17.9 / 25.0"
+            },
+            {
+              "label": "规范符合",
+              "value": "13.3 / 25.0"
+            },
+            {
+              "label": "素材渲染",
+              "value": "10.0 / 10.0"
+            }
+          ]
+        },
+        {
+          "key": "verdict",
+          "data": [
+            {
+              "label": "结论",
+              "value": "可见性失败"
+            },
+            {
+              "label": "场景",
+              "value": "repeat_year"
+            },
+            {
+              "label": "期望天数",
+              "value": 198
+            },
+            {
+              "label": "门禁",
+              "value": "仅展示"
+            },
+            {
+              "label": "失败 / 待复核",
+              "value": "9 / 0"
+            }
+          ]
+        },
+        {
+          "key": "issues",
+          "data": [
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "状态": "失败",
+              "预期": "黑色蒙层 60%",
+              "实际": "最接近的黑色层 无 alpha=0.00",
+              "证据": {
+                "component": "",
+                "alpha": 0.0
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "状态": "失败",
+              "预期": "16 或 20",
+              "实际": "12.0",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "状态": "失败",
+              "预期": "maxLines=1 且 textOverflow=ellipsis",
+              "实际": "maxLines=1, textOverflow=None",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR",
+              "说明": "标题白色",
+              "状态": "失败",
+              "预期": "白色 100%",
+              "实际": "alpha=0.8",
+              "证据": {
+                "component": "title_title"
+              }
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "primary_unit"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "状态": "失败",
+              "预期": "16",
+              "实际": "12.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "状态": "失败",
+              "预期": "白色 60%",
+              "实际": "alpha=1.0",
+              "证据": {
+                "component": "support_item0_value"
+              }
+            },
+            {
+              "规则": "VIS.TEXT_CLIPPED",
+              "说明": "文字未被裁切",
+              "状态": "失败",
+              "预期": "对应可见性规则通过",
+              "实际": "Web 渲染中文字被裁剪或省略",
+              "证据": {
+                "findings": [
+                  {
+                    "components": [
+                      "primary_value:18"
+                    ],
+                    "source": "GEOMETRY.CLIP_TEXT",
+                    "text": "198",
+                    "box": {
+                      "x": 12,
+                      "y": 38,
+                      "width": 54.09375,
+                      "height": 30
+                    },
+                    "component": "primary_value"
+                  }
+                ],
+                "count": 1
+              }
+            },
+            {
+              "规则": "VIS.CONTRAST_LOW",
+              "说明": "文字对比度",
+              "状态": "失败",
+              "预期": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+              "实际": "5 个文本节点对比度偏低",
+              "证据": {
+                "nodes": [
+                  {
+                    "id": "title_title",
+                    "ratio": 1.75,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "primary_value",
+                    "ratio": 1.52,
+                    "threshold": 3.0,
+                    "status": "fail",
+                    "variance": 0.4
+                  },
+                  {
+                    "id": "primary_unit",
+                    "ratio": 1.7,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "support_item0_label",
+                    "ratio": 1.53,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  },
+                  {
+                    "id": "support_item0_value",
+                    "ratio": 1.51,
+                    "threshold": 4.5,
+                    "status": "fail",
+                    "variance": 0.2
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "key": "oracle",
+          "data": {
+            "sampleId": "Q091",
+            "scenario": "repeat_year",
+            "timezone": "Asia/Shanghai",
+            "referenceDate": "2026-11-03",
+            "targetDate": "2027-05-20",
+            "expectedDays": 198,
+            "expectedRelationText": "还剩",
+            "expectedTargetDateText": "2027/05/20",
+            "writeResultTo": "/data/dateCounter",
+            "fields": [
+              "/days",
+              "/relationText",
+              "/targetDateText"
+            ],
+            "arguments": {
+              "targetDate": "2020-05-20",
+              "repeat": {
+                "unit": "year"
+              }
+            },
+            "gate": false,
+            "provenance": {
+              "targetDate": "explicit",
+              "days": "ambiguous",
+              "relationText": "ambiguous",
+              "targetDateText": "ambiguous"
+            },
+            "notes": [
+              "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+            ]
+          }
+        },
+        {
+          "key": "evidence",
+          "data": {
+            "oracle": {
+              "sampleId": "Q091",
+              "scenario": "repeat_year",
+              "timezone": "Asia/Shanghai",
+              "referenceDate": "2026-11-03",
+              "targetDate": "2027-05-20",
+              "expectedDays": 198,
+              "expectedRelationText": "还剩",
+              "expectedTargetDateText": "2027/05/20",
+              "writeResultTo": "/data/dateCounter",
+              "fields": [
+                "/days",
+                "/relationText",
+                "/targetDateText"
+              ],
+              "arguments": {
+                "targetDate": "2020-05-20",
+                "repeat": {
+                  "unit": "year"
+                }
+              },
+              "gate": false,
+              "provenance": {
+                "targetDate": "explicit",
+                "days": "ambiguous",
+                "relationText": "ambiguous",
+                "targetDateText": "ambiguous"
+              },
+              "notes": [
+                "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+              ]
+            },
+            "results": [
+              {
+                "rule": "SPEC.RADIUS",
+                "status": "pass",
+                "expected": "20",
+                "actual": "20",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PADDING",
+                "status": "pass",
+                "expected": "12",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.BG_FULL_BLEED",
+                "status": "pass",
+                "expected": "铺满的背景图",
+                "actual": "__post_theme_base",
+                "severity": "major",
+                "evidence": {
+                  "images": [
+                    "__post_theme_base"
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.MASK",
+                "status": "fail",
+                "expected": "黑色蒙层 60%",
+                "actual": "最接近的黑色层 无 alpha=0.00",
+                "severity": "major",
+                "evidence": {
+                  "component": "",
+                  "alpha": 0.0
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_REQUIRED",
+                "status": "pass",
+                "expected": "存在标题区",
+                "actual": "title_title",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.TITLE_FONT",
+                "status": "fail",
+                "expected": "16 或 20",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_ELLIPSIS",
+                "status": "fail",
+                "expected": "maxLines=1 且 textOverflow=ellipsis",
+                "actual": "maxLines=1, textOverflow=None",
+                "severity": "major",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.TITLE_COLOR",
+                "status": "fail",
+                "expected": "白色 100%",
+                "actual": "alpha=0.8",
+                "severity": "minor",
+                "evidence": {
+                  "component": "title_title"
+                }
+              },
+              {
+                "rule": "SPEC.PRIMARY_FONT",
+                "status": "pass",
+                "expected": "长数字 29–56",
+                "actual": "30.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_value",
+                  "expectedDays": 198,
+                  "digits": 3
+                }
+              },
+              {
+                "rule": "SPEC.UNIT_FONT",
+                "status": "fail",
+                "expected": "16",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "primary_unit"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_FONT",
+                "status": "fail",
+                "expected": "16",
+                "actual": "12.0",
+                "severity": "major",
+                "evidence": {
+                  "component": "support_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.SUPPORT_COLOR",
+                "status": "fail",
+                "expected": "白色 60%",
+                "actual": "alpha=1.0",
+                "severity": "minor",
+                "evidence": {
+                  "component": "support_item0_value"
+                }
+              },
+              {
+                "rule": "SPEC.CONTENT_TYPE",
+                "status": "pass",
+                "expected": "C1–C5 之一",
+                "actual": "C3 小数字",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.PATTERN_GEOMETRY",
+                "status": "na",
+                "expected": "图案几何",
+                "actual": "非图案类",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "SPEC.DIGIT_LIMIT",
+                "status": "pass",
+                "expected": "最多 6 位",
+                "actual": "3 位",
+                "severity": "major",
+                "evidence": {
+                  "expectedDays": 198,
+                  "hasPrimary": true
+                }
+              },
+              {
+                "rule": "TARGET.DAYS_MISMATCH",
+                "status": "pass",
+                "expected": "可见文本包含「198」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/days",
+                  "components": [
+                    "primary_value"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.RELATION_TEXT_MISMATCH",
+                "status": "pass",
+                "expected": "可见文本包含「还剩」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/relationText",
+                  "components": [
+                    "title_title"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.VISIBLE_EXPECTATION_MISSING",
+                "status": "pass",
+                "expected": "可见文本包含「2027/05/20」",
+                "actual": "已匹配",
+                "severity": "major",
+                "evidence": {
+                  "path": "/data/dateCounter/targetDateText",
+                  "components": [
+                    "support_item0_value"
+                  ]
+                }
+              },
+              {
+                "rule": "TARGET.BINDING_MISSING",
+                "status": "pass",
+                "expected": "全部期望字段被组件引用",
+                "actual": "3 个字段均已引用，3 个文本已匹配",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.BINDING_VALUE_MISMATCH",
+                "status": "pass",
+                "expected": "注入后期望字段被重新渲染",
+                "actual": "3 个字段注入后文本与期望一致",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "TARGET.PLACEHOLDER_VISIBLE",
+                "status": "pass",
+                "expected": "不显示占位文案",
+                "actual": "未发现占位文案",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_CLIPPED",
+                "status": "fail",
+                "expected": "对应可见性规则通过",
+                "actual": "Web 渲染中文字被裁剪或省略",
+                "severity": "major",
+                "evidence": {
+                  "findings": [
+                    {
+                      "components": [
+                        "primary_value:18"
+                      ],
+                      "source": "GEOMETRY.CLIP_TEXT",
+                      "text": "198",
+                      "box": {
+                        "x": 12,
+                        "y": 38,
+                        "width": 54.09375,
+                        "height": 30
+                      },
+                      "component": "primary_value"
+                    }
+                  ],
+                  "count": 1
+                }
+              },
+              {
+                "rule": "VIS.TEXT_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_OVERFLOW",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.TEXT_OVERLAP",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.IMAGE_LOAD_FAILED",
+                "status": "pass",
+                "expected": "对应可见性规则通过",
+                "actual": "未发现问题",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.FONT_TOO_SMALL",
+                "status": "pass",
+                "expected": "正文字号 ≥ 12",
+                "actual": "全部文本达到下限",
+                "severity": "minor",
+                "evidence": {}
+              },
+              {
+                "rule": "VIS.CONTRAST_LOW",
+                "status": "fail",
+                "expected": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+                "actual": "5 个文本节点对比度偏低",
+                "severity": "major",
+                "evidence": {
+                  "nodes": [
+                    {
+                      "id": "title_title",
+                      "ratio": 1.75,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "primary_value",
+                      "ratio": 1.52,
+                      "threshold": 3.0,
+                      "status": "fail",
+                      "variance": 0.4
+                    },
+                    {
+                      "id": "primary_unit",
+                      "ratio": 1.7,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "support_item0_label",
+                      "ratio": 1.53,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    },
+                    {
+                      "id": "support_item0_value",
+                      "ratio": 1.51,
+                      "threshold": 4.5,
+                      "status": "fail",
+                      "variance": 0.2
+                    }
+                  ]
+                }
+              },
+              {
+                "rule": "SPEC.SAFE_AREA",
+                "status": "pass",
+                "expected": "全部文本在 inset(12) 内",
+                "actual": "全部在安全区",
+                "severity": "major",
+                "evidence": {
+                  "outside": [],
+                  "surface": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 150,
+                    "height": 150
+                  }
+                }
+              },
+              {
+                "rule": "ASSET.FILE_MISSING",
+                "status": "pass",
+                "expected": "本地素材文件存在",
+                "actual": "1 个本地素材均已找到",
+                "severity": "major",
+                "evidence": {}
+              },
+              {
+                "rule": "ASSET.RENDERED",
+                "status": "pass",
+                "expected": "本地素材已加载并输出可见像素",
+                "actual": "1 个本地素材均已渲染",
+                "severity": "major",
+                "evidence": {}
+              }
+            ],
+            "metrics": {
+              "primary": {
+                "id": "primary_value",
+                "fontSize": 30.0,
+                "text": "198",
+                "areaRatio": 0.0721
+              },
+              "fontSizes": [
+                12.0,
+                30.0
+              ],
+              "icons": [
+                {
+                  "id": "root",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/c1722f5226924b5586bc71551827f129/e67f34afe7434ab0a64b6abae0134b67.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_background",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/c1722f5226924b5586bc71551827f129/e67f34afe7434ab0a64b6abae0134b67.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__post_theme_base",
+                  "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/c1722f5226924b5586bc71551827f129/e67f34afe7434ab0a64b6abae0134b67.jpg",
+                  "naturalWidth": 600
+                },
+                {
+                  "id": "__genui_render_component__root",
+                  "src": "/resources/base/media/cake_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title",
+                  "src": "/resources/base/media/cake_fill.svg",
+                  "naturalWidth": 24
+                },
+                {
+                  "id": "title_icon",
+                  "src": "/resources/base/media/cake_fill.svg",
+                  "naturalWidth": 24
+                }
+              ],
+              "leafTextCount": 5
+            },
+            "counts": {
+              "passed": 21,
+              "failed": 9,
+              "pending": 0,
+              "na": 1
+            },
+            "score": {
+              "total": 81.2,
+              "band": "良好",
+              "dimensions": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 13.3,
+                  "ratio": 53.3,
+                  "checks": 15,
+                  "passed": 8,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ],
+              "fatal": false,
+              "note": "",
+              "targetGated": false,
+              "availableWeight": 100.0,
+              "capped": false
+            }
+          }
+        },
+        {
+          "key": "original-image",
+          "path": "original.png",
+          "alt": "Q091 原始数据模型渲染"
+        },
+        {
+          "key": "injected-image",
+          "path": "injected.png",
+          "alt": "Q091 注入期望值后的渲染"
+        }
+      ]
+    }
+  ],
+  "datasetResult": {
+    "status": "success",
+    "summary": "目标效果评测完成：6 个样本，通过 0，待复核 0，失败 6",
+    "facts": {
+      "total": 6,
+      "passed": 0,
+      "partial": 0,
+      "failed": 6,
+      "passRate": 66.3,
+      "averageScore": 78.1,
+      "averageTarget": 40.0,
+      "averageVisibility": 17.9,
+      "averageSpec": 12.4,
+      "averageAsset": 10.0
+    },
+    "artifacts": [
+      {
+        "key": "overview",
+        "data": [
+          {
+            "label": "样本数",
+            "value": 6
+          },
+          {
+            "label": "平均总分",
+            "value": 78.1
+          },
+          {
+            "label": "平均目标语义",
+            "value": "40.0 / 40.0"
+          },
+          {
+            "label": "平均可见性",
+            "value": "17.9 / 25.0"
+          },
+          {
+            "label": "平均规范符合",
+            "value": "12.4 / 25.0"
+          },
+          {
+            "label": "平均素材渲染",
+            "value": "10.0 / 10.0"
+          },
+          {
+            "label": "通过",
+            "value": 0
+          },
+          {
+            "label": "待复核",
+            "value": 0
+          },
+          {
+            "label": "失败",
+            "value": 6
+          },
+          {
+            "label": "规则通过率",
+            "value": "66.3%"
+          }
+        ]
+      },
+      {
+        "key": "scores",
+        "data": [
+          {
+            "sampleId": "Q001",
+            "title": "Q001",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 79.6,
+            "band": "良好",
+            "image": "samples/Q001/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "sampleId": "Q031",
+            "title": "Q031",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 79.6,
+            "band": "良好",
+            "image": "samples/Q031/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "sampleId": "Q061",
+            "title": "Q061",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 67.3,
+            "band": "及格",
+            "image": "samples/Q061/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": null,
+                "ratio": null,
+                "checks": 0,
+                "passed": 0,
+                "pending": 0,
+                "applicable": false,
+                "reason": "未门禁"
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 12.5,
+                "ratio": 50.0,
+                "checks": 14,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "sampleId": "Q076",
+            "title": "Q076",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 79.6,
+            "band": "良好",
+            "image": "samples/Q076/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "sampleId": "Q086",
+            "title": "Q086",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 81.2,
+            "band": "良好",
+            "image": "samples/Q086/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 13.3,
+                "ratio": 53.3,
+                "checks": 15,
+                "passed": 8,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "sampleId": "Q091",
+            "title": "Q091",
+            "status": "failed",
+            "verdict": "可见性失败",
+            "total": 81.2,
+            "band": "良好",
+            "image": "samples/Q091/injected.png",
+            "size": "2x2",
+            "dimensions": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 13.3,
+                "ratio": 53.3,
+                "checks": 15,
+                "passed": 8,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "rules",
+        "data": [
+          {
+            "规则": "TARGET.BINDING_MISSING",
+            "说明": "期望字段被组件引用",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.BINDING_VALUE_MISMATCH",
+            "说明": "绑定值随注入变化",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.DAYS_MISMATCH",
+            "说明": "天数与参考日一致",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.RELATION_TEXT_MISMATCH",
+            "说明": "关系文案与日期差一致",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.VISIBLE_EXPECTATION_MISSING",
+            "说明": "期望文本可见",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.PLACEHOLDER_VISIBLE",
+            "说明": "无占位文案",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.SCENARIO_RULE_VIOLATION",
+            "说明": "场景规则",
+            "通过": 1,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.TEXT_CLIPPED",
+            "说明": "文字未被裁切",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "VIS.TEXT_OVERFLOW",
+            "说明": "文字未越出画布",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.TEXT_OVERLAP",
+            "说明": "文字未互相遮挡",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.IMAGE_OVERFLOW",
+            "说明": "图片未越出画布",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.IMAGE_LOAD_FAILED",
+            "说明": "素材真实加载",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.FONT_TOO_SMALL",
+            "说明": "正文字号下限",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.CONTRAST_LOW",
+            "说明": "文字对比度",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "ASSET.FILE_MISSING",
+            "说明": "本地素材文件存在",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.RADIUS",
+            "说明": "圆角 20",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.PADDING",
+            "说明": "内边距 12",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.BG_FULL_BLEED",
+            "说明": "背景铺满",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.MASK",
+            "说明": "黑色蒙层 60%",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.TITLE_REQUIRED",
+            "说明": "标题必选",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.TITLE_FONT",
+            "说明": "标题 16/20fp",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.TITLE_ELLIPSIS",
+            "说明": "标题单行省略",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.TITLE_COLOR",
+            "说明": "标题白色",
+            "通过": 2,
+            "失败": 4,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 33.3
+          },
+          {
+            "规则": "SPEC.PRIMARY_FONT",
+            "说明": "主值 56/38fp",
+            "通过": 1,
+            "失败": 5,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 16.7
+          },
+          {
+            "规则": "SPEC.UNIT_FONT",
+            "说明": "单位 16fp 独立",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.SUPPORT_FONT",
+            "说明": "副文本 16fp",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.SUPPORT_COLOR",
+            "说明": "副文本 60% 白",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.CONTENT_TYPE",
+            "说明": "内容属于 C1–C5",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.PATTERN_GEOMETRY",
+            "说明": "图案几何",
+            "通过": 0,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 6,
+            "通过率": null
+          },
+          {
+            "规则": "SPEC.DIGIT_LIMIT",
+            "说明": "数字最多 6 位",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 1,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.SAFE_AREA",
+            "说明": "安全区内",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          }
+        ]
+      },
+      {
+        "key": "samples",
+        "data": [
+          {
+            "样本": "Q001",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "once",
+            "期望天数": 46,
+            "总分": 79.6,
+            "等级": "良好",
+            "目标语义": 40.0,
+            "可见性": 17.9,
+            "规范符合": 11.7,
+            "素材渲染": 10.0,
+            "通过": 21,
+            "失败": 10,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+            "待复核项": "",
+            "图片": "samples/Q001/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "样本": "Q031",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_week",
+            "期望天数": 1,
+            "总分": 79.6,
+            "等级": "良好",
+            "目标语义": 40.0,
+            "可见性": 17.9,
+            "规范符合": 11.7,
+            "素材渲染": 10.0,
+            "通过": 20,
+            "失败": 10,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+            "待复核项": "",
+            "图片": "samples/Q031/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "样本": "Q061",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "lunar_once",
+            "期望天数": "—",
+            "总分": 67.3,
+            "等级": "及格",
+            "目标语义": null,
+            "可见性": 17.9,
+            "规范符合": 12.5,
+            "素材渲染": 10.0,
+            "通过": 15,
+            "失败": 9,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+            "待复核项": "",
+            "图片": "samples/Q061/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": null,
+                "ratio": null,
+                "checks": 0,
+                "passed": 0,
+                "pending": 0,
+                "applicable": false,
+                "reason": "未门禁"
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 12.5,
+                "ratio": 50.0,
+                "checks": 14,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "样本": "Q076",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_day",
+            "期望天数": 0,
+            "总分": 79.6,
+            "等级": "良好",
+            "目标语义": 40.0,
+            "可见性": 17.9,
+            "规范符合": 11.7,
+            "素材渲染": 10.0,
+            "通过": 20,
+            "失败": 10,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+            "待复核项": "",
+            "图片": "samples/Q076/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 11.7,
+                "ratio": 46.7,
+                "checks": 15,
+                "passed": 7,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "样本": "Q086",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_month",
+            "期望天数": 28,
+            "总分": 81.2,
+            "等级": "良好",
+            "目标语义": 40.0,
+            "可见性": 17.9,
+            "规范符合": 13.3,
+            "素材渲染": 10.0,
+            "通过": 21,
+            "失败": 9,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+            "待复核项": "",
+            "图片": "samples/Q086/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 13.3,
+                "ratio": 53.3,
+                "checks": 15,
+                "passed": 8,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          },
+          {
+            "样本": "Q091",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_year",
+            "期望天数": 198,
+            "总分": 81.2,
+            "等级": "良好",
+            "目标语义": 40.0,
+            "可见性": 17.9,
+            "规范符合": 13.3,
+            "素材渲染": 10.0,
+            "通过": 21,
+            "失败": 9,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+            "待复核项": "",
+            "图片": "samples/Q091/injected.png",
+            "尺寸": "2x2",
+            "维度": [
+              {
+                "key": "target",
+                "label": "目标语义",
+                "max": 40.0,
+                "score": 40.0,
+                "ratio": 100.0,
+                "checks": 3,
+                "passed": 3,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "visibility",
+                "label": "可见性",
+                "max": 25.0,
+                "score": 17.9,
+                "ratio": 71.4,
+                "checks": 7,
+                "passed": 5,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "spec",
+                "label": "规范符合",
+                "max": 25.0,
+                "score": 13.3,
+                "ratio": 53.3,
+                "checks": 15,
+                "passed": 8,
+                "pending": 0,
+                "applicable": true
+              },
+              {
+                "key": "asset",
+                "label": "素材渲染",
+                "max": 10.0,
+                "score": 10.0,
+                "ratio": 100.0,
+                "checks": 2,
+                "passed": 2,
+                "pending": 0,
+                "applicable": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "summary",
+        "data": {
+          "profile": "countdown-card-spec-v1",
+          "total": 6,
+          "samples": [
+            {
+              "样本": "Q001",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "once",
+              "期望天数": 46,
+              "总分": 79.6,
+              "等级": "良好",
+              "目标语义": 40.0,
+              "可见性": 17.9,
+              "规范符合": 11.7,
+              "素材渲染": 10.0,
+              "通过": 21,
+              "失败": 10,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+              "待复核项": "",
+              "图片": "samples/Q001/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 11.7,
+                  "ratio": 46.7,
+                  "checks": 15,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            },
+            {
+              "样本": "Q031",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "repeat_week",
+              "期望天数": 1,
+              "总分": 79.6,
+              "等级": "良好",
+              "目标语义": 40.0,
+              "可见性": 17.9,
+              "规范符合": 11.7,
+              "素材渲染": 10.0,
+              "通过": 20,
+              "失败": 10,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+              "待复核项": "",
+              "图片": "samples/Q031/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 11.7,
+                  "ratio": 46.7,
+                  "checks": 15,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            },
+            {
+              "样本": "Q061",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "lunar_once",
+              "期望天数": "—",
+              "总分": 67.3,
+              "等级": "及格",
+              "目标语义": null,
+              "可见性": 17.9,
+              "规范符合": 12.5,
+              "素材渲染": 10.0,
+              "通过": 15,
+              "失败": 9,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+              "待复核项": "",
+              "图片": "samples/Q061/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": null,
+                  "ratio": null,
+                  "checks": 0,
+                  "passed": 0,
+                  "pending": 0,
+                  "applicable": false,
+                  "reason": "未门禁"
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 12.5,
+                  "ratio": 50.0,
+                  "checks": 14,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            },
+            {
+              "样本": "Q076",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "repeat_day",
+              "期望天数": 0,
+              "总分": 79.6,
+              "等级": "良好",
+              "目标语义": 40.0,
+              "可见性": 17.9,
+              "规范符合": 11.7,
+              "素材渲染": 10.0,
+              "通过": 20,
+              "失败": 10,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+              "待复核项": "",
+              "图片": "samples/Q076/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 11.7,
+                  "ratio": 46.7,
+                  "checks": 15,
+                  "passed": 7,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            },
+            {
+              "样本": "Q086",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "repeat_month",
+              "期望天数": 28,
+              "总分": 81.2,
+              "等级": "良好",
+              "目标语义": 40.0,
+              "可见性": 17.9,
+              "规范符合": 13.3,
+              "素材渲染": 10.0,
+              "通过": 21,
+              "失败": 9,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+              "待复核项": "",
+              "图片": "samples/Q086/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 13.3,
+                  "ratio": 53.3,
+                  "checks": 15,
+                  "passed": 8,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            },
+            {
+              "样本": "Q091",
+              "状态": "failed",
+              "结论": "可见性失败",
+              "场景": "repeat_year",
+              "期望天数": 198,
+              "总分": 81.2,
+              "等级": "良好",
+              "目标语义": 40.0,
+              "可见性": 17.9,
+              "规范符合": 13.3,
+              "素材渲染": 10.0,
+              "通过": 21,
+              "失败": 9,
+              "待复核": 0,
+              "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+              "待复核项": "",
+              "图片": "samples/Q091/injected.png",
+              "尺寸": "2x2",
+              "维度": [
+                {
+                  "key": "target",
+                  "label": "目标语义",
+                  "max": 40.0,
+                  "score": 40.0,
+                  "ratio": 100.0,
+                  "checks": 3,
+                  "passed": 3,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "visibility",
+                  "label": "可见性",
+                  "max": 25.0,
+                  "score": 17.9,
+                  "ratio": 71.4,
+                  "checks": 7,
+                  "passed": 5,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "spec",
+                  "label": "规范符合",
+                  "max": 25.0,
+                  "score": 13.3,
+                  "ratio": 53.3,
+                  "checks": 15,
+                  "passed": 8,
+                  "pending": 0,
+                  "applicable": true
+                },
+                {
+                  "key": "asset",
+                  "label": "素材渲染",
+                  "max": 10.0,
+                  "score": 10.0,
+                  "ratio": 100.0,
+                  "checks": 2,
+                  "passed": 2,
+                  "pending": 0,
+                  "applicable": true
+                }
+              ]
+            }
+          ],
+          "rules": [
+            {
+              "规则": "TARGET.BINDING_MISSING",
+              "说明": "期望字段被组件引用",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.BINDING_VALUE_MISMATCH",
+              "说明": "绑定值随注入变化",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.DAYS_MISMATCH",
+              "说明": "天数与参考日一致",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.RELATION_TEXT_MISMATCH",
+              "说明": "关系文案与日期差一致",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.VISIBLE_EXPECTATION_MISSING",
+              "说明": "期望文本可见",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.PLACEHOLDER_VISIBLE",
+              "说明": "无占位文案",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "TARGET.SCENARIO_RULE_VIOLATION",
+              "说明": "场景规则",
+              "通过": 1,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.TEXT_CLIPPED",
+              "说明": "文字未被裁切",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "VIS.TEXT_OVERFLOW",
+              "说明": "文字未越出画布",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.TEXT_OVERLAP",
+              "说明": "文字未互相遮挡",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.IMAGE_OVERFLOW",
+              "说明": "图片未越出画布",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.IMAGE_LOAD_FAILED",
+              "说明": "素材真实加载",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.FONT_TOO_SMALL",
+              "说明": "正文字号下限",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "VIS.CONTRAST_LOW",
+              "说明": "文字对比度",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "ASSET.FILE_MISSING",
+              "说明": "本地素材文件存在",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.RADIUS",
+              "说明": "圆角 20",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.PADDING",
+              "说明": "内边距 12",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.BG_FULL_BLEED",
+              "说明": "背景铺满",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.MASK",
+              "说明": "黑色蒙层 60%",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.TITLE_REQUIRED",
+              "说明": "标题必选",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.TITLE_FONT",
+              "说明": "标题 16/20fp",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS",
+              "说明": "标题单行省略",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR",
+              "说明": "标题白色",
+              "通过": 2,
+              "失败": 4,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 33.3
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT",
+              "说明": "主值 56/38fp",
+              "通过": 1,
+              "失败": 5,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 16.7
+            },
+            {
+              "规则": "SPEC.UNIT_FONT",
+              "说明": "单位 16fp 独立",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT",
+              "说明": "副文本 16fp",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR",
+              "说明": "副文本 60% 白",
+              "通过": 0,
+              "失败": 6,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 0.0
+            },
+            {
+              "规则": "SPEC.CONTENT_TYPE",
+              "说明": "内容属于 C1–C5",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.PATTERN_GEOMETRY",
+              "说明": "图案几何",
+              "通过": 0,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 6,
+              "通过率": null
+            },
+            {
+              "规则": "SPEC.DIGIT_LIMIT",
+              "说明": "数字最多 6 位",
+              "通过": 5,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 1,
+              "通过率": 100.0
+            },
+            {
+              "规则": "SPEC.SAFE_AREA",
+              "说明": "安全区内",
+              "通过": 6,
+              "失败": 0,
+              "待复核": 0,
+              "不适用": 0,
+              "通过率": 100.0
+            }
+          ],
+          "captureError": "",
+          "facts": {
+            "total": 6,
+            "passed": 0,
+            "partial": 0,
+            "failed": 6,
+            "passRate": 66.3,
+            "averageScore": 78.1,
+            "averageTarget": 40.0,
+            "averageVisibility": 17.9,
+            "averageSpec": 12.4,
+            "averageAsset": 10.0
+          }
+        }
+      },
+      {
+        "key": "report",
+        "path": "report.html",
+        "alt": "目标效果评测报告"
+      }
+    ]
+  }
+}

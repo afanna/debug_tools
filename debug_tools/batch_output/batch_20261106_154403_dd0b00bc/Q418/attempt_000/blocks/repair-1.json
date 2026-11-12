@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"primary\",\"details\"]]\n[\"primary\",\"TextBlock\",{\"items\":[{\"label\":\"奶奶生日 10月5日\",\"value\":\"{{ ${/data/countdown0/countdownDays} + '天' }}\"},{\"label\":\"爷爷生日 6月24日\",\"value\":\"{{ ${/data/countdown1/countdownDays} + '天' }}\"}]}]\n[\"details\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"爸爸生日 4月19日\",\"value\":\"{{ ${/data/countdown2/countdownDays} + '天' }}\"},{\"label\":\"妈妈生日 4月12日\",\"value\":\"{{ ${/data/countdown3/countdownDays} + '天' }}\"},{\"label\":\"崔景会生日 10月28日\",\"value\":\"{{ ${/data/countdown4/countdownDays} + '天' }}\"},{\"label\":\"父母结婚纪念日 1月23日\",\"value\":\"{{ ${/data/countdown5/countdownDays} + '天' }}\"}],\"fontSize\":12}]\n[\"/data/countdown0/countdownDays\",30]\n[\"/data/countdown1/countdownDays\",30]\n[\"/data/countdown2/countdownDays\",30]\n[\"/data/countdown3/countdownDays\",30]\n[\"/data/countdown4/countdownDays\",30]\n[\"/data/countdown5/countdownDays\",30]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "语义布局不符合合同：节点 details：details 槽必须使用 TextBlock、TopTextBottomValue、SummaryList 或 EventCard。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+    }
+  ]
+}

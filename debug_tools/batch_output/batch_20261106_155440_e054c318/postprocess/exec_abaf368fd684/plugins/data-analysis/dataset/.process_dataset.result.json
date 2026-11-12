@@ -1,0 +1,397 @@
+{
+  "status": "success",
+  "summary": "已分析 107 个样本，缺失指标保持未知",
+  "facts": {
+    "sampleCount": 107
+  },
+  "artifacts": [
+    {
+      "key": "statistics",
+      "data": {
+        "schemaVersion": "batch-analysis-v1",
+        "sampleCount": 107,
+        "requestCount": 107,
+        "paddedCount": 0,
+        "effectiveCount": 107,
+        "pass1": {
+          "hits": 0,
+          "count": 0,
+          "rate": null
+        },
+        "pass2": {
+          "hits": 0,
+          "count": 0,
+          "rate": null
+        },
+        "elapsedMs": {
+          "sum": 218566.03,
+          "count": 107,
+          "mean": 2042.6731775700935
+        },
+        "planMs": {
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        "generateMs": {
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        "repairMs": {
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        "themeMs": {
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        "interfaceRetries": {
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        "repairs": {
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        "modelRetries": {
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        "planRetries": {
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        "providerFallbacks": {
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        "models": {
+          "all": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          },
+          "plan": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          },
+          "generate": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          },
+          "repair": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          },
+          "theme": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          },
+          "unknown": {
+            "ttftMs": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            },
+            "tps": {
+              "sum": 0,
+              "count": 0,
+              "mean": null
+            }
+          }
+        },
+        "usage": {
+          "components": {
+            "count": 0,
+            "used": 0,
+            "rate": null,
+            "items": []
+          },
+          "assets": {
+            "count": 0,
+            "used": 0,
+            "rate": null,
+            "items": []
+          },
+          "events": {
+            "count": 0,
+            "used": 0,
+            "rate": null,
+            "items": []
+          },
+          "data": {
+            "count": 0,
+            "used": 0,
+            "rate": null,
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "key": "overview",
+      "data": [
+        {
+          "label": "实际请求",
+          "value": 107
+        },
+        {
+          "label": "补齐记录",
+          "value": 0
+        },
+        {
+          "label": "有效统计记录",
+          "value": 107
+        },
+        {
+          "label": "pass@1",
+          "value": null,
+          "unit": "%",
+          "description": "有效实际请求 0"
+        },
+        {
+          "label": "pass@2",
+          "value": null,
+          "unit": "%",
+          "description": "有效实际请求 0"
+        },
+        {
+          "label": "计划平均耗时",
+          "value": null,
+          "unit": "ms",
+          "description": "有效记录 0"
+        },
+        {
+          "label": "生成平均耗时",
+          "value": null,
+          "unit": "ms",
+          "description": "有效记录 0"
+        },
+        {
+          "label": "修复平均耗时",
+          "value": null,
+          "unit": "ms",
+          "description": "有效记录 0"
+        },
+        {
+          "label": "主题平均耗时",
+          "value": null,
+          "unit": "ms",
+          "description": "有效记录 0"
+        },
+        {
+          "label": "接口端到端平均耗时",
+          "value": 2042.6731775700935,
+          "unit": "ms",
+          "description": "有效记录 107"
+        },
+        {
+          "label": "平均接口重试",
+          "value": null,
+          "unit": "次",
+          "description": "有效记录 0"
+        },
+        {
+          "label": "平均质量修复",
+          "value": null,
+          "unit": "次",
+          "description": "有效记录 0"
+        },
+        {
+          "label": "平均模型失败重试",
+          "value": null,
+          "unit": "次",
+          "description": "有效记录 0"
+        },
+        {
+          "label": "平均计划重试",
+          "value": null,
+          "unit": "次",
+          "description": "有效记录 0"
+        },
+        {
+          "label": "平均提供方切换",
+          "value": null,
+          "unit": "次",
+          "description": "有效记录 0"
+        },
+        {
+          "label": "模型 TTFT",
+          "value": null,
+          "unit": "ms",
+          "description": "有效物理调用 0"
+        },
+        {
+          "label": "模型 TPS",
+          "value": null,
+          "unit": "token/s",
+          "description": "有效物理调用 0"
+        },
+        {
+          "label": "components 类别使用率",
+          "value": null,
+          "unit": "%",
+          "description": "使用 0 / 可分析 0"
+        },
+        {
+          "label": "assets 类别使用率",
+          "value": null,
+          "unit": "%",
+          "description": "使用 0 / 可分析 0"
+        },
+        {
+          "label": "events 类别使用率",
+          "value": null,
+          "unit": "%",
+          "description": "使用 0 / 可分析 0"
+        },
+        {
+          "label": "data 类别使用率",
+          "value": null,
+          "unit": "%",
+          "description": "使用 0 / 可分析 0"
+        }
+      ]
+    },
+    {
+      "key": "usage",
+      "data": []
+    },
+    {
+      "key": "models",
+      "data": [
+        {
+          "phase": "all",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "all",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "plan",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "plan",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "generate",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "generate",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "repair",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "repair",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "theme",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "theme",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "unknown",
+          "metric": "ttftMs",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        },
+        {
+          "phase": "unknown",
+          "metric": "tps",
+          "sum": 0,
+          "count": 0,
+          "mean": null
+        }
+      ]
+    }
+  ]
+}

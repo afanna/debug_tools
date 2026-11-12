@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "content: DataDisplay requires exactly one of label or icon.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

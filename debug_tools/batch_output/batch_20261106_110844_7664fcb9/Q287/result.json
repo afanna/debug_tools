@@ -1,0 +1,21 @@
+{
+  "id": "Q287",
+  "fileName": "Q287.json",
+  "title": "蓝牙耳机",
+  "query": "创建一张蓝牙耳机卡片，显示耳机名称和电量信息，使用大卡片尺寸。",
+  "size": "2x4",
+  "sequence": 2,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 10203.28,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 134,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 9513.93,
+  "uid": "batch-7664fcb9-00002-000",
+  "finalAttempt": 0
+}

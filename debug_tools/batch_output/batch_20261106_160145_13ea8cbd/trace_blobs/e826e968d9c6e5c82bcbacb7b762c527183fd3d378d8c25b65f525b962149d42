@@ -1,0 +1,108 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "districtName": "萧山区",
+        "forecastDays": 1,
+        "prefectureName": "杭州市"
+      },
+      "candidateOutputFields": [
+        "/current/temperatureText",
+        "/current/condition"
+      ],
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Weather_CityCode",
+          "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+        },
+        "call": "clickToDeeplink"
+      },
+      "capabilityId": "event.open.weather"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "districtName": "萧山区",
+          "forecastDays": 1,
+          "prefectureName": "杭州市"
+        },
+        "candidateOutputFields": [
+          "/current/temperatureText",
+          "/current/condition"
+        ],
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Weather_CityCode",
+            "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.weather"
+      }
+    ],
+    "description": "萧山天气速览",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "HLS-AL00 7.0.0.111",
+    "size": "2x2",
+    "title": "今日天气",
+    "uid": "batch-13ea8cbd-00096-000",
+    "userQuery": "做一张萧山今日天气卡片，显示当前温度和天气现象。本轮卡片静态内容（用作展示的外部事实）：萧山区今日小雨转中雨，14℃~19℃。"
+  },
+  "description": "萧山天气速览",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "HLS-AL00",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261102234423386"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "HLS-AL00 7.0.0.111",
+  "session": {
+    "interactionId": "Q508-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x2",
+  "title": "今日天气",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00096-000"
+    }
+  },
+  "userQuery": "做一张萧山今日天气卡片，显示当前温度和天气现象。本轮卡片静态内容（用作展示的外部事实）：萧山区今日小雨转中雨，14℃~19℃。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

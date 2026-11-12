@@ -1,0 +1,85 @@
+{
+  "requestId": "batch-13ea8cbd&Q418-000",
+  "status": "degraded",
+  "errorCode": "",
+  "error": {},
+  "data": {
+    "status": "degraded",
+    "artifactUrl": "https://obs.todo.local/widget/artifact_e9a6d0bd-6fa0-4ec8-9ca7-6895e8a0c5d0.md",
+    "artifactDigest": "sha256:f932e69cbaea8d3d9a993ce3f7b5915fa92ba9a8d954ea67b921e3918e68fe08",
+    "suggestSize": "2x4",
+    "removedCapabilities": [],
+    "errorCode": "",
+    "effectiveCapabilities": {
+      "data": [
+        "GetCountdownDays",
+        "GetCountdownDays",
+        "GetCountdownDays",
+        "GetCountdownDays",
+        "GetCountdownDays",
+        "GetCountdownDays"
+      ],
+      "event": [],
+      "asset": []
+    },
+    "omittedRequirements": [
+      "奶奶生日的倒计时天数",
+      "爷爷生日的倒计时天数"
+    ],
+    "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。"
+  },
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q418-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q418-000",
+          "streamType": "partial",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q418-000",
+          "streamType": "partial",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"type\":\"result\",\"tool\":\"generateWidgetCardCompactDsl\",\"operation\":\"generateWidgetCardCompactDsl\",\"requestId\":\"batch-13ea8cbd&Q418-000\",\"data\":{\"status\":\"degraded\",\"artifactUrl\":\"https://obs.todo.local/widget/artifact_e9a6d0bd-6fa0-4ec8-9ca7-6895e8a0c5d0.md\",\"artifactDigest\":\"sha256:f932e69cbaea8d3d9a993ce3f7b5915fa92ba9a8d954ea67b921e3918e68fe08\",\"suggestSize\":\"2x4\",\"removedCapabilities\":[],\"errorCode\":\"\",\"effectiveCapabilities\":{\"data\":[\"GetCountdownDays\",\"GetCountdownDays\",\"GetCountdownDays\",\"GetCountdownDays\",\"GetCountdownDays\",\"GetCountdownDays\"],\"event\":[],\"asset\":[]},\"omittedRequirements\":[\"奶奶生日的倒计时天数\",\"爷爷生日的倒计时天数\"],\"agentInstruction\":\"已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。\"},\"status\":\"degraded\",\"errorCode\":\"\",\"error\":{}}",
+          "streamingTextId": "batch-13ea8cbd&Q418-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

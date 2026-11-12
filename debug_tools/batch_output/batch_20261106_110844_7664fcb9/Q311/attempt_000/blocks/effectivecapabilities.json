@@ -1,0 +1,21 @@
+{
+  "data": [
+    "GetHealthAndSportSummary"
+  ],
+  "event": [
+    {
+      "id": "event.open.health.sport",
+      "description": "打开华为运动健康应用的锻炼Tab页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+      }
+    }
+  ],
+  "asset": [
+    "asset.emoji_run"
+  ]
+}

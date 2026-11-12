@@ -1,0 +1,21 @@
+{
+  "title": "今日天气",
+  "description": "天气速览",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "东胜区",
+        "forecastDays": 3,
+        "prefectureName": "鄂尔多斯市"
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}

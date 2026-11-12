@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "generation-trace-v2",
+  "instrumentationVersion": 2,
+  "traceId": "e1b321420f384fbbafd4e6ad020900a0",
+  "rootSpanId": "6c0f247ded34453c",
+  "uid": "batch-dd0b00bc-00045-000",
+  "state": "complete",
+  "startedAt": "2026-11-06T07:45:27.775758+00:00",
+  "recordCount": 13,
+  "artifactCount": 4,
+  "completedAt": "2026-11-06T07:45:27.806396+00:00",
+  "summary": {
+    "totalDurationMs": 22.03,
+    "latencyByStage": {
+      "generation.branch": 6.81,
+      "generationPreflight": 1.11,
+      "interfaceAttempt.total": 11.39,
+      "prepare": 6.21,
+      "protocolSelection": 0.68,
+      "registry": 2.93
+    },
+    "attemptCounts": {
+      "generationBranches": 1,
+      "interfaceAttempts": 1
+    },
+    "errorCode": "UNKNOWN_CAPABILITY"
+  }
+}

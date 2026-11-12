@@ -1,0 +1,11 @@
+{
+  "errors": [
+    "Plan fact is displayed more than once in visible DSL: 当前天气温度文本（已含℃单位） (/data/weather/current/temperatureText); expected 1, got 2; occurrences: content_primary (EmphasisText).mainText, upper (InfoBlock).primaryText.",
+    "Plan fact is displayed more than once in visible DSL: 当前天气现象 (/data/weather/current/condition); expected 1, got 2; occurrences: content_primary (EmphasisText).secondaryText, lower (InfoBlock).primaryText."
+  ],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [
+    "所在区县名称"
+  ],
+  "warnings": []
+}

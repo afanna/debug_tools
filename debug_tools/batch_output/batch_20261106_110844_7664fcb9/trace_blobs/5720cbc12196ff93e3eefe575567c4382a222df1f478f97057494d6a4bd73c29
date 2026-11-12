@@ -1,0 +1,37 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/currentTime/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期，作为日历卡片核心日期"
+    },
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/currentTime/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/currentTime/lunarDate",
+      "priority": "should",
+      "requirement": "传统农历日期"
+    }
+  ],
+  "layoutHints": [
+    "S-center",
+    "S-title-dual-content"
+  ]
+}

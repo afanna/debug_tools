@@ -1,0 +1,10 @@
+```genui
+["root","Layout",{"layout":"S-title-dual-content"},["title","primary","support"]]
+["title","SingleLineTitle",{"title":{"path":"/data/weather/location/prefectureName"},"fontSize":12}]
+["primary","EmphasisText",{"mainText":"{{ '空气质量 ' + ${/data/weather/current/airQuality} }}","fontSize":18}]
+["support","SecondaryBody",{"items":[{"label":"温度 ","value":{"path":"/data/weather/current/temperatureText"}},{"label":"天气 ","value":{"path":"/data/weather/current/condition"}}],"fontSize":14}]
+["/data/weather/location/prefectureName","上海市"]
+["/data/weather/current/airQuality","良"]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+```

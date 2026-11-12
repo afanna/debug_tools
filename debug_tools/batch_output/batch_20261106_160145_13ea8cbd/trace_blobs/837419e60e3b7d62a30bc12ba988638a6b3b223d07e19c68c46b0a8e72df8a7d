@@ -1,0 +1,94 @@
+{
+  "approvedOmittedFactIndexes": [
+    0,
+    1
+  ],
+  "capacityFits": [
+    {
+      "actualItemCount": 2,
+      "actualRowCount": 2,
+      "componentId": "primary",
+      "componentType": "SecondaryBody",
+      "directlyFits": [],
+      "doesNotFit": [
+        {
+          "itemIndex": 0,
+          "planFacts": [
+            {
+              "factIndex": 0,
+              "priority": "must",
+              "requirement": "奶奶生日的倒计时天数"
+            }
+          ],
+          "value": {
+            "value": "{{ '奶奶生日 10月5日 · 还有 ' + ${/data/countdown0/countdownDays} + ' 天' }}"
+          }
+        },
+        {
+          "itemIndex": 1,
+          "planFacts": [
+            {
+              "factIndex": 1,
+              "priority": "must",
+              "requirement": "爷爷生日的倒计时天数"
+            }
+          ],
+          "value": {
+            "value": "{{ '爷爷生日 6月24日 · 还有 ' + ${/data/countdown1/countdownDays} + ' 天' }}"
+          }
+        }
+      ],
+      "effectiveColumnCount": 1,
+      "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+      "maxRetainedRowCount": 0,
+      "overflowFactCount": 2,
+      "overflowItemCount": 2,
+      "parentAvailableHeight": 126.0,
+      "parentId": "root",
+      "rowHeights": [
+        12.0,
+        12.0
+      ],
+      "rowSpacing": 2.0,
+      "scope": "currentComponentItemsOnly"
+    }
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 2,
+  "consecutiveFailures": 1,
+  "fallbackAttempt": 0,
+  "fallbackAttemptLimit": 2,
+  "fallbackRemainingAttempts": 2,
+  "fallbackStage": "drop_optional_component",
+  "fingerprint": "0acc27a72db76d6a",
+  "instruction": "已进入有界删除兜底。只允许删除程序指定的一个非 Action 业务展示组件：primary (SecondaryBody)，对应信息：奶奶生日的倒计时天数、爷爷生日的倒计时天数。必须同时从直接父组件 children 中移除该组件 ID，并重排其余全部 must/should 事实与 Action；本轮不得删除任何其他组件、改变动态绑定、缩字、裁切或隐藏内容。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_structure",
+      "layout_capacity",
+      "layout_structure",
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "7d2badfd0298f530"
+  },
+  "noProgress": false,
+  "optionalDrop": {
+    "allowedOmittedFactIndexes": [
+      0,
+      1
+    ],
+    "componentId": "primary",
+    "componentType": "SecondaryBody",
+    "containsMustFacts": true,
+    "requirements": [
+      "奶奶生日的倒计时天数",
+      "爷爷生日的倒计时天数"
+    ]
+  },
+  "repairStrategy": "drop_optional_component",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

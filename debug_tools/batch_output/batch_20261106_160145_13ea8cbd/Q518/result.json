@@ -1,0 +1,21 @@
+{
+  "id": "Q518",
+  "fileName": "Q518.json",
+  "title": "倒计时",
+  "query": "给我在桌面设一个能看见倒计时的卡片\n\n本轮卡片静态内容（用作展示的外部事实）：\n目标日期为2027年6月21日",
+  "size": "2x2",
+  "sequence": 106,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5661.5,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 96,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5633.92,
+  "uid": "batch-13ea8cbd-00106-000",
+  "finalAttempt": 0
+}

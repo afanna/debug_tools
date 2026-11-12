@@ -1,0 +1,21 @@
+{
+  "id": "Q487",
+  "fileName": "Q487.json",
+  "title": "睡眠卡片",
+  "query": "在桌面增加一个显示睡眠信息的卡片，展示睡眠得分、睡眠状态、夜间睡眠时长、深睡时长、入睡时间和醒来时间。",
+  "size": "2x2",
+  "sequence": 78,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2042.63,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00078-000",
+  "finalAttempt": 0
+}

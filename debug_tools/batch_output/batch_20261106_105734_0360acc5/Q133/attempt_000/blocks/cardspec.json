@@ -1,0 +1,28 @@
+{
+  "title": "运动天气卡片",
+  "description": "展示昨天的累计步数和今天的实时温度",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "雨花台区",
+        "forecastDays": 1,
+        "prefectureName": "南京市"
+      },
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": -1
+      },
+      "writeResultTo": "/data/healthSport"
+    }
+  ]
+}

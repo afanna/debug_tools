@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"东莞今日天气现象（晴）","priority":"must","componentHints":["EmphasisText","DataDisplay","InfoBlock"]},{"requirement":"东莞今日气温范围 23℃~31℃","priority":"must","componentHints":["EmphasisText","EmphasizedData","DataDisplay"]}],"layoutHints":["S-center","S-title-content"]}}

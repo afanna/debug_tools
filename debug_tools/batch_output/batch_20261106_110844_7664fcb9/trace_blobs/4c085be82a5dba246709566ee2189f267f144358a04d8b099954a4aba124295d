@@ -1,0 +1,32 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {},
+      "capabilityId": "GetHealthAndSportSummary",
+      "writeResultTo": "/data/health"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "GetPhoneBatteryInfo",
+      "writeResultTo": "/data/battery"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "GetEarphoneInfo",
+      "writeResultTo": "/data/earphone"
+    }
+  ],
+  "description": "实时血氧数据",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "血氧监测"
+}

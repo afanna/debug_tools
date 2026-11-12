@@ -1,0 +1,55 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": null,
+      "reason": "无标题图标需求，铃铛图标与备忘录/待办语义不匹配"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/memo/noteCount",
+      "priority": "must",
+      "requirement": "备忘录笔记总数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/memo/todoTotalCount",
+      "priority": "must",
+      "requirement": "待办总数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/memo/todoPendingCount",
+      "priority": "must",
+      "requirement": "未完成待办数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/memo/todoCompletedCount",
+      "priority": "should",
+      "requirement": "已完成待办数"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-title-dual-content"
+  ]
+}

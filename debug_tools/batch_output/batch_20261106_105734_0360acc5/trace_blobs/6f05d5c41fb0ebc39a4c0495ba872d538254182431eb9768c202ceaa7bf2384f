@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"距离2027年1月1日新年倒计时天数","priority":"must","componentHints":["DataDisplay"],"dataId":"/data/countdown/countdownDays"},{"requirement":"展示静态说明：距离2027年1月1日新年倒计时","priority":"must","componentHints":["DataDisplay"],"text":"距离2027年1月1日新年倒计时"}],"layoutHints":["S-center"]}}

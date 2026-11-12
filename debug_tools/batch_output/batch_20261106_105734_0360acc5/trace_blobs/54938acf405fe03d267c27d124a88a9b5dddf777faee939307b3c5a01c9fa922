@@ -1,0 +1,19 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "forecastDays": 1
+      },
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "description": "展示今日温度与降雨情况的蓝色背景天气卡片",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "今日天气"
+}

@@ -1,0 +1,36 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "EmphasisText",
+        "DataDisplay"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前温度读数（已含℃单位）"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/weather/location/prefectureName",
+      "priority": "must",
+      "requirement": "城市名称，标识天气所属城市"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-content"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3
+      ],
+      "id": "scores",
+      "identity": "张定豪",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡主题：六（3）班张定豪的成绩",
+      "sourceTexts": [
+        "张定豪，语文87分，数学98分，英语98.75分。"
+      ],
+      "text": "六（3）班 张定豪成绩"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "语文成绩87分",
+      "sourceTexts": [
+        "张定豪，语文87分，数学98分，英语98.75分。"
+      ],
+      "text": "语文 87分"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "数学成绩98分",
+      "sourceTexts": [
+        "张定豪，语文87分，数学98分，英语98.75分。"
+      ],
+      "text": "数学 98分"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "英语成绩98.75分",
+      "sourceTexts": [
+        "张定豪，语文87分，数学98分，英语98.75分。"
+      ],
+      "text": "英语 98.75分"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "rows",
+  "selectionNotes": [
+    "三科成绩为短标签加短数值，改用SingleLineList逐项单行展示，避免副文本换行超限",
+    "标题承载班级与姓名，正文只列科目与分数，不重复姓名",
+    "分数保留原始精度，英语98.75分不取整"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"W-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"六（3）班 张定豪成绩\"}]\n[\"body\", \"SingleLineList\", {\"items\": [{\"text\": \"张定豪\", \"assist\": \"语文 87分；数学 98分；英语 98.75分\"}]}]\n[\"/state/ready\", true]"
+}

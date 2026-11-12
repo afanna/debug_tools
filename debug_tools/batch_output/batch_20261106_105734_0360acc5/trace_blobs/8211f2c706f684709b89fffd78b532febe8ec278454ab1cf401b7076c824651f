@@ -1,0 +1,20 @@
+{
+  "category": "layout_capacity",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "40a82cae2ac03f0c",
+  "instruction": "重算受影响信息组的完整高度与间距，改用能闭合的合法子布局组合。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": false,
+    "observedCategories": [
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "d557ec4ea9819e54"
+  },
+  "noProgress": false,
+  "repairStrategy": "rebudget",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "sublayout"
+}

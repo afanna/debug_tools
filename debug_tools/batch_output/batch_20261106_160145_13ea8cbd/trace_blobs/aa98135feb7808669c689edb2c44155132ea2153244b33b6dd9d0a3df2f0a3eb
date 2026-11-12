@@ -1,0 +1,61 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.viewNote",
+        "assetId": "asset.list_book_fill"
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "唯一素材已分配给动作，标题无可用匹配素材"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/memo/notes/0/title",
+      "priority": "must",
+      "requirement": "展示备忘录笔记标题（第一条）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/memo/notes/0/content",
+      "priority": "must",
+      "requirement": "展示备忘录笔记正文（第一条）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/notes/0/modifiedTimeText",
+      "priority": "should",
+      "requirement": "展示备忘录笔记修改时间（第一条）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/notes/1/title",
+      "priority": "should",
+      "requirement": "展示备忘录笔记标题（第二条）"
+    },
+    {
+      "actionId": "event.viewNote",
+      "componentHints": [
+        "CardButton",
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "点击卡片跳转到备忘录应用进行编辑"
+    }
+  ],
+  "layoutHints": [
+    "W-content-side-slots"
+  ]
+}

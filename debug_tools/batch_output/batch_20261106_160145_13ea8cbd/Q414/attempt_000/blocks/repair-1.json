@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-content-action\"},[\"title\",\"content\",\"action\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"今日运动健康\",\"icon\":\"resources/base/media/figure_run.svg\",\"fontSize\":12}]\n[\"content\",\"TableText\",{\"items\":[{\"label\":\"步数\",\"value\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\"},{\"label\":\"热量\",\"value\":{\"path\":\"/data/healthSport/dailyTotalCaloriesText\"}},{\"label\":\"睡眠\",\"value\":\"{{ ${/data/healthSport/nightSleepDurationText} + ' · ' + ${/data/healthSport/sleepStatus} }}\"},{\"label\":\"睡眠得分\",\"value\":\"{{ ${/data/healthSport/sleepScore} + '分' }}\"}],\"fontSize\":10}]\n[\"action\",\"PillButton\",{\"label\":\"打开锻炼\",\"icon\":\"resources/base/media/ic_sportsHealth_bule.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Health\",\"uri\":\"huaweischeme://healthapp/home/sport?sportType=2\"}}]}]\n[\"/data/healthSport/dailySteps\",6200]\n[\"/data/healthSport/dailyTotalCaloriesText\",\"420 千卡\"]\n[\"/data/healthSport/nightSleepDurationText\",\"7小时1分\"]\n[\"/data/healthSport/sleepStatus\",\"良好\"]\n[\"/data/healthSport/sleepScore\",82]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "content: TableText.items requires 2 to 3 entries."
+    }
+  ]
+}

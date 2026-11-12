@@ -1,0 +1,41 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.calendar_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/currentTime/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/currentTime/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/currentTime/lunarDate",
+      "priority": "should",
+      "requirement": "当前农历日期"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-content"
+  ]
+}

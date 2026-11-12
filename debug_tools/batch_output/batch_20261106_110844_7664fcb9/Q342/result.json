@@ -1,0 +1,21 @@
+{
+  "id": "Q342",
+  "fileName": "Q342.json",
+  "title": "桌面信息",
+  "query": "做一张桌面卡片，显示时间、日期、电量、步数和小艺简报内容。",
+  "size": "2x4",
+  "sequence": 27,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7848.0,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 103,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7842.49,
+  "uid": "batch-7664fcb9-00027-000",
+  "finalAttempt": 0
+}

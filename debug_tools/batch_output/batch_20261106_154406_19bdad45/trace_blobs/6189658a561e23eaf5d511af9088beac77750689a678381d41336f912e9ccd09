@@ -1,0 +1,28 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "显示当前日期"
+    },
+    {
+      "componentHints": [
+        "DataDisplay",
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "显示当前星期"
+    }
+  ],
+  "layoutHints": [
+    "S-center",
+    "S-title-dual-content"
+  ]
+}

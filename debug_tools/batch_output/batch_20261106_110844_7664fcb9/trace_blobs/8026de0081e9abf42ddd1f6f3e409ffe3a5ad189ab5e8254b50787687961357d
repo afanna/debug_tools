@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"展示每天的运动步数（纯整数后追加“步”）","priority":"must","dataId":"/data/healthSport/dailySteps","componentHints":["DataDisplay","EmphasizedData","InfoBlock"]}],"layoutHints":["S-center"],"assetAssignments":{"actions":[],"title":{"assetId":"asset.figure_run","reason":"跑步人物图标与步数统计语义匹配，用于 DataDisplay 文本模式上方标识"}}}}

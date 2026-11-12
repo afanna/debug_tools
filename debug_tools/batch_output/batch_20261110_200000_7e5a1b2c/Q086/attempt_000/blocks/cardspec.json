@@ -1,0 +1,23 @@
+{
+  "title": "照片备份倒计时",
+  "description": "从2026年7月1日起每两个月备份一次照片，桌面上显示距下次还有几天。",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetDateCounter",
+      "arguments": {
+        "targetDate": "2026-07-01",
+        "repeat": {
+          "unit": "month",
+          "interval": 2
+        }
+      },
+      "writeResultTo": "/data/dateCounter"
+    }
+  ]
+}

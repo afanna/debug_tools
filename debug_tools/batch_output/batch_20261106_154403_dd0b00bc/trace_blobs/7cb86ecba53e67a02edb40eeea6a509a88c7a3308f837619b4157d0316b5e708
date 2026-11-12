@@ -1,0 +1,38 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前日期"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText",
+        "TableText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "should",
+      "requirement": "当前农历日期"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-content"
+  ]
+}

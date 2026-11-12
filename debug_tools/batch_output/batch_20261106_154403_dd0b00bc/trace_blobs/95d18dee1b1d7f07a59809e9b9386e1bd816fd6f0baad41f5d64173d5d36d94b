@@ -1,0 +1,8 @@
+["root","Column",{"width":"matchParent","height":"matchParent","padding":12,"borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","itemMargin":6},["title","__layout__root__body"]]
+["title","SingleLineTitle",{"title":"12:40","icon":"resources/base/media/emoji_time.png","fontSize":12}]
+["__layout__root__body","Column",{"width":"matchParent","itemMargin":8,"alignItems":"start","justifyContent":"start","layoutWeight":1},["__layout__root__primary","__layout__root__details"]]
+["__layout__root__primary","Column",{"width":"matchParent","alignItems":"start","justifyContent":"start","flexShrink":0},["primary"]]
+["primary","SecondaryBody",{"columns":1,"items":[{"value":"11 月 02 日"}],"fontSize":12}]
+["__layout__root__details","Column",{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1},["details"]]
+["details","SummaryList",{"items":["星期一","农历九月廿四"]}]
+["/state/ready",true]

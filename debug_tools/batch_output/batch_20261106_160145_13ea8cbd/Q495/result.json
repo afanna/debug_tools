@@ -1,0 +1,21 @@
+{
+  "id": "Q495",
+  "fileName": "Q495.json",
+  "title": "数字时钟",
+  "query": "修改桌面卡片中的数字时钟文字颜色",
+  "size": "2x2",
+  "sequence": 83,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4101.98,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4093.08,
+  "uid": "batch-13ea8cbd-00083-000",
+  "finalAttempt": 0
+}

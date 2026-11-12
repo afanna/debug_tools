@@ -1,0 +1,17 @@
+{
+  "title": "空气质量卡片",
+  "description": "实时查看当前空气质量等级、温度、湿度等天气信息",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {},
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}

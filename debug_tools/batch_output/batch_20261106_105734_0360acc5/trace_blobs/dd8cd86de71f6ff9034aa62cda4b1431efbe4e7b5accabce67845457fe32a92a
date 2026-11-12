@@ -1,0 +1,23 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "距离2027年1月1日新年倒计时天数"
+    },
+    {
+      "componentHints": [
+        "DataDisplay"
+      ],
+      "priority": "must",
+      "requirement": "展示静态说明：距离2027年1月1日新年倒计时",
+      "text": "距离2027年1月1日新年倒计时"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.health.sport",
+        "assetId": "asset.ic_sportsHealth_bule"
+      }
+    ],
+    "title": {
+      "assetId": "asset.figure_run"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "今日步数（纯整数，展示时追加“步”）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/dailyTotalCaloriesText",
+      "priority": "must",
+      "requirement": "今日活动总消耗热量文本（已含千卡）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/nightSleepDurationText",
+      "priority": "must",
+      "requirement": "夜间睡眠总时长文本（已含单位）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/sleepScore",
+      "priority": "should",
+      "requirement": "睡眠综合得分与状态"
+    },
+    {
+      "actionId": "event.open.health.sport",
+      "componentHints": [
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "打开华为运动健康锻炼页"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content-action",
+    "S-title-primary-secondary-action"
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "COMPACT_DISPLAY_AMBIGUOUS_METRIC: component second_primary: value /data/healthSport/sleepScore has ambiguous meaning (睡眠综合得分，取值范围 0-100。); add a nearby metric label such as 感冒指数、紫外线指数 or 睡眠得分 instead of showing the value alone.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component first_secondary: InfoBlock.secondaryText exceeds its 118vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  }
+]

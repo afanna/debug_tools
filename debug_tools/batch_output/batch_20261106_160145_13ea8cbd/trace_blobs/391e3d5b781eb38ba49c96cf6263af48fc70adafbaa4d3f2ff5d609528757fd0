@@ -1,0 +1,14 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 工资表项目：扣款（超出带标题单行列表容量）.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 工资表项目：实发工资（超出带标题单行列表容量）.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

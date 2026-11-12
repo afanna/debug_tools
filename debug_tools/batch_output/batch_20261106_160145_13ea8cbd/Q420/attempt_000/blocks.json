@@ -1,0 +1,221 @@
+{
+  "cardspec": {
+    "title": "充电卡片",
+    "description": "充电与步数",
+    "suggestSize": "2x2",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "dataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {},
+        "writeResultTo": "/data/healthSport"
+      },
+      {
+        "capabilityId": "GetPhoneBatteryInfo",
+        "arguments": {},
+        "writeResultTo": "/data/phoneBattery"
+      }
+    ]
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\r\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"first\",\"second\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":8,\"linearGradient\":{\"direction\":\"RightBottom\",\"colors\":[[\"#FFCBDDFE\",0],[\"#FFF1F6FE\",1]]}}},{\"id\":\"first\",\"component\":\"Row\",\"children\":[\"first_text\",\"first_visual\"],\"itemMargin\":4,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"center\",\"justifyContent\":\"spaceBetween\",\"clip\":true,\"flexShrink\":0,\"width\":\"matchParent\",\"height\":63,\"backgroundColor\":\"#CCFFFFFF\",\"layoutWeight\":1}},{\"id\":\"first_text\",\"component\":\"Column\",\"children\":[\"first_primary\",\"first_secondary\"],\"itemMargin\":0,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"center\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"first_primary\",\"component\":\"Text\",\"content\":\"{{ ${/data/phoneBattery/batterySOCText} }}\",\"styles\":{\"height\":22,\"fontSize\":16,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"fontColor\":\"#FF1F4799\",\"textOverflow\":\"clip\"}},{\"id\":\"first_secondary\",\"component\":\"Text\",\"content\":\"{{ ${/data/phoneBattery/chargingStatusDesc} }}\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"fontColor\":\"#FF1F4799\"}},{\"id\":\"first_visual\",\"component\":\"Image\",\"src\":\"resources/base/media/ic_charge.svg\",\"styles\":{\"width\":24,\"height\":24,\"objectFit\":\"contain\",\"flexShrink\":0}},{\"id\":\"second\",\"component\":\"Row\",\"children\":[\"second_text\",\"second_visual\"],\"itemMargin\":4,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"center\",\"justifyContent\":\"spaceBetween\",\"clip\":true,\"flexShrink\":0,\"width\":\"matchParent\",\"height\":63,\"backgroundColor\":\"#CCFFFFFF\",\"layoutWeight\":1}},{\"id\":\"second_text\",\"component\":\"Column\",\"children\":[\"second_primary\",\"second_secondary\"],\"itemMargin\":0,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"center\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"second_primary\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\",\"styles\":{\"height\":22,\"fontSize\":16,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"fontColor\":\"#FF1F4799\",\"textOverflow\":\"clip\"}},{\"id\":\"second_secondary\",\"component\":\"Text\",\"content\":\"今日步数\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"fontColor\":\"#991F4799\"}},{\"id\":\"second_visual\",\"component\":\"Image\",\"src\":\"resources/base/media/ic_sportsHealth_bule.svg\",\"styles\":{\"width\":24,\"height\":24,\"objectFit\":\"contain\",\"flexShrink\":0}}]}}\r\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"phoneBattery\":{\"batterySOCText\":\"68%\",\"chargingStatusDesc\":\"未充电\"},\"healthSport\":{\"dailySteps\":6200}}}}}",
+  "schema": {
+    "schemaVersion": "widget-artifact-v2"
+  },
+  "taskspec": {
+    "userQuery": "把步数添加到充电卡片，生成一张同时展示充电状态和今日步数的桌面卡片",
+    "size": "2x2",
+    "appVersion": "11.7.8.342",
+    "eventCandidates": [],
+    "dataModelSchema": {
+      "data": {
+        "healthSport": {
+          "dailySteps": {
+            "type": "integer",
+            "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+            "sampleValue": 6200
+          }
+        },
+        "phoneBattery": {
+          "batterySOCText": {
+            "type": "string",
+            "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+            "sampleValue": "68%",
+            "numericSource": "/data/phoneBattery/batterySOC"
+          },
+          "chargingStatusDesc": {
+            "type": "string",
+            "description": "当前设备电池的充电状态文本描述。",
+            "sampleValue": "未充电"
+          },
+          "batterySOC": {
+            "type": "integer",
+            "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+            "sampleValue": 68
+          }
+        }
+      }
+    },
+    "assetCandidates": [
+      {
+        "id": "asset.ic_charge",
+        "src": "resources/base/media/ic_charge.svg",
+        "description": "样式：黑色单色充电闪电图标，中心为闪电符号并由多层无线或电流弧线环绕，原始尺寸为 80×60，SVG 矢量图（保留原色，禁止染色）保留原始配色；适用：手机充电状态、充电器连接或电池充电信息相关卡片，可结合 GetPhoneBatteryInfo 数据。不表示无线充电、快充或充电完成，除非电池数据明确支持。"
+      },
+      {
+        "id": "asset.ic_sportsHealth_bule",
+        "src": "resources/base/media/ic_sportsHealth_bule.svg",
+        "description": "样式：蓝色纵向渐变圆形底上的白色运动火焰图标，原始尺寸为 20×20，SVG 矢量图（保留原色，禁止染色）需保留原始渐变配色，禁止染色；适用：运动健康、日常活动或锻炼摘要卡片，可结合 GetHealthAndSportSummary 展示步数、热量、距离和运动记录，也可作为 event.open.health.sport、event.open.health.sportsRecord、event.open.health.activityRecord 或 event.open.health.workoutDuration 的辅助入口图标。图标不表示运动目标已达成或用户当前正在运动。"
+      }
+    ]
+  },
+  "effectivecapabilities": {
+    "data": [
+      "GetHealthAndSportSummary",
+      "GetPhoneBatteryInfo"
+    ],
+    "event": [],
+    "asset": [
+      "asset.ic_charge",
+      "asset.ic_sportsHealth_bule"
+    ]
+  },
+  "removedcapabilities": [],
+  "generationplan": {
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {},
+        "writeResultTo": "/data/healthSport",
+        "candidateOutputFields": [
+          "/dailySteps"
+        ]
+      },
+      {
+        "capabilityId": "GetPhoneBatteryInfo",
+        "arguments": {},
+        "writeResultTo": "/data/phoneBattery",
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc",
+          "/batterySOC"
+        ]
+      }
+    ],
+    "candidateEventCandidates": [],
+    "candidateAssetIds": [
+      "asset.ic_charge",
+      "asset.ic_sportsHealth_bule"
+    ]
+  },
+  "meta": {
+    "apiVersion": "v1",
+    "taskSpecVersion": "task-spec-v1",
+    "cardSpecVersion": "card-spec-v1",
+    "dslProtocolVersion": "v0.9",
+    "skillVersion": "skill-widget-v1",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "generationMode": "create",
+    "artifactId": "5ed710fe-46d9-48a8-9bd3-106300953286",
+    "createdAt": 1793952127134
+  },
+  "designcompactdsl": "[\"root\",\"Layout\",{\"layout\":\"S-dual-info\"},[\"first\",\"second\"]]\r\n[\"first\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/phoneBattery/batterySOCText\"},\"secondaryText\":{\"path\":\"/data/phoneBattery/chargingStatusDesc\"},\"visual\":{\"type\":\"icon\",\"icon\":\"resources/base/media/ic_charge.svg\"}}]\r\n[\"second\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\",\"secondaryText\":\"今日步数\",\"visual\":{\"type\":\"icon\",\"icon\":\"resources/base/media/ic_sportsHealth_bule.svg\"}}]\r\n[\"/data/phoneBattery/batterySOCText\",\"68%\"]\r\n[\"/data/phoneBattery/chargingStatusDesc\",\"未充电\"]\r\n[\"/data/healthSport/dailySteps\",6200]",
+  "request": {
+    "content": {
+      "size": "2x2",
+      "functionName": "generateWidgetCardCompactDsl",
+      "romVersion": "CMM-AL00 7.0.0.111",
+      "candidateAssetIds": [
+        "asset.ic_charge",
+        "asset.ic_sportsHealth_bule"
+      ],
+      "candidateEventCandidates": [],
+      "bundleName": "com.huawei.genui",
+      "description": "充电与步数",
+      "userQuery": "把步数添加到充电卡片，生成一张同时展示充电状态和今日步数的桌面卡片",
+      "title": "充电卡片",
+      "candidateDataBindings": [
+        {
+          "capabilityId": "GetHealthAndSportSummary",
+          "arguments": {},
+          "writeResultTo": "/data/healthSport",
+          "candidateOutputFields": [
+            "/dailySteps"
+          ]
+        },
+        {
+          "capabilityId": "GetPhoneBatteryInfo",
+          "arguments": {},
+          "writeResultTo": "/data/phoneBattery",
+          "candidateOutputFields": [
+            "/batterySOCText",
+            "/chargingStatusDesc"
+          ]
+        }
+      ]
+    },
+    "deviceInfo": {
+      "countryCode": "CN",
+      "deviceFormation": "HDSpeaker",
+      "deviceType": 0,
+      "locale": "zh-CN",
+      "phoneType": "CMM-AL00",
+      "prdVer": "11.7.8.342",
+      "sysVer": "EmotionUI_9.0.0",
+      "time": "20261103055342466"
+    },
+    "pagination": {
+      "limit": 5,
+      "start": ""
+    },
+    "session": {
+      "interactionId": "Q420-000",
+      "isNew": true,
+      "sessionId": "batch-13ea8cbd"
+    },
+    "userAuth": {
+      "user": {}
+    },
+    "utterance": {
+      "original": "",
+      "type": "text"
+    },
+    "version": "1.0",
+    "size": "2x2",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL00 7.0.0.111",
+    "candidateAssetIds": [
+      "asset.ic_charge",
+      "asset.ic_sportsHealth_bule"
+    ],
+    "candidateEventCandidates": [],
+    "bundleName": "com.huawei.genui",
+    "description": "充电与步数",
+    "userQuery": "把步数添加到充电卡片，生成一张同时展示充电状态和今日步数的桌面卡片",
+    "title": "充电卡片",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {},
+        "writeResultTo": "/data/healthSport",
+        "candidateOutputFields": [
+          "/dailySteps"
+        ]
+      },
+      {
+        "capabilityId": "GetPhoneBatteryInfo",
+        "arguments": {},
+        "writeResultTo": "/data/phoneBattery",
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc"
+        ]
+      }
+    ]
+  }
+}

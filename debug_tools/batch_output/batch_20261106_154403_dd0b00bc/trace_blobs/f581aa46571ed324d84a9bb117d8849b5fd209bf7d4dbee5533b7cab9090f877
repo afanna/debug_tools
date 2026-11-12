@@ -1,0 +1,81 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3
+      ],
+      "id": "insight",
+      "identity": null,
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 57,
+          "start": 46
+        },
+        {
+          "end": 114,
+          "start": 103
+        }
+      ],
+      "sourceText": "渡人先渡己，自爱圆满。"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 29,
+          "start": 21
+        },
+        {
+          "end": 86,
+          "start": 78
+        }
+      ],
+      "sourceText": "爱是修出的内丹。"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 46,
+          "start": 29
+        },
+        {
+          "end": 103,
+          "start": 86
+        }
+      ],
+      "sourceText": "先把自己活成光，黑暗自会寻光而来。"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 57,
+          "start": 46
+        },
+        {
+          "end": 114,
+          "start": 103
+        }
+      ],
+      "sourceText": "渡人先渡己，自爱圆满。"
+    }
+  ],
+  "version": "static-content-v1"
+}

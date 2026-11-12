@@ -1,0 +1,33 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_PLAN_COVERAGE_FAILED",
+        "message": "Plan fact is missing from visible DSL: 睡眠综合得分与状态 (/data/healthSport/sleepScore).",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "plan_coverage",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "d50c92875029c602",
+      "instruction": "恢复缺失的 Plan 必须事实并复查其所属信息组，不删除其它已正确事实。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "plan_coverage"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "4aa2db512b22e932"
+      },
+      "noProgress": false,
+      "repairStrategy": "coverage_restore",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "information_group"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-content-action\"},[\"title\",\"content\",\"action\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"今日运动健康\",\"icon\":\"resources/base/media/figure_run.svg\",\"fontSize\":12}]\n[\"content\",\"TableText\",{\"items\":[{\"label\":\"步数\",\"value\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\"},{\"label\":\"热量\",\"value\":{\"path\":\"/data/healthSport/dailyTotalCaloriesText\"}},{\"label\":\"睡眠\",\"value\":\"{{ ${/data/healthSport/nightSleepDurationText} + ' · ' + ${/data/healthSport/sleepStatus} }}\"}],\"fontSize\":10}]\n[\"action\",\"PillButton\",{\"label\":\"打开锻炼\",\"icon\":\"resources/base/media/ic_sportsHealth_bule.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Health\",\"uri\":\"huaweischeme://healthapp/home/sport?sportType=2\"}}]}]\n[\"/data/healthSport/dailySteps\",6200]\n[\"/data/healthSport/dailyTotalCaloriesText\",\"420 千卡\"]\n[\"/data/healthSport/nightSleepDurationText\",\"7小时1分\"]\n[\"/data/healthSport/sleepStatus\",\"良好\"]"
+  }
+]

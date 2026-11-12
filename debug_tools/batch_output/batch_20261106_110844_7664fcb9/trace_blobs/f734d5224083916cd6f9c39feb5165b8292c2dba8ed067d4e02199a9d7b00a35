@@ -1,0 +1,78 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前天气温度读数"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/airQuality",
+      "priority": "should",
+      "requirement": "当前空气质量等级"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    },
+    {
+      "componentHints": [
+        "EventCard",
+        "SummaryList"
+      ],
+      "dataId": "/data/calendar/events/0/title",
+      "priority": "must",
+      "requirement": "日程标题"
+    },
+    {
+      "componentHints": [
+        "EventCard",
+        "SummaryList"
+      ],
+      "dataId": "/data/calendar/events/0/startDate",
+      "priority": "must",
+      "requirement": "日程开始日期"
+    },
+    {
+      "componentHints": [
+        "EventCard",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/calendar/events/0/countdownDays",
+      "priority": "should",
+      "requirement": "日程倒计时天数"
+    }
+  ],
+  "layoutHints": [
+    "W-split-panels",
+    "W-top-bottom"
+  ]
+}

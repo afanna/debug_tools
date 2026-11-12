@@ -1,0 +1,64 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.clock.alarm",
+        "assetId": "asset.emoji_time"
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "唯一时钟素材已用于动作按钮，标题不重复使用"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "DataDisplay"
+      ],
+      "priority": "must",
+      "requirement": "显示当前时间（时钟卡片核心读数）",
+      "text": "当前时间"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "显示当前公历日期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "显示星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "显示农历信息"
+    },
+    {
+      "actionId": "event.open.clock.alarm",
+      "componentHints": [
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "打开华为时钟应用首页"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content-action",
+    "S-title-primary-secondary-action"
+  ]
+}

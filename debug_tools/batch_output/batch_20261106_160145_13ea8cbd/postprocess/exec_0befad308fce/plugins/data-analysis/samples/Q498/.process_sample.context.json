@@ -1,0 +1,108 @@
+{
+  "apiVersion": "batch-postprocess-v2",
+  "scope": "sample",
+  "runId": "batch_20261106_160145_13ea8cbd",
+  "sample": {
+    "id": "Q498",
+    "fileName": "Q498.json",
+    "title": "耳机电量",
+    "query": "把耳机电池电量放到桌面上，创建一张耳机电量卡片，显示耳机名称、耳机盒电量、左右耳电量。",
+    "size": "2x2",
+    "sequence": 86,
+    "status": "success",
+    "attemptCount": 1,
+    "elapsedMs": 6830.3,
+    "errorCode": "",
+    "error": "",
+    "artifactAvailable": true,
+    "dslAvailable": true,
+    "traceStatus": "complete",
+    "traceRecordCount": 96,
+    "traceSchemaVersion": "generation-trace-v2",
+    "traceDurationMs": 6822.29,
+    "uid": "batch-13ea8cbd-00086-000",
+    "generationMetrics": {
+      "firstDsl": "failed",
+      "requestSize": "2x2",
+      "firstRequestStatus": "success",
+      "firstRequestDelivered": true,
+      "qualityRepairAttempts": 1,
+      "modelPhysicalCalls": 4,
+      "repairObservedAttempts": 1,
+      "modelObservedAttempts": 1,
+      "terminalAttempts": 1,
+      "missingInformationWarnings": 0,
+      "retryParameters": {
+        "interfaceRetryEnabled": [
+          true
+        ],
+        "interfaceExtraRetries": [
+          1
+        ],
+        "qualityRepairEnabled": [
+          true
+        ],
+        "qualityRepairMaxAttempts": [
+          5
+        ],
+        "singleStepGenerationFallbackEnabled": [
+          false
+        ],
+        "singleStepWidgetEditEnabled": [
+          true
+        ],
+        "dropPlanFactValidationEnabled": [
+          false
+        ],
+        "photoBackgroundThemeEnabled": [
+          false
+        ],
+        "subjectlessWideThemeEnabled": [
+          false
+        ],
+        "squareMusicPhotoExpansionEnabled": [
+          false
+        ],
+        "squarePhotoExpansionEnabled": [
+          false
+        ],
+        "deepseekOfficialHttpUseSdkEnabled": [
+          true
+        ],
+        "modelFailureRetryEnabled": [
+          true
+        ],
+        "modelFailureExtraRetries": [
+          1
+        ],
+        "fallbackModelFailureExtraRetries": [
+          1
+        ],
+        "fallbackEnabled": [
+          true
+        ],
+        "argumentRepairEnabled": [
+          false
+        ],
+        "argumentRepairMaxAttempts": [
+          2
+        ],
+        "argumentRepairReminderCount": [
+          1
+        ],
+        "interfaceMaxAttempts": [
+          2
+        ],
+        "planMaxAttempts": [
+          2
+        ]
+      }
+    }
+  },
+  "runDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd",
+  "sampleDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q498",
+  "finalAttemptDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q498\\attempt_000",
+  "outputDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\postprocess\\exec_0befad308fce\\plugins\\data-analysis\\samples\\Q498",
+  "config": {},
+  "upstreamResults": []
+}

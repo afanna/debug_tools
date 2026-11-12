@@ -1,0 +1,117 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_PLAN_COVERAGE_FAILED",
+        "duplicateFacts": [
+          {
+            "actualVisibleCount": 2,
+            "dataId": "/data/time/currentDate",
+            "expectedVisibleCount": 1,
+            "occurrences": [
+              {
+                "componentId": "primary",
+                "componentType": "EmphasisText",
+                "property": "mainText"
+              },
+              {
+                "componentId": "details",
+                "componentType": "TextBlock",
+                "property": "items[0].value"
+              }
+            ],
+            "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+            "requiredDisplayPositions": [
+              {
+                "componentId": "primary",
+                "componentType": "EmphasisText",
+                "property": "mainText"
+              }
+            ],
+            "requirement": "当前公历日期"
+          },
+          {
+            "actualVisibleCount": 2,
+            "dataId": "/data/time/dayOfWeek",
+            "expectedVisibleCount": 1,
+            "occurrences": [
+              {
+                "componentId": "primary",
+                "componentType": "EmphasisText",
+                "property": "mainText"
+              },
+              {
+                "componentId": "details",
+                "componentType": "TextBlock",
+                "property": "items[1].value"
+              }
+            ],
+            "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+            "requiredDisplayPositions": [
+              {
+                "componentId": "primary",
+                "componentType": "EmphasisText",
+                "property": "mainText"
+              }
+            ],
+            "requirement": "星期信息"
+          },
+          {
+            "actualVisibleCount": 2,
+            "dataId": "/data/time/lunarDate",
+            "expectedVisibleCount": 1,
+            "occurrences": [
+              {
+                "componentId": "primary",
+                "componentType": "EmphasisText",
+                "property": "secondaryText"
+              },
+              {
+                "componentId": "details",
+                "componentType": "TextBlock",
+                "property": "items[2].value"
+              }
+            ],
+            "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+            "requiredDisplayPositions": [],
+            "requirement": "农历日期"
+          }
+        ],
+        "message": "Plan fact is displayed more than once in visible DSL: 当前公历日期 (/data/time/currentDate); expected 1, got 2; occurrences: primary (EmphasisText).mainText, details (TextBlock).items[0].value.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_PLAN_COVERAGE_FAILED",
+        "message": "Plan fact is displayed more than once in visible DSL: 星期信息 (/data/time/dayOfWeek); expected 1, got 2; occurrences: primary (EmphasisText).mainText, details (TextBlock).items[1].value.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_PLAN_COVERAGE_FAILED",
+        "message": "Plan fact is displayed more than once in visible DSL: 农历日期 (/data/time/lunarDate); expected 1, got 2; occurrences: primary (EmphasisText).secondaryText, details (TextBlock).items[2].value.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "plan_coverage",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "f1896a2d5a6b92a1",
+      "instruction": "修复 duplicateFacts 列出的重复展示事实。逐项核对 occurrences，确保每个报错 dataId 最终只在一个可见属性中出现。优先保留同时具有明确对象、标签、完整值和单位的语义表达，不因字号更大就保留含义不清的裸值或生硬拼接。若同一事实同时出现在 InfoBlock.primaryText/secondaryText 与其它组件，优先保留InfoBlock 的必填文本、完整绑定、标签和单位，从其它组件删除可合法移除的重复属性或条目。例如 upper.primaryText 与 content_support.items[2].value 重复时，保留 upper，只删除 content_support.items[2]；实际组件和索引以本轮 occurrences 为准，不要把 upper 改绑到另一项已展示事实。不得只清空条目的 value 而留下 label；删除后仍须满足组件最少项数、必填属性和父槽合同。若其它重复位置也是必填属性或含独有信息，不能硬删，按既有范围重组必要信息组或父布局。只删除其它重复绑定：重复位于 SecondaryBody 单个 item 时只删除该 item；表达式同时包含多个 dataId 时只移除报错的重复引用，不连带删除未报错事实。组件仍有其它有效内容时保留组件；组件变空时删除组件行并同步删除直接父级 children 引用。不得修改 accepted Plan、删除唯一剩余展示、删除数据行、静态化动态值，或改变未报错的事实、Action、图标和区域。完成后逐项复查报错 dataId 的可见次数恰好为1，并确认没有空组件、孤立组件或失效引用。去重后 SecondaryBody 仍只能承担辅助信息；若核心组件或当前信息组语义不再成立，在本轮允许范围内重组选型，但不得重新引入重复绑定。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "plan_coverage"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "17e594043a781210"
+      },
+      "noProgress": false,
+      "repairStrategy": "deduplicate_visible_facts",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "information_group"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"当前时间\",\"icon\":\"resources/base/media/emoji_time.png\",\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":\"{{ ${/data/time/currentDate} + ' ' + ${/data/time/dayOfWeek} }}\",\"secondaryText\":{\"path\":\"/data/time/lunarDate\"},\"fontSize\":18}]\n[\"details\",\"TextBlock\",{\"items\":[{\"label\":\"日期\",\"value\":{\"path\":\"/data/time/currentDate\"}},{\"label\":\"星期\",\"value\":{\"path\":\"/data/time/dayOfWeek\"}},{\"label\":\"农历\",\"value\":{\"path\":\"/data/time/lunarDate\"}}]}]\n[\"/data/time/currentDate\",\"示例\"]\n[\"/data/time/dayOfWeek\",\"示例\"]\n[\"/data/time/lunarDate\",\"示例\"]"
+  }
+]

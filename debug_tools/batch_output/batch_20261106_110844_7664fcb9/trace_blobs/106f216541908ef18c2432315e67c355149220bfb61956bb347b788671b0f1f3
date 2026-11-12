@@ -1,0 +1,18 @@
+```genui
+["root","Layout",{"layout":"S-title-dual-content"},["title","primary","support"]]
+["title","SingleLineTitle",{"title":{"path":"/data/weather/location/prefectureName"},"icon":"resources/base/media/ic_weather_monochrome.svg","fontSize":12}]
+["primary","EmphasisText",{"mainText":{"path":"/data/weather/current/temperatureText"},"secondaryText":{"path":"/data/weather/current/condition"},"fontSize":18}]
+["support","SecondaryBody",{"columns":1,"items":[{"label":"{{ ${/data/weather/daily/0/weekday} + ' ' }}","value":"{{ ${/data/weather/daily/0/condition} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"},{"label":"{{ ${/data/weather/daily/1/weekday} + ' ' }}","value":"{{ ${/data/weather/daily/1/condition} + ' ' + ${/data/weather/daily/1/temperatureRangeText} }}"},{"label":"{{ ${/data/weather/daily/2/weekday} + ' ' }}","value":"{{ ${/data/weather/daily/2/condition} + ' ' + ${/data/weather/daily/2/temperatureRangeText} }}"}],"fontSize":12}]
+["/data/weather/location/prefectureName","上海市"]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/daily/0/weekday","星期四"]
+["/data/weather/daily/0/condition","多云"]
+["/data/weather/daily/0/temperatureRangeText","25℃ / 32℃"]
+["/data/weather/daily/1/weekday","星期四"]
+["/data/weather/daily/1/condition","多云"]
+["/data/weather/daily/1/temperatureRangeText","25℃ / 32℃"]
+["/data/weather/daily/2/weekday","星期四"]
+["/data/weather/daily/2/condition","多云"]
+["/data/weather/daily/2/temperatureRangeText","25℃ / 32℃"]
+```

@@ -1,0 +1,10 @@
+{
+  "data": [
+    "ViewWeather",
+    "GetPhoneBatteryInfo",
+    "GetHealthAndSportSummary",
+    "GetAppPowerConsumptionRanking"
+  ],
+  "event": [],
+  "asset": []
+}

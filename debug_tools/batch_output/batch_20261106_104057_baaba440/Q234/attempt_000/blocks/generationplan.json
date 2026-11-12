@@ -1,0 +1,24 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {},
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": []
+    },
+    {
+      "capabilityId": "GetCalendarEvents",
+      "arguments": {},
+      "writeResultTo": "/data/calendar",
+      "candidateOutputFields": []
+    },
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": []
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": []
+}

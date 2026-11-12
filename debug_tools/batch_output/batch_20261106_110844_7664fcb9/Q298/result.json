@@ -1,0 +1,21 @@
+{
+  "id": "Q298",
+  "fileName": "Q298.json",
+  "title": "血氧监测",
+  "query": "按照用户提供的图片风格设计一个血氧显示页面卡片，显示血氧数据。图片风格为：蓝色星空背景，显示日期、时间、心率、血氧、电量信息。",
+  "size": "2x2",
+  "sequence": 8,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3228.83,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3222.31,
+  "uid": "batch-7664fcb9-00008-000",
+  "finalAttempt": 0
+}

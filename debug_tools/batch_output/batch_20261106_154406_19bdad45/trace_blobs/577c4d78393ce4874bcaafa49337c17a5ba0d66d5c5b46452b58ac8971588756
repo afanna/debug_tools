@@ -1,0 +1,28 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "显示当前天气温度文本（已含℃单位）"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "显示当前天气现象"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-content"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q484",
+  "fileName": "Q484.json",
+  "title": "天气日历",
+  "query": "用户想要在桌面上设置一个天气和日历堆叠在一起的卡片，展示当前天气信息和近期日程安排。",
+  "size": "2x4",
+  "sequence": 72,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 19022.82,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 150,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 19011.65,
+  "uid": "batch-13ea8cbd-00072-000",
+  "finalAttempt": 0
+}

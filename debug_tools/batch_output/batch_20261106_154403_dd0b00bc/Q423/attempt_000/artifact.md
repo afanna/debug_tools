@@ -1,0 +1,261 @@
+```cardspec
+{
+  "title": "吃前拍一拍",
+  "description": "快速记录饮食，管理热量营养",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/healthSport"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Column","children":["title","__layout__root__body"],"itemMargin":6,"styles":{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":12,"linearGradient":{"direction":"RightBottom","colors":[["#FFDBCCFF",0],["#FFF6F2FF",1]]}}},{"id":"title","component":"Row","children":["title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"title_title","component":"Text","content":"最近运动","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#99563D99"}},{"id":"__layout__root__body","component":"Column","children":["__layout__root__primary_support","__layout__root__action"],"itemMargin":8,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"__layout__root__primary_support","component":"Column","children":["primary","support"],"itemMargin":2,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"primary","component":"Column","children":["primary_main","primary_secondary"],"itemMargin":2,"styles":{"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"width":"matchParent"}},{"id":"primary_main","component":"Text","content":"{{ ${/data/healthSport/exerciseTypeName} }}","styles":{"height":18,"fontSize":18,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FF563D99","textOverflow":"clip"}},{"id":"primary_secondary","component":"Text","content":"{{ '时长 ' + ${/data/healthSport/exerciseDurationText} }}","styles":{"height":16,"fontSize":12,"fontWeight":400,"lineHeight":1.3333333333333333,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FF563D99","textOverflow":"clip"}},{"id":"support","component":"Column","children":["support_row0","support_row1"],"itemMargin":2,"styles":{"width":"matchParent","alignItems":"start","flexShrink":1}},{"id":"support_item0_label","component":"Text","content":"开始","styles":{"height":12,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":0,"lineHeight":1,"fontColor":"#99563D99","textOverflow":"clip"}},{"id":"support_item0_value","component":"Text","content":"{{ ${/data/healthSport/exerciseStartTimeText} }}","styles":{"height":12.0,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF563D99","layoutWeight":1,"textOverflow":"clip"}},{"id":"support_item0","component":"Row","children":["support_item0_label","support_item0_value"],"itemMargin":4,"styles":{"height":12.0,"alignItems":"top","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"support_row0","component":"Row","children":["support_item0"],"itemMargin":0,"styles":{"width":"matchParent","height":12.0,"alignItems":"top","flexShrink":0}},{"id":"support_item1_label","component":"Text","content":"结束","styles":{"height":12,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":0,"lineHeight":1,"fontColor":"#99563D99","textOverflow":"clip"}},{"id":"support_item1_value","component":"Text","content":"{{ ${/data/healthSport/exerciseEndTimeText} }}","styles":{"height":12.0,"fontSize":12,"fontWeight":400,"maxLines":1,"flexShrink":1,"lineHeight":1,"fontColor":"#FF563D99","layoutWeight":1,"textOverflow":"clip"}},{"id":"support_item1","component":"Row","children":["support_item1_label","support_item1_value"],"itemMargin":4,"styles":{"height":12.0,"alignItems":"top","flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1}},{"id":"support_row1","component":"Row","children":["support_item1"],"itemMargin":0,"styles":{"width":"matchParent","height":12.0,"alignItems":"top","flexShrink":0}},{"id":"__layout__root__action","component":"Column","children":["action"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","height":36,"flexShrink":0},"itemMargin":0},{"id":"action","component":"Button","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Health","uri":"huaweischeme://healthapp/home/sport?sportType=2"}}],"label":"去锻炼","styles":{"height":36,"borderRadius":30,"padding":0,"flexShrink":0,"width":"matchParent","backgroundColor":"#33563D99","fontColor":"#FF563D99","fontSize":14,"fontWeight":500,"textAlign":"center"}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"data":{"healthSport":{"exerciseTypeName":"户外跑步","exerciseStartTimeText":"18:30","exerciseEndTimeText":"19:10","exerciseDurationText":"40分"}}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "创建一张桌面卡片，显示最近一次运动类型、开始时间、结束时间和时长，点击可跳转到运动健康应用的锻炼Tab页。",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.health.sport",
+      "description": "打开华为运动健康应用的锻炼Tab页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "healthSport": {
+        "exerciseTypeName": {
+          "type": "string",
+          "description": "最近一次发生的单次专业运动训练类型的中文映射名称，如“羽毛球”、“自由训练”、“户外跑步”。若无记录则返回“暂无运动”。",
+          "sampleValue": "户外跑步"
+        },
+        "exerciseStartTimeText": {
+          "type": "string",
+          "description": "专业运动开始的确切时刻文本（HH:mm），例如“18:30”。",
+          "sampleValue": "18:30"
+        },
+        "exerciseEndTimeText": {
+          "type": "string",
+          "description": "专业运动结束的确切时刻文本（HH:mm），例如“19:50”。",
+          "sampleValue": "19:10"
+        },
+        "exerciseDurationText": {
+          "type": "string",
+          "description": "可直接显示的单次专业运动实际持续时长文本，已包含“小时”或“分”等时间单位；展示时不得再次追加时间单位。例如“1小时40分”。",
+          "sampleValue": "40分"
+        }
+      }
+    }
+  },
+  "assetCandidates": []
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "GetHealthAndSportSummary"
+  ],
+  "event": [
+    {
+      "id": "event.open.health.sport",
+      "description": "打开华为运动健康应用的锻炼Tab页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+      }
+    }
+  ],
+  "asset": []
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/exerciseTypeName",
+        "/exerciseStartTimeText",
+        "/exerciseEndTimeText",
+        "/exerciseDurationText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.sport",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": []
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "0555337b-9ed6-4047-95b8-114104903fa5",
+  "createdAt": 1793951064166
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"S-title-primary-secondary-action"},["title","primary","support","action"]]
+["title","SingleLineTitle",{"title":"最近运动","fontSize":12}]
+["primary","EmphasisText",{"mainText":{"path":"/data/healthSport/exerciseTypeName"},"secondaryText":"{{ '时长 ' + ${/data/healthSport/exerciseDurationText} }}","fontSize":18}]
+["support","SecondaryBody",{"items":[{"label":"开始","value":{"path":"/data/healthSport/exerciseStartTimeText"}},{"label":"结束","value":{"path":"/data/healthSport/exerciseEndTimeText"}}],"separator":" | ","fontSize":14}]
+["action","PillButton",{"label":"去锻炼","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Health","uri":"huaweischeme://healthapp/home/sport?sportType=2"}}]}]
+["/data/healthSport/exerciseTypeName","户外跑步"]
+["/data/healthSport/exerciseStartTimeText","18:30"]
+["/data/healthSport/exerciseEndTimeText","19:10"]
+["/data/healthSport/exerciseDurationText","40分"]
+```
+```request
+{
+  "content": {
+    "size": "2x2",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL10P 7.0.0.111",
+    "candidateAssetIds": [],
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.health.sport",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          }
+        }
+      }
+    ],
+    "bundleName": "com.huawei.genui",
+    "description": "快速记录饮食，管理热量营养",
+    "userQuery": "创建一张桌面卡片，显示最近一次运动类型、开始时间、结束时间和时长，点击可跳转到运动健康应用的锻炼Tab页。",
+    "title": "吃前拍一拍",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {},
+        "writeResultTo": "/data/healthSport",
+        "candidateOutputFields": [
+          "/exerciseTypeName",
+          "/exerciseStartTimeText",
+          "/exerciseEndTimeText",
+          "/exerciseDurationText"
+        ]
+      }
+    ]
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261103012658411"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q423-000",
+    "isNew": true,
+    "sessionId": "batch-dd0b00bc"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0",
+  "size": "2x2",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "candidateAssetIds": [],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.sport",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    }
+  ],
+  "bundleName": "com.huawei.genui",
+  "description": "快速记录饮食，管理热量营养",
+  "userQuery": "创建一张桌面卡片，显示最近一次运动类型、开始时间、结束时间和时长，点击可跳转到运动健康应用的锻炼Tab页。",
+  "title": "吃前拍一拍",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/exerciseTypeName",
+        "/exerciseStartTimeText",
+        "/exerciseEndTimeText",
+        "/exerciseDurationText"
+      ]
+    }
+  ]
+}
+```

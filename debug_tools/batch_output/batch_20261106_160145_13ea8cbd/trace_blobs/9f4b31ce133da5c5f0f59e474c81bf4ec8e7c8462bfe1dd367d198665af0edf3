@@ -1,0 +1,97 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "name",
+      "identity": "姓名",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        2
+      ],
+      "id": "base",
+      "identity": "基本工资",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3
+      ],
+      "id": "bonus",
+      "identity": "奖金",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        4
+      ],
+      "id": "allowance",
+      "identity": "补贴",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 103,
+          "start": 71
+        }
+      ],
+      "sourceText": "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 103,
+          "start": 71
+        }
+      ],
+      "sourceText": "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 103,
+          "start": 71
+        }
+      ],
+      "sourceText": "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 103,
+          "start": 71
+        }
+      ],
+      "sourceText": "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+    },
+    {
+      "factIndex": 4,
+      "positions": [
+        {
+          "end": 103,
+          "start": 71
+        }
+      ],
+      "sourceText": "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+    }
+  ],
+  "version": "static-content-v1"
+}

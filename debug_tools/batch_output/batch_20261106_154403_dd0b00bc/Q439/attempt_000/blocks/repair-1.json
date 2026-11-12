@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-content-action\"},[\"title\",\"content\",\"action\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"我的记忆\",\"fontSize\":12}]\n[\"content\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/noteCount\"},\"secondaryText\":\"笔记\"}]\n[\"action\",\"PillButton\",{\"label\":\"打开备忘录\",\"icon\":\"resources/base/media/bell_fill.svg\",\"onClick\":[{\"call\":\"clickToIntent\",\"args\":{\"abilityName\":\"MainAbility\",\"bundleName\":\"com.huawei.hmos.notepad\",\"intentName\":\"ViewNote\",\"params\":{\"launchSource\":\"1\",\"launchType\":\"0\"}}}]}]\n[\"/data/memo/noteCount\",0]\n[\"/data/memo/todoPendingCount\",0]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "语义布局不符合合同：节点 root：InfoBlock 必须放在已登记的小卡固定槽。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+    }
+  ]
+}

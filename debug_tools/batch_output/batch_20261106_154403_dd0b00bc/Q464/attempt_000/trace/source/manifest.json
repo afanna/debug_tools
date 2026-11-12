@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "generation-trace-v2",
+  "instrumentationVersion": 2,
+  "traceId": "06af7df1bc504eab897633ac41830a6e",
+  "rootSpanId": "9eaa5a6e82944b20",
+  "uid": "batch-dd0b00bc-00052-000",
+  "state": "complete",
+  "startedAt": "2026-11-06T07:45:41.712467+00:00",
+  "recordCount": 142,
+  "artifactCount": 62,
+  "completedAt": "2026-11-06T07:45:53.321676+00:00",
+  "summary": {
+    "totalDurationMs": 11608.38,
+    "latencyByStage": {
+      "dsl": 1571.4,
+      "dsl.bindingRepair": 24.92,
+      "dsl.compactValidation": 27.94,
+      "dsl.deterministicRepair": 77.17,
+      "dsl.extract": 2.65,
+      "dsl.layoutExpansion": 7.23,
+      "dsl.planCoverageValidation": 6.55,
+      "dsl.processing": 153.93,
+      "dsl.sourceProcessing": 159.73,
+      "generation.branch": 11595.02,
+      "generationPreflight": 6.5,
+      "interfaceAttempt.total": 11597.47,
+      "model.physicalCall": 11233.89,
+      "model.providerExecution": 11212.56,
+      "model.queue": 0.35,
+      "plan": 1581.07,
+      "plan.attempt": 1576.2,
+      "plan.extract": 0.4,
+      "plan.parseValidate": 0.41,
+      "plan.promptBuild": 1.33,
+      "prepare": 21.1,
+      "promptBuild": 3.79,
+      "protocolSelection": 0.36,
+      "registry": 1.97,
+      "repair": 8394.63,
+      "repair.attempt": 8222.35,
+      "repair.promptBuild": 1.85,
+      "validation": 23.15,
+      "validation.evaluate": 176.17
+    },
+    "attemptCounts": {
+      "generationBranches": 1,
+      "interfaceAttempts": 1,
+      "modelLogicalCalls": 7,
+      "modelPhysicalAttempts": 7,
+      "planContractAttempts": 1,
+      "qualityRepairAttempts": 5,
+      "validationEvaluations": 6
+    },
+    "retryCounts": {
+      "qualityRepairRetries": 5
+    },
+    "errorCode": "INVALID_ARGUMENTS"
+  }
+}

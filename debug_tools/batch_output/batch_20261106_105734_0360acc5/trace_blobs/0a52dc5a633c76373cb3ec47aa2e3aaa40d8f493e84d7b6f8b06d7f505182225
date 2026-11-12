@@ -1,0 +1,90 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.ic_flashlight"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "intentName": "OpenFlashlight",
+          "params": {}
+        },
+        "call": "clickToIntent"
+      },
+      "capabilityId": "event.openFlashlight"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.ic_flashlight"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/time"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "intentName": "OpenFlashlight",
+            "params": {}
+          },
+          "call": "clickToIntent"
+        },
+        "capabilityId": "event.openFlashlight"
+      }
+    ],
+    "description": "小艺快捷入口",
+    "size": "2x2",
+    "title": "小艺",
+    "uid": "batch-0360acc5-00013-000",
+    "userQuery": "在手机桌面创建一个快捷入口卡片，点击可以打开手电筒"
+  },
+  "description": "小艺快捷入口",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "HLS-AL00",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261029143807181"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "HLS-AL00 7.0.0.111",
+  "session": {
+    "interactionId": "Q322-000",
+    "isNew": true,
+    "sessionId": "batch-0360acc5"
+  },
+  "size": "2x2",
+  "title": "小艺",
+  "userAuth": {
+    "user": {
+      "userId": "batch-0360acc5-00013-000"
+    }
+  },
+  "userQuery": "在手机桌面创建一个快捷入口卡片，点击可以打开手电筒",
+  "utterance": {
+    "original": "在手机桌面创建一个快捷入口卡片，点击可以打开手电筒",
+    "type": "text"
+  },
+  "version": "1.0"
+}

@@ -1,0 +1,75 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [
+    {
+      "description": "样式：默认黑色的单色实心飞机俯视图，机头朝右上方倾斜；适用：航空旅行、航班概览、飞行状态。",
+      "id": "asset.airplane_fill_1",
+      "src": "resources/base/media/airplane_fill_1.svg"
+    },
+    {
+      "description": "样式：默认黑色的单色闹钟实心图标，内部通过镂空表现表盘指针，支持通过 fillColor 与卡片配色统一；适用：闹钟设置、定时提醒、日程提醒。",
+      "id": "asset.alarm_fill_1",
+      "src": "resources/base/media/alarm_fill_1.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "calendar": {
+        "events": [
+          {
+            "countdownDays": {
+              "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+              "sampleValue": 0,
+              "type": "integer"
+            },
+            "dtEnd": {
+              "description": "格式化后的日程结束时间短文本，如 '05:00'。",
+              "sampleValue": "15:00",
+              "type": "string"
+            },
+            "dtStart": {
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00",
+              "type": "string"
+            },
+            "entityId": {
+              "description": "系统日程的全局唯一实体ID。",
+              "sampleValue": "example-event-001",
+              "type": "string"
+            },
+            "eventLocation": {
+              "description": "日程的具体地点描述，若未填写则为空字符串。",
+              "sampleValue": "会议室",
+              "type": "string"
+            },
+            "startDate": {
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06",
+              "type": "string"
+            },
+            "title": {
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会",
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "intentName": "ViewCalendarEvent",
+        "params": {
+          "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+        }
+      },
+      "call": "clickToIntent",
+      "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+      "id": "event.viewCalendarEvent"
+    }
+  ],
+  "size": "2x4",
+  "userQuery": "为用户生成行程提醒卡片，展示航班FU6686郑州新郑国际机场飞往厦门高崎国际机场的行程信息，计划出港时间2026年11月1日22:40，计划到港时间2026年11月2日00:50。本轮卡片静态内容（用作展示的外部事实）：航班号FU6686，郑州新郑国际机场→厦门高崎国际机场，计划出港2026-11-01 22:40，计划到港2026-11-02 00:50"
+}

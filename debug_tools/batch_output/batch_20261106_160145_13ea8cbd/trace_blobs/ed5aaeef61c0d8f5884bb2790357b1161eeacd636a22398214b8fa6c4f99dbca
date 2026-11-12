@@ -1,0 +1,4 @@
+[
+  "Compact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_assist 完整文字需要 2 行，91.98vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。",
+  "Compact DSL validation failed:\n- COMPACT_STATIC_CORE_MISSING: 组 scores 缺少完整展示文字 '语文'；须在该对象或条目内恢复，不能从其它栏或note补足。\n- COMPACT_STATIC_CORE_MISSING: 组 scores 缺少完整展示文字 '数学'；须在该对象或条目内恢复，不能从其它栏或note补足。\n- COMPACT_STATIC_CORE_MISSING: 组 scores 缺少完整展示文字 '英语'；须在该对象或条目内恢复，不能从其它栏或note补足。"
+]

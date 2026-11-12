@@ -1,0 +1,54 @@
+{
+  "requestId": "batch-dd0b00bc&Q420-000",
+  "status": "success",
+  "errorCode": "",
+  "error": {},
+  "data": {
+    "status": "success",
+    "artifactUrl": "https://obs.todo.local/widget/artifact_f0f37429-5530-4fb6-a612-943178e1434a.md",
+    "artifactDigest": "sha256:ca7bbf5d9eaf740f05328d9b500d222aa2d7ae9619a379d08a2e85827687e791",
+    "suggestSize": "2x2",
+    "removedCapabilities": [],
+    "errorCode": "",
+    "effectiveCapabilities": {
+      "data": [
+        "GetHealthAndSportSummary",
+        "GetPhoneBatteryInfo"
+      ],
+      "event": [],
+      "asset": [
+        "asset.ic_charge",
+        "asset.ic_sportsHealth_bule"
+      ]
+    },
+    "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。"
+  },
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-dd0b00bc&Q420-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"type\":\"result\",\"tool\":\"generateWidgetCardCompactDsl\",\"operation\":\"generateWidgetCardCompactDsl\",\"requestId\":\"batch-dd0b00bc&Q420-000\",\"data\":{\"status\":\"success\",\"artifactUrl\":\"https://obs.todo.local/widget/artifact_f0f37429-5530-4fb6-a612-943178e1434a.md\",\"artifactDigest\":\"sha256:ca7bbf5d9eaf740f05328d9b500d222aa2d7ae9619a379d08a2e85827687e791\",\"suggestSize\":\"2x2\",\"removedCapabilities\":[],\"errorCode\":\"\",\"effectiveCapabilities\":{\"data\":[\"GetHealthAndSportSummary\",\"GetPhoneBatteryInfo\"],\"event\":[],\"asset\":[\"asset.ic_charge\",\"asset.ic_sportsHealth_bule\"]},\"agentInstruction\":\"已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。\"},\"status\":\"success\",\"errorCode\":\"\",\"error\":{}}",
+          "streamingTextId": "batch-dd0b00bc&Q420-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

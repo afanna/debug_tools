@@ -1,0 +1,108 @@
+{
+  "apiVersion": "batch-postprocess-v2",
+  "scope": "sample",
+  "runId": "batch_20261106_160145_13ea8cbd",
+  "sample": {
+    "id": "Q478",
+    "fileName": "Q478.json",
+    "title": "备忘录",
+    "query": "在桌面上创建备忘录卡片，展示备忘录笔记和待办信息。",
+    "size": "2x2",
+    "sequence": 66,
+    "status": "success",
+    "attemptCount": 1,
+    "elapsedMs": 4546.79,
+    "errorCode": "",
+    "error": "",
+    "artifactAvailable": true,
+    "dslAvailable": true,
+    "traceStatus": "complete",
+    "traceRecordCount": 75,
+    "traceSchemaVersion": "generation-trace-v2",
+    "traceDurationMs": 4535.39,
+    "uid": "batch-13ea8cbd-00066-000",
+    "generationMetrics": {
+      "firstDsl": "passed",
+      "requestSize": "2x2",
+      "firstRequestStatus": "success",
+      "firstRequestDelivered": true,
+      "qualityRepairAttempts": 0,
+      "modelPhysicalCalls": 3,
+      "repairObservedAttempts": 1,
+      "modelObservedAttempts": 1,
+      "terminalAttempts": 1,
+      "missingInformationWarnings": 0,
+      "retryParameters": {
+        "interfaceRetryEnabled": [
+          true
+        ],
+        "interfaceExtraRetries": [
+          1
+        ],
+        "qualityRepairEnabled": [
+          true
+        ],
+        "qualityRepairMaxAttempts": [
+          5
+        ],
+        "singleStepGenerationFallbackEnabled": [
+          false
+        ],
+        "singleStepWidgetEditEnabled": [
+          true
+        ],
+        "dropPlanFactValidationEnabled": [
+          false
+        ],
+        "photoBackgroundThemeEnabled": [
+          false
+        ],
+        "subjectlessWideThemeEnabled": [
+          false
+        ],
+        "squareMusicPhotoExpansionEnabled": [
+          false
+        ],
+        "squarePhotoExpansionEnabled": [
+          false
+        ],
+        "deepseekOfficialHttpUseSdkEnabled": [
+          true
+        ],
+        "modelFailureRetryEnabled": [
+          true
+        ],
+        "modelFailureExtraRetries": [
+          1
+        ],
+        "fallbackModelFailureExtraRetries": [
+          1
+        ],
+        "fallbackEnabled": [
+          true
+        ],
+        "argumentRepairEnabled": [
+          false
+        ],
+        "argumentRepairMaxAttempts": [
+          2
+        ],
+        "argumentRepairReminderCount": [
+          1
+        ],
+        "interfaceMaxAttempts": [
+          2
+        ],
+        "planMaxAttempts": [
+          2
+        ]
+      }
+    }
+  },
+  "runDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd",
+  "sampleDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q478",
+  "finalAttemptDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q478\\attempt_000",
+  "outputDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\postprocess\\exec_0befad308fce\\plugins\\data-analysis\\samples\\Q478",
+  "config": {},
+  "upstreamResults": []
+}

@@ -1,0 +1,57 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": null,
+      "reason": "标题为装饰性概括，无单独标题组件使用，且天气图标已用于信息块主视觉"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "展示当前温度，作为当前天气的主要读数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "展示当前天气现象，作为当前天气的紧密补充"
+    },
+    {
+      "componentHints": [
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/daily/1/weekday",
+      "priority": "must",
+      "requirement": "展示明日天气预报：星期与天气现象"
+    },
+    {
+      "componentHints": [
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/daily/1/condition",
+      "priority": "must",
+      "requirement": "展示明日天气预报：天气现象"
+    },
+    {
+      "componentHints": [
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/daily/1/temperatureRangeText",
+      "priority": "must",
+      "requirement": "展示明日天气预报：温度范围"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-title-dual-content"
+  ]
+}

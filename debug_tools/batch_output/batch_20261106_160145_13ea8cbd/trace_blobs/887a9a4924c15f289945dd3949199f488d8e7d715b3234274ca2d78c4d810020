@@ -1,0 +1,6 @@
+{
+  "errors": [],
+  "warnings": [
+    "component details_item3_value: TextBlock.value exceeds its 47vp single-line text area and will be rendered with an ellipsis."
+  ]
+}

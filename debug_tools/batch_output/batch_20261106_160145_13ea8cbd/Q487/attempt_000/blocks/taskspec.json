@@ -1,0 +1,61 @@
+{
+  "userQuery": "在桌面增加一个显示睡眠信息的卡片，展示睡眠得分、睡眠状态、夜间睡眠时长、深睡时长、入睡时间和醒来时间。",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.health.sleep",
+      "description": "打开华为运动健康应用的睡眠详情页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/router/sleepDetail"
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "healthSport": {
+        "sleepScore": {
+          "type": "integer",
+          "description": "睡眠综合得分，取值范围 0-100。",
+          "sampleValue": 82
+        },
+        "sleepStatus": {
+          "type": "string",
+          "description": "基于得分智能生成的睡眠状态语义判定，包括：'优秀'、'良好'、'一般'、'较差'。",
+          "sampleValue": "良好"
+        },
+        "nightSleepDurationText": {
+          "type": "string",
+          "description": "可直接显示的夜间正式睡眠总时长文本，已包含“小时”或“分”等时间单位；展示时不得再次追加时间单位。例如“7小时1分”。",
+          "sampleValue": "7小时1分"
+        },
+        "deepSleepDurationText": {
+          "type": "string",
+          "description": "可直接显示的夜间正式睡眠深睡总时长文本，已包含“小时”或“分”等时间单位；展示时不得再次追加时间单位。例如“2小时15分”。",
+          "sampleValue": "2小时15分"
+        },
+        "fallAsleepTimeText": {
+          "type": "string",
+          "description": "格式化后的确切入睡时刻短文本（HH:mm），例如“23:15”。",
+          "sampleValue": "23:15"
+        },
+        "wakeupTimeText": {
+          "type": "string",
+          "description": "格式化后的确切醒来时刻短文本（HH:mm），例如“07:30”。",
+          "sampleValue": "07:30"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.moon_z_fill_1",
+      "src": "resources/base/media/moon_z_fill_1.svg",
+      "description": "样式：月亮加Z睡眠实心图标，默认黑色，图形为月牙旁附带字母Z表示入睡；适用：睡眠模式开启、休息提醒、晚安场景。"
+    }
+  ]
+}

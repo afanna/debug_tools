@@ -1,0 +1,20 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan static text is not fully visible in DSL: 每日锻炼计划：俯卧撑10个、深蹲20个、开合跳30个.",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "component left_body: SecondaryBody is auxiliary and cannot be the only information component in the card; pair it with a core information component somewhere in the card. Titles, buttons and other SecondaryBody instances do not count.",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "component right_body: SecondaryBody is auxiliary and cannot be the only information component in the card; pair it with a core information component somewhere in the card. Titles, buttons and other SecondaryBody instances do not count.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

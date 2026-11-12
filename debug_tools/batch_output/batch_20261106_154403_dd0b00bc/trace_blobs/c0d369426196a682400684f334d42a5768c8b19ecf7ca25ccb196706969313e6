@@ -1,0 +1,128 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.calendar_fill"
+    }
+  },
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "topic",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "event_1106",
+      "identity": "PC镇江实地指导",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "event_1107",
+      "identity": "PC天坛学习班",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡共同主题：11月学术活动日程",
+      "sourceTexts": [
+        "11月6日 PC镇江实地指导(镇江)"
+      ],
+      "text": "11月学术活动日程"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "11月6日 PC镇江实地指导(镇江)",
+      "sourceTexts": [
+        "11月6日 PC镇江实地指导(镇江)"
+      ],
+      "text": "11月6日 PC镇江实地指导"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "地点：镇江",
+      "sourceTexts": [
+        "11月6日 PC镇江实地指导(镇江)"
+      ],
+      "text": "镇江"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "11月7日 PC天坛学习班(北京)",
+      "sourceTexts": [
+        "11月7日 PC天坛学习班(北京)、PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会"
+      ],
+      "text": "11月7日 PC天坛学习班"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "地点：北京",
+      "sourceTexts": [
+        "11月7日 PC天坛学习班(北京)、PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会"
+      ],
+      "text": "北京"
+    }
+  ],
+  "layoutHints": [
+    "S-static-content"
+  ],
+  "omittedContents": [
+    "11月7日 PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会",
+    "11月12日 AI CPP特训营（上海）",
+    "11月13日及以后的全部会议、学习班与赞助活动记录"
+  ],
+  "paletteFamily": "auto",
+  "presentationStyle": "records",
+  "selectionNotes": [
+    "输入为11月多日多地学术活动，条目远超2x2容量，需按时间顺序选入少量完整记录。",
+    "改用records/TextList：每条以日期为主文本、活动名称与地点为副文本，副文本较短可单行。",
+    "带标题时TextList只能2项，故选入11月6日与11月7日天坛学习班两条完整记录。",
+    "其余全部记录整体省略，不做半条截断。"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"S-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"11月学术活动日程\"}]\n[\"body\", \"TextList\", {\"items\": [{\"primaryText\": \"镇江\", \"secondaryText\": \"11月6日 PC镇江实地指导\"}, {\"primaryText\": \"北京\", \"secondaryText\": \"11月7日 PC天坛学习班\"}]}]\n[\"/state/ready\", true]",
+  "staticPresentationFeedback": [
+    "正式组件UX允许省略号，原候选仍可用；以下仅为完整文字展示压力，不是新增发布门禁或事实删减授权。请在既有Plan机会中核对必要信息的完整展示：\nCompact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_secondaryText 完整文字需要 2 行，102vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。"
+  ]
+}

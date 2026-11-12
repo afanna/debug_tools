@@ -1,0 +1,44 @@
+{
+  "userQuery": "创建一张电池状态卡片，显示当前电量、充电状态、电池温度、电流、电压等电池信息。",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "phoneBattery": {
+        "batterySOCText": {
+          "type": "string",
+          "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+          "sampleValue": "68%",
+          "numericSource": "/data/phoneBattery/batterySOC"
+        },
+        "chargingStatusDesc": {
+          "type": "string",
+          "description": "当前设备电池的充电状态文本描述。",
+          "sampleValue": "未充电"
+        },
+        "batteryTemperatureText": {
+          "type": "string",
+          "description": "可直接显示的当前设备电池实时温度文本，已包含“℃”单位；展示时不得再次追加温度单位。",
+          "sampleValue": "29.0 ℃"
+        },
+        "nowCurrentText": {
+          "type": "string",
+          "description": "可直接显示的当前设备电池实时电流文本，已包含“mA”单位；展示时不得再次追加电流单位。",
+          "sampleValue": "-151 mA"
+        },
+        "voltageText": {
+          "type": "string",
+          "description": "可直接显示的当前设备电池实时电压文本，已包含“V”单位；展示时不得再次追加电压单位。",
+          "sampleValue": "4 V"
+        },
+        "batterySOC": {
+          "type": "integer",
+          "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+          "sampleValue": 68
+        }
+      }
+    }
+  },
+  "assetCandidates": []
+}

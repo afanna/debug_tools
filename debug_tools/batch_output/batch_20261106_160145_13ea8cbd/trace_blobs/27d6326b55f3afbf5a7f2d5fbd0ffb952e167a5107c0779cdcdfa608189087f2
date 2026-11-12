@@ -1,0 +1,30 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:64d771509641c3c304200129f8ede2f5d29002662ab976cf5498595138fdaf72",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_6da16a25-be60-4b97-86ab-0c57b6af0322.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.battery_leaf_fill"
+    ],
+    "data": [
+      "GetPhoneBatteryInfo"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "com.huawei.hmos.settings.MainAbility",
+          "bundleName": "com.huawei.hmos.settings",
+          "intentName": "Settings",
+          "uri": "battery"
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为手机自带的系统设置中的电池页。",
+        "id": "event.open.settings.battery"
+      }
+    ]
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x2"
+}

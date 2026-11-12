@@ -1,0 +1,53 @@
+{
+  "userQuery": "创建一个手机电量管理卡片，能查看当前电量，还能一键开启省电模式",
+  "size": "2x2",
+  "appVersion": "11.7.8.392",
+  "eventCandidates": [
+    {
+      "id": "event.setPowerSavingMode",
+      "description": "点击操作省电模式开关。",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "SetSettingSwitch",
+        "params": {
+          "appBundleName": "com.huawei.hmos.settings",
+          "itemName": "battery_saving_mode"
+        }
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "phoneBattery": {
+        "batterySOCText": {
+          "type": "string",
+          "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+          "sampleValue": "68%",
+          "numericSource": "/data/phoneBattery/batterySOC"
+        },
+        "chargingStatusDesc": {
+          "type": "string",
+          "description": "当前设备电池的充电状态文本描述。",
+          "sampleValue": "未充电"
+        },
+        "batterySOC": {
+          "type": "integer",
+          "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+          "sampleValue": 68
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.battery_leaf_fill",
+      "src": "resources/base/media/battery_leaf_fill.svg",
+      "description": "样式：默认黑色的单色实心横向电池图标，电池内部为叶片留白；适用：电池相关场景，包括电量、省电模式、节能电池、绿色用电状态，也可作为电池健康或电池温度信息的辅助图标，相关数据可结合 GetPhoneBatteryInfo 展示。图标本身不表示具体电量、健康等级或温度高低。"
+    },
+    {
+      "id": "asset.ic_switch",
+      "src": "resources/base/media/ic_switch.svg",
+      "description": "样式：默认黑色的单色双滑块开关图标，两个水平开关轨道分别朝向相反位置，原始尺寸为 96×96；适用：系统设置类开关控制卡片，可配合 event.setBluetoothMode 等设置开关事件表达开启或关闭操作。图标本身不表示具体开关当前状态，实际状态以对应数据能力支持为准。"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "appVersion": "11.7.8.303",
+  "assetCandidates": [
+    {
+      "description": "样式：深灰到黑色渐变的一对分体式入耳蓝牙耳机，带立体高光与透明背景，原始尺寸为 64×64，PNG 位图需保留原色；适用：蓝牙耳机连接状态、名称或左右耳电量卡片，可结合 GetEarphoneInfo 的 isConnected、earphoneName、leftBatteryLevel 和 rightBatteryLevel 展示，也可作为 event.open.settings.bluetooth 的蓝牙设置入口。图标不表示耳机当前已连接、正在充电或具有特定电量。",
+      "id": "asset.emoji_bluetooth_earbuds_black",
+      "src": "resources/base/media/emoji_bluetooth_earbuds_black.png"
+    },
+    {
+      "description": "样式：深灰到黑色渐变的封闭式蓝牙耳机充电盒，盒体呈圆润横向椭圆并带高光，透明背景，原始尺寸为 64×64，PNG 位图需保留原色；适用：蓝牙耳机盒或整体电量与充电状态卡片，可结合 GetEarphoneInfo 的 batteryLevel 和 chargingStatusDesc 展示，也可作为 event.open.settings.bluetooth 的蓝牙设置入口。图标不表示耳机盒当前正在充电、已经打开或具有特定电量。",
+      "id": "asset.emoji_earbud_case_black",
+      "src": "resources/base/media/emoji_earbud_case_black.png"
+    },
+    {
+      "description": "样式：默认黑色的单色蓝牙标志图标，原始尺寸为 24×24；适用：蓝牙设备连接卡片中配合 GetEarphoneInfo 展示蓝牙耳机连接状态，也可作为 event.open.settings.bluetooth 或 event.setBluetoothMode 的蓝牙设置与开关入口。图标本身不表示当前已连接、已开启或已关闭状态。",
+      "id": "asset.ic_Bluetooth",
+      "src": "resources/base/media/ic_Bluetooth.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "earphone": {
+        "batteryLevel": {
+          "description": "耳机盒（或整体）当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”。",
+          "sampleValue": 80,
+          "type": "integer"
+        },
+        "chargingStatusDesc": {
+          "description": "耳机盒（或整体）当前的充电状态中文语义描述，'充电中' 或 '未充电'。",
+          "sampleValue": "未充电",
+          "type": "string"
+        },
+        "earphoneName": {
+          "description": "耳机的设备广播名称，如果未连接则返回'未连接耳机'。如: 'FreeBuds Pro 3'。",
+          "sampleValue": "示例耳机",
+          "type": "string"
+        },
+        "isConnected": {
+          "description": "当前是否有蓝牙耳机处于连接活跃状态。",
+          "sampleValue": true,
+          "type": "boolean"
+        },
+        "leftBatteryLevel": {
+          "description": "左耳机当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”；未连接时为 0。若直接用于文本展示，必须在数值后追加“%”。",
+          "sampleValue": 76,
+          "type": "integer"
+        },
+        "leftChargingStatusDesc": {
+          "description": "左耳机当前的充电状态中文语义描述，'充电中' 或 '未充电'。",
+          "sampleValue": "未充电",
+          "type": "string"
+        },
+        "rightBatteryLevel": {
+          "description": "右耳机当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”；未连接时为 0。若直接用于文本展示，必须在数值后追加“%”。",
+          "sampleValue": 78,
+          "type": "integer"
+        },
+        "rightChargingStatusDesc": {
+          "description": "右耳机当前的充电状态中文语义描述，'充电中' 或 '未充电'。",
+          "sampleValue": "未充电",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "eventCandidates": [],
+  "size": "2x2",
+  "userQuery": "创建耳机卡片，展示耳机连接状态、设备名称、耳机盒电量、左右耳机电量及充电状态"
+}

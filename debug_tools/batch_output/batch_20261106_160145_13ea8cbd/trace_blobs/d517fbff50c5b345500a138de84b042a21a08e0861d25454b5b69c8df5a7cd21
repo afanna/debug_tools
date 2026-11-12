@@ -1,0 +1,62 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 奶奶生日公历日期10月15日及倒计时天数.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 爷爷生日公历日期7月4日及倒计时天数.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 爸爸生日公历日期4月29日及倒计时天数.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 妈妈生日公历日期4月22日及倒计时天数.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 崔景会生日公历日期11月8日及倒计时天数.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 父母结婚纪念日公历日期1月23日及倒计时天数.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 妈妈生日倒计时天数 (/data/countdown3/countdownDays).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 崔景会生日倒计时天数 (/data/countdown4/countdownDays).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 父母结婚纪念日倒计时天数 (/data/countdown5/countdownDays).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "/data/countdown3: declared data capability is not used by any component.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "/data/countdown4: declared data capability is not used by any component.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "/data/countdown5: declared data capability is not used by any component.",
+    "stage": "validation"
+  }
+]

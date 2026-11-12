@@ -1,0 +1,174 @@
+{
+  "cardSpec": {
+    "dataBindings": [
+      {
+        "arguments": {},
+        "capabilityId": "GetMemoData",
+        "writeResultTo": "/data/memo"
+      }
+    ],
+    "description": "笔记与待办速览",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "suggestSize": "2x2",
+    "title": "我的记忆"
+  },
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.bell_fill"
+    ],
+    "data": [
+      "GetMemoData"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "MainAbility",
+          "bundleName": "com.huawei.hmos.notepad",
+          "intentName": "ViewNote",
+          "params": {
+            "launchSource": "1",
+            "launchType": "0"
+          }
+        },
+        "call": "clickToIntent",
+        "description": "打开华为备忘录应用。",
+        "id": "event.viewNote"
+      }
+    ]
+  },
+  "generationPlan": {
+    "candidateAssetIds": [
+      "asset.bell_fill"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/noteCount",
+          "/favoriteNoteCount",
+          "/notes/0/title",
+          "/todoTotalCount",
+          "/todoCompletedCount",
+          "/todoPendingCount",
+          "/todos/0/title"
+        ],
+        "capabilityId": "GetMemoData",
+        "writeResultTo": "/data/memo"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "MainAbility",
+            "bundleName": "com.huawei.hmos.notepad",
+            "intentName": "ViewNote",
+            "params": {
+              "launchSource": "1",
+              "launchType": "0"
+            }
+          },
+          "call": "clickToIntent"
+        },
+        "capabilityId": "event.viewNote"
+      }
+    ]
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"first\",\"second\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":8}},{\"id\":\"first\",\"component\":\"Column\",\"children\":[\"first_text\"],\"itemMargin\":0,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"clip\":true,\"flexShrink\":0,\"width\":\"matchParent\",\"height\":63,\"backgroundColor\":\"@theme:panel/1\",\"layoutWeight\":1}},{\"id\":\"first_text\",\"component\":\"Column\",\"children\":[\"first_primary_row\",\"first_secondary\"],\"itemMargin\":0,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"center\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"first_primary_row\",\"component\":\"Row\",\"children\":[\"first_primary_value\",\"first_primary_unit\"],\"itemMargin\":2,\"styles\":{\"height\":22,\"alignItems\":\"bottom\",\"flexShrink\":0}},{\"id\":\"first_primary_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/memo/noteCount} }}\",\"styles\":{\"height\":22,\"fontSize\":16,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"first_primary_unit\",\"component\":\"Text\",\"content\":\"条\",\"styles\":{\"height\":16.0,\"fontSize\":10,\"fontWeight\":500,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"padding\":{\"top\":0,\"right\":0,\"bottom\":2,\"left\":0},\"textOverflow\":\"clip\"}},{\"id\":\"first_secondary\",\"component\":\"Text\",\"content\":\"备忘录笔记\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/0.6\"}},{\"id\":\"second\",\"component\":\"Column\",\"children\":[\"second_text\"],\"itemMargin\":0,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"clip\":true,\"flexShrink\":0,\"width\":\"matchParent\",\"height\":63,\"backgroundColor\":\"@theme:panel/1\",\"layoutWeight\":1}},{\"id\":\"second_text\",\"component\":\"Column\",\"children\":[\"second_primary_row\",\"second_secondary\"],\"itemMargin\":0,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"center\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"second_primary_row\",\"component\":\"Row\",\"children\":[\"second_primary_value\",\"second_primary_unit\"],\"itemMargin\":2,\"styles\":{\"height\":22,\"alignItems\":\"bottom\",\"flexShrink\":0}},{\"id\":\"second_primary_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/memo/todoTotalCount} }}\",\"styles\":{\"height\":22,\"fontSize\":16,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"second_primary_unit\",\"component\":\"Text\",\"content\":\"条\",\"styles\":{\"height\":16.0,\"fontSize\":10,\"fontWeight\":500,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"padding\":{\"top\":0,\"right\":0,\"bottom\":2,\"left\":0},\"textOverflow\":\"clip\"}},{\"id\":\"second_secondary\",\"component\":\"Text\",\"content\":\"{{ '待办 未完成' + ${/data/memo/todoPendingCount} + ' 已完成' + ${/data/memo/todoCompletedCount} }}\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"memo\":{\"noteCount\":0,\"todoTotalCount\":0,\"todoPendingCount\":0,\"todoCompletedCount\":0}}}}}",
+  "meta": {
+    "apiVersion": "v1",
+    "artifactId": "267686d0-7c09-4695-b0be-214acf7f8487",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "cardSpecVersion": "card-spec-v1",
+    "createdAt": 1793952166646,
+    "dslProtocolVersion": "v0.9",
+    "generationMode": "create",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "skillVersion": "skill-widget-v1",
+    "taskSpecVersion": "task-spec-v1"
+  },
+  "removedCapabilities": [],
+  "schemaVersion": "widget-artifact-v2",
+  "taskSpec": {
+    "appVersion": "11.7.9.300",
+    "assetCandidates": [
+      {
+        "description": "样式：默认黑色的单色实心铃铛图标，采用经典吊铃造型，底部带铃舌，原始尺寸为 24×24；适用：通知提醒、消息提示、备忘录提醒、闹钟响铃或开启状态，以及日历事项提醒。",
+        "id": "asset.bell_fill",
+        "src": "resources/base/media/bell_fill.svg"
+      }
+    ],
+    "dataModelSchema": {
+      "data": {
+        "memo": {
+          "favoriteNoteCount": {
+            "description": "收藏笔记数。",
+            "sampleValue": 0,
+            "type": "integer"
+          },
+          "noteCount": {
+            "description": "查询到的笔记总数量（已过滤已删除笔记）。",
+            "sampleValue": 0,
+            "type": "integer"
+          },
+          "notes": [
+            {
+              "title": {
+                "description": "笔记标题，若无标题则回退为'无标题'。",
+                "sampleValue": "示例",
+                "type": "string"
+              }
+            }
+          ],
+          "todoCompletedCount": {
+            "description": "已完成的待办记录数。",
+            "sampleValue": 0,
+            "type": "integer"
+          },
+          "todoPendingCount": {
+            "description": "未完成的待办记录数。",
+            "sampleValue": 0,
+            "type": "integer"
+          },
+          "todoTotalCount": {
+            "description": "查询到的待办总数量（已过滤已删除待办）。",
+            "sampleValue": 0,
+            "type": "integer"
+          },
+          "todos": [
+            {
+              "title": {
+                "description": "待办标题，若无标题则回退为'无标题'。",
+                "sampleValue": "示例",
+                "type": "string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "eventCandidates": [
+      {
+        "args": {
+          "abilityName": "MainAbility",
+          "bundleName": "com.huawei.hmos.notepad",
+          "intentName": "ViewNote",
+          "params": {
+            "launchSource": "1",
+            "launchType": "0"
+          }
+        },
+        "call": "clickToIntent",
+        "description": "打开华为备忘录应用。",
+        "id": "event.viewNote"
+      }
+    ],
+    "size": "2x2",
+    "userQuery": "生成一个我的记忆卡片，展示我的备忘录笔记和待办信息"
+  }
+}

@@ -1,0 +1,10 @@
+```genui
+["root","Layout",{"layout":"S-title-content-action","variant":"direct-dense"},["title","content","action"]]
+["title","SingleLineTitle",{"title":"锻炼打卡","fontSize":12}]
+["content","Group",{"variant":"peer-pair"},["content_left","content_right"]]
+["content_left","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/todoCompletedCount"},"secondaryText":"已完成"}]
+["content_right","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/todoPendingCount"},"secondaryText":"未完成"}]
+["action","PillButton",{"label":"打开备忘录","icon":"resources/base/media/checkmark_calendar_fill.svg","onClick":[{"call":"clickToIntent","args":{"abilityName":"MainAbility","bundleName":"com.huawei.hmos.notepad","intentName":"ViewNote","params":{"launchSource":"1","launchType":"0"}}}]}]
+["/data/memo/todoCompletedCount",0]
+["/data/memo/todoPendingCount",0]
+```

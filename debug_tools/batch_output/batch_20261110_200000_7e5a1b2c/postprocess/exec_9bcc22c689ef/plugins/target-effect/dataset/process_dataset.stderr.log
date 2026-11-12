@@ -1,0 +1,3 @@
+D:\卡片\query\CreateMyCard\debug_tools\postprocess_plugins\target_effect\plugin.py:657: RuntimeWarning: coroutine '_run_capture' was never awaited
+  capture = None
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback

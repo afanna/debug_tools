@@ -1,0 +1,53 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": [
+        "/current/temperatureText",
+        "/current/condition"
+      ]
+    },
+    {
+      "capabilityId": "GetPhoneBatteryInfo",
+      "arguments": {},
+      "writeResultTo": "/data/phoneBattery",
+      "candidateOutputFields": [
+        "/batterySOCText",
+        "/chargingStatusDesc",
+        "/batterySOC"
+      ]
+    },
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/exerciseTypeName",
+        "/exerciseDurationText"
+      ]
+    },
+    {
+      "capabilityId": "GetAppPowerConsumptionRanking",
+      "arguments": {
+        "limit": 3
+      },
+      "writeResultTo": "/data/powerRanking",
+      "candidateOutputFields": [
+        "/rankingList/0/appName",
+        "/rankingList/0/powerText",
+        "/rankingList/1/appName",
+        "/rankingList/1/powerText",
+        "/rankingList/2/appName",
+        "/rankingList/2/powerText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": []
+}

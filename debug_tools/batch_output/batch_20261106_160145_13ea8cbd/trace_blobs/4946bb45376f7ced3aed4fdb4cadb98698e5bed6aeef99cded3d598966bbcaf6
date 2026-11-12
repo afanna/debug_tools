@@ -1,0 +1,126 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.calendar_fill"
+    }
+  },
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "nov6",
+      "identity": "PC镇江实地指导",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "nov7",
+      "identity": "PC天坛学习班",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡共同主题：11月会议日程",
+      "sourceTexts": [
+        "11月6日 PC镇江实地指导(镇江)",
+        "11月7日 PC天坛学习班(北京)"
+      ],
+      "text": "11月会议日程"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "11月6日 PC镇江实地指导在镇江",
+      "sourceTexts": [
+        "11月6日 PC镇江实地指导(镇江)"
+      ],
+      "text": "11月6日"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "会议名称与地点：PC镇江实地指导(镇江)",
+      "sourceTexts": [
+        "11月6日 PC镇江实地指导(镇江)"
+      ],
+      "text": "PC镇江实地指导(镇江)"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "11月7日 PC天坛学习班在北京",
+      "sourceTexts": [
+        "11月7日 PC天坛学习班(北京)"
+      ],
+      "text": "11月7日"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "会议名称与地点：PC天坛学习班(北京)",
+      "sourceTexts": [
+        "11月7日 PC天坛学习班(北京)"
+      ],
+      "text": "PC天坛学习班(北京)"
+    }
+  ],
+  "layoutHints": [
+    "S-static-content"
+  ],
+  "omittedContents": [
+    "11月12日及之后全部会议日程未展示"
+  ],
+  "paletteFamily": "auto",
+  "presentationStyle": "records",
+  "selectionNotes": [
+    "2x2小卡容量有限，日程条目众多，仅选取11月6日、7日两条近期记录作示例展示。",
+    "采用records结构，两条记录各含日期与会议名称，配共同标题“11月会议日程”。",
+    "其余日期条目未选入，记录于omittedContents。"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"S-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"11月会议日程\"}]\n[\"body\", \"TextList\", {\"items\": [{\"primaryText\": \"PC镇江实地指导(镇江)\", \"secondaryText\": \"11月6日\"}, {\"primaryText\": \"PC天坛学习班(北京)\", \"secondaryText\": \"11月7日\"}]}]\n[\"/state/ready\", true]",
+  "staticPresentationFeedback": [
+    "正式组件UX允许省略号，原候选仍可用；以下仅为完整文字展示压力，不是新增发布门禁或事实删减授权。请在既有Plan机会中核对必要信息的完整展示：\nCompact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_primaryText 完整文字需要 2 行，102vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。"
+  ]
+}

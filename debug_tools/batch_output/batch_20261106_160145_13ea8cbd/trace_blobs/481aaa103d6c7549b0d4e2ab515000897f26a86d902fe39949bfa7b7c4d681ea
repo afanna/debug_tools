@@ -1,0 +1,28 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "辉县市今日当前温度（已含℃单位）"
+    },
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "辉县市今日当前天气现象"
+    }
+  ],
+  "layoutHints": [
+    "S-center",
+    "S-title-dual-content"
+  ]
+}

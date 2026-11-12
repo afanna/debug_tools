@@ -1,0 +1,80 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.cake_fill"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "targetDate": "2027-01-05"
+      },
+      "candidateOutputFields": [
+        "/countdownDays"
+      ],
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.cake_fill"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "targetDate": "2027-01-05"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "老爸生日倒计时",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "HLS-AL00 7.0.0.111",
+    "size": "2x2",
+    "title": "老爸生日",
+    "uid": "batch-dd0b00bc-00058-000",
+    "userQuery": "把老爸的生日放置在桌面提示，显示老爸生日的倒计时天数。老爸生日是2027年1月5日。本轮卡片静态内容（用作展示的外部事实）：老爸生日是2027年1月5日。"
+  },
+  "description": "老爸生日倒计时",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "HLS-AL00",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261102001831936"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "HLS-AL00 7.0.0.111",
+  "session": {
+    "interactionId": "Q470-000",
+    "isNew": true,
+    "sessionId": "batch-dd0b00bc"
+  },
+  "size": "2x2",
+  "title": "老爸生日",
+  "userAuth": {
+    "user": {
+      "userId": "batch-dd0b00bc-00058-000"
+    }
+  },
+  "userQuery": "把老爸的生日放置在桌面提示，显示老爸生日的倒计时天数。老爸生日是2027年1月5日。本轮卡片静态内容（用作展示的外部事实）：老爸生日是2027年1月5日。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

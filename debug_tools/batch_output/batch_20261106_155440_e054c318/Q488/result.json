@@ -1,0 +1,21 @@
+{
+  "id": "Q488",
+  "fileName": "Q488.json",
+  "title": "天气预报",
+  "query": "帮我添加天气预报卡片，展示当前天气和未来天气预报",
+  "size": "2x2",
+  "sequence": 74,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2047.0,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00074-000",
+  "finalAttempt": 0
+}

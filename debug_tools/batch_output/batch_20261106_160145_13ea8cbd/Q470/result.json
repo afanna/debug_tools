@@ -1,0 +1,21 @@
+{
+  "id": "Q470",
+  "fileName": "Q470.json",
+  "title": "老爸生日",
+  "query": "把老爸的生日放置在桌面提示，显示老爸生日的倒计时天数。老爸生日是2027年1月5日。本轮卡片静态内容（用作展示的外部事实）：老爸生日是2027年1月5日。",
+  "size": "2x2",
+  "sequence": 58,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4853.59,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 96,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4830.27,
+  "uid": "batch-13ea8cbd-00058-000",
+  "finalAttempt": 0
+}

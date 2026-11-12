@@ -1,0 +1,3 @@
+["root","Layout",{"layout":"S-center"},["content"]]
+["content","DataDisplay",{"icon":"resources/base/media/calendar_fill.svg","value":{"path":"/data/time/lunarDate"},"supportingText":"农历日期"}]
+["/data/time/lunarDate","示例"]

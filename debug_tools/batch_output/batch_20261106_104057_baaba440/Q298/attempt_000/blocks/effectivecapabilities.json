@@ -1,0 +1,12 @@
+{
+  "data": [
+    "GetHealthAndSportSummary",
+    "GetPhoneBatteryInfo",
+    "GetCurrentTime",
+    "GetEarphoneInfo"
+  ],
+  "event": [],
+  "asset": [
+    "photo-ux-texture-blue-diamond-square"
+  ]
+}

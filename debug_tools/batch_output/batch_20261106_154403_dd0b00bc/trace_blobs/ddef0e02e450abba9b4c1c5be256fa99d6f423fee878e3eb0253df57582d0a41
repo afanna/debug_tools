@@ -1,0 +1,50 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.emoji_time"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "priority": "must",
+      "requirement": "显示当前时间 12:40",
+      "text": "12:40"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "priority": "must",
+      "requirement": "显示日期 11 月 02 日",
+      "text": "11 月 02 日"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "priority": "must",
+      "requirement": "显示星期一",
+      "text": "星期一"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "priority": "must",
+      "requirement": "显示农历九月廿四",
+      "text": "农历九月廿四"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom",
+    "W-split-panels"
+  ]
+}

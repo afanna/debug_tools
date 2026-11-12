@@ -1,0 +1,4 @@
+["root","Column",{"width":"matchParent","height":"matchParent","padding":{"top":12.0,"bottom":12.0,"left":0,"right":0},"itemMargin":6.0,"borderRadius":20.0,"clip":true,"alignItems":"start","justifyContent":"start","_staticLayout":"W-static-content"},["__layout__root__static_body"]]
+["__layout__root__static_body","Column",{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"end","itemMargin":6.0,"padding":{"left":12.0,"right":12.0}},["body"]]
+["body","TextList",{"items":[{"primaryText":"周一 早：燕麦粥+水煮蛋 午：糙米饭+清蒸鱼 晚：杂粮粥+豆腐","secondaryText":"粗粮主食+低脂蛋白"},{"primaryText":"周二 早：全麦面包+脱脂奶 午：红薯饭+鸡胸肉 晚：小米粥+胡萝卜丝","secondaryText":"全麦、红薯等粗粮为主"},{"primaryText":"关键提醒","secondaryText":"主食换粗粮，蛋白选鱼虾豆腐，多蒸煮凉拌"}]}]
+["/state/ready",true]

@@ -1,0 +1,248 @@
+```cardspec
+{
+  "title": "小艺",
+  "description": "小艺快捷入口",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Stack","children":["__post_theme_background","__genui_render_component__root"],"styles":{"width":"matchParent","height":"matchParent","padding":0,"alignContent":"topStart","clip":true,"borderRadius":20,"backgroundColor":"#FF1F1F99"}},{"id":"__post_theme_background","component":"Stack","children":["fusionBallBackground","__post_theme_base"],"styles":{"width":"matchParent","height":"matchParent","alignContent":"topStart"}},{"id":"__post_theme_base","component":"Image","src":"https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/833c5de3326049de993cc193a526df84/cbfe92acc718409aae519be674465497.jpg","styles":{"width":"matchParent","height":"matchParent","objectFit":"fill"}},{"id":"fusionBallBackground","component":"Stack","children":["fusionBallLargeSlot","fusionBallMediumSlot","fusionBallSmallSlot","fusionBallGlassLayer"],"styles":{"width":"100%","height":"100%","borderRadius":20,"alignContent":"topStart","clip":true}},{"id":"fusionBallLargeSlot","component":"Stack","children":["fusionBallLarge"],"styles":{"width":"112.5%","height":"27.5%","alignContent":"center"}},{"id":"fusionBallLarge","component":"Divider","styles":{"width":"116.666667%","height":"477.272727%","strokeWidth":0,"color":"#00000000","borderRadius":105,"backgroundColor":"#FF1F1F99","clip":true}},{"id":"fusionBallMediumSlot","component":"Stack","children":["fusionBallMedium"],"styles":{"width":"50%","height":"137.5%","alignContent":"bottom"}},{"id":"fusionBallMedium","component":"Divider","styles":{"width":"200%","height":"72.727273%","strokeWidth":0,"color":"#00000000","borderRadius":80,"backgroundColor":"#FF2B65D9","clip":true}},{"id":"fusionBallSmallSlot","component":"Stack","children":["fusionBallSmall"],"styles":{"width":"121.875%","height":"118.75%","alignContent":"bottomEnd"}},{"id":"fusionBallSmall","component":"Divider","styles":{"width":"51.282051%","height":"52.631579%","strokeWidth":0,"color":"#00000000","borderRadius":50,"backgroundColor":"#FF57AED9","clip":true}},{"id":"fusionBallGlassLayer","component":"Divider","styles":{"width":"100%","height":"100%","strokeWidth":0,"color":"#00000000","backgroundColor":"#0DFFFFFF","backdropBlur":{"radius":210}}},{"id":"__genui_render_component__root","component":"Column","children":["title","body"],"itemMargin":6,"styles":{"width":"matchParent","height":"matchParent","padding":12,"borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start"}},{"id":"title","component":"Row","children":["title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"title_title","component":"Text","content":"Design Compact Mock","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#CCFFFFFF"}},{"id":"body","component":"Column","children":["content"],"styles":{"width":"matchParent","layoutWeight":1},"itemMargin":0},{"id":"content","component":"Column","children":["content_main"],"itemMargin":2,"styles":{"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"width":"matchParent"}},{"id":"content_main","component":"Text","content":"Mock ready","styles":{"height":18,"fontSize":18,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FFFFFFFF","textOverflow":"clip"}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"ui":{"state":"ready"}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "在手机桌面创建一个快捷入口卡片，点击可以打开手电筒",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.openFlashlight",
+      "description": "点击后打开手机手电筒",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "OpenFlashlight",
+        "params": {}
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "time": {
+        "currentDate": {
+          "type": "string",
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例"
+        },
+        "dayOfWeek": {
+          "type": "string",
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例"
+        },
+        "lunarDate": {
+          "type": "string",
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "端侧完成该时间数据组装的时间戳字符串，格式如 '2026-07-09 15:30:00'。",
+          "sampleValue": "示例"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.ic_flashlight",
+      "src": "resources/base/media/ic_flashlight.svg",
+      "description": "样式：默认黑色的单色手电筒图标，筒身为竖向圆角轮廓，原始尺寸为 24×24；适用：手电筒快捷控制卡片，可结合 event.openFlashlight 开启手电筒或 event.closeFlashlight 关闭手电筒。图标本身不表示手电筒当前开关状态。"
+    },
+    {
+      "id": "photo-ux-texture-orange-diamond-square",
+      "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/833c5de3326049de993cc193a526df84/cbfe92acc718409aae519be674465497.jpg",
+      "description": "主题背景"
+    }
+  ]
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "GetCurrentTime"
+  ],
+  "event": [
+    {
+      "id": "event.openFlashlight",
+      "description": "点击后打开手机手电筒",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "OpenFlashlight",
+        "params": {}
+      }
+    }
+  ],
+  "asset": [
+    "asset.ic_flashlight",
+    "photo-ux-texture-orange-diamond-square"
+  ]
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time",
+      "candidateOutputFields": []
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.openFlashlight",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "intentName": "OpenFlashlight",
+          "params": {}
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.ic_flashlight"
+  ]
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "ae89d365-c820-45a8-8de5-c6cd63ecbf3d",
+  "createdAt": 1793932871267
+}
+```
+```designcompactdsl
+["root","Column",{"width":"matchParent","height":"matchParent","padding":12,"borderRadius":20,"clip":true,"itemMargin":6,"alignItems":"start","justifyContent":"start"},["title","body"]]
+["title","SingleLineTitle",{"title":"Design Compact Mock"}]
+["body","Column",{"width":"matchParent","layoutWeight":1},["content"]]
+["content","EmphasisText",{"mainText":"Mock ready"}]
+["/ui/state","ready"]
+```
+```request
+{
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "userQuery": "在手机桌面创建一个快捷入口卡片，点击可以打开手电筒",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetCurrentTime",
+        "arguments": {},
+        "writeResultTo": "/data/time"
+      }
+    ],
+    "title": "小艺",
+    "size": "2x2",
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.openFlashlight",
+        "action": {
+          "call": "clickToIntent",
+          "args": {
+            "intentName": "OpenFlashlight",
+            "params": {}
+          }
+        }
+      }
+    ],
+    "description": "小艺快捷入口",
+    "candidateAssetIds": [
+      "asset.ic_flashlight"
+    ]
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "HLS-AL00",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261029143807181"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q322-000",
+    "isNew": true,
+    "sessionId": "batch-baaba440"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "在手机桌面创建一个快捷入口卡片，点击可以打开手电筒",
+    "type": "text"
+  },
+  "version": "1.0",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "HLS-AL00 7.0.0.111",
+  "bundleName": "com.huawei.genui",
+  "userQuery": "在手机桌面创建一个快捷入口卡片，点击可以打开手电筒",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "title": "小艺",
+  "size": "2x2",
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.openFlashlight",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "intentName": "OpenFlashlight",
+          "params": {}
+        }
+      }
+    }
+  ],
+  "description": "小艺快捷入口",
+  "candidateAssetIds": [
+    "asset.ic_flashlight"
+  ]
+}
+```

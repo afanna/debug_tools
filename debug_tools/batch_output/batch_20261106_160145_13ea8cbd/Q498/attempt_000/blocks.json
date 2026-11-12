@@ -1,0 +1,189 @@
+{
+  "cardspec": {
+    "title": "耳机电量",
+    "description": "耳机电池状态速览",
+    "suggestSize": "2x2",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "dataBindings": [
+      {
+        "capabilityId": "GetEarphoneInfo",
+        "arguments": {},
+        "writeResultTo": "/data/earphone"
+      }
+    ]
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\r\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"title\",\"__layout__root__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":12,\"linearGradient\":{\"direction\":\"RightBottom\",\"colors\":[[\"#FFCBDDFE\",0],[\"#FFF1F6FE\",1]]}}},{\"id\":\"title\",\"component\":\"Row\",\"children\":[\"title_title\",\"title_icon\"],\"styles\":{\"width\":\"matchParent\",\"height\":20,\"flexShrink\":0,\"justifyContent\":\"spaceBetween\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"title_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/earphone/earphoneName} }}\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":1,\"width\":\"wrapContent\",\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0},\"fontColor\":\"#991F4799\"}},{\"id\":\"title_icon\",\"component\":\"Image\",\"src\":\"resources/base/media/emoji_bluetooth_earbuds_black.png\",\"styles\":{\"width\":20,\"height\":20,\"objectFit\":\"contain\",\"flexShrink\":0}},{\"id\":\"__layout__root__body\",\"component\":\"Column\",\"children\":[\"__layout__root__primary\",\"__layout__root__support\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__root__primary\",\"component\":\"Column\",\"children\":[\"primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1,\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"primary\",\"component\":\"Row\",\"children\":[\"primary_value\",\"primary_unit\"],\"itemMargin\":2,\"styles\":{\"justifyContent\":\"start\",\"alignItems\":\"bottom\",\"flexShrink\":0,\"width\":\"matchParent\"}},{\"id\":\"primary_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/earphone/batteryLevel} }}\",\"styles\":{\"height\":30,\"fontSize\":30,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"#FF1F4799\",\"textOverflow\":\"clip\"}},{\"id\":\"primary_unit\",\"component\":\"Text\",\"content\":\"%\",\"styles\":{\"height\":13.25,\"fontSize\":12,\"fontWeight\":500,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"#991F4799\",\"padding\":{\"top\":0,\"right\":0,\"bottom\":1.25,\"left\":0},\"textOverflow\":\"clip\"}},{\"id\":\"__layout__root__support\",\"component\":\"Column\",\"children\":[\"support\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"support\",\"component\":\"Column\",\"children\":[\"support_row0\",\"support_row1\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"flexShrink\":1}},{\"id\":\"support_item0_label\",\"component\":\"Text\",\"content\":\"左耳\",\"styles\":{\"height\":12,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"lineHeight\":1,\"fontColor\":\"#991F4799\",\"textOverflow\":\"clip\"}},{\"id\":\"support_item0_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/earphone/leftBatteryLevel} + '%' }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"#FF1F4799\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"support_item0\",\"component\":\"Row\",\"children\":[\"support_item0_label\",\"support_item0_value\"],\"itemMargin\":4,\"styles\":{\"height\":12.0,\"alignItems\":\"top\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"support_row0\",\"component\":\"Row\",\"children\":[\"support_item0\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"top\",\"flexShrink\":0}},{\"id\":\"support_item1_label\",\"component\":\"Text\",\"content\":\"右耳\",\"styles\":{\"height\":12,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"lineHeight\":1,\"fontColor\":\"#991F4799\",\"textOverflow\":\"clip\"}},{\"id\":\"support_item1_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/earphone/rightBatteryLevel} + '%' }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"#FF1F4799\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"support_item1\",\"component\":\"Row\",\"children\":[\"support_item1_label\",\"support_item1_value\"],\"itemMargin\":4,\"styles\":{\"height\":12.0,\"alignItems\":\"top\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"support_row1\",\"component\":\"Row\",\"children\":[\"support_item1\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"top\",\"flexShrink\":0}}]}}\r\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"earphone\":{\"earphoneName\":\"示例耳机\",\"batteryLevel\":80,\"leftBatteryLevel\":76,\"rightBatteryLevel\":78}}}}}",
+  "schema": {
+    "schemaVersion": "widget-artifact-v2"
+  },
+  "taskspec": {
+    "userQuery": "把耳机电池电量放到桌面上，创建一张耳机电量卡片，显示耳机名称、耳机盒电量、左右耳电量。",
+    "size": "2x2",
+    "appVersion": "11.7.8.342",
+    "eventCandidates": [],
+    "dataModelSchema": {
+      "data": {
+        "earphone": {
+          "earphoneName": {
+            "type": "string",
+            "description": "耳机的设备广播名称，如果未连接则返回'未连接耳机'。如: 'FreeBuds Pro 3'。",
+            "sampleValue": "示例耳机"
+          },
+          "batteryLevel": {
+            "type": "integer",
+            "description": "耳机盒（或整体）当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”。",
+            "sampleValue": 80
+          },
+          "leftBatteryLevel": {
+            "type": "integer",
+            "description": "左耳机当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”；未连接时为 0。若直接用于文本展示，必须在数值后追加“%”。",
+            "sampleValue": 76
+          },
+          "rightBatteryLevel": {
+            "type": "integer",
+            "description": "右耳机当前剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”；未连接时为 0。若直接用于文本展示，必须在数值后追加“%”。",
+            "sampleValue": 78
+          }
+        }
+      }
+    },
+    "assetCandidates": [
+      {
+        "id": "asset.emoji_bluetooth_earbuds_black",
+        "src": "resources/base/media/emoji_bluetooth_earbuds_black.png",
+        "description": "样式：深灰到黑色渐变的一对分体式入耳蓝牙耳机，带立体高光与透明背景，原始尺寸为 64×64，PNG 位图需保留原色；适用：蓝牙耳机连接状态、名称或左右耳电量卡片，可结合 GetEarphoneInfo 的 isConnected、earphoneName、leftBatteryLevel 和 rightBatteryLevel 展示，也可作为 event.open.settings.bluetooth 的蓝牙设置入口。图标不表示耳机当前已连接、正在充电或具有特定电量。"
+      }
+    ]
+  },
+  "effectivecapabilities": {
+    "data": [
+      "GetEarphoneInfo"
+    ],
+    "event": [],
+    "asset": [
+      "asset.emoji_bluetooth_earbuds_black"
+    ]
+  },
+  "removedcapabilities": [],
+  "generationplan": {
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetEarphoneInfo",
+        "arguments": {},
+        "writeResultTo": "/data/earphone",
+        "candidateOutputFields": [
+          "/earphoneName",
+          "/batteryLevel",
+          "/leftBatteryLevel",
+          "/rightBatteryLevel"
+        ]
+      }
+    ],
+    "candidateEventCandidates": [],
+    "candidateAssetIds": [
+      "asset.emoji_bluetooth_earbuds_black"
+    ]
+  },
+  "meta": {
+    "apiVersion": "v1",
+    "taskSpecVersion": "task-spec-v1",
+    "cardSpecVersion": "card-spec-v1",
+    "dslProtocolVersion": "v0.9",
+    "skillVersion": "skill-widget-v1",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "generationMode": "create",
+    "artifactId": "129dc3b0-02ea-45cc-bda8-f305025fac55",
+    "createdAt": 1793952324307
+  },
+  "designcompactdsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-dual-content\"},[\"title\",\"primary\",\"support\"]]\r\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/earphone/earphoneName\"},\"icon\":\"resources/base/media/emoji_bluetooth_earbuds_black.png\",\"fontSize\":12}]\r\n[\"primary\",\"EmphasizedData\",{\"value\":{\"path\":\"/data/earphone/batteryLevel\"},\"unit\":\"%\",\"fontSize\":30}]\r\n[\"support\",\"SecondaryBody\",{\"items\":[{\"label\":\"左耳 \",\"value\":\"{{ ${/data/earphone/leftBatteryLevel} + '%' }}\"},{\"label\":\"右耳 \",\"value\":\"{{ ${/data/earphone/rightBatteryLevel} + '%' }}\"}],\"columns\":1,\"fontSize\":12}]\r\n[\"/data/earphone/earphoneName\",\"示例耳机\"]\r\n[\"/data/earphone/batteryLevel\",80]\r\n[\"/data/earphone/leftBatteryLevel\",76]\r\n[\"/data/earphone/rightBatteryLevel\",78]",
+  "request": {
+    "content": {
+      "size": "2x2",
+      "functionName": "generateWidgetCardCompactDsl",
+      "romVersion": "CMU-AL10 7.0.0.111",
+      "candidateAssetIds": [
+        "asset.emoji_bluetooth_earbuds_black"
+      ],
+      "candidateEventCandidates": [],
+      "bundleName": "com.huawei.genui",
+      "description": "耳机电池状态速览",
+      "userQuery": "把耳机电池电量放到桌面上，创建一张耳机电量卡片，显示耳机名称、耳机盒电量、左右耳电量。",
+      "title": "耳机电量",
+      "candidateDataBindings": [
+        {
+          "capabilityId": "GetEarphoneInfo",
+          "arguments": {},
+          "writeResultTo": "/data/earphone",
+          "candidateOutputFields": [
+            "/earphoneName",
+            "/batteryLevel",
+            "/leftBatteryLevel",
+            "/rightBatteryLevel"
+          ]
+        }
+      ]
+    },
+    "deviceInfo": {
+      "countryCode": "CN",
+      "deviceFormation": "HDSpeaker",
+      "deviceType": 0,
+      "locale": "zh-CN",
+      "phoneType": "CMU-AL10",
+      "prdVer": "11.7.8.342",
+      "sysVer": "EmotionUI_9.0.0",
+      "time": "20261103050155168"
+    },
+    "pagination": {
+      "limit": 5,
+      "start": ""
+    },
+    "session": {
+      "interactionId": "Q498-000",
+      "isNew": true,
+      "sessionId": "batch-13ea8cbd"
+    },
+    "userAuth": {
+      "user": {}
+    },
+    "utterance": {
+      "original": "",
+      "type": "text"
+    },
+    "version": "1.0",
+    "size": "2x2",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMU-AL10 7.0.0.111",
+    "candidateAssetIds": [
+      "asset.emoji_bluetooth_earbuds_black"
+    ],
+    "candidateEventCandidates": [],
+    "bundleName": "com.huawei.genui",
+    "description": "耳机电池状态速览",
+    "userQuery": "把耳机电池电量放到桌面上，创建一张耳机电量卡片，显示耳机名称、耳机盒电量、左右耳电量。",
+    "title": "耳机电量",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetEarphoneInfo",
+        "arguments": {},
+        "writeResultTo": "/data/earphone",
+        "candidateOutputFields": [
+          "/earphoneName",
+          "/batteryLevel",
+          "/leftBatteryLevel",
+          "/rightBatteryLevel"
+        ]
+      }
+    ]
+  },
+  "repair-1": {
+    "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-dual-content\"},[\"title\",\"primary\",\"support\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/earphone/earphoneName\"},\"icon\":\"resources/base/media/emoji_bluetooth_earbuds_black.png\",\"fontSize\":12}]\n[\"primary\",\"EmphasizedData\",{\"value\":{\"path\":\"/data/earphone/batteryLevel\"},\"unit\":\"%\",\"fontSize\":30}]\n[\"support\",\"SecondaryBody\",{\"items\":[{\"label\":\"左耳 \",\"value\":\"{{ ${/data/earphone/leftBatteryLevel} + '%' }}\"},{\"label\":\"右耳 \",\"value\":\"{{ ${/data/earphone/rightBatteryLevel} + '%' }}\"}],\"columns\":1,\"fontSize\":12}]\n[\"/data/earphone/earphoneName\",\"示例耳机\"]\n[\"/data/earphone/batteryLevel\",80]\n[\"/data/earphone/leftBatteryLevel\",76]\n[\"/data/earphone/rightBatteryLevel\",78]",
+    "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"title\",\"__layout__root__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":12}},{\"id\":\"title\",\"component\":\"Row\",\"children\":[\"title_title\",\"title_icon\"],\"styles\":{\"width\":\"matchParent\",\"height\":20,\"flexShrink\":0,\"justifyContent\":\"spaceBetween\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"title_title\",\"component\":\"Text\",\"content\":\"{{ ${/data/earphone/earphoneName} }}\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":1,\"width\":\"wrapContent\",\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0},\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"title_icon\",\"component\":\"Image\",\"src\":\"resources/base/media/emoji_bluetooth_earbuds_black.png\",\"styles\":{\"width\":20,\"height\":20,\"objectFit\":\"contain\",\"flexShrink\":0}},{\"id\":\"__layout__root__body\",\"component\":\"Column\",\"children\":[\"__layout__root__primary\",\"__layout__root__support\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"__layout__root__primary\",\"component\":\"Column\",\"children\":[\"primary\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1,\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"primary\",\"component\":\"Row\",\"children\":[\"primary_value\",\"primary_unit\"],\"itemMargin\":2,\"styles\":{\"justifyContent\":\"start\",\"alignItems\":\"bottom\",\"flexShrink\":0,\"width\":\"matchParent\"}},{\"id\":\"primary_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/earphone/batteryLevel} }}\",\"styles\":{\"height\":30,\"fontSize\":30,\"fontWeight\":700,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"primary_unit\",\"component\":\"Text\",\"content\":\"%\",\"styles\":{\"height\":13.25,\"fontSize\":12,\"fontWeight\":500,\"lineHeight\":1,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"padding\":{\"top\":0,\"right\":0,\"bottom\":1.25,\"left\":0},\"textOverflow\":\"clip\"}},{\"id\":\"__layout__root__support\",\"component\":\"Column\",\"children\":[\"support\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0},\"itemMargin\":0},{\"id\":\"support\",\"component\":\"Column\",\"children\":[\"support_row0\",\"support_row1\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"flexShrink\":1}},{\"id\":\"support_item0_label\",\"component\":\"Text\",\"content\":\"左耳\",\"styles\":{\"height\":12,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"lineHeight\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"support_item0_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/earphone/leftBatteryLevel} + '%' }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"support_item0\",\"component\":\"Row\",\"children\":[\"support_item0_label\",\"support_item0_value\"],\"itemMargin\":4,\"styles\":{\"height\":12.0,\"alignItems\":\"top\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"support_row0\",\"component\":\"Row\",\"children\":[\"support_item0\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"top\",\"flexShrink\":0}},{\"id\":\"support_item1_label\",\"component\":\"Text\",\"content\":\"右耳\",\"styles\":{\"height\":12,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":0,\"lineHeight\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"support_item1_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/earphone/rightBatteryLevel} + '%' }}\",\"styles\":{\"height\":12.0,\"fontSize\":12,\"fontWeight\":400,\"maxLines\":1,\"flexShrink\":1,\"lineHeight\":1,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textOverflow\":\"clip\"}},{\"id\":\"support_item1\",\"component\":\"Row\",\"children\":[\"support_item1_label\",\"support_item1_value\"],\"itemMargin\":4,\"styles\":{\"height\":12.0,\"alignItems\":\"top\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1}},{\"id\":\"support_row1\",\"component\":\"Row\",\"children\":[\"support_item1\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"height\":12.0,\"alignItems\":\"top\",\"flexShrink\":0}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"earphone\":{\"earphoneName\":\"示例耳机\",\"batteryLevel\":80,\"leftBatteryLevel\":76,\"rightBatteryLevel\":78}}}}}",
+    "validationErrors": []
+  }
+}

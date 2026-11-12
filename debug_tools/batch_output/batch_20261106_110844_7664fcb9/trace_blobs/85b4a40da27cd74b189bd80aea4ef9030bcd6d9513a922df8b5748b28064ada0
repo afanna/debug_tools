@@ -1,0 +1,51 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/health/sleepScore",
+      "priority": "must",
+      "requirement": "血氧数据（当前数据模型未提供血氧字段）"
+    },
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "InfoBlock"
+      ],
+      "dataId": "/data/health/exerciseHeartRateAvg",
+      "priority": "must",
+      "requirement": "心率信息"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前日期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前时间"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "ProgressCircleSingle"
+      ],
+      "dataId": "/data/battery/batterySOCText",
+      "priority": "must",
+      "requirement": "电量信息"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-title-dual-content"
+  ]
+}

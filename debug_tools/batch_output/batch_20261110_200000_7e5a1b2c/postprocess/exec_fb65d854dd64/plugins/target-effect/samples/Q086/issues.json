@@ -1,0 +1,169 @@
+{
+  "sampleId": "Q086",
+  "issues": [
+    {
+      "规则": "SPEC.MASK",
+      "说明": "黑色蒙层 60%",
+      "状态": "失败",
+      "扣分": "—",
+      "预期": "黑色蒙层 60%（55%–70%）",
+      "实际": "未找到黑色蒙层",
+      "证据": {}
+    },
+    {
+      "规则": "SPEC.TITLE_FONT",
+      "说明": "标题 16/20fp",
+      "状态": "失败",
+      "扣分": "—",
+      "预期": "主 16 或 20，副 16",
+      "实际": "主 12.0",
+      "证据": {
+        "component": "title_title",
+        "subtitle": null
+      }
+    },
+    {
+      "规则": "SPEC.TITLE_ELLIPSIS",
+      "说明": "标题单行省略",
+      "状态": "失败",
+      "扣分": "—",
+      "预期": "maxLines=1 且 textOverflow=ellipsis",
+      "实际": "未设置：title_title",
+      "证据": {
+        "components": [
+          "title_title"
+        ]
+      }
+    },
+    {
+      "规则": "SPEC.TITLE_COLOR",
+      "说明": "标题白色",
+      "状态": "失败",
+      "扣分": "—",
+      "预期": "主 100% 白，副 60% 白",
+      "实际": "主 alpha=0.8",
+      "证据": {
+        "component": "title_title",
+        "subtitle": null
+      }
+    },
+    {
+      "规则": "SPEC.PRIMARY_FONT",
+      "说明": "主值 56/38fp",
+      "状态": "失败",
+      "扣分": "—",
+      "预期": "56 或 38",
+      "实际": "18.0",
+      "证据": {
+        "component": "primary_main",
+        "expectedDays": 28,
+        "digits": 2
+      }
+    },
+    {
+      "规则": "SPEC.UNIT_FONT",
+      "说明": "单位 16fp 独立",
+      "状态": "失败",
+      "扣分": "—",
+      "预期": "单位独立 16fp",
+      "实际": "单位与数字同一文本节点",
+      "证据": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "规则": "SPEC.SUPPORT_FONT",
+      "说明": "副文本 16fp",
+      "状态": "失败",
+      "扣分": "—",
+      "预期": "16",
+      "实际": "support_item0_value=12.0, support_item0_label=12.0",
+      "证据": {
+        "failed": [
+          "support_item0_value",
+          "support_item0_label"
+        ]
+      }
+    },
+    {
+      "规则": "SPEC.SUPPORT_COLOR",
+      "说明": "副文本 60% 白",
+      "状态": "失败",
+      "扣分": "—",
+      "预期": "白色 60%",
+      "实际": "support_item0_value alpha=1.0",
+      "证据": {
+        "failed": [
+          "support_item0_value alpha=1.0"
+        ]
+      }
+    },
+    {
+      "规则": "VIS.TEXT_CLIPPED",
+      "说明": "文字未被裁切",
+      "状态": "失败",
+      "扣分": "—",
+      "预期": "对应可见性规则通过",
+      "实际": "Web 渲染中文字被裁剪或省略",
+      "证据": {
+        "findings": [
+          {
+            "components": [
+              "primary_main:18"
+            ],
+            "source": "GEOMETRY.CLIP_TEXT",
+            "text": "还剩 28 天",
+            "box": {
+              "x": 12,
+              "y": 38,
+              "width": 126,
+              "height": 18
+            },
+            "component": "primary_main"
+          }
+        ],
+        "count": 1
+      }
+    },
+    {
+      "规则": "VIS.CONTRAST_LOW",
+      "说明": "文字对比度",
+      "状态": "失败",
+      "扣分": "—",
+      "预期": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+      "实际": "4 个文本节点对比度偏低",
+      "证据": {
+        "nodes": [
+          {
+            "id": "title_title",
+            "ratio": 2.35,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.2
+          },
+          {
+            "id": "primary_main",
+            "ratio": 1.71,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.3
+          },
+          {
+            "id": "support_item0_label",
+            "ratio": 1.55,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.2
+          },
+          {
+            "id": "support_item0_value",
+            "ratio": 1.55,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.2
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "快递取件提醒",
+  "description": "京东2个包裹待取",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ]
+}

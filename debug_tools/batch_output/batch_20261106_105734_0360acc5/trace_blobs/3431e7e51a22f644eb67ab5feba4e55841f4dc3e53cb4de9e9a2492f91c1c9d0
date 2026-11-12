@@ -1,0 +1,37 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "昨天的累计步数，需带日期归属与“步”单位"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "今天的实时温度（已含℃单位）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/targetDateText",
+      "priority": "must",
+      "requirement": "步数所属日期，用于明确“昨天”"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-title-dual-content"
+  ]
+}

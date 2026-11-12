@@ -1,0 +1,25 @@
+{
+  "errors": [
+    "DISPLAY_UNIT_MISSING: 动态数值字段不包含展示单位，当前 Text 未展示其声明的单位。 [genui:2 /updateComponents/componentsById/content_value/content]"
+  ],
+  "promptContexts": [
+    {
+      "actual": "{{ ${/data/countdown/countdownDays} }}",
+      "category": "ARTIFACT_VALIDATION_FAILED",
+      "code": "DISPLAY_UNIT_MISSING",
+      "expected": {
+        "displayUnits": [
+          "天"
+        ],
+        "unitIncluded": false
+      },
+      "fileKind": "genui",
+      "fixHint": "在数值表达式中追加单位“天”，或让紧邻数值后的静态 Text 包含该单位，且整组只展示一次。",
+      "jsonPointer": "/updateComponents/componentsById/content_value/content",
+      "line": 2,
+      "message": "动态数值字段不包含展示单位，当前 Text 未展示其声明的单位。",
+      "stage": "validation",
+      "validatorStage": "semantic"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"S-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"密码信息"}]
+["body","SingleLineList",{"items":[{"text":"密码","assist":"88122092"},{"text":"类型","assist":"永久"}]}]
+["/state/ready",true]

@@ -1,0 +1,46 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "battery": {
+        "batterySOC": {
+          "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+          "sampleValue": 68,
+          "type": "integer"
+        },
+        "batterySOCText": {
+          "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+          "numericSource": "/data/battery/batterySOC",
+          "sampleValue": "68%",
+          "type": "string"
+        },
+        "chargingStatusDesc": {
+          "description": "当前设备电池的充电状态文本描述。",
+          "sampleValue": "未充电",
+          "type": "string"
+        }
+      },
+      "time": {
+        "currentDate": {
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "dayOfWeek": {
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "lunarDate": {
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "eventCandidates": [],
+  "size": "2x2",
+  "userQuery": "创建一张小艺卡片，展示当前时间、日期和星期，以及手机当前电量信息。"
+}

@@ -1,0 +1,61 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.weather",
+        "assetId": "asset.ic_weather_monochrome"
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "无独立标题事实，双信息块布局不含公共标题"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前天气温度（已含℃单位）"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前时间：日期"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前时间：星期"
+    },
+    {
+      "actionId": "event.open.weather",
+      "priority": "must",
+      "requirement": "打开天气应用当前城市页"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-title-dual-content"
+  ]
+}

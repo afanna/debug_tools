@@ -1,0 +1,21 @@
+{
+  "id": "Q508",
+  "fileName": "Q508.json",
+  "title": "今日天气",
+  "query": "做一张萧山今日天气卡片，显示当前温度和天气现象。本轮卡片静态内容（用作展示的外部事实）：萧山区今日小雨转中雨，14℃~19℃。",
+  "size": "2x2",
+  "sequence": 95,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2040.59,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00095-000",
+  "finalAttempt": 0
+}

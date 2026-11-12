@@ -1,0 +1,63 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.viewNote",
+        "assetId": "asset.list_book_fill"
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "唯一素材已分配给动作按钮，标题无可用匹配图标"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/notes/0/title",
+      "priority": "must",
+      "requirement": "展示笔记标题与正文内容，供用户在主屏浏览备忘录笔记"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/memo/notes/0/content",
+      "priority": "must",
+      "requirement": "展示第一条笔记的正文内容"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TextBlock"
+      ],
+      "dataId": "/data/memo/notes/1/title",
+      "priority": "should",
+      "requirement": "展示第二条笔记的标题"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/notes/1/content",
+      "priority": "should",
+      "requirement": "展示第二条笔记的正文内容"
+    },
+    {
+      "actionId": "event.viewNote",
+      "componentHints": [
+        "CardButton",
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "点击卡片跳转到备忘录应用进行编辑"
+    }
+  ],
+  "layoutHints": [
+    "W-content-side-slots"
+  ]
+}

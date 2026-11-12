@@ -1,0 +1,54 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [],
+    "candidateEventCandidates": [],
+    "description": "自爱圆满",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "HLS-AL00 7.0.0.111",
+    "size": "2x2",
+    "title": "渡人先渡己",
+    "uid": "batch-13ea8cbd-00021-000",
+    "userQuery": "制作一张静态文字卡片，展示以下精简版内容：爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。\n本轮卡片静态内容（用作展示的外部事实）：爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。"
+  },
+  "description": "自爱圆满",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "HLS-AL00",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261102012743341"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "HLS-AL00 7.0.0.111",
+  "session": {
+    "interactionId": "Q433-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x2",
+  "title": "渡人先渡己",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00021-000"
+    }
+  },
+  "userQuery": "制作一张静态文字卡片，展示以下精简版内容：爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。\n本轮卡片静态内容（用作展示的外部事实）：爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

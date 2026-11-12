@@ -1,0 +1,6 @@
+["root","Layout",{"layout":"S-dual-info"},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/phoneBattery/batterySOCText"},"secondaryText":{"path":"/data/phoneBattery/chargingStatusDesc"}}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":"{{ ${/data/healthSport/dailySteps} + '步' }}","secondaryText":"今日步数"}]
+["/data/phoneBattery/batterySOCText","68%"]
+["/data/phoneBattery/chargingStatusDesc","未充电"]
+["/data/healthSport/dailySteps",6200]

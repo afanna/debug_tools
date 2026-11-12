@@ -1,0 +1,96 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/0/weekday",
+      "priority": "must",
+      "requirement": "第1天星期"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/0/condition",
+      "priority": "must",
+      "requirement": "第1天天气现象"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/0/temperatureRangeText",
+      "priority": "must",
+      "requirement": "第1天温度范围"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/1/weekday",
+      "priority": "must",
+      "requirement": "第2天星期"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/1/condition",
+      "priority": "must",
+      "requirement": "第2天天气现象"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/1/temperatureRangeText",
+      "priority": "must",
+      "requirement": "第2天温度范围"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/2/weekday",
+      "priority": "must",
+      "requirement": "第3天星期"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/2/condition",
+      "priority": "must",
+      "requirement": "第3天天气现象"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/2/temperatureRangeText",
+      "priority": "must",
+      "requirement": "第3天温度范围"
+    },
+    {
+      "componentHints": [
+        "EventCard"
+      ],
+      "dataId": "/data/calendar/events/0/title",
+      "priority": "must",
+      "requirement": "最近日程标题与开始时间（逐条展示日程安排）"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom"
+  ]
+}

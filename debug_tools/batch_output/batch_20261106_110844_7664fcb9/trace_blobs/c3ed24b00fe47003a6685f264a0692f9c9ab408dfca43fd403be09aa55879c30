@@ -1,0 +1,68 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.cake_fill"
+    }
+  },
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "greeting",
+      "identity": "沈大哥",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡主题：生日贺卡",
+      "sourceTexts": [
+        "祝沈大哥生日快乐"
+      ],
+      "text": "生日贺卡"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "body",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "核心祝福：祝沈大哥生日快乐",
+      "sourceTexts": [
+        "祝沈大哥生日快乐"
+      ],
+      "text": "祝沈大哥生日快乐"
+    }
+  ],
+  "layoutHints": [
+    "S-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "warm",
+  "presentationStyle": "content",
+  "selectionNotes": [
+    "单一祝福结论，选用EmphasisText承载核心祝福语",
+    "主题标题使用“生日贺卡”，与正文祝福语不重复",
+    "蛋糕图标用于标题，契合生日庆祝场景"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"S-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"生日贺卡\"}]\n[\"body\", \"EmphasisText\", {\"mainText\": \"祝沈大哥生日快乐\"}]\n[\"/state/ready\", true]"
+}

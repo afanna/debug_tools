@@ -1,0 +1,140 @@
+{
+  "cardSpec": {
+    "dataBindings": [
+      {
+        "arguments": {},
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/phoneBattery"
+      }
+    ],
+    "description": "手机电量速览",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "suggestSize": "2x2",
+    "title": "当前电量"
+  },
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.battery_leaf_fill"
+    ],
+    "data": [
+      "GetPhoneBatteryInfo"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "com.huawei.hmos.settings.MainAbility",
+          "bundleName": "com.huawei.hmos.settings",
+          "intentName": "Settings",
+          "uri": "battery"
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为手机自带的系统设置中的电池页。",
+        "id": "event.open.settings.battery"
+      }
+    ]
+  },
+  "generationPlan": {
+    "candidateAssetIds": [
+      "asset.battery_leaf_fill"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc",
+          "/batteryCapacityLevelDesc",
+          "/batterySOC"
+        ],
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/phoneBattery"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "com.huawei.hmos.settings.MainAbility",
+            "bundleName": "com.huawei.hmos.settings",
+            "intentName": "Settings",
+            "uri": "battery"
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.settings.battery"
+      }
+    ]
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"content\"],\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"center\",\"justifyContent\":\"center\",\"padding\":12},\"itemMargin\":0},{\"id\":\"content\",\"component\":\"Column\",\"children\":[\"content_label\",\"content_value\",\"content_supporting\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":114,\"alignItems\":\"center\",\"justifyContent\":\"center\",\"flexShrink\":1}},{\"id\":\"content_label\",\"component\":\"Text\",\"content\":\"手机电量\",\"styles\":{\"width\":\"matchParent\",\"height\":18,\"fontSize\":12,\"fontWeight\":500,\"textAlign\":\"center\",\"maxLines\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"content_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/phoneBattery/batterySOCText} }}\",\"styles\":{\"height\":60,\"fontSize\":48,\"fontWeight\":700,\"textAlign\":\"center\",\"maxLines\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"content_supporting\",\"component\":\"Text\",\"content\":\"{{ ${/data/phoneBattery/batteryCapacityLevelDesc} }}\",\"styles\":{\"height\":20,\"fontSize\":14,\"fontWeight\":400,\"textAlign\":\"center\",\"maxLines\":1,\"width\":\"matchParent\",\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"phoneBattery\":{\"batterySOCText\":\"68%\",\"batteryCapacityLevelDesc\":\"正常电量\"}}}}}",
+  "meta": {
+    "apiVersion": "v1",
+    "artifactId": "afd8ff69-641d-4aa2-9266-c02225aa4bc8",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "cardSpecVersion": "card-spec-v1",
+    "createdAt": 1793951117802,
+    "dslProtocolVersion": "v0.9",
+    "generationMode": "create",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "skillVersion": "skill-widget-v1",
+    "taskSpecVersion": "task-spec-v1"
+  },
+  "removedCapabilities": [],
+  "schemaVersion": "widget-artifact-v2",
+  "taskSpec": {
+    "appVersion": "11.7.9.300",
+    "assetCandidates": [
+      {
+        "description": "样式：默认黑色的单色实心横向电池图标，电池内部为叶片留白；适用：电池相关场景，包括电量、省电模式、节能电池、绿色用电状态，也可作为电池健康或电池温度信息的辅助图标，相关数据可结合 GetPhoneBatteryInfo 展示。图标本身不表示具体电量、健康等级或温度高低。",
+        "id": "asset.battery_leaf_fill",
+        "src": "resources/base/media/battery_leaf_fill.svg"
+      }
+    ],
+    "dataModelSchema": {
+      "data": {
+        "phoneBattery": {
+          "batteryCapacityLevelDesc": {
+            "description": "设备电池电量等级的语义化文本描述。",
+            "sampleValue": "正常电量",
+            "type": "string"
+          },
+          "batterySOC": {
+            "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+            "sampleValue": 68,
+            "type": "integer"
+          },
+          "batterySOCText": {
+            "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+            "numericSource": "/data/phoneBattery/batterySOC",
+            "sampleValue": "68%",
+            "type": "string"
+          },
+          "chargingStatusDesc": {
+            "description": "当前设备电池的充电状态文本描述。",
+            "sampleValue": "未充电",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "eventCandidates": [
+      {
+        "args": {
+          "abilityName": "com.huawei.hmos.settings.MainAbility",
+          "bundleName": "com.huawei.hmos.settings",
+          "intentName": "Settings",
+          "uri": "battery"
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为手机自带的系统设置中的电池页。",
+        "id": "event.open.settings.battery"
+      }
+    ],
+    "size": "2x2",
+    "userQuery": "创建一张低电量卡片，显示当前手机电量"
+  }
+}

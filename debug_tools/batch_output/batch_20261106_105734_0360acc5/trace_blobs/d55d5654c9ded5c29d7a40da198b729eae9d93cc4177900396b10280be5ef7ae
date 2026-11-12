@@ -1,0 +1,228 @@
+{
+  "appVersion": "11.7.8.343",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "calendar": {
+        "eventCount": {
+          "description": "查询到的日程记录总数量。",
+          "sampleValue": 1,
+          "type": "integer"
+        },
+        "events": [
+          {
+            "countdownDays": {
+              "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+              "sampleValue": 0,
+              "type": "integer"
+            },
+            "dtStart": {
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00",
+              "type": "string"
+            },
+            "entityId": {
+              "description": "系统日程的全局唯一实体ID。",
+              "sampleValue": "example-event-001",
+              "type": "string"
+            },
+            "eventLocation": {
+              "description": "日程的具体地点描述，若未填写则为空字符串。",
+              "sampleValue": "会议室",
+              "type": "string"
+            },
+            "startDate": {
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06",
+              "type": "string"
+            },
+            "title": {
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会",
+              "type": "string"
+            }
+          },
+          {
+            "countdownDays": {
+              "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+              "sampleValue": 0,
+              "type": "integer"
+            },
+            "dtStart": {
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00",
+              "type": "string"
+            },
+            "eventLocation": {
+              "description": "日程的具体地点描述，若未填写则为空字符串。",
+              "sampleValue": "会议室",
+              "type": "string"
+            },
+            "startDate": {
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06",
+              "type": "string"
+            },
+            "title": {
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会",
+              "type": "string"
+            }
+          },
+          {
+            "countdownDays": {
+              "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+              "sampleValue": 0,
+              "type": "integer"
+            },
+            "dtStart": {
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00",
+              "type": "string"
+            },
+            "eventLocation": {
+              "description": "日程的具体地点描述，若未填写则为空字符串。",
+              "sampleValue": "会议室",
+              "type": "string"
+            },
+            "startDate": {
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06",
+              "type": "string"
+            },
+            "title": {
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会",
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "weather": {
+        "current": {
+          "condition": {
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云",
+            "type": "string"
+          },
+          "temperatureText": {
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃",
+            "type": "string"
+          }
+        },
+        "daily": [
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "date": {
+              "description": "预报日期，来源于 day_time。以端侧本次刷新日期为基准，daily[0]为明天日期，daily[1]为后天日期，不包含今天。",
+              "sampleValue": "2026-08-06",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            },
+            "weekday": {
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四",
+              "type": "string"
+            }
+          },
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "date": {
+              "description": "预报日期，来源于 day_time。以端侧本次刷新日期为基准，daily[0]为明天日期，daily[1]为后天日期，不包含今天。",
+              "sampleValue": "2026-08-06",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            },
+            "weekday": {
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四",
+              "type": "string"
+            }
+          },
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "date": {
+              "description": "预报日期，来源于 day_time。以端侧本次刷新日期为基准，daily[0]为明天日期，daily[1]为后天日期，不包含今天。",
+              "sampleValue": "2026-08-06",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            },
+            "weekday": {
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四",
+              "type": "string"
+            }
+          }
+        ],
+        "location": {
+          "cityCode": {
+            "description": "城市代码，如60814代表青浦区",
+            "sampleValue": "60814",
+            "type": "string"
+          },
+          "districtName": {
+            "description": "区或县名称",
+            "sampleValue": "青浦区",
+            "type": "string"
+          },
+          "prefectureName": {
+            "description": "城市名称",
+            "sampleValue": "上海市",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Weather_CityCode",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      },
+      "call": "clickToDeeplink",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "id": "event.open.weather"
+    },
+    {
+      "args": {
+        "intentName": "ViewCalendarEvent",
+        "params": {
+          "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+        }
+      },
+      "call": "clickToIntent",
+      "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+      "id": "event.viewCalendarEvent"
+    }
+  ],
+  "size": "2x4",
+  "userQuery": "生成天气和日程卡片"
+}

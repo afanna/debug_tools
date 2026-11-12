@@ -1,0 +1,43 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "panel",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "blank_panel",
+      "identity": null,
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 48,
+          "start": 36
+        }
+      ],
+      "sourceText": "空白面板，用于书写算题。"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 48,
+          "start": 36
+        }
+      ],
+      "sourceText": "空白面板，用于书写算题。"
+    }
+  ],
+  "version": "static-content-v1"
+}

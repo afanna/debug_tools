@@ -1,0 +1,112 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate"
+      ],
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    },
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/batterySOCText",
+        "/chargingStatusDesc",
+        "/batterySOC"
+      ],
+      "capabilityId": "GetPhoneBatteryInfo",
+      "writeResultTo": "/data/battery"
+    },
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/mostUsedApps/0/appName",
+        "/mostUsedApps/0/totalDuration"
+      ],
+      "capabilityId": "GetDailyMostUsage",
+      "writeResultTo": "/data/steps"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/time"
+      },
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc",
+          "/batterySOC"
+        ],
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/battery"
+      },
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/mostUsedApps/0/appName",
+          "/mostUsedApps/0/totalDuration"
+        ],
+        "capabilityId": "GetDailyMostUsage",
+        "writeResultTo": "/data/steps"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "时间日期电量步数简报",
+    "size": "2x4",
+    "title": "桌面信息",
+    "uid": "batch-7664fcb9-00027-000",
+    "userQuery": "做一张桌面卡片，显示时间、日期、电量、步数和小艺简报内容。"
+  },
+  "description": "时间日期电量步数简报",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL00",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261030071056142"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMM-AL00 7.0.0.111",
+  "session": {
+    "interactionId": "Q342-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x4",
+  "title": "桌面信息",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00027-000"
+    }
+  },
+  "userQuery": "做一张桌面卡片，显示时间、日期、电量、步数和小艺简报内容。",
+  "utterance": {
+    "original": "做一张桌面卡片，显示时间、日期、电量、步数和小艺简报内容。",
+    "type": "text"
+  },
+  "version": "1.0"
+}

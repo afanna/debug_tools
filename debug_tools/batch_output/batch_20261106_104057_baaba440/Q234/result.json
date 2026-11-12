@@ -1,0 +1,21 @@
+{
+  "id": "Q234",
+  "fileName": "Q234.json",
+  "title": "我的日程与健康天气卡片",
+  "query": "帮我生成一张桌面卡片，显示我的日程安排、睡眠时长，以及南京未来三天的降雨概率",
+  "size": "2x2",
+  "sequence": 9,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 1054.39,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-baaba440-00009-000",
+  "finalAttempt": 0
+}

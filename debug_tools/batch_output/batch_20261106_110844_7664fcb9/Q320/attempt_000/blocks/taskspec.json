@@ -1,0 +1,16 @@
+{
+  "userQuery": "制作一张生日贺卡，上面写明祝沈大哥生日快乐。本轮卡片静态内容（用作展示的外部事实）：祝沈大哥生日快乐",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.cake_fill",
+      "src": "resources/base/media/cake_fill.svg",
+      "description": "样式：默认黑色的单色实心生日蛋糕图标，顶部带蜡烛，原始尺寸为 24×24；适用：生日、纪念日、节日、庆祝事件与运动目标达成。"
+    }
+  ]
+}

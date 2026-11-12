@@ -1,0 +1,118 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.airplane_fill_1",
+    "asset.alarm_fill_1"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "futureDays": 7
+      },
+      "candidateOutputFields": [
+        "/events/0/title",
+        "/events/0/startDate",
+        "/events/0/dtStart",
+        "/events/0/dtEnd",
+        "/events/0/eventLocation",
+        "/events/0/countdownDays"
+      ],
+      "capabilityId": "GetCalendarEvents",
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "intentName": "ViewCalendarEvent",
+          "params": {
+            "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+          }
+        },
+        "call": "clickToIntent"
+      },
+      "capabilityId": "event.viewCalendarEvent"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.airplane_fill_1",
+      "asset.alarm_fill_1"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "futureDays": 7
+        },
+        "candidateOutputFields": [
+          "/events/0/title",
+          "/events/0/startDate",
+          "/events/0/dtStart",
+          "/events/0/dtEnd",
+          "/events/0/eventLocation",
+          "/events/0/countdownDays"
+        ],
+        "capabilityId": "GetCalendarEvents",
+        "writeResultTo": "/data/calendar"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "intentName": "ViewCalendarEvent",
+            "params": {
+              "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+            }
+          },
+          "call": "clickToIntent"
+        },
+        "capabilityId": "event.viewCalendarEvent"
+      }
+    ],
+    "description": "航班行程提醒卡片",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL10P 7.0.0.111",
+    "size": "2x4",
+    "title": "行程提醒",
+    "uid": "batch-dd0b00bc-00052-000",
+    "userQuery": "为用户生成行程提醒卡片，展示航班FU6686郑州新郑国际机场飞往厦门高崎国际机场的行程信息，计划出港时间2026年11月1日22:40，计划到港时间2026年11月2日00:50。本轮卡片静态内容（用作展示的外部事实）：航班号FU6686，郑州新郑国际机场→厦门高崎国际机场，计划出港2026-11-01 22:40，计划到港2026-11-02 00:50"
+  },
+  "description": "航班行程提醒卡片",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261101121843212"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "session": {
+    "interactionId": "Q464-000",
+    "isNew": true,
+    "sessionId": "batch-dd0b00bc"
+  },
+  "size": "2x4",
+  "title": "行程提醒",
+  "userAuth": {
+    "user": {
+      "userId": "batch-dd0b00bc-00052-000"
+    }
+  },
+  "userQuery": "为用户生成行程提醒卡片，展示航班FU6686郑州新郑国际机场飞往厦门高崎国际机场的行程信息，计划出港时间2026年11月1日22:40，计划到港时间2026年11月2日00:50。本轮卡片静态内容（用作展示的外部事实）：航班号FU6686，郑州新郑国际机场→厦门高崎国际机场，计划出港2026-11-01 22:40，计划到港2026-11-02 00:50",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

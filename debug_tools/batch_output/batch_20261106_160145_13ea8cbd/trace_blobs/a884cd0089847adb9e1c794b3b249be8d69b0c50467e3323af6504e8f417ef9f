@@ -1,0 +1,65 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.health.sport",
+        "assetId": "asset.figure_run"
+      }
+    ],
+    "title": {
+      "assetId": "asset.checkmark_calendar_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "当天运动步数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/dailyTotalCaloriesText",
+      "priority": "must",
+      "requirement": "当天活动总消耗热量"
+    },
+    {
+      "componentHints": [
+        "TableText",
+        "SecondaryBody",
+        "SummaryList"
+      ],
+      "priority": "must",
+      "requirement": "每日锻炼计划：俯卧撑10个、深蹲20个、开合跳30个",
+      "text": "每天锻炼计划：俯卧撑10个、深蹲20个、开合跳30个"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "priority": "must",
+      "requirement": "每天坚持锻炼打卡提醒",
+      "text": "每天坚持打卡锻炼"
+    },
+    {
+      "actionId": "event.open.health.sport",
+      "componentHints": [
+        "PillButton",
+        "CardButton"
+      ],
+      "priority": "must",
+      "requirement": "打开华为运动健康应用的锻炼Tab页"
+    }
+  ],
+  "layoutHints": [
+    "W-split-panels"
+  ]
+}

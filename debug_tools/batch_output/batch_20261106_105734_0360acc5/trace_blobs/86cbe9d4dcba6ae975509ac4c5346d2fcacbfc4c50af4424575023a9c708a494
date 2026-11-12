@@ -1,0 +1,1 @@
+{"name": "report_missing_data", "arguments": {"requirements": [{"description": "未来三天降雨概率需要三天的数据，但当前数据模型只声明了 daily[0]（明天），缺少后天和第三天的降雨概率字段", "sourceQuote": "南京未来三天的降雨概率"}]}}

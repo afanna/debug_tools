@@ -1,0 +1,21 @@
+{
+  "id": "Q398",
+  "fileName": "Q398.json",
+  "title": "今日概览",
+  "query": "创建一张美观的桌面卡片，结合当前壁纸风格，展示今日天气、当前时间和近期日程，整体设计要好看、协调，参考百变卡片风格，让桌面更美观。",
+  "size": "2x4",
+  "sequence": 56,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7030.49,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 94,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 6963.91,
+  "uid": "batch-7664fcb9-00056-000",
+  "finalAttempt": 0
+}

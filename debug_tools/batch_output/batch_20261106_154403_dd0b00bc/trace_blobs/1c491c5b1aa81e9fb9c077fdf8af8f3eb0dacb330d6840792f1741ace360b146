@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"距离目标日期的天数（纯整数，展示时追加“天”）","priority":"must","dataId":"/data/countdown/countdownDays","componentHints":["DataDisplay"]}],"layoutHints":["S-center"]}}

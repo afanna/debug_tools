@@ -1,0 +1,9 @@
+```genui
+["root","Layout",{"layout":"S-dual-info"},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/noteCount"},"secondaryText":"笔记","unit":"篇"}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/todoTotalCount"},"secondaryText":"{{ '未完成 ' + ${/data/memo/todoPendingCount} + ' · 已完成 ' + ${/data/memo/todoCompletedCount} }}","unit":"项"}]
+["/data/memo/noteCount",0]
+["/data/memo/todoTotalCount",0]
+["/data/memo/todoPendingCount",0]
+["/data/memo/todoCompletedCount",0]
+```

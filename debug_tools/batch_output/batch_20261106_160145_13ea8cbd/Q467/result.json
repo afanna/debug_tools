@@ -1,0 +1,21 @@
+{
+  "id": "Q467",
+  "fileName": "Q467.json",
+  "title": "备忘录",
+  "query": "在手机主屏幕生成一个备忘录卡片，展示备忘录笔记内容，点击卡片可跳转到备忘录应用进行编辑。",
+  "size": "2x4",
+  "sequence": 55,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7703.84,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 94,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7694.84,
+  "uid": "batch-13ea8cbd-00055-000",
+  "finalAttempt": 0
+}

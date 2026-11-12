@@ -1,0 +1,11 @@
+{
+  "errors": [],
+  "warnings": [
+    "component details_item0_value: TextBlock.value exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "component details_item1_value: TextBlock.value exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "component details_item2_label: TextBlock.label exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "component details_item2_value: TextBlock.value exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "component details_item3_label: TextBlock.label exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "component details_item3_value: TextBlock.value exceeds its 47vp single-line text area and will be rendered with an ellipsis."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "errors": [
+    "Plan fact is displayed more than once in visible DSL: 当前公历日期 (/data/time/currentDate); expected 1, got 2; occurrences: title (SingleLineTitle).title, details (SummaryList).items[0].",
+    "Plan fact is displayed more than once in visible DSL: 星期 (/data/time/dayOfWeek); expected 1, got 2; occurrences: primary (EmphasisText).mainText, details (SummaryList).items[1].",
+    "Plan fact is displayed more than once in visible DSL: 农历日期 (/data/time/lunarDate); expected 1, got 2; occurrences: primary (EmphasisText).secondaryText, details (SummaryList).items[2]."
+  ],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": []
+}

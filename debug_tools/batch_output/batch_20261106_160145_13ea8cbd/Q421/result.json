@@ -1,0 +1,21 @@
+{
+  "id": "Q421",
+  "fileName": "Q421.json",
+  "title": "天气",
+  "query": "添加天气卡片，展示当前天气和未来天气预报",
+  "size": "2x2",
+  "sequence": 9,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 6134.06,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 96,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 6123.39,
+  "uid": "batch-13ea8cbd-00009-000",
+  "finalAttempt": 0
+}

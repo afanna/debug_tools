@@ -1,0 +1,21 @@
+{
+  "id": "Q437",
+  "fileName": "Q437.json",
+  "title": "今日步数",
+  "query": "做一张步数卡片，显示今日步数。",
+  "size": "2x2",
+  "sequence": 27,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2051.9,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00027-000",
+  "finalAttempt": 0
+}

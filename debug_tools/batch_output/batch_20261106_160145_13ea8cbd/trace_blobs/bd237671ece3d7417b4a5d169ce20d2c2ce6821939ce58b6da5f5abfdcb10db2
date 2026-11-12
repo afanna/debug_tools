@@ -1,0 +1,6 @@
+```genui
+["root","Layout",{"layout":"W-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"一周减脂食谱"}]
+["body","TextList",{"items":[{"primaryText":"周一 · 粗粮主食+低脂蛋白","secondaryText":"早餐燕麦粥、水煮蛋、凉拌黄瓜；午餐糙米饭、清蒸鱼、清炒西兰花；晚餐杂粮粥、手撕包菜、素炒豆腐"},{"primaryText":"周二 · 多蒸煮少油炸","secondaryText":"早餐全麦面包、脱脂牛奶、苹果；午餐红薯饭、炒鸡胸肉片、清炒菠菜；晚餐小米粥、清炒胡萝卜丝"}]}]
+["/state/ready",true]
+```

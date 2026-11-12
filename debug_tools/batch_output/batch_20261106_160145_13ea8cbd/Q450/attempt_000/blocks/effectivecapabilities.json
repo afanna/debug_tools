@@ -1,0 +1,21 @@
+{
+  "data": [
+    "GetCurrentTime"
+  ],
+  "event": [
+    {
+      "id": "event.open.clock.alarm",
+      "description": "打开华为时钟应用首页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "com.huawei.hmos.clock.phone",
+        "bundleName": "com.huawei.hmos.clock",
+        "intentName": "Clock",
+        "uri": ""
+      }
+    }
+  ],
+  "asset": [
+    "asset.emoji_time"
+  ]
+}

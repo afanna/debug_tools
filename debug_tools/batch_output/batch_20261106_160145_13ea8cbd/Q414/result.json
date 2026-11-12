@@ -1,0 +1,21 @@
+{
+  "id": "Q414",
+  "fileName": "Q414.json",
+  "title": "运动健康",
+  "query": "生成运动健康的卡片，展示今日步数、热量消耗、睡眠情况等运动健康数据",
+  "size": "2x2",
+  "sequence": 2,
+  "status": "degraded",
+  "attemptCount": 1,
+  "elapsedMs": 12142.55,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 118,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 11217.93,
+  "uid": "batch-13ea8cbd-00002-000",
+  "finalAttempt": 0
+}

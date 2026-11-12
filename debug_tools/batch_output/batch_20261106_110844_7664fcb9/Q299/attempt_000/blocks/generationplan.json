@@ -1,0 +1,52 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": -1
+      },
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/nightSleepDurationText",
+        "/sleepScore",
+        "/sleepStatus",
+        "/fallAsleepTimeText",
+        "/wakeupTimeText",
+        "/deepSleepDurationText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.sleep",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/router/sleepDetail"
+        }
+      }
+    },
+    {
+      "capabilityId": "event.open.clock.alarmTab",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "parameters": {
+            "tabActive": "ALARM_CLOCK_TAB"
+          },
+          "uri": ""
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.moon_z_fill_1",
+    "asset.alarm_fill_1"
+  ]
+}

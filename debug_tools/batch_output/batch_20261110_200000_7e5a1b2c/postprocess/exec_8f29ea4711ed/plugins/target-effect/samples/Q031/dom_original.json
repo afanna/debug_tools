@@ -1,0 +1,4723 @@
+{
+  "schemaVersion": "target-dom-v2",
+  "size": "2x2",
+  "scale": 3,
+  "surface": {
+    "x": 0,
+    "y": 0,
+    "width": 150,
+    "height": 150
+  },
+  "visibleText": "每周三例会 还剩 3 天 日期 2026/11/09",
+  "renderedVisibleText": "每周三例会 还剩 3 天 日期 2026/11/09",
+  "nodes": [
+    {
+      "id": "root",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "每周三例会 还剩 3 天 日期 2026/11/09",
+      "renderedText": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "contentRect": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": null,
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "relative",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(31, 31, 153)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "20px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": {
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/7016f2bb9242499a99b3439c2fb2ed26/fe04c25a2ecd41ea94617315efd39925.jpg",
+        "naturalWidth": 600,
+        "naturalHeight": 600,
+        "complete": true,
+        "ariaLabel": null,
+        "objectFit": "fill",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 150,
+          "height": 150
+        }
+      }
+    },
+    {
+      "id": "__post_theme_background",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "contentRect": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "root",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "relative",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": {
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/7016f2bb9242499a99b3439c2fb2ed26/fe04c25a2ecd41ea94617315efd39925.jpg",
+        "naturalWidth": 600,
+        "naturalHeight": 600,
+        "complete": true,
+        "ariaLabel": null,
+        "objectFit": "fill",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 150,
+          "height": 150
+        }
+      }
+    },
+    {
+      "id": "fusionBallBackground",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "contentRect": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "__post_theme_background",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__post_theme_background",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "relative",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "20px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 183,
+      "scrollHeight": 206,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallLargeSlot",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 168.75,
+        "height": 41.25
+      },
+      "contentRect": {
+        "x": 0,
+        "y": 0,
+        "width": 168.75,
+        "height": 41.25
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "fusionBallBackground",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__post_theme_background",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "relative",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 169,
+      "clientHeight": 41,
+      "scrollWidth": 183,
+      "scrollHeight": 119,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallLarge",
+      "tag": "DIV",
+      "leaf": true,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": -14.0625,
+        "y": -77.8125,
+        "width": 196.875,
+        "height": 196.875
+      },
+      "contentRect": {
+        "x": -14.0625,
+        "y": -77.8125,
+        "width": 196.875,
+        "height": 196.875
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "fusionBallLargeSlot",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 168.75,
+            "height": 41.25
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "fusionBallLargeSlot",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 168.75,
+            "height": 41.25
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__post_theme_background",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(31, 31, 153)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "105px"
+      },
+      "clientWidth": 197,
+      "clientHeight": 197,
+      "scrollWidth": 197,
+      "scrollHeight": 197,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallMediumSlot",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 75,
+        "height": 206.25
+      },
+      "contentRect": {
+        "x": 0,
+        "y": 0,
+        "width": 75,
+        "height": 206.25
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "fusionBallBackground",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__post_theme_background",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "relative",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 75,
+      "clientHeight": 206,
+      "scrollWidth": 113,
+      "scrollHeight": 206,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallMedium",
+      "tag": "DIV",
+      "leaf": true,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": -37.5,
+        "y": 56.25,
+        "width": 150,
+        "height": 150
+      },
+      "contentRect": {
+        "x": -37.5,
+        "y": 56.25,
+        "width": 150,
+        "height": 150
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "fusionBallMediumSlot",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 75,
+            "height": 206.25
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "fusionBallMediumSlot",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 75,
+            "height": 206.25
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__post_theme_background",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(43, 101, 217)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "80px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallSmallSlot",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 182.8125,
+        "height": 178.125
+      },
+      "contentRect": {
+        "x": 0,
+        "y": 0,
+        "width": 182.8125,
+        "height": 178.125
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "fusionBallBackground",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__post_theme_background",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "relative",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 183,
+      "clientHeight": 178,
+      "scrollWidth": 183,
+      "scrollHeight": 178,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallSmall",
+      "tag": "DIV",
+      "leaf": true,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": 89.0625,
+        "y": 84.375,
+        "width": 93.75,
+        "height": 93.75
+      },
+      "contentRect": {
+        "x": 89.0625,
+        "y": 84.375,
+        "width": 93.75,
+        "height": 93.75
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "fusionBallSmallSlot",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 182.8125,
+            "height": 178.125
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "fusionBallSmallSlot",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 182.8125,
+            "height": 178.125
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__post_theme_background",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(87, 174, 217)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "50px"
+      },
+      "clientWidth": 94,
+      "clientHeight": 94,
+      "scrollWidth": 94,
+      "scrollHeight": 94,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "fusionBallGlassLayer",
+      "tag": "DIV",
+      "leaf": true,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "contentRect": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "fusionBallBackground",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__post_theme_background",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "fusionBallBackground",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(255, 255, 255, 0.05)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "__post_theme_base",
+      "tag": "IMG",
+      "leaf": true,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "contentRect": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "__post_theme_background",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__post_theme_background",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": {
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/7016f2bb9242499a99b3439c2fb2ed26/fe04c25a2ecd41ea94617315efd39925.jpg",
+        "naturalWidth": 600,
+        "naturalHeight": 600,
+        "complete": true,
+        "ariaLabel": null,
+        "objectFit": "fill",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 150,
+          "height": 150
+        }
+      }
+    },
+    {
+      "id": "__genui_render_component__root",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "每周三例会 还剩 3 天 日期 2026/11/09",
+      "renderedText": "",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 12,
+        "width": 126,
+        "height": 126
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "root",
+      "ancestors": [
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "12px",
+        "margin": "0px",
+        "flexDirection": "column",
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "gap": "6px",
+        "borderRadius": "20px"
+      },
+      "clientWidth": 150,
+      "clientHeight": 150,
+      "scrollWidth": 150,
+      "scrollHeight": 150,
+      "visible": true,
+      "image": {
+        "src": "/resources/base/media/calendar_fill.svg",
+        "naturalWidth": 24,
+        "naturalHeight": 24,
+        "complete": true,
+        "ariaLabel": null,
+        "objectFit": "fill",
+        "box": {
+          "x": 118,
+          "y": 12,
+          "width": 20,
+          "height": 20
+        }
+      }
+    },
+    {
+      "id": "title",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "每周三例会 还剩",
+      "renderedText": "",
+      "box": {
+        "x": 12,
+        "y": 12,
+        "width": 126,
+        "height": 20
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 12,
+        "width": 126,
+        "height": 20
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "__genui_render_component__root",
+      "ancestors": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "center",
+        "justifyContent": "space-between",
+        "gap": "0px",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 20,
+      "scrollWidth": 126,
+      "scrollHeight": 24,
+      "visible": true,
+      "image": {
+        "src": "/resources/base/media/calendar_fill.svg",
+        "naturalWidth": 24,
+        "naturalHeight": 24,
+        "complete": true,
+        "ariaLabel": null,
+        "objectFit": "fill",
+        "box": {
+          "x": 118,
+          "y": 12,
+          "width": 20,
+          "height": 20
+        }
+      }
+    },
+    {
+      "id": "title_title",
+      "tag": "P",
+      "leaf": true,
+      "text": "每周三例会 还剩",
+      "renderedText": "每周三例会 还剩",
+      "box": {
+        "x": 12,
+        "y": 16,
+        "width": 106,
+        "height": 12
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 16,
+        "width": 106,
+        "height": 12
+      },
+      "lineRects": [
+        {
+          "x": 12,
+          "y": 14,
+          "width": 87.25,
+          "height": 16
+        }
+      ],
+      "textNodes": [
+        {
+          "text": "每周三例会 还剩",
+          "rects": [
+            {
+              "x": 12,
+              "y": 14,
+              "width": 87.25,
+              "height": 16
+            }
+          ]
+        }
+      ],
+      "lineCount": 1,
+      "parentId": "title",
+      "ancestors": [
+        {
+          "id": "title",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 126,
+            "height": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 12,
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.8)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "12px",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 106,
+      "clientHeight": 12,
+      "scrollWidth": 106,
+      "scrollHeight": 14,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "title_icon",
+      "tag": "SPAN",
+      "leaf": true,
+      "text": "",
+      "renderedText": "",
+      "box": {
+        "x": 118,
+        "y": 12,
+        "width": 20,
+        "height": 20
+      },
+      "contentRect": {
+        "x": 118,
+        "y": 12,
+        "width": 20,
+        "height": 20
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "title",
+      "ancestors": [
+        {
+          "id": "title",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 12,
+            "width": 126,
+            "height": 20
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 20,
+      "clientHeight": 20,
+      "scrollWidth": 20,
+      "scrollHeight": 24,
+      "visible": true,
+      "image": {
+        "src": "/resources/base/media/calendar_fill.svg",
+        "naturalWidth": 24,
+        "naturalHeight": 24,
+        "complete": true,
+        "ariaLabel": null,
+        "objectFit": "fill",
+        "box": {
+          "x": 118,
+          "y": 12,
+          "width": 20,
+          "height": 20
+        }
+      }
+    },
+    {
+      "id": "__layout__root__body",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "3 天 日期 2026/11/09",
+      "renderedText": "",
+      "box": {
+        "x": 12,
+        "y": 38,
+        "width": 126,
+        "height": 100
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 38,
+        "width": 126,
+        "height": 100
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "__genui_render_component__root",
+      "ancestors": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "column",
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "gap": "8px",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 100,
+      "scrollWidth": 126,
+      "scrollHeight": 100,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "__layout__root__primary",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "3 天",
+      "renderedText": "",
+      "box": {
+        "x": 12,
+        "y": 38,
+        "width": 126,
+        "height": 78
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 38,
+        "width": 126,
+        "height": 78
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "__layout__root__body",
+      "ancestors": [
+        {
+          "id": "__layout__root__body",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 100
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "column",
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "gap": "0px",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 78,
+      "scrollWidth": 126,
+      "scrollHeight": 78,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "primary",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "3 天",
+      "renderedText": "",
+      "box": {
+        "x": 12,
+        "y": 38,
+        "width": 126,
+        "height": 30
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 38,
+        "width": 126,
+        "height": 30
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "__layout__root__primary",
+      "ancestors": [
+        {
+          "id": "__layout__root__primary",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 78
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__body",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 100
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "flex-end",
+        "justifyContent": "flex-start",
+        "gap": "2px",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 30,
+      "scrollWidth": 126,
+      "scrollHeight": 30,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "primary_value",
+      "tag": "P",
+      "leaf": true,
+      "text": "3",
+      "renderedText": "3",
+      "box": {
+        "x": 12,
+        "y": 38,
+        "width": 18.03125,
+        "height": 30
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 38,
+        "width": 18.03125,
+        "height": 30
+      },
+      "lineRects": [
+        {
+          "x": 12,
+          "y": 33,
+          "width": 18.03125,
+          "height": 40
+        }
+      ],
+      "textNodes": [
+        {
+          "text": "3",
+          "rects": [
+            {
+              "x": 12,
+              "y": 33,
+              "width": 18.03125,
+              "height": 40
+            }
+          ]
+        }
+      ],
+      "lineCount": 1,
+      "parentId": "primary",
+      "ancestors": [
+        {
+          "id": "primary",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 30
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__primary",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 78
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__body",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 100
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 30,
+        "fontWeight": "700",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "30px",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 18,
+      "clientHeight": 30,
+      "scrollWidth": 18,
+      "scrollHeight": 35,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "primary_unit",
+      "tag": "P",
+      "leaf": true,
+      "text": "天",
+      "renderedText": "天",
+      "box": {
+        "x": 32.03125,
+        "y": 54.25,
+        "width": 12,
+        "height": 13.75
+      },
+      "contentRect": {
+        "x": 32.03125,
+        "y": 54.25,
+        "width": 12,
+        "height": 12
+      },
+      "lineRects": [
+        {
+          "x": 32.03125,
+          "y": 52.25,
+          "width": 12,
+          "height": 16
+        }
+      ],
+      "textNodes": [
+        {
+          "text": "天",
+          "rects": [
+            {
+              "x": 32.03125,
+              "y": 52.25,
+              "width": 12,
+              "height": 16
+            }
+          ]
+        }
+      ],
+      "lineCount": 1,
+      "parentId": "primary",
+      "ancestors": [
+        {
+          "id": "primary",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 30
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__primary",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 78
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__body",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 100
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 12,
+        "fontWeight": "500",
+        "color": "rgba(255, 255, 255, 0.6)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "12px",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px 0px 1.75px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 12,
+      "clientHeight": 14,
+      "scrollWidth": 12,
+      "scrollHeight": 14,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "__layout__root__support",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "日期 2026/11/09",
+      "renderedText": "",
+      "box": {
+        "x": 12,
+        "y": 124,
+        "width": 126,
+        "height": 14
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 124,
+        "width": 126,
+        "height": 14
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "__layout__root__body",
+      "ancestors": [
+        {
+          "id": "__layout__root__body",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 100
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "column",
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "gap": "0px",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 14,
+      "scrollWidth": 126,
+      "scrollHeight": 14,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "support",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "日期 2026/11/09",
+      "renderedText": "",
+      "box": {
+        "x": 12,
+        "y": 124,
+        "width": 126,
+        "height": 14
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 124,
+        "width": 126,
+        "height": 14
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "__layout__root__support",
+      "ancestors": [
+        {
+          "id": "__layout__root__support",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__body",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 100
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "column",
+        "alignItems": "flex-start",
+        "justifyContent": "normal",
+        "gap": "2px",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 14,
+      "scrollWidth": 126,
+      "scrollHeight": 14,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "support_row0",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "日期 2026/11/09",
+      "renderedText": "",
+      "box": {
+        "x": 12,
+        "y": 124,
+        "width": 126,
+        "height": 14
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 124,
+        "width": 126,
+        "height": 14
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "support",
+      "ancestors": [
+        {
+          "id": "support",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__support",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__body",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 100
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "flex-start",
+        "justifyContent": "normal",
+        "gap": "0px",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 14,
+      "scrollWidth": 126,
+      "scrollHeight": 14,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "support_item0",
+      "tag": "DIV",
+      "leaf": false,
+      "text": "日期 2026/11/09",
+      "renderedText": "",
+      "box": {
+        "x": 12,
+        "y": 124,
+        "width": 126,
+        "height": 14
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 124,
+        "width": 126,
+        "height": 14
+      },
+      "lineRects": [],
+      "textNodes": [],
+      "lineCount": 0,
+      "parentId": "support_row0",
+      "ancestors": [
+        {
+          "id": "support_row0",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "support",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__support",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__body",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 100
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "flex",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 16,
+        "fontWeight": "400",
+        "color": "rgb(31, 41, 55)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "normal",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "flex-start",
+        "justifyContent": "normal",
+        "gap": "4px",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 126,
+      "clientHeight": 14,
+      "scrollWidth": 126,
+      "scrollHeight": 14,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "support_item0_label",
+      "tag": "P",
+      "leaf": true,
+      "text": "日期",
+      "renderedText": "日期",
+      "box": {
+        "x": 12,
+        "y": 124,
+        "width": 28,
+        "height": 14
+      },
+      "contentRect": {
+        "x": 12,
+        "y": 124,
+        "width": 28,
+        "height": 14
+      },
+      "lineRects": [
+        {
+          "x": 12,
+          "y": 121,
+          "width": 28,
+          "height": 19
+        }
+      ],
+      "textNodes": [
+        {
+          "text": "日期",
+          "rects": [
+            {
+              "x": 12,
+              "y": 121,
+              "width": 28,
+              "height": 19
+            }
+          ]
+        }
+      ],
+      "lineCount": 1,
+      "parentId": "support_item0",
+      "ancestors": [
+        {
+          "id": "support_item0",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "support_row0",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "support",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__support",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__body",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 100
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "color": "rgba(255, 255, 255, 0.6)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "14px",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 28,
+      "clientHeight": 14,
+      "scrollWidth": 28,
+      "scrollHeight": 16,
+      "visible": true,
+      "image": null
+    },
+    {
+      "id": "support_item0_value",
+      "tag": "P",
+      "leaf": true,
+      "text": "2026/11/09",
+      "renderedText": "2026/11/09",
+      "box": {
+        "x": 44,
+        "y": 124,
+        "width": 94,
+        "height": 14
+      },
+      "contentRect": {
+        "x": 44,
+        "y": 124,
+        "width": 94,
+        "height": 14
+      },
+      "lineRects": [
+        {
+          "x": 44,
+          "y": 121,
+          "width": 74.765625,
+          "height": 19
+        }
+      ],
+      "textNodes": [
+        {
+          "text": "2026/11/09",
+          "rects": [
+            {
+              "x": 44,
+              "y": 121,
+              "width": 74.765625,
+              "height": 19
+            }
+          ]
+        }
+      ],
+      "lineCount": 1,
+      "parentId": "support_item0",
+      "ancestors": [
+        {
+          "id": "support_item0",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "support_row0",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "support",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__support",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 126,
+            "height": 14
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__layout__root__body",
+          "tag": "DIV",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 126,
+            "height": 100
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "clipChain": [
+        {
+          "id": "__genui_render_component__root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": "root",
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        },
+        {
+          "id": null,
+          "tag": "DIV",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 150,
+            "height": 150
+          },
+          "overflowX": "hidden",
+          "overflowY": "hidden"
+        }
+      ],
+      "zeroSized": false,
+      "style": {
+        "display": "block",
+        "visibility": "visible",
+        "boxSizing": "border-box",
+        "position": "static",
+        "zIndex": "auto",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "lineHeight": "14px",
+        "textOverflow": "clip",
+        "webkitLineClamp": "none",
+        "overflowX": "hidden",
+        "overflowY": "hidden",
+        "opacity": "1",
+        "padding": "0px",
+        "margin": "0px",
+        "flexDirection": "row",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "gap": "normal",
+        "borderRadius": "0px"
+      },
+      "clientWidth": 94,
+      "clientHeight": 14,
+      "scrollWidth": 94,
+      "scrollHeight": 16,
+      "visible": true,
+      "image": null
+    }
+  ],
+  "devicePixelRatio": 3,
+  "webQuality": {
+    "schemaVersion": "web-quality-v1",
+    "complete": true,
+    "findings": [
+      {
+        "rule_id": "GEOMETRY.CLIP_TEXT",
+        "severity": "P1",
+        "evidence_type": "程序已证实",
+        "components": [
+          "primary_value:18"
+        ],
+        "message": "Web 渲染中文字被裁剪或省略",
+        "evidence": {
+          "component": "primary_value",
+          "text": "3",
+          "box": {
+            "x": 12,
+            "y": 38,
+            "width": 18.03125,
+            "height": 30
+          },
+          "contentRect": {
+            "x": 12,
+            "y": 38,
+            "width": 18.03125,
+            "height": 30
+          },
+          "textRects": [
+            {
+              "x": 12,
+              "y": 33,
+              "width": 18.03125,
+              "height": 40
+            }
+          ],
+          "clipChain": [
+            {
+              "id": "primary_value",
+              "box": {
+                "x": 12,
+                "y": 38,
+                "width": 18.03125,
+                "height": 30
+              }
+            },
+            {
+              "id": "__genui_render_component__root",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 150,
+                "height": 150
+              }
+            },
+            {
+              "id": "root",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 150,
+                "height": 150
+              }
+            },
+            {
+              "id": null,
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 150,
+                "height": 150
+              }
+            }
+          ],
+          "clientWidth": 18,
+          "scrollWidth": 18,
+          "clientHeight": 30,
+          "scrollHeight": 35
+        }
+      },
+      {
+        "rule_id": "GEOMETRY.CLIP_TEXT",
+        "severity": "P1",
+        "evidence_type": "程序已证实",
+        "components": [
+          "support_item0_label:24"
+        ],
+        "message": "Web 渲染中文字被裁剪或省略",
+        "evidence": {
+          "component": "support_item0_label",
+          "text": "日期",
+          "box": {
+            "x": 12,
+            "y": 124,
+            "width": 28,
+            "height": 14
+          },
+          "contentRect": {
+            "x": 12,
+            "y": 124,
+            "width": 28,
+            "height": 14
+          },
+          "textRects": [
+            {
+              "x": 12,
+              "y": 121,
+              "width": 28,
+              "height": 19
+            }
+          ],
+          "clipChain": [
+            {
+              "id": "support_item0_label",
+              "box": {
+                "x": 12,
+                "y": 124,
+                "width": 28,
+                "height": 14
+              }
+            },
+            {
+              "id": "__genui_render_component__root",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 150,
+                "height": 150
+              }
+            },
+            {
+              "id": "root",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 150,
+                "height": 150
+              }
+            },
+            {
+              "id": null,
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 150,
+                "height": 150
+              }
+            }
+          ],
+          "clientWidth": 28,
+          "scrollWidth": 28,
+          "clientHeight": 14,
+          "scrollHeight": 16
+        }
+      },
+      {
+        "rule_id": "GEOMETRY.CLIP_TEXT",
+        "severity": "P1",
+        "evidence_type": "程序已证实",
+        "components": [
+          "support_item0_value:25"
+        ],
+        "message": "Web 渲染中文字被裁剪或省略",
+        "evidence": {
+          "component": "support_item0_value",
+          "text": "2026/11/09",
+          "box": {
+            "x": 44,
+            "y": 124,
+            "width": 94,
+            "height": 14
+          },
+          "contentRect": {
+            "x": 44,
+            "y": 124,
+            "width": 94,
+            "height": 14
+          },
+          "textRects": [
+            {
+              "x": 44,
+              "y": 121,
+              "width": 74.765625,
+              "height": 19
+            }
+          ],
+          "clipChain": [
+            {
+              "id": "support_item0_value",
+              "box": {
+                "x": 44,
+                "y": 124,
+                "width": 94,
+                "height": 14
+              }
+            },
+            {
+              "id": "__genui_render_component__root",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 150,
+                "height": 150
+              }
+            },
+            {
+              "id": "root",
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 150,
+                "height": 150
+              }
+            },
+            {
+              "id": null,
+              "box": {
+                "x": 0,
+                "y": 0,
+                "width": 150,
+                "height": 150
+              }
+            }
+          ],
+          "clientWidth": 94,
+          "scrollWidth": 94,
+          "clientHeight": 14,
+          "scrollHeight": 16
+        }
+      }
+    ],
+    "frame": {
+      "x": 0,
+      "y": 0,
+      "width": 150,
+      "height": 150
+    },
+    "measuredTextNodes": 5,
+    "measuredImages": 2,
+    "excludedScrollable": 0,
+    "coverage": [
+      "text-clipping",
+      "card-boundary",
+      "text-overlap-candidates",
+      "image-loading",
+      "parser-warnings"
+    ],
+    "limitations": [
+      "不验证真实端侧功能及 Query 语义完整性",
+      "不验证品牌色板与整体审美",
+      "滚动区域、隐藏态和字形级遮挡不作通过结论"
+    ]
+  },
+  "imageSha256": "6f89a37a38fcd14a3d5d0eebea393713aaf4595c68476aab5a61a77fa6e9f54d",
+  "sourceSha256": "8cb2c3d7c76e37dadb47f91017d83438ab765e5e1eb29c2666b4548639b3daf3"
+}

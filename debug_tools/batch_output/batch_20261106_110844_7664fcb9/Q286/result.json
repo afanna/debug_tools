@@ -1,0 +1,21 @@
+{
+  "id": "Q286",
+  "fileName": "Q286.json",
+  "title": "小艺卡片",
+  "query": "创建一张小艺卡片，展示当前时间、日期和星期，以及手机当前电量信息。",
+  "size": "2x2",
+  "sequence": 1,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5002.51,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4977.98,
+  "uid": "batch-7664fcb9-00001-000",
+  "finalAttempt": 0
+}

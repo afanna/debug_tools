@@ -1,0 +1,21 @@
+{
+  "id": "Q359",
+  "fileName": "Q359.json",
+  "title": "轮休表格",
+  "query": "制作一个轮休表格卡片，从1号到31号，展示轮休安排。本轮卡片静态内容（用作展示的外部事实）：轮休表格，从1号到31号",
+  "size": "2x4",
+  "sequence": 34,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5249.04,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 86,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5242.51,
+  "uid": "batch-7664fcb9-00034-000",
+  "finalAttempt": 0
+}

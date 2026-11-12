@@ -1,0 +1,12 @@
+{
+  "data": [
+    "ViewWeather",
+    "GetPhoneBatteryInfo",
+    "GetHealthAndSportSummary",
+    "GetAppPowerConsumptionRanking"
+  ],
+  "event": [],
+  "asset": [
+    "photo-ux-texture-orange-diamond-wide"
+  ]
+}

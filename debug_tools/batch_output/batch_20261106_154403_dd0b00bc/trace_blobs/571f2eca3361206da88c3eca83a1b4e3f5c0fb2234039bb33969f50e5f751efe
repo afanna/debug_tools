@@ -1,0 +1,11 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [
+    "周三至周日具体三餐安排未在卡面展示",
+    "提醒中饮水2000-3000ml与加餐建议未展示",
+    "周一搭配特点：粗粮主食+低脂蛋白",
+    "周二搭配特点：全麦与红薯等粗粮"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q322",
+  "fileName": "Q322.json",
+  "title": "小艺",
+  "query": "在手机桌面创建一个快捷入口卡片，点击可以打开手电筒",
+  "size": "2x2",
+  "sequence": 13,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4286.49,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4279.13,
+  "uid": "batch-0360acc5-00013-000",
+  "finalAttempt": 0
+}

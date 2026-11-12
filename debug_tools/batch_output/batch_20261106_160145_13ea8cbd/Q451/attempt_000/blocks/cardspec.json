@@ -1,0 +1,10 @@
+{
+  "title": "纳税Top3",
+  "description": "中国纳税企业排行",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ]
+}

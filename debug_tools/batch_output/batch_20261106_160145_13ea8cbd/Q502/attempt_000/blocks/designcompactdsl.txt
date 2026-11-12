@@ -1,0 +1,3 @@
+["root","Layout",{"layout":"S-center"},["content"]]
+["content","DataDisplay",{"label":"距离12月1日","value":"{{ ${/data/countdown/countdownDays} + '天' }}","supportingText":"2026年12月1日"}]
+["/data/countdown/countdownDays",30]

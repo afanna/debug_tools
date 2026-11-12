@@ -1,0 +1,4 @@
+[
+  "component __layout__root__primary: vertical layout has unresolved available height; children primary require parent height for matchParent or vertical weight allocation. Minimum content height does not prove that allocation fits.",
+  "component __layout__root__details: vertical layout has unresolved available height; children details require parent height for matchParent or vertical weight allocation. Minimum content height does not prove that allocation fits."
+]

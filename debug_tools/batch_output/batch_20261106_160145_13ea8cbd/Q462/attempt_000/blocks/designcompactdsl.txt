@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"W-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"通用工资表"}]
+["body","SingleLineList",{"items":[{"text":"姓名","assist":"项目"},{"text":"基本工资","assist":"项目"},{"text":"奖金","assist":"项目"},{"text":"补贴","assist":"项目"}]}]
+["/state/ready",true]

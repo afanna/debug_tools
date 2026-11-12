@@ -1,0 +1,58 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "contest",
+      "identity": "湖州路面检测竞赛",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 49,
+          "start": 17
+        },
+        {
+          "end": 151,
+          "start": 119
+        }
+      ],
+      "sourceText": "2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 240,
+          "start": 198
+        }
+      ],
+      "sourceText": "申苏浙皖改扩建第TJ01标工地试验室凭借扎实的理论功底和出色的现场发挥摘得团体一等奖"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 197,
+          "start": 152
+        }
+      ],
+      "sourceText": "来自全市公路水运工程试验检测机构及在建项目工地试验室的20支代表队、60名检测精英同场竞技"
+    }
+  ],
+  "version": "static-content-v1"
+}

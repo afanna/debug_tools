@@ -1,0 +1,23 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetDateCounter",
+      "arguments": {
+        "targetDate": "2025-06-01",
+        "calendar": "lunar",
+        "isLeapMonth": true
+      },
+      "writeResultTo": "/data/dateCounter",
+      "candidateOutputFields": [
+        "/days",
+        "/relationText",
+        "/targetDateText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": [
+    "asset.stopwatch_fill",
+    "asset.calendar_fill"
+  ]
+}

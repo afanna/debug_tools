@@ -1,0 +1,62 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 奶奶/爷爷生日公历日期10月5日.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 爸爸生日公历日期6月24日.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 妈妈生日公历日期4月19日.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 崔景会生日公历日期4月12日.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 爸妈结婚纪念日公历日期1月12日.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 我的生日公历日期10月28日.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item0_value: TextBlock.value exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item1_value: TextBlock.value exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item2_label: TextBlock.label exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item2_value: TextBlock.value exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item3_label: TextBlock.label exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item3_value: TextBlock.value exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "stage": "validation"
+  }
+]

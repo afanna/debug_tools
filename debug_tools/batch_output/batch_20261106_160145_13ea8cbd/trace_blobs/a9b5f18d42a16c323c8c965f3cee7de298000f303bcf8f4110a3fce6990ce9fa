@@ -1,0 +1,86 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.list_book_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/noteCount",
+      "priority": "must",
+      "requirement": "笔记总数汇总"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "SummaryList"
+      ],
+      "dataId": "/data/memo/notes/0/title",
+      "priority": "must",
+      "requirement": "最近笔记标题列表"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "SummaryList"
+      ],
+      "dataId": "/data/memo/notes/1/title",
+      "priority": "must",
+      "requirement": "第二条最近笔记标题"
+    },
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/todoTotalCount",
+      "priority": "must",
+      "requirement": "待办总数"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "SummaryList"
+      ],
+      "dataId": "/data/memo/todos/0/title",
+      "priority": "must",
+      "requirement": "待办明细标题"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "SummaryList"
+      ],
+      "dataId": "/data/memo/todos/1/title",
+      "priority": "must",
+      "requirement": "第二条待办明细标题"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/todos/0/isComplete",
+      "priority": "should",
+      "requirement": "待办完成状态"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/todos/1/isComplete",
+      "priority": "should",
+      "requirement": "第二条待办完成状态"
+    }
+  ],
+  "layoutHints": [
+    "W-split-panels",
+    "W-top-bottom"
+  ]
+}

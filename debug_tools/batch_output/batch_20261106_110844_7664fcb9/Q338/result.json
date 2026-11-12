@@ -1,0 +1,21 @@
+{
+  "id": "Q338",
+  "fileName": "Q338.json",
+  "title": "时间卡片",
+  "query": "在桌面添加一个时间小组件，显示当前时间、日期、星期和农历信息。",
+  "size": "2x2",
+  "sequence": 26,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3509.58,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3500.3,
+  "uid": "batch-7664fcb9-00026-000",
+  "finalAttempt": 0
+}

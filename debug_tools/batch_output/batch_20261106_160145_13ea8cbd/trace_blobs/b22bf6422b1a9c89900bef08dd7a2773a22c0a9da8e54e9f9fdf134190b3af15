@@ -1,0 +1,102 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredHeight": 130.0,
+          "occupancy": "title=20vp+margin(0vp), __layout__root__body=104vp+margin(0vp), gaps=6vp",
+          "overflow": 4.0,
+          "removableTitleIcon": {
+            "componentId": "title",
+            "heightSaving": 8.0
+          }
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+        "componentId": "root",
+        "evidenceSource": "expanded",
+        "expected": {
+          "heightTolerance": 2.0,
+          "maximumHeight": 126.0,
+          "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+          "preserveFixedDesignSizes": true,
+          "preserveRequiredTextAndActions": true
+        },
+        "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+        "legacyMessage": "component root: vertical layout requires at least 130vp within 126vp; it overflows by 4vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: title=20vp+margin(0vp), __layout__root__body=104vp+margin(0vp), gaps=6vp.",
+        "message": "component root: vertical layout requires at least 130vp within 126vp; it overflows by 4vp. Occupancy: title=20vp+margin(0vp), __layout__root__body=104vp+margin(0vp), gaps=6vp.",
+        "severity": "error",
+        "sourceLine": 1,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component root: vertical layout requires at least 130vp within 126vp; it overflows by 4vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: title=20vp+margin(0vp), __layout__root__body=104vp+margin(0vp), gaps=6vp.",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredHeight": 104.0,
+          "occupancy": "__layout__root__primary=36vp+margin(0vp), __layout__root__details=68vp+margin(0vp), gaps=0vp",
+          "overflow": 4.0
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+        "componentId": "root",
+        "evidenceSource": "expanded",
+        "expected": {
+          "heightTolerance": 2.0,
+          "maximumHeight": 100.0,
+          "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+          "preserveFixedDesignSizes": true,
+          "preserveRequiredTextAndActions": true
+        },
+        "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+        "legacyMessage": "component __layout__root__body: vertical layout requires at least 104vp within 100vp; it overflows by 4vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__details=68vp+margin(0vp), gaps=0vp.",
+        "message": "component __layout__root__body: vertical layout requires at least 104vp within 100vp; it overflows by 4vp. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__details=68vp+margin(0vp), gaps=0vp.",
+        "severity": "error",
+        "sourceLine": 1,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component __layout__root__body: vertical layout requires at least 104vp within 100vp; it overflows by 4vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__details=68vp+margin(0vp), gaps=0vp.",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredHeight": 68.0,
+          "occupancy": "details=68vp+margin(0vp), gaps=0vp",
+          "overflow": 4.0
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+        "componentId": "root",
+        "evidenceSource": "expanded",
+        "expected": {
+          "heightTolerance": 2.0,
+          "maximumHeight": 64.0,
+          "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+          "preserveFixedDesignSizes": true,
+          "preserveRequiredTextAndActions": true
+        },
+        "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+        "legacyMessage": "component __layout__root__details: vertical layout requires at least 68vp within 64vp; it overflows by 4vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details=68vp+margin(0vp), gaps=0vp.",
+        "message": "component __layout__root__details: vertical layout requires at least 68vp within 64vp; it overflows by 4vp. Occupancy: details=68vp+margin(0vp), gaps=0vp.",
+        "severity": "error",
+        "sourceLine": 1,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component __layout__root__details: vertical layout requires at least 68vp within 64vp; it overflows by 4vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details=68vp+margin(0vp), gaps=0vp.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

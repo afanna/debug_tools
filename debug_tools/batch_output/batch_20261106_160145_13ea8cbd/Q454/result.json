@@ -1,0 +1,21 @@
+{
+  "id": "Q454",
+  "fileName": "Q454.json",
+  "title": "桌面卡片",
+  "query": "创建一张桌面卡片，参考图片样式：显示时间、日期（含农历）、电量、天气（温度、城市）、音乐播放信息，背景为山湖风景。",
+  "size": "2x4",
+  "sequence": 42,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 7876.36,
+  "errorCode": "",
+  "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "complete",
+  "traceRecordCount": 88,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7863.68,
+  "uid": "batch-13ea8cbd-00042-000",
+  "finalAttempt": 0
+}

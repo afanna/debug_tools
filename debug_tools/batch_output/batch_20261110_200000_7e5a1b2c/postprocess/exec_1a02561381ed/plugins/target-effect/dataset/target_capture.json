@@ -1,0 +1,200 @@
+{
+  "items": [
+    {
+      "id": "Q001",
+      "variant": "original",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q001\\original.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q001\\dom_original.json",
+      "imageSha256": "a906a9b7cb266367b33aa565be5f6594ed63688576cc01e9251c47b4071e5ac5",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "考试 还剩 3 天 考试日期 2026/12/19"
+    },
+    {
+      "id": "Q001",
+      "variant": "injected",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q001\\injected.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q001\\dom_injected.json",
+      "imageSha256": "c3eedb00ddc5cfaf46479566ffb00b37ecbfb8d206e6ff02f3a771c27e7d2d55",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "考试 还剩 46 天 考试日期 2026/12/19"
+    },
+    {
+      "id": "Q031",
+      "variant": "original",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q031\\original.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q031\\dom_original.json",
+      "imageSha256": "f46f081ea28c276125b0cb503fe44f1d9457d7d9d50cb08c89384f8d2a283914",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "每周三例会 还剩 3 天 日期 2026/11/09"
+    },
+    {
+      "id": "Q031",
+      "variant": "injected",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q031\\injected.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q031\\dom_injected.json",
+      "imageSha256": "58fc1be8f75f6c7b6a8889e3253cb178d7431acf5e7471300db51d9737dbc470",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "每周三例会 还剩 1 天 日期 2026/11/04"
+    },
+    {
+      "id": "Q061",
+      "variant": "original",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q061\\original.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q061\\dom_original.json",
+      "imageSha256": "8d0eb58eb7a2fdf472c2dde127faf9366d6526f112da49789ef78573e5bb959c",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "家庭聚餐 还剩 3天 日期 2026/11/09"
+    },
+    {
+      "id": "Q061",
+      "variant": "injected",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q061\\injected.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q061\\dom_injected.json",
+      "imageSha256": "8d0eb58eb7a2fdf472c2dde127faf9366d6526f112da49789ef78573e5bb959c",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "家庭聚餐 还剩 3天 日期 2026/11/09"
+    },
+    {
+      "id": "Q076",
+      "variant": "original",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q076\\original.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q076\\dom_original.json",
+      "imageSha256": "801f257a166724439542495843ef85bafea4e3d53e9e9d5a11062684b261ea7d",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "绿植浇水 还剩 3 天 下次浇水 2026/11/09"
+    },
+    {
+      "id": "Q076",
+      "variant": "injected",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q076\\injected.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q076\\dom_injected.json",
+      "imageSha256": "33a6e0ef4beec3b4174a17761f588f145654307cb6fcab96f37cfeac6549ebcb",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "绿植浇水 就是今天 0 天 下次浇水 2026/11/03"
+    },
+    {
+      "id": "Q086",
+      "variant": "original",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q086\\original.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q086\\dom_original.json",
+      "imageSha256": "8cd90474abe69e3e629a2c0c2423ebee1385177454b3859e79366622da63e317",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "照片备份 还剩 3 天 下次备份 2026/11/09"
+    },
+    {
+      "id": "Q086",
+      "variant": "injected",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q086\\injected.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q086\\dom_injected.json",
+      "imageSha256": "74e68c8bb42ecd4b644f3f28c5f1914073f363627d8dbb56206605f755e118d4",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "照片备份 还剩 28 天 下次备份 2026/12/01"
+    },
+    {
+      "id": "Q091",
+      "variant": "original",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q091\\original.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q091\\dom_original.json",
+      "imageSha256": "6d8344e723142129d94ee213e01040c8871a7c62deb926418de8426165549732",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "结婚纪念日 还剩 3 天 纪念日 2026/11/09"
+    },
+    {
+      "id": "Q091",
+      "variant": "injected",
+      "ok": true,
+      "error": "",
+      "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q091\\injected.png",
+      "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_1a02561381ed\\plugins\\target-effect\\samples\\Q091\\dom_injected.json",
+      "imageSha256": "401037eef5f0715eb31d81e9dd2e6f7d7d230b46f82b08a55e2cbb48ceb2eef8",
+      "surface": {
+        "x": 0,
+        "y": 0,
+        "width": 150,
+        "height": 150
+      },
+      "visibleText": "结婚纪念日 还剩 198 天 纪念日 2027/05/20"
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "scale": 3
+}

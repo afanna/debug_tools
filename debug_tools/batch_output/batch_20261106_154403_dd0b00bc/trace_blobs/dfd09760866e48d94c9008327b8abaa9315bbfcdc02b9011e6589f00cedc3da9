@@ -1,0 +1,5 @@
+[
+  "COMPACT_STATIC_CORE_MISSING: 组 core 缺少对象名称 '渡人先渡己'；名称必须在本对象内可见，不能只保留无归属数值。",
+  "COMPACT_STATIC_CORE_MISSING: 组 core 缺少完整展示文字 '爱是向内修出的内丹；自己未曾炼成，给出的只是半剂药'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+  "COMPACT_STATIC_TEXT_CAPACITY: body: body.mainText 完整文字需要 3 行，126vp 区域仅允许 2 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。"
+]

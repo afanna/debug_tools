@@ -1,0 +1,21 @@
+{
+  "id": "Q427",
+  "fileName": "Q427.json",
+  "title": "倒计时",
+  "query": "创建一张到2027年9月1日的天数倒计时卡片，显示距离目标日期的天数",
+  "size": "2x2",
+  "sequence": 15,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4180.9,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4172.32,
+  "uid": "batch-13ea8cbd-00015-000",
+  "finalAttempt": 0
+}

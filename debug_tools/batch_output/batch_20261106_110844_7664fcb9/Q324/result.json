@@ -1,0 +1,21 @@
+{
+  "id": "Q324",
+  "fileName": "Q324.json",
+  "title": "运动健康",
+  "query": "创建一个2x4长方形运动健康卡片，展示今日步数、热量消耗和活动距离，尺寸与时间卡片差不多长。",
+  "size": "2x4",
+  "sequence": 19,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3763.03,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 74,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3756.11,
+  "uid": "batch-7664fcb9-00019-000",
+  "finalAttempt": 0
+}

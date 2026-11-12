@@ -1,0 +1,399 @@
+```cardspec
+{
+  "title": "3D日历",
+  "description": "3D效果日历桌面卡片",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time"
+    },
+    {
+      "capabilityId": "GetCalendarEvents",
+      "arguments": {
+        "futureDays": 7
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Stack","children":["__post_theme_background","__genui_render_component__root"],"styles":{"width":"matchParent","height":"matchParent","padding":0,"alignContent":"topStart","clip":true,"borderRadius":20,"backgroundColor":"#FF1F1F99"}},{"id":"__post_theme_background","component":"Stack","children":["fusionBallBackground","__post_theme_base"],"styles":{"width":"matchParent","height":"matchParent","alignContent":"topStart"}},{"id":"__post_theme_base","component":"Image","src":"https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/2e510784c0bb4b7abeed8f8869d89b88/85efcebb865743cb8e74a0dbe9684c62.jpg","styles":{"width":"matchParent","height":"matchParent","objectFit":"fill"}},{"id":"fusionBallBackground","component":"Stack","children":["fusionBallLargeSlot","fusionBallMediumSlot","fusionBallSmallSlot","fusionBallGlassLayer"],"styles":{"width":"100%","height":"100%","borderRadius":20,"alignContent":"topStart","clip":true}},{"id":"fusionBallLargeSlot","component":"Stack","children":["fusionBallLarge"],"styles":{"width":"112.5%","height":"58.75%","alignContent":"bottom"}},{"id":"fusionBallLarge","component":"Divider","styles":{"width":"116.666667%","height":"446.808511%","strokeWidth":0,"color":"#00000000","borderRadius":210,"backgroundColor":"#FF1F1F99","clip":true}},{"id":"fusionBallMediumSlot","component":"Stack","children":["fusionBallMedium"],"styles":{"width":"50%","height":"175%","alignContent":"bottom"}},{"id":"fusionBallMedium","component":"Divider","styles":{"width":"200%","height":"114.285714%","strokeWidth":0,"color":"#00000000","borderRadius":160,"backgroundColor":"#FF2B65D9","clip":true}},{"id":"fusionBallSmallSlot","component":"Stack","children":["fusionBallSmall"],"styles":{"width":"121.875%","height":"137.5%","alignContent":"bottomEnd"}},{"id":"fusionBallSmall","component":"Divider","styles":{"width":"51.282051%","height":"90.909091%","strokeWidth":0,"color":"#00000000","borderRadius":100,"backgroundColor":"#FF57AED9","clip":true}},{"id":"fusionBallGlassLayer","component":"Divider","styles":{"width":"100%","height":"100%","strokeWidth":0,"color":"#00000000","backgroundColor":"#0DFFFFFF","backdropBlur":{"radius":210}}},{"id":"__genui_render_component__root","component":"Stack","children":["foreground"],"styles":{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true}},{"id":"foreground","component":"Column","children":["title"],"styles":{"width":"matchParent","height":"matchParent","padding":12,"alignItems":"start","justifyContent":"start"},"itemMargin":0},{"id":"title","component":"Column","children":["title_main"],"itemMargin":2,"styles":{"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"width":"matchParent"}},{"id":"title_main","component":"Text","content":"Design Compact Mock","styles":{"height":18,"fontSize":18,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FFFFFFFF","textOverflow":"clip"}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"ui":{"state":"ready"}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "设置一个3D效果的日历桌面卡片，展示当前日期、星期、农历信息以及近期日程安排。本轮卡片静态内容（用作展示的外部事实）：",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.viewCalendarEvent",
+      "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "ViewCalendarEvent",
+        "params": {
+          "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+        }
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "time": {
+        "currentDate": {
+          "type": "string",
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例"
+        },
+        "dayOfWeek": {
+          "type": "string",
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例"
+        },
+        "lunarDate": {
+          "type": "string",
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "端侧完成该时间数据组装的时间戳字符串，格式如 '2026-07-09 15:30:00'。",
+          "sampleValue": "示例"
+        }
+      },
+      "calendar": {
+        "eventCount": {
+          "type": "integer",
+          "description": "查询到的日程记录总数量。",
+          "sampleValue": 1
+        },
+        "events": [
+          {
+            "entityName": {
+              "type": "string",
+              "description": "固定为 'CalendarEvent'，用于系统底层实体识别。",
+              "sampleValue": "CalendarEvent"
+            },
+            "entityId": {
+              "type": "string",
+              "description": "系统日程的全局唯一实体ID。",
+              "sampleValue": "example-event-001"
+            },
+            "senderName": {
+              "type": "string",
+              "description": "日程数据标识符或发起方标识（如邀请人），若无则为空字符串。",
+              "sampleValue": ""
+            },
+            "title": {
+              "type": "string",
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会"
+            },
+            "eventLocation": {
+              "type": "string",
+              "description": "日程的具体地点描述，若未填写则为空字符串。",
+              "sampleValue": "会议室"
+            },
+            "description": {
+              "type": "string",
+              "description": "日程的备注、摘要或补充叙述文本。",
+              "sampleValue": "周例会"
+            },
+            "dtStart": {
+              "type": "string",
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00"
+            },
+            "dtEnd": {
+              "type": "string",
+              "description": "格式化后的日程结束时间短文本，如 '05:00'。",
+              "sampleValue": "15:00"
+            },
+            "timeZone": {
+              "type": "string",
+              "description": "日程所处的时区标识，例如 'Asia/Shanghai'。",
+              "sampleValue": "Asia/Shanghai"
+            },
+            "importantEventType": {
+              "type": "integer",
+              "description": "日程事件的重要程度或分类枚举值（Type）。",
+              "sampleValue": 0
+            },
+            "remindTime": [
+              {
+                "type": "string",
+                "description": "提前提醒分钟数（字符串形式）。",
+                "sampleValue": "15"
+              }
+            ],
+            "oneClickServiceType": {
+              "type": "string",
+              "description": "绑定的轻服务类型名称。大模型生成一键服务按钮时，应按照端侧能力声明的枚举选择文案。",
+              "sampleValue": "Meeting"
+            },
+            "oneClickServiceLink": {
+              "type": "string",
+              "description": "日程关联的 URI 深度跳转链接，仅用于打开华为WeLink中对应的会议；不支持打开其他会议应用、任意 App 或其他页面。",
+              "sampleValue": ""
+            },
+            "isServiceValid": {
+              "type": "integer",
+              "description": "跳转服务连接是否有效。1代表存在有效跳转链接，0代表没有。",
+              "sampleValue": 0
+            },
+            "startDate": {
+              "type": "string",
+              "description": "日程开始日期格式化文本，例如 '07-03'。",
+              "sampleValue": "08-06"
+            },
+            "countdownDays": {
+              "type": "integer",
+              "description": "距离日程开始的自然日天数纯整数，返回值不包含“天”。0 表示今天发生或已经发生，正整数表示距离开始还有多少天；若直接用于文本展示，必须在数值后追加“天”。",
+              "sampleValue": 0
+            },
+            "isAllDay": {
+              "type": "boolean",
+              "description": "标识该日程是否为全天日程。",
+              "sampleValue": false
+            }
+          }
+        ],
+        "updatedAt": {
+          "type": "string",
+          "description": "端侧完成数据组装的时间戳字符串，格式如 '2026-07-03 15:30'。",
+          "sampleValue": "2026-08-06 09:00"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.calendar_fill",
+      "src": "resources/base/media/calendar_fill.svg",
+      "description": "样式：日历实心图标，默认黑色，图形为带格线的日历本造型；适用：日程管理、日历事件查看、当日安排。"
+    },
+    {
+      "id": "asset.ic_calender",
+      "src": "resources/base/media/ic_calender.svg",
+      "description": "样式：黄色到橙色渐变的日历图标，带顶部装订环、分隔栏与日期圆点，原始尺寸为 20×20，SVG 矢量图（保留原色，禁止染色）需保留原始渐变配色，禁止染色；适用：日程概览、近期日历事项或日期倒计时卡片，可结合 GetCalendarEvents 展示日程，也可结合 GetCountdownDays 展示目标日期倒计时，并可作为 event.viewCalendarEvent 的辅助入口图标。图标不表示存在日程、日程已完成或倒计时具体天数。"
+    },
+    {
+      "id": "photo-ux-texture-purple-diamond-wide",
+      "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/2e510784c0bb4b7abeed8f8869d89b88/85efcebb865743cb8e74a0dbe9684c62.jpg",
+      "description": "主题背景"
+    }
+  ]
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "GetCurrentTime",
+    "GetCalendarEvents"
+  ],
+  "event": [
+    {
+      "id": "event.viewCalendarEvent",
+      "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "ViewCalendarEvent",
+        "params": {
+          "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+        }
+      }
+    }
+  ],
+  "asset": [
+    "asset.calendar_fill",
+    "asset.ic_calender",
+    "photo-ux-texture-purple-diamond-wide"
+  ]
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time",
+      "candidateOutputFields": []
+    },
+    {
+      "capabilityId": "GetCalendarEvents",
+      "arguments": {
+        "futureDays": 7
+      },
+      "writeResultTo": "/data/calendar",
+      "candidateOutputFields": []
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.viewCalendarEvent",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "intentName": "ViewCalendarEvent",
+          "params": {
+            "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+          }
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.calendar_fill",
+    "asset.ic_calender"
+  ]
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "235edbe9-fc1e-43a0-a5cc-6565fc95764d",
+  "createdAt": 1793932878202
+}
+```
+```designcompactdsl
+["root","Stack",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true},["foreground"]]
+["foreground","Column",{"width":"matchParent","height":"matchParent","padding":12,"alignItems":"start","justifyContent":"start"},["title"]]
+["title","EmphasisText",{"mainText":"Design Compact Mock"}]
+["/ui/state","ready"]
+```
+```request
+{
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "userQuery": "设置一个3D效果的日历桌面卡片，展示当前日期、星期、农历信息以及近期日程安排。本轮卡片静态内容（用作展示的外部事实）：",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetCurrentTime",
+        "arguments": {},
+        "writeResultTo": "/data/time"
+      },
+      {
+        "capabilityId": "GetCalendarEvents",
+        "arguments": {
+          "futureDays": 7
+        },
+        "writeResultTo": "/data/calendar"
+      }
+    ],
+    "title": "3D日历",
+    "size": "2x4",
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.viewCalendarEvent",
+        "action": {
+          "call": "clickToIntent",
+          "args": {
+            "intentName": "ViewCalendarEvent",
+            "params": {
+              "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+            }
+          }
+        }
+      }
+    ],
+    "description": "3D效果日历桌面卡片",
+    "candidateAssetIds": [
+      "asset.calendar_fill",
+      "asset.ic_calender"
+    ]
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261031013228029"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q379-000",
+    "isNew": true,
+    "sessionId": "batch-baaba440"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "设置一个3D效果的日历桌面卡片，展示当前日期、星期、农历信息以及近期日程安排。本轮卡片静态内容（用作展示的外部事实）：",
+    "type": "text"
+  },
+  "version": "1.0",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "bundleName": "com.huawei.genui",
+  "userQuery": "设置一个3D效果的日历桌面卡片，展示当前日期、星期、农历信息以及近期日程安排。本轮卡片静态内容（用作展示的外部事实）：",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time"
+    },
+    {
+      "capabilityId": "GetCalendarEvents",
+      "arguments": {
+        "futureDays": 7
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "title": "3D日历",
+  "size": "2x4",
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.viewCalendarEvent",
+      "action": {
+        "call": "clickToIntent",
+        "args": {
+          "intentName": "ViewCalendarEvent",
+          "params": {
+            "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+          }
+        }
+      }
+    }
+  ],
+  "description": "3D效果日历桌面卡片",
+  "candidateAssetIds": [
+    "asset.calendar_fill",
+    "asset.ic_calender"
+  ]
+}
+```

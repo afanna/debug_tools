@@ -1,0 +1,21 @@
+{
+  "id": "Q320",
+  "fileName": "Q320.json",
+  "title": "生日快乐",
+  "query": "制作一张生日贺卡，上面写明祝沈大哥生日快乐。本轮卡片静态内容（用作展示的外部事实）：祝沈大哥生日快乐",
+  "size": "2x2",
+  "sequence": 17,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4575.53,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 91,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4562.28,
+  "uid": "batch-7664fcb9-00017-000",
+  "finalAttempt": 0
+}

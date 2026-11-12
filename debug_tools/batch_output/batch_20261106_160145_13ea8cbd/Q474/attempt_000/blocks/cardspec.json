@@ -1,0 +1,19 @@
+{
+  "title": "春节倒计时",
+  "description": "距离春节还有多少天",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-02-06"
+      },
+      "writeResultTo": "/data/countdown"
+    }
+  ]
+}

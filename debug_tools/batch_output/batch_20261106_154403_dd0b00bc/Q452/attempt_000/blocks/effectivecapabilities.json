@@ -1,0 +1,21 @@
+{
+  "data": [
+    "GetPhoneBatteryInfo"
+  ],
+  "event": [
+    {
+      "id": "event.open.settings.battery",
+      "description": "打开华为手机自带的系统设置中的电池页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "com.huawei.hmos.settings.MainAbility",
+        "bundleName": "com.huawei.hmos.settings",
+        "intentName": "Settings",
+        "uri": "battery"
+      }
+    }
+  ],
+  "asset": [
+    "asset.battery_leaf_fill"
+  ]
+}

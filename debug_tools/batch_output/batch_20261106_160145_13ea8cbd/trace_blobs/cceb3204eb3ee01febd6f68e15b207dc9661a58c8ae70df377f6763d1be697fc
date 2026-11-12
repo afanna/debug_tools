@@ -1,0 +1,4 @@
+[
+  "EventCard item detail must not reserve a button icon.",
+  "component details.items[0].onClick: must match an allowed calendar detail handler for the same displayed array record; copy its complete call and args."
+]

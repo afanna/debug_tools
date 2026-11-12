@@ -1,0 +1,74 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/updatedAt"
+      ],
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/updatedAt"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/time"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "当前日期时间",
+    "size": "2x2",
+    "title": "日期时间",
+    "uid": "batch-7664fcb9-00047-000",
+    "userQuery": "在当前屏幕上方添加一个显示日期和时间的卡片，显示当前日期、星期和时间。本轮卡片静态内容（用作展示的外部事实）："
+  },
+  "description": "当前日期时间",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261031022008375"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q382-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x2",
+  "title": "日期时间",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00047-000"
+    }
+  },
+  "userQuery": "在当前屏幕上方添加一个显示日期和时间的卡片，显示当前日期、星期和时间。本轮卡片静态内容（用作展示的外部事实）：",
+  "utterance": {
+    "original": "在当前屏幕上方添加一个显示日期和时间的卡片，显示当前日期、星期和时间。本轮卡片静态内容（用作展示的外部事实）：",
+    "type": "text"
+  },
+  "version": "1.0"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 当前日期 (/data/time/currentDate).",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 当前星期 (/data/time/dayOfWeek).",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 未来第1天温度范围 (/data/weather/daily/0/temperatureRangeText).",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 未来第2天温度范围 (/data/weather/daily/1/temperatureRangeText).",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 未来第3天温度范围 (/data/weather/daily/2/temperatureRangeText).",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

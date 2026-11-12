@@ -1,0 +1,8 @@
+{
+  "requirements": [
+    {
+      "description": "卡片需要读取当前时间、日期、星期和农历等动态时间数据，但当前 dataModelSchema 未提供任何时间、日期、星期或农历字段。",
+      "sourceQuote": "显示当前时间、日期、星期和农历"
+    }
+  ]
+}

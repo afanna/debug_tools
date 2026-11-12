@@ -1,0 +1,93 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "农历日期"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "ProgressCircleSingle"
+      ],
+      "dataId": "/data/battery/batterySOCText",
+      "priority": "must",
+      "requirement": "手机剩余电量"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前温度"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/weather/location/prefectureName",
+      "priority": "must",
+      "requirement": "城市名称"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "天气现象"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/earphone/earphoneName",
+      "priority": "must",
+      "requirement": "音乐播放信息（当前耳机设备名）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/earphone/leftBatteryLevel",
+      "priority": "should",
+      "requirement": "耳机左耳电量"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/earphone/rightBatteryLevel",
+      "priority": "should",
+      "requirement": "耳机右耳电量"
+    }
+  ],
+  "layoutHints": [
+    "W-split-panels",
+    "W-top-bottom"
+  ]
+}

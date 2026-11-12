@@ -1,0 +1,49 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "weather": {
+        "current": {
+          "condition": {
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云",
+            "type": "string"
+          },
+          "temperatureText": {
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃",
+            "type": "string"
+          }
+        },
+        "location": {
+          "cityCode": {
+            "description": "城市代码，如60814代表青浦区",
+            "sampleValue": "60814",
+            "type": "string"
+          },
+          "districtName": {
+            "description": "区或县名称",
+            "sampleValue": "青浦区",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Weather_CityCode",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      },
+      "call": "clickToDeeplink",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "id": "event.open.weather"
+    }
+  ],
+  "size": "2x4",
+  "userQuery": "把那个大框框设置天气预报，显示当前天气和温度。"
+}

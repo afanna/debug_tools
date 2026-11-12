@@ -1,0 +1,21 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "districtName": "青浦区",
+        "forecastDays": 1,
+        "prefectureName": "上海市"
+      },
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "description": "青浦区天气速览",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "明日天气"
+}

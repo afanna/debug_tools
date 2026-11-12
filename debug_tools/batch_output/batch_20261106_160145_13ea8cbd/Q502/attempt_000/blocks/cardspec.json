@@ -1,0 +1,19 @@
+{
+  "title": "12月倒数",
+  "description": "距离12月还有多少天",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2026-12-01"
+      },
+      "writeResultTo": "/data/countdown"
+    }
+  ]
+}

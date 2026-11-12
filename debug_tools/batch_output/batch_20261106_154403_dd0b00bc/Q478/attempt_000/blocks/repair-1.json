@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-dual-content\"},[\"title\",\"primary\",\"support\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"备忘录\",\"icon\":\"resources/base/media/list_book_fill.svg\",\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":\"{{ '笔记 ' + ${/data/memo/noteCount} + ' · 待办 ' + ${/data/memo/todoTotalCount} }}\",\"fontSize\":18}]\n[\"support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"未完成 \",\"value\":{\"path\":\"/data/memo/todoPendingCount\"}},{\"label\":\"已完成 \",\"value\":{\"path\":\"/data/memo/todoCompletedCount\"}},{\"label\":\"笔记 \",\"value\":{\"path\":\"/data/memo/notes/0/title\"}},{\"label\":\"待办 \",\"value\":{\"path\":\"/data/memo/todos/0/title\"}}],\"fontSize\":12}]\n[\"/data/memo/noteCount\",0]\n[\"/data/memo/todoTotalCount\",0]\n[\"/data/memo/todoPendingCount\",0]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/notes/0/title\",\"示例\"]\n[\"/data/memo/todos/0/title\",\"示例\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component primary_main: text width overflow; complete text '笔记 0 · 待办 0' at original font 18 needs about 155vp in one line, but its allocated text area is 126vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight."
+    }
+  ]
+}

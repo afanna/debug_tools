@@ -1,0 +1,6 @@
+{
+  "errors": [],
+  "warnings": [
+    "/data/earphone: declared data capability is not used by any component."
+  ]
+}

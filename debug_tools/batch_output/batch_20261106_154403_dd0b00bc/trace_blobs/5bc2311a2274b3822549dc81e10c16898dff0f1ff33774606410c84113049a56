@@ -1,0 +1,430 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文有6个对象，计划含1个核心组、共1组；不能删除核心对象或以共享说明代替本条目。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少对象名称 '工资表项目'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '基本工资'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '奖金'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '补贴'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '扣款'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '实发工资'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "title",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "id": "fields",
+              "identity": "工资表项目",
+              "kind": "object"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_GROUP_MISMATCH",
+        "evidenceSource": "validation",
+        "expected": {
+          "objectOrderUnchanged": true,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "按已接受计划的对象顺序和分组重排正文条目或对比栏，共享说明放在标题或note；不能跨对象借用事实或删除必要对象。",
+        "legacyMessage": "COMPACT_STATIC_GROUP_MISMATCH: 正文有6个对象，计划含1个核心组、共1组；不能删除核心对象或以共享说明代替本条目。",
+        "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文有6个对象，计划含1个核心组、共1组；不能删除核心对象或以共享说明代替本条目。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文有6个对象，计划含1个核心组、共1组；不能删除核心对象或以共享说明代替本条目。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "title",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "id": "fields",
+              "identity": "工资表项目",
+              "kind": "object"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_CORE_MISSING",
+        "evidenceSource": "validation",
+        "expected": {
+          "coreOmissionAllowed": false,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+        "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少对象名称 '工资表项目'；名称必须在本对象内可见，不能只保留无归属数值。",
+        "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少对象名称 '工资表项目'；名称必须在本对象内可见，不能只保留无归属数值。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少对象名称 '工资表项目'；名称必须在本对象内可见，不能只保留无归属数值。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "title",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "id": "fields",
+              "identity": "工资表项目",
+              "kind": "object"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_CORE_MISSING",
+        "evidenceSource": "validation",
+        "expected": {
+          "coreOmissionAllowed": false,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+        "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '基本工资'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+        "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '基本工资'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '基本工资'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "title",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "id": "fields",
+              "identity": "工资表项目",
+              "kind": "object"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_CORE_MISSING",
+        "evidenceSource": "validation",
+        "expected": {
+          "coreOmissionAllowed": false,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+        "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '奖金'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+        "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '奖金'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '奖金'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "title",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "id": "fields",
+              "identity": "工资表项目",
+              "kind": "object"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_CORE_MISSING",
+        "evidenceSource": "validation",
+        "expected": {
+          "coreOmissionAllowed": false,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+        "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '补贴'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+        "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '补贴'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '补贴'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "title",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "id": "fields",
+              "identity": "工资表项目",
+              "kind": "object"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_CORE_MISSING",
+        "evidenceSource": "validation",
+        "expected": {
+          "coreOmissionAllowed": false,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+        "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '扣款'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+        "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '扣款'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '扣款'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "title",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "id": "fields",
+              "identity": "工资表项目",
+              "kind": "object"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_CORE_MISSING",
+        "evidenceSource": "validation",
+        "expected": {
+          "coreOmissionAllowed": false,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+        "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '实发工资'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+        "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '实发工资'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 fields 缺少完整展示文字 '实发工资'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "title",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "id": "fields",
+              "identity": "工资表项目",
+              "kind": "object"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_GROUP_MISMATCH",
+        "evidenceSource": "validation",
+        "expected": {
+          "objectOrderUnchanged": true,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "按已接受计划的对象顺序和分组重排正文条目或对比栏，共享说明放在标题或note；不能跨对象借用事实或删除必要对象。",
+        "legacyMessage": "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+        "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "category": "layout",
+        "code": "COMPACT_STATIC_TEXT_CAPACITY",
+        "expected": {
+          "completeTextFits": true,
+          "fontSizeUnchanged": true
+        },
+        "fixHint": "按组件固定文字规格及实际可用宽度修复被指出的字段；保持已接受文字与对象归属，必要时更换静态语义组件或重新分配主副字段；不修改字体、行高或固定间距，不用maxLines隐藏内容。",
+        "legacyMessage": "COMPACT_STATIC_TEXT_CAPACITY: body: SingleLineList.items 必须为1–5项；静态正文最多五条信息，标题不计入。",
+        "message": "COMPACT_STATIC_TEXT_CAPACITY: body: SingleLineList.items 必须为1–5项；静态正文最多五条信息，标题不计入。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_TEXT_CAPACITY: body: SingleLineList.items 必须为1–5项；静态正文最多五条信息，标题不计入。",
+    "stage": "validation"
+  }
+]

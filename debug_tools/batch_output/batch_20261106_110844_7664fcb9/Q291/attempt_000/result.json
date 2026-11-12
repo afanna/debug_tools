@@ -1,0 +1,16 @@
+{
+  "attempt": 0,
+  "uid": "batch-7664fcb9-00004-000",
+  "status": "failed",
+  "errorCode": "",
+  "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+  "elapsedMs": 1770.76,
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "blockNames": [],
+  "traceStatus": "complete",
+  "traceRecordCount": 28,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 990.36,
+  "completed": false
+}

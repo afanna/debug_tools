@@ -1,0 +1,125 @@
+```cardspec
+{
+  "title": "月份中英对照",
+  "description": "1-12月中英文记忆卡片",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Column","children":["__layout__root__static_header","__layout__root__static_body"],"itemMargin":6.0,"styles":{"width":"matchParent","height":"matchParent","padding":{"top":12.0,"bottom":12.0,"left":0,"right":0},"borderRadius":20.0,"clip":true,"alignItems":"start","justifyContent":"start","linearGradient":{"direction":"RightBottom","colors":[["#FFCBDDFE",0],["#FFF1F6FE",1]]}}},{"id":"__layout__root__static_header","component":"Column","children":["header"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","padding":{"left":12.0,"right":12.0},"height":16.0},"itemMargin":0},{"id":"header","component":"Column","children":["header__static_title"],"itemMargin":0.0,"styles":{"width":"matchParent","height":16.0,"alignItems":"start","justifyContent":"start","flexShrink":0}},{"id":"header__static_title","component":"Text","content":"月份中英文对照","styles":{"fontSize":12.0,"fontWeight":400,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":"matchParent","flexShrink":0,"fontColor":"#FF1F4799","textOverflow":"clip","wordBreak":"normal"}},{"id":"__layout__root__static_body","component":"Column","children":["body"],"itemMargin":6.0,"styles":{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"end","padding":{"left":12.0,"right":12.0}}},{"id":"body","component":"Column","children":["body__static_item0","body__static_item1","body__static_item2","body__static_item3"],"itemMargin":4.0,"styles":{"width":"matchParent","height":76.0,"alignItems":"start","justifyContent":"start","flexShrink":0}},{"id":"body__static_item0_text","component":"Text","content":"1-3月","styles":{"fontSize":12.0,"fontWeight":400,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":34.272000000000006,"flexShrink":0,"fontColor":"#991F4799","textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item0_assist","component":"Text","content":"January-February-March","styles":{"fontSize":12.0,"fontWeight":500,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"flexShrink":0,"fontColor":"#FF1F4799","layoutWeight":1,"textAlign":"end","textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item0","component":"Row","children":["body__static_item0_text","body__static_item0_assist"],"itemMargin":8.0,"styles":{"width":"matchParent","height":16.0,"alignItems":"center","flexShrink":0}},{"id":"body__static_item1_text","component":"Text","content":"4-6月","styles":{"fontSize":12.0,"fontWeight":400,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":34.272000000000006,"flexShrink":0,"fontColor":"#991F4799","textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item1_assist","component":"Text","content":"April-May-June","styles":{"fontSize":12.0,"fontWeight":500,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"flexShrink":0,"fontColor":"#FF1F4799","layoutWeight":1,"textAlign":"end","textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item1","component":"Row","children":["body__static_item1_text","body__static_item1_assist"],"itemMargin":8.0,"styles":{"width":"matchParent","height":16.0,"alignItems":"center","flexShrink":0}},{"id":"body__static_item2_text","component":"Text","content":"7-9月","styles":{"fontSize":12.0,"fontWeight":400,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":34.272000000000006,"flexShrink":0,"fontColor":"#991F4799","textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item2_assist","component":"Text","content":"July-August-September","styles":{"fontSize":12.0,"fontWeight":500,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"flexShrink":0,"fontColor":"#FF1F4799","layoutWeight":1,"textAlign":"end","textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item2","component":"Row","children":["body__static_item2_text","body__static_item2_assist"],"itemMargin":8.0,"styles":{"width":"matchParent","height":16.0,"alignItems":"center","flexShrink":0}},{"id":"body__static_item3_text","component":"Text","content":"10-12月","styles":{"fontSize":12.0,"fontWeight":400,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":48.38400000000001,"flexShrink":0,"fontColor":"#991F4799","textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item3_assist","component":"Text","content":"October-November-December","styles":{"fontSize":12.0,"fontWeight":500,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"flexShrink":0,"fontColor":"#FF1F4799","layoutWeight":1,"textAlign":"end","textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item3","component":"Row","children":["body__static_item3_text","body__static_item3_assist"],"itemMargin":8.0,"styles":{"width":"matchParent","height":16.0,"alignItems":"center","flexShrink":0}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"state":{"ready":true}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "生成一份从1月到12月的中英文对照方便记忆的卡片。本轮卡片静态内容（用作展示的外部事实）：1月 January (Jan) | 2月 February (Feb) | 3月 March (Mar) | 4月 April (Apr) | 5月 May | 6月 June (Jun) | 7月 July (Jul) | 8月 August (Aug) | 9月 September (Sep) | 10月 October (Oct) | 11月 November (Nov) | 12月 December (Dec)",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "assetCandidates": []
+}
+```
+```effectivecapabilities
+{
+  "data": [],
+  "event": [],
+  "asset": []
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": []
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "433757c4-62fa-4d20-b09b-4fb8eea86ee6",
+  "createdAt": 1793952330783
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"W-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"月份中英文对照"}]
+["body","SingleLineList",{"items":[{"text":"1-3月","assist":"January-February-March"},{"text":"4-6月","assist":"April-May-June"},{"text":"7-9月","assist":"July-August-September"},{"text":"10-12月","assist":"October-November-December"}]}]
+["/state/ready",true]
+```
+```request
+{
+  "content": {
+    "size": "2x4",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL10 7.0.0.111",
+    "candidateAssetIds": [],
+    "candidateEventCandidates": [],
+    "bundleName": "com.huawei.genui",
+    "description": "1-12月中英文记忆卡片",
+    "userQuery": "生成一份从1月到12月的中英文对照方便记忆的卡片。本轮卡片静态内容（用作展示的外部事实）：1月 January (Jan) | 2月 February (Feb) | 3月 March (Mar) | 4月 April (Apr) | 5月 May | 6月 June (Jun) | 7月 July (Jul) | 8月 August (Aug) | 9月 September (Sep) | 10月 October (Oct) | 11月 November (Nov) | 12月 December (Dec)",
+    "title": "月份中英对照",
+    "candidateDataBindings": []
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261102125803934"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q499-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0",
+  "size": "2x4",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMM-AL10 7.0.0.111",
+  "candidateAssetIds": [],
+  "candidateEventCandidates": [],
+  "bundleName": "com.huawei.genui",
+  "description": "1-12月中英文记忆卡片",
+  "userQuery": "生成一份从1月到12月的中英文对照方便记忆的卡片。本轮卡片静态内容（用作展示的外部事实）：1月 January (Jan) | 2月 February (Feb) | 3月 March (Mar) | 4月 April (Apr) | 5月 May | 6月 June (Jun) | 7月 July (Jul) | 8月 August (Aug) | 9月 September (Sep) | 10月 October (Oct) | 11月 November (Nov) | 12月 December (Dec)",
+  "title": "月份中英对照",
+  "candidateDataBindings": []
+}
+```

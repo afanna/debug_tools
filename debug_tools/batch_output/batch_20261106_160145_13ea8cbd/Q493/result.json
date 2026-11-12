@@ -1,0 +1,21 @@
+{
+  "id": "Q493",
+  "fileName": "Q493.json",
+  "title": "明日天气",
+  "query": "显示明天上海青浦区的天气，点击查看青浦区天气详情",
+  "size": "2x2",
+  "sequence": 81,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4654.46,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4642.32,
+  "uid": "batch-13ea8cbd-00081-000",
+  "finalAttempt": 0
+}

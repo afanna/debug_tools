@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 第三天天气预报：星期、天气现象、温度范围.",
+    "stage": "validation"
+  }
+]

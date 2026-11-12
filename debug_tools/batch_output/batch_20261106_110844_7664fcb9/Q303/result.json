@@ -1,0 +1,21 @@
+{
+  "id": "Q303",
+  "fileName": "Q303.json",
+  "title": "今日天气",
+  "query": "在桌面上创建一张天气卡片，显示鄂尔多斯市东胜区当前天气信息，包括当前温度、天气现象、空气质量、湿度和未来天气预报。",
+  "size": "2x2",
+  "sequence": 10,
+  "status": "degraded",
+  "attemptCount": 1,
+  "elapsedMs": 16754.43,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 160,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 16747.79,
+  "uid": "batch-7664fcb9-00010-000",
+  "finalAttempt": 0
+}

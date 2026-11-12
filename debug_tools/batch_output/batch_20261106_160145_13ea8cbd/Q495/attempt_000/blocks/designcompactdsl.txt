@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"S-center"},["content"]]
+["content","DataDisplay",{"label":"当前时间","value":{"path":"/data/time/currentDate"},"supportingText":{"path":"/data/time/dayOfWeek"}}]
+["/data/time/currentDate","示例"]
+["/data/time/dayOfWeek","示例"]

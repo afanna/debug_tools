@@ -1,0 +1,210 @@
+{
+  "sampleId": "Q086",
+  "status": "failed",
+  "verdict": "L0 失败",
+  "oracle": {
+    "sampleId": "Q086",
+    "scenario": "repeat_month",
+    "timezone": "Asia/Shanghai",
+    "referenceDate": "2026-11-03",
+    "targetDate": "2026-12-01",
+    "expectedDays": 28,
+    "expectedRelationText": "还剩",
+    "expectedTargetDateText": "2026/12/01",
+    "writeResultTo": "/data/dateCounter",
+    "fields": [
+      "/days",
+      "/relationText",
+      "/targetDateText"
+    ],
+    "arguments": {
+      "targetDate": "2026-07-01",
+      "repeat": {
+        "unit": "month",
+        "interval": 2
+      }
+    },
+    "gate": false,
+    "provenance": {
+      "targetDate": "explicit",
+      "days": "ambiguous",
+      "relationText": "ambiguous",
+      "targetDateText": "ambiguous"
+    },
+    "notes": [
+      "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+    ]
+  },
+  "results": [
+    {
+      "rule": "SPEC.RADIUS",
+      "status": "pass",
+      "expected": "20",
+      "actual": "20",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.PADDING",
+      "status": "pass",
+      "expected": "12",
+      "actual": "12.0",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.BG_FULL_BLEED",
+      "status": "pass",
+      "expected": "铺满的背景图",
+      "actual": "__post_theme_base",
+      "severity": "major",
+      "evidence": {
+        "images": [
+          "__post_theme_base"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.MASK",
+      "status": "fail",
+      "expected": "黑色蒙层 60%",
+      "actual": "最接近的黑色层 无 alpha=0.00",
+      "severity": "major",
+      "evidence": {
+        "component": "",
+        "alpha": 0.0
+      }
+    },
+    {
+      "rule": "SPEC.TITLE_REQUIRED",
+      "status": "pass",
+      "expected": "存在标题区",
+      "actual": "primary_main",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.TITLE_FONT",
+      "status": "fail",
+      "expected": "16 或 20",
+      "actual": "18.0",
+      "severity": "major",
+      "evidence": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "rule": "SPEC.TITLE_ELLIPSIS",
+      "status": "fail",
+      "expected": "maxLines=1 且 textOverflow=ellipsis",
+      "actual": "maxLines=1, textOverflow=clip",
+      "severity": "major",
+      "evidence": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "rule": "SPEC.TITLE_COLOR",
+      "status": "pass",
+      "expected": "白色 100%",
+      "actual": "alpha=1.0",
+      "severity": "minor",
+      "evidence": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "rule": "SPEC.PRIMARY_FONT",
+      "status": "fail",
+      "expected": "56 或 38",
+      "actual": "18.0",
+      "severity": "major",
+      "evidence": {
+        "component": "primary_main",
+        "expectedDays": 28,
+        "digits": 2
+      }
+    },
+    {
+      "rule": "SPEC.UNIT_FONT",
+      "status": "fail",
+      "expected": "单位独立 16fp",
+      "actual": "单位与数字同一文本节点",
+      "severity": "major",
+      "evidence": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "rule": "SPEC.SUPPORT_FONT",
+      "status": "fail",
+      "expected": "16",
+      "actual": "12.0",
+      "severity": "major",
+      "evidence": {
+        "component": "support_item0_value"
+      }
+    },
+    {
+      "rule": "SPEC.SUPPORT_COLOR",
+      "status": "fail",
+      "expected": "白色 60%",
+      "actual": "alpha=1.0",
+      "severity": "minor",
+      "evidence": {
+        "component": "support_item0_value"
+      }
+    },
+    {
+      "rule": "SPEC.CONTENT_TYPE",
+      "status": "pass",
+      "expected": "C1–C5 之一",
+      "actual": "C3 小数字",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.PATTERN_GEOMETRY",
+      "status": "na",
+      "expected": "图案几何",
+      "actual": "非图案类",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.DIGIT_LIMIT",
+      "status": "pass",
+      "expected": "最多 6 位",
+      "actual": "2 位",
+      "severity": "major",
+      "evidence": {
+        "expectedDays": 28,
+        "hasPrimary": true
+      }
+    },
+    {
+      "rule": "VIS.EVIDENCE_MISSING",
+      "status": "pending",
+      "expected": "DOM 与截图为可见性判定提供证据",
+      "actual": "未采集到注入后证据",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "L0.CAPTURE_FAILED",
+      "status": "fail",
+      "expected": "浏览器采集成功",
+      "actual": "original: 未执行浏览器采集；injected: 未执行浏览器采集",
+      "severity": "major",
+      "evidence": {}
+    }
+  ],
+  "metrics": {},
+  "counts": {
+    "passed": 7,
+    "failed": 8,
+    "pending": 1,
+    "na": 1
+  },
+  "images": {}
+}

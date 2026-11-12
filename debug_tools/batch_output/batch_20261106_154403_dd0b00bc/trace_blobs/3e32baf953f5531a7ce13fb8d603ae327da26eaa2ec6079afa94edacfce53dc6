@@ -1,0 +1,33 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.battery_leaf_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData",
+        "ProgressCircleSingle"
+      ],
+      "dataId": "/data/phoneBattery/batterySOCText",
+      "priority": "must",
+      "requirement": "当前手机剩余电量（含百分号）"
+    },
+    {
+      "componentHints": [
+        "DataDisplay",
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/phoneBattery/batteryCapacityLevelDesc",
+      "priority": "should",
+      "requirement": "设备电池电量等级描述（低电量状态）"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

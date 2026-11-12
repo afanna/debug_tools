@@ -1,0 +1,21 @@
+{
+  "id": "Q448",
+  "fileName": "Q448.json",
+  "title": "家人纪念日",
+  "query": "制作一张家人重要日子倒计时卡片，标注每位家人的名字和对应的公历日期。奶奶生日：2026年10月15日（农历九月初六）；爷爷生日：2026年7月4日（农历五月二十）；爸爸生日：2026年4月29日（农历三月十三）；妈妈生日：2026年4月22日（农历三月初六）；崔景会生日：2026年11月8日（农历九月三十）；父母结婚纪念日：2027年1月23日（农历腊月十六）。\n本轮卡片静态内容（用作展示的外部事实）：奶奶生日10月15日、爷爷生日7月4日、爸爸生日4月29日、妈妈生日4月22日、崔景会生日11月8日、父母结婚纪念日1月23日",
+  "size": "2x4",
+  "sequence": 36,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 9920.79,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 103,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 9908.77,
+  "uid": "batch-13ea8cbd-00036-000",
+  "finalAttempt": 0
+}

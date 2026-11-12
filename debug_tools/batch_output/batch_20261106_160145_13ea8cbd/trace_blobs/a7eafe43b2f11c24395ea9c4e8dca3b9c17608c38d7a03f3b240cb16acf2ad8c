@@ -1,0 +1,65 @@
+{
+  "cardSpec": {
+    "description": "一周四练 胸背腿肩分化",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "suggestSize": "2x4",
+    "title": "我的训练计划"
+  },
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.figure_run",
+      "asset.flame_fill"
+    ],
+    "data": [],
+    "event": []
+  },
+  "generationPlan": {
+    "candidateAssetIds": [
+      "asset.figure_run",
+      "asset.flame_fill"
+    ],
+    "candidateDataBindings": [],
+    "candidateEventCandidates": []
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"__layout__root__static_header\",\"__layout__root__static_body\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":{\"top\":12.0,\"bottom\":12.0,\"left\":0,\"right\":0},\"borderRadius\":20.0,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\"}},{\"id\":\"__layout__root__static_header\",\"component\":\"Column\",\"children\":[\"header\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":{\"left\":12.0,\"right\":12.0},\"height\":16.0},\"itemMargin\":0},{\"id\":\"header\",\"component\":\"Column\",\"children\":[\"header__static_title\"],\"itemMargin\":0.0,\"styles\":{\"width\":\"matchParent\",\"height\":16.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0}},{\"id\":\"header__static_title\",\"component\":\"Text\",\"content\":\"一周四练分化安排\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"__layout__root__static_body\",\"component\":\"Column\",\"children\":[\"body\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1,\"alignItems\":\"start\",\"justifyContent\":\"end\",\"padding\":{\"left\":12.0,\"right\":12.0}}},{\"id\":\"body\",\"component\":\"Column\",\"children\":[\"body__static_item0\",\"body__static_item1\",\"body__static_item2\",\"body__static_item3\",\"body__static_item4\"],\"itemMargin\":4.0,\"styles\":{\"width\":\"matchParent\",\"height\":96.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0}},{\"id\":\"body__static_item0_text\",\"component\":\"Text\",\"content\":\"周一\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":25.200000000000003,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0_assist\",\"component\":\"Text\",\"content\":\"胸\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textAlign\":\"end\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0\",\"component\":\"Row\",\"children\":[\"body__static_item0_text\",\"body__static_item0_assist\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":16.0,\"alignItems\":\"center\",\"flexShrink\":0}},{\"id\":\"body__static_item1_text\",\"component\":\"Text\",\"content\":\"周三\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":25.200000000000003,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1_assist\",\"component\":\"Text\",\"content\":\"背\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textAlign\":\"end\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1\",\"component\":\"Row\",\"children\":[\"body__static_item1_text\",\"body__static_item1_assist\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":16.0,\"alignItems\":\"center\",\"flexShrink\":0}},{\"id\":\"body__static_item2_text\",\"component\":\"Text\",\"content\":\"周五\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":25.200000000000003,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item2_assist\",\"component\":\"Text\",\"content\":\"腿\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textAlign\":\"end\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item2\",\"component\":\"Row\",\"children\":[\"body__static_item2_text\",\"body__static_item2_assist\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":16.0,\"alignItems\":\"center\",\"flexShrink\":0}},{\"id\":\"body__static_item3_text\",\"component\":\"Text\",\"content\":\"周日\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":25.200000000000003,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item3_assist\",\"component\":\"Text\",\"content\":\"肩\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textAlign\":\"end\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item3\",\"component\":\"Row\",\"children\":[\"body__static_item3_text\",\"body__static_item3_assist\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":16.0,\"alignItems\":\"center\",\"flexShrink\":0}},{\"id\":\"body__static_item4_text\",\"component\":\"Text\",\"content\":\"每次训练\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":50.400000000000006,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item4_assist\",\"component\":\"Text\",\"content\":\"热身·主项·拉伸\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"layoutWeight\":1,\"textAlign\":\"end\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item4\",\"component\":\"Row\",\"children\":[\"body__static_item4_text\",\"body__static_item4_assist\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":16.0,\"alignItems\":\"center\",\"flexShrink\":0}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"state\":{\"ready\":true}}}}",
+  "meta": {
+    "apiVersion": "v1",
+    "artifactId": "6541b249-1517-475a-8bad-dfcbb9304901",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "cardSpecVersion": "card-spec-v1",
+    "createdAt": 1793952336532,
+    "dslProtocolVersion": "v0.9",
+    "generationMode": "create",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "skillVersion": "skill-widget-v1",
+    "taskSpecVersion": "task-spec-v1"
+  },
+  "removedCapabilities": [],
+  "schemaVersion": "widget-artifact-v2",
+  "taskSpec": {
+    "appVersion": "11.7.8.342",
+    "assetCandidates": [
+      {
+        "description": "样式：跑步人物图标，默认黑色，图形为人体奔跑动作侧视轮廓；适用：运动记录、跑步锻炼追踪、步数统计。",
+        "id": "asset.figure_run",
+        "src": "resources/base/media/figure_run.svg"
+      },
+      {
+        "description": "样式：默认黑色的单色实心火焰图标；适用：运动热量消耗、燃烧、火焰或加热状态。",
+        "id": "asset.flame_fill",
+        "src": "resources/base/media/flame_fill.svg"
+      }
+    ],
+    "dataModelSchema": {
+      "data": {}
+    },
+    "eventCandidates": [],
+    "size": "2x4",
+    "userQuery": "制作一张我的训练计划桌面卡片，展示一周四练的胸背腿肩分化训练安排。本轮卡片静态内容（用作展示的外部事实）：我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。每次训练包含热身、主项训练和拉伸放松。"
+  }
+}

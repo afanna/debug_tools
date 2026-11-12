@@ -1,0 +1,431 @@
+```cardspec
+{
+  "title": "每日锻炼打卡",
+  "description": "每天坚持锻炼，打卡记录",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/healthSport"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Row","children":["left","right"],"itemMargin":12,"styles":{"width":"matchParent","height":"matchParent","padding":12,"borderRadius":20,"clip":true,"alignItems":"center","justifyContent":"start","linearGradient":{"direction":"RightBottom","colors":[["#FFDBCCFF",0],["#FFF6F2FF",1]]}}},{"id":"left","component":"Column","children":["__layout__left__sub"],"styles":{"height":"matchParent","layoutWeight":1,"padding":8,"borderRadius":16,"clip":true,"backgroundColor":"#99FFFFFF"},"itemMargin":0},{"id":"__layout__left__sub","component":"Column","children":["left_title","__layout__left__body","left_action"],"itemMargin":6,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":110.0}},{"id":"left_title","component":"Row","children":["left_title_title","left_title_icon"],"styles":{"width":"matchParent","height":20,"flexShrink":0,"justifyContent":"spaceBetween","alignItems":"center"},"itemMargin":0},{"id":"left_title_title","component":"Text","content":"每天坚持打卡锻炼","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":1,"width":"wrapContent","layoutWeight":1,"constraintSize":{"minWidth":0},"fontColor":"#99563D99"}},{"id":"left_title_icon","component":"Image","src":"resources/base/media/checkmark_calendar_fill.svg","styles":{"width":20,"height":20,"objectFit":"contain","flexShrink":0,"fillColor":"#FF563D99"}},{"id":"__layout__left__body","component":"Column","children":["left_body"],"itemMargin":0,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"left_body","component":"Column","children":["left_body_row0","left_body_row1"],"itemMargin":2,"styles":{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"center","flexShrink":1}},{"id":"left_body_row0","component":"Row","children":["left_body_row0_label","left_body_row0_value"],"itemMargin":8,"styles":{"width":"matchParent","height":18,"alignItems":"bottom","justifyContent":"spaceBetween","flexShrink":0}},{"id":"left_body_row0_label","component":"Text","content":"俯卧撑","styles":{"height":18,"fontSize":12,"fontWeight":500,"maxLines":1,"flexShrink":0,"fontColor":"#99563D99","textOverflow":"clip"}},{"id":"left_body_row0_value","component":"Text","content":"10个","styles":{"height":18,"fontSize":12,"fontWeight":500,"textAlign":"end","maxLines":1,"flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1,"fontColor":"#FF563D99","textOverflow":"clip"}},{"id":"left_body_row1","component":"Row","children":["left_body_row1_label","left_body_row1_value"],"itemMargin":8,"styles":{"width":"matchParent","height":18,"alignItems":"bottom","justifyContent":"spaceBetween","flexShrink":0}},{"id":"left_body_row1_label","component":"Text","content":"深蹲","styles":{"height":18,"fontSize":12,"fontWeight":500,"maxLines":1,"flexShrink":0,"fontColor":"#99563D99","textOverflow":"clip"}},{"id":"left_body_row1_value","component":"Text","content":"20个","styles":{"height":18,"fontSize":12,"fontWeight":500,"textAlign":"end","maxLines":1,"flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1,"fontColor":"#FF563D99","textOverflow":"clip"}},{"id":"left_action","component":"Row","children":["left_action_icon","left_action_text"],"onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Health","uri":"huaweischeme://healthapp/home/sport?sportType=2"}}],"itemMargin":8,"styles":{"height":36,"borderRadius":30,"padding":0,"flexShrink":0,"width":"matchParent","backgroundColor":"#33563D99","justifyContent":"center","alignItems":"center"}},{"id":"left_action_icon","component":"Image","src":"resources/base/media/figure_run.svg","styles":{"width":20,"height":20,"objectFit":"contain","flexShrink":0,"fillColor":"#FF563D99"}},{"id":"left_action_text","component":"Text","content":"去锻炼","styles":{"maxWidth":96,"height":17,"fontSize":14,"fontWeight":500,"textAlign":"center","maxLines":1,"flexShrink":0,"fontColor":"#FF563D99","textOverflow":"clip"}},{"id":"right","component":"Column","children":["__layout__right__sub"],"styles":{"height":"matchParent","layoutWeight":1,"padding":8,"borderRadius":16,"clip":true,"backgroundColor":"#99FFFFFF"},"itemMargin":0},{"id":"__layout__right__sub","component":"Column","children":["right_title","__layout__right__body"],"itemMargin":6,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":110.0}},{"id":"right_title","component":"Row","children":["right_title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"right_title_title","component":"Text","content":"今日运动","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#99563D99"}},{"id":"__layout__right__body","component":"Column","children":["right_body"],"itemMargin":0,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"end","layoutWeight":1}},{"id":"right_body","component":"Column","children":["right_body_row0","right_body_row1","right_body_row2"],"itemMargin":2,"styles":{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"center","flexShrink":1}},{"id":"right_body_row0","component":"Row","children":["right_body_row0_label","right_body_row0_value"],"itemMargin":8,"styles":{"width":"matchParent","height":16,"alignItems":"top","justifyContent":"spaceBetween","flexShrink":0}},{"id":"right_body_row0_label","component":"Text","content":"步数","styles":{"height":16,"fontSize":10,"fontWeight":500,"maxLines":1,"flexShrink":0,"fontColor":"#99563D99","textOverflow":"clip"}},{"id":"right_body_row0_value","component":"Text","content":"{{ ${/data/healthSport/dailySteps} + '步' }}","styles":{"height":16,"fontSize":10,"fontWeight":500,"textAlign":"end","maxLines":1,"flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1,"fontColor":"#FF563D99","textOverflow":"clip"}},{"id":"right_body_row1","component":"Row","children":["right_body_row1_label","right_body_row1_value"],"itemMargin":8,"styles":{"width":"matchParent","height":16,"alignItems":"top","justifyContent":"spaceBetween","flexShrink":0}},{"id":"right_body_row1_label","component":"Text","content":"热量","styles":{"height":16,"fontSize":10,"fontWeight":500,"maxLines":1,"flexShrink":0,"fontColor":"#99563D99","textOverflow":"clip"}},{"id":"right_body_row1_value","component":"Text","content":"{{ ${/data/healthSport/dailyTotalCaloriesText} }}","styles":{"height":16,"fontSize":10,"fontWeight":500,"textAlign":"end","maxLines":1,"flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1,"fontColor":"#FF563D99","textOverflow":"clip"}},{"id":"right_body_row2","component":"Row","children":["right_body_row2_label","right_body_row2_value"],"itemMargin":8,"styles":{"width":"matchParent","height":16,"alignItems":"top","justifyContent":"spaceBetween","flexShrink":0}},{"id":"right_body_row2_label","component":"Text","content":"开合跳","styles":{"height":16,"fontSize":10,"fontWeight":500,"maxLines":1,"flexShrink":0,"fontColor":"#99563D99","textOverflow":"clip"}},{"id":"right_body_row2_value","component":"Text","content":"30个","styles":{"height":16,"fontSize":10,"fontWeight":500,"textAlign":"end","maxLines":1,"flexShrink":1,"constraintSize":{"minWidth":0},"layoutWeight":1,"fontColor":"#FF563D99","textOverflow":"clip"}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"data":{"healthSport":{"dailySteps":6200,"dailyTotalCaloriesText":"420 千卡"}}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "做一张每日锻炼打卡卡片，每天锻炼计划：10个俯卧撑、20个深蹲、30个开合跳。展示当天运动健康数据（步数、热量消耗），提醒每天坚持锻炼打卡。本轮卡片静态内容（用作展示的外部事实）：每天锻炼计划：俯卧撑10个、深蹲20个、开合跳30个，每天坚持打卡锻炼。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.health.sport",
+      "description": "打开华为运动健康应用的锻炼Tab页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "healthSport": {
+        "dailySteps": {
+          "type": "integer",
+          "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+          "sampleValue": 6200
+        },
+        "dailyTotalCaloriesText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+          "sampleValue": "420 千卡"
+        },
+        "dailyDistanceText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总距离文本，端侧已根据数值大小换算并包含“米”或“公里”单位；展示时不得再次追加距离单位。例如“5.42 公里”或“755 米”。",
+          "sampleValue": "4.60 公里"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.checkmark_calendar_fill",
+      "src": "resources/base/media/checkmark_calendar_fill.svg",
+      "description": "样式：默认黑色的单色实心日历图标，内部叠加对勾并通过镂空表现细节，原始尺寸为 24×24，支持通过 fillColor 与卡片配色统一；适用：已完成日程、日程或计划确认、签到、待办完成、任务或运动打卡与健康计划。"
+    },
+    {
+      "id": "asset.figure_run",
+      "src": "resources/base/media/figure_run.svg",
+      "description": "样式：跑步人物图标，默认黑色，图形为人体奔跑动作侧视轮廓；适用：运动记录、跑步锻炼追踪、步数统计。"
+    },
+    {
+      "id": "asset.flame_fill",
+      "src": "resources/base/media/flame_fill.svg",
+      "description": "样式：默认黑色的单色实心火焰图标；适用：运动热量消耗、燃烧、火焰或加热状态。"
+    }
+  ]
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "GetHealthAndSportSummary"
+  ],
+  "event": [
+    {
+      "id": "event.open.health.sport",
+      "description": "打开华为运动健康应用的锻炼Tab页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+      }
+    }
+  ],
+  "asset": [
+    "asset.checkmark_calendar_fill",
+    "asset.figure_run",
+    "asset.flame_fill"
+  ]
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/dailyDistanceText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.sport",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.checkmark_calendar_fill",
+    "asset.figure_run",
+    "asset.flame_fill"
+  ]
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "ede24034-b062-48bd-8b0d-3c905a304fac",
+  "createdAt": 1793952300547
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"W-split-panels"},["left","right"]]
+["left","Region",{"variant":"title-content-action"},["left_title","left_body","left_action"]]
+["left_title","SingleLineTitle",{"title":"每天坚持打卡锻炼","icon":"resources/base/media/checkmark_calendar_fill.svg","fontSize":12}]
+["left_body","TableText",{"items":[{"label":"俯卧撑","value":"10个"},{"label":"深蹲","value":"20个"}],"fontSize":12}]
+["left_action","PillButton",{"label":"去锻炼","icon":"resources/base/media/figure_run.svg","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Health","uri":"huaweischeme://healthapp/home/sport?sportType=2"}}]}]
+["right","Region",{"variant":"title-content"},["right_title","right_body"]]
+["right_title","SingleLineTitle",{"title":"今日运动","fontSize":12}]
+["right_body","TableText",{"items":[{"label":"步数","value":"{{ ${/data/healthSport/dailySteps} + '步' }}"},{"label":"热量","value":{"path":"/data/healthSport/dailyTotalCaloriesText"}},{"label":"开合跳","value":"30个"}],"fontSize":10}]
+["/data/healthSport/dailySteps",6200]
+["/data/healthSport/dailyTotalCaloriesText","420 千卡"]
+```
+```request
+{
+  "content": {
+    "size": "2x4",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL10P 7.0.0.111",
+    "candidateAssetIds": [
+      "asset.checkmark_calendar_fill",
+      "asset.figure_run",
+      "asset.flame_fill"
+    ],
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.health.sport",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          }
+        }
+      }
+    ],
+    "bundleName": "com.huawei.genui",
+    "description": "每天坚持锻炼，打卡记录",
+    "userQuery": "做一张每日锻炼打卡卡片，每天锻炼计划：10个俯卧撑、20个深蹲、30个开合跳。展示当天运动健康数据（步数、热量消耗），提醒每天坚持锻炼打卡。本轮卡片静态内容（用作展示的外部事实）：每天锻炼计划：俯卧撑10个、深蹲20个、开合跳30个，每天坚持打卡锻炼。",
+    "title": "每日锻炼打卡",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {
+          "targetDayOffset": 0
+        },
+        "writeResultTo": "/data/healthSport",
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyTotalCaloriesText",
+          "/dailyDistanceText"
+        ]
+      }
+    ]
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261101120523686"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q489-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0",
+  "size": "2x4",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "candidateAssetIds": [
+    "asset.checkmark_calendar_fill",
+    "asset.figure_run",
+    "asset.flame_fill"
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.sport",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    }
+  ],
+  "bundleName": "com.huawei.genui",
+  "description": "每天坚持锻炼，打卡记录",
+  "userQuery": "做一张每日锻炼打卡卡片，每天锻炼计划：10个俯卧撑、20个深蹲、30个开合跳。展示当天运动健康数据（步数、热量消耗），提醒每天坚持锻炼打卡。本轮卡片静态内容（用作展示的外部事实）：每天锻炼计划：俯卧撑10个、深蹲20个、开合跳30个，每天坚持打卡锻炼。",
+  "title": "每日锻炼打卡",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/dailyDistanceText"
+      ]
+    }
+  ]
+}
+```
+```repair-1
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":\"每天坚持打卡锻炼\",\"icon\":\"resources/base/media/checkmark_calendar_fill.svg\",\"fontSize\":12}]\n[\"left_body\",\"TableText\",{\"items\":[{\"label\":\"俯卧撑\",\"value\":\"10个\"},{\"label\":\"深蹲\",\"value\":\"20个\"},{\"label\":\"开合跳\",\"value\":\"30个\"}],\"fontSize\":10}]\n[\"left_action\",\"PillButton\",{\"label\":\"去锻炼\",\"icon\":\"resources/base/media/figure_run.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Health\",\"uri\":\"huaweischeme://healthapp/home/sport?sportType=2\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_body\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"今日运动\",\"fontSize\":12}]\n[\"right_body\",\"TableText\",{\"items\":[{\"label\":\"步数\",\"value\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\"},{\"label\":\"热量\",\"value\":{\"path\":\"/data/healthSport/dailyTotalCaloriesText\"}}],\"fontSize\":12}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/healthSport/dailySteps\",6200]\n[\"/data/healthSport/dailyTotalCaloriesText\",\"420 千卡\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component left: vertical layout requires at least 120vp within 110vp; it overflows by 10vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__left__sub=120vp+margin(0vp), gaps=0vp.",
+      "compactDiagnostics": [
+        {
+          "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+          "validationClass": "semantic",
+          "category": "layout",
+          "severity": "error",
+          "message": "component left: vertical layout requires at least 120vp within 110vp; it overflows by 10vp. Occupancy: __layout__left__sub=120vp+margin(0vp), gaps=0vp.",
+          "legacyMessage": "component left: vertical layout requires at least 120vp within 110vp; it overflows by 10vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__left__sub=120vp+margin(0vp), gaps=0vp.",
+          "expected": {
+            "maximumHeight": 110.0,
+            "heightTolerance": 2.0,
+            "preserveFixedDesignSizes": true,
+            "preserveRequiredTextAndActions": true,
+            "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+          },
+          "actual": {
+            "minimumRequiredHeight": 120.0,
+            "overflow": 10.0,
+            "occupancy": "__layout__left__sub=120vp+margin(0vp), gaps=0vp"
+          },
+          "evidenceSource": "expanded",
+          "componentId": "left",
+          "sourceLine": 2,
+          "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+        }
+      ]
+    },
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component __layout__left__sub: vertical layout requires at least 120vp within 110vp; it overflows by 10vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_title=20vp+margin(0vp), __layout__left__body=52vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp.",
+      "compactDiagnostics": [
+        {
+          "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+          "validationClass": "semantic",
+          "category": "layout",
+          "severity": "error",
+          "message": "component __layout__left__sub: vertical layout requires at least 120vp within 110vp; it overflows by 10vp. Occupancy: left_title=20vp+margin(0vp), __layout__left__body=52vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp.",
+          "legacyMessage": "component __layout__left__sub: vertical layout requires at least 120vp within 110vp; it overflows by 10vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_title=20vp+margin(0vp), __layout__left__body=52vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp.",
+          "expected": {
+            "maximumHeight": 110.0,
+            "heightTolerance": 2.0,
+            "preserveFixedDesignSizes": true,
+            "preserveRequiredTextAndActions": true,
+            "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+          },
+          "actual": {
+            "minimumRequiredHeight": 120.0,
+            "overflow": 10.0,
+            "occupancy": "left_title=20vp+margin(0vp), __layout__left__body=52vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp"
+          },
+          "evidenceSource": "expanded",
+          "componentId": "left",
+          "sourceLine": 2,
+          "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+        }
+      ]
+    },
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component __layout__left__body: vertical layout requires at least 52vp within 42vp; it overflows by 10vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_body=52vp+margin(0vp), gaps=0vp.",
+      "compactDiagnostics": [
+        {
+          "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+          "validationClass": "semantic",
+          "category": "layout",
+          "severity": "error",
+          "message": "component __layout__left__body: vertical layout requires at least 52vp within 42vp; it overflows by 10vp. Occupancy: left_body=52vp+margin(0vp), gaps=0vp.",
+          "legacyMessage": "component __layout__left__body: vertical layout requires at least 52vp within 42vp; it overflows by 10vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_body=52vp+margin(0vp), gaps=0vp.",
+          "expected": {
+            "maximumHeight": 42.0,
+            "heightTolerance": 2.0,
+            "preserveFixedDesignSizes": true,
+            "preserveRequiredTextAndActions": true,
+            "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+          },
+          "actual": {
+            "minimumRequiredHeight": 52.0,
+            "overflow": 10.0,
+            "occupancy": "left_body=52vp+margin(0vp), gaps=0vp"
+          },
+          "evidenceSource": "expanded",
+          "componentId": "left",
+          "sourceLine": 2,
+          "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+        }
+      ]
+    },
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component left_body: vertical layout requires at least 52vp within 42vp; it overflows by 10vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_body_row0=16vp+margin(0vp), left_body_row1=16vp+margin(0vp), left_body_row2=16vp+margin(0vp), gaps=4vp.",
+      "compactDiagnostics": [
+        {
+          "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+          "validationClass": "semantic",
+          "category": "layout",
+          "severity": "error",
+          "message": "component left_body: vertical layout requires at least 52vp within 42vp; it overflows by 10vp. Occupancy: left_body_row0=16vp+margin(0vp), left_body_row1=16vp+margin(0vp), left_body_row2=16vp+margin(0vp), gaps=4vp.",
+          "legacyMessage": "component left_body: vertical layout requires at least 52vp within 42vp; it overflows by 10vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_body_row0=16vp+margin(0vp), left_body_row1=16vp+margin(0vp), left_body_row2=16vp+margin(0vp), gaps=4vp.",
+          "expected": {
+            "maximumHeight": 42.0,
+            "heightTolerance": 2.0,
+            "preserveFixedDesignSizes": true,
+            "preserveRequiredTextAndActions": true,
+            "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。"
+          },
+          "actual": {
+            "minimumRequiredHeight": 52.0,
+            "overflow": 10.0,
+            "occupancy": "left_body_row0=16vp+margin(0vp), left_body_row1=16vp+margin(0vp), left_body_row2=16vp+margin(0vp), gaps=4vp"
+          },
+          "evidenceSource": "expanded",
+          "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。"
+        }
+      ]
+    }
+  ]
+}
+```
+```repair-2
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":\"每天坚持打卡锻炼\",\"icon\":\"resources/base/media/checkmark_calendar_fill.svg\",\"fontSize\":12}]\n[\"left_body\",\"TableText\",{\"items\":[{\"label\":\"俯卧撑\",\"value\":\"10个\"},{\"label\":\"深蹲\",\"value\":\"20个\"}],\"fontSize\":12}]\n[\"left_action\",\"PillButton\",{\"label\":\"去锻炼\",\"icon\":\"resources/base/media/figure_run.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Health\",\"uri\":\"huaweischeme://healthapp/home/sport?sportType=2\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_body\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"今日运动\",\"fontSize\":12}]\n[\"right_body\",\"TableText\",{\"items\":[{\"label\":\"步数\",\"value\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\"},{\"label\":\"热量\",\"value\":{\"path\":\"/data/healthSport/dailyTotalCaloriesText\"}},{\"label\":\"开合跳\",\"value\":\"30个\"}],\"fontSize\":10}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/healthSport/dailySteps\",6200]\n[\"/data/healthSport/dailyTotalCaloriesText\",\"420 千卡\"]",
+  "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Row\",\"children\":[\"left\",\"right\"],\"itemMargin\":12,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":12,\"borderRadius\":20,\"clip\":true,\"alignItems\":\"center\",\"justifyContent\":\"start\"}},{\"id\":\"left\",\"component\":\"Column\",\"children\":[\"__layout__left__sub\"],\"styles\":{\"height\":\"matchParent\",\"layoutWeight\":1,\"padding\":8,\"borderRadius\":16,\"clip\":true,\"backgroundColor\":\"@theme:panel/1\"},\"itemMargin\":0},{\"id\":\"__layout__left__sub\",\"component\":\"Column\",\"children\":[\"left_title\",\"__layout__left__body\",\"left_action\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":110.0}},{\"id\":\"left_title\",\"component\":\"Row\",\"children\":[\"left_title_title\",\"left_title_icon\"],\"styles\":{\"width\":\"matchParent\",\"height\":20,\"flexShrink\":0,\"justifyContent\":\"spaceBetween\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"left_title_title\",\"component\":\"Text\",\"content\":\"每天坚持打卡锻炼\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":1,\"width\":\"wrapContent\",\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0},\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"left_title_icon\",\"component\":\"Image\",\"src\":\"resources/base/media/checkmark_calendar_fill.svg\",\"styles\":{\"width\":20,\"height\":20,\"objectFit\":\"contain\",\"flexShrink\":0,\"fillColor\":\"@theme:graphicPrimary/1\"}},{\"id\":\"__layout__left__body\",\"component\":\"Column\",\"children\":[\"left_body\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":1}},{\"id\":\"left_body\",\"component\":\"Column\",\"children\":[\"left_body_row0\",\"left_body_row1\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"flexShrink\":1}},{\"id\":\"left_body_row0\",\"component\":\"Row\",\"children\":[\"left_body_row0_label\",\"left_body_row0_value\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":18,\"alignItems\":\"bottom\",\"justifyContent\":\"spaceBetween\",\"flexShrink\":0}},{\"id\":\"left_body_row0_label\",\"component\":\"Text\",\"content\":\"俯卧撑\",\"styles\":{\"height\":18,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"left_body_row0_value\",\"component\":\"Text\",\"content\":\"10个\",\"styles\":{\"height\":18,\"fontSize\":12,\"fontWeight\":500,\"textAlign\":\"end\",\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"left_body_row1\",\"component\":\"Row\",\"children\":[\"left_body_row1_label\",\"left_body_row1_value\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":18,\"alignItems\":\"bottom\",\"justifyContent\":\"spaceBetween\",\"flexShrink\":0}},{\"id\":\"left_body_row1_label\",\"component\":\"Text\",\"content\":\"深蹲\",\"styles\":{\"height\":18,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"left_body_row1_value\",\"component\":\"Text\",\"content\":\"20个\",\"styles\":{\"height\":18,\"fontSize\":12,\"fontWeight\":500,\"textAlign\":\"end\",\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"left_action\",\"component\":\"Row\",\"children\":[\"left_action_icon\",\"left_action_text\"],\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Health\",\"uri\":\"huaweischeme://healthapp/home/sport?sportType=2\"}}],\"itemMargin\":8,\"styles\":{\"height\":36,\"borderRadius\":30,\"padding\":0,\"flexShrink\":0,\"width\":\"matchParent\",\"backgroundColor\":\"@theme:componentSecondary/1\",\"justifyContent\":\"center\",\"alignItems\":\"center\"}},{\"id\":\"left_action_icon\",\"component\":\"Image\",\"src\":\"resources/base/media/figure_run.svg\",\"styles\":{\"width\":20,\"height\":20,\"objectFit\":\"contain\",\"flexShrink\":0,\"fillColor\":\"@theme:primary/1\"}},{\"id\":\"left_action_text\",\"component\":\"Text\",\"content\":\"去锻炼\",\"styles\":{\"maxWidth\":96,\"height\":17,\"fontSize\":14,\"fontWeight\":500,\"textAlign\":\"center\",\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"right\",\"component\":\"Column\",\"children\":[\"__layout__right__sub\"],\"styles\":{\"height\":\"matchParent\",\"layoutWeight\":1,\"padding\":8,\"borderRadius\":16,\"clip\":true,\"backgroundColor\":\"@theme:panel/1\"},\"itemMargin\":0},{\"id\":\"__layout__right__sub\",\"component\":\"Column\",\"children\":[\"right_title\",\"__layout__right__body\"],\"itemMargin\":6,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"layoutWeight\":110.0}},{\"id\":\"right_title\",\"component\":\"Row\",\"children\":[\"right_title_title\"],\"styles\":{\"width\":\"matchParent\",\"height\":12,\"flexShrink\":0,\"justifyContent\":\"start\",\"alignItems\":\"center\"},\"itemMargin\":0},{\"id\":\"right_title_title\",\"component\":\"Text\",\"content\":\"今日运动\",\"styles\":{\"fontSize\":12,\"fontWeight\":400,\"lineHeight\":1,\"textAlign\":\"start\",\"maxLines\":1,\"flexShrink\":0,\"width\":\"matchParent\",\"fontColor\":\"@theme:secondary/1\"}},{\"id\":\"__layout__right__body\",\"component\":\"Column\",\"children\":[\"right_body\"],\"itemMargin\":0,\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"end\",\"layoutWeight\":1}},{\"id\":\"right_body\",\"component\":\"Column\",\"children\":[\"right_body_row0\",\"right_body_row1\",\"right_body_row2\"],\"itemMargin\":2,\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"flexShrink\":1}},{\"id\":\"right_body_row0\",\"component\":\"Row\",\"children\":[\"right_body_row0_label\",\"right_body_row0_value\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":16,\"alignItems\":\"top\",\"justifyContent\":\"spaceBetween\",\"flexShrink\":0}},{\"id\":\"right_body_row0_label\",\"component\":\"Text\",\"content\":\"步数\",\"styles\":{\"height\":16,\"fontSize\":10,\"fontWeight\":500,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_row0_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\",\"styles\":{\"height\":16,\"fontSize\":10,\"fontWeight\":500,\"textAlign\":\"end\",\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_row1\",\"component\":\"Row\",\"children\":[\"right_body_row1_label\",\"right_body_row1_value\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":16,\"alignItems\":\"top\",\"justifyContent\":\"spaceBetween\",\"flexShrink\":0}},{\"id\":\"right_body_row1_label\",\"component\":\"Text\",\"content\":\"热量\",\"styles\":{\"height\":16,\"fontSize\":10,\"fontWeight\":500,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_row1_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/dailyTotalCaloriesText} }}\",\"styles\":{\"height\":16,\"fontSize\":10,\"fontWeight\":500,\"textAlign\":\"end\",\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_row2\",\"component\":\"Row\",\"children\":[\"right_body_row2_label\",\"right_body_row2_value\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":16,\"alignItems\":\"top\",\"justifyContent\":\"spaceBetween\",\"flexShrink\":0}},{\"id\":\"right_body_row2_label\",\"component\":\"Text\",\"content\":\"开合跳\",\"styles\":{\"height\":16,\"fontSize\":10,\"fontWeight\":500,\"maxLines\":1,\"flexShrink\":0,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"clip\"}},{\"id\":\"right_body_row2_value\",\"component\":\"Text\",\"content\":\"30个\",\"styles\":{\"height\":16,\"fontSize\":10,\"fontWeight\":500,\"textAlign\":\"end\",\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"layoutWeight\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"healthSport\":{\"dailySteps\":6200,\"dailyTotalCaloriesText\":\"420 千卡\"}}}}}",
+  "validationErrors": []
+}
+```

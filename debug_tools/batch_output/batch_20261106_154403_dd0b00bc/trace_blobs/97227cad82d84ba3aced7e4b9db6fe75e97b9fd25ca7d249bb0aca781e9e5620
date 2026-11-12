@@ -1,0 +1,16 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:2672a844add0d905442293f0056b66e58d193ef1bc2c961a15e423054a957b0a",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_70e2ba2d-6783-4595-963d-5e83c04d2499.md",
+  "effectiveCapabilities": {
+    "asset": [],
+    "data": [
+      "GetCurrentTime"
+    ],
+    "event": []
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x2"
+}

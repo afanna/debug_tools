@@ -1,0 +1,207 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "duplicateFacts": [
+      {
+        "actualVisibleCount": 2,
+        "dataId": "/data/time/currentDate",
+        "expectedVisibleCount": 1,
+        "occurrences": [
+          {
+            "componentId": "title",
+            "componentType": "SingleLineTitle",
+            "property": "title"
+          },
+          {
+            "componentId": "details",
+            "componentType": "SummaryList",
+            "property": "items[0]"
+          }
+        ],
+        "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+        "requiredDisplayPositions": [],
+        "requirement": "当前公历日期"
+      },
+      {
+        "actualVisibleCount": 2,
+        "dataId": "/data/time/dayOfWeek",
+        "expectedVisibleCount": 1,
+        "occurrences": [
+          {
+            "componentId": "primary",
+            "componentType": "EmphasisText",
+            "property": "mainText"
+          },
+          {
+            "componentId": "details",
+            "componentType": "SummaryList",
+            "property": "items[1]"
+          }
+        ],
+        "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+        "requiredDisplayPositions": [
+          {
+            "componentId": "primary",
+            "componentType": "EmphasisText",
+            "property": "mainText"
+          }
+        ],
+        "requirement": "星期"
+      },
+      {
+        "actualVisibleCount": 2,
+        "dataId": "/data/time/lunarDate",
+        "expectedVisibleCount": 1,
+        "occurrences": [
+          {
+            "componentId": "primary",
+            "componentType": "EmphasisText",
+            "property": "secondaryText"
+          },
+          {
+            "componentId": "details",
+            "componentType": "SummaryList",
+            "property": "items[2]"
+          }
+        ],
+        "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+        "requiredDisplayPositions": [],
+        "requirement": "农历日期"
+      }
+    ],
+    "message": "Plan fact is displayed more than once in visible DSL: 当前公历日期 (/data/time/currentDate); expected 1, got 2; occurrences: title (SingleLineTitle).title, details (SummaryList).items[0].",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is displayed more than once in visible DSL: 星期 (/data/time/dayOfWeek); expected 1, got 2; occurrences: primary (EmphasisText).mainText, details (SummaryList).items[1].",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is displayed more than once in visible DSL: 农历日期 (/data/time/lunarDate); expected 1, got 2; occurrences: primary (EmphasisText).secondaryText, details (SummaryList).items[2].",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredHeight": 164.0,
+          "occupancy": "title=20vp+margin(0vp), __layout__root__body=138vp+margin(0vp), gaps=6vp",
+          "overflow": 38.0
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+        "componentId": "root",
+        "evidenceSource": "expanded",
+        "expected": {
+          "heightTolerance": 2.0,
+          "maximumHeight": 126.0,
+          "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+          "preserveFixedDesignSizes": true,
+          "preserveRequiredTextAndActions": true
+        },
+        "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+        "legacyMessage": "component root: vertical layout requires at least 164vp within 126vp; it overflows by 38vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: title=20vp+margin(0vp), __layout__root__body=138vp+margin(0vp), gaps=6vp.",
+        "message": "component root: vertical layout requires at least 164vp within 126vp; it overflows by 38vp. Occupancy: title=20vp+margin(0vp), __layout__root__body=138vp+margin(0vp), gaps=6vp.",
+        "severity": "error",
+        "sourceLine": 1,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component root: vertical layout requires at least 164vp within 126vp; it overflows by 38vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: title=20vp+margin(0vp), __layout__root__body=138vp+margin(0vp), gaps=6vp.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredHeight": 138.0,
+          "occupancy": "__layout__root__primary=36vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp",
+          "overflow": 38.0
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+        "componentId": "root",
+        "evidenceSource": "expanded",
+        "expected": {
+          "heightTolerance": 2.0,
+          "maximumHeight": 100.0,
+          "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+          "preserveFixedDesignSizes": true,
+          "preserveRequiredTextAndActions": true
+        },
+        "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+        "legacyMessage": "component __layout__root__body: vertical layout requires at least 138vp within 100vp; it overflows by 38vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp.",
+        "message": "component __layout__root__body: vertical layout requires at least 138vp within 100vp; it overflows by 38vp. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp.",
+        "severity": "error",
+        "sourceLine": 1,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component __layout__root__body: vertical layout requires at least 138vp within 100vp; it overflows by 38vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__details=102vp+margin(0vp), gaps=0vp.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredHeight": 102.0,
+          "occupancy": "details=102vp+margin(0vp), gaps=0vp",
+          "overflow": 38.0
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+        "componentId": "root",
+        "evidenceSource": "expanded",
+        "expected": {
+          "heightTolerance": 2.0,
+          "maximumHeight": 64.0,
+          "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+          "preserveFixedDesignSizes": true,
+          "preserveRequiredTextAndActions": true
+        },
+        "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+        "legacyMessage": "component __layout__root__details: vertical layout requires at least 102vp within 64vp; it overflows by 38vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details=102vp+margin(0vp), gaps=0vp.",
+        "message": "component __layout__root__details: vertical layout requires at least 102vp within 64vp; it overflows by 38vp. Occupancy: details=102vp+margin(0vp), gaps=0vp.",
+        "severity": "error",
+        "sourceLine": 1,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component __layout__root__details: vertical layout requires at least 102vp within 64vp; it overflows by 38vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details=102vp+margin(0vp), gaps=0vp.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredHeight": 100.0,
+          "occupancy": "details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp",
+          "overflow": 36.0
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+        "evidenceSource": "expanded",
+        "expected": {
+          "heightTolerance": 2.0,
+          "maximumHeight": 64.0,
+          "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+          "preserveFixedDesignSizes": true,
+          "preserveRequiredTextAndActions": true
+        },
+        "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+        "legacyMessage": "component details: vertical layout requires at least 100vp within 64vp; it overflows by 36vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp.",
+        "message": "component details: vertical layout requires at least 100vp within 64vp; it overflows by 36vp. Occupancy: details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp.",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component details: vertical layout requires at least 100vp within 64vp; it overflows by 36vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: details_item0=28vp+margin(0vp), details_item1=28vp+margin(0vp), details_item2=28vp+margin(0vp), gaps=16vp.",
+    "stage": "validation"
+  }
+]

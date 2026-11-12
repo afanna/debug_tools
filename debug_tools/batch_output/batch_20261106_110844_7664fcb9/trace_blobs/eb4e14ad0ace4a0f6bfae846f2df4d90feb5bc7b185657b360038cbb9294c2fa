@@ -1,0 +1,5 @@
+[
+  "info_required[0] must choose exactly one of dataId, actionId, or text.",
+  "info_required[6] must choose exactly one of dataId, actionId, or text.",
+  "info_required[7] must choose exactly one of dataId, actionId, or text."
+]

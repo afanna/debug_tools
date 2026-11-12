@@ -1,0 +1,21 @@
+{
+  "id": "Q371",
+  "fileName": "Q371.json",
+  "title": "天气",
+  "query": "在桌面添加一个天气小部件，展示当前天气和未来天气预报",
+  "size": "2x2",
+  "sequence": 41,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7117.15,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 96,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7105.57,
+  "uid": "batch-7664fcb9-00041-000",
+  "finalAttempt": 0
+}

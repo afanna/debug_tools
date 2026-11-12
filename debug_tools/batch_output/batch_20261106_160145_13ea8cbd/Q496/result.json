@@ -1,0 +1,21 @@
+{
+  "id": "Q496",
+  "fileName": "Q496.json",
+  "title": "时钟",
+  "query": "添加时钟挂件到桌面，显示当前时间、日期、星期，点击可打开闹钟应用。",
+  "size": "2x2",
+  "sequence": 84,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7485.3,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 107,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7462.7,
+  "uid": "batch-13ea8cbd-00084-000",
+  "finalAttempt": 0
+}

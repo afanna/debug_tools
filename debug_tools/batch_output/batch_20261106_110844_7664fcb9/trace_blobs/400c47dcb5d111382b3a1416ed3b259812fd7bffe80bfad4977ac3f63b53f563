@@ -1,0 +1,10 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [
+    "未来天气预报第三日星期",
+    "未来天气预报第三日天气现象",
+    "未来天气预报第三日温度范围"
+  ],
+  "warnings": []
+}

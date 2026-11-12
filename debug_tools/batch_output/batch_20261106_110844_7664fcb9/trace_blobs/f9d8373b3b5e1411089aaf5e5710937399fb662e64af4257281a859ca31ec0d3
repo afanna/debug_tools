@@ -1,0 +1,148 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "forecastDays": 1
+      },
+      "candidateOutputFields": [
+        "/current/temperatureText",
+        "/current/condition"
+      ],
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/batterySOCText",
+        "/chargingStatusDesc",
+        "/batterySOC"
+      ],
+      "capabilityId": "GetPhoneBatteryInfo",
+      "writeResultTo": "/data/phoneBattery"
+    },
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/exerciseTypeName",
+        "/exerciseDurationText"
+      ],
+      "capabilityId": "GetHealthAndSportSummary",
+      "writeResultTo": "/data/healthSport"
+    },
+    {
+      "arguments": {
+        "limit": 3
+      },
+      "candidateOutputFields": [
+        "/rankingList/0/appName",
+        "/rankingList/0/powerText",
+        "/rankingList/1/appName",
+        "/rankingList/1/powerText",
+        "/rankingList/2/appName",
+        "/rankingList/2/powerText"
+      ],
+      "capabilityId": "GetAppPowerConsumptionRanking",
+      "writeResultTo": "/data/powerRanking"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "forecastDays": 1
+        },
+        "candidateOutputFields": [
+          "/current/temperatureText",
+          "/current/condition"
+        ],
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      },
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc",
+          "/batterySOC"
+        ],
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/phoneBattery"
+      },
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyTotalCaloriesText",
+          "/exerciseTypeName",
+          "/exerciseDurationText"
+        ],
+        "capabilityId": "GetHealthAndSportSummary",
+        "writeResultTo": "/data/healthSport"
+      },
+      {
+        "arguments": {
+          "limit": 3
+        },
+        "candidateOutputFields": [
+          "/rankingList/0/appName",
+          "/rankingList/0/powerText",
+          "/rankingList/1/appName",
+          "/rankingList/1/powerText",
+          "/rankingList/2/appName",
+          "/rankingList/2/powerText"
+        ],
+        "capabilityId": "GetAppPowerConsumptionRanking",
+        "writeResultTo": "/data/powerRanking"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "聚合天气、电量、健康和耗电排行的桌面卡片",
+    "size": "2x4",
+    "title": "桌面聚合卡片",
+    "uid": "batch-7664fcb9-00030-000",
+    "userQuery": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。"
+  },
+  "description": "聚合天气、电量、健康和耗电排行的桌面卡片",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261030100829720"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q351-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x4",
+  "title": "桌面聚合卡片",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00030-000"
+    }
+  },
+  "userQuery": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。",
+  "utterance": {
+    "original": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。",
+    "type": "text"
+  },
+  "version": "1.0"
+}

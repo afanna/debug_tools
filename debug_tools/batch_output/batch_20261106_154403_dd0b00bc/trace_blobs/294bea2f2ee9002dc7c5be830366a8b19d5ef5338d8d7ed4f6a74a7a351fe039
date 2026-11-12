@@ -1,0 +1,6 @@
+```genui
+["root","Layout",{"layout":"W-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"工资表"}]
+["body","SingleLineList",{"items":[{"text":"姓名","assist":"…"},{"text":"基本工资","assist":"…"},{"text":"奖金","assist":"…"},{"text":"补贴","assist":"…"},{"text":"扣款","assist":"…"},{"text":"实发工资","assist":"…"}]}]
+["/state/ready",true]
+```

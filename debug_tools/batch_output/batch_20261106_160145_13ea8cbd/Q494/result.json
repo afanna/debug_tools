@@ -1,0 +1,21 @@
+{
+  "id": "Q494",
+  "fileName": "Q494.json",
+  "title": "张定豪成绩",
+  "query": "把当前屏幕上六（3）班成绩表中张定豪同学的成绩做成一张小卡片保存下来。本轮卡片静态内容（用作展示的外部事实）：张定豪，语文87分，数学98分，英语98.75分。",
+  "size": "2x4",
+  "sequence": 82,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 9183.0,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 85,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 9168.35,
+  "uid": "batch-13ea8cbd-00082-000",
+  "finalAttempt": 0
+}

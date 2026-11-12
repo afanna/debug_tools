@@ -1,0 +1,26 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "writeResultTo": "/data/health",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/dailyDistanceText",
+        "/sleepScore",
+        "/sleepStatus",
+        "/nightSleepDurationText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": [
+    "asset.ic_sportsHealth_bule",
+    "asset.figure_run",
+    "asset.flame_fill",
+    "asset.moon_z_fill_1"
+  ]
+}

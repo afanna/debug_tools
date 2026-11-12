@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"W-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"一周四练分化安排","icon":"asset.figure_run"}]
+["body","SingleLineList",{"items":[{"text":"周一","assist":"胸"},{"text":"周三","assist":"背"},{"text":"周五","assist":"腿"},{"text":"周日","assist":"肩"},{"text":"每次训练","assist":"热身·主项·拉伸"}]}]
+["/state/ready",true]

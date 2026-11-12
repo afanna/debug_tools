@@ -1,0 +1,65 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "pickup",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3
+      ],
+      "id": "code",
+      "identity": "取件码",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 123,
+          "start": 79
+        }
+      ],
+      "sourceText": "取件码34-4-2009，取件地点新天地华庭3座2单元妈妈驿站，提醒时间明天下午6:10"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 123,
+          "start": 79
+        }
+      ],
+      "sourceText": "取件码34-4-2009，取件地点新天地华庭3座2单元妈妈驿站，提醒时间明天下午6:10"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 123,
+          "start": 79
+        }
+      ],
+      "sourceText": "取件码34-4-2009，取件地点新天地华庭3座2单元妈妈驿站，提醒时间明天下午6:10"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 123,
+          "start": 79
+        }
+      ],
+      "sourceText": "取件码34-4-2009，取件地点新天地华庭3座2单元妈妈驿站，提醒时间明天下午6:10"
+    }
+  ],
+  "version": "static-content-v1"
+}

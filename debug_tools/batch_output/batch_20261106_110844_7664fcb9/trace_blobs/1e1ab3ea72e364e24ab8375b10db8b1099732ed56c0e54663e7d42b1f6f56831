@@ -1,0 +1,212 @@
+[
+  {
+    "capacityFits": [
+      {
+        "actualItemCount": 3,
+        "actualRowCount": 3,
+        "componentId": "support",
+        "componentType": "SecondaryBody",
+        "directlyFits": [
+          {
+            "itemIndex": 0,
+            "planFacts": [
+              {
+                "factIndex": 3,
+                "priority": "must",
+                "requirement": "第一天天气预报：星期、天气现象、温度范围"
+              }
+            ],
+            "value": {
+              "maxLines": 2,
+              "value": "{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/condition} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"
+            }
+          },
+          {
+            "itemIndex": 1,
+            "planFacts": [
+              {
+                "factIndex": 4,
+                "priority": "must",
+                "requirement": "第二天天气预报：星期、天气现象、温度范围"
+              }
+            ],
+            "value": {
+              "maxLines": 2,
+              "value": "{{ ${/data/weather/daily/1/weekday} + ' ' + ${/data/weather/daily/1/condition} + ' ' + ${/data/weather/daily/1/temperatureRangeText} }}"
+            }
+          }
+        ],
+        "doesNotFit": [
+          {
+            "itemIndex": 2,
+            "planFacts": [
+              {
+                "factIndex": 5,
+                "priority": "must",
+                "requirement": "第三天天气预报：星期、天气现象、温度范围"
+              }
+            ],
+            "value": {
+              "maxLines": 2,
+              "value": "{{ ${/data/weather/daily/2/weekday} + ' ' + ${/data/weather/daily/2/condition} + ' ' + ${/data/weather/daily/2/temperatureRangeText} }}"
+            }
+          }
+        ],
+        "effectiveColumnCount": 1,
+        "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+        "maxRetainedRowCount": 2,
+        "overflowFactCount": 1,
+        "overflowItemCount": 1,
+        "parentAvailableHeight": 126.0,
+        "parentId": "root",
+        "rowHeights": [
+          24.0,
+          24.0,
+          24.0
+        ],
+        "rowSpacing": 2.0,
+        "scope": "currentComponentItemsOnly"
+      }
+    ],
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredHeight": 146.0,
+          "occupancy": "title=20vp+margin(0vp), __layout__root__body=120vp+margin(0vp), gaps=6vp",
+          "overflow": 20.0,
+          "secondaryBodyFits": [
+            {
+              "actualRowCount": 3,
+              "componentId": "support",
+              "directlyFitsItemIndexes": [
+                0,
+                1
+              ],
+              "doesNotFitItemIndexes": [
+                2
+              ],
+              "effectiveColumnCount": 1,
+              "maxRetainedRowCount": 2,
+              "parentAvailableHeight": 126.0,
+              "parentId": "root",
+              "rowHeights": [
+                24.0,
+                24.0,
+                24.0
+              ],
+              "rowSpacing": 2.0
+            }
+          ]
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+        "componentId": "root",
+        "evidenceSource": "expanded",
+        "expected": {
+          "heightTolerance": 2.0,
+          "maximumHeight": 126.0,
+          "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+          "preserveFixedDesignSizes": true,
+          "preserveRequiredTextAndActions": true
+        },
+        "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+        "legacyMessage": "component root: vertical layout requires at least 146vp within 126vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: title=20vp+margin(0vp), __layout__root__body=120vp+margin(0vp), gaps=6vp.",
+        "message": "component root: vertical layout requires at least 146vp within 126vp; it overflows by 20vp. Occupancy: title=20vp+margin(0vp), __layout__root__body=120vp+margin(0vp), gaps=6vp.",
+        "severity": "error",
+        "sourceLine": 1,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component root: vertical layout requires at least 146vp within 126vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: title=20vp+margin(0vp), __layout__root__body=120vp+margin(0vp), gaps=6vp.",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredHeight": 120.0,
+          "occupancy": "__layout__root__primary=36vp+margin(0vp), __layout__root__support=76vp+margin(0vp), gaps=8vp",
+          "overflow": 20.0,
+          "secondaryBodyFits": [
+            {
+              "actualRowCount": 3,
+              "componentId": "support",
+              "directlyFitsItemIndexes": [
+                0,
+                1
+              ],
+              "doesNotFitItemIndexes": [
+                2
+              ],
+              "effectiveColumnCount": 1,
+              "maxRetainedRowCount": 2,
+              "parentAvailableHeight": 100.0,
+              "parentId": "__layout__root__body",
+              "rowHeights": [
+                24.0,
+                24.0,
+                24.0
+              ],
+              "rowSpacing": 2.0
+            }
+          ]
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+        "componentId": "root",
+        "evidenceSource": "expanded",
+        "expected": {
+          "heightTolerance": 2.0,
+          "maximumHeight": 100.0,
+          "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+          "preserveFixedDesignSizes": true,
+          "preserveRequiredTextAndActions": true
+        },
+        "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+        "legacyMessage": "component __layout__root__body: vertical layout requires at least 120vp within 100vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__support=76vp+margin(0vp), gaps=8vp.",
+        "message": "component __layout__root__body: vertical layout requires at least 120vp within 100vp; it overflows by 20vp. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__support=76vp+margin(0vp), gaps=8vp.",
+        "severity": "error",
+        "sourceLine": 1,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component __layout__root__body: vertical layout requires at least 120vp within 100vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__root__primary=36vp+margin(0vp), __layout__root__support=76vp+margin(0vp), gaps=8vp.",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "minimumRequiredHeight": 36.0,
+          "occupancy": "primary=36vp+margin(0vp), gaps=0vp",
+          "overflow": 20.0
+        },
+        "category": "layout",
+        "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+        "componentId": "root",
+        "evidenceSource": "expanded",
+        "expected": {
+          "heightTolerance": 2.0,
+          "maximumHeight": 16.0,
+          "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+          "preserveFixedDesignSizes": true,
+          "preserveRequiredTextAndActions": true
+        },
+        "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+        "legacyMessage": "component __layout__root__primary: vertical layout requires at least 36vp within 16vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: primary=36vp+margin(0vp), gaps=0vp.",
+        "message": "component __layout__root__primary: vertical layout requires at least 36vp within 16vp; it overflows by 20vp. Occupancy: primary=36vp+margin(0vp), gaps=0vp.",
+        "severity": "error",
+        "sourceLine": 1,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component __layout__root__primary: vertical layout requires at least 36vp within 16vp; it overflows by 20vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: primary=36vp+margin(0vp), gaps=0vp.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

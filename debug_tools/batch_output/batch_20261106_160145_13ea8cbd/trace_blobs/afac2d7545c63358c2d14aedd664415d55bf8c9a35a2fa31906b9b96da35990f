@@ -1,0 +1,60 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "duplicateActions": [
+      {
+        "actionId": "event.viewCalendarEvent",
+        "actualVisibleCount": 2,
+        "expectedVisibleCount": 1,
+        "factIndex": 4,
+        "occurrences": [
+          {
+            "componentId": "upper",
+            "componentType": "CardButton",
+            "fixedRequiredSlot": true,
+            "onClick": [
+              {
+                "args": {
+                  "intentName": "ViewCalendarEvent",
+                  "params": {
+                    "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+                  }
+                },
+                "call": "clickToIntent"
+              }
+            ],
+            "parentId": "root",
+            "parentRole": "W-content-side-slots.upper",
+            "property": "onClick"
+          },
+          {
+            "componentId": "lower",
+            "componentType": "CardButton",
+            "fixedRequiredSlot": true,
+            "onClick": [
+              {
+                "args": {
+                  "intentName": "ViewCalendarEvent",
+                  "params": {
+                    "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+                  }
+                },
+                "call": "clickToIntent"
+              }
+            ],
+            "parentId": "root",
+            "parentRole": "W-content-side-slots.lower",
+            "property": "onClick"
+          }
+        ]
+      }
+    ],
+    "message": "Plan action is displayed more than once in visible DSL: event.viewCalendarEvent; expected 1, got 2; occurrences: upper, lower.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "component content_primary_main: text width overflow; complete text '郑州新郑国际机场→厦门高崎国际机场' at original font 18 needs about 306vp in one line, but its allocated text area is 132vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight.",
+    "stage": "validation"
+  }
+]

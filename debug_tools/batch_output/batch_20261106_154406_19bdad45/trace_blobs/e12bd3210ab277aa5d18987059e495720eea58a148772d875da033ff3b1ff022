@@ -1,0 +1,40 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.emoji_time"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TextBlock"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "展示当前公历日期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TextBlock"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "展示当前星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TextBlock"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "展示当前农历日期"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom"
+  ]
+}

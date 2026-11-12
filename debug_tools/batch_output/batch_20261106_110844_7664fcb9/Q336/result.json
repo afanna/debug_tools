@@ -1,0 +1,21 @@
+{
+  "id": "Q336",
+  "fileName": "Q336.json",
+  "title": "天气日程",
+  "query": "将天气和日历叠加在一张卡片上，上半部分展示当前位置未来3天的天气预报（星期、天气现象、温度范围），下半部分展示最近的日程安排（日程标题、开始时间），逐条叠加展示。",
+  "size": "2x4",
+  "sequence": 24,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 6032.43,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 79,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 6024.67,
+  "uid": "batch-7664fcb9-00024-000",
+  "finalAttempt": 0
+}

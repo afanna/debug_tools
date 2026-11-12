@@ -1,0 +1,21 @@
+{
+  "id": "Q195",
+  "fileName": "Q195.json",
+  "title": "天气和日程",
+  "query": "生成天气和日程卡片",
+  "size": "2x4",
+  "sequence": 8,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5372.71,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 74,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5344.63,
+  "uid": "batch-0360acc5-00008-000",
+  "finalAttempt": 0
+}

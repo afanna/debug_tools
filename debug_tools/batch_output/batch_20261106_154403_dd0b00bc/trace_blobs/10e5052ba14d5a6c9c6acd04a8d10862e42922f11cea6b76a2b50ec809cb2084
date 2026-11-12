@@ -1,0 +1,10 @@
+{
+  "__layout__left__body": "left",
+  "__layout__left__details": "left",
+  "__layout__left__primary": "left",
+  "__layout__left__sub": "left",
+  "__layout__right__sub": "right",
+  "left": "left",
+  "right": "right",
+  "root": "root"
+}

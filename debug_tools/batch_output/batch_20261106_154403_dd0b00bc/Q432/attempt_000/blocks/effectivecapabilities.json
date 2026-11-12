@@ -1,0 +1,23 @@
+{
+  "data": [
+    "GetCurrentTime",
+    "GetCalendarEvents"
+  ],
+  "event": [
+    {
+      "id": "event.viewCalendarEvent",
+      "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "ViewCalendarEvent",
+        "params": {
+          "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+        }
+      }
+    }
+  ],
+  "asset": [
+    "asset.emoji_calendar2",
+    "asset.ic_calender"
+  ]
+}

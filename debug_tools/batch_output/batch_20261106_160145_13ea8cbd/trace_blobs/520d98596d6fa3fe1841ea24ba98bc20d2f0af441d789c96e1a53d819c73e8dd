@@ -1,0 +1,54 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.clock.alarm",
+        "assetId": "asset.alarm_fill_1"
+      }
+    ],
+    "title": {
+      "assetId": "asset.emoji_time"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期（年-月-日）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/time/lunarDate",
+      "priority": "must",
+      "requirement": "当前农历日期"
+    },
+    {
+      "actionId": "event.open.clock.alarm",
+      "componentHints": [
+        "CardButton",
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "打开华为时钟应用（闹钟）"
+    }
+  ],
+  "layoutHints": [
+    "W-content-side-slots"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q465",
+  "fileName": "Q465.json",
+  "title": "天气",
+  "query": "把天气放在桌面上应用",
+  "size": "2x2",
+  "sequence": 53,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5657.29,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5609.02,
+  "uid": "batch-13ea8cbd-00053-000",
+  "finalAttempt": 0
+}

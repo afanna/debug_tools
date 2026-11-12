@@ -1,0 +1,12 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {},
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": []
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": []
+}

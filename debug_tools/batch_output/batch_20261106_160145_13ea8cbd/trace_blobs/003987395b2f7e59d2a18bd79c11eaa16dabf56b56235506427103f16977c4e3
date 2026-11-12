@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"距离爸爸生日的天数","priority":"must","dataId":"/data/countdown/countdownDays","componentHints":["DataDisplay","EmphasizedData"]}],"layoutHints":["S-center"],"assetAssignments":{"actions":[],"title":{"assetId":"asset.cake_fill","reason":"生日蛋糕图标语义匹配爸爸生日倒数主题"}}}}

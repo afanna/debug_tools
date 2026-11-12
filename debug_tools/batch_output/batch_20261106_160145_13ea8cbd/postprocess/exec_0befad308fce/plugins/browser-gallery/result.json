@@ -1,0 +1,22 @@
+{
+  "id": "browser-gallery",
+  "name": "浏览器渲染画廊",
+  "version": "3.0.0",
+  "apiVersion": "batch-postprocess-v2",
+  "status": "failed",
+  "config": {},
+  "sampleCount": 0,
+  "counts": {
+    "skipped": 0,
+    "partial": 0,
+    "success": 0,
+    "failed": 0
+  },
+  "datasetResult": {
+    "status": "failed",
+    "summary": "ValueError: 后处理插件依赖执行失败: browser-capture",
+    "facts": {},
+    "artifactCount": 0
+  },
+  "error": "ValueError: 后处理插件依赖执行失败: browser-capture"
+}

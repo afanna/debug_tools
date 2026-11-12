@@ -1,0 +1,1 @@
+{"name": "submit_card_plan", "arguments": {"info_required": [{"requirement": "距离11月13日早上7点的倒计时天数", "priority": "must", "dataId": "/data/countdown/countdownDays", "componentHints": ["DataDisplay", "EmphasizedData"]}], "layoutHints": ["S-center"]}}

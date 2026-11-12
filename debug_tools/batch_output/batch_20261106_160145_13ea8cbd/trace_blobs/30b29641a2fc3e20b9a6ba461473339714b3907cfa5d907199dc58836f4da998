@@ -1,0 +1,6 @@
+{
+  "errors": [],
+  "warnings": [
+    "W-content-side-slots 混合固定槽建议将 InfoBlock 放在 CardButton 上方；当前顺序仍允许转换。"
+  ]
+}

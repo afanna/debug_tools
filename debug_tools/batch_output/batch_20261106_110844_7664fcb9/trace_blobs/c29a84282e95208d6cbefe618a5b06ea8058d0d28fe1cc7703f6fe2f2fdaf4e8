@@ -1,0 +1,32 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:655a3a84e38b68351ba2a5da3c4ae2a7d955d94b667867b86f4e0650d3b35615",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_191bd301-ac92-4bf9-97ea-1ff49cfbf337.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.calendar_fill",
+      "asset.ic_calender"
+    ],
+    "data": [
+      "GetCurrentTime",
+      "GetCalendarEvents"
+    ],
+    "event": [
+      {
+        "args": {
+          "intentName": "ViewCalendarEvent",
+          "params": {
+            "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+          }
+        },
+        "call": "clickToIntent",
+        "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+        "id": "event.viewCalendarEvent"
+      }
+    ]
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x4"
+}

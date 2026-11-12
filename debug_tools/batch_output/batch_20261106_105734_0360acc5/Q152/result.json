@@ -1,0 +1,21 @@
+{
+  "id": "Q152",
+  "fileName": "Q152.json",
+  "title": "今日天气",
+  "query": "生成一个天气卡片，包含今天的温度和是否下雨，背景是绿色的",
+  "size": "2x2",
+  "sequence": 6,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4099.9,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4080.62,
+  "uid": "batch-0360acc5-00006-000",
+  "finalAttempt": 0
+}

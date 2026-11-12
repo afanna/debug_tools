@@ -1,0 +1,21 @@
+{
+  "id": "Q425",
+  "fileName": "Q425.json",
+  "title": "时间",
+  "query": "在主界面上添加一个时间的卡片，显示当前时间、日期、星期和农历信息。",
+  "size": "2x2",
+  "sequence": 13,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4570.97,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4560.64,
+  "uid": "batch-13ea8cbd-00013-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,81 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3
+      ],
+      "id": "core",
+      "identity": null,
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 38,
+          "start": 18
+        },
+        {
+          "end": 141,
+          "start": 121
+        }
+      ],
+      "sourceText": "世人皆向外求爱，不知爱是向内修出的内丹。"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 38,
+          "start": 18
+        },
+        {
+          "end": 141,
+          "start": 121
+        }
+      ],
+      "sourceText": "世人皆向外求爱，不知爱是向内修出的内丹。"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 55,
+          "start": 38
+        },
+        {
+          "end": 158,
+          "start": 141
+        }
+      ],
+      "sourceText": "自己未曾炼成，给出的也只是半剂药。"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 100,
+          "start": 55
+        },
+        {
+          "end": 203,
+          "start": 158
+        }
+      ],
+      "sourceText": "先把自己活成一道光，黑暗自会循光而来——那才是真正的慈悲。渡人先渡己，自爱圆满，天地同尘。"
+    }
+  ],
+  "version": "static-content-v1"
+}

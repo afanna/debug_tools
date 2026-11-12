@@ -1,0 +1,21 @@
+{
+  "id": "Q420",
+  "fileName": "Q420.json",
+  "title": "充电卡片",
+  "query": "把步数添加到充电卡片，生成一张同时展示充电状态和今日步数的桌面卡片",
+  "size": "2x2",
+  "sequence": 8,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4585.39,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4575.12,
+  "uid": "batch-13ea8cbd-00008-000",
+  "finalAttempt": 0
+}

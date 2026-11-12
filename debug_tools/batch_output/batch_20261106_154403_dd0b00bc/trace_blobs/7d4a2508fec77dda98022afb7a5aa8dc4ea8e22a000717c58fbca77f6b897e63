@@ -1,0 +1,21 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:5591057a8f98a203af5f6e618692cbc9b0a0876301bd8b4d5b78b3db80dfe698",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_ae78c279-f236-482a-94ac-f6eba724d19a.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.calendar_fill"
+    ],
+    "data": [],
+    "event": []
+  },
+  "errorCode": "",
+  "omittedRequirements": [
+    "11月7日 PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会",
+    "11月12日 AI CPP特训营（上海）",
+    "11月13日及以后的全部会议、学习班与赞助活动记录"
+  ],
+  "removedCapabilities": [],
+  "status": "degraded",
+  "suggestSize": "2x2"
+}

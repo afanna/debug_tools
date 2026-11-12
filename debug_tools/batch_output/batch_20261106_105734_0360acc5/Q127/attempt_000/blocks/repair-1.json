@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"left_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_support\",\"SecondaryBody\",{\"items\":[{\"label\":\"区县\",\"value\":{\"path\":\"/data/weather/location/districtName\"}},{\"label\":\"空气质量\",\"value\":{\"path\":\"/data/weather/current/airQuality\"}}],\"separator\":\" | \",\"fontSize\":14}]\n[\"left_action\",\"PillButton\",{\"label\":\"查看天气\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_primary\",\"left_support\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"体感与湿度\",\"fontSize\":12}]\n[\"right_body\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"体感温度\",\"value\":\"{{ ${/data/weather/current/feelsLikeC} + '℃' }}\"},{\"label\":\"相对湿度\",\"value\":\"{{ ${/data/weather/current/humidityPercent} + '%' }}\"}],\"fontSize\":12}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/location/districtName\",\"西湖区\"]\n[\"/data/weather/location/prefectureName\",\"杭州市\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/current/feelsLikeC\",31]\n[\"/data/weather/current/humidityPercent\",68]\n[\"/data/weather/current/airQuality\",\"良\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "语义布局不符合合同：节点 left：子组件数量应为 [3]，实际为 4；Region.variant='title-content-action' 要求的 children 角色为 [title, content, PillButton]。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+    }
+  ]
+}

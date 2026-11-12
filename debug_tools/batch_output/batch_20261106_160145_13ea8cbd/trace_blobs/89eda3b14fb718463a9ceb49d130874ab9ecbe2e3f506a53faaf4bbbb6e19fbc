@@ -1,0 +1,17 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 右耳电量百分比 (/data/earphone/rightBatteryLevel).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 右耳充电状态 (/data/earphone/rightChargingStatusDesc).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 耳机名称.",
+    "stage": "validation"
+  }
+]

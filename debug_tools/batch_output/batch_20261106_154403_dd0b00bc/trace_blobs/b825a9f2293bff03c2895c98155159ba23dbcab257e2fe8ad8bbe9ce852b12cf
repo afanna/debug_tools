@@ -1,0 +1,32 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 tips 缺少完整展示文字 '主食换粗粮，蛋白选鱼虾豆腐，多蒸煮凉拌'；须在合法且可达的标题或正文条目内完整展示，不跨不同对象拼接说明。",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 周三至周日具体三餐安排未在卡面展示.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 提醒中饮水2000-3000ml与加餐建议未展示.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item0_secondaryText: static text exceeds its 131.64vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item1_secondaryText: static text exceeds its 114vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

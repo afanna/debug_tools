@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "语义布局不符合合同：节点 left：子组件数量应为 [3]，实际为 4；Region.variant='title-content-action' 要求的 children 角色为 [title, content, PillButton]。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "data": [
+    "GetCurrentTime",
+    "GetPhoneBatteryInfo",
+    "GetCalendarEvents",
+    "GetMemoData"
+  ],
+  "event": [],
+  "asset": []
+}

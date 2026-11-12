@@ -1,0 +1,4 @@
+["root","Column",{"width":"matchParent","height":"matchParent","padding":{"top":12.0,"bottom":12.0,"left":0,"right":0},"itemMargin":6.0,"borderRadius":20.0,"clip":true,"alignItems":"start","justifyContent":"start","_staticLayout":"S-static-content"},["__layout__root__static_body"]]
+["__layout__root__static_body","Column",{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"end","itemMargin":6.0,"padding":{"left":12.0,"right":12.0}},["body"]]
+["body","TextList",{"items":[{"primaryText":"樟村22栋","secondaryText":"取件地点"},{"primaryText":"9-4-0046","secondaryText":"取件码1"},{"primaryText":"9-2-0060","secondaryText":"取件码2"}]}]
+["/state/ready",true]

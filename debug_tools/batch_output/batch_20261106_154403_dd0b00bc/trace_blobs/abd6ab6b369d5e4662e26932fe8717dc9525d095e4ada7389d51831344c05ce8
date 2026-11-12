@@ -1,0 +1,9 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": [
+    "Plan static text is not fully visible in DSL: 展示航班号 FU6686 与航线郑州新郑国际机场→厦门高崎国际机场的行程标题.",
+    "Plan static text is not fully visible in DSL: 展示计划到港时间 2026-11-02 00:50."
+  ]
+}

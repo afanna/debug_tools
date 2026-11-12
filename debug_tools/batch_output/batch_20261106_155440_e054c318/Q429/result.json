@@ -1,0 +1,21 @@
+{
+  "id": "Q429",
+  "fileName": "Q429.json",
+  "title": "生日倒计时",
+  "query": "我的生日是农历腊月初一，帮我做一个生日倒计时卡片。本轮卡片静态内容（用作展示的外部事实）：我的生日是农历腊月初一，对应公历2027年1月8日。",
+  "size": "2x2",
+  "sequence": 18,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2045.4,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00018-000",
+  "finalAttempt": 0
+}

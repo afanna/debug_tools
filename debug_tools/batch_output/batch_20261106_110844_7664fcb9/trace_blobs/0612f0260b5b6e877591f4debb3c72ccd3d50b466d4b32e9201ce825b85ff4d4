@@ -1,0 +1,138 @@
+{
+  "appVersion": "11.7.8.372",
+  "assetCandidates": [
+    {
+      "description": "样式：浅灰渐变云朵内带深色感叹号的天气预警图标，原始尺寸为 24×24，SVG 矢量图（保留原色，禁止染色）保留渐变配色；适用：天气卡片中的气象预警提示，可结合 ViewWeather 输出的 alertLevel 字段展示，也可作为天气预警详情入口的辅助图标。不表示所有天气变化或空气质量异常；无预警时不应显示该图标，也不替代具体预警等级文案。",
+      "id": "asset.ic_weatherWarning",
+      "src": "resources/base/media/ic_weatherWarning.svg"
+    },
+    {
+      "description": "样式：蓝色纵向渐变圆形底上的白色电话听筒图标，原始尺寸为 20×20，SVG 矢量图（保留原色，禁止染色）需保留原始渐变配色，禁止染色；适用：拨号、联系人呼叫或电话快捷操作卡片，可配合 event.call.phone 跳转到指定号码的拨号界面。图标不表示正在通话、来电或联系人身份。",
+      "id": "asset.ic_call_bule",
+      "src": "resources/base/media/ic_call_bule.svg"
+    },
+    {
+      "description": "样式：黑色单色云朵图标，原始尺寸为 24×24，可随主题染成白色或黑色；选择：普通天气或天气详情需求的首选云朵图标。适用：天气卡片中配合 ViewWeather 的 current.condition 或 daily.condition 展示天气现象，也可与 event.open.weather 组成天气详情入口。图标仅表示天气主题，不代表晴、阴、雨等具体天气状态。",
+      "id": "asset.ic_weather_monochrome",
+      "src": "resources/base/media/ic_weather_monochrome.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "weather": {
+        "current": {
+          "alertLevel": {
+            "description": "预警信息。当前气象预警信息，例如'暴雨橙色预警'、'高温黄色预警'、'台风蓝色预警'。无预警时为空字符串。",
+            "sampleValue": "大风蓝色预警",
+            "type": "string"
+          },
+          "condition": {
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云",
+            "type": "string"
+          },
+          "temperatureText": {
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃",
+            "type": "string"
+          }
+        },
+        "daily": [
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "date": {
+              "description": "预报日期，来源于 day_time。以端侧本次刷新日期为基准，daily[0]为明天日期，daily[1]为后天日期，不包含今天。",
+              "sampleValue": "2026-08-06",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            },
+            "weekday": {
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四",
+              "type": "string"
+            }
+          },
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "date": {
+              "description": "预报日期，来源于 day_time。以端侧本次刷新日期为基准，daily[0]为明天日期，daily[1]为后天日期，不包含今天。",
+              "sampleValue": "2026-08-06",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            },
+            "weekday": {
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四",
+              "type": "string"
+            }
+          },
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "date": {
+              "description": "预报日期，来源于 day_time。以端侧本次刷新日期为基准，daily[0]为明天日期，daily[1]为后天日期，不包含今天。",
+              "sampleValue": "2026-08-06",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            },
+            "weekday": {
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四",
+              "type": "string"
+            }
+          }
+        ],
+        "location": {
+          "districtName": {
+            "description": "区或县名称",
+            "sampleValue": "青浦区",
+            "type": "string"
+          },
+          "prefectureName": {
+            "description": "城市名称",
+            "sampleValue": "上海市",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "intentName": "CallPhone",
+        "params": {
+          "phoneNumber": "15251852906"
+        }
+      },
+      "call": "clickToApi",
+      "description": "点击跳转至华为电话应用中指定号码的拨号界面。",
+      "id": "event.call.phone"
+    }
+  ],
+  "size": "2x4",
+  "userQuery": "生成一个在异常天气时能对家人进行关怀提醒的卡片，卡片上显示天气和温度的变化，具备天气预警功能，有一个可以直接联系家人的电话按钮，电话号码是15251852906"
+}

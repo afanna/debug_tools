@@ -1,0 +1,21 @@
+{
+  "id": "Q392",
+  "fileName": "Q392.json",
+  "title": "天气时钟",
+  "query": "将天气时钟添加到桌面，显示当前天气和当前时间。",
+  "size": "2x2",
+  "sequence": 53,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3220.07,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3213.51,
+  "uid": "batch-7664fcb9-00053-000",
+  "finalAttempt": 0
+}

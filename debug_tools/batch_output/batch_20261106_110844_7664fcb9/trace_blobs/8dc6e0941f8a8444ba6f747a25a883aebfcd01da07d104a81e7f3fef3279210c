@@ -1,0 +1,29 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "property": "icon",
+          "src": "resources/base/media/earphone_case_16644.svg"
+        },
+        "category": "effective",
+        "code": "COMPACT_ASSET_NOT_ALLOWED",
+        "componentId": "primary",
+        "evidenceSource": "validation",
+        "expected": {
+          "allowedSources": []
+        },
+        "fixHint": "从本轮素材候选中选择与原意相符的资源路径，修正对应素材属性；不要编造路径或用网络地址替代。",
+        "legacyMessage": "component primary.props.icon: asset must use an original src from TaskSpec.assetCandidates.",
+        "message": "组件 primary 的 icon 引用了本轮候选范围以外的素材。",
+        "propertyPath": "/icon",
+        "severity": "error",
+        "sourceLine": 3,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component primary.props.icon: asset must use an original src from TaskSpec.assetCandidates.",
+    "stage": "validation"
+  }
+]

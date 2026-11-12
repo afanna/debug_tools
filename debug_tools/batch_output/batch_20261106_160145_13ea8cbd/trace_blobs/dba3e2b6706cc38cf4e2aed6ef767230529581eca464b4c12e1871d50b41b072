@@ -1,0 +1,67 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "TextBlock"
+      ],
+      "dataId": "/data/countdown0/countdownDays",
+      "priority": "must",
+      "requirement": "奶奶生日的倒计时天数"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "TextBlock"
+      ],
+      "dataId": "/data/countdown1/countdownDays",
+      "priority": "must",
+      "requirement": "爷爷生日的倒计时天数"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "TextBlock"
+      ],
+      "dataId": "/data/countdown2/countdownDays",
+      "priority": "must",
+      "requirement": "爸爸生日的倒计时天数"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "TextBlock"
+      ],
+      "dataId": "/data/countdown3/countdownDays",
+      "priority": "must",
+      "requirement": "妈妈生日的倒计时天数"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "TextBlock"
+      ],
+      "dataId": "/data/countdown4/countdownDays",
+      "priority": "must",
+      "requirement": "崔景会生日的倒计时天数"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "TextBlock"
+      ],
+      "dataId": "/data/countdown5/countdownDays",
+      "priority": "must",
+      "requirement": "父母结婚纪念日的倒计时天数"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom"
+  ]
+}

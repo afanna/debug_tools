@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-content-side-slots\",\"orientation\":\"content-left\"},[\"content\",\"upper\",\"lower\"]]\n[\"content_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"content_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":\"{{ ${/data/weather/current/condition} + ' | ' + ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}\",\"fontSize\":18}]\n[\"content\",\"Region\",{\"variant\":\"title-content\"},[\"content_title\",\"content_primary\"]]\n[\"upper\",\"InfoBlock\",{\"variant\":\"slot\",\"primaryText\":{\"path\":\"/data/calendar/events/0/title\"},\"secondaryText\":\"{{ ${/data/calendar/events/0/dtStart} }}\"}]\n[\"lower\",\"CardButton\",{\"label\":\"查看天气\",\"icon\":\"resources/base/media/ic_weather_monochrome.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/daily/0/weekday\",\"星期四\"]\n[\"/data/weather/daily/0/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/calendar/events/0/title\",\"项目例会\"]\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/data/calendar/events/1/title\",\"项目例会\"]\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component content_primary_secondary: text width overflow; complete text '多云 | 星期四 25℃ / 32℃' at original font 12 needs about 150vp in one line, but its allocated text area is 132vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight."
+    }
+  ]
+}

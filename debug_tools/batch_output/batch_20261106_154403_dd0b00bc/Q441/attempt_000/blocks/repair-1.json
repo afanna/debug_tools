@@ -1,0 +1,26 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-static-content\"},[\"header\",\"body\"]]\n[\"header\",\"SingleLineTitle\",{\"title\":\"向内修爱\"}]\n[\"body\",\"EmphasisText\",{\"mainText\":\"爱是向内修出的内丹；自己未曾炼成，给出的只是半剂药\",\"secondaryText\":\"先把自己活成一道光，黑暗自会循光而来\"}]\n[\"/state/ready\",true]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "COMPACT_STATIC_TEXT_CAPACITY: body: body.mainText 完整文字需要 5 行，126vp 区域仅允许 2 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。",
+      "compactDiagnostics": [
+        {
+          "code": "COMPACT_STATIC_TEXT_CAPACITY",
+          "validationClass": "semantic",
+          "category": "layout",
+          "severity": "error",
+          "message": "COMPACT_STATIC_TEXT_CAPACITY: body: body.mainText 完整文字需要 5 行，126vp 区域仅允许 2 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。",
+          "legacyMessage": "COMPACT_STATIC_TEXT_CAPACITY: body: body.mainText 完整文字需要 5 行，126vp 区域仅允许 2 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。",
+          "expected": {
+            "completeTextFits": true,
+            "fontSizeUnchanged": true
+          },
+          "fixHint": "按组件固定文字规格及实际可用宽度修复被指出的字段；保持已接受文字与对象归属，必要时更换静态语义组件或重新分配主副字段；不修改字体、行高或固定间距，不用maxLines隐藏内容。"
+        }
+      ]
+    }
+  ]
+}

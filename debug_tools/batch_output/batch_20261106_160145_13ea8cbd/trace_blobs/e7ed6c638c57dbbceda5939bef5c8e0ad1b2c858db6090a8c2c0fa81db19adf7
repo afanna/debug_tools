@@ -1,0 +1,60 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "panel",
+      "identity": "算题面板",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "body",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "该面板为空白面板，用于书写算题",
+      "sourceTexts": [
+        "空白面板，用于书写算题。"
+      ],
+      "text": "空白面板，用于书写算题"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡共同主题：算题书写面板",
+      "sourceTexts": [
+        "空白面板，用于书写算题。"
+      ],
+      "text": "算题面板"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "content",
+  "selectionNotes": [
+    "单一对象说明，正文用EmphasisText承载空白面板用途",
+    "共同主题放header，正文保留对象本体说明",
+    "无动态数据需求，纯静态展示"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"W-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"算题面板\"}]\n[\"body\", \"EmphasisText\", {\"mainText\": \"空白面板，用于书写算题\"}]\n[\"/state/ready\", true]"
+}

@@ -1,0 +1,6 @@
+```genui
+["root","Layout",{"layout":"S-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"生日贺卡","icon":"asset.cake_fill"}]
+["body","EmphasisText",{"mainText":"祝沈大哥生日快乐"}]
+["/state/ready",true]
+```

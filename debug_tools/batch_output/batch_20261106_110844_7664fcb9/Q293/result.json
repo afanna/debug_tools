@@ -1,0 +1,21 @@
+{
+  "id": "Q293",
+  "fileName": "Q293.json",
+  "title": "日期卡片",
+  "query": "做一张桌面日期卡片，显示当前日期、星期和农历信息。",
+  "size": "2x2",
+  "sequence": 5,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4022.68,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4014.41,
+  "uid": "batch-7664fcb9-00005-000",
+  "finalAttempt": 0
+}

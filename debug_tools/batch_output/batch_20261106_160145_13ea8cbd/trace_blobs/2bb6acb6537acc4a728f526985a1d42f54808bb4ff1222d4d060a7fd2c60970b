@@ -1,0 +1,12 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 展示备忘录笔记标题（第二条） (/data/memo/notes/1/title).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "W-content-side-slots 混合固定槽建议将 InfoBlock 放在 CardButton 上方；当前顺序仍允许转换。",
+    "stage": "validation"
+  }
+]

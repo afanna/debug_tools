@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"距离2027年1月30日的倒计时天数（整数后追加“天”）","priority":"must","dataId":"/data/countdown/countdownDays","componentHints":["DataDisplay","EmphasizedData"]}],"layoutHints":["S-center"]}}

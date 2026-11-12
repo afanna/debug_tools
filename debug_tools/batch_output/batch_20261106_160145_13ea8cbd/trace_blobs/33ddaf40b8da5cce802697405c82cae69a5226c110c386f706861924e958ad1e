@@ -1,0 +1,112 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "pickup",
+      "identity": "樟村22栋",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "pkg_1",
+      "identity": "9-4-0046",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        5,
+        6
+      ],
+      "id": "pkg_2",
+      "identity": "9-2-0060",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 122,
+          "start": 82
+        }
+      ],
+      "sourceText": "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 122,
+          "start": 82
+        }
+      ],
+      "sourceText": "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 122,
+          "start": 82
+        }
+      ],
+      "sourceText": "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 122,
+          "start": 82
+        }
+      ],
+      "sourceText": "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+    },
+    {
+      "factIndex": 4,
+      "positions": [
+        {
+          "end": 122,
+          "start": 82
+        }
+      ],
+      "sourceText": "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+    },
+    {
+      "factIndex": 5,
+      "positions": [
+        {
+          "end": 122,
+          "start": 82
+        }
+      ],
+      "sourceText": "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+    },
+    {
+      "factIndex": 6,
+      "positions": [
+        {
+          "end": 122,
+          "start": 82
+        }
+      ],
+      "sourceText": "京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。"
+    }
+  ],
+  "version": "static-content-v1"
+}

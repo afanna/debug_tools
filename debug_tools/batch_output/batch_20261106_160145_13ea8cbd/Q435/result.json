@@ -1,0 +1,21 @@
+{
+  "id": "Q435",
+  "fileName": "Q435.json",
+  "title": "电池状态",
+  "query": "做一张手机电池电量卡片，显示当前电量百分比和充电状态，当手机充满电时播报充电完成。",
+  "size": "2x2",
+  "sequence": 23,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7233.86,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 117,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7220.38,
+  "uid": "batch-13ea8cbd-00023-000",
+  "finalAttempt": 0
+}

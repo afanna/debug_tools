@@ -1,0 +1,11 @@
+{
+  "errors": [
+    "COMPACT_STATIC_CORE_MISSING: 组 nov6 缺少完整展示文字 'PC镇江实地指导(镇江)'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "COMPACT_STATIC_CORE_MISSING: 组 nov7 缺少完整展示文字 'PC天坛学习班(北京)'；须在该对象或条目内恢复，不能从其它栏或note补足。"
+  ],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [
+    "11月12日及之后全部会议日程未展示"
+  ],
+  "warnings": []
+}

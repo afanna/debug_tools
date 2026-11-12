@@ -1,0 +1,21 @@
+{
+  "id": "Q384",
+  "fileName": "Q384.json",
+  "title": "北大街站",
+  "query": "做一张西安地铁北大街站的时间桌面卡片，显示当前日期、星期和农历信息。本轮卡片静态内容（用作展示的外部事实）：西安地铁北大街站。",
+  "size": "2x2",
+  "sequence": 48,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4205.48,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4194.0,
+  "uid": "batch-7664fcb9-00048-000",
+  "finalAttempt": 0
+}

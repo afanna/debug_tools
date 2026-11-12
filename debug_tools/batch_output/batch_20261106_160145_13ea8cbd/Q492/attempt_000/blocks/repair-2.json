@@ -1,0 +1,16 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-dual-info\"},[\"first\",\"second\"]]\n[\"first\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/todoCompletedCount\"},\"secondaryText\":\"已完成\"}]\n[\"second\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":{\"path\":\"/data/memo/todoPendingCount\"},\"secondaryText\":\"未完成\"}]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/todoPendingCount\",0]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_PLAN_COVERAGE_FAILED",
+      "message": "Plan action is missing from visible DSL: 点击打开备忘录查看打卡记录 (event.viewNote). Copy the complete call and args from the matching TaskSpec event candidate."
+    },
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "assetAssignments action 'event.viewNote' has no matching button component."
+    }
+  ]
+}

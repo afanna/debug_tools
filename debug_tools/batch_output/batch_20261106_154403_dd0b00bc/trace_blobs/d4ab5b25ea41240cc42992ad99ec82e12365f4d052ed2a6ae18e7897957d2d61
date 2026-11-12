@@ -1,0 +1,44 @@
+[
+  {
+    "actual": {
+      "availableHeight": null,
+      "dependentChildren": [
+        "primary"
+      ]
+    },
+    "category": "layout",
+    "code": "COMPACT_LAYOUT_HEIGHT_UNRESOLVED",
+    "componentId": "root",
+    "evidenceSource": "expanded",
+    "expected": {
+      "resolvedAvailableHeight": true
+    },
+    "fixHint": "先闭合承载列与祖先的高度关系；横排中的列需要填满高度时显式声明 height=matchParent 并确认祖先高度已确定，再扣除固定内容和间距，为伸缩区分配剩余高度并复算。保留事实、动作、字号和固定设计尺寸，不用裁剪或缩字掩盖溢出。",
+    "legacyMessage": "component __layout__root__primary: vertical layout has unresolved available height; children primary require parent height for matchParent or vertical weight allocation. Minimum content height does not prove that allocation fits.",
+    "message": "component __layout__root__primary: vertical layout has unresolved available height; children primary require parent height for matchParent or vertical weight allocation. Minimum content height does not prove that allocation fits.",
+    "severity": "error",
+    "sourceLine": 1,
+    "validationClass": "semantic"
+  },
+  {
+    "actual": {
+      "availableHeight": null,
+      "dependentChildren": [
+        "details"
+      ]
+    },
+    "category": "layout",
+    "code": "COMPACT_LAYOUT_HEIGHT_UNRESOLVED",
+    "componentId": "root",
+    "evidenceSource": "expanded",
+    "expected": {
+      "resolvedAvailableHeight": true
+    },
+    "fixHint": "先闭合承载列与祖先的高度关系；横排中的列需要填满高度时显式声明 height=matchParent 并确认祖先高度已确定，再扣除固定内容和间距，为伸缩区分配剩余高度并复算。保留事实、动作、字号和固定设计尺寸，不用裁剪或缩字掩盖溢出。",
+    "legacyMessage": "component __layout__root__details: vertical layout has unresolved available height; children details require parent height for matchParent or vertical weight allocation. Minimum content height does not prove that allocation fits.",
+    "message": "component __layout__root__details: vertical layout has unresolved available height; children details require parent height for matchParent or vertical weight allocation. Minimum content height does not prove that allocation fits.",
+    "severity": "error",
+    "sourceLine": 1,
+    "validationClass": "semantic"
+  }
+]

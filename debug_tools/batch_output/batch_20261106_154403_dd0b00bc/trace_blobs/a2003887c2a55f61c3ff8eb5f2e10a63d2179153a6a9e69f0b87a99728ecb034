@@ -1,0 +1,21 @@
+{
+  "category": "layout_capacity",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "0ad89b544a37017e",
+  "instruction": "此前布局已失败，本轮把结构、容量、事实、动作和素材作为同一重组问题处理，不要因错误类别切换退回单点修补。先按全部保留事实和完整动作计算各区预算，比较不同合法承载组合；放不下的旧堆叠不能只改ID、间距或包装层。仅在合同允许且不是用户必需标题时移除装饰标题；不缩固定字号，不削减事实或动作。随后一起复查树闭合、事实唯一可见、动作参数准确与入口可达、动作图标分配和横纵容量。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_structure",
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "5a052f5891bdbb55"
+  },
+  "noProgress": false,
+  "repairStrategy": "plan_guided_recompose",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

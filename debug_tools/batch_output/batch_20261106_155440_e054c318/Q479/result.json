@@ -1,0 +1,21 @@
+{
+  "id": "Q479",
+  "fileName": "Q479.json",
+  "title": "退休倒计时",
+  "query": "创建退休倒计时卡片，目标日期是 2034 年 9 月 30 日",
+  "size": "2x2",
+  "sequence": 69,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2050.77,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00069-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,45 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:2581c0da028246555ff5b048c803b0e1f90c022e92f2f001733cd5d4fc73e9a3",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_e620e6d7-fdea-4f58-9a34-571f97b8c502.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.moon_z_fill_1",
+      "asset.alarm_fill_1"
+    ],
+    "data": [
+      "GetHealthAndSportSummary"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/router/sleepDetail"
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为运动健康应用的睡眠详情页。",
+        "id": "event.open.health.sleep"
+      },
+      {
+        "args": {
+          "abilityName": "com.huawei.hmos.clock.phone",
+          "bundleName": "com.huawei.hmos.clock",
+          "intentName": "Clock",
+          "parameters": {
+            "tabActive": "ALARM_CLOCK_TAB"
+          },
+          "uri": ""
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为时钟应用，并显示闹钟这个tab页。",
+        "id": "event.open.clock.alarmTab"
+      }
+    ]
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x4"
+}

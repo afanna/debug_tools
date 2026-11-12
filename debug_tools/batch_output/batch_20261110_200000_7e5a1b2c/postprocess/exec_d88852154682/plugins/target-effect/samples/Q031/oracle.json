@@ -1,0 +1,32 @@
+{
+  "sampleId": "Q031",
+  "scenario": "repeat_week",
+  "timezone": "Asia/Shanghai",
+  "referenceDate": "2026-11-03",
+  "targetDate": "2026-11-04",
+  "expectedDays": 1,
+  "expectedRelationText": "还剩",
+  "expectedTargetDateText": "2026/11/04",
+  "writeResultTo": "/data/dateCounter",
+  "fields": [
+    "/days",
+    "/relationText",
+    "/targetDateText"
+  ],
+  "arguments": {
+    "targetDate": "2026-11-04",
+    "repeat": {
+      "unit": "week"
+    }
+  },
+  "gate": false,
+  "provenance": {
+    "targetDate": "explicit",
+    "days": "ambiguous",
+    "relationText": "ambiguous",
+    "targetDateText": "ambiguous"
+  },
+  "notes": [
+    "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+  ]
+}

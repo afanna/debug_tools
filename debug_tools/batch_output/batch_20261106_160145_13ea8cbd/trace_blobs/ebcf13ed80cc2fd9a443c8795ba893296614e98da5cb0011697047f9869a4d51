@@ -1,0 +1,116 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "mon",
+      "identity": "周一",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "tue",
+      "identity": "周二",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡共同主题：一周减脂食谱",
+      "sourceTexts": [
+        "📅 一周减脂食谱（周一至周日）"
+      ],
+      "text": "一周减脂食谱"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周一早中晚三餐安排",
+      "sourceTexts": [
+        "周一：\n早餐：燕麦粥 + 水煮蛋 + 凉拌黄瓜\n午餐：糙米饭 + 清蒸鱼 + 清炒西兰花\n晚餐：杂粮粥 + 手撕包菜 + 素炒豆腐"
+      ],
+      "text": "早餐燕麦粥、水煮蛋、凉拌黄瓜；午餐糙米饭、清蒸鱼、清炒西兰花；晚餐杂粮粥、手撕包菜、素炒豆腐"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "priority": "should",
+      "protectedTexts": [],
+      "requirement": "周一记录的状态提示",
+      "sourceTexts": [
+        "1. 主食换成粗粮（糙米、燕麦、玉米、红薯）\n2. 蛋白质选低脂的（鱼虾、去皮鸡肉、豆腐）"
+      ],
+      "text": "粗粮主食+低脂蛋白"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周二早中晚三餐安排",
+      "sourceTexts": [
+        "周二：\n早餐：全麦面包 + 脱脂牛奶 + 苹果\n午餐：红薯饭 + 炒鸡胸肉片 + 清炒菠菜\n晚餐：小米粥 + 清炒胡萝卜丝"
+      ],
+      "text": "早餐全麦面包、脱脂牛奶、苹果；午餐红薯饭、炒鸡胸肉片、清炒菠菜；晚餐小米粥、清炒胡萝卜丝"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "priority": "should",
+      "protectedTexts": [],
+      "requirement": "周二记录的状态提示",
+      "sourceTexts": [
+        "3. 烹饪方式多用蒸、煮、凉拌，少油炸"
+      ],
+      "text": "多蒸煮少油炸"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [
+    "周三至周日三餐具体安排未展示",
+    "部分关键提醒（饮水、加餐、少油炸等）未全部展示"
+  ],
+  "paletteFamily": "auto",
+  "presentationStyle": "records",
+  "selectionNotes": [
+    "一周七天三餐全部罗列远超2x4容量，按用户用途选择核心：整卡主题为减脂食谱一周安排",
+    "正文用TextList两条记录承载周一、周二三餐安排，保留早/午/晚完整菜品",
+    "关键提醒精简为共同说明放入列表字段承载",
+    "周三至周日及部分提醒作为独立补充省略"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"W-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"一周减脂食谱\"}]\n[\"body\", \"TextList\", {\"items\": [{\"primaryText\": \"周一 · 粗粮主食+低脂蛋白\", \"secondaryText\": \"早餐燕麦粥、水煮蛋、凉拌黄瓜；午餐糙米饭、清蒸鱼、清炒西兰花；晚餐杂粮粥、手撕包菜、素炒豆腐\"}, {\"primaryText\": \"周二 · 多蒸煮少油炸\", \"secondaryText\": \"早餐全麦面包、脱脂牛奶、苹果；午餐红薯饭、炒鸡胸肉片、清炒菠菜；晚餐小米粥、清炒胡萝卜丝\"}]}]\n[\"/state/ready\", true]",
+  "staticPresentationFeedback": [
+    "正式组件UX允许省略号，原候选仍可用；以下仅为完整文字展示压力，不是新增发布门禁或事实删减授权。请在既有Plan机会中核对必要信息的完整展示：\nCompact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_secondaryText 完整文字需要 2 行，252vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。"
+  ]
+}

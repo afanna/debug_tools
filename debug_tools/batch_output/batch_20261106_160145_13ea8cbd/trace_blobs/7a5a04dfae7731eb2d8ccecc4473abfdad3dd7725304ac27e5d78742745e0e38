@@ -1,0 +1,16 @@
+[
+  {
+    "actual": "{{ '天 | 2027年春节是2月6日' }}",
+    "category": "expression",
+    "code": "COMPACT_EXPRESSION_REFERENCE_MISSING",
+    "evidenceSource": "expanded",
+    "expected": {
+      "requiresReference": "${/json/pointer}",
+      "staticValueMustBePlain": true
+    },
+    "legacyMessage": "component content_supporting.props.content: expression has no ${/json/pointer} reference; use a plain static value instead.",
+    "message": "表达式中没有动态 JSON Pointer 引用。",
+    "severity": "error",
+    "validationClass": "syntax"
+  }
+]

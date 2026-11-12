@@ -1,0 +1,68 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.list_book_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/memo/noteCount",
+      "priority": "must",
+      "requirement": "展示笔记总数量"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/memo/todoTotalCount",
+      "priority": "must",
+      "requirement": "展示待办总数量"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/todoPendingCount",
+      "priority": "must",
+      "requirement": "展示未完成待办数量"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/todoCompletedCount",
+      "priority": "should",
+      "requirement": "展示已完成待办数量"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/notes/0/title",
+      "priority": "should",
+      "requirement": "展示首条笔记标题"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/memo/todos/0/title",
+      "priority": "should",
+      "requirement": "展示首条待办标题"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-title-dual-content"
+  ]
+}

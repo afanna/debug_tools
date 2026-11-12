@@ -1,0 +1,25 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetDateCounter",
+      "arguments": {
+        "targetDate": "2020-05-20",
+        "repeat": {
+          "unit": "year"
+        }
+      },
+      "writeResultTo": "/data/dateCounter",
+      "candidateOutputFields": [
+        "/days",
+        "/relationText",
+        "/targetDateText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": [
+    "asset.stopwatch_fill",
+    "asset.calendar_fill",
+    "asset.cake_fill"
+  ]
+}

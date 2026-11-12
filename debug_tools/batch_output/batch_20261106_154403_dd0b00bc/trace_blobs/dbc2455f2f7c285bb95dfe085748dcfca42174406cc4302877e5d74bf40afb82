@@ -1,0 +1,20 @@
+{
+  "category": "plan_coverage",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "f1184ad69e08251e",
+  "instruction": "逐项修复 duplicateActions 中同一完整 onClick 的重复入口，核对 occurrences、父角色和fixedRequiredSlot；最终保留一个完整入口以及原事件数组、参数、动态绑定、标签和图标。不同参数、开关值或绑定的动作不得合并；不得删除任何独立 Action。可选动作移除后同步合法父变体；固定槽不能直接删 children、清空事件或放入占位内容，按 repairStrategy.scope 调整必要父布局和已有独立信息的落位，不复制信息或虚构动作填槽。保留字号、独立事实和数据行，冲突父区外不变；完整复查动作、信息、组件、结构及容量。不新增重试额度。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": false,
+    "observedCategories": [
+      "plan_coverage"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "93b884a69a4e9e9d"
+  },
+  "noProgress": false,
+  "repairStrategy": "parent_layout_recompose",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "parent_layout"
+}

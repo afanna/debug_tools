@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"当前日期","priority":"must","dataId":"/data/time/currentDate","componentHints":["DataDisplay","EmphasisText","SecondaryBody"]},{"requirement":"当前星期","priority":"must","dataId":"/data/time/dayOfWeek","componentHints":["DataDisplay","EmphasisText","SecondaryBody"]}],"layoutHints":["S-center"]}}

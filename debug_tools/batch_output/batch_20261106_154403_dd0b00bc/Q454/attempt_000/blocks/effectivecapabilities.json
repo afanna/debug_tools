@@ -1,0 +1,11 @@
+{
+  "data": [
+    "GetCurrentTime",
+    "GetPhoneBatteryInfo",
+    "ViewWeather",
+    "GetHealthAndSportSummary",
+    "GetEarphoneInfo"
+  ],
+  "event": [],
+  "asset": []
+}

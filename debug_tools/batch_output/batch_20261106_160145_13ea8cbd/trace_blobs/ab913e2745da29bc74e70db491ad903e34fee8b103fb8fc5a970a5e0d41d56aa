@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"距离目标日期的倒计时天数，数值后追加“天”","priority":"must","dataId":"/data/countdown/countdownDays","componentHints":["DataDisplay","EmphasizedData","EmphasisText"]}],"layoutHints":["S-center"],"assetAssignments":{"actions":[],"title":{"assetId":"asset.ic_calender","reason":"日历倒计时语义匹配，用于文本模式上方标识"}}}}

@@ -1,0 +1,80 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.ic_calender"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "targetDate": "2027-06-21"
+      },
+      "candidateOutputFields": [
+        "/countdownDays"
+      ],
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.ic_calender"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "targetDate": "2027-06-21"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "距离目标日期的天数",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL10P 7.0.0.111",
+    "size": "2x2",
+    "title": "倒计时",
+    "uid": "batch-13ea8cbd-00106-000",
+    "userQuery": "给我在桌面设一个能看见倒计时的卡片\n\n本轮卡片静态内容（用作展示的外部事实）：\n目标日期为2027年6月21日"
+  },
+  "description": "距离目标日期的天数",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261102075537299"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "session": {
+    "interactionId": "Q518-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x2",
+  "title": "倒计时",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00106-000"
+    }
+  },
+  "userQuery": "给我在桌面设一个能看见倒计时的卡片\n\n本轮卡片静态内容（用作展示的外部事实）：\n目标日期为2027年6月21日",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

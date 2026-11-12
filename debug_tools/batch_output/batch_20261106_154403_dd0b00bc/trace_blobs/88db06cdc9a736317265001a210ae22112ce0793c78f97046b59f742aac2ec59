@@ -1,0 +1,7 @@
+```genui
+["root","Layout",{"layout":"S-dual-info"},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/time/currentDate"},"secondaryText":"日期"}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/time/dayOfWeek"},"secondaryText":"星期"}]
+["/data/time/currentDate","示例"]
+["/data/time/dayOfWeek","示例"]
+```

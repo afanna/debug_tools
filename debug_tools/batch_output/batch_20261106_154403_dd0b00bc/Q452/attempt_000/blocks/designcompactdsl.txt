@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"S-center"},["content"]]
+["content","DataDisplay",{"label":"手机电量","value":{"path":"/data/phoneBattery/batterySOCText"},"supportingText":{"path":"/data/phoneBattery/batteryCapacityLevelDesc"}}]
+["/data/phoneBattery/batterySOCText","68%"]
+["/data/phoneBattery/batteryCapacityLevelDesc","正常电量"]

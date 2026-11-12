@@ -1,0 +1,21 @@
+{
+  "id": "Q200",
+  "fileName": "Q200.json",
+  "title": "家庭简报",
+  "query": "家庭简报卡片，展示当前时间、手机电量、近期日程和备忘录待办信息",
+  "size": "2x4",
+  "sequence": 9,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7174.86,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 94,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7168.93,
+  "uid": "batch-0360acc5-00009-000",
+  "finalAttempt": 0
+}

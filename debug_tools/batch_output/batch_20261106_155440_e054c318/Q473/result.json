@@ -1,0 +1,21 @@
+{
+  "id": "Q473",
+  "fileName": "Q473.json",
+  "title": "时间卡片",
+  "query": "做一张时间卡片，显示当前时间、日期、星期和农历。",
+  "size": "2x2",
+  "sequence": 62,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2041.56,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00062-000",
+  "finalAttempt": 0
+}

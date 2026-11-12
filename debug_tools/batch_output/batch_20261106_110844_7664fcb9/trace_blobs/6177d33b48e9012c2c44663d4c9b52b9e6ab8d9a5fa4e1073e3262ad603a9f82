@@ -1,0 +1,109 @@
+{
+  "capacityFits": [
+    {
+      "actualItemCount": 3,
+      "actualRowCount": 3,
+      "componentId": "primary_support",
+      "componentType": "SecondaryBody",
+      "directlyFits": [
+        {
+          "itemIndex": 0,
+          "planFacts": [
+            {
+              "factIndex": 0,
+              "priority": "must",
+              "requirement": "当前日期"
+            }
+          ],
+          "value": {
+            "label": "日期 ",
+            "value": {
+              "path": "/data/time/currentDate"
+            }
+          }
+        }
+      ],
+      "doesNotFit": [
+        {
+          "itemIndex": 1,
+          "planFacts": [
+            {
+              "factIndex": 1,
+              "priority": "must",
+              "requirement": "当前星期"
+            },
+            {
+              "factIndex": 5,
+              "priority": "must",
+              "requirement": "未来第1天星期"
+            },
+            {
+              "factIndex": 8,
+              "priority": "must",
+              "requirement": "未来第2天星期"
+            },
+            {
+              "factIndex": 11,
+              "priority": "must",
+              "requirement": "未来第3天星期"
+            }
+          ],
+          "value": {
+            "label": "星期 ",
+            "value": {
+              "path": "/data/time/dayOfWeek"
+            }
+          }
+        },
+        {
+          "itemIndex": 2,
+          "planFacts": [
+            {
+              "factIndex": 4,
+              "priority": "must",
+              "requirement": "大风预警"
+            }
+          ],
+          "value": {
+            "value": {
+              "path": "/data/weather/current/alertLevel"
+            }
+          }
+        }
+      ],
+      "effectiveColumnCount": 1,
+      "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+      "maxRetainedRowCount": 1,
+      "overflowFactCount": 5,
+      "overflowItemCount": 2,
+      "parentAvailableHeight": 126.0,
+      "parentId": "root",
+      "rowHeights": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "rowSpacing": 2.0,
+      "scope": "currentComponentItemsOnly"
+    }
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "76f60cee106762ee",
+  "instruction": "重算受影响信息组的完整高度与间距，改用能闭合的合法子布局组合。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": false,
+    "observedCategories": [
+      "plan_coverage",
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "3ece4625587048d2"
+  },
+  "noProgress": false,
+  "repairStrategy": "rebudget",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "sublayout"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q460",
+  "fileName": "Q460.json",
+  "title": "今日天气",
+  "query": "做一张深圳今日天气卡片，显示当前温度和天气现象。",
+  "size": "2x2",
+  "sequence": 48,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5952.68,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5946.69,
+  "uid": "batch-dd0b00bc-00048-000",
+  "finalAttempt": 0
+}

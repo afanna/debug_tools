@@ -1,0 +1,49 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [
+    {
+      "description": "样式：默认黑色的单色手电筒图标，筒身为竖向圆角轮廓，原始尺寸为 24×24；适用：手电筒快捷控制卡片，可结合 event.openFlashlight 开启手电筒或 event.closeFlashlight 关闭手电筒。图标本身不表示手电筒当前开关状态。",
+      "id": "asset.ic_flashlight",
+      "src": "resources/base/media/ic_flashlight.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "time": {
+        "currentDate": {
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "dayOfWeek": {
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "lunarDate": {
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "updatedAt": {
+          "description": "端侧完成该时间数据组装的时间戳字符串，格式如 '2026-07-09 15:30:00'。",
+          "sampleValue": "示例",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "intentName": "OpenFlashlight",
+        "params": {}
+      },
+      "call": "clickToIntent",
+      "description": "点击后打开手机手电筒",
+      "id": "event.openFlashlight"
+    }
+  ],
+  "size": "2x2",
+  "userQuery": "在手机桌面创建一个快捷入口卡片，点击可以打开手电筒"
+}

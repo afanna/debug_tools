@@ -1,0 +1,22 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "category": "layout",
+        "code": "COMPACT_STATIC_TEXT_CAPACITY",
+        "expected": {
+          "completeTextFits": true,
+          "fontSizeUnchanged": true
+        },
+        "fixHint": "按组件固定文字规格及实际可用宽度修复被指出的字段；保持已接受文字与对象归属，必要时更换静态语义组件或重新分配主副字段；不修改字体、行高或固定间距，不用maxLines隐藏内容。",
+        "legacyMessage": "COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_assist 完整文字需要 2 行，43.6vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。",
+        "message": "COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_assist 完整文字需要 2 行，43.6vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_assist 完整文字需要 2 行，43.6vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。",
+    "stage": "validation"
+  }
+]

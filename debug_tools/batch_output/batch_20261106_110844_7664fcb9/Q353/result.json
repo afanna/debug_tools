@@ -1,0 +1,21 @@
+{
+  "id": "Q353",
+  "fileName": "Q353.json",
+  "title": "取件提醒",
+  "query": "在桌面生成取件码卡片，展示取件码34-4-2009，取件地点新天地华庭3座2单元妈妈驿站，明天下午6:10提醒拿快递。本轮卡片静态内容（用作展示的外部事实）：取件码34-4-2009，取件地点新天地华庭3座2单元妈妈驿站，提醒时间明天下午6:10",
+  "size": "2x2",
+  "sequence": 31,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5402.75,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 91,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5395.46,
+  "uid": "batch-7664fcb9-00031-000",
+  "finalAttempt": 0
+}

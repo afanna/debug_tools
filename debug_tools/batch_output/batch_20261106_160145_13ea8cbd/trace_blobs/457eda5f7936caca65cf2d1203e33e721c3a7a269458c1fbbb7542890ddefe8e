@@ -1,0 +1,30 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "component content_supporting: text width overflow; complete text '天 | 2027年春节是2月6日' at original font 14 needs about 161vp in one line, but its allocated text area is 126vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight.",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": "{{ '天 | 2027年春节是2月6日' }}",
+        "category": "expression",
+        "code": "COMPACT_EXPRESSION_REFERENCE_MISSING",
+        "evidenceSource": "expanded",
+        "expected": {
+          "requiresReference": "${/json/pointer}",
+          "staticValueMustBePlain": true
+        },
+        "legacyMessage": "component content_supporting.props.content: expression has no ${/json/pointer} reference; use a plain static value instead.",
+        "message": "表达式中没有动态 JSON Pointer 引用。",
+        "severity": "error",
+        "validationClass": "syntax"
+      }
+    ],
+    "message": "component content_supporting.props.content: expression has no ${/json/pointer} reference; use a plain static value instead.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": [
+    "Plan fact is missing from visible DSL: 展示近期第二条日程的标题 (/data/calendar/events/1/title).",
+    "Plan fact is missing from visible DSL: 展示近期第二条日程的开始日期与时间 (/data/calendar/events/1/dtStart)."
+  ]
+}

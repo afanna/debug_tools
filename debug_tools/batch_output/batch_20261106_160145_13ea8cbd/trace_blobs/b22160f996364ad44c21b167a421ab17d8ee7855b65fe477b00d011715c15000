@@ -1,0 +1,22 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.cake_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "距离爸爸生日的天数"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

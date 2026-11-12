@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan static text is not fully visible in DSL: 目标日期为2026年12月1日.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

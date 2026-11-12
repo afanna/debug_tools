@@ -1,0 +1,69 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": null,
+      "reason": "跑步人物素材不适用于包含睡眠的泛健康卡片，且未分配标题图标"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "今日步数（纯整数，展示时追加“步”）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/dailyTotalCaloriesText",
+      "priority": "must",
+      "requirement": "今日活动总消耗热量文本（已含千卡单位）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/dailyDistanceText",
+      "priority": "should",
+      "requirement": "今日活动总距离文本（已含米/公里单位）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/healthSport/sleepScore",
+      "priority": "must",
+      "requirement": "睡眠综合得分（0-100）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/sleepStatus",
+      "priority": "must",
+      "requirement": "睡眠状态语义判定"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/nightSleepDurationText",
+      "priority": "must",
+      "requirement": "夜间睡眠总时长文本（已含时间单位）"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-title-dual-content"
+  ]
+}

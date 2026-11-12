@@ -1,0 +1,21 @@
+{
+  "id": "Q430",
+  "fileName": "Q430.json",
+  "title": "倒计时",
+  "query": "给我生成一个在桌面上的倒计时，时间是现在到11月13号早上7点",
+  "size": "2x2",
+  "sequence": 18,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4968.07,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 86,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4943.96,
+  "uid": "batch-dd0b00bc-00018-000",
+  "finalAttempt": 0
+}

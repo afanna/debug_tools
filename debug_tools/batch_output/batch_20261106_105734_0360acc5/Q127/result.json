@@ -1,0 +1,21 @@
+{
+  "id": "Q127",
+  "fileName": "Q127.json",
+  "title": "杭州西湖区天气",
+  "query": "帮我做个卡片，看杭州市西湖区现在是什么天气，点一下查看杭州天气详情。",
+  "size": "2x4",
+  "sequence": 2,
+  "status": "degraded",
+  "attemptCount": 1,
+  "elapsedMs": 10725.93,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 114,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 10020.36,
+  "uid": "batch-0360acc5-00002-000",
+  "finalAttempt": 0
+}

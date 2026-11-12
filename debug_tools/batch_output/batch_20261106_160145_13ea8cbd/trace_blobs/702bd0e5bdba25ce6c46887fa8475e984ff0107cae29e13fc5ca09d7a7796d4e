@@ -1,0 +1,72 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.ic_sportsHealth_bule"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/health/dailySteps",
+      "priority": "must",
+      "requirement": "全天累计步数，数值后追加“步”"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/health/dailyTotalCaloriesText",
+      "priority": "must",
+      "requirement": "日常活动总消耗热量文本（已含千卡）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/health/dailyDistanceText",
+      "priority": "must",
+      "requirement": "日常活动总距离文本（已含米/公里）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/health/sleepScore",
+      "priority": "must",
+      "requirement": "睡眠综合得分及睡眠状态、夜间睡眠时长"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/health/sleepStatus",
+      "priority": "must",
+      "requirement": "睡眠状态语义判定"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/health/nightSleepDurationText",
+      "priority": "must",
+      "requirement": "夜间正式睡眠总时长文本（已含时间单位）"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info",
+    "S-quad-content"
+  ]
+}

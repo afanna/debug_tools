@@ -1,0 +1,33 @@
+{
+  "sampleId": "Q086",
+  "scenario": "repeat_month",
+  "timezone": "Asia/Shanghai",
+  "referenceDate": "2026-11-03",
+  "targetDate": "2026-12-01",
+  "expectedDays": 28,
+  "expectedRelationText": "还剩",
+  "expectedTargetDateText": "2026/12/01",
+  "writeResultTo": "/data/dateCounter",
+  "fields": [
+    "/days",
+    "/relationText",
+    "/targetDateText"
+  ],
+  "arguments": {
+    "targetDate": "2026-07-01",
+    "repeat": {
+      "unit": "month",
+      "interval": 2
+    }
+  },
+  "gate": false,
+  "provenance": {
+    "targetDate": "explicit",
+    "days": "ambiguous",
+    "relationText": "ambiguous",
+    "targetDateText": "ambiguous"
+  },
+  "notes": [
+    "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+  ]
+}

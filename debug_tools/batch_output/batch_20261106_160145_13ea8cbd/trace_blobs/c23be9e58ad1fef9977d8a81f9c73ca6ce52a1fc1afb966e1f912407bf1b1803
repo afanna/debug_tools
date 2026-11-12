@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"S-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"京东包裹取件码"}]
+["body","SingleLineList",{"items":[{"text":"取件地点","assist":"樟村22栋"},{"text":"取件码1","assist":"9-4-0046"},{"text":"取件码2","assist":"9-2-0060"}]}]
+["/state/ready",true]

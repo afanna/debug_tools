@@ -1,0 +1,20 @@
+{
+  "category": "plan_coverage",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "44ed619893a74bb1",
+  "instruction": "恢复缺失的 Plan 必须事实并复查其所属信息组，不删除其它已正确事实。 当前可见业务正文只有SecondaryBody等普通标签—值文本，没有可承担核心信息的组件。若同一对象内有2–3项同级、等权、无事件／比例／强调语义的短标签—值，优先按TableText合同重组该组，由TableText承担核心信息角色；两项使用fontSize 12并预留38vp，三项使用fontSize 10并预留52vp。逐项保留label、value、完整动态绑定与对象归属；不能只把组件改名，不能将事件、比例或应强调的主值表格化。超出TableText容量的事实继续放入其它合法内容角色，只有optionalDrop或approvedOmissions明确授权的事实才能省略。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": false,
+    "observedCategories": [
+      "plan_coverage"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "c5041485feecaa5a"
+  },
+  "noProgress": false,
+  "repairStrategy": "coverage_restore",
+  "retryTarget": "dsl_local_repair",
+  "retryable": true,
+  "scope": "information_group"
+}

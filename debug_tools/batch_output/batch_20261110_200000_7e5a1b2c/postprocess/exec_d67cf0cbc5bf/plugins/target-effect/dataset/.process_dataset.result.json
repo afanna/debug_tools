@@ -1,0 +1,666 @@
+{
+  "status": "success",
+  "summary": "目标效果评测完成：6 个样本，通过 0，待复核 0，失败 6",
+  "facts": {
+    "total": 6,
+    "passed": 0,
+    "partial": 0,
+    "failed": 6,
+    "passRate": 58.7
+  },
+  "artifacts": [
+    {
+      "key": "overview",
+      "data": [
+        {
+          "label": "样本数",
+          "value": 6
+        },
+        {
+          "label": "通过",
+          "value": 0
+        },
+        {
+          "label": "待复核",
+          "value": 0
+        },
+        {
+          "label": "失败",
+          "value": 6
+        },
+        {
+          "label": "规则通过率",
+          "value": "58.7%"
+        }
+      ]
+    },
+    {
+      "key": "rules",
+      "data": [
+        {
+          "规则": "TARGET.PLACEHOLDER_VISIBLE",
+          "说明": "无占位文案",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "TARGET.SCENARIO_RULE_VIOLATION",
+          "说明": "场景规则",
+          "通过": 1,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "VIS.TEXT_CLIPPED",
+          "说明": "文字未被裁切",
+          "通过": 0,
+          "失败": 6,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 0.0
+        },
+        {
+          "规则": "VIS.TEXT_OVERFLOW",
+          "说明": "文字未越出画布",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "VIS.TEXT_OVERLAP",
+          "说明": "文字未互相遮挡",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "VIS.IMAGE_OVERFLOW",
+          "说明": "图片未越出画布",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "VIS.IMAGE_LOAD_FAILED",
+          "说明": "素材真实加载",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "VIS.FONT_TOO_SMALL",
+          "说明": "正文字号下限",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "VIS.CONTRAST_LOW",
+          "说明": "文字对比度",
+          "通过": 0,
+          "失败": 6,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 0.0
+        },
+        {
+          "规则": "SPEC.RADIUS",
+          "说明": "圆角 20",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "SPEC.PADDING",
+          "说明": "内边距 12",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "SPEC.BG_FULL_BLEED",
+          "说明": "背景铺满",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "SPEC.MASK",
+          "说明": "黑色蒙层 60%",
+          "通过": 0,
+          "失败": 6,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 0.0
+        },
+        {
+          "规则": "SPEC.TITLE_REQUIRED",
+          "说明": "标题必选",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "SPEC.TITLE_FONT",
+          "说明": "标题 16/20fp",
+          "通过": 0,
+          "失败": 6,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 0.0
+        },
+        {
+          "规则": "SPEC.TITLE_ELLIPSIS",
+          "说明": "标题单行省略",
+          "通过": 0,
+          "失败": 6,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 0.0
+        },
+        {
+          "规则": "SPEC.TITLE_COLOR",
+          "说明": "标题白色",
+          "通过": 2,
+          "失败": 4,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 33.3
+        },
+        {
+          "规则": "SPEC.PRIMARY_FONT",
+          "说明": "主值 56/38fp",
+          "通过": 1,
+          "失败": 5,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 16.7
+        },
+        {
+          "规则": "SPEC.UNIT_FONT",
+          "说明": "单位 16fp 独立",
+          "通过": 0,
+          "失败": 6,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 0.0
+        },
+        {
+          "规则": "SPEC.SUPPORT_FONT",
+          "说明": "副文本 16fp",
+          "通过": 0,
+          "失败": 6,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 0.0
+        },
+        {
+          "规则": "SPEC.SUPPORT_COLOR",
+          "说明": "副文本 60% 白",
+          "通过": 0,
+          "失败": 6,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 0.0
+        },
+        {
+          "规则": "SPEC.CONTENT_TYPE",
+          "说明": "内容属于 C1–C5",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        },
+        {
+          "规则": "SPEC.PATTERN_GEOMETRY",
+          "说明": "图案几何",
+          "通过": 0,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 6,
+          "通过率": null
+        },
+        {
+          "规则": "SPEC.DIGIT_LIMIT",
+          "说明": "数字最多 6 位",
+          "通过": 5,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 1,
+          "通过率": 100.0
+        },
+        {
+          "规则": "SPEC.SAFE_AREA",
+          "说明": "安全区内",
+          "通过": 6,
+          "失败": 0,
+          "待复核": 0,
+          "不适用": 0,
+          "通过率": 100.0
+        }
+      ]
+    },
+    {
+      "key": "samples",
+      "data": [
+        {
+          "样本": "Q001",
+          "状态": "failed",
+          "结论": "可见性失败",
+          "场景": "once",
+          "期望天数": 46,
+          "通过": 14,
+          "失败": 10,
+          "待复核": 0,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+          "待复核项": ""
+        },
+        {
+          "样本": "Q031",
+          "状态": "failed",
+          "结论": "可见性失败",
+          "场景": "repeat_week",
+          "期望天数": 1,
+          "通过": 13,
+          "失败": 10,
+          "待复核": 0,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+          "待复核项": ""
+        },
+        {
+          "样本": "Q061",
+          "状态": "failed",
+          "结论": "可见性失败",
+          "场景": "lunar_once",
+          "期望天数": "—",
+          "通过": 13,
+          "失败": 9,
+          "待复核": 0,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+          "待复核项": ""
+        },
+        {
+          "样本": "Q076",
+          "状态": "failed",
+          "结论": "可见性失败",
+          "场景": "repeat_day",
+          "期望天数": 0,
+          "通过": 13,
+          "失败": 10,
+          "待复核": 0,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+          "待复核项": ""
+        },
+        {
+          "样本": "Q086",
+          "状态": "failed",
+          "结论": "可见性失败",
+          "场景": "repeat_month",
+          "期望天数": 28,
+          "通过": 14,
+          "失败": 9,
+          "待复核": 0,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+          "待复核项": ""
+        },
+        {
+          "样本": "Q091",
+          "状态": "failed",
+          "结论": "可见性失败",
+          "场景": "repeat_year",
+          "期望天数": 198,
+          "通过": 14,
+          "失败": 9,
+          "待复核": 0,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+          "待复核项": ""
+        }
+      ]
+    },
+    {
+      "key": "summary",
+      "data": {
+        "profile": "countdown-card-spec-v1",
+        "total": 6,
+        "samples": [
+          {
+            "样本": "Q001",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "once",
+            "期望天数": 46,
+            "通过": 14,
+            "失败": 10,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+            "待复核项": ""
+          },
+          {
+            "样本": "Q031",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_week",
+            "期望天数": 1,
+            "通过": 13,
+            "失败": 10,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+            "待复核项": ""
+          },
+          {
+            "样本": "Q061",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "lunar_once",
+            "期望天数": "—",
+            "通过": 13,
+            "失败": 9,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+            "待复核项": ""
+          },
+          {
+            "样本": "Q076",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_day",
+            "期望天数": 0,
+            "通过": 13,
+            "失败": 10,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+            "待复核项": ""
+          },
+          {
+            "样本": "Q086",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_month",
+            "期望天数": 28,
+            "通过": 14,
+            "失败": 9,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+            "待复核项": ""
+          },
+          {
+            "样本": "Q091",
+            "状态": "failed",
+            "结论": "可见性失败",
+            "场景": "repeat_year",
+            "期望天数": 198,
+            "通过": 14,
+            "失败": 9,
+            "待复核": 0,
+            "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED",
+            "待复核项": ""
+          }
+        ],
+        "rules": [
+          {
+            "规则": "TARGET.PLACEHOLDER_VISIBLE",
+            "说明": "无占位文案",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "TARGET.SCENARIO_RULE_VIOLATION",
+            "说明": "场景规则",
+            "通过": 1,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.TEXT_CLIPPED",
+            "说明": "文字未被裁切",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "VIS.TEXT_OVERFLOW",
+            "说明": "文字未越出画布",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.TEXT_OVERLAP",
+            "说明": "文字未互相遮挡",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.IMAGE_OVERFLOW",
+            "说明": "图片未越出画布",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.IMAGE_LOAD_FAILED",
+            "说明": "素材真实加载",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.FONT_TOO_SMALL",
+            "说明": "正文字号下限",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "VIS.CONTRAST_LOW",
+            "说明": "文字对比度",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.RADIUS",
+            "说明": "圆角 20",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.PADDING",
+            "说明": "内边距 12",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.BG_FULL_BLEED",
+            "说明": "背景铺满",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.MASK",
+            "说明": "黑色蒙层 60%",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.TITLE_REQUIRED",
+            "说明": "标题必选",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.TITLE_FONT",
+            "说明": "标题 16/20fp",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.TITLE_ELLIPSIS",
+            "说明": "标题单行省略",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.TITLE_COLOR",
+            "说明": "标题白色",
+            "通过": 2,
+            "失败": 4,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 33.3
+          },
+          {
+            "规则": "SPEC.PRIMARY_FONT",
+            "说明": "主值 56/38fp",
+            "通过": 1,
+            "失败": 5,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 16.7
+          },
+          {
+            "规则": "SPEC.UNIT_FONT",
+            "说明": "单位 16fp 独立",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.SUPPORT_FONT",
+            "说明": "副文本 16fp",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.SUPPORT_COLOR",
+            "说明": "副文本 60% 白",
+            "通过": 0,
+            "失败": 6,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 0.0
+          },
+          {
+            "规则": "SPEC.CONTENT_TYPE",
+            "说明": "内容属于 C1–C5",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.PATTERN_GEOMETRY",
+            "说明": "图案几何",
+            "通过": 0,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 6,
+            "通过率": null
+          },
+          {
+            "规则": "SPEC.DIGIT_LIMIT",
+            "说明": "数字最多 6 位",
+            "通过": 5,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 1,
+            "通过率": 100.0
+          },
+          {
+            "规则": "SPEC.SAFE_AREA",
+            "说明": "安全区内",
+            "通过": 6,
+            "失败": 0,
+            "待复核": 0,
+            "不适用": 0,
+            "通过率": 100.0
+          }
+        ],
+        "captureError": "",
+        "facts": {
+          "total": 6,
+          "passed": 0,
+          "partial": 0,
+          "failed": 6,
+          "passRate": 58.7
+        }
+      }
+    },
+    {
+      "key": "report",
+      "path": "report.html",
+      "alt": "目标效果评测报告"
+    }
+  ]
+}

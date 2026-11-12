@@ -1,0 +1,11 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [
+    "周三至周日具体三餐安排未在卡面展示",
+    "提醒中饮水2000-3000ml与加餐建议未展示"
+  ],
+  "warnings": [
+    "COMPACT_STATIC_CORE_MISSING: 组 tips 缺少完整展示文字 '主食换粗粮，蛋白选鱼虾豆腐，多蒸煮凉拌'；须在合法且可达的标题或正文条目内完整展示，不跨不同对象拼接说明。"
+  ]
+}

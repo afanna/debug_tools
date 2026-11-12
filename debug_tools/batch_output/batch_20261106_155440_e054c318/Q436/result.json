@@ -1,0 +1,21 @@
+{
+  "id": "Q436",
+  "fileName": "Q436.json",
+  "title": "倒计时",
+  "query": "做一张倒计时卡片，显示距离目标日期的天数。本轮卡片静态内容（用作展示的外部事实）：倒计时卡片",
+  "size": "2x2",
+  "sequence": 22,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2044.92,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00022-000",
+  "finalAttempt": 0
+}

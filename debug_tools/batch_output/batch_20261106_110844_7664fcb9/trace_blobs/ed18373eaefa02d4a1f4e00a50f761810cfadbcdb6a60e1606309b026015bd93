@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 当前时间（数字时钟样式） (/data/time/lunarDate).",
+    "stage": "validation"
+  }
+]

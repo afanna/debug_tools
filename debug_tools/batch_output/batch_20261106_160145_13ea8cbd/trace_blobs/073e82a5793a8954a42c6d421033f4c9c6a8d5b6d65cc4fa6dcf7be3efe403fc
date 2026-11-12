@@ -1,0 +1,13 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": [
+    "Plan static text is not fully visible in DSL: 奶奶/爷爷生日公历日期10月5日.",
+    "Plan static text is not fully visible in DSL: 爸爸生日公历日期6月24日.",
+    "Plan static text is not fully visible in DSL: 妈妈生日公历日期4月19日.",
+    "Plan static text is not fully visible in DSL: 崔景会生日公历日期4月12日.",
+    "Plan static text is not fully visible in DSL: 爸妈结婚纪念日公历日期1月12日.",
+    "Plan static text is not fully visible in DSL: 我的生日公历日期10月28日."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [
+    {
+      "description": "样式：跑步人物图标，默认黑色，图形为人体奔跑动作侧视轮廓；适用：运动记录、跑步锻炼追踪、步数统计。",
+      "id": "asset.figure_run",
+      "src": "resources/base/media/figure_run.svg"
+    },
+    {
+      "description": "样式：灰色运动上衣与深色短裤装扮的写实 3D 跑步人物，透明背景，原始尺寸为 512×512，PNG 位图需保留原色；适用：跑步记录、步数、配速或运动目标相关卡片。不适用：睡眠或泛健康卡片。",
+      "id": "asset.emoji_run",
+      "src": "resources/base/media/emoji_run.png"
+    },
+    {
+      "description": "样式：蓝色纵向渐变圆形底上的白色运动火焰图标，原始尺寸为 20×20，SVG 矢量图（保留原色，禁止染色）需保留原始渐变配色，禁止染色；适用：运动健康、日常活动或锻炼摘要卡片，可结合 GetHealthAndSportSummary 展示步数、热量、距离和运动记录，也可作为 event.open.health.sport、event.open.health.sportsRecord、event.open.health.activityRecord 或 event.open.health.workoutDuration 的辅助入口图标。图标不表示运动目标已达成或用户当前正在运动。",
+      "id": "asset.ic_sportsHealth_bule",
+      "src": "resources/base/media/ic_sportsHealth_bule.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "healthSport": {
+        "dailyDistanceText": {
+          "description": "可直接显示的日常活动总距离文本，端侧已根据数值大小换算并包含“米”或“公里”单位；展示时不得再次追加距离单位。例如“5.42 公里”或“755 米”。",
+          "sampleValue": "4.60 公里",
+          "type": "string"
+        },
+        "dailySteps": {
+          "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+          "sampleValue": 6200,
+          "type": "integer"
+        },
+        "dailyTotalCaloriesText": {
+          "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+          "sampleValue": "420 千卡",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/router/openwith?address=com.huawei.health.h5.sports-record?h5pro=true&urlType=4&pName=com.huawei.health&path=ActiveRecord"
+      },
+      "call": "clickToDeeplink",
+      "description": "打开华为运动健康应用的活动记录页。",
+      "id": "event.open.health.activityRecord"
+    }
+  ],
+  "size": "2x2",
+  "userQuery": "在首页显示运动步数，创建一张展示今日步数的运动健康卡片"
+}

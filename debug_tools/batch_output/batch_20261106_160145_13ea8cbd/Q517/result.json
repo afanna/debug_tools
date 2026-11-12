@@ -1,0 +1,21 @@
+{
+  "id": "Q517",
+  "fileName": "Q517.json",
+  "title": "电池电量",
+  "query": "做一张电池电量卡片，显示当前手机剩余电量百分比和充电状态。",
+  "size": "2x2",
+  "sequence": 105,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4139.71,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4126.12,
+  "uid": "batch-13ea8cbd-00105-000",
+  "finalAttempt": 0
+}

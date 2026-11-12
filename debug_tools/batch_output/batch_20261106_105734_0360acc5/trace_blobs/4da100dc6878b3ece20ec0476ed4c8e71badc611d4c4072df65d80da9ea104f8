@@ -1,0 +1,449 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_PLAN_COVERAGE_FAILED",
+        "duplicateFacts": [
+          {
+            "actualVisibleCount": 2,
+            "dataId": "/data/weather/current/temperatureText",
+            "expectedVisibleCount": 1,
+            "occurrences": [
+              {
+                "componentId": "content_primary",
+                "componentType": "EmphasisText",
+                "property": "mainText"
+              },
+              {
+                "componentId": "upper",
+                "componentType": "InfoBlock",
+                "property": "primaryText"
+              }
+            ],
+            "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+            "requiredDisplayPositions": [
+              {
+                "componentId": "content_primary",
+                "componentType": "EmphasisText",
+                "property": "mainText"
+              },
+              {
+                "componentId": "upper",
+                "componentType": "InfoBlock",
+                "property": "primaryText"
+              }
+            ],
+            "requirement": "当前温度文本，作为核心读数"
+          },
+          {
+            "actualVisibleCount": 2,
+            "dataId": "/data/weather/current/condition",
+            "expectedVisibleCount": 1,
+            "occurrences": [
+              {
+                "componentId": "content_primary",
+                "componentType": "EmphasisText",
+                "property": "secondaryText"
+              },
+              {
+                "componentId": "lower",
+                "componentType": "InfoBlock",
+                "property": "primaryText"
+              }
+            ],
+            "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+            "requiredDisplayPositions": [
+              {
+                "componentId": "lower",
+                "componentType": "InfoBlock",
+                "property": "primaryText"
+              }
+            ],
+            "requirement": "当前天气现象"
+          }
+        ],
+        "message": "Plan fact is displayed more than once in visible DSL: 当前温度文本，作为核心读数 (/data/weather/current/temperatureText); expected 1, got 2; occurrences: content_primary (EmphasisText).mainText, upper (InfoBlock).primaryText.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_PLAN_COVERAGE_FAILED",
+        "message": "Plan fact is displayed more than once in visible DSL: 当前天气现象 (/data/weather/current/condition); expected 1, got 2; occurrences: content_primary (EmphasisText).secondaryText, lower (InfoBlock).primaryText.",
+        "stage": "validation"
+      },
+      {
+        "capacityFits": [
+          {
+            "actualItemCount": 4,
+            "actualRowCount": 4,
+            "componentId": "content_support",
+            "componentType": "SecondaryBody",
+            "directlyFits": [
+              {
+                "itemIndex": 0,
+                "planFacts": [
+                  {
+                    "factIndex": 1,
+                    "priority": "must",
+                    "requirement": "城市名称（杭州市）与区县名称（西湖区），用于标识当前天气地点"
+                  },
+                  {
+                    "factIndex": 2,
+                    "priority": "must",
+                    "requirement": "区县名称，作为地点限定"
+                  }
+                ],
+                "value": {
+                  "label": "区县",
+                  "value": {
+                    "path": "/data/weather/location/districtName"
+                  }
+                }
+              },
+              {
+                "itemIndex": 1,
+                "planFacts": [
+                  {
+                    "factIndex": 5,
+                    "priority": "should",
+                    "requirement": "当前空气质量等级"
+                  }
+                ],
+                "value": {
+                  "label": "空气质量",
+                  "value": {
+                    "path": "/data/weather/current/airQuality"
+                  }
+                }
+              },
+              {
+                "itemIndex": 2,
+                "planFacts": [
+                  {
+                    "factIndex": 6,
+                    "priority": "should",
+                    "requirement": "当前体感温度"
+                  }
+                ],
+                "value": {
+                  "label": "体感",
+                  "value": "{{ ${/data/weather/current/feelsLikeC} + '℃' }}"
+                }
+              }
+            ],
+            "doesNotFit": [
+              {
+                "itemIndex": 3,
+                "planFacts": [
+                  {
+                    "factIndex": 7,
+                    "priority": "should",
+                    "requirement": "当前相对湿度"
+                  }
+                ],
+                "value": {
+                  "label": "湿度",
+                  "value": "{{ ${/data/weather/current/humidityPercent} + '%' }}"
+                }
+              }
+            ],
+            "effectiveColumnCount": 1,
+            "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+            "maxRetainedRowCount": 3,
+            "overflowFactCount": 1,
+            "overflowItemCount": 1,
+            "parentAvailableHeight": 126.0,
+            "parentId": "content",
+            "rowHeights": [
+              12.0,
+              12.0,
+              12.0,
+              12.0
+            ],
+            "rowSpacing": 2.0,
+            "scope": "currentComponentItemsOnly"
+          }
+        ],
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "compactDiagnostics": [
+          {
+            "actual": {
+              "minimumRequiredHeight": 140.0,
+              "occupancy": "__layout__content__sub=140vp+margin(0vp), gaps=0vp",
+              "overflow": 14.0,
+              "secondaryBodyFits": [
+                {
+                  "actualRowCount": 4,
+                  "componentId": "content_support",
+                  "directlyFitsItemIndexes": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "doesNotFitItemIndexes": [
+                    3
+                  ],
+                  "effectiveColumnCount": 1,
+                  "maxRetainedRowCount": 3,
+                  "parentAvailableHeight": 126.0,
+                  "parentId": "content",
+                  "rowHeights": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                  ],
+                  "rowSpacing": 2.0
+                }
+              ]
+            },
+            "category": "layout",
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "componentId": "content",
+            "evidenceSource": "expanded",
+            "expected": {
+              "heightTolerance": 2.0,
+              "maximumHeight": 126.0,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true
+            },
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+            "legacyMessage": "component content: vertical layout requires at least 140vp within 126vp; it overflows by 14vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__content__sub=140vp+margin(0vp), gaps=0vp.",
+            "message": "component content: vertical layout requires at least 140vp within 126vp; it overflows by 14vp. Occupancy: __layout__content__sub=140vp+margin(0vp), gaps=0vp.",
+            "severity": "error",
+            "sourceLine": 2,
+            "validationClass": "semantic"
+          }
+        ],
+        "message": "component content: vertical layout requires at least 140vp within 126vp; it overflows by 14vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__content__sub=140vp+margin(0vp), gaps=0vp.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "compactDiagnostics": [
+          {
+            "actual": {
+              "minimumRequiredHeight": 140.0,
+              "occupancy": "content_title=12vp+margin(0vp), __layout__content__body=92vp+margin(0vp), content_action=36vp+margin(0vp), gaps=0vp",
+              "overflow": 14.0,
+              "secondaryBodyFits": [
+                {
+                  "actualRowCount": 4,
+                  "componentId": "content_support",
+                  "directlyFitsItemIndexes": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "doesNotFitItemIndexes": [
+                    3
+                  ],
+                  "effectiveColumnCount": 1,
+                  "maxRetainedRowCount": 3,
+                  "parentAvailableHeight": 126.0,
+                  "parentId": "__layout__content__sub",
+                  "rowHeights": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                  ],
+                  "rowSpacing": 2.0
+                }
+              ]
+            },
+            "category": "layout",
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "componentId": "content",
+            "evidenceSource": "expanded",
+            "expected": {
+              "heightTolerance": 2.0,
+              "maximumHeight": 126.0,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true
+            },
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+            "legacyMessage": "component __layout__content__sub: vertical layout requires at least 140vp within 126vp; it overflows by 14vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: content_title=12vp+margin(0vp), __layout__content__body=92vp+margin(0vp), content_action=36vp+margin(0vp), gaps=0vp.",
+            "message": "component __layout__content__sub: vertical layout requires at least 140vp within 126vp; it overflows by 14vp. Occupancy: content_title=12vp+margin(0vp), __layout__content__body=92vp+margin(0vp), content_action=36vp+margin(0vp), gaps=0vp.",
+            "severity": "error",
+            "sourceLine": 2,
+            "validationClass": "semantic"
+          }
+        ],
+        "message": "component __layout__content__sub: vertical layout requires at least 140vp within 126vp; it overflows by 14vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: content_title=12vp+margin(0vp), __layout__content__body=92vp+margin(0vp), content_action=36vp+margin(0vp), gaps=0vp.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "compactDiagnostics": [
+          {
+            "actual": {
+              "minimumRequiredHeight": 92.0,
+              "occupancy": "content_primary=36vp+margin(0vp), content_support=54vp+margin(0vp), gaps=2vp",
+              "overflow": 14.0,
+              "secondaryBodyFits": [
+                {
+                  "actualRowCount": 4,
+                  "componentId": "content_support",
+                  "directlyFitsItemIndexes": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "doesNotFitItemIndexes": [
+                    3
+                  ],
+                  "effectiveColumnCount": 1,
+                  "maxRetainedRowCount": 3,
+                  "parentAvailableHeight": 78.0,
+                  "parentId": "__layout__content__body",
+                  "rowHeights": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                  ],
+                  "rowSpacing": 2.0
+                }
+              ]
+            },
+            "category": "layout",
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "componentId": "content",
+            "evidenceSource": "expanded",
+            "expected": {
+              "heightTolerance": 2.0,
+              "maximumHeight": 78.0,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true
+            },
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+            "legacyMessage": "component __layout__content__body: vertical layout requires at least 92vp within 78vp; it overflows by 14vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: content_primary=36vp+margin(0vp), content_support=54vp+margin(0vp), gaps=2vp.",
+            "message": "component __layout__content__body: vertical layout requires at least 92vp within 78vp; it overflows by 14vp. Occupancy: content_primary=36vp+margin(0vp), content_support=54vp+margin(0vp), gaps=2vp.",
+            "severity": "error",
+            "sourceLine": 2,
+            "validationClass": "semantic"
+          }
+        ],
+        "message": "component __layout__content__body: vertical layout requires at least 92vp within 78vp; it overflows by 14vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: content_primary=36vp+margin(0vp), content_support=54vp+margin(0vp), gaps=2vp.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "capacityFits": [
+        {
+          "actualItemCount": 4,
+          "actualRowCount": 4,
+          "componentId": "content_support",
+          "componentType": "SecondaryBody",
+          "directlyFits": [
+            {
+              "itemIndex": 0,
+              "planFacts": [
+                {
+                  "factIndex": 1,
+                  "priority": "must",
+                  "requirement": "城市名称（杭州市）与区县名称（西湖区），用于标识当前天气地点"
+                },
+                {
+                  "factIndex": 2,
+                  "priority": "must",
+                  "requirement": "区县名称，作为地点限定"
+                }
+              ],
+              "value": {
+                "label": "区县",
+                "value": {
+                  "path": "/data/weather/location/districtName"
+                }
+              }
+            },
+            {
+              "itemIndex": 1,
+              "planFacts": [
+                {
+                  "factIndex": 5,
+                  "priority": "should",
+                  "requirement": "当前空气质量等级"
+                }
+              ],
+              "value": {
+                "label": "空气质量",
+                "value": {
+                  "path": "/data/weather/current/airQuality"
+                }
+              }
+            },
+            {
+              "itemIndex": 2,
+              "planFacts": [
+                {
+                  "factIndex": 6,
+                  "priority": "should",
+                  "requirement": "当前体感温度"
+                }
+              ],
+              "value": {
+                "label": "体感",
+                "value": "{{ ${/data/weather/current/feelsLikeC} + '℃' }}"
+              }
+            }
+          ],
+          "doesNotFit": [
+            {
+              "itemIndex": 3,
+              "planFacts": [
+                {
+                  "factIndex": 7,
+                  "priority": "should",
+                  "requirement": "当前相对湿度"
+                }
+              ],
+              "value": {
+                "label": "湿度",
+                "value": "{{ ${/data/weather/current/humidityPercent} + '%' }}"
+              }
+            }
+          ],
+          "effectiveColumnCount": 1,
+          "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+          "maxRetainedRowCount": 3,
+          "overflowFactCount": 1,
+          "overflowItemCount": 1,
+          "parentAvailableHeight": 126.0,
+          "parentId": "content",
+          "rowHeights": [
+            12.0,
+            12.0,
+            12.0,
+            12.0
+          ],
+          "rowSpacing": 2.0,
+          "scope": "currentComponentItemsOnly"
+        }
+      ],
+      "category": "layout_capacity",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "e78e926219f75ac1",
+      "instruction": "多个语义分区同时容量超限，或当前仍缺失事实、补回后容量还会增加；跳过局部高度微调，先恢复缺失事实，再按全部信息组和 Action 重新选择父布局。保留固定字号与设计尺寸，不裁切、缩字、隐藏或删除事实。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "layout_capacity"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "c6577cf088244c3d"
+      },
+      "noProgress": false,
+      "repairStrategy": "parent_layout_recompose",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-content-side-slots\",\"orientation\":\"content-left\"},[\"content\",\"upper\",\"lower\"]]\n[\"content_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"content_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"content_support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"区县\",\"value\":{\"path\":\"/data/weather/location/districtName\"}},{\"label\":\"空气质量\",\"value\":{\"path\":\"/data/weather/current/airQuality\"}},{\"label\":\"体感\",\"value\":\"{{ ${/data/weather/current/feelsLikeC} + '℃' }}\"},{\"label\":\"湿度\",\"value\":\"{{ ${/data/weather/current/humidityPercent} + '%' }}\"}],\"separator\":\" | \",\"fontSize\":12}]\n[\"content_action\",\"PillButton\",{\"label\":\"查看天气\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"content\",\"Region\",{\"variant\":\"title-hero-support-action\"},[\"content_title\",\"content_primary\",\"content_support\",\"content_action\"]]\n[\"upper\",\"InfoBlock\",{\"variant\":\"slot\",\"primaryText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":\"当前温度\"}]\n[\"lower\",\"InfoBlock\",{\"variant\":\"slot\",\"primaryText\":{\"path\":\"/data/weather/current/condition\"},\"secondaryText\":\"天气现象\"}]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/location/districtName\",\"西湖区\"]\n[\"/data/weather/location/prefectureName\",\"杭州市\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/current/feelsLikeC\",31]\n[\"/data/weather/current/humidityPercent\",68]\n[\"/data/weather/current/airQuality\",\"良\"]"
+  }
+]

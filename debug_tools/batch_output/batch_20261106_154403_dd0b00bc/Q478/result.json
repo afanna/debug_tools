@@ -1,0 +1,21 @@
+{
+  "id": "Q478",
+  "fileName": "Q478.json",
+  "title": "备忘录",
+  "query": "在桌面上创建备忘录卡片，展示备忘录笔记和待办信息。",
+  "size": "2x2",
+  "sequence": 66,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 12126.6,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 151,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 12119.39,
+  "uid": "batch-dd0b00bc-00066-000",
+  "finalAttempt": 0
+}

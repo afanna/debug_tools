@@ -1,0 +1,110 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.figure_run",
+    "asset.emoji_run"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "targetDayOffset": 0
+      },
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyDistanceText",
+        "/dailyTotalCaloriesText"
+      ],
+      "capabilityId": "GetHealthAndSportSummary",
+      "writeResultTo": "/data/healthSport"
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "action": {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        },
+        "call": "clickToDeeplink"
+      },
+      "capabilityId": "event.open.health.sport"
+    }
+  ],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.figure_run",
+      "asset.emoji_run"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "targetDayOffset": 0
+        },
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyDistanceText",
+          "/dailyTotalCaloriesText"
+        ],
+        "capabilityId": "GetHealthAndSportSummary",
+        "writeResultTo": "/data/healthSport"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          },
+          "call": "clickToDeeplink"
+        },
+        "capabilityId": "event.open.health.sport"
+      }
+    ],
+    "description": "运动步数速览",
+    "size": "2x2",
+    "title": "每日步数",
+    "uid": "batch-7664fcb9-00016-000",
+    "userQuery": "做一张运动健康卡片，放在手机桌面首页，显示每天的运动步数。"
+  },
+  "description": "运动步数速览",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261029101512689"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q313-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x2",
+  "title": "每日步数",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00016-000"
+    }
+  },
+  "userQuery": "做一张运动健康卡片，放在手机桌面首页，显示每天的运动步数。",
+  "utterance": {
+    "original": "做一张运动健康卡片，放在手机桌面首页，显示每天的运动步数。",
+    "type": "text"
+  },
+  "version": "1.0"
+}

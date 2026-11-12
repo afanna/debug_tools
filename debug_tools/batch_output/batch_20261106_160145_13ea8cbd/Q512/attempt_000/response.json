@@ -1,0 +1,64 @@
+{
+  "requestId": "batch-13ea8cbd&Q512-000",
+  "status": "degraded",
+  "errorCode": "",
+  "error": {},
+  "data": {
+    "status": "degraded",
+    "artifactUrl": "https://obs.todo.local/widget/artifact_1a0b9678-9e7a-4982-989b-077303044376.md",
+    "artifactDigest": "sha256:8c5809a4882466ea653447a8946d6619305cecc846183651d5eef0695ee2f4cc",
+    "suggestSize": "2x2",
+    "removedCapabilities": [],
+    "errorCode": "",
+    "effectiveCapabilities": {
+      "data": [],
+      "event": [],
+      "asset": []
+    },
+    "omittedRequirements": [
+      "另有两家单位获团体二等奖、三家单位获团体三等奖的补充信息，因主结论文字已占两行且剩余高度不足，整条省略"
+    ],
+    "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。"
+  },
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q512-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-13ea8cbd&Q512-000",
+          "streamType": "partial",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"type\":\"result\",\"tool\":\"generateWidgetCardCompactDsl\",\"operation\":\"generateWidgetCardCompactDsl\",\"requestId\":\"batch-13ea8cbd&Q512-000\",\"data\":{\"status\":\"degraded\",\"artifactUrl\":\"https://obs.todo.local/widget/artifact_1a0b9678-9e7a-4982-989b-077303044376.md\",\"artifactDigest\":\"sha256:8c5809a4882466ea653447a8946d6619305cecc846183651d5eef0695ee2f4cc\",\"suggestSize\":\"2x2\",\"removedCapabilities\":[],\"errorCode\":\"\",\"effectiveCapabilities\":{\"data\":[],\"event\":[],\"asset\":[]},\"omittedRequirements\":[\"另有两家单位获团体二等奖、三家单位获团体三等奖的补充信息，因主结论文字已占两行且剩余高度不足，整条省略\"],\"agentInstruction\":\"已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。\"},\"status\":\"degraded\",\"errorCode\":\"\",\"error\":{}}",
+          "streamingTextId": "batch-13ea8cbd&Q512-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

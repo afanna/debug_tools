@@ -1,0 +1,22 @@
+{
+  "title": "周三例会倒计时",
+  "description": "每周三都开例会，帮我做一张到下一次例会的倒计时卡。",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetDateCounter",
+      "arguments": {
+        "targetDate": "2026-11-04",
+        "repeat": {
+          "unit": "week"
+        }
+      },
+      "writeResultTo": "/data/dateCounter"
+    }
+  ]
+}

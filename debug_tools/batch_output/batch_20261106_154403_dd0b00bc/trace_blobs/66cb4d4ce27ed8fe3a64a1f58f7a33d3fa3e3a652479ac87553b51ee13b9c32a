@@ -1,0 +1,34 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.bolt_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "ProgressCircleSingle",
+        "EmphasisText",
+        "DataDisplay"
+      ],
+      "dataId": "/data/phoneBattery/batterySOCText",
+      "priority": "must",
+      "requirement": "当前手机设备剩余电量百分比"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText",
+        "DataDisplay"
+      ],
+      "dataId": "/data/phoneBattery/chargingStatusDesc",
+      "priority": "must",
+      "requirement": "当前设备电池充电状态"
+    }
+  ],
+  "layoutHints": [
+    "S-center",
+    "S-title-dual-content"
+  ]
+}

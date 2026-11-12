@@ -1,0 +1,14 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 今日步数（纯整数，展示时追加“步”） (/data/healthSport/dailySteps).",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "S-title-content-action title-action requires an accepted Plan containing exactly one action and at most one title fact and no body or data display facts; preserve all required content.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

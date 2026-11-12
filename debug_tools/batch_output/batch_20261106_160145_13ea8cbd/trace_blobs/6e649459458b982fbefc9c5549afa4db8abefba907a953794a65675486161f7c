@@ -1,0 +1,6 @@
+["root","Column",{"width":"matchParent","height":"matchParent","padding":{"top":12.0,"bottom":12.0,"left":0,"right":0},"itemMargin":6.0,"borderRadius":20.0,"clip":true,"alignItems":"start","justifyContent":"start","_staticLayout":"W-static-content"},["__layout__root__static_header","__layout__root__static_body"]]
+["__layout__root__static_header","Column",{"width":"matchParent","alignItems":"start","justifyContent":"start","padding":{"left":12.0,"right":12.0},"height":16.0},["header"]]
+["header","SingleLineTitle",{"title":"一周值班安排"}]
+["__layout__root__static_body","Column",{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"end","itemMargin":6.0,"padding":{"left":12.0,"right":12.0}},["body"]]
+["body","SingleLineList",{"items":[{"text":"周二","assist":"上午上班 下午休息"},{"text":"周三","assist":"全天上班"},{"text":"周四","assist":"上午休息 下午上班"},{"text":"周五","assist":"全天上班"},{"text":"周六","assist":"上午上班 下午休息"}]}]
+["/state/ready",true]

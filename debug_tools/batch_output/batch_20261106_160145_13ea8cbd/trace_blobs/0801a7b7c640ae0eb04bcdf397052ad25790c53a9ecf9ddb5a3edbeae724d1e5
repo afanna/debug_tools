@@ -1,0 +1,128 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "name",
+      "identity": "姓名",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        2
+      ],
+      "id": "base",
+      "identity": "基本工资",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3
+      ],
+      "id": "bonus",
+      "identity": "奖金",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        4
+      ],
+      "id": "allowance",
+      "identity": "补贴",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡共同主题：通用工资表",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "通用工资表"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "工资表项目：姓名",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "姓名"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "工资表项目：基本工资",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "基本工资"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "工资表项目：奖金",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "奖金"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "工资表项目：补贴",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "补贴"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [
+    "工资表项目：扣款（超出带标题单行列表容量）",
+    "工资表项目：实发工资（超出带标题单行列表容量）"
+  ],
+  "paletteFamily": "auto",
+  "presentationStyle": "rows",
+  "selectionNotes": [
+    "用户要求展示通用工资表的项目清单，属于短标签加空值的一行式条目，选择SingleLineList并配共同主题标题",
+    "单行列表含标题最多承载5行，六项中保留姓名、基本工资、奖金、补贴四项，其余项目按容量省略并记录",
+    "标题“通用工资表”概括整卡主题，不重复正文主句"
+  ],
+  "staticPresentationFeedback": [
+    "静态试排无可用候选：4个对象；单行列表须完整单行，文本列表2–3项且含标题最多2项，除三项文本列表外均须标题；对比仅宽卡带标题2–3项，四个对象应改用其它合法结构。请在Plan内按用途重新组织或精简，保留必要对象名称、数值与限定；有限候选未找到结构不代表所有合法排版均不可行。"
+  ]
+}

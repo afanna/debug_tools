@@ -1,0 +1,116 @@
+[
+  {
+    "id": "Q001",
+    "size": "2x2",
+    "scale": 3,
+    "variants": [
+      {
+        "name": "original",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\Q001\\attempt_000\\genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q001\\original.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q001\\dom_original.json"
+      },
+      {
+        "name": "injected",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q001\\injected_genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q001\\injected.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q001\\dom_injected.json"
+      }
+    ]
+  },
+  {
+    "id": "Q031",
+    "size": "2x2",
+    "scale": 3,
+    "variants": [
+      {
+        "name": "original",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\Q031\\attempt_000\\genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q031\\original.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q031\\dom_original.json"
+      },
+      {
+        "name": "injected",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q031\\injected_genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q031\\injected.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q031\\dom_injected.json"
+      }
+    ]
+  },
+  {
+    "id": "Q061",
+    "size": "2x2",
+    "scale": 3,
+    "variants": [
+      {
+        "name": "original",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\Q061\\attempt_000\\genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q061\\original.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q061\\dom_original.json"
+      },
+      {
+        "name": "injected",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q061\\injected_genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q061\\injected.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q061\\dom_injected.json"
+      }
+    ]
+  },
+  {
+    "id": "Q076",
+    "size": "2x2",
+    "scale": 3,
+    "variants": [
+      {
+        "name": "original",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\Q076\\attempt_000\\genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q076\\original.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q076\\dom_original.json"
+      },
+      {
+        "name": "injected",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q076\\injected_genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q076\\injected.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q076\\dom_injected.json"
+      }
+    ]
+  },
+  {
+    "id": "Q086",
+    "size": "2x2",
+    "scale": 3,
+    "variants": [
+      {
+        "name": "original",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\Q086\\attempt_000\\genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q086\\original.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q086\\dom_original.json"
+      },
+      {
+        "name": "injected",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q086\\injected_genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q086\\injected.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q086\\dom_injected.json"
+      }
+    ]
+  },
+  {
+    "id": "Q091",
+    "size": "2x2",
+    "scale": 3,
+    "variants": [
+      {
+        "name": "original",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\Q091\\attempt_000\\genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q091\\original.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q091\\dom_original.json"
+      },
+      {
+        "name": "injected",
+        "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q091\\injected_genui.jsonl",
+        "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q091\\injected.png",
+        "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\postprocess\\exec_412330138f3b\\plugins\\target-effect\\samples\\Q091\\dom_injected.json"
+      }
+    ]
+  }
+]

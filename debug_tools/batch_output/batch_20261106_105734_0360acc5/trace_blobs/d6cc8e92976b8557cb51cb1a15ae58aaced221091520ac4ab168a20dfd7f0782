@@ -1,0 +1,131 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前天气温度与天气现象"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "ProgressCircleSingle"
+      ],
+      "dataId": "/data/phoneBattery/batterySOCText",
+      "priority": "must",
+      "requirement": "手机剩余电量文本"
+    },
+    {
+      "componentHints": [
+        "InfoBlock"
+      ],
+      "dataId": "/data/phoneBattery/chargingStatusDesc",
+      "priority": "should",
+      "requirement": "手机充电状态"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "今日累计步数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/dailyTotalCaloriesText",
+      "priority": "must",
+      "requirement": "今日活动总消耗热量"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/exerciseTypeName",
+      "priority": "should",
+      "requirement": "最近一次运动类型"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/exerciseDurationText",
+      "priority": "should",
+      "requirement": "最近一次运动时长"
+    },
+    {
+      "componentHints": [
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/powerRanking/rankingList/0/appName",
+      "priority": "must",
+      "requirement": "耗电应用排行第1名应用名称"
+    },
+    {
+      "componentHints": [
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/powerRanking/rankingList/0/powerText",
+      "priority": "must",
+      "requirement": "耗电应用排行第1名耗电占比"
+    },
+    {
+      "componentHints": [
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/powerRanking/rankingList/1/appName",
+      "priority": "must",
+      "requirement": "耗电应用排行第2名应用名称"
+    },
+    {
+      "componentHints": [
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/powerRanking/rankingList/1/powerText",
+      "priority": "must",
+      "requirement": "耗电应用排行第2名耗电占比"
+    },
+    {
+      "componentHints": [
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/powerRanking/rankingList/2/appName",
+      "priority": "must",
+      "requirement": "耗电应用排行第3名应用名称"
+    },
+    {
+      "componentHints": [
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/powerRanking/rankingList/2/powerText",
+      "priority": "must",
+      "requirement": "耗电应用排行第3名耗电占比"
+    }
+  ],
+  "layoutHints": [
+    "W-split-panels",
+    "W-top-bottom"
+  ]
+}

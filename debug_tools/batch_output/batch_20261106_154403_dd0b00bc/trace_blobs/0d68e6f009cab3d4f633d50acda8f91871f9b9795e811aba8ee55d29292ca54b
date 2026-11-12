@@ -1,0 +1,36 @@
+{
+  "capacityFits": [
+    {
+      "componentId": "body",
+      "componentType": "EmphasisText",
+      "doesNotFit": [
+        {
+          "itemIndex": null,
+          "planFacts": [],
+          "property": "mainText"
+        }
+      ],
+      "instruction": "只核对当前字段所属事实；证据不授权删除整组或其它条目。",
+      "scope": "currentStaticField"
+    }
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 2,
+  "consecutiveFailures": 1,
+  "fingerprint": "323ae9c0c2a429a0",
+  "instruction": "按当前静态合同修复完整源，正文使用TextList、SingleLineList、ComparisonGroup或EmphasisText；固定标题和贴底内容区；保留全部已接受事实、保护片段和原文要求；仅optionalDrop或approvedOmissions明确授权的事实可省略并反馈取舍。混合组件不得连带删除未授权文字或整组。先修语法与引用，再检查事实归属，最后调整组件；短键值可改SingleLineList。对比对象名与主值分开，关键数值、日期时间、单位保持完整片段；超宽时改全宽正文或列表；省略号只采用Plan已有展示版本，主题放header，强调位置展示结论或读数；完整落实已接受文字，不缩字或隐式裁切。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_capacity",
+      "layout_capacity"
+    ],
+    "revisitedTopology": true,
+    "topologyFingerprint": "a895d29a08cf4ccc"
+  },
+  "noProgress": false,
+  "repairStrategy": "plan_guided_recompose",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

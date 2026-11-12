@@ -1,0 +1,21 @@
+{
+  "id": "Q468",
+  "fileName": "Q468.json",
+  "title": "春节倒计时",
+  "query": "做一张春节倒计时卡片，显示距离2027年2月6日春节还有多少天。本轮卡片静态内容（用作展示的外部事实）：2027年春节是2月6日。",
+  "size": "2x2",
+  "sequence": 55,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2057.07,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00055-000",
+  "finalAttempt": 0
+}

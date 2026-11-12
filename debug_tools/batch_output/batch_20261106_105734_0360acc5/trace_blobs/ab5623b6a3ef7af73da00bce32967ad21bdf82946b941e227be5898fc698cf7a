@@ -1,0 +1,121 @@
+{
+  "assets": [],
+  "bundleName": "com.huawei.genui",
+  "cardSize": "2x4",
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/currentTime"
+      },
+      {
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc"
+        ],
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/phoneBattery"
+      },
+      {
+        "candidateOutputFields": [
+          "/events/0/dtStart",
+          "/events/0/eventLocation",
+          "/events/0/title"
+        ],
+        "capabilityId": "GetCalendarEvents",
+        "writeResultTo": "/data/calendar"
+      },
+      {
+        "candidateOutputFields": [
+          "/todoPendingCount",
+          "/todoTotalCount"
+        ],
+        "capabilityId": "GetMemoData",
+        "writeResultTo": "/data/memo"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "展示当前时间、手机电量、近期日程和备忘录待办的家庭简报卡片",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "size": "2x4",
+    "title": "家庭简报",
+    "uid": "batch-0360acc5-00009-000",
+    "userQuery": "家庭简报卡片，展示当前时间、手机电量、近期日程和备忘录待办信息"
+  },
+  "dataCapabilities": [
+    {
+      "data": {
+        "writeResultTo": "/data/currentTime"
+      },
+      "id": "GetCurrentTime"
+    },
+    {
+      "data": {
+        "writeResultTo": "/data/phoneBattery"
+      },
+      "id": "GetPhoneBatteryInfo"
+    },
+    {
+      "data": {
+        "futureDays": 7,
+        "writeResultTo": "/data/calendar"
+      },
+      "id": "GetCalendarEvents"
+    },
+    {
+      "data": {
+        "writeResultTo": "/data/memo"
+      },
+      "id": "GetMemoData"
+    }
+  ],
+  "description": "展示当前时间、手机电量、近期日程和备忘录待办的家庭简报卡片",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261027091150629"
+  },
+  "events": [
+    {
+      "id": "event.open.clock.alarm"
+    },
+    {
+      "id": "event.viewNote"
+    }
+  ],
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q200-000",
+    "isNew": true,
+    "sessionId": "batch-0360acc5"
+  },
+  "title": "家庭简报",
+  "userAuth": {
+    "user": {
+      "userId": "batch-0360acc5-00009-000"
+    }
+  },
+  "userQuery": "家庭简报卡片，展示当前时间、手机电量、近期日程和备忘录待办信息",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q456",
+  "fileName": "Q456.json",
+  "title": "耳机状态",
+  "query": "创建耳机卡片，展示耳机连接状态、设备名称、耳机盒电量、左右耳机电量及充电状态",
+  "size": "2x2",
+  "sequence": 44,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5413.79,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5405.67,
+  "uid": "batch-dd0b00bc-00044-000",
+  "finalAttempt": 0
+}

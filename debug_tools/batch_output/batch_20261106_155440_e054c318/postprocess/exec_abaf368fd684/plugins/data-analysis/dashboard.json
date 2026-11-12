@@ -1,0 +1,2727 @@
+{
+  "schemaVersion": "batch-postprocess-dashboard-v2",
+  "runId": "batch_20261106_155440_e054c318",
+  "executionId": "exec_abaf368fd684",
+  "plugin": {
+    "id": "data-analysis",
+    "name": "数据分析",
+    "version": "3.0.0",
+    "apiVersion": "batch-postprocess-v2"
+  },
+  "status": "partial",
+  "presentation": {
+    "defaultView": "table"
+  },
+  "outputs": [
+    {
+      "key": "analysis",
+      "scope": "sample",
+      "title": "样本分析",
+      "dataType": "json",
+      "required": true
+    },
+    {
+      "key": "statistics",
+      "scope": "dataset",
+      "title": "数据集统计",
+      "dataType": "json",
+      "required": true
+    },
+    {
+      "key": "overview",
+      "scope": "dataset",
+      "title": "统计覆盖",
+      "dataType": "metrics",
+      "required": true,
+      "renderer": "kpi"
+    },
+    {
+      "key": "usage",
+      "scope": "dataset",
+      "title": "实际使用比例",
+      "dataType": "records",
+      "renderer": "table",
+      "required": true
+    },
+    {
+      "key": "models",
+      "scope": "dataset",
+      "title": "模型分阶段性能",
+      "dataType": "records",
+      "renderer": "table",
+      "required": true
+    }
+  ],
+  "datasetResult": {
+    "status": "success",
+    "summary": "已分析 107 个样本，缺失指标保持未知",
+    "facts": {
+      "sampleCount": 107
+    },
+    "artifacts": [
+      {
+        "key": "statistics",
+        "data": {
+          "schemaVersion": "batch-analysis-v1",
+          "sampleCount": 107,
+          "requestCount": 107,
+          "paddedCount": 0,
+          "effectiveCount": 107,
+          "pass1": {
+            "hits": 0,
+            "count": 0,
+            "rate": null
+          },
+          "pass2": {
+            "hits": 0,
+            "count": 0,
+            "rate": null
+          },
+          "elapsedMs": {
+            "sum": 218566.03,
+            "count": 107,
+            "mean": 2042.6731775700935
+          },
+          "planMs": {
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          "generateMs": {
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          "repairMs": {
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          "themeMs": {
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          "interfaceRetries": {
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          "repairs": {
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          "modelRetries": {
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          "planRetries": {
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          "providerFallbacks": {
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          "models": {
+            "all": {
+              "ttftMs": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              },
+              "tps": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              }
+            },
+            "plan": {
+              "ttftMs": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              },
+              "tps": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              }
+            },
+            "generate": {
+              "ttftMs": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              },
+              "tps": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              }
+            },
+            "repair": {
+              "ttftMs": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              },
+              "tps": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              }
+            },
+            "theme": {
+              "ttftMs": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              },
+              "tps": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              }
+            },
+            "unknown": {
+              "ttftMs": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              },
+              "tps": {
+                "sum": 0,
+                "count": 0,
+                "mean": null
+              }
+            }
+          },
+          "usage": {
+            "components": {
+              "count": 0,
+              "used": 0,
+              "rate": null,
+              "items": []
+            },
+            "assets": {
+              "count": 0,
+              "used": 0,
+              "rate": null,
+              "items": []
+            },
+            "events": {
+              "count": 0,
+              "used": 0,
+              "rate": null,
+              "items": []
+            },
+            "data": {
+              "count": 0,
+              "used": 0,
+              "rate": null,
+              "items": []
+            }
+          }
+        },
+        "title": "数据集统计",
+        "dataType": "json"
+      },
+      {
+        "key": "overview",
+        "data": [
+          {
+            "label": "实际请求",
+            "value": 107
+          },
+          {
+            "label": "补齐记录",
+            "value": 0
+          },
+          {
+            "label": "有效统计记录",
+            "value": 107
+          },
+          {
+            "label": "pass@1",
+            "value": null,
+            "unit": "%",
+            "description": "有效实际请求 0"
+          },
+          {
+            "label": "pass@2",
+            "value": null,
+            "unit": "%",
+            "description": "有效实际请求 0"
+          },
+          {
+            "label": "计划平均耗时",
+            "value": null,
+            "unit": "ms",
+            "description": "有效记录 0"
+          },
+          {
+            "label": "生成平均耗时",
+            "value": null,
+            "unit": "ms",
+            "description": "有效记录 0"
+          },
+          {
+            "label": "修复平均耗时",
+            "value": null,
+            "unit": "ms",
+            "description": "有效记录 0"
+          },
+          {
+            "label": "主题平均耗时",
+            "value": null,
+            "unit": "ms",
+            "description": "有效记录 0"
+          },
+          {
+            "label": "接口端到端平均耗时",
+            "value": 2042.6731775700935,
+            "unit": "ms",
+            "description": "有效记录 107"
+          },
+          {
+            "label": "平均接口重试",
+            "value": null,
+            "unit": "次",
+            "description": "有效记录 0"
+          },
+          {
+            "label": "平均质量修复",
+            "value": null,
+            "unit": "次",
+            "description": "有效记录 0"
+          },
+          {
+            "label": "平均模型失败重试",
+            "value": null,
+            "unit": "次",
+            "description": "有效记录 0"
+          },
+          {
+            "label": "平均计划重试",
+            "value": null,
+            "unit": "次",
+            "description": "有效记录 0"
+          },
+          {
+            "label": "平均提供方切换",
+            "value": null,
+            "unit": "次",
+            "description": "有效记录 0"
+          },
+          {
+            "label": "模型 TTFT",
+            "value": null,
+            "unit": "ms",
+            "description": "有效物理调用 0"
+          },
+          {
+            "label": "模型 TPS",
+            "value": null,
+            "unit": "token/s",
+            "description": "有效物理调用 0"
+          },
+          {
+            "label": "components 类别使用率",
+            "value": null,
+            "unit": "%",
+            "description": "使用 0 / 可分析 0"
+          },
+          {
+            "label": "assets 类别使用率",
+            "value": null,
+            "unit": "%",
+            "description": "使用 0 / 可分析 0"
+          },
+          {
+            "label": "events 类别使用率",
+            "value": null,
+            "unit": "%",
+            "description": "使用 0 / 可分析 0"
+          },
+          {
+            "label": "data 类别使用率",
+            "value": null,
+            "unit": "%",
+            "description": "使用 0 / 可分析 0"
+          }
+        ],
+        "title": "统计覆盖",
+        "dataType": "metrics",
+        "renderer": "kpi"
+      },
+      {
+        "key": "usage",
+        "data": [],
+        "title": "实际使用比例",
+        "dataType": "records",
+        "renderer": "table"
+      },
+      {
+        "key": "models",
+        "data": [
+          {
+            "phase": "all",
+            "metric": "ttftMs",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "all",
+            "metric": "tps",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "plan",
+            "metric": "ttftMs",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "plan",
+            "metric": "tps",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "generate",
+            "metric": "ttftMs",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "generate",
+            "metric": "tps",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "repair",
+            "metric": "ttftMs",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "repair",
+            "metric": "tps",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "theme",
+            "metric": "ttftMs",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "theme",
+            "metric": "tps",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "unknown",
+            "metric": "ttftMs",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          },
+          {
+            "phase": "unknown",
+            "metric": "tps",
+            "sum": 0,
+            "count": 0,
+            "mean": null
+          }
+        ],
+        "title": "模型分阶段性能",
+        "dataType": "records",
+        "renderer": "table"
+      }
+    ]
+  },
+  "counts": {
+    "skipped": 0,
+    "partial": 107,
+    "success": 0,
+    "failed": 0
+  },
+  "totalSamples": 107,
+  "sourceTotalSamples": 107,
+  "selection": {},
+  "samples": [
+    {
+      "sampleId": "Q413",
+      "title": "今日天气",
+      "query": "把天气桌面卡片放在手机桌面上，显示当前天气温度和天气现象。",
+      "size": "2x2",
+      "sequence": 1,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q414",
+      "title": "运动健康",
+      "query": "生成运动健康的卡片，展示今日步数、热量消耗、睡眠情况等运动健康数据",
+      "size": "2x2",
+      "sequence": 2,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q415",
+      "title": "今日天气",
+      "query": "在桌面显示天气卡片，显示当前天气温度和天气现象。",
+      "size": "2x2",
+      "sequence": 3,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q416",
+      "title": "今日天气",
+      "query": "做一张今日天气卡片，显示当前温度和天气现象。",
+      "size": "2x2",
+      "sequence": 4,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q417",
+      "title": "时钟",
+      "query": "重新生成一张精美的横版2x4桌面时钟卡片，用超大号数字以24小时制突出显示当前时间，同时展示日期、星期和农历信息，整体设计精致美观，视觉效果出色。",
+      "size": "2x4",
+      "sequence": 5,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q418",
+      "title": "家人纪念日",
+      "query": "制作一张家人重要日子倒计时卡片，标注每位家人的名字和对应的公历日期，每天自动更新倒计时天数。奶奶生日：2027年10月5日（农历九月初六）；爷爷生日：2027年6月24日（农历五月二十）；爸爸生日：2027年4月19日（农历三月十三）；妈妈生日：2027年4月12日（农历三月初六）；崔景会生日：2027年10月28日（农历九月廿九）；父母结婚纪念日：2027年1月23日（农历腊月十六）。\n本轮卡片静态内容（用作展示的外部事实）：奶奶生日10月5日、爷爷生日6月24日、爸爸生日4月19日、妈妈生日4月12日、崔景会生日10月28日、父母结婚纪念日1月23日",
+      "size": "2x4",
+      "sequence": 6,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q419",
+      "title": "当前时间",
+      "query": "做一张时间卡片，显示当前日期、时间和星期。",
+      "size": "2x2",
+      "sequence": 7,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q420",
+      "title": "充电卡片",
+      "query": "把步数添加到充电卡片，生成一张同时展示充电状态和今日步数的桌面卡片",
+      "size": "2x2",
+      "sequence": 8,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q421",
+      "title": "天气",
+      "query": "添加天气卡片，展示当前天气和未来天气预报",
+      "size": "2x2",
+      "sequence": 9,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q422",
+      "title": "时间卡片",
+      "query": "创建一张时间卡片，显示当前日期、时间和星期。",
+      "size": "2x2",
+      "sequence": 10,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q424",
+      "title": "算题面板",
+      "query": "做一个空白面板卡片，用于写算题。本轮卡片静态内容（用作展示的外部事实）：空白面板，用于书写算题。",
+      "size": "2x4",
+      "sequence": 11,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q426",
+      "title": "天气",
+      "query": "用户要求将天气卡片添加到手机桌面，展示包头市青山区的当前天气和未来3天预报，包含温度、天气现象、湿度、空气质量、紫外线等信息，点击卡片可打开天气应用查看详情。",
+      "size": "2x2",
+      "sequence": 12,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q428",
+      "title": "万年历",
+      "query": "做一张万年历卡片，显示当前日期、星期和农历信息。",
+      "size": "2x2",
+      "sequence": 13,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q430",
+      "title": "倒计时",
+      "query": "给我生成一个在桌面上的倒计时，时间是现在到11月13号早上7点",
+      "size": "2x2",
+      "sequence": 14,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q423",
+      "title": "吃前拍一拍",
+      "query": "创建一张桌面卡片，显示最近一次运动类型、开始时间、结束时间和时长，点击可跳转到运动健康应用的锻炼Tab页。",
+      "size": "2x2",
+      "sequence": 15,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q425",
+      "title": "时间",
+      "query": "在主界面上添加一个时间的卡片，显示当前时间、日期、星期和农历信息。",
+      "size": "2x2",
+      "sequence": 16,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q427",
+      "title": "倒计时",
+      "query": "创建一张到2027年9月1日的天数倒计时卡片，显示距离目标日期的天数",
+      "size": "2x2",
+      "sequence": 17,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q429",
+      "title": "生日倒计时",
+      "query": "我的生日是农历腊月初一，帮我做一个生日倒计时卡片。本轮卡片静态内容（用作展示的外部事实）：我的生日是农历腊月初一，对应公历2027年1月8日。",
+      "size": "2x2",
+      "sequence": 18,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q431",
+      "title": "时钟",
+      "query": "做一张屏幕时钟卡片，显示当前时间和日期。",
+      "size": "2x2",
+      "sequence": 19,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q432",
+      "title": "3D动态日历",
+      "query": "打开华为3D动态日历，制作一张3D动态日历卡片，显示当前日期、星期、农历以及近期日程安排。",
+      "size": "2x4",
+      "sequence": 20,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q434",
+      "title": "时间卡片",
+      "query": "重新创建时间卡片，显示当前时间、日期、星期和农历信息。",
+      "size": "2x2",
+      "sequence": 21,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q436",
+      "title": "倒计时",
+      "query": "做一张倒计时卡片，显示距离目标日期的天数。本轮卡片静态内容（用作展示的外部事实）：倒计时卡片",
+      "size": "2x2",
+      "sequence": 22,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q438",
+      "title": "时间天气",
+      "query": "创建一张桌面卡片，同时展示时间、日期和天气预报信息，时间日期和天气都在一起显示",
+      "size": "2x4",
+      "sequence": 23,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q440",
+      "title": "时钟",
+      "query": "重新生成一张横版2x4尺寸的桌面时钟卡片，必须用大号数字突出显示当前时间（时:分），同时展示日期、星期和农历信息。",
+      "size": "2x4",
+      "sequence": 24,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q433",
+      "title": "渡人先渡己",
+      "query": "制作一张静态文字卡片，展示以下精简版内容：爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。\n本轮卡片静态内容（用作展示的外部事实）：爱是修出的内丹。先把自己活成光，黑暗自会寻光而来。渡人先渡己，自爱圆满。",
+      "size": "2x2",
+      "sequence": 25,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q435",
+      "title": "电池状态",
+      "query": "做一张手机电池电量卡片，显示当前电量百分比和充电状态，当手机充满电时播报充电完成。",
+      "size": "2x2",
+      "sequence": 26,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q437",
+      "title": "今日步数",
+      "query": "做一张步数卡片，显示今日步数。",
+      "size": "2x2",
+      "sequence": 27,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q439",
+      "title": "我的记忆",
+      "query": "生成一个我的记忆卡片，展示我的备忘录笔记和待办信息",
+      "size": "2x2",
+      "sequence": 28,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q441",
+      "title": "渡人先渡己",
+      "query": "制作一张静态文字卡片，展示以下内容：世人皆向外求爱，不知爱是向内修出的内丹。自己未曾炼成，给出的也只是半剂药。先把自己活成一道光，黑暗自会循光而来——那才是真正的慈悲。渡人先渡己，自爱圆满，天地同尘。\n本轮卡片静态内容（用作展示的外部事实）：世人皆向外求爱，不知爱是向内修出的内丹。自己未曾炼成，给出的也只是半剂药。先把自己活成一道光，黑暗自会循光而来——那才是真正的慈悲。渡人先渡己，自爱圆满，天地同尘。",
+      "size": "2x2",
+      "sequence": 29,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q442",
+      "title": "时钟",
+      "query": "创建一张桌面时钟卡片，显示当前时间、日期、星期和农历信息。",
+      "size": "2x2",
+      "sequence": 30,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q444",
+      "title": "天气时间",
+      "query": "帮我添加一个天气和时间卡片到主屏幕上，显示当前天气（温度、天气现象）和当前时间（日期、星期）。",
+      "size": "2x2",
+      "sequence": 31,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q446",
+      "title": "时间卡片",
+      "query": "恢复桌面时间卡片，显示当前时间、日期、星期和农历信息。",
+      "size": "2x2",
+      "sequence": 32,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q448",
+      "title": "家人纪念日",
+      "query": "制作一张家人重要日子倒计时卡片，标注每位家人的名字和对应的公历日期。奶奶生日：2026年10月15日（农历九月初六）；爷爷生日：2026年7月4日（农历五月二十）；爸爸生日：2026年4月29日（农历三月十三）；妈妈生日：2026年4月22日（农历三月初六）；崔景会生日：2026年11月8日（农历九月三十）；父母结婚纪念日：2027年1月23日（农历腊月十六）。\n本轮卡片静态内容（用作展示的外部事实）：奶奶生日10月15日、爷爷生日7月4日、爸爸生日4月29日、妈妈生日4月22日、崔景会生日11月8日、父母结婚纪念日1月23日",
+      "size": "2x4",
+      "sequence": 33,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q450",
+      "title": "时钟",
+      "query": "创建一张横版2x4尺寸的桌面时钟卡片，重点突出显示当前时间，同时展示日期、星期和农历信息。",
+      "size": "2x4",
+      "sequence": 34,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q452",
+      "title": "当前电量",
+      "query": "创建一张低电量卡片，显示当前手机电量",
+      "size": "2x2",
+      "sequence": 35,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q443",
+      "title": "今日天气",
+      "query": "帮我把天气建成卡片放在桌面，显示当前天气的温度和天气现象。",
+      "size": "2x2",
+      "sequence": 36,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q445",
+      "title": "时钟",
+      "query": "重新生成一张横版2x4尺寸的桌面时钟卡片，用超大号数字以24小时制（如21:16）突出显示当前时间，同时展示日期、星期和农历信息。",
+      "size": "2x4",
+      "sequence": 37,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q447",
+      "title": "运动数据",
+      "query": "将运动数据显示到桌面，创建一张运动健康卡片，展示今日步数、热量消耗、运动距离等运动数据。",
+      "size": "2x2",
+      "sequence": 38,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q449",
+      "title": "天气",
+      "query": "做一张天气桌面卡片，显示当前天气和温度。",
+      "size": "2x2",
+      "sequence": 39,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q451",
+      "title": "纳税Top3",
+      "query": "展示中国纳税Top3企业排名及纳税额，包括中国石化、中国石油、工商银行\n\n本轮卡片静态内容（用作展示的外部事实）：\n1. 中国石化，2026年上半年纳税1,656.94亿元\n2. 中国石油，2026年上半年纳税1,322.72亿元\n3. 工商银行，2026年上半年纳税831.82亿元",
+      "size": "2x2",
+      "sequence": 40,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q453",
+      "title": "杭州天气与耳机电量",
+      "query": "帮我生成杭州天气加耳机电量的卡片。展示杭州的天气信息（当前温度、天气状况）和蓝牙耳机的电量信息（耳机盒、左右耳电量）。",
+      "size": "2x2",
+      "sequence": 41,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q454",
+      "title": "桌面卡片",
+      "query": "创建一张桌面卡片，参考图片样式：显示时间、日期（含农历）、电量、天气（温度、城市）、音乐播放信息，背景为山湖风景。",
+      "size": "2x4",
+      "sequence": 42,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q456",
+      "title": "耳机状态",
+      "query": "创建耳机卡片，展示耳机连接状态、设备名称、耳机盒电量、左右耳机电量及充电状态",
+      "size": "2x2",
+      "sequence": 43,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q458",
+      "title": "今日天气",
+      "query": "做一张辉县市今日天气桌面卡片，显示当前温度和天气现象。",
+      "size": "2x2",
+      "sequence": 44,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q460",
+      "title": "今日天气",
+      "query": "做一张深圳今日天气卡片，显示当前温度和天气现象。",
+      "size": "2x2",
+      "sequence": 45,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q462",
+      "title": "工资表",
+      "query": "创建一张通用的工资表卡片，包含姓名、基本工资、奖金、补贴、扣款、实发工资等项目，展示通用的工资表格式。本轮卡片静态内容（用作展示的外部事实）：通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资",
+      "size": "2x4",
+      "sequence": 46,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q464",
+      "title": "行程提醒",
+      "query": "为用户生成行程提醒卡片，展示航班FU6686郑州新郑国际机场飞往厦门高崎国际机场的行程信息，计划出港时间2026年11月1日22:40，计划到港时间2026年11月2日00:50。本轮卡片静态内容（用作展示的外部事实）：航班号FU6686，郑州新郑国际机场→厦门高崎国际机场，计划出港2026-11-01 22:40，计划到港2026-11-02 00:50",
+      "size": "2x4",
+      "sequence": 47,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q455",
+      "title": "锁屏时间",
+      "query": "生成一个和锁屏界面一样的时间卡片，显示时间 12:40、日期 11 月 02 日、星期一、农历九月廿四，背景为女性照片。",
+      "size": "2x4",
+      "sequence": 48,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q457",
+      "title": "快递取件提醒",
+      "query": "在桌面生成快递取件码提醒卡片，展示京东配送的2个包裹取件信息：取件码9-4-0046和9-2-0060，取件地点樟村22栋。本轮卡片静态内容（用作展示的外部事实）：京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。",
+      "size": "2x2",
+      "sequence": 49,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q459",
+      "title": "11月日程",
+      "query": "制作个静态卡片\n\n本轮卡片静态内容（用作展示的外部事实）：\n11月6日 PC镇江实地指导(镇江)\n11月7日 PC天坛学习班(北京)、PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会\n11月12日 AI CPP特训营（上海）\n11月13日 AI CPP特训营(苏州)、CPP苏儿学习班(苏州/11.13-14）、中国医师妇产科年会(沈阳/11.13-15)\n11月14日 PC运河之光(天津)、PC鲲鹏社(上海)、PC实地指导孙逸仙医院(宜宾）、PC省级机关学习班(南京)\n11月18日 PC常熟一院学习班(常熟)\n11月19日 PC 3i Vision会议(武汉)\n11月19-23日 CUA年会（武汉）\n11月20日 CPP AI特训营（沈阳）、CPP河北儿童&儿研所交流（石家庄）、CPP盛京儿泌学习班（沈阳/11.20-21）\n11月21日 CPP济南儿童赞助(济南)\n11月26日 PC天津一中心实地指导(天津)\n11月27日 PC武汉协和互访（武汉）、PC鼓楼-淮安实地指导(淮安)、PC江苏人民学习班-HIMA领航会(南京)、PC苏北人民学习班(扬州/11.27-28)\n11月28日 PC湘雅二院互访(长沙）、CPP河北儿童赞助会议(石家庄）、中国医大四会议赞助(沈阳/11.28-29)\n11月29日 CPP上海亚太会、PC天津人民会议赞助",
+      "size": "2x2",
+      "sequence": 50,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q461",
+      "title": "时间卡片",
+      "query": "生成一个漂亮的桌面时间卡片，显示当前时间、日期、星期和农历，点击打开闹钟",
+      "size": "2x2",
+      "sequence": 51,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q463",
+      "title": "天气时间",
+      "query": "创建一张桌面天气时间卡片，显示当前天气（温度、天气现象）和当前时间（日期、星期、农历）。",
+      "size": "2x2",
+      "sequence": 52,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q465",
+      "title": "天气",
+      "query": "把天气放在桌面上应用",
+      "size": "2x2",
+      "sequence": 53,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q466",
+      "title": "当前时间",
+      "query": "生成一个和锁屏界面一样的时间卡片，显示当前时间、日期、星期和农历信息。",
+      "size": "2x2",
+      "sequence": 54,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q468",
+      "title": "春节倒计时",
+      "query": "做一张春节倒计时卡片，显示距离2027年2月6日春节还有多少天。本轮卡片静态内容（用作展示的外部事实）：2027年春节是2月6日。",
+      "size": "2x2",
+      "sequence": 55,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q470",
+      "title": "老爸生日",
+      "query": "把老爸的生日放置在桌面提示，显示老爸生日的倒计时天数。老爸生日是2027年1月5日。本轮卡片静态内容（用作展示的外部事实）：老爸生日是2027年1月5日。",
+      "size": "2x2",
+      "sequence": 56,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q472",
+      "title": "倒计时",
+      "query": "制作一张倒计时卡片，从明天开始倒计时三个月，目标日期为2027年2月3日，显示距离目标日期还有多少天。",
+      "size": "2x2",
+      "sequence": 57,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q474",
+      "title": "春节倒计时",
+      "query": "制作一张春节倒计时卡片，显示距离春节还有多少天。目标日期为2027年2月6日（春节）。本轮卡片静态内容（用作展示的外部事实）：2027年春节是2月6日。",
+      "size": "2x2",
+      "sequence": 58,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q467",
+      "title": "备忘录",
+      "query": "在手机主屏幕生成一个备忘录卡片，展示备忘录笔记内容，点击卡片可跳转到备忘录应用进行编辑。",
+      "size": "2x4",
+      "sequence": 59,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q469",
+      "title": "备忘录",
+      "query": "在手机主屏幕放一个可视化备忘录卡片，展示备忘录笔记和待办事项的汇总信息，包括笔记总数、最近笔记列表、待办总数及待办明细。",
+      "size": "2x4",
+      "sequence": 60,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q471",
+      "title": "天气日历",
+      "query": "创建一张天气和日历桌面卡片，显示当前天气（温度、天气现象）和近期日程安排。",
+      "size": "2x4",
+      "sequence": 61,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q473",
+      "title": "时间卡片",
+      "query": "做一张时间卡片，显示当前时间、日期、星期和农历。",
+      "size": "2x2",
+      "sequence": 62,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q475",
+      "title": "大小周排班",
+      "query": "制作一张大小周排班日历卡片，展示从2026年11月2日到2026年12月31日的大小周排班安排。排班规则：本周（11月2日-11月8日）为小周，上六天休一天（周日休息）；下一周为大周，上五天休两天（周六周日休息），大小周交替轮换。小周：11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31；大周：11/9-11/15、11/23-11/29、12/7-12/13、12/21-12/27。卡片需清晰标注每周是大小周、上班日和休息日。本轮卡片静态内容（用作展示的外部事实）：2026年11月2日至12月31日大小周排班，小周上六休一（周日休），大周上五休二（周六周日休），交替轮换。小周：11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31；大周：11/9-11/15、11/23-11/29、12/7-12/13、12/21-12/27。",
+      "size": "2x4",
+      "sequence": 63,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q476",
+      "title": "减脂食谱",
+      "query": "把备忘录里的减脂食谱做成桌面卡片，显示一周三餐安排和关键提醒。本轮卡片静态内容（用作展示的外部事实）：📅 一周减脂食谱（周一至周日）\n\n周一：\n早餐：燕麦粥 + 水煮蛋 + 凉拌黄瓜\n午餐：糙米饭 + 清蒸鱼 + 清炒西兰花\n晚餐：杂粮粥 + 手撕包菜 + 素炒豆腐\n\n周二：\n早餐：全麦面包 + 脱脂牛奶 + 苹果\n午餐：红薯饭 + 炒鸡胸肉片 + 清炒菠菜\n晚餐：小米粥 + 清炒胡萝卜丝\n\n周三：\n早餐：玉米 + 西红柿炒鸡蛋\n午餐：荞麦馒头 + 凉拌海带丝\n晚餐：绿豆粥 + 清炒西葫芦\n\n周四：\n早餐：红豆薏仁粥 + 清炒油麦菜\n午餐：藜麦饭 + 香煎豆腐 + 白灼虾\n晚餐：南瓜粥 + 凉拌豆芽\n\n周五：\n早餐：荞麦面 + 西兰花炒木耳\n午餐：紫薯饭 + 白灼虾 + 清炒莴笋\n晚餐：山药粥 + 清炒豆角\n\n周六：\n早餐：黑米粥 + 凉拌生菜\n午餐：燕麦饭 + 去皮鸡腿 + 清炒时蔬\n晚餐：蔬菜汤 + 蒸南瓜\n\n周日：\n早餐：玉米糊 + 水煮蛋 + 凉拌黄瓜\n午餐：高粱米饭 + 炒虾仁 + 清炒油麦菜\n晚餐：香菇青菜汤 + 蒸南瓜\n\n💡 关键提醒：\n1. 主食换成粗粮（糙米、燕麦、玉米、红薯）\n2. 蛋白质选低脂的（鱼虾、去皮鸡肉、豆腐）\n3. 烹饪方式多用蒸、煮、凉拌，少油炸\n4. 每日饮水2000-3000ml，配合运动\n5. 加餐可选：一小把坚果、无糖酸奶或一个水果",
+      "size": "2x4",
+      "sequence": 64,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q477",
+      "title": "天气预报",
+      "query": "把那个大框框设置天气预报，显示当前天气和温度。",
+      "size": "2x4",
+      "sequence": 65,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q478",
+      "title": "备忘录",
+      "query": "在桌面上创建备忘录卡片，展示备忘录笔记和待办信息。",
+      "size": "2x2",
+      "sequence": 66,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q480",
+      "title": "值班表",
+      "query": "做一张值班表卡片，显示一周的值班安排：星期二上午上班、下午休息；星期四上午休息、下午上班；星期三、星期五全天上班；星期六、星期天上午上班、下午休息。本轮卡片静态内容（用作展示的外部事实）：值班安排：周二上午上班下午休息，周四上午休息下午上班，周三周五全天上班，周六周日上午上班下午休息。",
+      "size": "2x4",
+      "sequence": 67,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q482",
+      "title": "天气",
+      "query": "在当前页面添加一个天气卡片到堆叠窗口中，展示当前天气信息",
+      "size": "2x4",
+      "sequence": 68,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q479",
+      "title": "退休倒计时",
+      "query": "创建退休倒计时卡片，目标日期是 2034 年 9 月 30 日",
+      "size": "2x2",
+      "sequence": 69,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q481",
+      "title": "当前时间",
+      "query": "把时间显示在桌面上，创建一张显示当前时间、日期、星期和农历的桌面卡片。",
+      "size": "2x2",
+      "sequence": 70,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q483",
+      "title": "锁屏风格卡片",
+      "query": "创建一张类似锁屏界面的桌面卡片，显示当前时间、日期、星期、农历以及当前天气温度和天气现象。",
+      "size": "2x4",
+      "sequence": 71,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q484",
+      "title": "天气日历",
+      "query": "用户想要在桌面上设置一个天气和日历堆叠在一起的卡片，展示当前天气信息和近期日程安排。",
+      "size": "2x4",
+      "sequence": 72,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q486",
+      "title": "时间天气",
+      "query": "创建一张大尺寸时间天气卡片，时钟时间字体最大最醒目，显示当前时间、日期、星期、农历，同时显示当前所在位置的天气（温度、天气现象）和地点名称。",
+      "size": "2x4",
+      "sequence": 73,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q488",
+      "title": "天气预报",
+      "query": "帮我添加天气预报卡片，展示当前天气和未来天气预报",
+      "size": "2x2",
+      "sequence": 74,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q490",
+      "title": "重要日期倒计时",
+      "query": "创建倒计时卡片，显示以下日期的倒计时天数：农历九月初六（2027年10月5日）、农历五月二十（2027年6月24日）、农历三月十三（2027年4月19日）、农历腊月十六（2028年1月12日）、农历三月初六（2027年4月12日）、农历九月廿九（2027年10月28日）。本轮卡片静态内容（用作展示的外部事实）：农历九月初六对应公历2027年10月5日，农历五月二十对应公历2027年6月24日，农历三月十三对应公历2027年4月19日，农历腊月十六对应公历2028年1月12日，农历三月初六对应公历2027年4月12日，2027年农历九月没有三十，九月廿九为公历2027年10月28日。",
+      "size": "2x4",
+      "sequence": 75,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q492",
+      "title": "锻炼打卡",
+      "query": "做一张锻炼打卡桌面卡片，展示备忘录中的待办打卡情况，显示已完成和未完成的锻炼打卡待办数量，点击可打开备忘录查看打卡记录。本轮卡片静态内容（用作展示的外部事实）：用户每天锻炼后打卡，通过备忘录待办记录锻炼打卡。",
+      "size": "2x2",
+      "sequence": 76,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q485",
+      "title": "我的备忘录",
+      "query": "生成一个我的备忘录卡片，显示备忘录笔记的标题和正文内容",
+      "size": "2x2",
+      "sequence": 77,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q487",
+      "title": "睡眠卡片",
+      "query": "在桌面增加一个显示睡眠信息的卡片，展示睡眠得分、睡眠状态、夜间睡眠时长、深睡时长、入睡时间和醒来时间。",
+      "size": "2x2",
+      "sequence": 78,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q489",
+      "title": "每日锻炼打卡",
+      "query": "做一张每日锻炼打卡卡片，每天锻炼计划：10个俯卧撑、20个深蹲、30个开合跳。展示当天运动健康数据（步数、热量消耗），提醒每天坚持锻炼打卡。本轮卡片静态内容（用作展示的外部事实）：每天锻炼计划：俯卧撑10个、深蹲20个、开合跳30个，每天坚持打卡锻炼。",
+      "size": "2x4",
+      "sequence": 79,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q491",
+      "title": "南京天气",
+      "query": "创建一张桌面卡片显示南京天气，展示当前天气状况和温度",
+      "size": "2x2",
+      "sequence": 80,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q493",
+      "title": "明日天气",
+      "query": "显示明天上海青浦区的天气，点击查看青浦区天气详情",
+      "size": "2x2",
+      "sequence": 81,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q495",
+      "title": "数字时钟",
+      "query": "修改桌面卡片中的数字时钟文字颜色",
+      "size": "2x2",
+      "sequence": 82,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q494",
+      "title": "张定豪成绩",
+      "query": "把当前屏幕上六（3）班成绩表中张定豪同学的成绩做成一张小卡片保存下来。本轮卡片静态内容（用作展示的外部事实）：张定豪，语文87分，数学98分，英语98.75分。",
+      "size": "2x4",
+      "sequence": 83,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q496",
+      "title": "时钟",
+      "query": "添加时钟挂件到桌面，显示当前时间、日期、星期，点击可打开闹钟应用。",
+      "size": "2x2",
+      "sequence": 84,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q498",
+      "title": "耳机电量",
+      "query": "把耳机电池电量放到桌面上，创建一张耳机电量卡片，显示耳机名称、耳机盒电量、左右耳电量。",
+      "size": "2x2",
+      "sequence": 85,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q500",
+      "title": "今日日期",
+      "query": "在我的页面（当前打开的页面）上添加日期显示，显示当前日期、星期和农历信息。",
+      "size": "2x2",
+      "sequence": 86,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q502",
+      "title": "12月倒数",
+      "query": "做一张阳历12月的倒数日卡片，显示距离12月还有多少天。本轮卡片静态内容（用作展示的外部事实）：目标日期为2026年12月1日。",
+      "size": "2x2",
+      "sequence": 87,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q504",
+      "title": "天气预报",
+      "query": "做一张天气预报卡片，显示当前温度和天气现象。",
+      "size": "2x2",
+      "sequence": 88,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q497",
+      "title": "爸爸生日",
+      "query": "做一张爸爸生日倒数日卡片，显示距离爸爸生日还有多少天。",
+      "size": "2x2",
+      "sequence": 89,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q499",
+      "title": "月份中英对照",
+      "query": "生成一份从1月到12月的中英文对照方便记忆的卡片。本轮卡片静态内容（用作展示的外部事实）：1月 January (Jan) | 2月 February (Feb) | 3月 March (Mar) | 4月 April (Apr) | 5月 May | 6月 June (Jun) | 7月 July (Jul) | 8月 August (Aug) | 9月 September (Sep) | 10月 October (Oct) | 11月 November (Nov) | 12月 December (Dec)",
+      "size": "2x4",
+      "sequence": 90,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q501",
+      "title": "我的训练计划",
+      "query": "制作一张我的训练计划桌面卡片，展示一周四练的胸背腿肩分化训练安排。本轮卡片静态内容（用作展示的外部事实）：我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。每次训练包含热身、主项训练和拉伸放松。",
+      "size": "2x4",
+      "sequence": 91,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q503",
+      "title": "时间",
+      "query": "在桌面添加一个时间卡片，显示当前时间、日期、星期和农历。",
+      "size": "2x2",
+      "sequence": 92,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q505",
+      "title": "耳机电量",
+      "query": "做一张耳机小组件卡片，显示蓝牙耳机的名称、耳机盒电量、左右耳电量及充电状态。",
+      "size": "2x2",
+      "sequence": 93,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q506",
+      "title": "电量管理",
+      "query": "创建一个手机电量管理卡片，能查看当前电量，还能一键开启省电模式",
+      "size": "2x2",
+      "sequence": 94,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q508",
+      "title": "今日天气",
+      "query": "做一张萧山今日天气卡片，显示当前温度和天气现象。本轮卡片静态内容（用作展示的外部事实）：萧山区今日小雨转中雨，14℃~19℃。",
+      "size": "2x2",
+      "sequence": 95,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q510",
+      "title": "时钟",
+      "query": "生成一个时钟大卡片，显示当前时间、日期、星期和农历信息，风格类似锁屏界面的时间显示，点击可打开闹钟应用。",
+      "size": "2x4",
+      "sequence": 96,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q512",
+      "title": "湖州新闻",
+      "query": "生成一张新闻卡，展示湖州今日新闻：2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕，来自全市20支代表队、60名检测精英同场竞技，申苏浙皖改扩建第TJ01标工地试验室摘得团体一等奖。本轮卡片静态内容（用作展示的外部事实）：2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕，来自全市公路水运工程试验检测机构及在建项目工地试验室的20支代表队、60名检测精英同场竞技。申苏浙皖改扩建第TJ01标工地试验室凭借扎实的理论功底和出色的现场发挥摘得团体一等奖，另有两家单位分获团体二等奖、三家单位分获团体三等奖。",
+      "size": "2x2",
+      "sequence": 97,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q514",
+      "title": "耳机电量",
+      "query": "查看耳机电量，显示耳机名称、耳机盒电量、左右耳电量及充电状态。",
+      "size": "2x2",
+      "sequence": 98,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q516",
+      "title": "时间卡片",
+      "query": "创建一张字体更大的时间卡片，显示当前时间、日期、星期和农历信息，字体要大，方便查看。",
+      "size": "2x2",
+      "sequence": 99,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q507",
+      "title": "穿戴健康",
+      "query": "打开穿戴卡，展示运动健康数据（步数、热量、距离、睡眠等）",
+      "size": "2x2",
+      "sequence": 100,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q509",
+      "title": "运动健康",
+      "query": "帮我把运动健康添加在小组件上，展示今日步数、活动热量、活动距离等运动健康数据",
+      "size": "2x2",
+      "sequence": 101,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q511",
+      "title": "倒计时",
+      "query": "创建一个倒计时卡片，目标日期为2027年1月30日，展示距离该日期的倒计时天数",
+      "size": "2x2",
+      "sequence": 102,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q513",
+      "title": "家人纪念日",
+      "query": "创建一张家人重要日子倒计时卡片，每天自动更新倒计时天数，标注每位家人的名字和对应的公历日期。奶奶/爷爷生日：2027年10月5日（农历九月初六）；爸爸生日：2027年6月24日（农历五月二十）；妈妈生日：2027年4月19日（农历三月十三）；崔景会生日：2027年4月12日（农历三月初六）；爸妈结婚纪念日：2028年1月12日（农历腊月十六）；我的生日：2027年10月28日（农历九月廿九，2027年农历九月无三十）。\n本轮卡片静态内容（用作展示的外部事实）：奶奶/爷爷生日10月5日、爸爸生日6月24日、妈妈生日4月19日、崔景会生日4月12日、爸妈结婚纪念日1月12日、我的生日10月28日",
+      "size": "2x4",
+      "sequence": 103,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q515",
+      "title": "3D动态日历",
+      "query": "做一张3D动态日历卡片，显示当前日期、星期和农历信息，同时展示最近的日程安排。",
+      "size": "2x4",
+      "sequence": 104,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q517",
+      "title": "电池电量",
+      "query": "做一张电池电量卡片，显示当前手机剩余电量百分比和充电状态。",
+      "size": "2x2",
+      "sequence": 105,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q518",
+      "title": "倒计时",
+      "query": "给我在桌面设一个能看见倒计时的卡片\n\n本轮卡片静态内容（用作展示的外部事实）：\n目标日期为2027年6月21日",
+      "size": "2x2",
+      "sequence": 106,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q519",
+      "title": "运动健康",
+      "query": "做一张运动健康卡片，显示每日步数、运动量和运动公里数。",
+      "size": "2x2",
+      "sequence": 107,
+      "status": "partial",
+      "summary": "请求与最终产物分析完成",
+      "facts": {
+        "requestCount": 1,
+        "paddedCount": 0,
+        "traceKnown": 0
+      },
+      "artifacts": [
+        {
+          "key": "analysis",
+          "title": "样本分析",
+          "dataType": "json"
+        }
+      ]
+    }
+  ],
+  "progress": {
+    "phase": "done",
+    "completed": 1,
+    "total": 1,
+    "message": "后处理插件已完成"
+  }
+}

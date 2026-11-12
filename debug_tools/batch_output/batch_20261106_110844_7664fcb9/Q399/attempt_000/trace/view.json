@@ -1,0 +1,2262 @@
+{
+  "viewVersion": "trace-view-v2",
+  "instrumentationVersion": 2,
+  "uid": "batch-7664fcb9-00057-000",
+  "traceId": "7107ebb83ff14d69985842be7da4b7af",
+  "sourceSchemaVersion": "generation-trace-v2",
+  "status": "complete",
+  "timingMode": "exact",
+  "recordCount": 28,
+  "summary": {
+    "totalDurationMs": 1240.46,
+    "latencyByStage": {
+      "generation.branch": 1228.41,
+      "generationPreflight": 0.93,
+      "interfaceAttempt.total": 1233.14,
+      "model.physicalCall": 1205.09,
+      "model.providerExecution": 1202.49,
+      "model.queue": 0.06,
+      "plan": 1213.86,
+      "plan.attempt": 1211.2,
+      "plan.extract": 0.24,
+      "plan.promptBuild": 0.54,
+      "prepare": 14.02,
+      "promptBuild": 1.8,
+      "protocolSelection": 2.49,
+      "registry": 2.2
+    },
+    "attemptCounts": {
+      "generationBranches": 1,
+      "interfaceAttempts": 1,
+      "modelLogicalCalls": 1,
+      "modelPhysicalAttempts": 1,
+      "planContractAttempts": 1
+    },
+    "errorCode": "GENERATION_INPUT_INCOMPLETE",
+    "status": "failed",
+    "modelPhysicalCalls": 1,
+    "totalTokens": 8501,
+    "firstTokenMs": null,
+    "retryCount": 0
+  },
+  "nodes": [
+    {
+      "id": "f0e39e2a5db9492a",
+      "parentId": "d84e2bf442dd4aec",
+      "operation": "protocol.selection.completed",
+      "title": "选择卡片协议",
+      "kind": "step",
+      "name": "protocol.selection.completed",
+      "description": "",
+      "category": "protocol",
+      "stage": "protocolSelection",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 6.16,
+      "durationMs": 2.49,
+      "attempts": {
+        "interface": 1
+      },
+      "attributes": {},
+      "metrics": {},
+      "artifacts": [],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "f0e39e2a5db9492a",
+        "sequence": 4,
+        "timestamp": "2026-11-06T03:10:33.288177+00:00",
+        "recordType": "span",
+        "event": "protocol.selection.completed",
+        "category": "protocol",
+        "startOffsetMs": 6.16,
+        "parentSpanId": "d84e2bf442dd4aec",
+        "operation": "protocol.selection.completed",
+        "kind": "step",
+        "stage": "protocolSelection",
+        "status": "success",
+        "durationMs": 2.49,
+        "attempts": {
+          "interface": 1
+        }
+      }
+    },
+    {
+      "id": "a8f5a0bd16a148f8",
+      "parentId": "b39305bb8cdd402f",
+      "operation": "registry.completed",
+      "title": "读取能力清单",
+      "kind": "step",
+      "name": "registry.completed",
+      "description": "",
+      "category": "protocol",
+      "stage": "registry",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 10.04,
+      "durationMs": 2.2,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0"
+      },
+      "metrics": {},
+      "artifacts": [],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "a8f5a0bd16a148f8",
+        "sequence": 8,
+        "timestamp": "2026-11-06T03:10:33.291682+00:00",
+        "recordType": "span",
+        "event": "registry.completed",
+        "category": "protocol",
+        "startOffsetMs": 10.04,
+        "parentSpanId": "b39305bb8cdd402f",
+        "operation": "registry.completed",
+        "kind": "step",
+        "stage": "registry",
+        "status": "success",
+        "durationMs": 2.2,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0"
+        }
+      }
+    },
+    {
+      "id": "aacdabecb0f54557",
+      "parentId": "b39305bb8cdd402f",
+      "operation": "generation_preflight.completed",
+      "title": "能力裁决与生成预检",
+      "kind": "step",
+      "name": "generation_preflight.completed",
+      "description": "",
+      "category": "preflight",
+      "stage": "generationPreflight",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 14.49,
+      "durationMs": 0.93,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "warningCount": 0,
+        "removedCapabilityCount": 0
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "aacdabecb0f54557:card_spec:540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+          "name": "card_spec",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 253,
+          "sha256": "540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "卡片规格"
+        },
+        {
+          "id": "aacdabecb0f54557:task_spec:ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+          "name": "task_spec",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 308,
+          "sha256": "ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "生成任务规格"
+        },
+        {
+          "id": "aacdabecb0f54557:preflight_warnings:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "name": "preflight_warnings",
+          "role": "diagnostic",
+          "mediaType": "application/json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "预检告警"
+        }
+      ],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "aacdabecb0f54557",
+        "sequence": 10,
+        "timestamp": "2026-11-06T03:10:33.294954+00:00",
+        "recordType": "span",
+        "event": "generation_preflight.completed",
+        "category": "preflight",
+        "startOffsetMs": 14.49,
+        "parentSpanId": "b39305bb8cdd402f",
+        "operation": "generation_preflight.completed",
+        "kind": "step",
+        "stage": "generationPreflight",
+        "status": "success",
+        "durationMs": 0.93,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "warningCount": 0,
+          "removedCapabilityCount": 0
+        },
+        "artifacts": {
+          "card_spec": {
+            "path": "artifacts/0004_card_spec_attempt-1.json",
+            "sha256": "540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+            "bytes": 253,
+            "chars": 235,
+            "mediaType": "application/json",
+            "role": "output"
+          },
+          "task_spec": {
+            "path": "artifacts/0005_task_spec_attempt-1.json",
+            "sha256": "ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+            "bytes": 308,
+            "chars": 212,
+            "mediaType": "application/json",
+            "role": "output"
+          },
+          "preflight_warnings": {
+            "path": "artifacts/0006_preflight_warnings_attempt-1.json",
+            "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+            "bytes": 3,
+            "chars": 3,
+            "mediaType": "application/json",
+            "role": "diagnostic"
+          }
+        }
+      }
+    },
+    {
+      "id": "38c0fd07567e42bb",
+      "parentId": "b39305bb8cdd402f",
+      "operation": "dsl_prompt.built",
+      "title": "构建基础提示词",
+      "kind": "step",
+      "name": "dsl_prompt.built",
+      "description": "",
+      "category": "prompt",
+      "stage": "promptBuild",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 19.96,
+      "durationMs": 1.8,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "messageCount": 2,
+        "systemPromptChars": 7042,
+        "systemPromptPreview": "你是 HarmonyOS 桌面卡片生成 Agent。最后一个"
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "38c0fd07567e42bb:dsl_prompt_base:f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+          "name": "dsl_prompt_base",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 16359,
+          "sha256": "f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "38c0fd07567e42bb",
+          "label": "基础 DSL 提示词"
+        }
+      ],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "38c0fd07567e42bb",
+        "sequence": 11,
+        "timestamp": "2026-11-06T03:10:33.301461+00:00",
+        "recordType": "span",
+        "event": "dsl_prompt.built",
+        "category": "prompt",
+        "startOffsetMs": 19.96,
+        "parentSpanId": "b39305bb8cdd402f",
+        "operation": "dsl_prompt.built",
+        "kind": "step",
+        "stage": "promptBuild",
+        "status": "success",
+        "durationMs": 1.8,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "messageCount": 2,
+          "systemPromptChars": 7042,
+          "systemPromptPreview": "你是 HarmonyOS 桌面卡片生成 Agent。最后一个"
+        },
+        "artifacts": {
+          "dsl_prompt_base": {
+            "path": "artifacts/0007_dsl_prompt_base_attempt-1.json",
+            "sha256": "f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+            "bytes": 16359,
+            "chars": 7619,
+            "mediaType": "application/json",
+            "role": "input"
+          }
+        }
+      }
+    },
+    {
+      "id": "b39305bb8cdd402f",
+      "parentId": "17bbf92c9c314b58",
+      "operation": "prepare",
+      "title": "请求准备",
+      "kind": "group",
+      "name": "prepare",
+      "description": "",
+      "category": "other",
+      "stage": "prepare",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 10.0,
+      "durationMs": 14.02,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion"
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "b39305bb8cdd402f:normalized_generation_request:fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+          "name": "normalized_generation_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 1605,
+          "sha256": "fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "b39305bb8cdd402f",
+          "label": "归一化请求"
+        }
+      ],
+      "events": [
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "b39305bb8cdd402f",
+          "sequence": 6,
+          "timestamp": "2026-11-06T03:10:33.290176+00:00",
+          "recordType": "event",
+          "event": "generation.started",
+          "category": "other",
+          "startOffsetMs": 10.52,
+          "eventId": "a0d642c48a474011ab8bc2251821e116",
+          "stage": "generation",
+          "status": "started",
+          "attempts": {
+            "interface": 1,
+            "generation": 1
+          },
+          "details": {
+            "generationBranch": "fusion",
+            "generationMode": "create",
+            "operation": "generateWidgetCardCompactDsl",
+            "backend": "openai",
+            "sourceFormat": "design-compact-dsl"
+          },
+          "artifacts": {
+            "normalized_generation_request": {
+              "path": "artifacts/0003_normalized_generation_request_attempt-1.json",
+              "sha256": "fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+              "bytes": 1605,
+              "chars": 1281,
+              "mediaType": "application/json",
+              "role": "input"
+            }
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "b39305bb8cdd402f",
+          "sequence": 7,
+          "timestamp": "2026-11-06T03:10:33.290176+00:00",
+          "recordType": "event",
+          "event": "source_artifact.skipped",
+          "category": "source",
+          "startOffsetMs": 10.8,
+          "eventId": "6933042fd0474cb489592a9689235e63",
+          "stage": "sourceArtifact",
+          "status": "skipped",
+          "attempts": {
+            "interface": 1,
+            "generation": 1
+          },
+          "details": {
+            "generationBranch": "fusion",
+            "reason": "create_request"
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "b39305bb8cdd402f",
+          "sequence": 9,
+          "timestamp": "2026-11-06T03:10:33.292947+00:00",
+          "recordType": "event",
+          "event": "content_policy.selected",
+          "category": "other",
+          "startOffsetMs": 13.2,
+          "eventId": "c691f567d060409bbff05fe1f1e87502",
+          "stage": "configuration",
+          "status": "success",
+          "attempts": {
+            "interface": 1,
+            "generation": 1
+          },
+          "details": {
+            "generationBranch": "fusion",
+            "mode": "static_content",
+            "version": "static-content-v1",
+            "reason": "eligibleStaticCreate",
+            "staticPolicyEnabled": true,
+            "requestedData": false,
+            "effectiveData": false,
+            "requestedEvents": false,
+            "effectiveEvents": false
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "b39305bb8cdd402f",
+          "sequence": 12,
+          "timestamp": "2026-11-06T03:10:33.302471+00:00",
+          "recordType": "event",
+          "event": "generation.policy.effective",
+          "category": "other",
+          "startOffsetMs": 22.85,
+          "eventId": "91e492bc749d4d28bd486a564d310a96",
+          "stage": "configuration",
+          "status": "success",
+          "attempts": {
+            "interface": 1,
+            "generation": 1
+          },
+          "details": {
+            "generationBranch": "fusion",
+            "singleStep": false,
+            "qualityRepairEnabled": true,
+            "qualityRepairLimit": 5,
+            "planFactValidationEnabled": false
+          }
+        }
+      ],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "b39305bb8cdd402f",
+        "sequence": 13,
+        "timestamp": "2026-11-06T03:10:33.303467+00:00",
+        "recordType": "span",
+        "event": "prepare",
+        "category": "other",
+        "startOffsetMs": 10.0,
+        "parentSpanId": "17bbf92c9c314b58",
+        "operation": "prepare",
+        "kind": "group",
+        "stage": "prepare",
+        "status": "success",
+        "durationMs": 14.02,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion"
+        }
+      },
+      "contentIndex": [
+        {
+          "id": "b39305bb8cdd402f:normalized_generation_request:fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+          "name": "normalized_generation_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 1605,
+          "sha256": "fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "b39305bb8cdd402f",
+          "label": "归一化请求"
+        },
+        {
+          "id": "aacdabecb0f54557:card_spec:540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+          "name": "card_spec",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 253,
+          "sha256": "540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "卡片规格"
+        },
+        {
+          "id": "aacdabecb0f54557:task_spec:ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+          "name": "task_spec",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 308,
+          "sha256": "ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "生成任务规格"
+        },
+        {
+          "id": "aacdabecb0f54557:preflight_warnings:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "name": "preflight_warnings",
+          "role": "diagnostic",
+          "mediaType": "application/json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "预检告警"
+        },
+        {
+          "id": "38c0fd07567e42bb:dsl_prompt_base:f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+          "name": "dsl_prompt_base",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 16359,
+          "sha256": "f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "38c0fd07567e42bb",
+          "label": "基础 DSL 提示词"
+        }
+      ]
+    },
+    {
+      "id": "421d3c7f4bba46d6",
+      "parentId": "9c10f6cefdcd4435",
+      "operation": "plan.prompt.built",
+      "title": "构建计划提示词",
+      "kind": "step",
+      "name": "plan.prompt.built",
+      "description": "",
+      "category": "prompt",
+      "stage": "plan.promptBuild",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 25.69,
+      "durationMs": 0.54,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "messageCount": 3,
+        "capacityRecovery": false,
+        "retainedFactCount": 0,
+        "omittedFactCount": 0,
+        "promptSha256": "eadc73bae1208942f4a882deec4db083bad722b6045ba991141f10ce4751f37c"
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "421d3c7f4bba46d6:plan_prompt:0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+          "name": "plan_prompt",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 38127,
+          "sha256": "0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "421d3c7f4bba46d6",
+          "label": "计划提示词"
+        }
+      ],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "421d3c7f4bba46d6",
+        "sequence": 14,
+        "timestamp": "2026-11-06T03:10:33.305643+00:00",
+        "recordType": "span",
+        "event": "plan.prompt.built",
+        "category": "prompt",
+        "startOffsetMs": 25.69,
+        "parentSpanId": "9c10f6cefdcd4435",
+        "operation": "plan.prompt.built",
+        "kind": "step",
+        "stage": "plan.promptBuild",
+        "status": "success",
+        "durationMs": 0.54,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "messageCount": 3,
+          "capacityRecovery": false,
+          "retainedFactCount": 0,
+          "omittedFactCount": 0,
+          "promptSha256": "eadc73bae1208942f4a882deec4db083bad722b6045ba991141f10ce4751f37c"
+        },
+        "artifacts": {
+          "plan_prompt": {
+            "path": "artifacts/0008_plan_prompt_attempt-1.json",
+            "sha256": "0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+            "bytes": 38127,
+            "chars": 19721,
+            "mediaType": "application/json",
+            "role": "input"
+          }
+        }
+      }
+    },
+    {
+      "id": "a1d8517cc86041f4",
+      "parentId": "c0ff00202f9c4955",
+      "operation": "model.queue",
+      "title": "等待模型执行配额",
+      "kind": "step",
+      "name": "model.queue",
+      "description": "",
+      "category": "model",
+      "stage": "model.queue",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 29.83,
+      "durationMs": 0.06,
+      "attempts": {
+        "interface": 1,
+        "generation": 1,
+        "plan": 1,
+        "modelLogical": 1,
+        "modelPhysical": 1,
+        "providerAttempt": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "modelPhase": "plan",
+        "provider": "deepseek_official_http",
+        "role": "master"
+      },
+      "metrics": {},
+      "artifacts": [],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "a1d8517cc86041f4",
+        "sequence": 16,
+        "timestamp": "2026-11-06T03:10:33.309642+00:00",
+        "recordType": "span",
+        "event": "model.queue",
+        "category": "model",
+        "startOffsetMs": 29.83,
+        "parentSpanId": "c0ff00202f9c4955",
+        "operation": "model.queue",
+        "kind": "step",
+        "stage": "model.queue",
+        "status": "success",
+        "durationMs": 0.06,
+        "attempts": {
+          "interface": 1,
+          "generation": 1,
+          "plan": 1,
+          "modelLogical": 1,
+          "modelPhysical": 1,
+          "providerAttempt": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "modelPhase": "plan",
+          "provider": "deepseek_official_http",
+          "role": "master"
+        }
+      }
+    },
+    {
+      "id": "df918c4db7ea49af",
+      "parentId": "c0ff00202f9c4955",
+      "operation": "model.provider_execution",
+      "title": "执行模型请求",
+      "kind": "step",
+      "name": "model.provider_execution",
+      "description": "",
+      "category": "model",
+      "stage": "model.providerExecution",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 30.59,
+      "durationMs": 1202.49,
+      "attempts": {
+        "interface": 1,
+        "generation": 1,
+        "plan": 1,
+        "modelLogical": 1,
+        "modelPhysical": 1,
+        "providerAttempt": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "modelPhase": "plan",
+        "provider": "deepseek_official_http",
+        "role": "master"
+      },
+      "metrics": {},
+      "artifacts": [],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "df918c4db7ea49af",
+        "sequence": 18,
+        "timestamp": "2026-11-06T03:10:34.512589+00:00",
+        "recordType": "span",
+        "event": "model.provider_execution",
+        "category": "model",
+        "startOffsetMs": 30.59,
+        "parentSpanId": "c0ff00202f9c4955",
+        "operation": "model.provider_execution",
+        "kind": "step",
+        "stage": "model.providerExecution",
+        "status": "success",
+        "durationMs": 1202.49,
+        "attempts": {
+          "interface": 1,
+          "generation": 1,
+          "plan": 1,
+          "modelLogical": 1,
+          "modelPhysical": 1,
+          "providerAttempt": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "modelPhase": "plan",
+          "provider": "deepseek_official_http",
+          "role": "master"
+        }
+      }
+    },
+    {
+      "id": "c0ff00202f9c4955",
+      "parentId": "92ec782aefc949ec",
+      "operation": "model.physical_call",
+      "title": "模型调用 · 第 1 次",
+      "kind": "model",
+      "name": "model.physical_call",
+      "description": "",
+      "category": "model",
+      "stage": "model.physicalCall",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 28.92,
+      "durationMs": 1205.09,
+      "attempts": {
+        "interface": 1,
+        "generation": 1,
+        "plan": 1,
+        "modelLogical": 1,
+        "modelPhysical": 1,
+        "providerAttempt": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "modelPhase": "plan",
+        "provider": "deepseek_official_http",
+        "role": "master",
+        "phase": "plan"
+      },
+      "metrics": {
+        "inputTokens": 8432,
+        "completionTokens": 69,
+        "totalTokens": 8501,
+        "outputChars": 163
+      },
+      "artifacts": [
+        {
+          "id": "c0ff00202f9c4955:plan_assistant_raw:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_assistant_raw",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型原文"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_model_messages:f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "name": "plan_model_messages",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 37796,
+          "sha256": "f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型完整 Messages"
+        }
+      ],
+      "events": [
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "c0ff00202f9c4955",
+          "sequence": 15,
+          "timestamp": "2026-11-06T03:10:33.308642+00:00",
+          "recordType": "event",
+          "event": "model.physical_attempt",
+          "category": "model",
+          "startOffsetMs": 28.93,
+          "eventId": "c18c0c4c92264b6484e43e07da2bcdc7",
+          "stage": "model.execution",
+          "status": "started",
+          "attempts": {
+            "interface": 1,
+            "generation": 1,
+            "plan": 1,
+            "modelLogical": 1,
+            "modelPhysical": 1,
+            "providerAttempt": 1
+          },
+          "details": {
+            "generationBranch": "fusion",
+            "modelPhase": "plan",
+            "provider": "deepseek_official_http",
+            "role": "master"
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "c0ff00202f9c4955",
+          "sequence": 17,
+          "timestamp": "2026-11-06T03:10:34.511584+00:00",
+          "recordType": "event",
+          "event": "model.transport_metrics",
+          "category": "model",
+          "startOffsetMs": 30.76,
+          "eventId": "2a00de9583804ec7977e82aa4fea2cff",
+          "stage": "model.transport",
+          "status": "completed",
+          "durationMs": 1201.34,
+          "attempts": {
+            "interface": 1,
+            "generation": 1,
+            "plan": 1,
+            "modelLogical": 1,
+            "modelPhysical": 1,
+            "providerAttempt": 1
+          },
+          "details": {
+            "generationBranch": "fusion",
+            "modelPhase": "plan",
+            "provider": "deepseek_official_http",
+            "role": "master"
+          },
+          "metrics": {
+            "inputTokens": 8432,
+            "completionTokens": 69,
+            "totalTokens": 8501,
+            "outputChars": 163
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "c0ff00202f9c4955",
+          "sequence": 19,
+          "timestamp": "2026-11-06T03:10:34.513590+00:00",
+          "recordType": "event",
+          "event": "model.physical_attempt",
+          "category": "model",
+          "startOffsetMs": 1233.71,
+          "eventId": "8835849d93df4c31846a1dcce3bedd99",
+          "stage": "model.execution",
+          "status": "success",
+          "attempts": {
+            "interface": 1,
+            "generation": 1,
+            "plan": 1,
+            "modelLogical": 1,
+            "modelPhysical": 1,
+            "providerAttempt": 1
+          },
+          "details": {
+            "generationBranch": "fusion",
+            "modelPhase": "plan",
+            "provider": "deepseek_official_http",
+            "role": "master",
+            "outputChars": 163
+          }
+        }
+      ],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "c0ff00202f9c4955",
+        "sequence": 20,
+        "timestamp": "2026-11-06T03:10:34.514591+00:00",
+        "recordType": "span",
+        "event": "model.physical_call",
+        "category": "model",
+        "startOffsetMs": 28.92,
+        "parentSpanId": "92ec782aefc949ec",
+        "operation": "model.physical_call",
+        "kind": "model",
+        "stage": "model.physicalCall",
+        "status": "success",
+        "durationMs": 1205.09,
+        "attempts": {
+          "interface": 1,
+          "generation": 1,
+          "plan": 1,
+          "modelLogical": 1,
+          "modelPhysical": 1,
+          "providerAttempt": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "modelPhase": "plan",
+          "provider": "deepseek_official_http",
+          "role": "master",
+          "phase": "plan"
+        },
+        "artifacts": {
+          "plan_assistant_raw": {
+            "path": "artifacts/0009_plan_assistant_raw_attempt-1.txt",
+            "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+            "bytes": 291,
+            "chars": 163,
+            "mediaType": "text/plain",
+            "role": "output"
+          },
+          "plan_model_messages": {
+            "path": "artifacts/0010_plan_model_messages_attempt-1.json",
+            "sha256": "f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+            "bytes": 37796,
+            "chars": 19500,
+            "mediaType": "application/json",
+            "role": "input"
+          }
+        }
+      }
+    },
+    {
+      "id": "78d533298761413b",
+      "parentId": "92ec782aefc949ec",
+      "operation": "model.output.processed",
+      "title": "提取模型输出",
+      "kind": "step",
+      "name": "model.output.processed",
+      "description": "",
+      "category": "plan",
+      "stage": "plan.extract",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 1235.36,
+      "durationMs": 0.24,
+      "attempts": {
+        "interface": 1,
+        "generation": 1,
+        "plan": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "phase": "plan",
+        "outputChars": 163
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "78d533298761413b:plan_extraction_input:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extraction_input",
+          "role": "input",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取前模型原文"
+        },
+        {
+          "id": "78d533298761413b:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取后的输出"
+        }
+      ],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "78d533298761413b",
+        "sequence": 21,
+        "timestamp": "2026-11-06T03:10:34.515591+00:00",
+        "recordType": "span",
+        "event": "model.output.processed",
+        "category": "plan",
+        "startOffsetMs": 1235.36,
+        "parentSpanId": "92ec782aefc949ec",
+        "operation": "model.output.processed",
+        "kind": "step",
+        "stage": "plan.extract",
+        "status": "success",
+        "durationMs": 0.24,
+        "attempts": {
+          "interface": 1,
+          "generation": 1,
+          "plan": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "phase": "plan",
+          "outputChars": 163
+        },
+        "artifacts": {
+          "plan_extraction_input": {
+            "path": "artifacts/0009_plan_assistant_raw_attempt-1.txt",
+            "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+            "bytes": 291,
+            "chars": 163,
+            "mediaType": "text/plain",
+            "role": "input"
+          },
+          "plan_extracted_output": {
+            "path": "artifacts/0009_plan_assistant_raw_attempt-1.txt",
+            "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+            "bytes": 291,
+            "chars": 163,
+            "mediaType": "text/plain",
+            "role": "output"
+          }
+        }
+      }
+    },
+    {
+      "id": "92ec782aefc949ec",
+      "parentId": "9c10f6cefdcd4435",
+      "operation": "plan.attempt",
+      "title": "计划尝试 · 第 1 次",
+      "kind": "group",
+      "name": "plan.attempt",
+      "description": "生成所需的动态数据输入不完整。",
+      "category": "plan",
+      "stage": "plan.attempt",
+      "status": "failed",
+      "recordType": "span",
+      "startOffsetMs": 26.47,
+      "durationMs": 1211.2,
+      "attempts": {
+        "interface": 1,
+        "generation": 1,
+        "plan": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "attempt": 1,
+        "maxAttempts": 2,
+        "reason": "generationInputIncomplete",
+        "exceptionType": "MissingDataInputError",
+        "message": "生成所需的动态数据输入不完整。"
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "92ec782aefc949ec:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "提取后的输出"
+        },
+        {
+          "id": "92ec782aefc949ec:missing_data_report:ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "name": "missing_data_report",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 283,
+          "sha256": "ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "missing_data_report"
+        }
+      ],
+      "events": [
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "92ec782aefc949ec",
+          "sequence": 22,
+          "timestamp": "2026-11-06T03:10:34.515591+00:00",
+          "recordType": "event",
+          "event": "plan.model.completed",
+          "category": "plan",
+          "startOffsetMs": 26.49,
+          "eventId": "89b891392a5a44cfb8a8d53daae87621",
+          "stage": "plan.model",
+          "status": "success",
+          "durationMs": 1209.6,
+          "attempts": {
+            "interface": 1,
+            "generation": 1,
+            "plan": 1
+          },
+          "details": {
+            "generationBranch": "fusion"
+          },
+          "artifacts": {
+            "plan_extracted_output": {
+              "path": "artifacts/0009_plan_assistant_raw_attempt-1.txt",
+              "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+              "bytes": 291,
+              "chars": 163,
+              "mediaType": "text/plain",
+              "role": "output"
+            }
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "92ec782aefc949ec",
+          "sequence": 23,
+          "timestamp": "2026-11-06T03:10:34.516708+00:00",
+          "recordType": "event",
+          "event": "plan.input_missing",
+          "category": "plan",
+          "startOffsetMs": 1237.15,
+          "eventId": "0b6df3711e4a49a48b90f0ecee899891",
+          "stage": "plan",
+          "status": "failed",
+          "attempts": {
+            "interface": 1,
+            "generation": 1,
+            "plan": 1
+          },
+          "details": {
+            "generationBranch": "fusion",
+            "requirementCount": 1
+          },
+          "artifacts": {
+            "missing_data_report": {
+              "path": "artifacts/0011_missing_data_report_attempt-1.json",
+              "sha256": "ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+              "bytes": 283,
+              "chars": 155,
+              "mediaType": "application/json",
+              "role": "snapshot"
+            }
+          }
+        }
+      ],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "92ec782aefc949ec",
+        "sequence": 24,
+        "timestamp": "2026-11-06T03:10:34.517707+00:00",
+        "recordType": "span",
+        "event": "plan.attempt",
+        "category": "plan",
+        "startOffsetMs": 26.47,
+        "parentSpanId": "9c10f6cefdcd4435",
+        "operation": "plan.attempt",
+        "kind": "group",
+        "stage": "plan.attempt",
+        "status": "failed",
+        "durationMs": 1211.2,
+        "attempts": {
+          "interface": 1,
+          "generation": 1,
+          "plan": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "attempt": 1,
+          "maxAttempts": 2,
+          "reason": "generationInputIncomplete",
+          "exceptionType": "MissingDataInputError",
+          "message": "生成所需的动态数据输入不完整。"
+        }
+      },
+      "contentIndex": [
+        {
+          "id": "92ec782aefc949ec:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "提取后的输出"
+        },
+        {
+          "id": "92ec782aefc949ec:missing_data_report:ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "name": "missing_data_report",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 283,
+          "sha256": "ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "missing_data_report"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_assistant_raw:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_assistant_raw",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型原文"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_model_messages:f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "name": "plan_model_messages",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 37796,
+          "sha256": "f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型完整 Messages"
+        },
+        {
+          "id": "78d533298761413b:plan_extraction_input:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extraction_input",
+          "role": "input",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取前模型原文"
+        },
+        {
+          "id": "78d533298761413b:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取后的输出"
+        }
+      ]
+    },
+    {
+      "id": "9c10f6cefdcd4435",
+      "parentId": "17bbf92c9c314b58",
+      "operation": "plan",
+      "title": "生成计划",
+      "kind": "group",
+      "name": "plan",
+      "description": "生成所需的动态数据输入不完整。",
+      "category": "plan",
+      "stage": "plan",
+      "status": "failed",
+      "recordType": "span",
+      "startOffsetMs": 24.33,
+      "durationMs": 1213.86,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "exceptionType": "MissingDataInputError",
+        "message": "生成所需的动态数据输入不完整。"
+      },
+      "metrics": {},
+      "artifacts": [],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "9c10f6cefdcd4435",
+        "sequence": 25,
+        "timestamp": "2026-11-06T03:10:34.517707+00:00",
+        "recordType": "span",
+        "event": "plan",
+        "category": "plan",
+        "startOffsetMs": 24.33,
+        "parentSpanId": "17bbf92c9c314b58",
+        "operation": "plan",
+        "kind": "group",
+        "stage": "plan",
+        "status": "failed",
+        "durationMs": 1213.86,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "exceptionType": "MissingDataInputError",
+          "message": "生成所需的动态数据输入不完整。"
+        }
+      },
+      "contentIndex": [
+        {
+          "id": "421d3c7f4bba46d6:plan_prompt:0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+          "name": "plan_prompt",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 38127,
+          "sha256": "0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "421d3c7f4bba46d6",
+          "label": "计划提示词"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_assistant_raw:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_assistant_raw",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型原文"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_model_messages:f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "name": "plan_model_messages",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 37796,
+          "sha256": "f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型完整 Messages"
+        },
+        {
+          "id": "78d533298761413b:plan_extraction_input:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extraction_input",
+          "role": "input",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取前模型原文"
+        },
+        {
+          "id": "78d533298761413b:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取后的输出"
+        },
+        {
+          "id": "92ec782aefc949ec:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "提取后的输出"
+        },
+        {
+          "id": "92ec782aefc949ec:missing_data_report:ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "name": "missing_data_report",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 283,
+          "sha256": "ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "missing_data_report"
+        }
+      ]
+    },
+    {
+      "id": "17bbf92c9c314b58",
+      "parentId": "d84e2bf442dd4aec",
+      "operation": "generation.branch",
+      "title": "生成分支 · 第 1 次",
+      "kind": "group",
+      "name": "generation.branch",
+      "description": "生成所需的动态数据输入不完整。",
+      "category": "other",
+      "stage": "generation.branch",
+      "status": "failed",
+      "recordType": "span",
+      "startOffsetMs": 9.99,
+      "durationMs": 1228.41,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "exceptionType": "MissingDataInputError",
+        "message": "生成所需的动态数据输入不完整。"
+      },
+      "metrics": {},
+      "artifacts": [],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "17bbf92c9c314b58",
+        "sequence": 26,
+        "timestamp": "2026-11-06T03:10:34.517707+00:00",
+        "recordType": "span",
+        "event": "generation.branch",
+        "category": "other",
+        "startOffsetMs": 9.99,
+        "parentSpanId": "d84e2bf442dd4aec",
+        "operation": "generation.branch",
+        "kind": "group",
+        "stage": "generation.branch",
+        "status": "failed",
+        "durationMs": 1228.41,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "exceptionType": "MissingDataInputError",
+          "message": "生成所需的动态数据输入不完整。"
+        }
+      },
+      "contentIndex": [
+        {
+          "id": "aacdabecb0f54557:card_spec:540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+          "name": "card_spec",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 253,
+          "sha256": "540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "卡片规格"
+        },
+        {
+          "id": "aacdabecb0f54557:task_spec:ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+          "name": "task_spec",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 308,
+          "sha256": "ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "生成任务规格"
+        },
+        {
+          "id": "aacdabecb0f54557:preflight_warnings:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "name": "preflight_warnings",
+          "role": "diagnostic",
+          "mediaType": "application/json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "预检告警"
+        },
+        {
+          "id": "38c0fd07567e42bb:dsl_prompt_base:f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+          "name": "dsl_prompt_base",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 16359,
+          "sha256": "f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "38c0fd07567e42bb",
+          "label": "基础 DSL 提示词"
+        },
+        {
+          "id": "b39305bb8cdd402f:normalized_generation_request:fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+          "name": "normalized_generation_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 1605,
+          "sha256": "fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "b39305bb8cdd402f",
+          "label": "归一化请求"
+        },
+        {
+          "id": "421d3c7f4bba46d6:plan_prompt:0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+          "name": "plan_prompt",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 38127,
+          "sha256": "0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "421d3c7f4bba46d6",
+          "label": "计划提示词"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_assistant_raw:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_assistant_raw",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型原文"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_model_messages:f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "name": "plan_model_messages",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 37796,
+          "sha256": "f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型完整 Messages"
+        },
+        {
+          "id": "78d533298761413b:plan_extraction_input:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extraction_input",
+          "role": "input",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取前模型原文"
+        },
+        {
+          "id": "78d533298761413b:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取后的输出"
+        },
+        {
+          "id": "92ec782aefc949ec:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "提取后的输出"
+        },
+        {
+          "id": "92ec782aefc949ec:missing_data_report:ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "name": "missing_data_report",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 283,
+          "sha256": "ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "missing_data_report"
+        }
+      ]
+    },
+    {
+      "id": "d84e2bf442dd4aec",
+      "parentId": "1709da38b9774cdd",
+      "operation": "interface.attempt",
+      "title": "生成尝试 · 第 1 次",
+      "kind": "group",
+      "name": "interface.attempt",
+      "description": "生成所需的动态数据输入不完整。",
+      "category": "request",
+      "stage": "interfaceAttempt.total",
+      "status": "failed",
+      "recordType": "span",
+      "startOffsetMs": 5.47,
+      "durationMs": 1233.14,
+      "attempts": {
+        "interface": 1
+      },
+      "attributes": {
+        "attempt": 1,
+        "maxAttempts": 2,
+        "capacityRecovery": false,
+        "exceptionType": "MissingDataInputError",
+        "message": "生成所需的动态数据输入不完整。"
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "d84e2bf442dd4aec:protocol_selection:26ce311ade8fb91dddd10d7233742254dee9cc170678b5d940b950c6d5ee1b1e",
+          "name": "protocol_selection",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 165,
+          "sha256": "26ce311ade8fb91dddd10d7233742254dee9cc170678b5d940b950c6d5ee1b1e",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "d84e2bf442dd4aec",
+          "label": "协议选择结果"
+        }
+      ],
+      "events": [
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "d84e2bf442dd4aec",
+          "sequence": 3,
+          "timestamp": "2026-11-06T03:10:33.285175+00:00",
+          "recordType": "event",
+          "event": "interface.attempt.started",
+          "category": "request",
+          "startOffsetMs": 5.49,
+          "eventId": "fe1faba7f6844660b5c96bf99fe033bf",
+          "stage": "interfaceAttempt",
+          "status": "started",
+          "attempts": {
+            "interface": 1
+          },
+          "details": {
+            "maxAttempts": 2,
+            "requestId": "batch-7664fcb9&Q399-000"
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "d84e2bf442dd4aec",
+          "sequence": 5,
+          "timestamp": "2026-11-06T03:10:33.289177+00:00",
+          "recordType": "event",
+          "event": "protocol.selection.result",
+          "category": "protocol",
+          "startOffsetMs": 9.7,
+          "eventId": "fd513e063f194d69aee1d250e21267a5",
+          "stage": "protocolSelection",
+          "status": "success",
+          "attempts": {
+            "interface": 1
+          },
+          "details": {
+            "protocolProfileId": "a2ui-form-rom6.0-v1",
+            "designProfileId": "design-compact-dsl",
+            "normalizedAppVersion": "11.7.8.342",
+            "normalizedRomVersion": "6.0"
+          },
+          "artifacts": {
+            "protocol_selection": {
+              "path": "artifacts/0002_protocol_selection_attempt-1.json",
+              "sha256": "26ce311ade8fb91dddd10d7233742254dee9cc170678b5d940b950c6d5ee1b1e",
+              "bytes": 165,
+              "chars": 165,
+              "mediaType": "application/json",
+              "role": "output"
+            }
+          }
+        }
+      ],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "d84e2bf442dd4aec",
+        "sequence": 27,
+        "timestamp": "2026-11-06T03:10:34.517707+00:00",
+        "recordType": "span",
+        "event": "interface.attempt",
+        "category": "request",
+        "startOffsetMs": 5.47,
+        "parentSpanId": "1709da38b9774cdd",
+        "operation": "interface.attempt",
+        "kind": "group",
+        "stage": "interfaceAttempt.total",
+        "status": "failed",
+        "durationMs": 1233.14,
+        "attempts": {
+          "interface": 1
+        },
+        "details": {
+          "attempt": 1,
+          "maxAttempts": 2,
+          "capacityRecovery": false,
+          "exceptionType": "MissingDataInputError",
+          "message": "生成所需的动态数据输入不完整。"
+        }
+      },
+      "contentIndex": [
+        {
+          "id": "d84e2bf442dd4aec:protocol_selection:26ce311ade8fb91dddd10d7233742254dee9cc170678b5d940b950c6d5ee1b1e",
+          "name": "protocol_selection",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 165,
+          "sha256": "26ce311ade8fb91dddd10d7233742254dee9cc170678b5d940b950c6d5ee1b1e",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "d84e2bf442dd4aec",
+          "label": "协议选择结果"
+        },
+        {
+          "id": "aacdabecb0f54557:card_spec:540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+          "name": "card_spec",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 253,
+          "sha256": "540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "卡片规格"
+        },
+        {
+          "id": "aacdabecb0f54557:task_spec:ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+          "name": "task_spec",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 308,
+          "sha256": "ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "生成任务规格"
+        },
+        {
+          "id": "aacdabecb0f54557:preflight_warnings:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "name": "preflight_warnings",
+          "role": "diagnostic",
+          "mediaType": "application/json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "预检告警"
+        },
+        {
+          "id": "38c0fd07567e42bb:dsl_prompt_base:f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+          "name": "dsl_prompt_base",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 16359,
+          "sha256": "f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "38c0fd07567e42bb",
+          "label": "基础 DSL 提示词"
+        },
+        {
+          "id": "b39305bb8cdd402f:normalized_generation_request:fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+          "name": "normalized_generation_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 1605,
+          "sha256": "fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "b39305bb8cdd402f",
+          "label": "归一化请求"
+        },
+        {
+          "id": "421d3c7f4bba46d6:plan_prompt:0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+          "name": "plan_prompt",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 38127,
+          "sha256": "0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "421d3c7f4bba46d6",
+          "label": "计划提示词"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_assistant_raw:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_assistant_raw",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型原文"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_model_messages:f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "name": "plan_model_messages",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 37796,
+          "sha256": "f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型完整 Messages"
+        },
+        {
+          "id": "78d533298761413b:plan_extraction_input:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extraction_input",
+          "role": "input",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取前模型原文"
+        },
+        {
+          "id": "78d533298761413b:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取后的输出"
+        },
+        {
+          "id": "92ec782aefc949ec:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "提取后的输出"
+        },
+        {
+          "id": "92ec782aefc949ec:missing_data_report:ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "name": "missing_data_report",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 283,
+          "sha256": "ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "missing_data_report"
+        }
+      ]
+    },
+    {
+      "id": "1709da38b9774cdd",
+      "parentId": null,
+      "operation": "request",
+      "title": "请求全链路",
+      "kind": "group",
+      "name": "request.completed",
+      "description": "",
+      "category": "request",
+      "stage": "request.total",
+      "status": "failed",
+      "recordType": "span",
+      "startOffsetMs": 0.0,
+      "durationMs": 1240.46,
+      "attempts": {},
+      "attributes": {
+        "totalDurationMs": 1240.46,
+        "latencyByStage": {
+          "generation.branch": 1228.41,
+          "generationPreflight": 0.93,
+          "interfaceAttempt.total": 1233.14,
+          "model.physicalCall": 1205.09,
+          "model.providerExecution": 1202.49,
+          "model.queue": 0.06,
+          "plan": 1213.86,
+          "plan.attempt": 1211.2,
+          "plan.extract": 0.24,
+          "plan.promptBuild": 0.54,
+          "prepare": 14.02,
+          "promptBuild": 1.8,
+          "protocolSelection": 2.49,
+          "registry": 2.2
+        },
+        "attemptCounts": {
+          "generationBranches": 1,
+          "interfaceAttempts": 1,
+          "modelLogicalCalls": 1,
+          "modelPhysicalAttempts": 1,
+          "planContractAttempts": 1
+        },
+        "errorCode": "GENERATION_INPUT_INCOMPLETE"
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "1709da38b9774cdd:raw_request:9761e5c3628b31c247a5de38c6438521eab8a3670531f1ef20dd7b5691362199",
+          "name": "raw_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 1635,
+          "sha256": "9761e5c3628b31c247a5de38c6438521eab8a3670531f1ef20dd7b5691362199",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "1709da38b9774cdd",
+          "label": "原始请求"
+        }
+      ],
+      "events": [
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "1709da38b9774cdd",
+          "sequence": 1,
+          "timestamp": "2026-11-06T03:10:33.280809+00:00",
+          "recordType": "event",
+          "event": "request.received",
+          "category": "request",
+          "startOffsetMs": 1.57,
+          "eventId": "b8057aabbf0946c1bd8d14d7ab160dbd",
+          "stage": "request",
+          "status": "started",
+          "details": {
+            "operation": "generateWidgetCardCompactDsl",
+            "requestId": "batch-7664fcb9&Q399-000"
+          },
+          "artifacts": {
+            "raw_request": {
+              "path": "artifacts/0001_raw_request.json",
+              "sha256": "9761e5c3628b31c247a5de38c6438521eab8a3670531f1ef20dd7b5691362199",
+              "bytes": 1635,
+              "chars": 1311,
+              "mediaType": "application/json",
+              "role": "input"
+            }
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "7107ebb83ff14d69985842be7da4b7af",
+          "spanId": "1709da38b9774cdd",
+          "sequence": 2,
+          "timestamp": "2026-11-06T03:10:33.284177+00:00",
+          "recordType": "event",
+          "event": "retry.policy.configured",
+          "category": "other",
+          "startOffsetMs": 4.12,
+          "eventId": "58fd923367424a49b502180aeb574b29",
+          "stage": "configuration",
+          "status": "success",
+          "details": {
+            "interfaceRetryEnabled": true,
+            "interfaceExtraRetries": 1,
+            "qualityRepairEnabled": true,
+            "qualityRepairMaxAttempts": 5,
+            "singleStepGenerationFallbackEnabled": false,
+            "singleStepWidgetEditEnabled": true,
+            "dropPlanFactValidationEnabled": false,
+            "photoBackgroundThemeEnabled": false,
+            "subjectlessWideThemeEnabled": false,
+            "squareMusicPhotoExpansionEnabled": false,
+            "squarePhotoExpansionEnabled": false,
+            "deepseekOfficialHttpUseSdkEnabled": true,
+            "modelFailureRetryEnabled": true,
+            "modelFailureExtraRetries": 1,
+            "fallbackModelFailureExtraRetries": 1,
+            "fallbackEnabled": true,
+            "argumentRepairEnabled": false,
+            "argumentRepairMaxAttempts": 2,
+            "argumentRepairReminderCount": 1
+          }
+        }
+      ],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "7107ebb83ff14d69985842be7da4b7af",
+        "spanId": "1709da38b9774cdd",
+        "sequence": 28,
+        "timestamp": "2026-11-06T03:10:34.521130+00:00",
+        "recordType": "span",
+        "event": "request.completed",
+        "category": "request",
+        "startOffsetMs": 0.0,
+        "operation": "request",
+        "kind": "group",
+        "stage": "request.total",
+        "status": "failed",
+        "durationMs": 1240.46,
+        "details": {
+          "totalDurationMs": 1240.46,
+          "latencyByStage": {
+            "generation.branch": 1228.41,
+            "generationPreflight": 0.93,
+            "interfaceAttempt.total": 1233.14,
+            "model.physicalCall": 1205.09,
+            "model.providerExecution": 1202.49,
+            "model.queue": 0.06,
+            "plan": 1213.86,
+            "plan.attempt": 1211.2,
+            "plan.extract": 0.24,
+            "plan.promptBuild": 0.54,
+            "prepare": 14.02,
+            "promptBuild": 1.8,
+            "protocolSelection": 2.49,
+            "registry": 2.2
+          },
+          "attemptCounts": {
+            "generationBranches": 1,
+            "interfaceAttempts": 1,
+            "modelLogicalCalls": 1,
+            "modelPhysicalAttempts": 1,
+            "planContractAttempts": 1
+          },
+          "errorCode": "GENERATION_INPUT_INCOMPLETE"
+        }
+      },
+      "contentIndex": [
+        {
+          "id": "1709da38b9774cdd:raw_request:9761e5c3628b31c247a5de38c6438521eab8a3670531f1ef20dd7b5691362199",
+          "name": "raw_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 1635,
+          "sha256": "9761e5c3628b31c247a5de38c6438521eab8a3670531f1ef20dd7b5691362199",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "1709da38b9774cdd",
+          "label": "原始请求"
+        },
+        {
+          "id": "aacdabecb0f54557:card_spec:540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+          "name": "card_spec",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 253,
+          "sha256": "540b5af40241d7ea6df24ddaaeacf664a212d62a3ca909a19bc96114bb4d3c8c",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "卡片规格"
+        },
+        {
+          "id": "aacdabecb0f54557:task_spec:ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+          "name": "task_spec",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 308,
+          "sha256": "ec63d50bf24b13c54b9c4eaf2e162000f5b2e0b8c5f9351f6dc56118884f674b",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "生成任务规格"
+        },
+        {
+          "id": "aacdabecb0f54557:preflight_warnings:37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "name": "preflight_warnings",
+          "role": "diagnostic",
+          "mediaType": "application/json",
+          "bytes": 3,
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "aacdabecb0f54557",
+          "label": "预检告警"
+        },
+        {
+          "id": "38c0fd07567e42bb:dsl_prompt_base:f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+          "name": "dsl_prompt_base",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 16359,
+          "sha256": "f3aa40255f7d23348d9eeae930360ddd114a065243e298330f3d6a95c92fcbc9",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "38c0fd07567e42bb",
+          "label": "基础 DSL 提示词"
+        },
+        {
+          "id": "b39305bb8cdd402f:normalized_generation_request:fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+          "name": "normalized_generation_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 1605,
+          "sha256": "fb3de7d134b40ca6858d87425b5d8139b1d57717e863f7f2171e6910a23cf475",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "b39305bb8cdd402f",
+          "label": "归一化请求"
+        },
+        {
+          "id": "421d3c7f4bba46d6:plan_prompt:0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+          "name": "plan_prompt",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 38127,
+          "sha256": "0379e3d7a65d19dacc8a66cb3829ac388880a0407aa8c320ab44a86a1e95c920",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "421d3c7f4bba46d6",
+          "label": "计划提示词"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_assistant_raw:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_assistant_raw",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型原文"
+        },
+        {
+          "id": "c0ff00202f9c4955:plan_model_messages:f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "name": "plan_model_messages",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 37796,
+          "sha256": "f3adb2dd9594c6b520638948d0438d7e159acafd2d2b723285f89efed4cb5e4d",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "c0ff00202f9c4955",
+          "label": "模型完整 Messages"
+        },
+        {
+          "id": "78d533298761413b:plan_extraction_input:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extraction_input",
+          "role": "input",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取前模型原文"
+        },
+        {
+          "id": "78d533298761413b:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "78d533298761413b",
+          "label": "提取后的输出"
+        },
+        {
+          "id": "92ec782aefc949ec:plan_extracted_output:7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "name": "plan_extracted_output",
+          "role": "output",
+          "mediaType": "text/plain",
+          "bytes": 291,
+          "sha256": "7d1ad6e02a40b271fa18e57f2f07b615273efe11a4c0f5e5a05a348f88eb3d02",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "提取后的输出"
+        },
+        {
+          "id": "92ec782aefc949ec:missing_data_report:ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "name": "missing_data_report",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 283,
+          "sha256": "ddbf41aca8b955c00b226eae9e4d9ea238a90ee80f822c81e90ca93d39919476",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "92ec782aefc949ec",
+          "label": "missing_data_report"
+        },
+        {
+          "id": "d84e2bf442dd4aec:protocol_selection:26ce311ade8fb91dddd10d7233742254dee9cc170678b5d940b950c6d5ee1b1e",
+          "name": "protocol_selection",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 165,
+          "sha256": "26ce311ade8fb91dddd10d7233742254dee9cc170678b5d940b950c6d5ee1b1e",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "d84e2bf442dd4aec",
+          "label": "协议选择结果"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

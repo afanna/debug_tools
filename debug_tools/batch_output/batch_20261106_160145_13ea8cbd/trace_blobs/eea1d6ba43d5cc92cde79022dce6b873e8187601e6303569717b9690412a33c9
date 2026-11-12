@@ -1,0 +1,222 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.figure_run"
+    }
+  },
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "session_chest",
+      "identity": "胸",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "session_back",
+      "identity": "背",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        5,
+        6
+      ],
+      "id": "session_leg",
+      "identity": "腿",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        7,
+        8
+      ],
+      "id": "session_shoulder",
+      "identity": "肩",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        9,
+        10
+      ],
+      "id": "routine",
+      "identity": null,
+      "kind": "shared"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "概括整卡主题：一周四练的胸背腿肩分化训练安排",
+      "sourceTexts": [
+        "我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。"
+      ],
+      "text": "一周四练分化安排"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周一练胸",
+      "sourceTexts": [
+        "我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。"
+      ],
+      "text": "周一"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "训练部位为胸",
+      "sourceTexts": [
+        "我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。"
+      ],
+      "text": "胸"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周三练背",
+      "sourceTexts": [
+        "我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。"
+      ],
+      "text": "周三"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "训练部位为背",
+      "sourceTexts": [
+        "我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。"
+      ],
+      "text": "背"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周五练腿",
+      "sourceTexts": [
+        "我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。"
+      ],
+      "text": "周五"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "训练部位为腿",
+      "sourceTexts": [
+        "我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。"
+      ],
+      "text": "腿"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "周日练肩",
+      "sourceTexts": [
+        "我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。"
+      ],
+      "text": "周日"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "训练部位为肩",
+      "sourceTexts": [
+        "我的训练计划：周一练胸，周三练背，周五练腿，周日练肩。"
+      ],
+      "text": "肩"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "每次训练包含热身、主项训练和拉伸放松",
+      "sourceTexts": [
+        "每次训练包含热身、主项训练和拉伸放松。"
+      ],
+      "text": "每次训练"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "训练环节为热身、主项训练和拉伸放松",
+      "sourceTexts": [
+        "每次训练包含热身、主项训练和拉伸放松。"
+      ],
+      "text": "热身·主项·拉伸"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "rows",
+  "selectionNotes": [
+    "四个训练日按周一至周日顺序排列，属名称加短值的单行记录，选rows/SingleLineList并配共同标题",
+    "每次训练的环节为共同说明，作为第5行放入列表，列表共5行符合1–5行上限",
+    "标题概括为“一周四练分化安排”，与正文不重复"
+  ],
+  "staticPresentationFeedback": [
+    "静态试排无可用候选：4个对象；单行列表须完整单行，文本列表2–3项且含标题最多2项，除三项文本列表外均须标题；对比仅宽卡带标题2–3项，四个对象应改用其它合法结构。请在Plan内按用途重新组织或精简，保留必要对象名称、数值与限定；有限候选未找到结构不代表所有合法排版均不可行。"
+  ]
+}

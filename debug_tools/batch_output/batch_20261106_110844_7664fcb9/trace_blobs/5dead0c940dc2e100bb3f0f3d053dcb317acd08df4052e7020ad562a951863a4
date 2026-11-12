@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "support: items[2].label must be non-empty text.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

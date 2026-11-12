@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"W-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"工资表"}]
+["body","SingleLineList",{"items":[{"text":"工资表项目","assist":"姓名；基本工资；奖金；补贴；扣款；实发工资"}]}]
+["/state/ready",true]

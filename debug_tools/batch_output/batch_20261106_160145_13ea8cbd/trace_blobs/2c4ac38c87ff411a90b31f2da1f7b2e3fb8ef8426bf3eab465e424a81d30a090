@@ -1,0 +1,26 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {
+        "districtName": "水磨沟区",
+        "forecastDays": 1,
+        "prefectureName": "乌鲁木齐市"
+      },
+      "capabilityId": "ViewWeather",
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "arguments": {},
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "description": "天气与时间卡片",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "天气时间"
+}

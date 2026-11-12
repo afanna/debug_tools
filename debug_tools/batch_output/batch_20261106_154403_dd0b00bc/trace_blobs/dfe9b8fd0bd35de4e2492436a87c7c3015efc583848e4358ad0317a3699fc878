@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "component content_value: text width overflow; complete text '6200步' at original font 48 needs about 144vp in one line, but its allocated text area is 126vp. Keep every label, prefix, value and action; use legal lines at the same font or regroup into a wider region. A fixed single-line component needs same-font separate lines or a different legal composition, not clipping, unsupported font overrides or weight.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

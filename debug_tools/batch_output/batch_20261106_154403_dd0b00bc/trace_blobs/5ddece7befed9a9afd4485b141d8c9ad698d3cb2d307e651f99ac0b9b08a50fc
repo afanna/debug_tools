@@ -1,0 +1,7 @@
+{
+  "errors": [],
+  "warnings": [
+    "component body__static_item0_secondaryText: static text exceeds its 131.64vp single-line text area and will be rendered with an ellipsis.",
+    "component body__static_item1_secondaryText: static text exceeds its 114vp single-line text area and will be rendered with an ellipsis."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData",
+        "DataDisplay"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前天气温度（已含℃）"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/weather/location/prefectureName",
+      "priority": "must",
+      "requirement": "所在城市名称"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/airQuality",
+      "priority": "should",
+      "requirement": "当前空气质量等级"
+    },
+    {
+      "actionId": "event.open.weather",
+      "priority": "must",
+      "requirement": "打开华为天气应用该城市页"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content",
+    "S-title-dual-content"
+  ],
+  "wholeCardActionId": "event.open.weather"
+}

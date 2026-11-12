@@ -1,0 +1,12 @@
+{
+  "data": [
+    "ViewWeather",
+    "GetEarphoneInfo"
+  ],
+  "event": [],
+  "asset": [
+    "asset.emoji_default_weather_blue",
+    "asset.emoji_earbud_case_black",
+    "asset.icon_earphone"
+  ]
+}

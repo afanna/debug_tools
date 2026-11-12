@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "generation-trace-v2",
+  "instrumentationVersion": 2,
+  "traceId": "b9245f3e6e4a48f19d20adfb91c501e3",
+  "rootSpanId": "b7723c14d3734be9",
+  "uid": "batch-7664fcb9-00013-000",
+  "state": "complete",
+  "startedAt": "2026-11-06T03:09:07.628720+00:00",
+  "recordCount": 28,
+  "artifactCount": 11,
+  "completedAt": "2026-11-06T03:09:08.888362+00:00",
+  "summary": {
+    "totalDurationMs": 1257.41,
+    "latencyByStage": {
+      "generation.branch": 1246.22,
+      "generationPreflight": 3.82,
+      "interfaceAttempt.total": 1250.78,
+      "model.physicalCall": 1216.27,
+      "model.providerExecution": 1213.85,
+      "model.queue": 0.04,
+      "plan": 1229.57,
+      "plan.attempt": 1227.18,
+      "plan.extract": 0.27,
+      "plan.promptBuild": 0.49,
+      "prepare": 16.14,
+      "promptBuild": 2.02,
+      "protocolSelection": 2.48,
+      "registry": 1.98
+    },
+    "attemptCounts": {
+      "generationBranches": 1,
+      "interfaceAttempts": 1,
+      "modelLogicalCalls": 1,
+      "modelPhysicalAttempts": 1,
+      "planContractAttempts": 1
+    },
+    "errorCode": "GENERATION_INPUT_INCOMPLETE"
+  }
+}

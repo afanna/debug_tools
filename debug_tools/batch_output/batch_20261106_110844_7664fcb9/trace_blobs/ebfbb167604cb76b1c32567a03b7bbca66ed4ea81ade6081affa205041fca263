@@ -1,0 +1,74 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate"
+      ],
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/currentTime"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/currentTime"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "日历海报",
+    "size": "2x2",
+    "title": "日历",
+    "uid": "batch-7664fcb9-00014-000",
+    "userQuery": "帮我生成一张日历图片\n\n本轮卡片静态内容（用作展示的外部事实）："
+  },
+  "description": "日历海报",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261029084657714"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "session": {
+    "interactionId": "Q309-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x2",
+  "title": "日历",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00014-000"
+    }
+  },
+  "userQuery": "帮我生成一张日历图片\n\n本轮卡片静态内容（用作展示的外部事实）：",
+  "utterance": {
+    "original": "帮我生成一张日历图片\n\n本轮卡片静态内容（用作展示的外部事实）：",
+    "type": "text"
+  },
+  "version": "1.0"
+}

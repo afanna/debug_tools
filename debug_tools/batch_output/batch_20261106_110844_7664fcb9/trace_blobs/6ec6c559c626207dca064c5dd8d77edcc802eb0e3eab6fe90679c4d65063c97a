@@ -1,0 +1,98 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.bell_fill"
+    }
+  },
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "pickup",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3
+      ],
+      "id": "code",
+      "identity": "取件码",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡共同主题：取件提醒",
+      "sourceTexts": [
+        "取件码34-4-2009，取件地点新天地华庭3座2单元妈妈驿站，提醒时间明天下午6:10"
+      ],
+      "text": "取件提醒"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "展示取件码34-4-2009",
+      "sourceTexts": [
+        "取件码34-4-2009，取件地点新天地华庭3座2单元妈妈驿站，提醒时间明天下午6:10"
+      ],
+      "text": "取件码 34-4-2009"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "body",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "展示取件地点新天地华庭3座2单元妈妈驿站",
+      "sourceTexts": [
+        "取件码34-4-2009，取件地点新天地华庭3座2单元妈妈驿站，提醒时间明天下午6:10"
+      ],
+      "text": "新天地华庭3座2单元妈妈驿站"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "detail",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "展示提醒时间明天下午6:10",
+      "sourceTexts": [
+        "取件码34-4-2009，取件地点新天地华庭3座2单元妈妈驿站，提醒时间明天下午6:10"
+      ],
+      "text": "明天下午6:10提醒拿快递"
+    }
+  ],
+  "layoutHints": [
+    "S-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "content",
+  "selectionNotes": [
+    "单一取件对象，核心为取件码，配合地点与提醒时间作为从属说明",
+    "EmphasisText承载取件码结论，地点与提醒时间分别放入secondaryText与bottomText",
+    "提醒为静态展示文字，不构成动态数据需求"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"S-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"取件提醒\"}]\n[\"body\", \"EmphasisText\", {\"mainText\": \"取件码 34-4-2009\", \"secondaryText\": \"新天地华庭3座2单元妈妈驿站；明天下午6:10提醒拿快递\"}]\n[\"/state/ready\", true]"
+}

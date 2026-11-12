@@ -1,0 +1,131 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前日期"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    },
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前时间温度"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/alertLevel",
+      "priority": "must",
+      "requirement": "大风预警"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/0/weekday",
+      "priority": "must",
+      "requirement": "未来第1天星期"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/0/condition",
+      "priority": "must",
+      "requirement": "未来第1天天气现象"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/0/temperatureRangeText",
+      "priority": "must",
+      "requirement": "未来第1天温度范围"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/1/weekday",
+      "priority": "must",
+      "requirement": "未来第2天星期"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/1/condition",
+      "priority": "must",
+      "requirement": "未来第2天天气现象"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/1/temperatureRangeText",
+      "priority": "must",
+      "requirement": "未来第2天温度范围"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/2/weekday",
+      "priority": "must",
+      "requirement": "未来第3天星期"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/2/condition",
+      "priority": "must",
+      "requirement": "未来第3天天气现象"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/daily/2/temperatureRangeText",
+      "priority": "must",
+      "requirement": "未来第3天温度范围"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom"
+  ]
+}

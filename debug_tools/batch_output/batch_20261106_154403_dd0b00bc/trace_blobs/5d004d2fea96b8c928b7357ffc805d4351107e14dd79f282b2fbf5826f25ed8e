@@ -1,0 +1,1 @@
+{"name": "report_missing_data", "arguments": {"requirements": [{"description": "当前时间（时:分，可含秒）的动态字段，用于卡片核心显示", "sourceQuote": "显示当前时间"}]}}

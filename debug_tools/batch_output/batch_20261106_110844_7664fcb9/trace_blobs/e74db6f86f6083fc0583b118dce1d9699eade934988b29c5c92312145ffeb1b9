@@ -1,0 +1,7 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":8,"itemMargin":8},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/weather/current/temperatureText"},"secondaryText":{"path":"/data/weather/current/condition"},"width":"matchParent","layoutWeight":1}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/time/dayOfWeek"},"secondaryText":{"path":"/data/time/currentDate"},"width":"matchParent","layoutWeight":1}]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/time/currentDate","示例"]
+["/data/time/dayOfWeek","示例"]

@@ -1,0 +1,21 @@
+{
+  "id": "Q295",
+  "fileName": "Q295.json",
+  "title": "东莞天气",
+  "query": "做一张东莞今日天气卡片，显示温度和天气现象。本轮卡片静态内容（用作展示的外部事实）：东莞今日晴，气温23℃~31℃。",
+  "size": "2x2",
+  "sequence": 6,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4882.19,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 86,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4875.22,
+  "uid": "batch-7664fcb9-00006-000",
+  "finalAttempt": 0
+}

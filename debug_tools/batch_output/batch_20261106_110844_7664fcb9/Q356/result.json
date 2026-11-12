@@ -1,0 +1,21 @@
+{
+  "id": "Q356",
+  "fileName": "Q356.json",
+  "title": "时钟卡片",
+  "query": "制作一张桌面时钟卡片，显示当前时间、日期、星期和农历信息。",
+  "size": "2x2",
+  "sequence": 32,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4268.84,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4262.68,
+  "uid": "batch-7664fcb9-00032-000",
+  "finalAttempt": 0
+}

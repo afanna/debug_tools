@@ -1,0 +1,68 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "TextBlock",
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/countdown0/countdownDays",
+      "priority": "must",
+      "requirement": "农历九月初六（2027年10月5日）的倒计时天数"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/countdown1/countdownDays",
+      "priority": "must",
+      "requirement": "农历五月二十（2027年6月24日）的倒计时天数"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/countdown2/countdownDays",
+      "priority": "must",
+      "requirement": "农历三月十三（2027年4月19日）的倒计时天数"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/countdown3/countdownDays",
+      "priority": "must",
+      "requirement": "农历腊月十六（2028年1月12日）的倒计时天数"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/countdown4/countdownDays",
+      "priority": "must",
+      "requirement": "农历三月初六（2027年4月12日）的倒计时天数"
+    },
+    {
+      "componentHints": [
+        "TextBlock",
+        "TableText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/countdown5/countdownDays",
+      "priority": "must",
+      "requirement": "农历九月廿九（2027年10月28日）的倒计时天数"
+    }
+  ],
+  "layoutHints": [
+    "W-top-bottom",
+    "W-four-slots"
+  ]
+}

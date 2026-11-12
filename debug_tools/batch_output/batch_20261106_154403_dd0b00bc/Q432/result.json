@@ -1,0 +1,21 @@
+{
+  "id": "Q432",
+  "fileName": "Q432.json",
+  "title": "3D动态日历",
+  "query": "打开华为3D动态日历，制作一张3D动态日历卡片，显示当前日期、星期、农历以及近期日程安排。",
+  "size": "2x4",
+  "sequence": 20,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4746.47,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 74,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4739.09,
+  "uid": "batch-dd0b00bc-00020-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q511",
+  "fileName": "Q511.json",
+  "title": "倒计时",
+  "query": "创建一个倒计时卡片，目标日期为2027年1月30日，展示距离该日期的倒计时天数",
+  "size": "2x2",
+  "sequence": 99,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3956.32,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3912.57,
+  "uid": "batch-13ea8cbd-00099-000",
+  "finalAttempt": 0
+}

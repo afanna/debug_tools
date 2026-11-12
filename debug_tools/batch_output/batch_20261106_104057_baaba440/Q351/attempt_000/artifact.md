@@ -1,0 +1,401 @@
+```cardspec
+{
+  "title": "桌面聚合卡片",
+  "description": "聚合天气、电量、健康和耗电排行的桌面卡片",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "capabilityId": "GetPhoneBatteryInfo",
+      "arguments": {},
+      "writeResultTo": "/data/phoneBattery"
+    },
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/healthSport"
+    },
+    {
+      "capabilityId": "GetAppPowerConsumptionRanking",
+      "arguments": {
+        "limit": 3
+      },
+      "writeResultTo": "/data/powerRanking"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Stack","children":["__post_theme_background","__genui_render_component__root"],"styles":{"width":"matchParent","height":"matchParent","padding":0,"alignContent":"topStart","clip":true,"borderRadius":20,"backgroundColor":"#FF1F1F99"}},{"id":"__post_theme_background","component":"Stack","children":["fusionBallBackground","__post_theme_base"],"styles":{"width":"matchParent","height":"matchParent","alignContent":"topStart"}},{"id":"__post_theme_base","component":"Image","src":"https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/a7ab45d189c04ec3902f0c2e95e14aab/5a57a31906f542c9a457e62183f90ce3.jpg","styles":{"width":"matchParent","height":"matchParent","objectFit":"fill"}},{"id":"fusionBallBackground","component":"Stack","children":["fusionBallLargeSlot","fusionBallMediumSlot","fusionBallSmallSlot","fusionBallGlassLayer"],"styles":{"width":"100%","height":"100%","borderRadius":20,"alignContent":"topStart","clip":true}},{"id":"fusionBallLargeSlot","component":"Stack","children":["fusionBallLarge"],"styles":{"width":"112.5%","height":"58.75%","alignContent":"bottom"}},{"id":"fusionBallLarge","component":"Divider","styles":{"width":"116.666667%","height":"446.808511%","strokeWidth":0,"color":"#00000000","borderRadius":210,"backgroundColor":"#FF1F1F99","clip":true}},{"id":"fusionBallMediumSlot","component":"Stack","children":["fusionBallMedium"],"styles":{"width":"50%","height":"175%","alignContent":"bottom"}},{"id":"fusionBallMedium","component":"Divider","styles":{"width":"200%","height":"114.285714%","strokeWidth":0,"color":"#00000000","borderRadius":160,"backgroundColor":"#FF2B65D9","clip":true}},{"id":"fusionBallSmallSlot","component":"Stack","children":["fusionBallSmall"],"styles":{"width":"121.875%","height":"137.5%","alignContent":"bottomEnd"}},{"id":"fusionBallSmall","component":"Divider","styles":{"width":"51.282051%","height":"90.909091%","strokeWidth":0,"color":"#00000000","borderRadius":100,"backgroundColor":"#FF57AED9","clip":true}},{"id":"fusionBallGlassLayer","component":"Divider","styles":{"width":"100%","height":"100%","strokeWidth":0,"color":"#00000000","backgroundColor":"#0DFFFFFF","backdropBlur":{"radius":210}}},{"id":"__genui_render_component__root","component":"Stack","children":["foreground"],"styles":{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true}},{"id":"foreground","component":"Column","children":["title"],"styles":{"width":"matchParent","height":"matchParent","padding":12,"alignItems":"start","justifyContent":"start"},"itemMargin":0},{"id":"title","component":"Column","children":["title_main"],"itemMargin":2,"styles":{"alignItems":"start","flexShrink":1,"constraintSize":{"minWidth":0},"width":"matchParent"}},{"id":"title_main","component":"Text","content":"Design Compact Mock","styles":{"height":18,"fontSize":18,"fontWeight":700,"lineHeight":1,"maxLines":1,"flexShrink":1,"width":"matchParent","fontColor":"#FFFFFFFF","textOverflow":"clip"}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"ui":{"state":"ready"}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "weather": {
+        "current": {
+          "temperatureText": {
+            "type": "string",
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃"
+          },
+          "condition": {
+            "type": "string",
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云"
+          }
+        }
+      },
+      "phoneBattery": {
+        "batterySOCText": {
+          "type": "string",
+          "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+          "sampleValue": "68%",
+          "numericSource": "/data/phoneBattery/batterySOC"
+        },
+        "chargingStatusDesc": {
+          "type": "string",
+          "description": "当前设备电池的充电状态文本描述。",
+          "sampleValue": "未充电"
+        },
+        "batterySOC": {
+          "type": "integer",
+          "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+          "sampleValue": 68
+        }
+      },
+      "healthSport": {
+        "dailySteps": {
+          "type": "integer",
+          "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+          "sampleValue": 6200
+        },
+        "dailyTotalCaloriesText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+          "sampleValue": "420 千卡"
+        },
+        "exerciseTypeName": {
+          "type": "string",
+          "description": "最近一次发生的单次专业运动训练类型的中文映射名称，如“羽毛球”、“自由训练”、“户外跑步”。若无记录则返回“暂无运动”。",
+          "sampleValue": "户外跑步"
+        },
+        "exerciseDurationText": {
+          "type": "string",
+          "description": "可直接显示的单次专业运动实际持续时长文本，已包含“小时”或“分”等时间单位；展示时不得再次追加时间单位。例如“1小时40分”。",
+          "sampleValue": "40分"
+        }
+      },
+      "powerRanking": {
+        "rankingList": [
+          {
+            "appName": {
+              "type": "string",
+              "description": "应用名称文本，例如：“微信”、“设置”。",
+              "sampleValue": "示例"
+            },
+            "powerText": {
+              "type": "string",
+              "description": "应用的耗电量或耗电占比格式化文本，例如：“53%”、“--”。",
+              "sampleValue": "示例"
+            }
+          },
+          {
+            "appName": {
+              "type": "string",
+              "description": "应用名称文本，例如：“微信”、“设置”。",
+              "sampleValue": "示例"
+            },
+            "powerText": {
+              "type": "string",
+              "description": "应用的耗电量或耗电占比格式化文本，例如：“53%”、“--”。",
+              "sampleValue": "示例"
+            }
+          },
+          {
+            "appName": {
+              "type": "string",
+              "description": "应用名称文本，例如：“微信”、“设置”。",
+              "sampleValue": "示例"
+            },
+            "powerText": {
+              "type": "string",
+              "description": "应用的耗电量或耗电占比格式化文本，例如：“53%”、“--”。",
+              "sampleValue": "示例"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "photo-ux-texture-orange-diamond-wide",
+      "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/a7ab45d189c04ec3902f0c2e95e14aab/5a57a31906f542c9a457e62183f90ce3.jpg",
+      "description": "主题背景"
+    }
+  ]
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "ViewWeather",
+    "GetPhoneBatteryInfo",
+    "GetHealthAndSportSummary",
+    "GetAppPowerConsumptionRanking"
+  ],
+  "event": [],
+  "asset": [
+    "photo-ux-texture-orange-diamond-wide"
+  ]
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": [
+        "/current/temperatureText",
+        "/current/condition"
+      ]
+    },
+    {
+      "capabilityId": "GetPhoneBatteryInfo",
+      "arguments": {},
+      "writeResultTo": "/data/phoneBattery",
+      "candidateOutputFields": [
+        "/batterySOCText",
+        "/chargingStatusDesc",
+        "/batterySOC"
+      ]
+    },
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/exerciseTypeName",
+        "/exerciseDurationText"
+      ]
+    },
+    {
+      "capabilityId": "GetAppPowerConsumptionRanking",
+      "arguments": {
+        "limit": 3
+      },
+      "writeResultTo": "/data/powerRanking",
+      "candidateOutputFields": [
+        "/rankingList/0/appName",
+        "/rankingList/0/powerText",
+        "/rankingList/1/appName",
+        "/rankingList/1/powerText",
+        "/rankingList/2/appName",
+        "/rankingList/2/powerText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": []
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "66f0a0ea-0884-4724-93ec-b9b805f94e21",
+  "createdAt": 1793932878089
+}
+```
+```designcompactdsl
+["root","Stack",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true},["foreground"]]
+["foreground","Column",{"width":"matchParent","height":"matchParent","padding":12,"alignItems":"start","justifyContent":"start"},["title"]]
+["title","EmphasisText",{"mainText":"Design Compact Mock"}]
+["/ui/state","ready"]
+```
+```request
+{
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "userQuery": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "ViewWeather",
+        "arguments": {
+          "forecastDays": 1
+        },
+        "writeResultTo": "/data/weather",
+        "candidateOutputFields": [
+          "/current/temperatureText",
+          "/current/condition"
+        ]
+      },
+      {
+        "capabilityId": "GetPhoneBatteryInfo",
+        "arguments": {},
+        "writeResultTo": "/data/phoneBattery",
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc",
+          "/batterySOC"
+        ]
+      },
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {},
+        "writeResultTo": "/data/healthSport",
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyTotalCaloriesText",
+          "/exerciseTypeName",
+          "/exerciseDurationText"
+        ]
+      },
+      {
+        "capabilityId": "GetAppPowerConsumptionRanking",
+        "arguments": {
+          "limit": 3
+        },
+        "writeResultTo": "/data/powerRanking",
+        "candidateOutputFields": [
+          "/rankingList/0/appName",
+          "/rankingList/0/powerText",
+          "/rankingList/1/appName",
+          "/rankingList/1/powerText",
+          "/rankingList/2/appName",
+          "/rankingList/2/powerText"
+        ]
+      }
+    ],
+    "title": "桌面聚合卡片",
+    "size": "2x4",
+    "candidateEventCandidates": [],
+    "description": "聚合天气、电量、健康和耗电排行的桌面卡片",
+    "candidateAssetIds": []
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261030100829720"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q351-000",
+    "isNew": true,
+    "sessionId": "batch-baaba440"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。",
+    "type": "text"
+  },
+  "version": "1.0",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "bundleName": "com.huawei.genui",
+  "userQuery": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": [
+        "/current/temperatureText",
+        "/current/condition"
+      ]
+    },
+    {
+      "capabilityId": "GetPhoneBatteryInfo",
+      "arguments": {},
+      "writeResultTo": "/data/phoneBattery",
+      "candidateOutputFields": [
+        "/batterySOCText",
+        "/chargingStatusDesc",
+        "/batterySOC"
+      ]
+    },
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {},
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/dailySteps",
+        "/dailyTotalCaloriesText",
+        "/exerciseTypeName",
+        "/exerciseDurationText"
+      ]
+    },
+    {
+      "capabilityId": "GetAppPowerConsumptionRanking",
+      "arguments": {
+        "limit": 3
+      },
+      "writeResultTo": "/data/powerRanking",
+      "candidateOutputFields": [
+        "/rankingList/0/appName",
+        "/rankingList/0/powerText",
+        "/rankingList/1/appName",
+        "/rankingList/1/powerText",
+        "/rankingList/2/appName",
+        "/rankingList/2/powerText"
+      ]
+    }
+  ],
+  "title": "桌面聚合卡片",
+  "size": "2x4",
+  "candidateEventCandidates": [],
+  "description": "聚合天气、电量、健康和耗电排行的桌面卡片",
+  "candidateAssetIds": []
+}
+```

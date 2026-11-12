@@ -1,0 +1,107 @@
+{
+  "cardspec": {
+    "title": "湖州新闻",
+    "description": "今日湖州交通新闻速览",
+    "suggestSize": "2x2",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ]
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\r\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"__layout__root__static_header\",\"__layout__root__static_body\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":{\"top\":12.0,\"bottom\":12.0,\"left\":0,\"right\":0},\"borderRadius\":20.0,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"linearGradient\":{\"direction\":\"RightBottom\",\"colors\":[[\"#FFCBDDFE\",0],[\"#FFF1F6FE\",1]]}}},{\"id\":\"__layout__root__static_header\",\"component\":\"Column\",\"children\":[\"header\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":{\"left\":12.0,\"right\":12.0},\"height\":16.0},\"itemMargin\":0},{\"id\":\"header\",\"component\":\"Column\",\"children\":[\"header__static_title\"],\"itemMargin\":0.0,\"styles\":{\"width\":\"matchParent\",\"height\":16.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0}},{\"id\":\"header__static_title\",\"component\":\"Text\",\"content\":\"湖州路面检测竞赛落幕\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":0,\"fontColor\":\"#FF1F4799\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"__layout__root__static_body\",\"component\":\"Column\",\"children\":[\"body\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1,\"alignItems\":\"start\",\"justifyContent\":\"end\",\"padding\":{\"left\":12.0,\"right\":12.0}}},{\"id\":\"body\",\"component\":\"Column\",\"children\":[\"body__static_item0\",\"body__static_divider0\",\"body__static_item1\"],\"itemMargin\":12.0,\"styles\":{\"width\":\"matchParent\",\"height\":91.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0}},{\"id\":\"body__static_item0_primaryText\",\"component\":\"Text\",\"content\":\"团体一等奖\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"#FF1F4799\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0_secondaryText\",\"component\":\"Text\",\"content\":\"申苏浙皖改扩建第TJ01标工地试验室\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":400,\"lineHeight\":1.3,\"maxLines\":1,\"height\":13.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"#991F4799\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0_main\",\"component\":\"Column\",\"children\":[\"body__static_item0_primaryText\",\"body__static_item0_secondaryText\"],\"itemMargin\":4.0,\"styles\":{\"height\":33.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item0_badge\",\"component\":\"Text\",\"content\":\"1\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":500,\"lineHeight\":1.6,\"maxLines\":1,\"height\":16.0,\"width\":16.0,\"flexShrink\":0,\"fontColor\":\"#FF1F4799\",\"textAlign\":\"center\",\"backgroundColor\":\"#331F4799\",\"borderRadius\":8.0,\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0_text\",\"component\":\"Row\",\"children\":[\"body__static_item0_main\"],\"itemMargin\":0.0,\"styles\":{\"height\":33.0,\"layoutWeight\":1,\"alignItems\":\"center\",\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item0\",\"component\":\"Row\",\"children\":[\"body__static_item0_badge\",\"body__static_item0_text\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":33.0,\"alignItems\":\"center\",\"flexShrink\":0}},{\"id\":\"body__static_divider0\",\"component\":\"Divider\",\"styles\":{\"width\":\"matchParent\",\"height\":1.0,\"strokeWidth\":1.0,\"flexShrink\":0,\"color\":\"#1F1F4799\"}},{\"id\":\"body__static_item1_primaryText\",\"component\":\"Text\",\"content\":\"参赛规模\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"#FF1F4799\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1_secondaryText\",\"component\":\"Text\",\"content\":\"20支代表队、60名检测精英同场竞技\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":400,\"lineHeight\":1.3,\"maxLines\":1,\"height\":13.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"#991F4799\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1_main\",\"component\":\"Column\",\"children\":[\"body__static_item1_primaryText\",\"body__static_item1_secondaryText\"],\"itemMargin\":4.0,\"styles\":{\"height\":33.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item1_badge\",\"component\":\"Text\",\"content\":\"2\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":500,\"lineHeight\":1.6,\"maxLines\":1,\"height\":16.0,\"width\":16.0,\"flexShrink\":0,\"fontColor\":\"#FF1F4799\",\"textAlign\":\"center\",\"backgroundColor\":\"#331F4799\",\"borderRadius\":8.0,\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1_text\",\"component\":\"Row\",\"children\":[\"body__static_item1_main\"],\"itemMargin\":0.0,\"styles\":{\"height\":33.0,\"layoutWeight\":1,\"alignItems\":\"center\",\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item1\",\"component\":\"Row\",\"children\":[\"body__static_item1_badge\",\"body__static_item1_text\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":33.0,\"alignItems\":\"center\",\"flexShrink\":0}}]}}\r\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"state\":{\"ready\":true}}}}",
+  "schema": {
+    "schemaVersion": "widget-artifact-v2"
+  },
+  "taskspec": {
+    "userQuery": "生成一张新闻卡，展示湖州今日新闻：2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕，来自全市20支代表队、60名检测精英同场竞技，申苏浙皖改扩建第TJ01标工地试验室摘得团体一等奖。本轮卡片静态内容（用作展示的外部事实）：2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕，来自全市公路水运工程试验检测机构及在建项目工地试验室的20支代表队、60名检测精英同场竞技。申苏浙皖改扩建第TJ01标工地试验室凭借扎实的理论功底和出色的现场发挥摘得团体一等奖，另有两家单位分获团体二等奖、三家单位分获团体三等奖。",
+    "size": "2x2",
+    "appVersion": "11.7.8.342",
+    "eventCandidates": [],
+    "dataModelSchema": {
+      "data": {}
+    },
+    "assetCandidates": []
+  },
+  "effectivecapabilities": {
+    "data": [],
+    "event": [],
+    "asset": []
+  },
+  "removedcapabilities": [],
+  "generationplan": {
+    "candidateDataBindings": [],
+    "candidateEventCandidates": [],
+    "candidateAssetIds": []
+  },
+  "meta": {
+    "apiVersion": "v1",
+    "taskSpecVersion": "task-spec-v1",
+    "cardSpecVersion": "card-spec-v1",
+    "dslProtocolVersion": "v0.9",
+    "skillVersion": "skill-widget-v1",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "generationMode": "create",
+    "artifactId": "1a0b9678-9e7a-4982-989b-077303044376",
+    "createdAt": 1793952367654
+  },
+  "designcompactdsl": "[\"root\",\"Layout\",{\"layout\":\"S-static-content\"},[\"header\",\"body\"]]\r\n[\"header\",\"SingleLineTitle\",{\"title\":\"湖州路面检测竞赛落幕\"}]\r\n[\"body\",\"TextList\",{\"items\":[{\"primaryText\":\"团体一等奖\",\"secondaryText\":\"申苏浙皖改扩建第TJ01标工地试验室\"},{\"primaryText\":\"参赛规模\",\"secondaryText\":\"20支代表队、60名检测精英同场竞技\"}]}]\r\n[\"/state/ready\",true]",
+  "request": {
+    "content": {
+      "size": "2x2",
+      "functionName": "generateWidgetCardCompactDsl",
+      "romVersion": "HLS-AL00 7.0.0.111",
+      "candidateAssetIds": [],
+      "candidateEventCandidates": [],
+      "bundleName": "com.huawei.genui",
+      "description": "今日湖州交通新闻速览",
+      "userQuery": "生成一张新闻卡，展示湖州今日新闻：2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕，来自全市20支代表队、60名检测精英同场竞技，申苏浙皖改扩建第TJ01标工地试验室摘得团体一等奖。本轮卡片静态内容（用作展示的外部事实）：2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕，来自全市公路水运工程试验检测机构及在建项目工地试验室的20支代表队、60名检测精英同场竞技。申苏浙皖改扩建第TJ01标工地试验室凭借扎实的理论功底和出色的现场发挥摘得团体一等奖，另有两家单位分获团体二等奖、三家单位分获团体三等奖。",
+      "title": "湖州新闻",
+      "candidateDataBindings": []
+    },
+    "deviceInfo": {
+      "countryCode": "CN",
+      "deviceFormation": "HDSpeaker",
+      "deviceType": 0,
+      "locale": "zh-CN",
+      "phoneType": "HLS-AL00",
+      "prdVer": "11.7.8.342",
+      "sysVer": "EmotionUI_9.0.0",
+      "time": "20261101150045087"
+    },
+    "pagination": {
+      "limit": 5,
+      "start": ""
+    },
+    "session": {
+      "interactionId": "Q512-000",
+      "isNew": true,
+      "sessionId": "batch-13ea8cbd"
+    },
+    "userAuth": {
+      "user": {}
+    },
+    "utterance": {
+      "original": "",
+      "type": "text"
+    },
+    "version": "1.0",
+    "size": "2x2",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "HLS-AL00 7.0.0.111",
+    "candidateAssetIds": [],
+    "candidateEventCandidates": [],
+    "bundleName": "com.huawei.genui",
+    "description": "今日湖州交通新闻速览",
+    "userQuery": "生成一张新闻卡，展示湖州今日新闻：2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕，来自全市20支代表队、60名检测精英同场竞技，申苏浙皖改扩建第TJ01标工地试验室摘得团体一等奖。本轮卡片静态内容（用作展示的外部事实）：2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕，来自全市公路水运工程试验检测机构及在建项目工地试验室的20支代表队、60名检测精英同场竞技。申苏浙皖改扩建第TJ01标工地试验室凭借扎实的理论功底和出色的现场发挥摘得团体一等奖，另有两家单位分获团体二等奖、三家单位分获团体三等奖。",
+    "title": "湖州新闻",
+    "candidateDataBindings": []
+  },
+  "repair-1": {
+    "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-static-content\"},[\"header\",\"body\"]]\n[\"header\",\"SingleLineTitle\",{\"title\":\"湖州路面检测竞赛落幕\"}]\n[\"body\",\"TextList\",{\"items\":[{\"primaryText\":\"团体一等奖\",\"secondaryText\":\"申苏浙皖改扩建第TJ01标工地试验室\"},{\"primaryText\":\"参赛规模\",\"secondaryText\":\"20支代表队、60名检测精英同场竞技\"}]}]\n[\"/state/ready\",true]",
+    "generatedDsl": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"__layout__root__static_header\",\"__layout__root__static_body\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":{\"top\":12.0,\"bottom\":12.0,\"left\":0,\"right\":0},\"borderRadius\":20.0,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\"}},{\"id\":\"__layout__root__static_header\",\"component\":\"Column\",\"children\":[\"header\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":{\"left\":12.0,\"right\":12.0},\"height\":16.0},\"itemMargin\":0},{\"id\":\"header\",\"component\":\"Column\",\"children\":[\"header__static_title\"],\"itemMargin\":0.0,\"styles\":{\"width\":\"matchParent\",\"height\":16.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0}},{\"id\":\"header__static_title\",\"component\":\"Text\",\"content\":\"湖州路面检测竞赛落幕\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"__layout__root__static_body\",\"component\":\"Column\",\"children\":[\"body\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1,\"alignItems\":\"start\",\"justifyContent\":\"end\",\"padding\":{\"left\":12.0,\"right\":12.0}}},{\"id\":\"body\",\"component\":\"Column\",\"children\":[\"body__static_item0\",\"body__static_divider0\",\"body__static_item1\"],\"itemMargin\":12.0,\"styles\":{\"width\":\"matchParent\",\"height\":91.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0}},{\"id\":\"body__static_item0_primaryText\",\"component\":\"Text\",\"content\":\"团体一等奖\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0_secondaryText\",\"component\":\"Text\",\"content\":\"申苏浙皖改扩建第TJ01标工地试验室\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":400,\"lineHeight\":1.3,\"maxLines\":1,\"height\":13.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0_main\",\"component\":\"Column\",\"children\":[\"body__static_item0_primaryText\",\"body__static_item0_secondaryText\"],\"itemMargin\":4.0,\"styles\":{\"height\":33.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item0_badge\",\"component\":\"Text\",\"content\":\"1\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":500,\"lineHeight\":1.6,\"maxLines\":1,\"height\":16.0,\"width\":16.0,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textAlign\":\"center\",\"backgroundColor\":\"@theme:primary/0.2\",\"borderRadius\":8.0,\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item0_text\",\"component\":\"Row\",\"children\":[\"body__static_item0_main\"],\"itemMargin\":0.0,\"styles\":{\"height\":33.0,\"layoutWeight\":1,\"alignItems\":\"center\",\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item0\",\"component\":\"Row\",\"children\":[\"body__static_item0_badge\",\"body__static_item0_text\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":33.0,\"alignItems\":\"center\",\"flexShrink\":0}},{\"id\":\"body__static_divider0\",\"component\":\"Divider\",\"styles\":{\"width\":\"matchParent\",\"height\":1.0,\"strokeWidth\":1.0,\"flexShrink\":0,\"color\":\"@theme:primary/0.12\"}},{\"id\":\"body__static_item1_primaryText\",\"component\":\"Text\",\"content\":\"参赛规模\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":500,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1_secondaryText\",\"component\":\"Text\",\"content\":\"20支代表队、60名检测精英同场竞技\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":400,\"lineHeight\":1.3,\"maxLines\":1,\"height\":13.0,\"width\":\"matchParent\",\"flexShrink\":1,\"fontColor\":\"@theme:primary/0.6\",\"textOverflow\":\"ellipsis\",\"constraintSize\":{\"minWidth\":0},\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1_main\",\"component\":\"Column\",\"children\":[\"body__static_item1_primaryText\",\"body__static_item1_secondaryText\"],\"itemMargin\":4.0,\"styles\":{\"height\":33.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":1,\"layoutWeight\":1,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item1_badge\",\"component\":\"Text\",\"content\":\"2\",\"styles\":{\"fontSize\":10.0,\"fontWeight\":500,\"lineHeight\":1.6,\"maxLines\":1,\"height\":16.0,\"width\":16.0,\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textAlign\":\"center\",\"backgroundColor\":\"@theme:primary/0.2\",\"borderRadius\":8.0,\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_item1_text\",\"component\":\"Row\",\"children\":[\"body__static_item1_main\"],\"itemMargin\":0.0,\"styles\":{\"height\":33.0,\"layoutWeight\":1,\"alignItems\":\"center\",\"flexShrink\":0,\"constraintSize\":{\"minWidth\":0}}},{\"id\":\"body__static_item1\",\"component\":\"Row\",\"children\":[\"body__static_item1_badge\",\"body__static_item1_text\"],\"itemMargin\":8.0,\"styles\":{\"width\":\"matchParent\",\"height\":33.0,\"alignItems\":\"center\",\"flexShrink\":0}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"state\":{\"ready\":true}}}}",
+    "validationErrors": []
+  }
+}

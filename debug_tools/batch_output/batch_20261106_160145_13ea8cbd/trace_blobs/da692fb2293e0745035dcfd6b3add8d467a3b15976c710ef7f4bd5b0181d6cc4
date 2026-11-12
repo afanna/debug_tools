@@ -1,0 +1,170 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "tue",
+      "identity": "周二",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "wed",
+      "identity": "周三",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        5,
+        6
+      ],
+      "id": "thu",
+      "identity": "周四",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        7,
+        8
+      ],
+      "id": "fri",
+      "identity": "周五",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        9,
+        10
+      ],
+      "id": "sat",
+      "identity": "周六",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 143,
+          "start": 94
+        }
+      ],
+      "sourceText": "值班安排：周二上午上班下午休息，周四上午休息下午上班，周三周五全天上班，周六周日上午上班下午休息。"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 109,
+          "start": 99
+        }
+      ],
+      "sourceText": "周二上午上班下午休息"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 109,
+          "start": 99
+        }
+      ],
+      "sourceText": "周二上午上班下午休息"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 129,
+          "start": 121
+        }
+      ],
+      "sourceText": "周三周五全天上班"
+    },
+    {
+      "factIndex": 4,
+      "positions": [
+        {
+          "end": 129,
+          "start": 121
+        }
+      ],
+      "sourceText": "周三周五全天上班"
+    },
+    {
+      "factIndex": 5,
+      "positions": [
+        {
+          "end": 120,
+          "start": 110
+        }
+      ],
+      "sourceText": "周四上午休息下午上班"
+    },
+    {
+      "factIndex": 6,
+      "positions": [
+        {
+          "end": 120,
+          "start": 110
+        }
+      ],
+      "sourceText": "周四上午休息下午上班"
+    },
+    {
+      "factIndex": 7,
+      "positions": [
+        {
+          "end": 129,
+          "start": 121
+        }
+      ],
+      "sourceText": "周三周五全天上班"
+    },
+    {
+      "factIndex": 8,
+      "positions": [
+        {
+          "end": 129,
+          "start": 121
+        }
+      ],
+      "sourceText": "周三周五全天上班"
+    },
+    {
+      "factIndex": 9,
+      "positions": [
+        {
+          "end": 142,
+          "start": 130
+        }
+      ],
+      "sourceText": "周六周日上午上班下午休息"
+    },
+    {
+      "factIndex": 10,
+      "positions": [
+        {
+          "end": 142,
+          "start": 130
+        }
+      ],
+      "sourceText": "周六周日上午上班下午休息"
+    }
+  ],
+  "version": "static-content-v1"
+}

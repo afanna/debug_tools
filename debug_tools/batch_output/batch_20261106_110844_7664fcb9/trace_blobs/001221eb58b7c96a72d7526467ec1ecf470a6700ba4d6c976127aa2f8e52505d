@@ -1,0 +1,25 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "component support.props.items[].label: SecondaryBody.items[].label only accepts a static value.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "component_contract",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "384f2fee71f70789",
+      "instruction": "只修复错误组件中被定位的 Props、绑定或格式，并复查直接父容器；保留该组件其它合法属性、动态事实、事件和视觉能力，不得通过删除未报错属性、移除视觉变体或更换为弱语义组件来绕过校验。 SecondaryBody.items[].label 只能保留原本就是静态文字的标签；动态 label 必须与同项现有 value 按原显示顺序合并为一个完整的 items[].value Expression，并保留全部原始绑定。不得把动态内容静态化、删除或改写为样例值。",
+      "noProgress": false,
+      "repairStrategy": "component_contract_repair",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "component"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-dual-content\"},[\"title\",\"primary\",\"support\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"icon\":\"resources/base/media/ic_weather_monochrome.svg\",\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"{{ ${/data/weather/daily/0/weekday} + ' ' }}\",\"value\":\"{{ ${/data/weather/daily/0/condition} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}\"},{\"label\":\"{{ ${/data/weather/daily/1/weekday} + ' ' }}\",\"value\":\"{{ ${/data/weather/daily/1/condition} + ' ' + ${/data/weather/daily/1/temperatureRangeText} }}\"},{\"label\":\"{{ ${/data/weather/daily/2/weekday} + ' ' }}\",\"value\":\"{{ ${/data/weather/daily/2/condition} + ' ' + ${/data/weather/daily/2/temperatureRangeText} }}\"}],\"fontSize\":12}]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/daily/0/weekday\",\"星期四\"]\n[\"/data/weather/daily/0/condition\",\"多云\"]\n[\"/data/weather/daily/0/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/weather/daily/1/weekday\",\"星期四\"]\n[\"/data/weather/daily/1/condition\",\"多云\"]\n[\"/data/weather/daily/1/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/weather/daily/2/weekday\",\"星期四\"]\n[\"/data/weather/daily/2/condition\",\"多云\"]\n[\"/data/weather/daily/2/temperatureRangeText\",\"25℃ / 32℃\"]"
+  }
+]

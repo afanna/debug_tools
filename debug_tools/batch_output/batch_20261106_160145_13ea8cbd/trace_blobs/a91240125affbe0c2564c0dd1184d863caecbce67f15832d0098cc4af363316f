@@ -1,0 +1,5 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":8,"itemMargin":8},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/todoCompletedCount"},"secondaryText":"已完成","width":"matchParent","layoutWeight":1}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/todoPendingCount"},"secondaryText":"未完成","width":"matchParent","layoutWeight":1}]
+["/data/memo/todoCompletedCount",0]
+["/data/memo/todoPendingCount",0]

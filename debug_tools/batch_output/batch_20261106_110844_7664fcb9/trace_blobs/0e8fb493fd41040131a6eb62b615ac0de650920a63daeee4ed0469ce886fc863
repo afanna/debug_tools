@@ -1,0 +1,46 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/currentDate",
+      "priority": "must",
+      "requirement": "当前公历日期"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/time/dayOfWeek",
+      "priority": "must",
+      "requirement": "当前星期"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/battery/batterySOCText",
+      "priority": "must",
+      "requirement": "当前手机剩余电量文本"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/battery/chargingStatusDesc",
+      "priority": "must",
+      "requirement": "当前电池充电状态"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info"
+  ]
+}

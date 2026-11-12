@@ -1,0 +1,8 @@
+{
+  "errors": [
+    "Plan static text is not fully visible in DSL: 家人王苏东的电话号码 15251852906."
+  ],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [],
+  "warnings": []
+}

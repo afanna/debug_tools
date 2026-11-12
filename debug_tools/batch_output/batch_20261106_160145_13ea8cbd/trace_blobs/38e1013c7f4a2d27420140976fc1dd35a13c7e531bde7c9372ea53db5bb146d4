@@ -1,0 +1,16 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "距离2027年1月30日的倒计时天数（整数后追加“天”）"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

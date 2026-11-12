@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"距离春节还有多少天（纯整数，展示时追加“天”）","priority":"must","dataId":"/data/countdown/countdownDays","componentHints":["DataDisplay","EmphasizedData","EmphasisText"]},{"requirement":"目标日期说明：2027年春节是2月6日","priority":"should","text":"2027年春节是2月6日","componentHints":["SecondaryBody","EmphasisText"]}],"layoutHints":["S-center"]}}

@@ -1,0 +1,7 @@
+["root","Layout",{"layout":"S-title-dual-content"},["title","temperature","summary"]]
+["title","SingleLineTitle",{"title":"萧山今日天气","fontSize":12}]
+["temperature","EmphasisText",{"mainText":{"path":"/data/weather/current/temperatureText"},"secondaryText":{"path":"/data/weather/current/condition"},"fontSize":18}]
+["summary","SecondaryBody",{"items":[{"value":"萧山区今日小雨转中雨，14℃~19℃","maxLines":2}],"columns":1,"fontSize":12}]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/location/cityCode","60814"]

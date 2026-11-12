@@ -1,0 +1,40 @@
+{
+  "userQuery": "生成一个二乘四比例的透明的时间桌面卡片，显示当前时间和日期。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.clock.alarm",
+      "description": "打开华为时钟应用首页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "com.huawei.hmos.clock.phone",
+        "bundleName": "com.huawei.hmos.clock",
+        "intentName": "Clock",
+        "uri": ""
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "time": {
+        "currentDate": {
+          "type": "string",
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例"
+        },
+        "dayOfWeek": {
+          "type": "string",
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例"
+        },
+        "lunarDate": {
+          "type": "string",
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例"
+        }
+      }
+    }
+  },
+  "assetCandidates": []
+}

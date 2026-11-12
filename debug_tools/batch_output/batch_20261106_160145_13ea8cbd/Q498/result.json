@@ -1,0 +1,21 @@
+{
+  "id": "Q498",
+  "fileName": "Q498.json",
+  "title": "耳机电量",
+  "query": "把耳机电池电量放到桌面上，创建一张耳机电量卡片，显示耳机名称、耳机盒电量、左右耳电量。",
+  "size": "2x2",
+  "sequence": 86,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 6830.3,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 96,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 6822.29,
+  "uid": "batch-13ea8cbd-00086-000",
+  "finalAttempt": 0
+}

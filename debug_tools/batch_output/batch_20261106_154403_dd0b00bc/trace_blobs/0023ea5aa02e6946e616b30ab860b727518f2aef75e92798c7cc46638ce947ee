@@ -1,0 +1,8 @@
+["root","Layout",{"layout":"W-top-bottom","variant":"continuous"},["details"]]
+["details","TextBlock",{"items":[{"label":"奶奶生日 10月5日","value":"{{ ${/data/countdown0/countdownDays} + '天' }}"},{"label":"爷爷生日 6月24日","value":"{{ ${/data/countdown1/countdownDays} + '天' }}"},{"label":"爸爸生日 4月19日","value":"{{ ${/data/countdown2/countdownDays} + '天' }}"},{"label":"妈妈生日 4月12日","value":"{{ ${/data/countdown3/countdownDays} + '天' }}"}]}]
+["/data/countdown0/countdownDays",30]
+["/data/countdown1/countdownDays",30]
+["/data/countdown2/countdownDays",30]
+["/data/countdown3/countdownDays",30]
+["/data/countdown4/countdownDays",30]
+["/data/countdown5/countdownDays",30]

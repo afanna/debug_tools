@@ -1,0 +1,40 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [
+    {
+      "description": "样式：日历实心图标，默认黑色，图形为带格线的日历本造型；适用：日程管理、日历事件查看、当日安排。",
+      "id": "asset.calendar_fill",
+      "src": "resources/base/media/calendar_fill.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "calendar": {
+        "events": [
+          {
+            "dtStart": {
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00",
+              "type": "string"
+            },
+            "title": {
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会",
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "time": {
+        "lunarDate": {
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "eventCandidates": [],
+  "size": "2x2",
+  "userQuery": "在日历中添加黄历信息，显示农历日期。"
+}

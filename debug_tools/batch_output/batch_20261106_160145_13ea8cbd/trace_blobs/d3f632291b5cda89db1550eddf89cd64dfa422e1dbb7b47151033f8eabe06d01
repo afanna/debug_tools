@@ -1,0 +1,87 @@
+{
+  "cardSpec": {
+    "dataBindings": [
+      {
+        "arguments": {},
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/phoneBattery"
+      }
+    ],
+    "description": "手机电量速览",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "suggestSize": "2x2",
+    "title": "电池电量"
+  },
+  "effectiveCapabilities": {
+    "asset": [],
+    "data": [
+      "GetPhoneBatteryInfo"
+    ],
+    "event": []
+  },
+  "generationPlan": {
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc",
+          "/batterySOC"
+        ],
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/phoneBattery"
+      }
+    ],
+    "candidateEventCandidates": []
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Stack\",\"children\":[\"fusionBallBackground\",\"__genui_render_component__root\"],\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":0,\"alignContent\":\"topStart\",\"clip\":true,\"borderRadius\":20,\"backgroundColor\":\"#00000000\"}},{\"id\":\"fusionBallBackground\",\"component\":\"Stack\",\"children\":[\"fusionBallLargeSlot\",\"fusionBallMediumSlot\",\"fusionBallSmallSlot\",\"fusionBallGlassLayer\"],\"styles\":{\"width\":\"100%\",\"height\":\"100%\",\"borderRadius\":20,\"alignContent\":\"topStart\",\"clip\":true}},{\"id\":\"fusionBallLargeSlot\",\"component\":\"Stack\",\"children\":[\"fusionBallLarge\"],\"styles\":{\"width\":\"112.5%\",\"height\":\"27.5%\",\"alignContent\":\"center\"}},{\"id\":\"fusionBallLarge\",\"component\":\"Divider\",\"styles\":{\"width\":\"116.666667%\",\"height\":\"477.272727%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"borderRadius\":105,\"backgroundColor\":\"#FF1F9985\",\"clip\":true}},{\"id\":\"fusionBallMediumSlot\",\"component\":\"Stack\",\"children\":[\"fusionBallMedium\"],\"styles\":{\"width\":\"50%\",\"height\":\"137.5%\",\"alignContent\":\"bottom\"}},{\"id\":\"fusionBallMedium\",\"component\":\"Divider\",\"styles\":{\"width\":\"200%\",\"height\":\"72.727273%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"borderRadius\":80,\"backgroundColor\":\"#FF24B3B3\",\"clip\":true}},{\"id\":\"fusionBallSmallSlot\",\"component\":\"Stack\",\"children\":[\"fusionBallSmall\"],\"styles\":{\"width\":\"121.875%\",\"height\":\"118.75%\",\"alignContent\":\"bottomEnd\"}},{\"id\":\"fusionBallSmall\",\"component\":\"Divider\",\"styles\":{\"width\":\"51.282051%\",\"height\":\"52.631579%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"borderRadius\":50,\"backgroundColor\":\"#FF5AB38E\",\"clip\":true}},{\"id\":\"fusionBallGlassLayer\",\"component\":\"Divider\",\"styles\":{\"width\":\"100%\",\"height\":\"100%\",\"strokeWidth\":0,\"color\":\"#00000000\",\"backgroundColor\":\"#0DFFFFFF\",\"backdropBlur\":{\"radius\":210}}},{\"id\":\"__genui_render_component__root\",\"component\":\"Column\",\"children\":[\"content\"],\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"center\",\"justifyContent\":\"center\",\"padding\":12},\"itemMargin\":0},{\"id\":\"content\",\"component\":\"Column\",\"children\":[\"content_label\",\"content_value\",\"content_supporting\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":114,\"alignItems\":\"center\",\"justifyContent\":\"center\",\"flexShrink\":1}},{\"id\":\"content_label\",\"component\":\"Text\",\"content\":\"手机电量\",\"styles\":{\"width\":\"matchParent\",\"height\":18,\"fontSize\":12,\"fontWeight\":500,\"textAlign\":\"center\",\"maxLines\":1,\"fontColor\":\"#99FFFFFF\",\"textOverflow\":\"clip\"}},{\"id\":\"content_value\",\"component\":\"Text\",\"content\":\"{{ ${/data/phoneBattery/batterySOCText} }}\",\"styles\":{\"height\":60,\"fontSize\":48,\"fontWeight\":700,\"textAlign\":\"center\",\"maxLines\":1,\"width\":\"matchParent\",\"fontColor\":\"#FFFFFFFF\",\"textOverflow\":\"clip\"}},{\"id\":\"content_supporting\",\"component\":\"Text\",\"content\":\"{{ ${/data/phoneBattery/chargingStatusDesc} }}\",\"styles\":{\"height\":20,\"fontSize\":14,\"fontWeight\":400,\"textAlign\":\"center\",\"maxLines\":1,\"width\":\"matchParent\",\"fontColor\":\"#FFFFFFFF\",\"textOverflow\":\"clip\"}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"phoneBattery\":{\"batterySOCText\":\"68%\",\"chargingStatusDesc\":\"未充电\"}}}}}",
+  "meta": {
+    "apiVersion": "v1",
+    "artifactId": "34e51379-ce3d-411c-936f-eff5ba3bbdcb",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "cardSpecVersion": "card-spec-v1",
+    "createdAt": 1793952379558,
+    "dslProtocolVersion": "v0.9",
+    "generationMode": "create",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "skillVersion": "skill-widget-v1",
+    "taskSpecVersion": "task-spec-v1"
+  },
+  "removedCapabilities": [],
+  "schemaVersion": "widget-artifact-v2",
+  "taskSpec": {
+    "appVersion": "11.7.8.342",
+    "assetCandidates": [],
+    "dataModelSchema": {
+      "data": {
+        "phoneBattery": {
+          "batterySOC": {
+            "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+            "sampleValue": 68,
+            "type": "integer"
+          },
+          "batterySOCText": {
+            "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+            "numericSource": "/data/phoneBattery/batterySOC",
+            "sampleValue": "68%",
+            "type": "string"
+          },
+          "chargingStatusDesc": {
+            "description": "当前设备电池的充电状态文本描述。",
+            "sampleValue": "未充电",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "eventCandidates": [],
+    "size": "2x2",
+    "userQuery": "做一张电池电量卡片，显示当前手机剩余电量百分比和充电状态。"
+  }
+}

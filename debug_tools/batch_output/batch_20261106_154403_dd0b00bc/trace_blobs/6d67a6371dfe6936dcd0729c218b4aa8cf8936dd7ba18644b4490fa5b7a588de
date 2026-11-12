@@ -1,0 +1,60 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": null,
+      "reason": "无标题组件，且天气素材用于天气信息块主视觉"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "杭州天气：当前温度（含℃）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "杭州天气：当前天气状况"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "NumericRatioStack"
+      ],
+      "dataId": "/data/earphone/batteryLevel",
+      "priority": "must",
+      "requirement": "耳机盒电量百分比"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "NumericRatioStack"
+      ],
+      "dataId": "/data/earphone/leftBatteryLevel",
+      "priority": "must",
+      "requirement": "左耳电量百分比"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "NumericRatioStack"
+      ],
+      "dataId": "/data/earphone/rightBatteryLevel",
+      "priority": "must",
+      "requirement": "右耳电量百分比"
+    }
+  ],
+  "layoutHints": [
+    "S-quad-content",
+    "S-title-dual-content"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q299",
+  "fileName": "Q299.json",
+  "title": "睡眠管理",
+  "query": "帮我做一个每天能查看睡眠情况的桌面卡片，显示每天的睡眠时长、睡眠得分和睡眠状态，睡眠不足时给出健康提醒，还可以设置早睡闹钟。卡片需要动态展示每日睡眠数据，点击可查看睡眠详情和设置早睡闹钟。",
+  "size": "2x4",
+  "sequence": 9,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 6401.28,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 74,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 6394.16,
+  "uid": "batch-7664fcb9-00009-000",
+  "finalAttempt": 0
+}

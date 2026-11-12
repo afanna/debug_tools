@@ -1,0 +1,5 @@
+["root","Layout",{"layout":"S-dual-info"},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/todoCompletedCount"},"secondaryText":"已完成"}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/todoPendingCount"},"secondaryText":"未完成"}]
+["/data/memo/todoCompletedCount",0]
+["/data/memo/todoPendingCount",0]

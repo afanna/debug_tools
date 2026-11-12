@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>倒计时目标效果评测</title>
+<style>
+body { margin:0; padding:28px; font-family:"Microsoft YaHei",system-ui,sans-serif;
+  background:#0f172a; color:#e5edf8; }
+h1 { font-size:22px; margin:0 0 6px; }
+h2 { font-size:16px; margin:28px 0 10px; }
+p { color:#9fb0c8; }
+.kpis { display:flex; gap:12px; flex-wrap:wrap; margin:16px 0; }
+.kpi { background:#17233b; border:1px solid #263a5c; border-radius:10px; padding:12px 16px; }
+.kpi strong { display:block; font-size:22px; color:#7dd3fc; }
+table { width:100%; border-collapse:collapse; font-size:13px; background:#131d31; }
+th,td { text-align:left; padding:7px 9px; border-bottom:1px solid #22314d; vertical-align:top; }
+th { color:#9fb0c8; font-weight:600; }
+code { color:#f5c76b; }
+.warn { color:#fca5a5; }
+</style></head><body>
+<h1>倒计时目标效果评测</h1>
+<p>profile <code>countdown-card-spec-v1</code>；结论只来自确定性规则，
+占位数据不参与期望比对。</p>
+
+<div class="kpis">
+<div class="kpi">样本数<strong>6</strong></div>
+<div class="kpi">通过<strong>0</strong></div>
+<div class="kpi">待复核<strong>0</strong></div>
+<div class="kpi">失败<strong>6</strong></div>
+<div class="kpi">规则通过率<strong>58.7%</strong></div>
+</div>
+<h2>规则汇总</h2>
+<table><thead><tr><th>规则</th><th>说明</th><th>通过</th><th>失败</th>
+<th>待复核</th><th>不适用</th><th>通过率</th></tr></thead>
+<tbody><tr><td><code>TARGET.PLACEHOLDER_VISIBLE</code></td><td>无占位文案</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>TARGET.SCENARIO_RULE_VIOLATION</code></td><td>场景规则</td><td>1</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>VIS.TEXT_CLIPPED</code></td><td>文字未被裁切</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0.0%</td></tr><tr><td><code>VIS.TEXT_OVERFLOW</code></td><td>文字未越出画布</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>VIS.TEXT_OVERLAP</code></td><td>文字未互相遮挡</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>VIS.IMAGE_OVERFLOW</code></td><td>图片未越出画布</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>VIS.IMAGE_LOAD_FAILED</code></td><td>素材真实加载</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>VIS.FONT_TOO_SMALL</code></td><td>正文字号下限</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>VIS.CONTRAST_LOW</code></td><td>文字对比度</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0.0%</td></tr><tr><td><code>SPEC.RADIUS</code></td><td>圆角 20</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>SPEC.PADDING</code></td><td>内边距 12</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>SPEC.BG_FULL_BLEED</code></td><td>背景铺满</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>SPEC.MASK</code></td><td>黑色蒙层 60%</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0.0%</td></tr><tr><td><code>SPEC.TITLE_REQUIRED</code></td><td>标题必选</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>SPEC.TITLE_FONT</code></td><td>标题 16/20fp</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0.0%</td></tr><tr><td><code>SPEC.TITLE_ELLIPSIS</code></td><td>标题单行省略</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0.0%</td></tr><tr><td><code>SPEC.TITLE_COLOR</code></td><td>标题白色</td><td>2</td><td>4</td><td>0</td><td>0</td><td>33.3%</td></tr><tr><td><code>SPEC.PRIMARY_FONT</code></td><td>主值 56/38fp</td><td>1</td><td>5</td><td>0</td><td>0</td><td>16.7%</td></tr><tr><td><code>SPEC.UNIT_FONT</code></td><td>单位 16fp 独立</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0.0%</td></tr><tr><td><code>SPEC.SUPPORT_FONT</code></td><td>副文本 16fp</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0.0%</td></tr><tr><td><code>SPEC.SUPPORT_COLOR</code></td><td>副文本 60% 白</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0.0%</td></tr><tr><td><code>SPEC.CONTENT_TYPE</code></td><td>内容属于 C1–C5</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr><tr><td><code>SPEC.PATTERN_GEOMETRY</code></td><td>图案几何</td><td>0</td><td>0</td><td>0</td><td>6</td><td>—</td></tr><tr><td><code>SPEC.DIGIT_LIMIT</code></td><td>数字最多 6 位</td><td>5</td><td>0</td><td>0</td><td>1</td><td>100.0%</td></tr><tr><td><code>SPEC.SAFE_AREA</code></td><td>安全区内</td><td>6</td><td>0</td><td>0</td><td>0</td><td>100.0%</td></tr></tbody></table>
+<h2>样本结论</h2>
+<table><thead><tr><th>样本</th><th>状态</th><th>结论</th><th>失败项</th>
+<th>待复核项</th><th>期望天数</th></tr></thead>
+<tbody><tr><td><code>Q001</code></td><td>failed</td><td>可见性失败</td><td>SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR</td><td>—</td><td>46</td></tr><tr><td><code>Q031</code></td><td>failed</td><td>可见性失败</td><td>SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR</td><td>—</td><td>1</td></tr><tr><td><code>Q061</code></td><td>failed</td><td>可见性失败</td><td>SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED</td><td>—</td><td>—</td></tr><tr><td><code>Q076</code></td><td>failed</td><td>可见性失败</td><td>SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR</td><td>—</td><td>0</td></tr><tr><td><code>Q086</code></td><td>failed</td><td>可见性失败</td><td>SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED</td><td>—</td><td>28</td></tr><tr><td><code>Q091</code></td><td>failed</td><td>可见性失败</td><td>SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_ELLIPSIS, SPEC.TITLE_COLOR, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR, VIS.TEXT_CLIPPED</td><td>—</td><td>198</td></tr></tbody></table>
+</body></html>

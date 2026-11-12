@@ -1,0 +1,132 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0,
+        1
+      ],
+      "id": "sinopec",
+      "identity": "中国石化",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        2,
+        3
+      ],
+      "id": "petrochina",
+      "identity": "中国石油",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        4,
+        5
+      ],
+      "id": "icbc",
+      "identity": "工商银行",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "中国石化2026年上半年纳税1,656.94亿元",
+      "sourceTexts": [
+        "中国石化，2026年上半年纳税1,656.94亿元"
+      ],
+      "text": "中国石化"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "中国石化2026年上半年纳税额1,656.94亿元",
+      "sourceTexts": [
+        "中国石化，2026年上半年纳税1,656.94亿元"
+      ],
+      "text": "2026年上半年纳税1,656.94亿元"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "中国石油2026年上半年纳税1,322.72亿元",
+      "sourceTexts": [
+        "中国石油，2026年上半年纳税1,322.72亿元"
+      ],
+      "text": "中国石油"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "中国石油2026年上半年纳税额1,322.72亿元",
+      "sourceTexts": [
+        "中国石油，2026年上半年纳税1,322.72亿元"
+      ],
+      "text": "2026年上半年纳税1,322.72亿元"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "value",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "工商银行2026年上半年纳税831.82亿元",
+      "sourceTexts": [
+        "工商银行，2026年上半年纳税831.82亿元"
+      ],
+      "text": "工商银行"
+    },
+    {
+      "componentHints": [
+        "TextList"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "工商银行2026年上半年纳税额831.82亿元",
+      "sourceTexts": [
+        "工商银行，2026年上半年纳税831.82亿元"
+      ],
+      "text": "2026年上半年纳税831.82亿元"
+    }
+  ],
+  "layoutHints": [
+    "S-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "records",
+  "selectionNotes": [
+    "用户要Top3排名及纳税额，三条同构“企业名+纳税额”记录，选TextList无标题三项，正文占满高度",
+    "纳税额作为value列保留完整数值与单位，期间口径“2026年上半年”在每条记录中保留",
+    "排名顺序按用户给出的顺序：中国石化、中国石油、工商银行"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"S-static-content\"}, [\"body\"]]\n[\"body\", \"TextList\", {\"items\": [{\"primaryText\": \"2026年上半年纳税1,656.94亿元\", \"secondaryText\": \"中国石化\"}, {\"primaryText\": \"2026年上半年纳税1,322.72亿元\", \"secondaryText\": \"中国石油\"}, {\"primaryText\": \"2026年上半年纳税831.82亿元\", \"secondaryText\": \"工商银行\"}]}]\n[\"/state/ready\", true]",
+  "staticPresentationFeedback": [
+    "正式组件UX允许省略号，原候选仍可用；以下仅为完整文字展示压力，不是新增发布门禁或事实删减授权。请在既有Plan机会中核对必要信息的完整展示：\nCompact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_primaryText 完整文字需要 2 行，102vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。"
+  ]
+}

@@ -1,0 +1,3 @@
+[
+  "component primary_main: time/date range ends with a dangling separator. Bind both start and end values, or remove the separator and display the available value only."
+]

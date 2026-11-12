@@ -1,0 +1,41 @@
+{
+  "id": "target-effect",
+  "name": "目标效果评测（倒计时）",
+  "version": "1.3.0",
+  "apiVersion": "batch-postprocess-v2",
+  "status": "partial",
+  "config": {
+    "rendererBaseUrl": "http://127.0.0.1:8890/debug"
+  },
+  "sampleCount": 6,
+  "counts": {
+    "partial": 0,
+    "skipped": 0,
+    "success": 0,
+    "failed": 6
+  },
+  "datasetResult": {
+    "status": "success",
+    "summary": "目标效果评测完成：6 个样本，通过 0，待复核 0，失败 6",
+    "facts": {
+      "total": 6,
+      "passed": 0,
+      "partial": 0,
+      "failed": 6,
+      "passRate": 69.7,
+      "averageScore": 65.7,
+      "averageTarget": null,
+      "averageVisibility": 17.9,
+      "averageSpec": 14.9,
+      "specApplicable": 6,
+      "specExcluded": 0
+    },
+    "artifactCount": 5
+  },
+  "progress": {
+    "phase": "done",
+    "completed": 1,
+    "total": 1,
+    "message": "后处理插件已完成"
+  }
+}

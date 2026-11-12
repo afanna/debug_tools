@@ -1,0 +1,19 @@
+{
+  "data": [
+    "ViewWeather"
+  ],
+  "event": [
+    {
+      "id": "event.call.phone",
+      "description": "点击跳转至华为电话应用中指定号码的拨号界面。",
+      "call": "clickToApi",
+      "args": {
+        "intentName": "CallPhone",
+        "params": {
+          "phoneNumber": "1388888888"
+        }
+      }
+    }
+  ],
+  "asset": []
+}

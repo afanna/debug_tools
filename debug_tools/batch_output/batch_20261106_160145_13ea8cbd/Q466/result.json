@@ -1,0 +1,21 @@
+{
+  "id": "Q466",
+  "fileName": "Q466.json",
+  "title": "当前时间",
+  "query": "生成一个和锁屏界面一样的时间卡片，显示当前时间、日期、星期和农历信息。",
+  "size": "2x2",
+  "sequence": 54,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4331.89,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4323.4,
+  "uid": "batch-13ea8cbd-00054-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 2027年春节是2月6日.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

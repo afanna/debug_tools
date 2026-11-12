@@ -1,0 +1,15 @@
+[
+  {
+    "actual": "--:--",
+    "category": "display",
+    "code": "COMPACT_DISPLAY_DANGLING_RANGE",
+    "evidenceSource": "expanded",
+    "expected": {
+      "range": "范围分隔符两侧均须有值；仅有一个值时不能保留分隔符"
+    },
+    "legacyMessage": "component left_body_main: time/date range ends with a dangling separator. Bind both start and end values, or remove the separator and display the available value only.",
+    "message": "时间或日期范围末尾存在悬空分隔符。",
+    "severity": "error",
+    "validationClass": "semantic"
+  }
+]

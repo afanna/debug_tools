@@ -1,0 +1,26 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 崔景会生日公历日期11月8日及倒计时天数 (/data/countdown4/countdownDays).",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan fact is missing from visible DSL: 父母结婚纪念日公历日期1月23日及倒计时天数 (/data/countdown5/countdownDays).",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "/data/countdown4: declared data capability is not used by any component.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "/data/countdown5: declared data capability is not used by any component.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

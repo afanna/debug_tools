@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 title 缺少完整展示文字 '京东包裹取件码'；须在合法且可达的标题或正文条目内完整展示，不跨不同对象拼接说明。",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

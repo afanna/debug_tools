@@ -1,0 +1,18 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:5fa1dc8ec515a2b7fb45d8a8eb357fb9381e9dbca1633bbe8b7b6b12b7be9b32",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_056ae3d0-3c82-46cb-a528-59f502ab2cb9.md",
+  "effectiveCapabilities": {
+    "asset": [],
+    "data": [],
+    "event": []
+  },
+  "errorCode": "",
+  "omittedRequirements": [
+    "周三至周日三餐具体安排未展示",
+    "部分关键提醒（饮水、加餐、少油炸等）未全部展示"
+  ],
+  "removedCapabilities": [],
+  "status": "degraded",
+  "suggestSize": "2x4"
+}

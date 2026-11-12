@@ -1,0 +1,16 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-dual-content\"},[\"title\",\"primary\",\"support\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"备忘录\",\"icon\":\"resources/base/media/list_book_fill.svg\",\"fontSize\":12}]\n[\"primary\",\"SecondaryBody\",{\"columns\":2,\"items\":[{\"label\":\"笔记 \",\"value\":{\"path\":\"/data/memo/noteCount\"}},{\"label\":\"待办 \",\"value\":{\"path\":\"/data/memo/todoTotalCount\"}}],\"fontSize\":14}]\n[\"support\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"label\":\"未完成 \",\"value\":{\"path\":\"/data/memo/todoPendingCount\"}},{\"label\":\"已完成 \",\"value\":{\"path\":\"/data/memo/todoCompletedCount\"}},{\"label\":\"笔记 \",\"value\":{\"path\":\"/data/memo/notes/0/title\"}},{\"label\":\"待办 \",\"value\":{\"path\":\"/data/memo/todos/0/title\"}}],\"fontSize\":12}]\n[\"/data/memo/noteCount\",0]\n[\"/data/memo/todoTotalCount\",0]\n[\"/data/memo/todoPendingCount\",0]\n[\"/data/memo/todoCompletedCount\",0]\n[\"/data/memo/notes/0/title\",\"示例\"]\n[\"/data/memo/todos/0/title\",\"示例\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component primary: SecondaryBody is auxiliary and cannot be the only information component in the card; pair it with a core information component somewhere in the card. Titles, buttons and other SecondaryBody instances do not count."
+    },
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "component support: SecondaryBody is auxiliary and cannot be the only information component in the card; pair it with a core information component somewhere in the card. Titles, buttons and other SecondaryBody instances do not count."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [
+    "睡眠综合得分与状态"
+  ],
+  "warnings": []
+}

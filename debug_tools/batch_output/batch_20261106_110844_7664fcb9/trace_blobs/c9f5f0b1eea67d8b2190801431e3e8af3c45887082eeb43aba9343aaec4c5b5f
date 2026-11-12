@@ -1,0 +1,32 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:9c73efac6af3e2aaa9f73985b52207580d2cb4e293fae2eaf2ee5e660970db37",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_b4c3d8b3-7f4b-44c6-91f4-1a3f33b10927.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.emoji_run",
+      "asset.emoji_calories_blue",
+      "asset.ic_sportsHealth_bule"
+    ],
+    "data": [
+      "GetHealthAndSportSummary"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        },
+        "call": "clickToDeeplink",
+        "description": "打开华为运动健康应用的锻炼Tab页。",
+        "id": "event.open.health.sport"
+      }
+    ]
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x2"
+}

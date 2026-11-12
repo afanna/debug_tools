@@ -1,0 +1,108 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.weather",
+        "assetId": "asset.ic_weather_monochrome"
+      }
+    ],
+    "title": {
+      "assetId": "asset.calendar_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/weather/location/prefectureName",
+      "priority": "must",
+      "requirement": "展示当前天气所在城市名称"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "展示当前温度"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "展示当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/weather/daily/0/weekday",
+      "priority": "must",
+      "requirement": "展示第一天天气预报的星期与温度范围"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/weather/daily/0/temperatureRangeText",
+      "priority": "must",
+      "requirement": "展示第一天天气预报的温度范围"
+    },
+    {
+      "componentHints": [
+        "EventCard",
+        "SummaryList"
+      ],
+      "dataId": "/data/calendar/events/0/title",
+      "priority": "must",
+      "requirement": "展示近期第一条日程的标题"
+    },
+    {
+      "componentHints": [
+        "EventCard",
+        "SummaryList"
+      ],
+      "dataId": "/data/calendar/events/0/dtStart",
+      "priority": "must",
+      "requirement": "展示近期第一条日程的开始日期与时间"
+    },
+    {
+      "componentHints": [
+        "EventCard",
+        "SummaryList"
+      ],
+      "dataId": "/data/calendar/events/1/title",
+      "priority": "must",
+      "requirement": "展示近期第二条日程的标题"
+    },
+    {
+      "componentHints": [
+        "EventCard",
+        "SummaryList"
+      ],
+      "dataId": "/data/calendar/events/1/dtStart",
+      "priority": "must",
+      "requirement": "展示近期第二条日程的开始日期与时间"
+    },
+    {
+      "actionId": "event.open.weather",
+      "componentHints": [
+        "PillButton",
+        "CardButton"
+      ],
+      "priority": "must",
+      "requirement": "打开华为天气应用查看该城市天气详情"
+    }
+  ],
+  "layoutHints": [
+    "W-split-panels",
+    "W-content-side-slots"
+  ]
+}

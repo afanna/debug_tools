@@ -1,0 +1,21 @@
+{
+  "id": "Q507",
+  "fileName": "Q507.json",
+  "title": "穿戴健康",
+  "query": "打开穿戴卡，展示运动健康数据（步数、热量、距离、睡眠等）",
+  "size": "2x2",
+  "sequence": 95,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7512.87,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 96,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7503.03,
+  "uid": "batch-13ea8cbd-00095-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "component support.props.items[].label: SecondaryBody.items[].label only accepts a static value.",
+    "stage": "validation"
+  }
+]

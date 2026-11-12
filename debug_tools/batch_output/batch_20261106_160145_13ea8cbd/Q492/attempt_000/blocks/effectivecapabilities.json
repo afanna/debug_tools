@@ -1,0 +1,24 @@
+{
+  "data": [
+    "GetMemoData"
+  ],
+  "event": [
+    {
+      "id": "event.viewNote",
+      "description": "打开华为备忘录应用。",
+      "call": "clickToIntent",
+      "args": {
+        "abilityName": "MainAbility",
+        "bundleName": "com.huawei.hmos.notepad",
+        "intentName": "ViewNote",
+        "params": {
+          "launchSource": "1",
+          "launchType": "0"
+        }
+      }
+    }
+  ],
+  "asset": [
+    "asset.checkmark_calendar_fill"
+  ]
+}

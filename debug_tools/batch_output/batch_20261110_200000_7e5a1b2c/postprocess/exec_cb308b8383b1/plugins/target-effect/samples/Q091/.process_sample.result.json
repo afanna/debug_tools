@@ -1,0 +1,147 @@
+{
+  "status": "failed",
+  "summary": "规范失败",
+  "facts": {
+    "verdict": "规范失败",
+    "scenario": "repeat_year",
+    "gate": false,
+    "expectedDays": 198,
+    "passed": 7,
+    "failed": 7,
+    "pending": 0
+  },
+  "artifacts": [
+    {
+      "key": "verdict",
+      "data": [
+        {
+          "label": "结论",
+          "value": "规范失败"
+        },
+        {
+          "label": "场景",
+          "value": "repeat_year"
+        },
+        {
+          "label": "期望天数",
+          "value": 198
+        },
+        {
+          "label": "门禁",
+          "value": "仅展示"
+        }
+      ]
+    },
+    {
+      "key": "issues",
+      "data": [
+        {
+          "规则": "SPEC.MASK",
+          "说明": "黑色蒙层 60%",
+          "状态": "失败",
+          "预期": "黑色蒙层 60%",
+          "实际": "最接近的黑色层 无 alpha=0.00",
+          "证据": {
+            "component": "",
+            "alpha": 0.0
+          }
+        },
+        {
+          "规则": "SPEC.TITLE_FONT",
+          "说明": "标题 16/20fp",
+          "状态": "失败",
+          "预期": "16 或 20",
+          "实际": "12.0",
+          "证据": {
+            "component": "title_title"
+          }
+        },
+        {
+          "规则": "SPEC.TITLE_ELLIPSIS",
+          "说明": "标题单行省略",
+          "状态": "失败",
+          "预期": "maxLines=1 且 textOverflow=ellipsis",
+          "实际": "maxLines=1, textOverflow=None",
+          "证据": {
+            "component": "title_title"
+          }
+        },
+        {
+          "规则": "SPEC.TITLE_COLOR",
+          "说明": "标题白色",
+          "状态": "失败",
+          "预期": "白色 100%",
+          "实际": "alpha=0.8",
+          "证据": {
+            "component": "title_title"
+          }
+        },
+        {
+          "规则": "SPEC.UNIT_FONT",
+          "说明": "单位 16fp 独立",
+          "状态": "失败",
+          "预期": "16",
+          "实际": "12.0",
+          "证据": {
+            "component": "primary_unit"
+          }
+        },
+        {
+          "规则": "SPEC.SUPPORT_FONT",
+          "说明": "副文本 16fp",
+          "状态": "失败",
+          "预期": "16",
+          "实际": "12.0",
+          "证据": {
+            "component": "support_item0_value"
+          }
+        },
+        {
+          "规则": "SPEC.SUPPORT_COLOR",
+          "说明": "副文本 60% 白",
+          "状态": "失败",
+          "预期": "白色 60%",
+          "实际": "alpha=1.0",
+          "证据": {
+            "component": "support_item0_value"
+          }
+        }
+      ]
+    },
+    {
+      "key": "oracle",
+      "data": {
+        "sampleId": "Q091",
+        "scenario": "repeat_year",
+        "timezone": "Asia/Shanghai",
+        "referenceDate": "2026-11-03",
+        "targetDate": "2027-05-20",
+        "expectedDays": 198,
+        "expectedRelationText": "还剩",
+        "expectedTargetDateText": "2027/05/20",
+        "writeResultTo": "/data/dateCounter",
+        "fields": [
+          "/days",
+          "/relationText",
+          "/targetDateText"
+        ],
+        "arguments": {
+          "targetDate": "2020-05-20",
+          "repeat": {
+            "unit": "year"
+          }
+        },
+        "gate": false,
+        "provenance": {
+          "targetDate": "explicit",
+          "days": "ambiguous",
+          "relationText": "ambiguous",
+          "targetDateText": "ambiguous"
+        },
+        "notes": [
+          "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+        ]
+      }
+    }
+  ]
+}

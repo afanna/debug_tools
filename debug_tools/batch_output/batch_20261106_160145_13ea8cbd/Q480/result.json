@@ -1,0 +1,21 @@
+{
+  "id": "Q480",
+  "fileName": "Q480.json",
+  "title": "值班表",
+  "query": "做一张值班表卡片，显示一周的值班安排：星期二上午上班、下午休息；星期四上午休息、下午上班；星期三、星期五全天上班；星期六、星期天上午上班、下午休息。本轮卡片静态内容（用作展示的外部事实）：值班安排：周二上午上班下午休息，周四上午休息下午上班，周三周五全天上班，周六周日上午上班下午休息。",
+  "size": "2x4",
+  "sequence": 68,
+  "status": "degraded",
+  "attemptCount": 1,
+  "elapsedMs": 10837.03,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 87,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 10827.24,
+  "uid": "batch-13ea8cbd-00068-000",
+  "finalAttempt": 0
+}

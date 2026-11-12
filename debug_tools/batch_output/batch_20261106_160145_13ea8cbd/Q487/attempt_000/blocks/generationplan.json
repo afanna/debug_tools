@@ -1,0 +1,36 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": -1
+      },
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": [
+        "/sleepScore",
+        "/sleepStatus",
+        "/nightSleepDurationText",
+        "/deepSleepDurationText",
+        "/fallAsleepTimeText",
+        "/wakeupTimeText"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [
+    {
+      "capabilityId": "event.open.health.sleep",
+      "action": {
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/router/sleepDetail"
+        }
+      }
+    }
+  ],
+  "candidateAssetIds": [
+    "asset.moon_z_fill_1"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.viewNote",
+        "assetId": "asset.bell_fill"
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "唯一素材已分配给动作按钮，标题无剩余匹配图标"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/memo/noteCount",
+      "priority": "must",
+      "requirement": "备忘录笔记总数"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/memo/todoPendingCount",
+      "priority": "must",
+      "requirement": "待办未完成数量"
+    },
+    {
+      "actionId": "event.viewNote",
+      "componentHints": [
+        "PillButton",
+        "CardButton"
+      ],
+      "priority": "must",
+      "requirement": "打开备忘录应用查看笔记详情"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content-action"
+  ]
+}

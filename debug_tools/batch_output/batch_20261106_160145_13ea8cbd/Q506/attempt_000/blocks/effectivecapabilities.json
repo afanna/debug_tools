@@ -1,0 +1,23 @@
+{
+  "data": [
+    "GetPhoneBatteryInfo"
+  ],
+  "event": [
+    {
+      "id": "event.setPowerSavingMode",
+      "description": "点击操作省电模式开关。",
+      "call": "clickToIntent",
+      "args": {
+        "intentName": "SetSettingSwitch",
+        "params": {
+          "appBundleName": "com.huawei.hmos.settings",
+          "itemName": "battery_saving_mode"
+        }
+      }
+    }
+  ],
+  "asset": [
+    "asset.battery_leaf_fill",
+    "asset.ic_switch"
+  ]
+}

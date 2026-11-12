@@ -1,0 +1,23 @@
+{
+  "title": "浇水倒计时",
+  "description": "从2026年10月14日开始每2天给绿植浇水，做一张到下一次的倒计时卡。",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetDateCounter",
+      "arguments": {
+        "targetDate": "2026-10-14",
+        "repeat": {
+          "unit": "day",
+          "interval": 2
+        }
+      },
+      "writeResultTo": "/data/dateCounter"
+    }
+  ]
+}

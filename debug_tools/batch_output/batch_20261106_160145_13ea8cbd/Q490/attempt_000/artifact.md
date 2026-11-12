@@ -1,0 +1,408 @@
+```cardspec
+{
+  "title": "重要日期倒计时",
+  "description": "多个重要农历日期倒计时",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-10-05"
+      },
+      "writeResultTo": "/data/countdown0"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-06-24"
+      },
+      "writeResultTo": "/data/countdown1"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-04-19"
+      },
+      "writeResultTo": "/data/countdown2"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2028-01-12"
+      },
+      "writeResultTo": "/data/countdown3"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-04-12"
+      },
+      "writeResultTo": "/data/countdown4"
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-10-28"
+      },
+      "writeResultTo": "/data/countdown5"
+    }
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Column","children":["title","__layout__root__body"],"itemMargin":6,"styles":{"width":"matchParent","height":"matchParent","padding":12,"borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","linearGradient":{"direction":"RightBottom","colors":[["#FFFFE0CC",0],["#FFFFF7F2",1]]}}},{"id":"title","component":"Row","children":["title_title"],"styles":{"width":"matchParent","height":12,"flexShrink":0,"justifyContent":"start","alignItems":"center"},"itemMargin":0},{"id":"title_title","component":"Text","content":"农历日期倒计时","styles":{"fontSize":12,"fontWeight":400,"lineHeight":1,"textAlign":"start","maxLines":1,"flexShrink":0,"width":"matchParent","fontColor":"#998C4B1C"}},{"id":"__layout__root__body","component":"Column","children":["__layout__root__primary","__layout__root__details"],"itemMargin":8,"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1}},{"id":"__layout__root__primary","component":"Column","children":["primary"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1},"itemMargin":0},{"id":"primary","component":"Row","children":["primary_item0","primary_item1","primary_item2"],"itemMargin":8,"styles":{"width":"matchParent","height":"matchParent","alignItems":"top","justifyContent":"start","layoutWeight":1,"flexShrink":1,"constraintSize":{"minHeight":48}}},{"id":"primary_item0","component":"Column","children":["primary_item0_label_slot","primary_item0_value_slot"],"itemMargin":2,"styles":{"height":"matchParent","backgroundColor":"#99FFFFFF","padding":{"left":8,"right":8},"borderRadius":16,"alignItems":"start","justifyContent":"center","layoutWeight":1,"flexShrink":1,"constraintSize":{"minWidth":0,"minHeight":0}}},{"id":"primary_item0_label_slot","component":"Row","children":["primary_item0_label"],"styles":{"width":"matchParent","height":18,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"primary_item0_label","component":"Text","content":"九月初六","styles":{"width":"matchParent","fontSize":12,"fontWeight":700,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#998C4B1C"}},{"id":"primary_item0_value_slot","component":"Row","children":["primary_item0_value"],"styles":{"width":"matchParent","height":16,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"primary_item0_value","component":"Text","content":"{{ ${/data/countdown0/countdownDays} + '天' }}","styles":{"width":"matchParent","fontSize":10,"fontWeight":500,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#FF8C4B1C"}},{"id":"primary_item1","component":"Column","children":["primary_item1_label_slot","primary_item1_value_slot"],"itemMargin":2,"styles":{"height":"matchParent","backgroundColor":"#99FFFFFF","padding":{"left":8,"right":8},"borderRadius":16,"alignItems":"start","justifyContent":"center","layoutWeight":1,"flexShrink":1,"constraintSize":{"minWidth":0,"minHeight":0}}},{"id":"primary_item1_label_slot","component":"Row","children":["primary_item1_label"],"styles":{"width":"matchParent","height":18,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"primary_item1_label","component":"Text","content":"五月二十","styles":{"width":"matchParent","fontSize":12,"fontWeight":700,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#998C4B1C"}},{"id":"primary_item1_value_slot","component":"Row","children":["primary_item1_value"],"styles":{"width":"matchParent","height":16,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"primary_item1_value","component":"Text","content":"{{ ${/data/countdown1/countdownDays} + '天' }}","styles":{"width":"matchParent","fontSize":10,"fontWeight":500,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#FF8C4B1C"}},{"id":"primary_item2","component":"Column","children":["primary_item2_label_slot","primary_item2_value_slot"],"itemMargin":2,"styles":{"height":"matchParent","backgroundColor":"#99FFFFFF","padding":{"left":8,"right":8},"borderRadius":16,"alignItems":"start","justifyContent":"center","layoutWeight":1,"flexShrink":1,"constraintSize":{"minWidth":0,"minHeight":0}}},{"id":"primary_item2_label_slot","component":"Row","children":["primary_item2_label"],"styles":{"width":"matchParent","height":18,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"primary_item2_label","component":"Text","content":"三月十三","styles":{"width":"matchParent","fontSize":12,"fontWeight":700,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#998C4B1C"}},{"id":"primary_item2_value_slot","component":"Row","children":["primary_item2_value"],"styles":{"width":"matchParent","height":16,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"primary_item2_value","component":"Text","content":"{{ ${/data/countdown2/countdownDays} + '天' }}","styles":{"width":"matchParent","fontSize":10,"fontWeight":500,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#FF8C4B1C"}},{"id":"__layout__root__details","component":"Column","children":["details"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","layoutWeight":1},"itemMargin":0},{"id":"details","component":"Row","children":["details_item0","details_item1","details_item2"],"itemMargin":8,"styles":{"width":"matchParent","height":"matchParent","alignItems":"top","justifyContent":"start","layoutWeight":1,"flexShrink":1,"constraintSize":{"minHeight":48}}},{"id":"details_item0","component":"Column","children":["details_item0_label_slot","details_item0_value_slot"],"itemMargin":2,"styles":{"height":"matchParent","backgroundColor":"#99FFFFFF","padding":{"left":8,"right":8},"borderRadius":16,"alignItems":"start","justifyContent":"center","layoutWeight":1,"flexShrink":1,"constraintSize":{"minWidth":0,"minHeight":0}}},{"id":"details_item0_label_slot","component":"Row","children":["details_item0_label"],"styles":{"width":"matchParent","height":18,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"details_item0_label","component":"Text","content":"腊月十六","styles":{"width":"matchParent","fontSize":12,"fontWeight":700,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#998C4B1C"}},{"id":"details_item0_value_slot","component":"Row","children":["details_item0_value"],"styles":{"width":"matchParent","height":16,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"details_item0_value","component":"Text","content":"{{ ${/data/countdown3/countdownDays} + '天' }}","styles":{"width":"matchParent","fontSize":10,"fontWeight":500,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#FF8C4B1C"}},{"id":"details_item1","component":"Column","children":["details_item1_label_slot","details_item1_value_slot"],"itemMargin":2,"styles":{"height":"matchParent","backgroundColor":"#99FFFFFF","padding":{"left":8,"right":8},"borderRadius":16,"alignItems":"start","justifyContent":"center","layoutWeight":1,"flexShrink":1,"constraintSize":{"minWidth":0,"minHeight":0}}},{"id":"details_item1_label_slot","component":"Row","children":["details_item1_label"],"styles":{"width":"matchParent","height":18,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"details_item1_label","component":"Text","content":"三月初六","styles":{"width":"matchParent","fontSize":12,"fontWeight":700,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#998C4B1C"}},{"id":"details_item1_value_slot","component":"Row","children":["details_item1_value"],"styles":{"width":"matchParent","height":16,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"details_item1_value","component":"Text","content":"{{ ${/data/countdown4/countdownDays} + '天' }}","styles":{"width":"matchParent","fontSize":10,"fontWeight":500,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#FF8C4B1C"}},{"id":"details_item2","component":"Column","children":["details_item2_label_slot","details_item2_value_slot"],"itemMargin":2,"styles":{"height":"matchParent","backgroundColor":"#99FFFFFF","padding":{"left":8,"right":8},"borderRadius":16,"alignItems":"start","justifyContent":"center","layoutWeight":1,"flexShrink":1,"constraintSize":{"minWidth":0,"minHeight":0}}},{"id":"details_item2_label_slot","component":"Row","children":["details_item2_label"],"styles":{"width":"matchParent","height":18,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"details_item2_label","component":"Text","content":"九月廿九","styles":{"width":"matchParent","fontSize":12,"fontWeight":700,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#998C4B1C"}},{"id":"details_item2_value_slot","component":"Row","children":["details_item2_value"],"styles":{"width":"matchParent","height":16,"alignItems":"center","justifyContent":"start","flexShrink":0},"itemMargin":0},{"id":"details_item2_value","component":"Text","content":"{{ ${/data/countdown5/countdownDays} + '天' }}","styles":{"width":"matchParent","fontSize":10,"fontWeight":500,"textAlign":"start","maxLines":1,"textOverflow":"ellipsis","fontColor":"#FF8C4B1C"}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"data":{"countdown0":{"countdownDays":30},"countdown1":{"countdownDays":30},"countdown2":{"countdownDays":30},"countdown3":{"countdownDays":30},"countdown4":{"countdownDays":30},"countdown5":{"countdownDays":30}}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "创建倒计时卡片，显示以下日期的倒计时天数：农历九月初六（2027年10月5日）、农历五月二十（2027年6月24日）、农历三月十三（2027年4月19日）、农历腊月十六（2028年1月12日）、农历三月初六（2027年4月12日）、农历九月廿九（2027年10月28日）。本轮卡片静态内容（用作展示的外部事实）：农历九月初六对应公历2027年10月5日，农历五月二十对应公历2027年6月24日，农历三月十三对应公历2027年4月19日，农历腊月十六对应公历2028年1月12日，农历三月初六对应公历2027年4月12日，2027年农历九月没有三十，九月廿九为公历2027年10月28日。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "countdown0": {
+        "countdownDays": {
+          "type": "integer",
+          "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+          "sampleValue": 30
+        }
+      },
+      "countdown1": {
+        "countdownDays": {
+          "type": "integer",
+          "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+          "sampleValue": 30
+        }
+      },
+      "countdown2": {
+        "countdownDays": {
+          "type": "integer",
+          "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+          "sampleValue": 30
+        }
+      },
+      "countdown3": {
+        "countdownDays": {
+          "type": "integer",
+          "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+          "sampleValue": 30
+        }
+      },
+      "countdown4": {
+        "countdownDays": {
+          "type": "integer",
+          "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+          "sampleValue": 30
+        }
+      },
+      "countdown5": {
+        "countdownDays": {
+          "type": "integer",
+          "description": "距离目标日期的自然日天数纯整数，返回值不包含“天”。正数表示未来，0 表示今天，负数表示已经过去；若直接用于文本展示，必须在数值后追加“天”。",
+          "sampleValue": 30
+        }
+      }
+    }
+  },
+  "assetCandidates": []
+}
+```
+```effectivecapabilities
+{
+  "data": [
+    "GetCountdownDays",
+    "GetCountdownDays",
+    "GetCountdownDays",
+    "GetCountdownDays",
+    "GetCountdownDays",
+    "GetCountdownDays"
+  ],
+  "event": [],
+  "asset": []
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-10-05"
+      },
+      "writeResultTo": "/data/countdown0",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-06-24"
+      },
+      "writeResultTo": "/data/countdown1",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-04-19"
+      },
+      "writeResultTo": "/data/countdown2",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2028-01-12"
+      },
+      "writeResultTo": "/data/countdown3",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-04-12"
+      },
+      "writeResultTo": "/data/countdown4",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-10-28"
+      },
+      "writeResultTo": "/data/countdown5",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": []
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "fde4b6be-8387-42e7-9677-6edaf6bb3cac",
+  "createdAt": 1793952299539
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"W-top-bottom","variant":"equal"},["title","primary","details"]]
+["title","SingleLineTitle",{"title":"农历日期倒计时","fontSize":12}]
+["primary","TextBlock",{"items":[{"label":"九月初六","value":"{{ ${/data/countdown0/countdownDays} + '天' }}"},{"label":"五月二十","value":"{{ ${/data/countdown1/countdownDays} + '天' }}"},{"label":"三月十三","value":"{{ ${/data/countdown2/countdownDays} + '天' }}"}]}]
+["details","TextBlock",{"items":[{"label":"腊月十六","value":"{{ ${/data/countdown3/countdownDays} + '天' }}"},{"label":"三月初六","value":"{{ ${/data/countdown4/countdownDays} + '天' }}"},{"label":"九月廿九","value":"{{ ${/data/countdown5/countdownDays} + '天' }}"}]}]
+["/data/countdown0/countdownDays",30]
+["/data/countdown1/countdownDays",30]
+["/data/countdown2/countdownDays",30]
+["/data/countdown3/countdownDays",30]
+["/data/countdown4/countdownDays",30]
+["/data/countdown5/countdownDays",30]
+```
+```request
+{
+  "content": {
+    "size": "2x4",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "candidateAssetIds": [],
+    "candidateEventCandidates": [],
+    "bundleName": "com.huawei.genui",
+    "description": "多个重要农历日期倒计时",
+    "userQuery": "创建倒计时卡片，显示以下日期的倒计时天数：农历九月初六（2027年10月5日）、农历五月二十（2027年6月24日）、农历三月十三（2027年4月19日）、农历腊月十六（2028年1月12日）、农历三月初六（2027年4月12日）、农历九月廿九（2027年10月28日）。本轮卡片静态内容（用作展示的外部事实）：农历九月初六对应公历2027年10月5日，农历五月二十对应公历2027年6月24日，农历三月十三对应公历2027年4月19日，农历腊月十六对应公历2028年1月12日，农历三月初六对应公历2027年4月12日，2027年农历九月没有三十，九月廿九为公历2027年10月28日。",
+    "title": "重要日期倒计时",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-10-05"
+        },
+        "writeResultTo": "/data/countdown0",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-06-24"
+        },
+        "writeResultTo": "/data/countdown1",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-04-19"
+        },
+        "writeResultTo": "/data/countdown2",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2028-01-12"
+        },
+        "writeResultTo": "/data/countdown3",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-04-12"
+        },
+        "writeResultTo": "/data/countdown4",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      },
+      {
+        "capabilityId": "GetCountdownDays",
+        "arguments": {
+          "targetDate": "2027-10-28"
+        },
+        "writeResultTo": "/data/countdown5",
+        "candidateOutputFields": [
+          "/countdownDays"
+        ]
+      }
+    ]
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261103015037169"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q490-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0",
+  "size": "2x4",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "candidateAssetIds": [],
+  "candidateEventCandidates": [],
+  "bundleName": "com.huawei.genui",
+  "description": "多个重要农历日期倒计时",
+  "userQuery": "创建倒计时卡片，显示以下日期的倒计时天数：农历九月初六（2027年10月5日）、农历五月二十（2027年6月24日）、农历三月十三（2027年4月19日）、农历腊月十六（2028年1月12日）、农历三月初六（2027年4月12日）、农历九月廿九（2027年10月28日）。本轮卡片静态内容（用作展示的外部事实）：农历九月初六对应公历2027年10月5日，农历五月二十对应公历2027年6月24日，农历三月十三对应公历2027年4月19日，农历腊月十六对应公历2028年1月12日，农历三月初六对应公历2027年4月12日，2027年农历九月没有三十，九月廿九为公历2027年10月28日。",
+  "title": "重要日期倒计时",
+  "candidateDataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-10-05"
+      },
+      "writeResultTo": "/data/countdown0",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-06-24"
+      },
+      "writeResultTo": "/data/countdown1",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-04-19"
+      },
+      "writeResultTo": "/data/countdown2",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2028-01-12"
+      },
+      "writeResultTo": "/data/countdown3",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-04-12"
+      },
+      "writeResultTo": "/data/countdown4",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    },
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2027-10-28"
+      },
+      "writeResultTo": "/data/countdown5",
+      "candidateOutputFields": [
+        "/countdownDays"
+      ]
+    }
+  ]
+}
+```

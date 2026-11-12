@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"S-title-dual-content\"},[\"title\",\"content\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/earphone/earphoneName\"},\"icon\":\"resources/base/media/emoji_bluetooth_earbuds_black.png\",\"fontSize\":12}]\n[\"content\",\"Group\",{\"variant\":\"supporting-items\"},[\"content_item_1\",\"content_item_2\",\"content_item_3\"]]\n[\"content_item_1\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":\"{{ ${/data/earphone/batteryLevel} + '%' }}\",\"secondaryText\":\"{{ '耳机盒 ' + ${/data/earphone/chargingStatusDesc} }}\"}]\n[\"content_item_2\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":\"{{ ${/data/earphone/leftBatteryLevel} + '%' }}\",\"secondaryText\":\"{{ '左耳 ' + ${/data/earphone/leftChargingStatusDesc} }}\"}]\n[\"content_item_3\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":\"{{ ${/data/earphone/rightBatteryLevel} + '%' }}\",\"secondaryText\":\"{{ '右耳 ' + ${/data/earphone/rightChargingStatusDesc} }}\"}]\n[\"/data/earphone/earphoneName\",\"示例耳机\"]\n[\"/data/earphone/batteryLevel\",80]\n[\"/data/earphone/chargingStatusDesc\",\"未充电\"]\n[\"/data/earphone/leftBatteryLevel\",76]\n[\"/data/earphone/leftChargingStatusDesc\",\"未充电\"]\n[\"/data/earphone/rightBatteryLevel\",78]\n[\"/data/earphone/rightChargingStatusDesc\",\"未充电\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "语义布局不符合合同：节点 root：子组件数量应为 [3]；要求的 children 角色为 [title, primary, support]。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+    }
+  ]
+}

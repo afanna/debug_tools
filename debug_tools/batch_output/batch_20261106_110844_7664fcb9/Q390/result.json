@@ -1,0 +1,21 @@
+{
+  "id": "Q390",
+  "fileName": "Q390.json",
+  "title": "日期卡片",
+  "query": "帮忙在桌面添加日期卡片",
+  "size": "2x2",
+  "sequence": 51,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4176.26,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4166.58,
+  "uid": "batch-7664fcb9-00051-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,17 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {},
+      "capabilityId": "GetMemoData",
+      "writeResultTo": "/data/memo"
+    }
+  ],
+  "description": "备忘录速览",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x4",
+  "title": "备忘录"
+}

@@ -1,0 +1,6 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":12,"itemMargin":6},["title","__layout__root__body"]]
+["title","SingleLineTitle",{"title":"手电筒","fontSize":12,"width":"matchParent"}]
+["__layout__root__body","Column",{"width":"matchParent","itemMargin":0,"alignItems":"start","justifyContent":"end","layoutWeight":1},["__layout__root__action"]]
+["__layout__root__action","Column",{"width":"matchParent","alignItems":"start","justifyContent":"start","height":36,"flexShrink":0},["action"]]
+["action","PillButton",{"label":"打开手电筒","icon":"resources/base/media/ic_flashlight.svg","onClick":[{"call":"clickToIntent","args":{"intentName":"OpenFlashlight","params":{}}}]}]
+["/state/ready",true]

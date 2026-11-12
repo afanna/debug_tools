@@ -1,0 +1,194 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文有3个对象，计划含2个核心组、共2组；不能删除核心对象或以共享说明代替本条目。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 theme 缺少完整展示文字 '减脂食谱'；须在合法且可达的标题或正文条目内完整展示，不跨不同对象拼接说明。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "theme",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2
+              ],
+              "id": "monday",
+              "identity": "周一",
+              "kind": "object"
+            },
+            {
+              "factIndexes": [
+                3,
+                4
+              ],
+              "id": "tuesday",
+              "identity": "周二",
+              "kind": "object"
+            },
+            {
+              "factIndexes": [
+                5
+              ],
+              "id": "tips",
+              "identity": null,
+              "kind": "shared"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_GROUP_MISMATCH",
+        "evidenceSource": "validation",
+        "expected": {
+          "objectOrderUnchanged": true,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "按已接受计划的对象顺序和分组重排正文条目或对比栏，共享说明放在标题或note；不能跨对象借用事实或删除必要对象。",
+        "legacyMessage": "COMPACT_STATIC_GROUP_MISMATCH: 正文有3个对象，计划含2个核心组、共2组；不能删除核心对象或以共享说明代替本条目。",
+        "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文有3个对象，计划含2个核心组、共2组；不能删除核心对象或以共享说明代替本条目。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文有3个对象，计划含2个核心组、共2组；不能删除核心对象或以共享说明代替本条目。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "theme",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2
+              ],
+              "id": "monday",
+              "identity": "周一",
+              "kind": "object"
+            },
+            {
+              "factIndexes": [
+                3,
+                4
+              ],
+              "id": "tuesday",
+              "identity": "周二",
+              "kind": "object"
+            },
+            {
+              "factIndexes": [
+                5
+              ],
+              "id": "tips",
+              "identity": null,
+              "kind": "shared"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_GROUP_MISMATCH",
+        "evidenceSource": "validation",
+        "expected": {
+          "objectOrderUnchanged": true,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "按已接受计划的对象顺序和分组重排正文条目或对比栏，共享说明放在标题或note；不能跨对象借用事实或删除必要对象。",
+        "legacyMessage": "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+        "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "contentGroups": [
+            {
+              "factIndexes": [
+                0
+              ],
+              "id": "theme",
+              "identity": null,
+              "kind": "shared"
+            },
+            {
+              "factIndexes": [
+                1,
+                2
+              ],
+              "id": "monday",
+              "identity": "周一",
+              "kind": "object"
+            },
+            {
+              "factIndexes": [
+                3,
+                4
+              ],
+              "id": "tuesday",
+              "identity": "周二",
+              "kind": "object"
+            },
+            {
+              "factIndexes": [
+                5
+              ],
+              "id": "tips",
+              "identity": null,
+              "kind": "shared"
+            }
+          ]
+        },
+        "category": "display",
+        "code": "COMPACT_STATIC_CORE_MISSING",
+        "evidenceSource": "validation",
+        "expected": {
+          "coreOmissionAllowed": false,
+          "sameObjectCoverage": true
+        },
+        "fixHint": "在原对象或条目内恢复完整展示文字；保留must、受保护片段、原文要求及全部Action，无保护且非原文的should可整项省略并反馈；不能再次截短已接受核心。",
+        "legacyMessage": "COMPACT_STATIC_CORE_MISSING: 组 theme 缺少完整展示文字 '减脂食谱'；须在合法且可达的标题或正文条目内完整展示，不跨不同对象拼接说明。",
+        "message": "COMPACT_STATIC_CORE_MISSING: 组 theme 缺少完整展示文字 '减脂食谱'；须在合法且可达的标题或正文条目内完整展示，不跨不同对象拼接说明。",
+        "severity": "error",
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 theme 缺少完整展示文字 '减脂食谱'；须在合法且可达的标题或正文条目内完整展示，不跨不同对象拼接说明。",
+    "stage": "validation"
+  }
+]

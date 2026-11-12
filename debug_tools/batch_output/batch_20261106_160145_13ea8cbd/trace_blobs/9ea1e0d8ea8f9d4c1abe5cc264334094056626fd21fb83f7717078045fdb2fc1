@@ -1,0 +1,14 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan action is missing from visible DSL: 点击打开备忘录查看打卡记录 (event.viewNote). Copy the complete call and args from the matching TaskSpec event candidate.",
+    "severity": "error",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "assetAssignments action 'event.viewNote' has no matching button component.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

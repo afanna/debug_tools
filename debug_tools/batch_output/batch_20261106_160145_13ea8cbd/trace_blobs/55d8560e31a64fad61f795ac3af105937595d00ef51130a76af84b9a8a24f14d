@@ -1,0 +1,33 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "Component rows must form one tree rooted at root. Unreachable component(s): left_support. Attach each component to a reachable parent's children list.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "layout_structure",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "681a5ef01313c613",
+      "instruction": "修复违反合同的父布局结构，重新分配完整信息组和动作槽。 先检查以 root 为根的完整组件树：所有引用存在、每个节点只有一个父引用、没有环或孤立节点，并核对父区允许的角色和有序 children。不得只把孤立节点挂到不接受该角色的 Region；必要时重组受控 Group 或更换合法父布局。保留全部事实、绑定、标签、单位和动作，不通过删除孤立业务节点规避错误；结构闭合后重新核算各区容量，不修改展开后的内部几何。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "layout_structure"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": null
+      },
+      "noProgress": false,
+      "repairStrategy": "parent_layout_recompose",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"left_body\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_support\",\"SecondaryBody\",{\"items\":[{\"label\":\"{{ ${/data/weather/daily/0/weekday} + ' ' }}\",\"value\":{\"path\":\"/data/weather/daily/0/temperatureRangeText\"}}],\"fontSize\":14}]\n[\"left_action\",\"PillButton\",{\"label\":\"查看天气\",\"icon\":\"resources/base/media/ic_weather_monochrome.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_body\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"近期日程\",\"icon\":\"resources/base/media/calendar_fill.svg\",\"fontSize\":12}]\n[\"right_body\",\"EventCard\",{\"items\":[{\"title\":{\"path\":\"/data/calendar/events/0/title\"},\"time\":{\"path\":\"/data/calendar/events/0/dtStart\"}},{\"title\":{\"path\":\"/data/calendar/events/1/title\"},\"time\":{\"path\":\"/data/calendar/events/1/dtStart\"}}],\"density\":\"compact\"}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/daily/0/weekday\",\"星期四\"]\n[\"/data/weather/daily/0/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/calendar/events/0/title\",\"项目例会\"]\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/data/calendar/events/1/title\",\"项目例会\"]\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]\n[\"/data/calendar/events/1/entityId\",\"example-event-002\"]"
+  }
+]

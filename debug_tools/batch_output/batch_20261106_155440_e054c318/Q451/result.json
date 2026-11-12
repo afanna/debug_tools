@@ -1,0 +1,21 @@
+{
+  "id": "Q451",
+  "fileName": "Q451.json",
+  "title": "纳税Top3",
+  "query": "展示中国纳税Top3企业排名及纳税额，包括中国石化、中国石油、工商银行\n\n本轮卡片静态内容（用作展示的外部事实）：\n1. 中国石化，2026年上半年纳税1,656.94亿元\n2. 中国石油，2026年上半年纳税1,322.72亿元\n3. 工商银行，2026年上半年纳税831.82亿元",
+  "size": "2x2",
+  "sequence": 40,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2052.18,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00040-000",
+  "finalAttempt": 0
+}

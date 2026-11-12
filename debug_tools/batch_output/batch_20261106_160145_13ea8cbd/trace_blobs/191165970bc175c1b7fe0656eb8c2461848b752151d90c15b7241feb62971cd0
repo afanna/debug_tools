@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "语义布局不符合合同：节点 root：两个 InfoBlock 必须使用 stacked-info 变体。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+    "stage": "validation"
+  }
+]

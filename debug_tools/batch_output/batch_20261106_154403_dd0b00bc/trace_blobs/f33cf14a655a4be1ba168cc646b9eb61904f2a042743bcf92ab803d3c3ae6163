@@ -1,0 +1,101 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "monday",
+      "identity": "周一",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "tuesday",
+      "identity": "周二",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        5
+      ],
+      "id": "tips",
+      "identity": null,
+      "kind": "shared"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 66,
+          "start": 51
+        }
+      ],
+      "sourceText": "📅 一周减脂食谱（周一至周日）"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 133,
+          "start": 68
+        }
+      ],
+      "sourceText": "周一：\n早餐：燕麦粥 + 水煮蛋 + 凉拌黄瓜\n午餐：糙米饭 + 清蒸鱼 + 清炒西兰花\n晚餐：杂粮粥 + 手撕包菜 + 素炒豆腐"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 112,
+          "start": 92
+        }
+      ],
+      "sourceText": "午餐：糙米饭 + 清蒸鱼 + 清炒西兰花"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 196,
+          "start": 135
+        }
+      ],
+      "sourceText": "周二：\n早餐：全麦面包 + 脱脂牛奶 + 苹果\n午餐：红薯饭 + 炒鸡胸肉片 + 清炒菠菜\n晚餐：小米粥 + 清炒胡萝卜丝"
+    },
+    {
+      "factIndex": 4,
+      "positions": [
+        {
+          "end": 180,
+          "start": 159
+        }
+      ],
+      "sourceText": "午餐：红薯饭 + 炒鸡胸肉片 + 清炒菠菜"
+    },
+    {
+      "factIndex": 5,
+      "positions": [
+        {
+          "end": 548,
+          "start": 483
+        }
+      ],
+      "sourceText": "1. 主食换成粗粮（糙米、燕麦、玉米、红薯）\n2. 蛋白质选低脂的（鱼虾、去皮鸡肉、豆腐）\n3. 烹饪方式多用蒸、煮、凉拌，少油炸"
+    }
+  ],
+  "version": "static-content-v1"
+}

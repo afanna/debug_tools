@@ -1,0 +1,24 @@
+{
+  "candidateDataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "雨花台区",
+        "forecastDays": 1,
+        "prefectureName": "南京市"
+      },
+      "writeResultTo": "/data/weather",
+      "candidateOutputFields": []
+    },
+    {
+      "capabilityId": "GetHealthAndSportSummary",
+      "arguments": {
+        "targetDayOffset": -1
+      },
+      "writeResultTo": "/data/healthSport",
+      "candidateOutputFields": []
+    }
+  ],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": []
+}

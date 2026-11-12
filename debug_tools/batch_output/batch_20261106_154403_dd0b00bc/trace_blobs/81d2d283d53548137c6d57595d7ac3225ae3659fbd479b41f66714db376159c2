@@ -1,0 +1,47 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.weather",
+        "assetId": null,
+        "reason": "Whole-card detail has no button icon."
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "图标已分配给天气详情动作，且标题为静态城市名，无需图标"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "深圳当前温度读数"
+    },
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "actionId": "event.open.weather",
+      "priority": "must",
+      "requirement": "打开深圳天气详情页"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content",
+    "S-title-dual-content"
+  ],
+  "wholeCardActionId": "event.open.weather"
+}

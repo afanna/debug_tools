@@ -1,0 +1,27 @@
+{
+  "sampleId": "Q001",
+  "scenario": "once",
+  "timezone": "Asia/Shanghai",
+  "referenceDate": "2026-11-03",
+  "targetDate": "2026-12-19",
+  "expectedDays": 46,
+  "expectedRelationText": "还剩",
+  "expectedTargetDateText": "2026/12/19",
+  "writeResultTo": "/data/dateCounter",
+  "fields": [
+    "/days",
+    "/relationText",
+    "/targetDateText"
+  ],
+  "arguments": {
+    "targetDate": "2026-12-19"
+  },
+  "gate": true,
+  "provenance": {
+    "targetDate": "explicit",
+    "days": "derived",
+    "relationText": "derived",
+    "targetDateText": "derived"
+  },
+  "notes": []
+}

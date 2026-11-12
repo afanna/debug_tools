@@ -1,0 +1,108 @@
+{
+  "apiVersion": "batch-postprocess-v2",
+  "scope": "sample",
+  "runId": "batch_20261106_160145_13ea8cbd",
+  "sample": {
+    "id": "Q490",
+    "fileName": "Q490.json",
+    "title": "重要日期倒计时",
+    "query": "创建倒计时卡片，显示以下日期的倒计时天数：农历九月初六（2027年10月5日）、农历五月二十（2027年6月24日）、农历三月十三（2027年4月19日）、农历腊月十六（2028年1月12日）、农历三月初六（2027年4月12日）、农历九月廿九（2027年10月28日）。本轮卡片静态内容（用作展示的外部事实）：农历九月初六对应公历2027年10月5日，农历五月二十对应公历2027年6月24日，农历三月十三对应公历2027年4月19日，农历腊月十六对应公历2028年1月12日，农历三月初六对应公历2027年4月12日，2027年农历九月没有三十，九月廿九为公历2027年10月28日。",
+    "size": "2x4",
+    "sequence": 78,
+    "status": "success",
+    "attemptCount": 1,
+    "elapsedMs": 5233.89,
+    "errorCode": "",
+    "error": "",
+    "artifactAvailable": true,
+    "dslAvailable": true,
+    "traceStatus": "complete",
+    "traceRecordCount": 79,
+    "traceSchemaVersion": "generation-trace-v2",
+    "traceDurationMs": 5221.89,
+    "uid": "batch-13ea8cbd-00078-000",
+    "generationMetrics": {
+      "firstDsl": "passed",
+      "requestSize": "2x4",
+      "firstRequestStatus": "success",
+      "firstRequestDelivered": true,
+      "qualityRepairAttempts": 0,
+      "modelPhysicalCalls": 3,
+      "repairObservedAttempts": 1,
+      "modelObservedAttempts": 1,
+      "terminalAttempts": 1,
+      "missingInformationWarnings": 0,
+      "retryParameters": {
+        "interfaceRetryEnabled": [
+          true
+        ],
+        "interfaceExtraRetries": [
+          1
+        ],
+        "qualityRepairEnabled": [
+          true
+        ],
+        "qualityRepairMaxAttempts": [
+          5
+        ],
+        "singleStepGenerationFallbackEnabled": [
+          false
+        ],
+        "singleStepWidgetEditEnabled": [
+          true
+        ],
+        "dropPlanFactValidationEnabled": [
+          false
+        ],
+        "photoBackgroundThemeEnabled": [
+          false
+        ],
+        "subjectlessWideThemeEnabled": [
+          false
+        ],
+        "squareMusicPhotoExpansionEnabled": [
+          false
+        ],
+        "squarePhotoExpansionEnabled": [
+          false
+        ],
+        "deepseekOfficialHttpUseSdkEnabled": [
+          true
+        ],
+        "modelFailureRetryEnabled": [
+          true
+        ],
+        "modelFailureExtraRetries": [
+          1
+        ],
+        "fallbackModelFailureExtraRetries": [
+          1
+        ],
+        "fallbackEnabled": [
+          true
+        ],
+        "argumentRepairEnabled": [
+          false
+        ],
+        "argumentRepairMaxAttempts": [
+          2
+        ],
+        "argumentRepairReminderCount": [
+          1
+        ],
+        "interfaceMaxAttempts": [
+          2
+        ],
+        "planMaxAttempts": [
+          2
+        ]
+      }
+    }
+  },
+  "runDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd",
+  "sampleDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q490",
+  "finalAttemptDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q490\\attempt_000",
+  "outputDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\postprocess\\exec_0befad308fce\\plugins\\data-analysis\\samples\\Q490",
+  "config": {},
+  "upstreamResults": []
+}

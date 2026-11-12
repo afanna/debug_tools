@@ -1,0 +1,221 @@
+{
+  "approvedOmittedFactIndexes": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "capacityFits": [
+    {
+      "actualItemCount": 4,
+      "actualRowCount": 4,
+      "componentId": "support",
+      "componentType": "SecondaryBody",
+      "directlyFits": [
+        {
+          "itemIndex": 0,
+          "planFacts": [
+            {
+              "factIndex": 2,
+              "priority": "must",
+              "requirement": "当前空气质量等级"
+            }
+          ],
+          "value": {
+            "label": "空气质量 ",
+            "value": {
+              "path": "/data/weather/current/airQuality"
+            }
+          }
+        },
+        {
+          "itemIndex": 1,
+          "planFacts": [
+            {
+              "factIndex": 3,
+              "priority": "must",
+              "requirement": "当前相对湿度"
+            }
+          ],
+          "value": {
+            "label": "湿度 ",
+            "value": "{{ ${/data/weather/current/humidityPercent} + '%' }}"
+          }
+        },
+        {
+          "itemIndex": 2,
+          "planFacts": [
+            {
+              "factIndex": 4,
+              "priority": "must",
+              "requirement": "未来天气预报（逐日星期、天气现象、温度范围）"
+            },
+            {
+              "factIndex": 5,
+              "priority": "must",
+              "requirement": "未来天气预报第一日天气现象"
+            },
+            {
+              "factIndex": 6,
+              "priority": "must",
+              "requirement": "未来天气预报第一日温度范围"
+            },
+            {
+              "factIndex": 7,
+              "priority": "must",
+              "requirement": "未来天气预报第二日星期"
+            },
+            {
+              "factIndex": 8,
+              "priority": "must",
+              "requirement": "未来天气预报第二日天气现象"
+            },
+            {
+              "factIndex": 9,
+              "priority": "must",
+              "requirement": "未来天气预报第二日温度范围"
+            },
+            {
+              "factIndex": 10,
+              "priority": "must",
+              "requirement": "未来天气预报第三日星期"
+            },
+            {
+              "factIndex": 11,
+              "priority": "must",
+              "requirement": "未来天气预报第三日天气现象"
+            },
+            {
+              "factIndex": 12,
+              "priority": "must",
+              "requirement": "未来天气预报第三日温度范围"
+            }
+          ],
+          "value": {
+            "label": "预报 ",
+            "maxLines": 2,
+            "value": "{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/condition} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"
+          }
+        }
+      ],
+      "doesNotFit": [
+        {
+          "itemIndex": 3,
+          "planFacts": [
+            {
+              "factIndex": 4,
+              "priority": "must",
+              "requirement": "未来天气预报（逐日星期、天气现象、温度范围）"
+            },
+            {
+              "factIndex": 5,
+              "priority": "must",
+              "requirement": "未来天气预报第一日天气现象"
+            },
+            {
+              "factIndex": 6,
+              "priority": "must",
+              "requirement": "未来天气预报第一日温度范围"
+            },
+            {
+              "factIndex": 7,
+              "priority": "must",
+              "requirement": "未来天气预报第二日星期"
+            },
+            {
+              "factIndex": 8,
+              "priority": "must",
+              "requirement": "未来天气预报第二日天气现象"
+            },
+            {
+              "factIndex": 9,
+              "priority": "must",
+              "requirement": "未来天气预报第二日温度范围"
+            },
+            {
+              "factIndex": 10,
+              "priority": "must",
+              "requirement": "未来天气预报第三日星期"
+            },
+            {
+              "factIndex": 11,
+              "priority": "must",
+              "requirement": "未来天气预报第三日天气现象"
+            },
+            {
+              "factIndex": 12,
+              "priority": "must",
+              "requirement": "未来天气预报第三日温度范围"
+            }
+          ],
+          "value": {
+            "label": "预报 ",
+            "maxLines": 2,
+            "value": "{{ ${/data/weather/daily/1/weekday} + ' ' + ${/data/weather/daily/1/condition} + ' ' + ${/data/weather/daily/1/temperatureRangeText} }}"
+          }
+        }
+      ],
+      "effectiveColumnCount": 1,
+      "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+      "maxRetainedRowCount": 3,
+      "overflowFactCount": 9,
+      "overflowItemCount": 1,
+      "parentAvailableHeight": 126.0,
+      "parentId": "root",
+      "rowHeights": [
+        12.0,
+        12.0,
+        24.0,
+        24.0
+      ],
+      "rowSpacing": 2.0,
+      "scope": "currentComponentItemsOnly"
+    }
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 3,
+  "consecutiveFailures": 1,
+  "fallbackAttempt": 0,
+  "fallbackAttemptLimit": 2,
+  "fallbackRemainingAttempts": 2,
+  "fallbackStage": "drop_optional_component",
+  "fingerprint": "16202d1bde9bfdd1",
+  "instruction": "固定容量组件的超限内容在一次无损重组后仍未获得合法落点；不再等待固定第四轮，提前进入程序授权的最小 Drop。已进入条目级最小删减兜底。仅允许从 optionalDrop.componentId 指定的 SecondaryBody.items 删除 allowedItemIndexes=(3,) 对应且仍承载 allowedOmittedFactIndexes 的 doesNotFit 条目；保留该组件的其余 items、顺序、绑定、字号和父级引用。仅当删除后 items 为空时才删除组件行及其直接父级引用。不得删除其它组件、未授权事实或任何 Action；整卡必须继续保留至少一个核心信息组件。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_capacity",
+      "layout_capacity",
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "0328d7d35609ff2e"
+  },
+  "noProgress": false,
+  "optionalDrop": {
+    "allowedItemIndexes": [
+      3
+    ],
+    "allowedOmittedFactIndexes": [
+      7,
+      8,
+      9
+    ],
+    "componentId": "support",
+    "componentType": "SecondaryBody",
+    "containsMustFacts": true,
+    "displayTexts": [],
+    "partial": true,
+    "requirements": [
+      "未来天气预报第二日星期",
+      "未来天气预报第二日天气现象",
+      "未来天气预报第二日温度范围"
+    ]
+  },
+  "repairStrategy": "drop_optional_component",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

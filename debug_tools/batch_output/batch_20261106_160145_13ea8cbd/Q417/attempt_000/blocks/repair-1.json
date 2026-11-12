@@ -1,0 +1,64 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"当前时间\",\"icon\":\"resources/base/media/emoji_time.png\",\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/time/currentDate\"},\"secondaryText\":{\"path\":\"/data/time/dayOfWeek\"},\"fontSize\":18}]\n[\"details\",\"TextBlock\",{\"items\":[{\"label\":\"日期\",\"value\":{\"path\":\"/data/time/currentDate\"}},{\"label\":\"星期\",\"value\":{\"path\":\"/data/time/dayOfWeek\"}},{\"label\":\"农历\",\"value\":{\"path\":\"/data/time/lunarDate\"}}]}]\n[\"/data/time/currentDate\",\"示例\"]\n[\"/data/time/dayOfWeek\",\"示例\"]\n[\"/data/time/lunarDate\",\"示例\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_PLAN_COVERAGE_FAILED",
+      "message": "Plan fact is displayed more than once in visible DSL: 当前公历日期 (/data/time/currentDate); expected 1, got 2; occurrences: primary (EmphasisText).mainText, details (TextBlock).items[0].value.",
+      "duplicateFacts": [
+        {
+          "requirement": "当前公历日期",
+          "dataId": "/data/time/currentDate",
+          "expectedVisibleCount": 1,
+          "actualVisibleCount": 2,
+          "occurrences": [
+            {
+              "componentId": "primary",
+              "componentType": "EmphasisText",
+              "property": "mainText"
+            },
+            {
+              "componentId": "details",
+              "componentType": "TextBlock",
+              "property": "items[0].value"
+            }
+          ],
+          "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+          "requiredDisplayPositions": [
+            {
+              "componentId": "primary",
+              "componentType": "EmphasisText",
+              "property": "mainText"
+            }
+          ]
+        },
+        {
+          "requirement": "星期信息",
+          "dataId": "/data/time/dayOfWeek",
+          "expectedVisibleCount": 1,
+          "actualVisibleCount": 2,
+          "occurrences": [
+            {
+              "componentId": "primary",
+              "componentType": "EmphasisText",
+              "property": "secondaryText"
+            },
+            {
+              "componentId": "details",
+              "componentType": "TextBlock",
+              "property": "items[1].value"
+            }
+          ],
+          "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+          "requiredDisplayPositions": []
+        }
+      ]
+    },
+    {
+      "stage": "validation",
+      "code": "COMPACT_PLAN_COVERAGE_FAILED",
+      "message": "Plan fact is displayed more than once in visible DSL: 星期信息 (/data/time/dayOfWeek); expected 1, got 2; occurrences: primary (EmphasisText).secondaryText, details (TextBlock).items[1].value."
+    }
+  ]
+}

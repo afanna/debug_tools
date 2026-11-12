@@ -1,0 +1,29 @@
+{
+  "id": "data-analysis",
+  "name": "数据分析",
+  "version": "3.0.0",
+  "apiVersion": "batch-postprocess-v2",
+  "status": "partial",
+  "config": {},
+  "sampleCount": 107,
+  "counts": {
+    "skipped": 0,
+    "partial": 4,
+    "success": 103,
+    "failed": 0
+  },
+  "datasetResult": {
+    "status": "success",
+    "summary": "已分析 107 个样本，缺失指标保持未知",
+    "facts": {
+      "sampleCount": 107
+    },
+    "artifactCount": 4
+  },
+  "progress": {
+    "phase": "done",
+    "completed": 1,
+    "total": 1,
+    "message": "后处理插件已完成"
+  }
+}

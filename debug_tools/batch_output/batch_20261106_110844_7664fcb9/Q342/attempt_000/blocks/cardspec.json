@@ -1,0 +1,27 @@
+{
+  "title": "桌面信息",
+  "description": "时间日期电量步数简报",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time"
+    },
+    {
+      "capabilityId": "GetPhoneBatteryInfo",
+      "arguments": {},
+      "writeResultTo": "/data/battery"
+    },
+    {
+      "capabilityId": "GetDailyMostUsage",
+      "arguments": {},
+      "writeResultTo": "/data/steps"
+    }
+  ]
+}

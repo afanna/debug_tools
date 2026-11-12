@@ -1,0 +1,15 @@
+root	考试 还剩 46 天 考试日期 2026/12/19	16
+__genui_render_component__root	考试 还剩 46 天 考试日期 2026/12/19	16
+title	考试 还剩	16
+title_title	考试 还剩	12
+__layout__root__body	46 天 考试日期 2026/12/19	16
+__layout__root__primary	46 天	16
+primary	46 天	16
+primary_value	46	30
+primary_unit	天	12
+__layout__root__support	考试日期 2026/12/19	16
+support	考试日期 2026/12/19	16
+support_row0	考试日期 2026/12/19	16
+support_item0	考试日期 2026/12/19	16
+support_item0_label	考试日期	12
+support_item0_value	2026/12/19	12

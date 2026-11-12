@@ -1,0 +1,71 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.ic_weather_monochrome"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前天气温度读数（已含℃单位）"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/daily/0/condition",
+      "priority": "must",
+      "requirement": "未来第一天天气预报：星期、天气现象与温度范围"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/daily/0/temperatureRangeText",
+      "priority": "must",
+      "requirement": "未来第一天温度范围文本"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/daily/1/condition",
+      "priority": "should",
+      "requirement": "未来第二天天气预报：星期、天气现象与温度范围"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/daily/1/temperatureRangeText",
+      "priority": "should",
+      "requirement": "未来第二天温度范围文本"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-content"
+  ]
+}

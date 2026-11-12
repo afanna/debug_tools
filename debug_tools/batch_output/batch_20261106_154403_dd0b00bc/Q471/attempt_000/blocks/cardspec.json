@@ -1,0 +1,28 @@
+{
+  "title": "天气日历",
+  "description": "天气与日程速览",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "西山区",
+        "forecastDays": 1,
+        "prefectureName": "昆明市"
+      },
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "capabilityId": "GetCalendarEvents",
+      "arguments": {
+        "futureDays": 7
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.list_book_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock"
+      ],
+      "dataId": "/data/memo/noteCount",
+      "priority": "must",
+      "requirement": "笔记总数量"
+    },
+    {
+      "componentHints": [
+        "InfoBlock"
+      ],
+      "dataId": "/data/memo/todoTotalCount",
+      "priority": "must",
+      "requirement": "待办总数量"
+    },
+    {
+      "componentHints": [
+        "InfoBlock"
+      ],
+      "dataId": "/data/memo/todoPendingCount",
+      "priority": "should",
+      "requirement": "未完成待办数量"
+    },
+    {
+      "componentHints": [
+        "InfoBlock"
+      ],
+      "dataId": "/data/memo/todoCompletedCount",
+      "priority": "should",
+      "requirement": "已完成待办数量"
+    }
+  ],
+  "layoutHints": [
+    "S-dual-info"
+  ]
+}

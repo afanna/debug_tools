@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "语义布局不符合合同：节点 root：InfoBlock 必须放在已登记的小卡固定槽。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+    "stage": "validation"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "errors": [
+    "Plan static text is not fully visible in DSL: 目标日期 2034年9月30日."
+  ],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [],
+  "warnings": []
+}

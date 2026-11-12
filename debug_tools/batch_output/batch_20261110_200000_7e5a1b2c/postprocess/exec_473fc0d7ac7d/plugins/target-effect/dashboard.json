@@ -1,0 +1,439 @@
+{
+  "schemaVersion": "batch-postprocess-dashboard-v2",
+  "runId": "batch_20261110_200000_7e5a1b2c",
+  "executionId": "exec_473fc0d7ac7d",
+  "plugin": {
+    "id": "target-effect",
+    "name": "目标效果评测（倒计时）",
+    "version": "1.0.0",
+    "apiVersion": "batch-postprocess-v2"
+  },
+  "status": "failed",
+  "presentation": {
+    "defaultView": "gallery",
+    "sampleFields": [
+      {
+        "key": "score",
+        "label": "总分",
+        "type": "number",
+        "sortable": true
+      },
+      {
+        "key": "scoreTarget",
+        "label": "目标语义",
+        "type": "number",
+        "sortable": true
+      },
+      {
+        "key": "scoreVisibility",
+        "label": "可见性",
+        "type": "number",
+        "sortable": true
+      },
+      {
+        "key": "scoreSpec",
+        "label": "规范符合",
+        "type": "number",
+        "sortable": true
+      },
+      {
+        "key": "scoreAsset",
+        "label": "素材渲染",
+        "type": "number",
+        "sortable": true
+      },
+      {
+        "key": "verdict",
+        "label": "结论",
+        "type": "string",
+        "filterable": true,
+        "sortable": true
+      },
+      {
+        "key": "scenario",
+        "label": "场景",
+        "type": "string",
+        "filterable": true,
+        "sortable": true
+      },
+      {
+        "key": "failed",
+        "label": "失败项",
+        "type": "number",
+        "sortable": true
+      },
+      {
+        "key": "pending",
+        "label": "待复核项",
+        "type": "number",
+        "sortable": true
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "key": "score",
+      "scope": "sample",
+      "title": "总分与维度分",
+      "dataType": "metrics",
+      "renderer": "kpi",
+      "required": true,
+      "deferred": true
+    },
+    {
+      "key": "verdict",
+      "scope": "sample",
+      "title": "样本结论",
+      "dataType": "metrics",
+      "renderer": "kpi",
+      "required": true
+    },
+    {
+      "key": "issues",
+      "scope": "sample",
+      "title": "失败与待复核项",
+      "dataType": "issues",
+      "renderer": "table",
+      "required": true
+    },
+    {
+      "key": "oracle",
+      "scope": "sample",
+      "title": "期望目标语义",
+      "dataType": "json",
+      "renderer": "tree",
+      "required": true
+    },
+    {
+      "key": "evidence",
+      "scope": "sample",
+      "title": "判定证据",
+      "dataType": "json",
+      "renderer": "tree",
+      "required": true,
+      "deferred": true
+    },
+    {
+      "key": "original-image",
+      "scope": "sample",
+      "title": "原始数据模型渲染",
+      "dataType": "image",
+      "renderer": "gallery",
+      "required": true,
+      "deferred": true
+    },
+    {
+      "key": "injected-image",
+      "scope": "sample",
+      "title": "注入期望值后的渲染",
+      "dataType": "image",
+      "renderer": "gallery",
+      "required": true,
+      "deferred": true
+    },
+    {
+      "key": "scores",
+      "scope": "dataset",
+      "title": "卡片评分总览",
+      "dataType": "records",
+      "renderer": "score-grid",
+      "required": true
+    },
+    {
+      "key": "overview",
+      "scope": "dataset",
+      "title": "整批概览",
+      "dataType": "metrics",
+      "renderer": "kpi",
+      "required": true
+    },
+    {
+      "key": "rules",
+      "scope": "dataset",
+      "title": "规则通过率",
+      "dataType": "records",
+      "renderer": "table",
+      "required": true
+    },
+    {
+      "key": "samples",
+      "scope": "dataset",
+      "title": "全部样本",
+      "dataType": "records",
+      "renderer": "table",
+      "required": true
+    },
+    {
+      "key": "summary",
+      "scope": "dataset",
+      "title": "汇总 JSON",
+      "dataType": "json",
+      "renderer": "tree",
+      "required": true
+    },
+    {
+      "key": "report",
+      "scope": "dataset",
+      "title": "HTML 报告",
+      "dataType": "file",
+      "renderer": "download",
+      "required": true
+    }
+  ],
+  "datasetResult": {
+    "status": "failed",
+    "summary": "ValueError: 插件评分卡图片路径无效",
+    "facts": {},
+    "artifacts": []
+  },
+  "counts": {
+    "success": 0,
+    "failed": 6,
+    "partial": 0,
+    "skipped": 0
+  },
+  "totalSamples": 6,
+  "sourceTotalSamples": 6,
+  "selection": {
+    "rendererBaseUrl": "http://127.0.0.1:8890/debug",
+    "captureScale": 3,
+    "captureTimeoutSeconds": 1800
+  },
+  "samples": [
+    {
+      "sampleId": "Q001",
+      "title": "考试倒计时",
+      "query": "帮我做张考试倒计时卡，考试定在2026年12月19日。",
+      "size": "2x2",
+      "sequence": 1,
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "once",
+        "gate": true,
+        "expectedDays": 46,
+        "passed": 6,
+        "failed": 8,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q031",
+      "title": "周三例会倒计时",
+      "query": "每周三都开例会，帮我做一张到下一次例会的倒计时卡。",
+      "size": "2x2",
+      "sequence": 31,
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "repeat_week",
+        "gate": false,
+        "expectedDays": 1,
+        "passed": 6,
+        "failed": 8,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q061",
+      "title": "农历聚餐",
+      "query": "帮我记录农历2025-06-01闰六月初一这次家庭聚餐，看看距离今天多少天。",
+      "size": "2x2",
+      "sequence": 61,
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "lunar_once",
+        "gate": false,
+        "expectedDays": -1,
+        "passed": 6,
+        "failed": 7,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q076",
+      "title": "浇水倒计时",
+      "query": "从2026年10月14日开始每2天给绿植浇水，做一张到下一次的倒计时卡。",
+      "size": "2x2",
+      "sequence": 76,
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "repeat_day",
+        "gate": false,
+        "expectedDays": 0,
+        "passed": 6,
+        "failed": 8,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q086",
+      "title": "照片备份倒计时",
+      "query": "从2026年7月1日起每两个月备份一次照片，桌面上显示距下次还有几天。",
+      "size": "2x2",
+      "sequence": 86,
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "repeat_month",
+        "gate": false,
+        "expectedDays": 28,
+        "passed": 7,
+        "failed": 7,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    },
+    {
+      "sampleId": "Q091",
+      "title": "结婚纪念日倒计时",
+      "query": "我们2020年5月20日结婚，帮我做每年结婚纪念日的倒计时卡。",
+      "size": "2x2",
+      "sequence": 91,
+      "status": "failed",
+      "summary": "规范失败",
+      "facts": {
+        "verdict": "规范失败",
+        "scenario": "repeat_year",
+        "gate": false,
+        "expectedDays": 198,
+        "passed": 7,
+        "failed": 7,
+        "pending": 0
+      },
+      "artifacts": [
+        {
+          "key": "verdict",
+          "title": "样本结论",
+          "dataType": "metrics",
+          "renderer": "kpi"
+        },
+        {
+          "key": "issues",
+          "title": "失败与待复核项",
+          "dataType": "issues",
+          "renderer": "table"
+        },
+        {
+          "key": "oracle",
+          "title": "期望目标语义",
+          "dataType": "json",
+          "renderer": "tree"
+        }
+      ]
+    }
+  ],
+  "progress": {
+    "phase": "done",
+    "completed": 1,
+    "total": 1,
+    "message": "ValueError: 插件评分卡图片路径无效"
+  },
+  "error": "ValueError: 插件评分卡图片路径无效"
+}

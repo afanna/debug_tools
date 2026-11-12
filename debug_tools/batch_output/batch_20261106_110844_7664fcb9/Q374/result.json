@@ -1,0 +1,21 @@
+{
+  "id": "Q374",
+  "fileName": "Q374.json",
+  "title": "多日天气",
+  "query": "生成一个桌面天气卡片，显示多日天气预报，展示未来几天的天气情况和温度。",
+  "size": "2x4",
+  "sequence": 42,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 6904.33,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 94,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 6897.8,
+  "uid": "batch-7664fcb9-00042-000",
+  "finalAttempt": 0
+}

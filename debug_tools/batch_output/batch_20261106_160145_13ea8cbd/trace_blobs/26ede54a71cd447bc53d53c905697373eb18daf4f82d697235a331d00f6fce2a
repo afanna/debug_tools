@@ -1,0 +1,109 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3
+      ],
+      "id": "core",
+      "identity": null,
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡共同主题：爱向内修",
+      "sourceTexts": [
+        "世人皆向外求爱，不知爱是向内修出的内丹。"
+      ],
+      "text": "向内修爱"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "body",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "核心结论：爱是向内修出的内丹",
+      "sourceTexts": [
+        "世人皆向外求爱，不知爱是向内修出的内丹。"
+      ],
+      "text": "爱是向内修出的内丹"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "body",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "从属说明：自己未炼成，给出的只是半剂药",
+      "sourceTexts": [
+        "自己未曾炼成，给出的也只是半剂药。"
+      ],
+      "text": "自己未曾炼成，给出的也只是半剂药"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "body",
+      "preserveVerbatim": false,
+      "priority": "should",
+      "protectedTexts": [],
+      "requirement": "补充：先把自己活成一道光，渡人先渡己",
+      "sourceTexts": [
+        "先把自己活成一道光，黑暗自会循光而来——那才是真正的慈悲。渡人先渡己，自爱圆满，天地同尘。"
+      ],
+      "text": "先把自己活成一道光，渡人先渡己"
+    }
+  ],
+  "layoutHints": [
+    "S-static-content"
+  ],
+  "omissionCandidates": [
+    {
+      "description": "黑暗自会循光而来——那才是真正的慈悲",
+      "factIndexes": [
+        3
+      ]
+    },
+    {
+      "description": "自爱圆满，天地同尘",
+      "factIndexes": [
+        3
+      ]
+    }
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "content",
+  "selectionNotes": [
+    "容量预检显示主文需要4行，超出EmphasisText主文2行上限，改用更短的核心结论",
+    "主文聚焦“爱是向内修出的内丹”，从属说明保留“自己未炼成，给出的只是半剂药”",
+    "其余内容精简为一句提示，作为bottomText承载"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"S-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"向内修爱\"}]\n[\"body\", \"EmphasisText\", {\"mainText\": \"爱是向内修出的内丹\", \"secondaryText\": \"自己未曾炼成，给出的也只是半剂药；先把自己活成一道光，渡人先渡己\"}]\n[\"/state/ready\", true]",
+  "staticPresentationFeedback": [
+    "正式组件UX允许省略号，原候选仍可用；以下仅为完整文字展示压力，不是新增发布门禁或事实删减授权。请在既有Plan机会中核对必要信息的完整展示：\nCompact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: body.secondaryText 完整文字需要 4 行，126vp 区域仅允许 3 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。"
+  ]
+}

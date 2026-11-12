@@ -1,0 +1,9 @@
+{
+  "errors": [
+    "Plan fact is missing from visible DSL: 崔景会生日公历日期11月8日及倒计时天数 (/data/countdown4/countdownDays).",
+    "Plan fact is missing from visible DSL: 父母结婚纪念日公历日期1月23日及倒计时天数 (/data/countdown5/countdownDays)."
+  ],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [],
+  "warnings": []
+}

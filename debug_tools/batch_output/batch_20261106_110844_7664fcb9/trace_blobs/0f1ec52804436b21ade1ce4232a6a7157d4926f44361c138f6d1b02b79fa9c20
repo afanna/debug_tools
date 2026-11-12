@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "/data/steps: declared data capability is not used by any component.",
+    "stage": "validation"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":\"家人重要日子倒计时\",\"fontSize\":12}]\n[\"primary\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"value\":\"{{ '奶奶生日 10月5日 · 还有 ' + ${/data/countdown0/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '爷爷生日 6月24日 · 还有 ' + ${/data/countdown1/countdownDays} + ' 天' }}\"}],\"fontSize\":12}]\n[\"details\",\"SecondaryBody\",{\"columns\":1,\"items\":[{\"value\":\"{{ '爸爸生日 4月19日 · 还有 ' + ${/data/countdown2/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '妈妈生日 4月12日 · 还有 ' + ${/data/countdown3/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '崔景会生日 10月28日 · 还有 ' + ${/data/countdown4/countdownDays} + ' 天' }}\"},{\"value\":\"{{ '父母结婚纪念日 1月23日 · 还有 ' + ${/data/countdown5/countdownDays} + ' 天' }}\"}],\"fontSize\":12}]\n[\"/data/countdown0/countdownDays\",30]\n[\"/data/countdown1/countdownDays\",30]\n[\"/data/countdown2/countdownDays\",30]\n[\"/data/countdown3/countdownDays\",30]\n[\"/data/countdown4/countdownDays\",30]\n[\"/data/countdown5/countdownDays\",30]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "语义布局不符合合同：节点 details：details 槽必须使用 TextBlock、TopTextBottomValue、SummaryList 或 EventCard。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+```genui
+["root","Layout",{"layout":"S-center"},["content"]]
+["content","DataDisplay",{"icon":"resources/base/media/cake_fill.svg","value":{"path":"/data/countdown/countdownDays"},"supportingText":"天"}]
+["/data/countdown/countdownDays",30]
+```

@@ -1,0 +1,92 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "theme",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3
+      ],
+      "id": "insight",
+      "identity": null,
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡共同主题，帮助识别内容主旨",
+      "sourceTexts": [
+        "渡人先渡己，自爱圆满。"
+      ],
+      "text": "自爱与渡己"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "body",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "核心结论：爱是修出的内丹",
+      "sourceTexts": [
+        "爱是修出的内丹。"
+      ],
+      "text": "爱是修出的内丹"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "body",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "从属说明：先把自己活成光，黑暗自会寻光而来",
+      "sourceTexts": [
+        "先把自己活成光，黑暗自会寻光而来。"
+      ],
+      "text": "先把自己活成光，黑暗自会寻光而来"
+    },
+    {
+      "componentHints": [
+        "EmphasisText"
+      ],
+      "displayRole": "body",
+      "preserveVerbatim": false,
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "补充结论：渡人先渡己，自爱圆满",
+      "sourceTexts": [
+        "渡人先渡己，自爱圆满。"
+      ],
+      "text": "渡人先渡己，自爱圆满"
+    }
+  ],
+  "layoutHints": [
+    "S-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "content",
+  "selectionNotes": [
+    "用户要求静态文字卡片，内容为一段完整的自我修行主题文字，无对象列表或数值，选用EmphasisText承载单一核心结论。",
+    "标题提炼共同主题“自爱与渡己”，正文完整保留三句必要限定与结论，不删减。",
+    "三句为同一主题的连续表达，合为一个object组，按原文顺序分行展示。"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"S-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"自爱与渡己\"}]\n[\"body\", \"EmphasisText\", {\"mainText\": \"爱是修出的内丹\", \"secondaryText\": \"先把自己活成光，黑暗自会寻光而来；渡人先渡己，自爱圆满\"}]\n[\"/state/ready\", true]"
+}

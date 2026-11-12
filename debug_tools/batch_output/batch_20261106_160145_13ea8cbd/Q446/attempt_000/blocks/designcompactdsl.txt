@@ -1,0 +1,7 @@
+["root","Layout",{"layout":"S-title-dual-content"},["title","date","details"]]
+["title","SingleLineTitle",{"title":"时间","fontSize":12}]
+["date","EmphasisText",{"mainText":{"path":"/data/time/currentDate"},"secondaryText":{"path":"/data/time/dayOfWeek"},"fontSize":18}]
+["details","SecondaryBody",{"items":[{"label":"农历","value":{"path":"/data/time/lunarDate"}}],"fontSize":14}]
+["/data/time/currentDate","示例"]
+["/data/time/dayOfWeek","示例"]
+["/data/time/lunarDate","示例"]

@@ -1,0 +1,17 @@
+{
+  "dataBindings": [
+    {
+      "arguments": {},
+      "capabilityId": "GetMemoData",
+      "writeResultTo": "/data/memo"
+    }
+  ],
+  "description": "每日锻炼打卡记录",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "suggestSize": "2x2",
+  "title": "锻炼打卡"
+}

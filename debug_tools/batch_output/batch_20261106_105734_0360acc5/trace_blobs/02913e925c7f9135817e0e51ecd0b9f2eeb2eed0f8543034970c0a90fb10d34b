@@ -1,0 +1,6 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":8,"itemMargin":8},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":"{{ ${/data/healthSport/dailySteps} + '步' }}","secondaryText":"{{ '昨天 ' + ${/data/healthSport/targetDateText} }}","width":"matchParent","layoutWeight":1}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/weather/current/temperatureText"},"secondaryText":"今天实时温度","width":"matchParent","layoutWeight":1}]
+["/data/healthSport/dailySteps",6200]
+["/data/healthSport/targetDateText","2026-08-06"]
+["/data/weather/current/temperatureText","29℃"]

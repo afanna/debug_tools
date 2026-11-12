@@ -1,0 +1,65 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.moon_z_fill_1"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasizedData",
+        "EmphasisText"
+      ],
+      "dataId": "/data/healthSport/sleepScore",
+      "priority": "must",
+      "requirement": "睡眠得分"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/sleepStatus",
+      "priority": "must",
+      "requirement": "睡眠状态"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/healthSport/nightSleepDurationText",
+      "priority": "must",
+      "requirement": "夜间睡眠时长"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/deepSleepDurationText",
+      "priority": "must",
+      "requirement": "深睡时长"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/fallAsleepTimeText",
+      "priority": "must",
+      "requirement": "入睡时间"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/wakeupTimeText",
+      "priority": "must",
+      "requirement": "醒来时间"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-primary-secondary-action"
+  ]
+}

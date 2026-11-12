@@ -1,0 +1,8 @@
+["root","Layout",{"layout":"S-dual-info"},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/weather/current/temperatureText"},"secondaryText":{"path":"/data/weather/current/condition"},"visual":{"type":"icon","icon":"resources/base/media/ic_weather_monochrome.svg"}}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":"{{ '明日 ' + ${/data/weather/daily/1/condition} }}","secondaryText":{"path":"/data/weather/daily/1/temperatureRangeText"},"visual":{"type":"icon","icon":"resources/base/media/ic_weather_monochrome.svg"}}]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/daily/1/weekday","星期四"]
+["/data/weather/daily/1/condition","多云"]
+["/data/weather/daily/1/temperatureRangeText","25℃ / 32℃"]

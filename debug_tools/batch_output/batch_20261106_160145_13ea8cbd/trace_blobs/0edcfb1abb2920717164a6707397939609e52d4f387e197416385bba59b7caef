@@ -1,0 +1,8 @@
+["root","Layout",{"layout":"S-title-content-action"},["title","content","action"]]
+["title","SingleLineTitle",{"title":"今日运动健康","icon":"resources/base/media/figure_run.svg","fontSize":12}]
+["content","TableText",{"items":[{"label":"步数","value":"{{ ${/data/healthSport/dailySteps} + '步' }}"},{"label":"热量","value":{"path":"/data/healthSport/dailyTotalCaloriesText"}},{"label":"睡眠","value":"{{ ${/data/healthSport/nightSleepDurationText} + ' · ' + ${/data/healthSport/sleepStatus} }}"}],"fontSize":10}]
+["action","PillButton",{"label":"打开锻炼","icon":"resources/base/media/ic_sportsHealth_bule.svg","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Health","uri":"huaweischeme://healthapp/home/sport?sportType=2"}}]}]
+["/data/healthSport/dailySteps",6200]
+["/data/healthSport/dailyTotalCaloriesText","420 千卡"]
+["/data/healthSport/nightSleepDurationText","7小时1分"]
+["/data/healthSport/sleepStatus","良好"]

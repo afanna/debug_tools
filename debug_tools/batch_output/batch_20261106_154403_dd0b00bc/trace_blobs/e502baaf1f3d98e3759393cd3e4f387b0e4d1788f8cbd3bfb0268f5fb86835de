@@ -1,0 +1,48 @@
+{
+  "cardSpec": {
+    "description": "空白算题面板",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "suggestSize": "2x4",
+    "title": "算题面板"
+  },
+  "effectiveCapabilities": {
+    "asset": [],
+    "data": [],
+    "event": []
+  },
+  "generationPlan": {
+    "candidateAssetIds": [],
+    "candidateDataBindings": [],
+    "candidateEventCandidates": []
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"__layout__root__static_header\",\"__layout__root__static_body\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"padding\":{\"top\":12.0,\"bottom\":12.0,\"left\":0,\"right\":0},\"borderRadius\":20.0,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\"}},{\"id\":\"__layout__root__static_header\",\"component\":\"Column\",\"children\":[\"header\"],\"styles\":{\"width\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":{\"left\":12.0,\"right\":12.0},\"height\":16.0},\"itemMargin\":0},{\"id\":\"header\",\"component\":\"Column\",\"children\":[\"header__static_title\"],\"itemMargin\":0.0,\"styles\":{\"width\":\"matchParent\",\"height\":16.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0}},{\"id\":\"header__static_title\",\"component\":\"Text\",\"content\":\"算题面板\",\"styles\":{\"fontSize\":12.0,\"fontWeight\":400,\"lineHeight\":1.3333333333333333,\"maxLines\":1,\"height\":16.0,\"width\":\"matchParent\",\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"__layout__root__static_body\",\"component\":\"Column\",\"children\":[\"body\"],\"itemMargin\":6.0,\"styles\":{\"width\":\"matchParent\",\"layoutWeight\":1,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":{\"left\":12.0,\"right\":12.0}}},{\"id\":\"body\",\"component\":\"Column\",\"children\":[\"body__static_top\"],\"itemMargin\":0.0,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0,\"layoutWeight\":1,\"constraintSize\":{\"minHeight\":18.0}}},{\"id\":\"body__static_mainText\",\"component\":\"Text\",\"content\":\"空白面板，用于书写算题\",\"styles\":{\"fontSize\":18.0,\"fontWeight\":700,\"lineHeight\":1.0,\"maxLines\":1,\"height\":18.0,\"width\":\"matchParent\",\"flexShrink\":0,\"fontColor\":\"@theme:primary/1\",\"textOverflow\":\"clip\",\"wordBreak\":\"normal\"}},{\"id\":\"body__static_top\",\"component\":\"Column\",\"children\":[\"body__static_mainText\"],\"itemMargin\":2.0,\"styles\":{\"width\":\"matchParent\",\"height\":18.0,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"flexShrink\":0}}]}}\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"state\":{\"ready\":true}}}}",
+  "meta": {
+    "apiVersion": "v1",
+    "artifactId": "7b33acf0-2bfd-4696-94f6-8c9f210641e6",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "cardSpecVersion": "card-spec-v1",
+    "createdAt": 1793951069174,
+    "dslProtocolVersion": "v0.9",
+    "generationMode": "create",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "skillVersion": "skill-widget-v1",
+    "taskSpecVersion": "task-spec-v1"
+  },
+  "removedCapabilities": [],
+  "schemaVersion": "widget-artifact-v2",
+  "taskSpec": {
+    "appVersion": "11.7.8.342",
+    "assetCandidates": [],
+    "dataModelSchema": {
+      "data": {}
+    },
+    "eventCandidates": [],
+    "size": "2x4",
+    "userQuery": "做一个空白面板卡片，用于写算题。本轮卡片静态内容（用作展示的外部事实）：空白面板，用于书写算题。"
+  }
+}

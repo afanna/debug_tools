@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 夜间睡眠总时长（文本已含时间单位）.",
+    "stage": "validation"
+  }
+]

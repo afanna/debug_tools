@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 周日上午上班、下午休息（与周六安排相同，因容量未选）.",
+    "stage": "validation"
+  }
+]

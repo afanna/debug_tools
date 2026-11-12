@@ -1,0 +1,61 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "duplicateActions": [
+      {
+        "actionId": "event.viewNote",
+        "actualVisibleCount": 2,
+        "expectedVisibleCount": 1,
+        "factIndex": 4,
+        "occurrences": [
+          {
+            "componentId": "upper",
+            "componentType": "CardButton",
+            "fixedRequiredSlot": true,
+            "onClick": [
+              {
+                "args": {
+                  "abilityName": "MainAbility",
+                  "bundleName": "com.huawei.hmos.notepad",
+                  "intentName": "ViewNote",
+                  "params": {
+                    "launchSource": "1",
+                    "launchType": "0"
+                  }
+                },
+                "call": "clickToIntent"
+              }
+            ],
+            "parentId": "root",
+            "parentRole": "W-content-side-slots.upper",
+            "property": "onClick"
+          },
+          {
+            "componentId": "lower",
+            "componentType": "CardButton",
+            "fixedRequiredSlot": true,
+            "onClick": [
+              {
+                "args": {
+                  "abilityName": "MainAbility",
+                  "bundleName": "com.huawei.hmos.notepad",
+                  "intentName": "ViewNote",
+                  "params": {
+                    "launchSource": "1",
+                    "launchType": "0"
+                  }
+                },
+                "call": "clickToIntent"
+              }
+            ],
+            "parentId": "root",
+            "parentRole": "W-content-side-slots.lower",
+            "property": "onClick"
+          }
+        ]
+      }
+    ],
+    "message": "Plan action is displayed more than once in visible DSL: event.viewNote; expected 1, got 2; occurrences: upper, lower.",
+    "stage": "validation"
+  }
+]

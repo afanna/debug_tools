@@ -1,0 +1,21 @@
+{
+  "id": "Q308",
+  "fileName": "Q308.json",
+  "title": "透明时间",
+  "query": "生成一个二乘四比例的透明的时间桌面卡片，仅显示时间，不显示日期、天气等其他信息",
+  "size": "2x2",
+  "sequence": 13,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 1262.71,
+  "errorCode": "",
+  "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "complete",
+  "traceRecordCount": 28,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 1257.41,
+  "uid": "batch-7664fcb9-00013-000",
+  "finalAttempt": 0
+}

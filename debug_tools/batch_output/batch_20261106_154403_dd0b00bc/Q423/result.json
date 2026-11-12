@@ -1,0 +1,21 @@
+{
+  "id": "Q423",
+  "fileName": "Q423.json",
+  "title": "吃前拍一拍",
+  "query": "创建一张桌面卡片，显示最近一次运动类型、开始时间、结束时间和时长，点击可跳转到运动健康应用的锻炼Tab页。",
+  "size": "2x2",
+  "sequence": 11,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4711.06,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4703.75,
+  "uid": "batch-dd0b00bc-00011-000",
+  "finalAttempt": 0
+}

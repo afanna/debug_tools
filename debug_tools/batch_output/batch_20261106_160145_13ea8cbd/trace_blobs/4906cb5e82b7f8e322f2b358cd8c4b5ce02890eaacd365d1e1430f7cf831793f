@@ -1,0 +1,15 @@
+```genui
+["root","Layout",{"layout":"S-title-dual-content","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Weather_CityCode","uri":"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"}}]},["title","content_primary","content_support"]]
+["title","SingleLineTitle",{"title":{"path":"/data/weather/location/districtName"},"icon":"resources/base/media/emoji_location_blue.png","fontSize":12}]
+["content_primary","EmphasisText",{"mainText":{"path":"/data/weather/current/temperatureText"},"secondaryText":{"path":"/data/weather/current/condition"},"fontSize":18}]
+["content_support","SecondaryBody",{"items":[{"label":"湿度","value":"{{ ${/data/weather/current/humidityPercent} + '%' }}"},{"label":"空气","value":{"path":"/data/weather/current/airQuality"}},{"label":"紫外线","value":{"path":"/data/weather/current/uvIndex"}},{"label":"明日","value":"{{ ${/data/weather/daily/0/condition} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"}],"columns":1,"fontSize":12}]
+["/data/weather/location/districtName","青山区"]
+["/data/weather/location/cityCode","60814"]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/current/humidityPercent",68]
+["/data/weather/current/airQuality","良"]
+["/data/weather/current/uvIndex","中等"]
+["/data/weather/daily/0/condition","多云"]
+["/data/weather/daily/0/temperatureRangeText","25℃ / 32℃"]
+```

@@ -1,0 +1,77 @@
+{
+  "appVersion": "11.7.9.300",
+  "assetCandidates": [
+    {
+      "description": "样式：默认黑色的单色实心铃铛图标，采用经典吊铃造型，底部带铃舌，原始尺寸为 24×24；适用：通知提醒、消息提示、备忘录提醒、闹钟响铃或开启状态，以及日历事项提醒。",
+      "id": "asset.bell_fill",
+      "src": "resources/base/media/bell_fill.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "memo": {
+        "favoriteNoteCount": {
+          "description": "收藏笔记数。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "noteCount": {
+          "description": "查询到的笔记总数量（已过滤已删除笔记）。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "notes": [
+          {
+            "title": {
+              "description": "笔记标题，若无标题则回退为'无标题'。",
+              "sampleValue": "示例",
+              "type": "string"
+            }
+          }
+        ],
+        "todoCompletedCount": {
+          "description": "已完成的待办记录数。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "todoPendingCount": {
+          "description": "未完成的待办记录数。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "todoTotalCount": {
+          "description": "查询到的待办总数量（已过滤已删除待办）。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "todos": [
+          {
+            "title": {
+              "description": "待办标题，若无标题则回退为'无标题'。",
+              "sampleValue": "示例",
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "abilityName": "MainAbility",
+        "bundleName": "com.huawei.hmos.notepad",
+        "intentName": "ViewNote",
+        "params": {
+          "launchSource": "1",
+          "launchType": "0"
+        }
+      },
+      "call": "clickToIntent",
+      "description": "打开华为备忘录应用。",
+      "id": "event.viewNote"
+    }
+  ],
+  "size": "2x2",
+  "userQuery": "生成一个我的记忆卡片，展示我的备忘录笔记和待办信息"
+}

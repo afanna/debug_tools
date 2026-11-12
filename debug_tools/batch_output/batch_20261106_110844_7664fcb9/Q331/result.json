@@ -1,0 +1,21 @@
+{
+  "id": "Q331",
+  "fileName": "Q331.json",
+  "title": "日历农历",
+  "query": "帮我把日历的农历添加到快捷桌面上，制作一张显示当前日期和农历的日历卡片。本轮卡片静态内容（用作展示的外部事实）：显示当前公历日期、星期和农历日期。",
+  "size": "2x2",
+  "sequence": 21,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4024.22,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4014.64,
+  "uid": "batch-7664fcb9-00021-000",
+  "finalAttempt": 0
+}

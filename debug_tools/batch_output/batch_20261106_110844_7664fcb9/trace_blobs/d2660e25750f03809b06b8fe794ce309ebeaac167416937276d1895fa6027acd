@@ -1,0 +1,47 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.weather",
+        "assetId": null,
+        "reason": "Whole-card detail has no button icon."
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "唯一天气素材已分配给动作按钮，标题省略图标"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "EmphasizedData",
+        "DataDisplay"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "展示当前温度读数（已含℃单位）"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "展示当前天气现象"
+    },
+    {
+      "actionId": "event.open.weather",
+      "priority": "must",
+      "requirement": "点按查看该城市天气详情"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content",
+    "S-title-dual-content"
+  ],
+  "wholeCardActionId": "event.open.weather"
+}

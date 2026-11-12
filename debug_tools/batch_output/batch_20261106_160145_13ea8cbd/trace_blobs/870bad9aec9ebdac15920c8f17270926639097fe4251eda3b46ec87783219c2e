@@ -1,0 +1,8 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [
+    "展示未来3天预报（逐日天气现象与温度范围）"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component primary_item0_label: TextBlock.label exceeds its 70.6667vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component primary_item1_label: TextBlock.label exceeds its 70.6667vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component primary_item2_label: TextBlock.label exceeds its 70.6667vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item0_label: TextBlock.label exceeds its 70.6667vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item1_label: TextBlock.label exceeds its 70.6667vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item2_label: TextBlock.label exceeds its 70.6667vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

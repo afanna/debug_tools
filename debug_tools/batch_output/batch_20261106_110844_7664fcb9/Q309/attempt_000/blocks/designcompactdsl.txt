@@ -1,0 +1,5 @@
+["root","Layout",{"layout":"S-center"},["content"]]
+["content","DataDisplay",{"label":"今天","value":{"path":"/data/currentTime/currentDate"},"supportingText":"{{ ${/data/currentTime/dayOfWeek} + ' · ' + ${/data/currentTime/lunarDate} }}"}]
+["/data/currentTime/currentDate","示例"]
+["/data/currentTime/dayOfWeek","示例"]
+["/data/currentTime/lunarDate","示例"]

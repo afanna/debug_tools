@@ -1,0 +1,67 @@
+{
+  "requestId": "batch-dd0b00bc&Q475-000",
+  "status": "degraded",
+  "errorCode": "",
+  "error": {},
+  "data": {
+    "status": "degraded",
+    "artifactUrl": "https://obs.todo.local/widget/artifact_373563db-a5df-42e7-85de-187ed4ca304a.md",
+    "artifactDigest": "sha256:72315db3c8208f8d3ea4f336e6473af36ae8b62b3cd0ac3827ff7ee76904e6e7",
+    "suggestSize": "2x4",
+    "removedCapabilities": [],
+    "errorCode": "",
+    "effectiveCapabilities": {
+      "data": [],
+      "event": [],
+      "asset": []
+    },
+    "omittedRequirements": [
+      "12/7-12/13 大周（周六周日休息）",
+      "12/14-12/20 小周（周日休息）",
+      "12/21-12/27 大周（周六周日休息）",
+      "12/28-12/31 小周（周日休息）"
+    ],
+    "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。"
+  },
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-dd0b00bc&Q475-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-dd0b00bc&Q475-000",
+          "streamType": "partial",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"type\":\"result\",\"tool\":\"generateWidgetCardCompactDsl\",\"operation\":\"generateWidgetCardCompactDsl\",\"requestId\":\"batch-dd0b00bc&Q475-000\",\"data\":{\"status\":\"degraded\",\"artifactUrl\":\"https://obs.todo.local/widget/artifact_373563db-a5df-42e7-85de-187ed4ca304a.md\",\"artifactDigest\":\"sha256:72315db3c8208f8d3ea4f336e6473af36ae8b62b3cd0ac3827ff7ee76904e6e7\",\"suggestSize\":\"2x4\",\"removedCapabilities\":[],\"errorCode\":\"\",\"effectiveCapabilities\":{\"data\":[],\"event\":[],\"asset\":[]},\"omittedRequirements\":[\"12/7-12/13 大周（周六周日休息）\",\"12/14-12/20 小周（周日休息）\",\"12/21-12/27 大周（周六周日休息）\",\"12/28-12/31 小周（周日休息）\"],\"agentInstruction\":\"已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。\"},\"status\":\"degraded\",\"errorCode\":\"\",\"error\":{}}",
+          "streamingTextId": "batch-dd0b00bc&Q475-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

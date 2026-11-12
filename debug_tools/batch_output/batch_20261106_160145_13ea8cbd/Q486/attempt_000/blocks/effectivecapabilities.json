@@ -1,0 +1,12 @@
+{
+  "data": [
+    "GetCurrentTime",
+    "ViewWeather"
+  ],
+  "event": [],
+  "asset": [
+    "asset.emoji_time",
+    "asset.emoji_location_blue",
+    "asset.ic_weather_monochrome"
+  ]
+}

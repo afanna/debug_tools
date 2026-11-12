@@ -1,0 +1,21 @@
+{
+  "id": "Q457",
+  "fileName": "Q457.json",
+  "title": "快递取件提醒",
+  "query": "在桌面生成快递取件码提醒卡片，展示京东配送的2个包裹取件信息：取件码9-4-0046和9-2-0060，取件地点樟村22栋。本轮卡片静态内容（用作展示的外部事实）：京东配送2个包裹，取件码9-4-0046、9-2-0060，取件地点樟村22栋。",
+  "size": "2x2",
+  "sequence": 45,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 81.7,
+  "errorCode": "",
+  "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "complete",
+  "traceRecordCount": 13,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 22.03,
+  "uid": "batch-dd0b00bc-00045-000",
+  "finalAttempt": 0
+}

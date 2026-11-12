@@ -1,0 +1,21 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:fd86ba6103f3c7ed638b74765f3f42f1d6691302b7e7348325cccd2bd9ecba26",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_346de9b4-ad15-4c32-a0f3-9f63b6d3a700.md",
+  "effectiveCapabilities": {
+    "asset": [],
+    "data": [
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays",
+      "GetCountdownDays"
+    ],
+    "event": []
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x4"
+}

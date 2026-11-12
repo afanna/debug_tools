@@ -1,0 +1,11 @@
+```genui
+["root","Layout",{"layout":"W-top-bottom","variant":"continuous"},["primary","details"]]
+["primary","SingleLineTitle",{"title":"家人重要日子","fontSize":12}]
+["details","SummaryList",{"items":["{{ '奶奶生日 10月15日 · ' + ${/data/countdown0/countdownDays} + '天' }}","{{ '爷爷生日 7月4日 · ' + ${/data/countdown1/countdownDays} + '天' }}","{{ '爸爸生日 4月29日 · ' + ${/data/countdown2/countdownDays} + '天' }}"]}]
+["/data/countdown0/countdownDays",30]
+["/data/countdown1/countdownDays",30]
+["/data/countdown2/countdownDays",30]
+["/data/countdown3/countdownDays",30]
+["/data/countdown4/countdownDays",30]
+["/data/countdown5/countdownDays",30]
+```

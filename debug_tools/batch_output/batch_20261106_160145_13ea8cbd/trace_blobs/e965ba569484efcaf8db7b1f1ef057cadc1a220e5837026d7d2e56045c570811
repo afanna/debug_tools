@@ -1,0 +1,48 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.bell_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/memo/notes/0/title",
+      "priority": "must",
+      "requirement": "展示第一条备忘录笔记的标题"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/memo/notes/0/content",
+      "priority": "must",
+      "requirement": "展示第一条备忘录笔记的正文内容"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/memo/notes/1/title",
+      "priority": "should",
+      "requirement": "展示第二条备忘录笔记的标题"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/memo/notes/1/content",
+      "priority": "should",
+      "requirement": "展示第二条备忘录笔记的正文内容"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-content"
+  ]
+}

@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"W-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"算题面板"}]
+["body","EmphasisText",{"mainText":"空白面板，用于书写算题"}]
+["/state/ready",true]

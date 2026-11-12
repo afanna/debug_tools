@@ -1,0 +1,21 @@
+{
+  "id": "Q345",
+  "fileName": "Q345.json",
+  "title": "异常天气关怀",
+  "query": "生成一个异常天气家人关怀提醒卡片，显示天气和温度变化，具备天气预警功能，有一个可以直接联系家人的电话按钮。家人电话号码绑定王苏东，手机号码15251852906。本轮卡片静态内容（用作展示的外部事实）：家人王苏东的电话号码为15251852906。",
+  "size": "2x4",
+  "sequence": 28,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 6903.5,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 94,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 6897.42,
+  "uid": "batch-7664fcb9-00028-000",
+  "finalAttempt": 0
+}

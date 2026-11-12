@@ -1,0 +1,11 @@
+```genui
+["root","Layout",{"layout":"W-top-bottom","variant":"continuous"},["primary","details"]]
+["primary","SingleLineTitle",{"title":"家人重要日子","fontSize":12}]
+["details","SecondaryBody",{"columns":1,"items":[{"label":"奶奶生日 10月15日","value":"{{ ${/data/countdown0/countdownDays} + '天' }}"},{"label":"爷爷生日 7月4日","value":"{{ ${/data/countdown1/countdownDays} + '天' }}"},{"label":"爸爸生日 4月29日","value":"{{ ${/data/countdown2/countdownDays} + '天' }}"},{"label":"妈妈生日 4月22日","value":"{{ ${/data/countdown3/countdownDays} + '天' }}"},{"label":"崔景会生日 11月8日","value":"{{ ${/data/countdown4/countdownDays} + '天' }}"},{"label":"父母结婚纪念日 1月23日","value":"{{ ${/data/countdown5/countdownDays} + '天' }}"}],"fontSize":12}]
+["/data/countdown0/countdownDays",30]
+["/data/countdown1/countdownDays",30]
+["/data/countdown2/countdownDays",30]
+["/data/countdown3/countdownDays",30]
+["/data/countdown4/countdownDays",30]
+["/data/countdown5/countdownDays",30]
+```

@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "details: SummaryList.items requires 2 to 3 entries.",
+    "stage": "validation"
+  }
+]

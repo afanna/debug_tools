@@ -1,0 +1,21 @@
+{
+  "id": "Q380",
+  "fileName": "Q380.json",
+  "title": "日历卡片",
+  "query": "生成一张日历卡片，显示当前日期、星期、农历信息，以及最近的日程安排和倒计时。",
+  "size": "2x4",
+  "sequence": 46,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7424.46,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 94,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7411.62,
+  "uid": "batch-7664fcb9-00046-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,890 @@
+{
+  "sampleId": "Q086",
+  "status": "failed",
+  "verdict": "规范失败",
+  "size": "2x2",
+  "rubricVersion": 4,
+  "theme": {
+    "id": "photo-ux-texture-blue-diagonal-square",
+    "name": "蓝色无主体纹理 · 斜纹",
+    "kind": "photo",
+    "eligible": true,
+    "reason": ""
+  },
+  "oracle": {
+    "sampleId": "Q086",
+    "scenario": "repeat_month",
+    "timezone": "Asia/Shanghai",
+    "referenceDate": "2026-11-03",
+    "targetDate": "2026-12-01",
+    "expectedDays": 28,
+    "expectedRelationText": "还剩",
+    "expectedTargetDateText": "2026/12/01",
+    "writeResultTo": "/data/dateCounter",
+    "fields": [
+      "/days",
+      "/relationText",
+      "/targetDateText"
+    ],
+    "arguments": {
+      "targetDate": "2026-07-01",
+      "repeat": {
+        "unit": "month",
+        "interval": 2
+      }
+    },
+    "gate": false,
+    "provenance": {
+      "targetDate": "explicit",
+      "days": "ambiguous",
+      "relationText": "ambiguous",
+      "targetDateText": "ambiguous"
+    },
+    "notes": [
+      "重复场景默认只展示期望值，开启 repeatGates 后才参与自动失败"
+    ]
+  },
+  "results": [
+    {
+      "rule": "SPEC.THEME_ELIGIBLE",
+      "status": "pass",
+      "expected": "Pixso 图 + 60% 黑蒙层路线",
+      "actual": "photo-ux-texture-blue-diagonal-square（photo）属于图+蒙层路线",
+      "severity": "minor",
+      "evidence": {
+        "theme": "photo-ux-texture-blue-diagonal-square",
+        "kind": "photo"
+      }
+    },
+    {
+      "rule": "SPEC.RADIUS",
+      "status": "pass",
+      "expected": "20",
+      "actual": "20",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.CLIP",
+      "status": "pass",
+      "expected": "true",
+      "actual": "root=True, content=True",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.PADDING",
+      "status": "pass",
+      "expected": "12",
+      "actual": "12.0",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.BG_FULL_BLEED",
+      "status": "pass",
+      "expected": "铺满的背景图",
+      "actual": "__post_theme_base",
+      "severity": "major",
+      "evidence": {
+        "images": [
+          "__post_theme_base"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.BG_SINGLE",
+      "status": "pass",
+      "expected": "单张满铺背景图",
+      "actual": "__post_theme_base",
+      "severity": "minor",
+      "evidence": {
+        "images": [
+          "__post_theme_base"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.BG_FIT",
+      "status": "pass",
+      "expected": "fill 或 cover",
+      "actual": "fill",
+      "severity": "minor",
+      "evidence": {
+        "objectFit": [
+          "fill"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.MASK",
+      "status": "fail",
+      "expected": "黑色蒙层 60%（55%–70%）",
+      "actual": "未找到黑色蒙层",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.TITLE_REQUIRED",
+      "status": "pass",
+      "expected": "存在标题区",
+      "actual": "title_title",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.TITLE_FONT",
+      "status": "fail",
+      "expected": "主 16 或 20，副 16",
+      "actual": "主 12.0",
+      "severity": "major",
+      "evidence": {
+        "component": "title_title",
+        "subtitle": null
+      }
+    },
+    {
+      "rule": "SPEC.TITLE_ELLIPSIS",
+      "status": "na",
+      "expected": "maxLines=1 且 textOverflow=ellipsis",
+      "actual": "标题未溢出，省略号不影响显示",
+      "severity": "major",
+      "evidence": {
+        "components": [
+          "title_title"
+        ],
+        "dedupe": {
+          "from": "fail",
+          "to": "na",
+          "reason": "标题未溢出，省略号不影响显示"
+        }
+      }
+    },
+    {
+      "rule": "SPEC.TITLE_COLOR",
+      "status": "fail",
+      "expected": "主 100% 白，副 60% 白",
+      "actual": "主 alpha=0.8",
+      "severity": "minor",
+      "evidence": {
+        "component": "title_title",
+        "subtitle": null
+      }
+    },
+    {
+      "rule": "SPEC.PRIMARY_FONT",
+      "status": "fail",
+      "expected": "56 或 38",
+      "actual": "18.0",
+      "severity": "major",
+      "evidence": {
+        "component": "primary_main",
+        "expectedDays": 28,
+        "digits": 2
+      }
+    },
+    {
+      "rule": "SPEC.PRIMARY_COLOR",
+      "status": "pass",
+      "expected": "白色 100%/90%",
+      "actual": "alpha=1.0",
+      "severity": "minor",
+      "evidence": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "rule": "SPEC.UNIT_FONT",
+      "status": "fail",
+      "expected": "单位独立 16fp",
+      "actual": "单位与数字同一文本节点",
+      "severity": "major",
+      "evidence": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "rule": "SPEC.UNIT_COLOR",
+      "status": "na",
+      "expected": "白色 60%",
+      "actual": "无独立单位",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.SUPPORT_FONT",
+      "status": "fail",
+      "expected": "16",
+      "actual": "support_item0_value=12.0, support_item0_label=12.0",
+      "severity": "major",
+      "evidence": {
+        "failed": [
+          "support_item0_value",
+          "support_item0_label"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.SUPPORT_COLOR",
+      "status": "fail",
+      "expected": "白色 60%",
+      "actual": "support_item0_value alpha=1.0",
+      "severity": "minor",
+      "evidence": {
+        "failed": [
+          "support_item0_value alpha=1.0"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.CONTENT_TYPE",
+      "status": "pass",
+      "expected": "C1–C5 之一",
+      "actual": "C3 小数字",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.PATTERN_GEOMETRY",
+      "status": "na",
+      "expected": "图案几何",
+      "actual": "非图案类",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.DIGIT_LIMIT",
+      "status": "pass",
+      "expected": "最多 6 位",
+      "actual": "2 位",
+      "severity": "major",
+      "evidence": {
+        "expectedDays": 28,
+        "hasPrimary": true
+      }
+    },
+    {
+      "rule": "SPEC.ICON",
+      "status": "pass",
+      "expected": "图标不超过 20×20，且为白色",
+      "actual": "1 个图标符合",
+      "severity": "minor",
+      "evidence": {
+        "icons": [
+          "title_icon"
+        ],
+        "bad": []
+      }
+    },
+    {
+      "rule": "SPEC.ACTION_PATTERN",
+      "status": "pass",
+      "expected": "整卡点击，不放独立按钮",
+      "actual": "未发现独立按钮",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.USER_PREFERENCE",
+      "status": "pass",
+      "expected": "用户未显式要求与 Pixso 冲突的样式",
+      "actual": "未发现与 Pixso 冲突的显式样式偏好",
+      "severity": "minor",
+      "evidence": {
+        "categories": [],
+        "rules": []
+      }
+    },
+    {
+      "rule": "TARGET.DAYS_MISMATCH",
+      "status": "na",
+      "expected": "可见文本包含「28」",
+      "actual": "已匹配",
+      "severity": "major",
+      "evidence": {
+        "path": "/data/dateCounter/days",
+        "components": [
+          "primary_main"
+        ]
+      }
+    },
+    {
+      "rule": "TARGET.RELATION_TEXT_MISMATCH",
+      "status": "na",
+      "expected": "可见文本包含「还剩」",
+      "actual": "已匹配",
+      "severity": "major",
+      "evidence": {
+        "path": "/data/dateCounter/relationText",
+        "components": [
+          "primary_main"
+        ]
+      }
+    },
+    {
+      "rule": "TARGET.VISIBLE_EXPECTATION_MISSING",
+      "status": "na",
+      "expected": "可见文本包含「2026/12/01」",
+      "actual": "已匹配",
+      "severity": "major",
+      "evidence": {
+        "path": "/data/dateCounter/targetDateText",
+        "components": [
+          "support_item0_value"
+        ]
+      }
+    },
+    {
+      "rule": "TARGET.BINDING_MISSING",
+      "status": "na",
+      "expected": "全部期望字段被组件引用",
+      "actual": "3 个字段均已引用，3 个文本已匹配",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "TARGET.BINDING_VALUE_MISMATCH",
+      "status": "na",
+      "expected": "注入后期望字段被重新渲染",
+      "actual": "3 个字段注入后文本与期望一致",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "TARGET.PLACEHOLDER_VISIBLE",
+      "status": "na",
+      "expected": "不显示占位文案",
+      "actual": "未发现占位文案",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "VIS.TEXT_CLIPPED",
+      "status": "pass",
+      "expected": "对应可见性规则通过",
+      "actual": "未发现横向裁剪（1 处纵向行框溢出不计入）",
+      "severity": "major",
+      "evidence": {
+        "ignoredVertical": [
+          {
+            "components": [
+              "primary_main:18"
+            ],
+            "source": "GEOMETRY.CLIP_TEXT",
+            "text": "还剩 28 天",
+            "box": {
+              "x": 12,
+              "y": 38,
+              "width": 126,
+              "height": 18
+            },
+            "contentRect": {
+              "x": 12,
+              "y": 38,
+              "width": 126,
+              "height": 18
+            },
+            "textRects": [
+              {
+                "x": 12,
+                "y": 35,
+                "width": 85.359375,
+                "height": 24
+              }
+            ],
+            "component": "primary_main",
+            "clientWidth": 126,
+            "scrollWidth": 126,
+            "clientHeight": 18,
+            "scrollHeight": 21,
+            "clipChain": [
+              {
+                "id": "primary_main",
+                "box": {
+                  "x": 12,
+                  "y": 38,
+                  "width": 126,
+                  "height": 18
+                }
+              },
+              {
+                "id": "__genui_render_component__root",
+                "box": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 150,
+                  "height": 150
+                }
+              },
+              {
+                "id": "root",
+                "box": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 150,
+                  "height": 150
+                }
+              },
+              {
+                "id": null,
+                "box": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 150,
+                  "height": 150
+                }
+              }
+            ]
+          }
+        ],
+        "ignoredCount": 1
+      }
+    },
+    {
+      "rule": "VIS.TEXT_OVERFLOW",
+      "status": "pass",
+      "expected": "对应可见性规则通过",
+      "actual": "未发现问题",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "VIS.IMAGE_OVERFLOW",
+      "status": "pass",
+      "expected": "对应可见性规则通过",
+      "actual": "未发现问题",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "VIS.TEXT_OVERLAP",
+      "status": "pass",
+      "expected": "对应可见性规则通过",
+      "actual": "未发现问题",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "VIS.IMAGE_LOAD_FAILED",
+      "status": "pass",
+      "expected": "对应可见性规则通过",
+      "actual": "未发现问题",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "VIS.FONT_TOO_SMALL",
+      "status": "pass",
+      "expected": "正文字号 ≥ 12",
+      "actual": "全部文本达到下限",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "VIS.CONTRAST_LOW",
+      "status": "na",
+      "expected": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+      "actual": "SPEC.MASK 已单独扣分，对比度不重复计分",
+      "severity": "major",
+      "evidence": {
+        "nodes": [
+          {
+            "id": "title_title",
+            "ratio": 2.35,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.2
+          },
+          {
+            "id": "primary_main",
+            "ratio": 1.71,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.3
+          },
+          {
+            "id": "support_item0_label",
+            "ratio": 1.55,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.2
+          },
+          {
+            "id": "support_item0_value",
+            "ratio": 1.55,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.2
+          }
+        ],
+        "dedupe": {
+          "from": "fail",
+          "to": "na",
+          "reason": "SPEC.MASK 已单独扣分，对比度不重复计分"
+        }
+      }
+    },
+    {
+      "rule": "SPEC.SAFE_AREA",
+      "status": "pass",
+      "expected": "全部文本在 inset(12) 内",
+      "actual": "全部在安全区",
+      "severity": "major",
+      "evidence": {
+        "outside": [],
+        "surface": {
+          "x": 0,
+          "y": 0,
+          "width": 150,
+          "height": 150
+        },
+        "skippedOverflow": []
+      }
+    },
+    {
+      "rule": "ASSET.FILE_MISSING",
+      "status": "pass",
+      "expected": "本地素材文件存在",
+      "actual": "1 个本地素材均已找到",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "ASSET.RENDERED",
+      "status": "pass",
+      "expected": "本地素材已加载并输出可见像素",
+      "actual": "1 个本地素材均已渲染",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.UNIT_BASELINE",
+      "status": "na",
+      "expected": "数字与单位同行基线对齐",
+      "actual": "无数字 + 单位组合",
+      "severity": "minor",
+      "evidence": {}
+    }
+  ],
+  "metrics": {
+    "primary": {
+      "id": "primary_main",
+      "fontSize": 18.0,
+      "text": "还剩 28 天",
+      "areaRatio": 0.1008
+    },
+    "fontSizes": [
+      12.0,
+      18.0
+    ],
+    "icons": [
+      {
+        "id": "root",
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+        "naturalWidth": 600
+      },
+      {
+        "id": "__post_theme_background",
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+        "naturalWidth": 600
+      },
+      {
+        "id": "__post_theme_base",
+        "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/4763de2ea917462b824e2383a5154130/edb07e0ba593472ab9c27d61efeb40fe.jpg",
+        "naturalWidth": 600
+      },
+      {
+        "id": "__genui_render_component__root",
+        "src": "/resources/base/media/stopwatch_fill.svg",
+        "naturalWidth": 24
+      },
+      {
+        "id": "title",
+        "src": "/resources/base/media/stopwatch_fill.svg",
+        "naturalWidth": 24
+      },
+      {
+        "id": "title_icon",
+        "src": "/resources/base/media/stopwatch_fill.svg",
+        "naturalWidth": 24
+      }
+    ],
+    "leafTextCount": 4
+  },
+  "counts": {
+    "passed": 23,
+    "failed": 7,
+    "pending": 0,
+    "na": 11
+  },
+  "score": {
+    "total": 60.4,
+    "band": "及格",
+    "dimensions": [
+      {
+        "key": "target",
+        "label": "目标语义",
+        "max": 25.0,
+        "score": 0.0,
+        "ratio": 0.0,
+        "checks": 0,
+        "passed": 0,
+        "pending": 0,
+        "applicable": false,
+        "reason": "期望日期由 mock 设备时间推导，仅作参考；目标语义记 0 分",
+        "items": []
+      },
+      {
+        "key": "visibility",
+        "label": "可见性",
+        "max": 37.5,
+        "score": 37.5,
+        "ratio": 100.0,
+        "checks": 6,
+        "passed": 6,
+        "pending": 0,
+        "applicable": true,
+        "items": [
+          {
+            "rule": "VIS.TEXT_CLIPPED",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 6.2,
+            "deduction": 0.0,
+            "expected": "对应可见性规则通过",
+            "actual": "未发现横向裁剪（1 处纵向行框溢出不计入）"
+          },
+          {
+            "rule": "VIS.TEXT_OVERFLOW",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 6.2,
+            "deduction": 0.0,
+            "expected": "对应可见性规则通过",
+            "actual": "未发现问题"
+          },
+          {
+            "rule": "VIS.IMAGE_OVERFLOW",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 6.2,
+            "deduction": 0.0,
+            "expected": "对应可见性规则通过",
+            "actual": "未发现问题"
+          },
+          {
+            "rule": "VIS.TEXT_OVERLAP",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 6.2,
+            "deduction": 0.0,
+            "expected": "对应可见性规则通过",
+            "actual": "未发现问题"
+          },
+          {
+            "rule": "VIS.IMAGE_LOAD_FAILED",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 6.2,
+            "deduction": 0.0,
+            "expected": "对应可见性规则通过",
+            "actual": "未发现问题"
+          },
+          {
+            "rule": "VIS.FONT_TOO_SMALL",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 6.2,
+            "deduction": 0.0,
+            "expected": "正文字号 ≥ 12",
+            "actual": "全部文本达到下限"
+          }
+        ]
+      },
+      {
+        "key": "spec",
+        "label": "规范符合",
+        "max": 37.5,
+        "score": 22.9,
+        "ratio": 61.1,
+        "checks": 18,
+        "passed": 11,
+        "pending": 0,
+        "applicable": true,
+        "items": [
+          {
+            "rule": "SPEC.RADIUS",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "20",
+            "actual": "20"
+          },
+          {
+            "rule": "SPEC.CLIP",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "true",
+            "actual": "root=True, content=True"
+          },
+          {
+            "rule": "SPEC.PADDING",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "12",
+            "actual": "12.0"
+          },
+          {
+            "rule": "SPEC.BG_FULL_BLEED",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "铺满的背景图",
+            "actual": "__post_theme_base"
+          },
+          {
+            "rule": "SPEC.BG_SINGLE",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "单张满铺背景图",
+            "actual": "__post_theme_base"
+          },
+          {
+            "rule": "SPEC.MASK",
+            "status": "fail",
+            "value": 0.0,
+            "weight": 2.1,
+            "deduction": 2.1,
+            "expected": "黑色蒙层 60%（55%–70%）",
+            "actual": "未找到黑色蒙层"
+          },
+          {
+            "rule": "SPEC.TITLE_REQUIRED",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "存在标题区",
+            "actual": "title_title"
+          },
+          {
+            "rule": "SPEC.TITLE_FONT",
+            "status": "fail",
+            "value": 0.0,
+            "weight": 2.1,
+            "deduction": 2.1,
+            "expected": "主 16 或 20，副 16",
+            "actual": "主 12.0"
+          },
+          {
+            "rule": "SPEC.TITLE_COLOR",
+            "status": "fail",
+            "value": 0.0,
+            "weight": 2.1,
+            "deduction": 2.1,
+            "expected": "主 100% 白，副 60% 白",
+            "actual": "主 alpha=0.8"
+          },
+          {
+            "rule": "SPEC.PRIMARY_FONT",
+            "status": "fail",
+            "value": 0.0,
+            "weight": 2.1,
+            "deduction": 2.1,
+            "expected": "56 或 38",
+            "actual": "18.0"
+          },
+          {
+            "rule": "SPEC.PRIMARY_COLOR",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "白色 100%/90%",
+            "actual": "alpha=1.0"
+          },
+          {
+            "rule": "SPEC.UNIT_FONT",
+            "status": "fail",
+            "value": 0.0,
+            "weight": 2.1,
+            "deduction": 2.1,
+            "expected": "单位独立 16fp",
+            "actual": "单位与数字同一文本节点"
+          },
+          {
+            "rule": "SPEC.SUPPORT_FONT",
+            "status": "fail",
+            "value": 0.0,
+            "weight": 2.1,
+            "deduction": 2.1,
+            "expected": "16",
+            "actual": "support_item0_value=12.0, support_item0_label=12.0"
+          },
+          {
+            "rule": "SPEC.SUPPORT_COLOR",
+            "status": "fail",
+            "value": 0.0,
+            "weight": 2.1,
+            "deduction": 2.1,
+            "expected": "白色 60%",
+            "actual": "support_item0_value alpha=1.0"
+          },
+          {
+            "rule": "SPEC.CONTENT_TYPE",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "C1–C5 之一",
+            "actual": "C3 小数字"
+          },
+          {
+            "rule": "SPEC.DIGIT_LIMIT",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "最多 6 位",
+            "actual": "2 位"
+          },
+          {
+            "rule": "SPEC.ACTION_PATTERN",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "整卡点击，不放独立按钮",
+            "actual": "未发现独立按钮"
+          },
+          {
+            "rule": "SPEC.SAFE_AREA",
+            "status": "pass",
+            "value": 1.0,
+            "weight": 2.1,
+            "deduction": 0.0,
+            "expected": "全部文本在 inset(12) 内",
+            "actual": "全部在安全区"
+          }
+        ]
+      }
+    ],
+    "fatal": false,
+    "note": "",
+    "targetGated": false,
+    "availableWeight": 100.0,
+    "capped": false
+  },
+  "images": {
+    "original": "original.png",
+    "injected": "injected.png"
+  }
+}

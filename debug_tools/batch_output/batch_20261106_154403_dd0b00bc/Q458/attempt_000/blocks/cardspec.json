@@ -1,0 +1,21 @@
+{
+  "title": "今日天气",
+  "description": "辉县天气速览",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "辉县市",
+        "forecastDays": 1,
+        "prefectureName": "新乡市"
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}

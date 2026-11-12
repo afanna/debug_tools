@@ -1,0 +1,94 @@
+{
+  "sampleId": "Q086",
+  "issues": [
+    {
+      "规则": "SPEC.MASK",
+      "说明": "黑色蒙层 60%",
+      "状态": "失败",
+      "预期": "黑色蒙层 60%",
+      "实际": "最接近的黑色层 无 alpha=0.00",
+      "证据": {
+        "component": "",
+        "alpha": 0.0
+      }
+    },
+    {
+      "规则": "SPEC.TITLE_FONT",
+      "说明": "标题 16/20fp",
+      "状态": "失败",
+      "预期": "16 或 20",
+      "实际": "18.0",
+      "证据": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "规则": "SPEC.TITLE_ELLIPSIS",
+      "说明": "标题单行省略",
+      "状态": "失败",
+      "预期": "maxLines=1 且 textOverflow=ellipsis",
+      "实际": "maxLines=1, textOverflow=clip",
+      "证据": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "规则": "SPEC.PRIMARY_FONT",
+      "说明": "主值 56/38fp",
+      "状态": "失败",
+      "预期": "56 或 38",
+      "实际": "18.0",
+      "证据": {
+        "component": "primary_main",
+        "expectedDays": 28,
+        "digits": 2
+      }
+    },
+    {
+      "规则": "SPEC.UNIT_FONT",
+      "说明": "单位 16fp 独立",
+      "状态": "失败",
+      "预期": "单位独立 16fp",
+      "实际": "单位与数字同一文本节点",
+      "证据": {
+        "component": "primary_main"
+      }
+    },
+    {
+      "规则": "SPEC.SUPPORT_FONT",
+      "说明": "副文本 16fp",
+      "状态": "失败",
+      "预期": "16",
+      "实际": "12.0",
+      "证据": {
+        "component": "support_item0_value"
+      }
+    },
+    {
+      "规则": "SPEC.SUPPORT_COLOR",
+      "说明": "副文本 60% 白",
+      "状态": "失败",
+      "预期": "白色 60%",
+      "实际": "alpha=1.0",
+      "证据": {
+        "component": "support_item0_value"
+      }
+    },
+    {
+      "规则": "VIS.EVIDENCE_MISSING",
+      "说明": "可见性证据完整",
+      "状态": "待复核",
+      "预期": "DOM 与截图为可见性判定提供证据",
+      "实际": "未采集到注入后证据",
+      "证据": {}
+    },
+    {
+      "规则": "L0.CAPTURE_FAILED",
+      "说明": "L0.CAPTURE_FAILED",
+      "状态": "失败",
+      "预期": "浏览器采集成功",
+      "实际": "original: 未执行浏览器采集；injected: 未执行浏览器采集",
+      "证据": {}
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "data": [
+    "GetHealthAndSportSummary"
+  ],
+  "event": [
+    {
+      "id": "event.open.health.sleep",
+      "description": "打开华为运动健康应用的睡眠详情页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/router/sleepDetail"
+      }
+    },
+    {
+      "id": "event.open.clock.alarmTab",
+      "description": "打开华为时钟应用，并显示闹钟这个tab页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "com.huawei.hmos.clock.phone",
+        "bundleName": "com.huawei.hmos.clock",
+        "intentName": "Clock",
+        "parameters": {
+          "tabActive": "ALARM_CLOCK_TAB"
+        },
+        "uri": ""
+      }
+    }
+  ],
+  "asset": [
+    "asset.moon_z_fill_1",
+    "asset.alarm_fill_1"
+  ]
+}

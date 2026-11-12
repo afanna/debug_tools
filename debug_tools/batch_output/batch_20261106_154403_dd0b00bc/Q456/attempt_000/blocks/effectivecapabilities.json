@@ -1,0 +1,11 @@
+{
+  "data": [
+    "GetEarphoneInfo"
+  ],
+  "event": [],
+  "asset": [
+    "asset.emoji_bluetooth_earbuds_black",
+    "asset.emoji_earbud_case_black",
+    "asset.ic_Bluetooth"
+  ]
+}

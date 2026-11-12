@@ -1,0 +1,9 @@
+{
+  "data": [
+    "ViewWeather",
+    "GetCurrentTime",
+    "GetCalendarEvents"
+  ],
+  "event": [],
+  "asset": []
+}

@@ -1,0 +1,33 @@
+{
+  "sampleId": "Q076",
+  "scenario": "repeat_day",
+  "timezone": "Asia/Shanghai",
+  "referenceDate": "2026-11-03",
+  "targetDate": "2026-11-03",
+  "expectedDays": 0,
+  "expectedRelationText": "就是今天",
+  "expectedTargetDateText": "2026/11/03",
+  "writeResultTo": "/data/dateCounter",
+  "fields": [
+    "/days",
+    "/relationText",
+    "/targetDateText"
+  ],
+  "arguments": {
+    "targetDate": "2026-10-14",
+    "repeat": {
+      "unit": "day",
+      "interval": 2
+    }
+  },
+  "gate": false,
+  "provenance": {
+    "targetDate": "explicit",
+    "days": "ambiguous",
+    "relationText": "ambiguous",
+    "targetDateText": "ambiguous"
+  },
+  "notes": [
+    "下一次触发日与参考日相同，需确认“今天是否算下一次”"
+  ]
+}

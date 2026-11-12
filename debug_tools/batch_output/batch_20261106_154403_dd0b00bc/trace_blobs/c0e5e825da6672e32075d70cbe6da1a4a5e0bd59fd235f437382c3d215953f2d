@@ -1,0 +1,26 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 结语“那才是真正的慈悲。渡人先渡己，自爱圆满，天地同尘”因2x2容量未选入.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item0_secondaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item1_primaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item1_secondaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

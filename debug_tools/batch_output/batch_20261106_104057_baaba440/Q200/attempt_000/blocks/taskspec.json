@@ -1,0 +1,80 @@
+{
+  "userQuery": "家庭简报卡片，展示当前时间、手机电量、近期日程和备忘录待办信息",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "currentTime": {
+        "currentDate": {
+          "type": "string",
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例"
+        },
+        "dayOfWeek": {
+          "type": "string",
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例"
+        }
+      },
+      "phoneBattery": {
+        "batterySOCText": {
+          "type": "string",
+          "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+          "sampleValue": "68%",
+          "numericSource": "/data/phoneBattery/batterySOC"
+        },
+        "chargingStatusDesc": {
+          "type": "string",
+          "description": "当前设备电池的充电状态文本描述。",
+          "sampleValue": "未充电"
+        },
+        "batterySOC": {
+          "type": "integer",
+          "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+          "sampleValue": 68
+        }
+      },
+      "calendar": {
+        "events": [
+          {
+            "dtStart": {
+              "type": "string",
+              "description": "格式化后的日程开始时间短文本，如 '03:00'，若为全天日程可能为特殊标记。",
+              "sampleValue": "14:00"
+            },
+            "eventLocation": {
+              "type": "string",
+              "description": "日程的具体地点描述，若未填写则为空字符串。",
+              "sampleValue": "会议室"
+            },
+            "title": {
+              "type": "string",
+              "description": "日程标题，例如“咪咕视频《西班牙 VS 奥地利》”或“项目进展会”。",
+              "sampleValue": "项目例会"
+            }
+          }
+        ]
+      },
+      "memo": {
+        "todoPendingCount": {
+          "type": "integer",
+          "description": "未完成的待办记录数。",
+          "sampleValue": 0
+        },
+        "todoTotalCount": {
+          "type": "integer",
+          "description": "查询到的待办总数量（已过滤已删除待办）。",
+          "sampleValue": 0
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "photo-ux-texture-blue-diamond-wide",
+      "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/b8c7284f30cc44d6a719dafe4997820f/8c4da31a85004fc7ac6ef89ee45e0e25.jpg",
+      "description": "主题背景"
+    }
+  ]
+}

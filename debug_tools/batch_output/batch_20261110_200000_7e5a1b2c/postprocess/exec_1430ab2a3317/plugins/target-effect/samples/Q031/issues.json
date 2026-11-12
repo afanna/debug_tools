@@ -1,0 +1,196 @@
+{
+  "sampleId": "Q031",
+  "issues": [
+    {
+      "规则": "SPEC.MASK",
+      "说明": "黑色蒙层 60%",
+      "状态": "失败",
+      "预期": "黑色蒙层 60%（55%–70%）",
+      "实际": "未找到黑色蒙层",
+      "证据": {}
+    },
+    {
+      "规则": "SPEC.TITLE_FONT",
+      "说明": "标题 16/20fp",
+      "状态": "失败",
+      "预期": "主 16 或 20，副 16",
+      "实际": "主 12.0",
+      "证据": {
+        "component": "title_title",
+        "subtitle": null
+      }
+    },
+    {
+      "规则": "SPEC.TITLE_ELLIPSIS",
+      "说明": "标题单行省略",
+      "状态": "失败",
+      "预期": "maxLines=1 且 textOverflow=ellipsis",
+      "实际": "未设置：title_title",
+      "证据": {
+        "components": [
+          "title_title"
+        ]
+      }
+    },
+    {
+      "规则": "SPEC.TITLE_COLOR",
+      "说明": "标题白色",
+      "状态": "失败",
+      "预期": "主 100% 白，副 60% 白",
+      "实际": "主 alpha=0.8",
+      "证据": {
+        "component": "title_title",
+        "subtitle": null
+      }
+    },
+    {
+      "规则": "SPEC.PRIMARY_FONT",
+      "说明": "主值 56/38fp",
+      "状态": "失败",
+      "预期": "56 或 38",
+      "实际": "30.0",
+      "证据": {
+        "component": "primary_value",
+        "expectedDays": 1,
+        "digits": 1
+      }
+    },
+    {
+      "规则": "SPEC.UNIT_FONT",
+      "说明": "单位 16fp 独立",
+      "状态": "失败",
+      "预期": "16",
+      "实际": "primary_unit=12.0",
+      "证据": {
+        "components": [
+          "primary_unit"
+        ]
+      }
+    },
+    {
+      "规则": "SPEC.SUPPORT_FONT",
+      "说明": "副文本 16fp",
+      "状态": "失败",
+      "预期": "16",
+      "实际": "support_item0_value=14.0, support_item0_label=14.0",
+      "证据": {
+        "failed": [
+          "support_item0_value",
+          "support_item0_label"
+        ]
+      }
+    },
+    {
+      "规则": "SPEC.SUPPORT_COLOR",
+      "说明": "副文本 60% 白",
+      "状态": "失败",
+      "预期": "白色 60%",
+      "实际": "support_item0_value alpha=1.0",
+      "证据": {
+        "failed": [
+          "support_item0_value alpha=1.0"
+        ]
+      }
+    },
+    {
+      "规则": "VIS.TEXT_CLIPPED",
+      "说明": "文字未被裁切",
+      "状态": "失败",
+      "预期": "对应可见性规则通过",
+      "实际": "3 处：Web 渲染中文字被裁剪或省略",
+      "证据": {
+        "findings": [
+          {
+            "components": [
+              "primary_value:18"
+            ],
+            "source": "GEOMETRY.CLIP_TEXT",
+            "text": "1",
+            "box": {
+              "x": 12,
+              "y": 38,
+              "width": 18.03125,
+              "height": 30
+            },
+            "component": "primary_value"
+          },
+          {
+            "components": [
+              "support_item0_label:24"
+            ],
+            "source": "GEOMETRY.CLIP_TEXT",
+            "text": "日期",
+            "box": {
+              "x": 12,
+              "y": 124,
+              "width": 28,
+              "height": 14
+            },
+            "component": "support_item0_label"
+          },
+          {
+            "components": [
+              "support_item0_value:25"
+            ],
+            "source": "GEOMETRY.CLIP_TEXT",
+            "text": "2026/11/04",
+            "box": {
+              "x": 44,
+              "y": 124,
+              "width": 94,
+              "height": 14
+            },
+            "component": "support_item0_value"
+          }
+        ],
+        "count": 3
+      }
+    },
+    {
+      "规则": "VIS.CONTRAST_LOW",
+      "说明": "文字对比度",
+      "状态": "失败",
+      "预期": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+      "实际": "5 个文本节点对比度偏低",
+      "证据": {
+        "nodes": [
+          {
+            "id": "title_title",
+            "ratio": 1.82,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.2
+          },
+          {
+            "id": "primary_value",
+            "ratio": 2.69,
+            "threshold": 3.0,
+            "status": "fail",
+            "variance": 0.3
+          },
+          {
+            "id": "primary_unit",
+            "ratio": 1.9,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.2
+          },
+          {
+            "id": "support_item0_label",
+            "ratio": 1.49,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.2
+          },
+          {
+            "id": "support_item0_value",
+            "ratio": 1.6,
+            "threshold": 4.5,
+            "status": "fail",
+            "variance": 0.2
+          }
+        ]
+      }
+    }
+  ]
+}

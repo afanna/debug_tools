@@ -1,0 +1,14 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 当前公历日期.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "details: SummaryList.items requires 2 to 3 entries.",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

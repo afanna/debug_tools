@@ -1,0 +1,4 @@
+[
+  "Compact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: body.mainText 完整文字需要 4 行，126vp 区域仅允许 2 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。",
+  "Compact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: COMPACT_STATIC_TEXT_CAPACITY: body.item0_text 占用100.8vp，扣除背板内边距与间距后item0_assist无可用宽度；保持完整标签和值，换用能分层承载的合法组件。"
+]

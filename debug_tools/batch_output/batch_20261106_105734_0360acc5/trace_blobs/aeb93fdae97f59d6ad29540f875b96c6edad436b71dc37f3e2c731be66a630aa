@@ -1,0 +1,46 @@
+{
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "DataDisplay",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/airQuality",
+      "priority": "must",
+      "requirement": "当前空气质量等级"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前温度"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText",
+        "InfoBlock"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "should",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/weather/location/prefectureName",
+      "priority": "should",
+      "requirement": "所在城市与区县名称"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content",
+    "S-title-dual-content"
+  ]
+}

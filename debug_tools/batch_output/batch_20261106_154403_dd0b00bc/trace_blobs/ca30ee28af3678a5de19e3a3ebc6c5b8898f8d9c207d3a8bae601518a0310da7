@@ -1,0 +1,10 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "eventCandidates": [],
+  "size": "2x4",
+  "userQuery": "做一个空白面板卡片，用于写算题。本轮卡片静态内容（用作展示的外部事实）：空白面板，用于书写算题。"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q442",
+  "fileName": "Q442.json",
+  "title": "时钟",
+  "query": "创建一张桌面时钟卡片，显示当前时间、日期、星期和农历信息。",
+  "size": "2x2",
+  "sequence": 30,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 3052.42,
+  "errorCode": "",
+  "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "complete",
+  "traceRecordCount": 39,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3038.56,
+  "uid": "batch-dd0b00bc-00030-000",
+  "finalAttempt": 0
+}

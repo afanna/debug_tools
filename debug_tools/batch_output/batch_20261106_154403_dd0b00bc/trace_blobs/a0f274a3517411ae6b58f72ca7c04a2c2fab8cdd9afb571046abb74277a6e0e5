@@ -1,0 +1,5 @@
+[
+  "COMPACT_STATIC_GROUP_MISMATCH: 正文有3个对象，计划含2个核心组、共2组；不能删除核心对象或以共享说明代替本条目。",
+  "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+  "COMPACT_STATIC_CORE_MISSING: 组 theme 缺少完整展示文字 '减脂食谱'；须在合法且可达的标题或正文条目内完整展示，不跨不同对象拼接说明。"
+]

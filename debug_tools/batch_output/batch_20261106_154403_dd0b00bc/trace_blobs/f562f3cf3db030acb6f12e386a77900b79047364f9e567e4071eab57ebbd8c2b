@@ -1,0 +1,7 @@
+```genui
+["root","Layout",{"layout":"S-title-dual-content"},["title","primary","support"]]
+["title","SingleLineTitle",{"title":"春节倒计时","fontSize":12}]
+["primary","EmphasizedData",{"value":{"path":"/data/countdown/countdownDays"},"unit":"天","fontSize":30}]
+["support","SecondaryBody",{"items":[{"value":"2027年春节是2月6日"}],"fontSize":14}]
+["/data/countdown/countdownDays",30]
+```

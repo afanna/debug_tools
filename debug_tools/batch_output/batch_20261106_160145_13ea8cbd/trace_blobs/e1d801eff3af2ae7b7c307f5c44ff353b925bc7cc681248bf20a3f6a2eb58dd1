@@ -1,0 +1,66 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.health.sport",
+        "assetId": "asset.ic_sportsHealth_bule"
+      }
+    ],
+    "title": {
+      "assetId": "asset.emoji_run"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "展示今日累计步数（数值后追加“步”）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/dailyTotalCaloriesText",
+      "priority": "must",
+      "requirement": "展示今日活动总消耗热量（已含“千卡”单位）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/dailyDistanceText",
+      "priority": "must",
+      "requirement": "展示今日活动总距离（已含“米/公里”单位）"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody"
+      ],
+      "dataId": "/data/healthSport/targetDateText",
+      "priority": "should",
+      "requirement": "展示数据归属日期，明确查阅的是哪一天"
+    },
+    {
+      "actionId": "event.open.health.sport",
+      "componentHints": [
+        "PillButton",
+        "CardButton"
+      ],
+      "priority": "must",
+      "requirement": "打开华为运动健康锻炼Tab页"
+    }
+  ],
+  "layoutHints": [
+    "S-title-primary-secondary-action",
+    "S-title-content-action"
+  ]
+}

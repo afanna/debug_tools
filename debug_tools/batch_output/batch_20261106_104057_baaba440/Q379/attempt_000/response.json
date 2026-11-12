@@ -1,0 +1,67 @@
+{
+  "requestId": "batch-baaba440&Q379-000",
+  "status": "success",
+  "errorCode": "",
+  "error": {},
+  "data": {
+    "status": "success",
+    "artifactUrl": "https://obs.todo.local/widget/artifact_235edbe9-fc1e-43a0-a5cc-6565fc95764d.md",
+    "artifactDigest": "sha256:210cdd497d45602a1cf9bbd26b24a70de467c4682adcbe56fc087b35aeee1beb",
+    "suggestSize": "2x4",
+    "removedCapabilities": [],
+    "errorCode": "",
+    "effectiveCapabilities": {
+      "data": [
+        "GetCurrentTime",
+        "GetCalendarEvents"
+      ],
+      "event": [
+        {
+          "id": "event.viewCalendarEvent",
+          "description": "点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。",
+          "call": "clickToIntent",
+          "args": {
+            "intentName": "ViewCalendarEvent",
+            "params": {
+              "entityId": "{{ ${/data/calendar/events/0/entityId} }}"
+            }
+          }
+        }
+      ],
+      "asset": [
+        "asset.calendar_fill",
+        "asset.ic_calender",
+        "photo-ux-texture-purple-diamond-wide"
+      ]
+    },
+    "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。"
+  },
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-baaba440&Q379-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"type\":\"result\",\"tool\":\"generateWidgetCardCompactDsl\",\"operation\":\"generateWidgetCardCompactDsl\",\"requestId\":\"batch-baaba440&Q379-000\",\"data\":{\"status\":\"success\",\"artifactUrl\":\"https://obs.todo.local/widget/artifact_235edbe9-fc1e-43a0-a5cc-6565fc95764d.md\",\"artifactDigest\":\"sha256:210cdd497d45602a1cf9bbd26b24a70de467c4682adcbe56fc087b35aeee1beb\",\"suggestSize\":\"2x4\",\"removedCapabilities\":[],\"errorCode\":\"\",\"effectiveCapabilities\":{\"data\":[\"GetCurrentTime\",\"GetCalendarEvents\"],\"event\":[{\"id\":\"event.viewCalendarEvent\",\"description\":\"点击日程卡片 or 日程按钮，跳转到华为日历应用 查看该日程的详情。\",\"call\":\"clickToIntent\",\"args\":{\"intentName\":\"ViewCalendarEvent\",\"params\":{\"entityId\":\"{{ ${/data/calendar/events/0/entityId} }}\"}}}],\"asset\":[\"asset.calendar_fill\",\"asset.ic_calender\",\"photo-ux-texture-purple-diamond-wide\"]},\"agentInstruction\":\"已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。\"},\"status\":\"success\",\"errorCode\":\"\",\"error\":{}}",
+          "streamingTextId": "batch-baaba440&Q379-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

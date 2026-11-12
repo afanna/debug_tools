@@ -1,0 +1,19 @@
+{
+  "title": "倒计时",
+  "description": "距离2029年9月1日还有多少天",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCountdownDays",
+      "arguments": {
+        "targetDate": "2029-09-01"
+      },
+      "writeResultTo": "/data/countdown"
+    }
+  ]
+}

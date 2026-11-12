@@ -1,0 +1,21 @@
+{
+  "id": "Q491",
+  "fileName": "Q491.json",
+  "title": "南京天气",
+  "query": "创建一张桌面卡片显示南京天气，展示当前天气状况和温度",
+  "size": "2x2",
+  "sequence": 80,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2041.66,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00080-000",
+  "finalAttempt": 0
+}

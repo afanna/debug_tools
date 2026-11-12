@@ -1,0 +1,8 @@
+{
+  "errors": [
+    "Plan fact is displayed more than once in visible DSL: 耳机盒（整体）剩余电量百分比 (/data/earphone/batteryLevel); expected 1, got 2; occurrences: primary (EmphasisText).mainText, details (TextBlock).items[2].value."
+  ],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": []
+}

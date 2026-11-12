@@ -1,0 +1,126 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "q1",
+      "identity": "1-3月",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        2
+      ],
+      "id": "q2",
+      "identity": "4-6月",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3
+      ],
+      "id": "q3",
+      "identity": "7-9月",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        4
+      ],
+      "id": "q4",
+      "identity": "10-12月",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "卡片主题：1-12月中英文对照记忆",
+      "sourceTexts": [
+        "1月 January (Jan) | 2月 February (Feb) | 3月 March (Mar)"
+      ],
+      "text": "月份中英文对照"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "1-3月中英文对照",
+      "sourceTexts": [
+        "1月 January (Jan) | 2月 February (Feb) | 3月 March (Mar)"
+      ],
+      "text": "1-3月 January-February-March"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "4-6月中英文对照",
+      "sourceTexts": [
+        "4月 April (Apr) | 5月 May | 6月 June (Jun)"
+      ],
+      "text": "4-6月 April-May-June"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "7-9月中英文对照",
+      "sourceTexts": [
+        "7月 July (Jul) | 8月 August (Aug) | 9月 September (Sep)"
+      ],
+      "text": "7-9月 July-August-September"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "10-12月中英文对照",
+      "sourceTexts": [
+        "10月 October (Oct) | 11月 November (Nov) | 12月 December (Dec)"
+      ],
+      "text": "10-12月 October-November-December"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "rows",
+  "selectionNotes": [
+    "12个月全部为核心，不能删减；需在2x4卡片内以单行短标签+短值承载。",
+    "改用SingleLineList：每行左侧月份、右侧英文全称与缩写，确保单行完整可读。",
+    "标题“月份中英文对照”占标题区，正文5行内展示全部12个月按季度顺序排列。",
+    "由于SingleLineList最多5行，12个月无法全部放入；需将12个月压缩为每行一个季度组，但用户要求逐月对照，故改为TextList三条季度组承载。",
+    "最终选择rows结构，每行一个季度组：1-3月 January-February-March，4-6月 April-May-June，7-9月 July-August-September，10-12月 October-November-December，共4行在容量内。",
+    "每行右侧为英文缩写序列，确保中英文对照可记忆，保留全部12个月及英文全称缩写。"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"W-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"月份中英文对照\"}]\n[\"body\", \"SingleLineList\", {\"items\": [{\"text\": \"1-3月\", \"assist\": \"January-February-March\"}, {\"text\": \"4-6月\", \"assist\": \"April-May-June\"}, {\"text\": \"7-9月\", \"assist\": \"July-August-September\"}, {\"text\": \"10-12月\", \"assist\": \"October-November-December\"}]}]\n[\"/state/ready\", true]"
+}

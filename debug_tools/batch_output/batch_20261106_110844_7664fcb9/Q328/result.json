@@ -1,0 +1,21 @@
+{
+  "id": "Q328",
+  "fileName": "Q328.json",
+  "title": "日历黄历",
+  "query": "在日历中添加黄历信息，显示农历日期。",
+  "size": "2x2",
+  "sequence": 20,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 3077.5,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3071.08,
+  "uid": "batch-7664fcb9-00020-000",
+  "finalAttempt": 0
+}

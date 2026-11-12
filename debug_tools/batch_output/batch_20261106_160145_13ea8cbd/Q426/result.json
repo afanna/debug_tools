@@ -1,0 +1,21 @@
+{
+  "id": "Q426",
+  "fileName": "Q426.json",
+  "title": "天气",
+  "query": "用户要求将天气卡片添加到手机桌面，展示包头市青山区的当前天气和未来3天预报，包含温度、天气现象、湿度、空气质量、紫外线等信息，点击卡片可打开天气应用查看详情。",
+  "size": "2x2",
+  "sequence": 14,
+  "status": "degraded",
+  "attemptCount": 1,
+  "elapsedMs": 10813.84,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 118,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 10801.75,
+  "uid": "batch-13ea8cbd-00014-000",
+  "finalAttempt": 0
+}

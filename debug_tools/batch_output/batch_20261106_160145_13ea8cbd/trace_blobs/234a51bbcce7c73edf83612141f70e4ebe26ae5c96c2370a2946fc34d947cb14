@@ -1,0 +1,49 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [
+    {
+      "description": "样式：默认黑色的单色实心日历图标，内部叠加对勾并通过镂空表现细节，原始尺寸为 24×24，支持通过 fillColor 与卡片配色统一；适用：已完成日程、日程或计划确认、签到、待办完成、任务或运动打卡与健康计划。",
+      "id": "asset.checkmark_calendar_fill",
+      "src": "resources/base/media/checkmark_calendar_fill.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "memo": {
+        "todoCompletedCount": {
+          "description": "已完成的待办记录数。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "todoPendingCount": {
+          "description": "未完成的待办记录数。",
+          "sampleValue": 0,
+          "type": "integer"
+        },
+        "todoTotalCount": {
+          "description": "查询到的待办总数量（已过滤已删除待办）。",
+          "sampleValue": 0,
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "abilityName": "MainAbility",
+        "bundleName": "com.huawei.hmos.notepad",
+        "intentName": "ViewNote",
+        "params": {
+          "launchSource": "1",
+          "launchType": "0"
+        }
+      },
+      "call": "clickToIntent",
+      "description": "打开华为备忘录应用。",
+      "id": "event.viewNote"
+    }
+  ],
+  "size": "2x2",
+  "userQuery": "做一张锻炼打卡桌面卡片，展示备忘录中的待办打卡情况，显示已完成和未完成的锻炼打卡待办数量，点击可打开备忘录查看打卡记录。本轮卡片静态内容（用作展示的外部事实）：用户每天锻炼后打卡，通过备忘录待办记录锻炼打卡。"
+}

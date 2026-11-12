@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "batch-postprocess-dashboard-v2",
+  "runId": "batch_20261106_160145_13ea8cbd",
+  "executionId": "exec_0befad308fce",
+  "plugin": {
+    "id": "browser-capture",
+    "name": "浏览器截图",
+    "version": "3.0.0",
+    "apiVersion": "batch-postprocess-v2"
+  },
+  "status": "failed",
+  "presentation": {
+    "defaultView": "gallery",
+    "sampleFields": [
+      {
+        "key": "captureStatus",
+        "label": "截图状态",
+        "type": "string",
+        "filterable": true,
+        "sortable": true
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "key": "web-quality-evidence",
+      "scope": "sample",
+      "title": "Web 质量检测证据",
+      "dataType": "json",
+      "required": false
+    },
+    {
+      "key": "browser-capture",
+      "scope": "sample",
+      "title": "Web 渲染截图",
+      "dataType": "image",
+      "renderer": "gallery",
+      "required": true
+    },
+    {
+      "key": "capture-summary",
+      "scope": "dataset",
+      "title": "截图汇总",
+      "dataType": "metrics",
+      "required": true,
+      "renderer": "kpi"
+    }
+  ],
+  "datasetResult": {
+    "status": "failed",
+    "summary": "ToolchainError: 显式配置的 Node.js 不存在：C:\\Tools\\DevEco Studio\\tools\\node\\node.exe",
+    "facts": {},
+    "artifacts": []
+  },
+  "counts": {
+    "skipped": 0,
+    "partial": 0,
+    "success": 0,
+    "failed": 0
+  },
+  "totalSamples": 0,
+  "sourceTotalSamples": 107,
+  "selection": {},
+  "samples": [],
+  "error": "ToolchainError: 显式配置的 Node.js 不存在：C:\\Tools\\DevEco Studio\\tools\\node\\node.exe"
+}

@@ -1,0 +1,192 @@
+{
+  "businessSummary": {
+    "businesses": [
+      null,
+      "calendar"
+    ],
+    "complete": true,
+    "firstBusiness": null,
+    "hasUnknown": true,
+    "primaryBusiness": null,
+    "primaryRegionId": "primary",
+    "regions": [
+      {
+        "businesses": [
+          null
+        ],
+        "firstBusiness": null,
+        "hasUnknown": true,
+        "id": "title",
+        "role": null,
+        "singleBusiness": null
+      },
+      {
+        "businesses": [
+          null
+        ],
+        "firstBusiness": null,
+        "hasUnknown": true,
+        "id": "primary",
+        "role": null,
+        "singleBusiness": null
+      },
+      {
+        "businesses": [
+          "calendar"
+        ],
+        "firstBusiness": "calendar",
+        "hasUnknown": false,
+        "id": "details",
+        "role": null,
+        "singleBusiness": "calendar"
+      }
+    ],
+    "singleBusiness": null,
+    "source": "final-visible-content"
+  },
+  "candidates": [
+    "gradient-blue",
+    "gradient-purple",
+    "gradient-warm",
+    "solid-blue",
+    "solid-purple",
+    "solid-warm"
+  ],
+  "defaultPalette": null,
+  "deviceGeometryKnown": false,
+  "finalValidationErrors": [],
+  "foregroundSignature": "1610ddd18d66e8acbda8fe53189ee83c8c36f6dbd4f354d1e15c077adb291ad0",
+  "fusionEligibility": {
+    "allowedTokens": [],
+    "conditionalFusionTokens": [],
+    "palettePreferenceTokens": [],
+    "reason": "原规则：仅2x2可用融球"
+  },
+  "geometryCheckBasis": "foreground-structure",
+  "geometryUnchanged": true,
+  "layoutEvidence": {
+    "basis": "layout-only",
+    "complete": false,
+    "deviceGeometryKnown": false,
+    "reason": "图片主题已关闭"
+  },
+  "modelCandidates": [
+    "gradient-blue",
+    "gradient-purple",
+    "gradient-warm",
+    "solid-blue",
+    "solid-purple",
+    "solid-warm"
+  ],
+  "modelPreferences": [],
+  "outputSize": "2x4",
+  "photoAssetExclusions": [],
+  "photoSelection": {},
+  "preferenceStatus": "confirmed",
+  "preferenceWarning": null,
+  "rejected": {
+    "photo-ux-airplane-tarmac-wide": "图片主题已关闭",
+    "photo-ux-birds-countdown-square": "尺寸不匹配",
+    "photo-ux-car-night-lake-square": "尺寸不匹配",
+    "photo-ux-car-night-lake-wide": "图片主题已关闭",
+    "photo-ux-concert-stage-wide": "图片主题已关闭",
+    "photo-ux-cumulus-blue-square": "尺寸不匹配",
+    "photo-ux-cumulus-blue-wide": "图片主题已关闭",
+    "photo-ux-digital-wave-wide": "图片主题已关闭",
+    "photo-ux-fireworks-square": "尺寸不匹配",
+    "photo-ux-glass-hourglass-square": "尺寸不匹配",
+    "photo-ux-glass-hourglass-wide": "图片主题已关闭",
+    "photo-ux-gradient-wide": "图片主题已关闭",
+    "photo-ux-hourglass-square": "尺寸不匹配",
+    "photo-ux-ice-wide": "图片主题已关闭",
+    "photo-ux-meeting-room-brown-chairs-square": "尺寸不匹配",
+    "photo-ux-meeting-room-square": "尺寸不匹配",
+    "photo-ux-metal-gear-square": "尺寸不匹配",
+    "photo-ux-metal-gear-wide": "图片主题已关闭",
+    "photo-ux-mountain-sunset-lake-square": "尺寸不匹配",
+    "photo-ux-mountain-sunset-lake-wide": "图片主题已关闭",
+    "photo-ux-pink-sunset-lake-square": "尺寸不匹配",
+    "photo-ux-pink-sunset-lake-wide": "图片主题已关闭",
+    "photo-ux-sand-arch-square": "尺寸不匹配",
+    "photo-ux-sleep-new-square": "尺寸不匹配",
+    "photo-ux-sleep-new-wide": "图片主题已关闭",
+    "photo-ux-sleep-square": "尺寸不匹配",
+    "photo-ux-sleep-wide": "图片主题已关闭",
+    "photo-ux-sport-center-wide": "图片主题已关闭",
+    "photo-ux-starry-sky-square": "尺寸不匹配",
+    "photo-ux-starry-sky-wide": "图片主题已关闭",
+    "photo-ux-texture-blue-circles-square": "尺寸不匹配",
+    "photo-ux-texture-blue-diagonal-square": "尺寸不匹配",
+    "photo-ux-texture-blue-diagonal-wide": "图片主题已关闭",
+    "photo-ux-texture-blue-diamond-square": "尺寸不匹配",
+    "photo-ux-texture-blue-diamond-wide": "图片主题已关闭",
+    "photo-ux-texture-orange-circles-square": "尺寸不匹配",
+    "photo-ux-texture-orange-diagonal-square": "尺寸不匹配",
+    "photo-ux-texture-orange-diagonal-wide": "图片主题已关闭",
+    "photo-ux-texture-orange-diamond-square": "尺寸不匹配",
+    "photo-ux-texture-orange-diamond-wide": "图片主题已关闭",
+    "photo-ux-texture-purple-circles-square": "尺寸不匹配",
+    "photo-ux-texture-purple-diagonal-square": "尺寸不匹配",
+    "photo-ux-texture-purple-diagonal-wide": "图片主题已关闭",
+    "photo-ux-texture-purple-diamond-square": "尺寸不匹配",
+    "photo-ux-texture-purple-diamond-wide": "图片主题已关闭",
+    "photo-ux-violin-stage-square": "尺寸不匹配"
+  },
+  "selectorError": null,
+  "sourceSize": "2x4",
+  "subjectlessWideGate": null,
+  "theme": {
+    "background": {
+      "colors": [
+        "#FFFFE0CC",
+        "#FFFFF7F2"
+      ],
+      "direction": "RightBottom"
+    },
+    "backgroundAliases": [
+      "#FFFFE0CC",
+      "#FFFFF7F2"
+    ],
+    "content": {
+      "explicitTextAlpha": {
+        "secondary": 204,
+        "tertiary": 153
+      },
+      "panelBySize": {
+        "2x2": "#CCFFFFFF",
+        "2x4": "#99FFFFFF"
+      },
+      "roles": {
+        "componentSecondary": "#338C4B1C",
+        "componentTertiary": "#1A8C4B1C",
+        "graphicPrimary": "#FF8C4B1C",
+        "graphicSecondary": "#998C4B1C",
+        "graphicTertiary": "#668C4B1C",
+        "primary": "#FF8C4B1C",
+        "secondary": "#998C4B1C",
+        "tertiary": "#668C4B1C"
+      }
+    },
+    "description": "暖色浅色微渐变，沿用原业务配色。",
+    "enabled": true,
+    "family": "warm",
+    "id": "gradient-warm",
+    "kind": "gradient",
+    "name": "暖色浅色微渐变",
+    "paletteFamilies": [
+      "warm",
+      "yellow",
+      "orange",
+      "red"
+    ],
+    "pool": "standard",
+    "sizes": [
+      "2x2",
+      "2x4"
+    ]
+  },
+  "themeId": "gradient-warm",
+  "unmetPreferences": [],
+  "userColors": {},
+  "userPreferences": []
+}

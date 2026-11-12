@@ -1,0 +1,177 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "语义布局不符合合同：节点 primary：details 槽必须使用 TextBlock、TopTextBottomValue、SummaryList 或 EventCard。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "layout_structure",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "9fca55c926cb875e",
+      "instruction": "只修复错误消息定位的 Layout、Region 或 Group 节点：严格按消息给出的合同调整该节点直属 children 的数量、顺序和角色，并补齐或替换错误角色。Group 整体只占一个直属角色；title-count 只占标题角色；title-content-action 的动作角色必须使用 PillButton；W-content-side-slots 的固定动作槽使用 CardButton。保持其它区域、事实、绑定、Action 及已经合法的 layout/variant 不变，不修改语义展开后的 Row/Column 几何。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "layout_structure"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "b379a587e6bba101"
+      },
+      "noProgress": false,
+      "repairStrategy": "semantic_layout_contract_repair",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/districtName\"},\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"/data/weather/location/districtName\",\"青浦区\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/location/cityCode\",\"60814\"]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_PLAN_COVERAGE_FAILED",
+        "duplicateFacts": [
+          {
+            "actualVisibleCount": 2,
+            "dataId": "/data/weather/current/condition",
+            "expectedVisibleCount": 1,
+            "occurrences": [
+              {
+                "componentId": "primary",
+                "componentType": "EmphasisText",
+                "property": "secondaryText"
+              },
+              {
+                "componentId": "details",
+                "componentType": "SummaryList",
+                "property": "items[0]"
+              }
+            ],
+            "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+            "requiredDisplayPositions": [],
+            "requirement": "当前天气现象"
+          }
+        ],
+        "message": "Plan fact is displayed more than once in visible DSL: 当前天气现象 (/data/weather/current/condition); expected 1, got 2; occurrences: primary (EmphasisText).secondaryText, details (SummaryList).items[0].",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "details: SummaryList.items requires 2 to 3 entries.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 2,
+    "selectedRepairStrategy": {
+      "category": "plan_coverage",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "fe745024ba47d4f6",
+      "instruction": "修复 duplicateFacts 列出的重复展示事实。逐项核对 occurrences，确保每个报错 dataId 最终只在一个可见属性中出现。优先保留同时具有明确对象、标签、完整值和单位的语义表达，不因字号更大就保留含义不清的裸值或生硬拼接。若同一事实同时出现在 InfoBlock.primaryText/secondaryText 与其它组件，优先保留InfoBlock 的必填文本、完整绑定、标签和单位，从其它组件删除可合法移除的重复属性或条目。例如 upper.primaryText 与 content_support.items[2].value 重复时，保留 upper，只删除 content_support.items[2]；实际组件和索引以本轮 occurrences 为准，不要把 upper 改绑到另一项已展示事实。不得只清空条目的 value 而留下 label；删除后仍须满足组件最少项数、必填属性和父槽合同。若其它重复位置也是必填属性或含独有信息，不能硬删，按既有范围重组必要信息组或父布局。只删除其它重复绑定：重复位于 SecondaryBody 单个 item 时只删除该 item；表达式同时包含多个 dataId 时只移除报错的重复引用，不连带删除未报错事实。组件仍有其它有效内容时保留组件；组件变空时删除组件行并同步删除直接父级 children 引用。不得修改 accepted Plan、删除唯一剩余展示、删除数据行、静态化动态值，或改变未报错的事实、Action、图标和区域。完成后逐项复查报错 dataId 的可见次数恰好为1，并确认没有空组件、孤立组件或失效引用。去重后 SecondaryBody 仍只能承担辅助信息；若核心组件或当前信息组语义不再成立，在本轮允许范围内重组选型，但不得重新引入重复绑定。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": true,
+        "observedCategories": [
+          "layout_structure",
+          "plan_coverage"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "df703386e14a4558"
+      },
+      "noProgress": false,
+      "repairStrategy": "deduplicate_visible_facts",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "information_group"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/districtName\"},\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"details\",\"SummaryList\",{\"items\":[{\"path\":\"/data/weather/current/condition\"}]}]\n[\"/data/weather/location/districtName\",\"青浦区\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/location/cityCode\",\"60814\"]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "语义布局不符合合同：节点 primary：details 槽必须使用 TextBlock、TopTextBottomValue、SummaryList 或 EventCard。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 3,
+    "selectedRepairStrategy": {
+      "category": "layout_structure",
+      "categoryAttempt": 2,
+      "consecutiveFailures": 1,
+      "fingerprint": "9fca55c926cb875e",
+      "instruction": "只修复错误消息定位的 Layout、Region 或 Group 节点：严格按消息给出的合同调整该节点直属 children 的数量、顺序和角色，并补齐或替换错误角色。Group 整体只占一个直属角色；title-count 只占标题角色；title-content-action 的动作角色必须使用 PillButton；W-content-side-slots 的固定动作槽使用 CardButton。保持其它区域、事实、绑定、Action 及已经合法的 layout/variant 不变，不修改语义展开后的 Row/Column 几何。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": true,
+        "observedCategories": [
+          "layout_structure",
+          "plan_coverage",
+          "layout_structure"
+        ],
+        "revisitedTopology": true,
+        "topologyFingerprint": "b379a587e6bba101"
+      },
+      "noProgress": false,
+      "repairStrategy": "semantic_layout_contract_repair",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/districtName\"},\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"/data/weather/location/districtName\",\"青浦区\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/location/cityCode\",\"60814\"]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "语义布局不符合合同：节点 primary：details 槽必须使用 TextBlock、TopTextBottomValue、SummaryList 或 EventCard。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 4,
+    "selectedRepairStrategy": {
+      "approvedOmittedFactIndexes": [
+        2
+      ],
+      "category": "layout_structure",
+      "categoryAttempt": 3,
+      "consecutiveFailures": 2,
+      "fallbackAttempt": 0,
+      "fallbackAttemptLimit": 2,
+      "fallbackRemainingAttempts": 2,
+      "fallbackStage": "drop_optional_component",
+      "fingerprint": "9fca55c926cb875e",
+      "instruction": "已进入有界删除兜底。只允许删除程序指定的一个非 Action 业务展示组件：title (SingleLineTitle)，对应信息：所在区县名称。必须同时从直接父组件 children 中移除该组件 ID，并重排其余全部 must/should 事实与 Action；本轮不得删除任何其他组件、改变动态绑定、缩字、裁切或隐藏内容。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": true,
+        "observedCategories": [
+          "layout_structure",
+          "plan_coverage",
+          "layout_structure",
+          "layout_structure"
+        ],
+        "revisitedTopology": true,
+        "topologyFingerprint": "b379a587e6bba101"
+      },
+      "noProgress": true,
+      "optionalDrop": {
+        "allowedOmittedFactIndexes": [
+          2
+        ],
+        "componentId": "title",
+        "componentType": "SingleLineTitle",
+        "containsMustFacts": false,
+        "requirements": [
+          "所在区县名称"
+        ]
+      },
+      "repairStrategy": "drop_optional_component",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "full_dsl"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/districtName\"},\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"/data/weather/location/districtName\",\"青浦区\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/location/cityCode\",\"60814\"]"
+  }
+]

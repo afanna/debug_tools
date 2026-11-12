@@ -1,0 +1,103 @@
+{
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "districtName": "滨江区",
+          "forecastDays": 3,
+          "prefectureName": "杭州市"
+        },
+        "capabilityId": "ViewWeather",
+        "writeResultTo": "/data/weather"
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "action": {
+          "args": {
+            "intentName": "CallPhone",
+            "params": {
+              "phoneNumber": "1388888888"
+            }
+          },
+          "call": "clickToApi"
+        },
+        "capabilityId": "event.call.phone"
+      }
+    ],
+    "description": "实时天气卡片，显示当前位置、实时温度、天气变化和空气质量，支持一键拨打电话",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "HOP-AL00 7.0.0.105",
+    "size": "2x2",
+    "title": "实时天气",
+    "uid": "batch-0360acc5-00004-000",
+    "userQuery": "生成一个实时观察的天气卡片，显示位置、实时温度、天气变化、空气质量等，并且可以一键拨打电话"
+  },
+  "dataCapabilities": [
+    {
+      "id": "ViewWeather",
+      "inputSchema": {
+        "districtName": "滨江区",
+        "forecastDays": 3,
+        "prefectureName": "杭州市"
+      }
+    }
+  ],
+  "description": "实时天气卡片，显示当前位置、实时温度、天气变化和空气质量，支持一键拨打电话",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "ohos",
+    "prdVer": "11.7.8.303",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261019074911243"
+  },
+  "eventCapabilities": [
+    {
+      "actionTemplate": {
+        "args": {
+          "intentName": "CallPhone",
+          "params": {
+            "phoneNumber": "1388888888"
+          }
+        },
+        "call": "clickToApi"
+      },
+      "dynamicArguments": [
+        {
+          "description": "填写用户提供的电话号码；未提供时填写空字符串。",
+          "path": "/params/phoneNumber",
+          "type": "string"
+        }
+      ],
+      "id": "event.call.phone"
+    }
+  ],
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "HOP-AL00 7.0.0.105",
+  "session": {
+    "interactionId": "Q142-000",
+    "isNew": true,
+    "sessionId": "batch-0360acc5"
+  },
+  "title": "实时天气",
+  "userAuth": {
+    "user": {
+      "userId": "batch-0360acc5-00004-000"
+    }
+  },
+  "userQuery": "生成一个实时观察的天气卡片，显示位置、实时温度、天气变化、空气质量等，并且可以一键拨打电话",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

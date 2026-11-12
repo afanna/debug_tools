@@ -1,0 +1,33 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:cd878b9d578d5571f1feeb5dc72b92d44c29b94a316bab3a7d8ec3de29531418",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_1f0efc1f-43a9-480e-b350-53d4d040168c.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.bell_fill"
+    ],
+    "data": [
+      "GetMemoData"
+    ],
+    "event": [
+      {
+        "args": {
+          "abilityName": "MainAbility",
+          "bundleName": "com.huawei.hmos.notepad",
+          "intentName": "ViewNote",
+          "params": {
+            "launchSource": "1",
+            "launchType": "0"
+          }
+        },
+        "call": "clickToIntent",
+        "description": "打开华为备忘录应用。",
+        "id": "event.viewNote"
+      }
+    ]
+  },
+  "errorCode": "",
+  "removedCapabilities": [],
+  "status": "success",
+  "suggestSize": "2x2"
+}

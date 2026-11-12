@@ -1,0 +1,39 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/earphone/earphoneName\"},\"fontSize\":12}]\n[\"primary\",\"EmphasisText\",{\"mainText\":\"{{ ${/data/earphone/batteryLevel} + '%' }}\",\"secondaryText\":{\"path\":\"/data/earphone/chargingStatusDesc\"},\"fontSize\":18}]\n[\"details\",\"TextBlock\",{\"items\":[{\"label\":\"左耳\",\"value\":\"{{ ${/data/earphone/leftBatteryLevel} + '%' }}\"},{\"label\":\"右耳\",\"value\":\"{{ ${/data/earphone/rightBatteryLevel} + '%' }}\"},{\"label\":\"耳机盒\",\"value\":\"{{ ${/data/earphone/batteryLevel} + '%' }}\"}]}]\n[\"/data/earphone/earphoneName\",\"示例耳机\"]\n[\"/data/earphone/batteryLevel\",80]\n[\"/data/earphone/leftBatteryLevel\",76]\n[\"/data/earphone/rightBatteryLevel\",78]\n[\"/data/earphone/chargingStatusDesc\",\"未充电\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_PLAN_COVERAGE_FAILED",
+      "message": "Plan fact is displayed more than once in visible DSL: 耳机盒（整体）剩余电量百分比 (/data/earphone/batteryLevel); expected 1, got 2; occurrences: primary (EmphasisText).mainText, details (TextBlock).items[2].value.",
+      "duplicateFacts": [
+        {
+          "requirement": "耳机盒（整体）剩余电量百分比",
+          "dataId": "/data/earphone/batteryLevel",
+          "expectedVisibleCount": 1,
+          "actualVisibleCount": 2,
+          "occurrences": [
+            {
+              "componentId": "primary",
+              "componentType": "EmphasisText",
+              "property": "mainText"
+            },
+            {
+              "componentId": "details",
+              "componentType": "TextBlock",
+              "property": "items[2].value"
+            }
+          ],
+          "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+          "requiredDisplayPositions": [
+            {
+              "componentId": "primary",
+              "componentType": "EmphasisText",
+              "property": "mainText"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

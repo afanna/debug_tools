@@ -1,0 +1,101 @@
+{
+  "userQuery": "在桌面添加一个天气小部件，展示当前天气和未来天气预报",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.weather",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Weather_CityCode",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "weather": {
+        "location": {
+          "prefectureName": {
+            "type": "string",
+            "description": "城市名称",
+            "sampleValue": "上海市"
+          },
+          "districtName": {
+            "type": "string",
+            "description": "区或县名称",
+            "sampleValue": "青浦区"
+          },
+          "cityCode": {
+            "type": "string",
+            "description": "城市代码，如60814代表青浦区",
+            "sampleValue": "60814"
+          }
+        },
+        "current": {
+          "temperatureText": {
+            "type": "string",
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃"
+          },
+          "condition": {
+            "type": "string",
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云"
+          },
+          "humidityPercent": {
+            "type": "number",
+            "description": "当前相对湿度的纯数值百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”。",
+            "sampleValue": 68
+          }
+        },
+        "daily": [
+          {
+            "weekday": {
+              "type": "string",
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四"
+            },
+            "condition": {
+              "type": "string",
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云"
+            },
+            "temperatureRangeText": {
+              "type": "string",
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃"
+            }
+          },
+          {
+            "weekday": {
+              "type": "string",
+              "description": "星期文本，例如“星期日”。",
+              "sampleValue": "星期四"
+            },
+            "condition": {
+              "type": "string",
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云"
+            },
+            "temperatureRangeText": {
+              "type": "string",
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.ic_weather_monochrome",
+      "src": "resources/base/media/ic_weather_monochrome.svg",
+      "description": "样式：黑色单色云朵图标，原始尺寸为 24×24，可随主题染成白色或黑色；选择：普通天气或天气详情需求的首选云朵图标。适用：天气卡片中配合 ViewWeather 的 current.condition 或 daily.condition 展示天气现象，也可与 event.open.weather 组成天气详情入口。图标仅表示天气主题，不代表晴、阴、雨等具体天气状态。"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "apiVersion": "batch-postprocess-v2",
+  "scope": "sample",
+  "runId": "batch_20261106_160145_13ea8cbd",
+  "sample": {
+    "id": "Q464",
+    "fileName": "Q464.json",
+    "title": "行程提醒",
+    "query": "为用户生成行程提醒卡片，展示航班FU6686郑州新郑国际机场飞往厦门高崎国际机场的行程信息，计划出港时间2026年11月1日22:40，计划到港时间2026年11月2日00:50。本轮卡片静态内容（用作展示的外部事实）：航班号FU6686，郑州新郑国际机场→厦门高崎国际机场，计划出港2026-11-01 22:40，计划到港2026-11-02 00:50",
+    "size": "2x4",
+    "sequence": 52,
+    "status": "failed",
+    "attemptCount": 1,
+    "elapsedMs": 14423.62,
+    "errorCode": "",
+    "error": "UpstreamToolError: final streamContent 缺少业务字段: type",
+    "artifactAvailable": false,
+    "dslAvailable": false,
+    "traceStatus": "complete",
+    "traceRecordCount": 144,
+    "traceSchemaVersion": "generation-trace-v2",
+    "traceDurationMs": 14402.74,
+    "uid": "batch-13ea8cbd-00052-000",
+    "generationMetrics": {
+      "firstDsl": "failed",
+      "requestSize": "2x4",
+      "firstRequestStatus": "failed",
+      "firstRequestDelivered": false,
+      "qualityRepairAttempts": 5,
+      "modelPhysicalCalls": 7,
+      "repairObservedAttempts": 1,
+      "modelObservedAttempts": 1,
+      "terminalAttempts": 1,
+      "missingInformationWarnings": null,
+      "retryParameters": {
+        "interfaceRetryEnabled": [
+          true
+        ],
+        "interfaceExtraRetries": [
+          1
+        ],
+        "qualityRepairEnabled": [
+          true
+        ],
+        "qualityRepairMaxAttempts": [
+          5
+        ],
+        "singleStepGenerationFallbackEnabled": [
+          false
+        ],
+        "singleStepWidgetEditEnabled": [
+          true
+        ],
+        "dropPlanFactValidationEnabled": [
+          false
+        ],
+        "photoBackgroundThemeEnabled": [
+          false
+        ],
+        "subjectlessWideThemeEnabled": [
+          false
+        ],
+        "squareMusicPhotoExpansionEnabled": [
+          false
+        ],
+        "squarePhotoExpansionEnabled": [
+          false
+        ],
+        "deepseekOfficialHttpUseSdkEnabled": [
+          true
+        ],
+        "modelFailureRetryEnabled": [
+          true
+        ],
+        "modelFailureExtraRetries": [
+          1
+        ],
+        "fallbackModelFailureExtraRetries": [
+          1
+        ],
+        "fallbackEnabled": [
+          true
+        ],
+        "argumentRepairEnabled": [
+          false
+        ],
+        "argumentRepairMaxAttempts": [
+          2
+        ],
+        "argumentRepairReminderCount": [
+          1
+        ],
+        "interfaceMaxAttempts": [
+          2
+        ],
+        "planMaxAttempts": [
+          2
+        ]
+      }
+    }
+  },
+  "runDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd",
+  "sampleDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q464",
+  "finalAttemptDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\Q464\\attempt_000",
+  "outputDir": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261106_160145_13ea8cbd\\postprocess\\exec_0befad308fce\\plugins\\data-analysis\\samples\\Q464",
+  "config": {},
+  "upstreamResults": []
+}

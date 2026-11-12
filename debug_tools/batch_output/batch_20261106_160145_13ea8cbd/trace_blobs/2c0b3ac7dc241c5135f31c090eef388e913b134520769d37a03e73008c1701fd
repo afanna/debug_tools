@@ -1,0 +1,9 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [
+    "周三至周日三餐具体安排未展示",
+    "部分关键提醒（饮水、加餐、少油炸等）未全部展示"
+  ],
+  "warnings": []
+}

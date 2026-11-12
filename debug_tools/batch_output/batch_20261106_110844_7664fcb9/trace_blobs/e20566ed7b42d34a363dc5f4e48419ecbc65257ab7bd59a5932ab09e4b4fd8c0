@@ -1,0 +1,44 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.ic_sportsHealth_bule"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData",
+        "TableText"
+      ],
+      "dataId": "/data/healthSport/dailySteps",
+      "priority": "must",
+      "requirement": "每日步数（纯整数，展示时追加“步”）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/healthSport/dailyTotalCaloriesText",
+      "priority": "must",
+      "requirement": "日常活动总消耗热量文本（已含千卡单位）"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/healthSport/dailyDistanceText",
+      "priority": "must",
+      "requirement": "日常活动总距离文本（已含米/公里单位）"
+    }
+  ],
+  "layoutHints": [
+    "S-quad-content",
+    "S-title-dual-content"
+  ]
+}

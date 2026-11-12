@@ -1,0 +1,33 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "compactDiagnostics": [
+      {
+        "actual": {
+          "dataPath": "/data/time/currentDate",
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例",
+          "value": {
+            "path": "/data/time/currentDate"
+          }
+        },
+        "category": "display",
+        "code": "COMPACT_DISPLAY_NUMERIC_COMPONENT_MISUSE",
+        "componentId": "left_primary",
+        "evidenceSource": "validation",
+        "expected": {
+          "valueRole": "numericOrSingleMeasurement"
+        },
+        "fixHint": "保留完整内容及原绑定，改用适合该信息角色的 EmphasisText 或正文组件；不要截取样例数字、强转数值或伪造字段。",
+        "legacyMessage": "component left_primary: EmphasizedData.value contains non-quantitative text; its content role requires a numeric value or a single measurement readout.",
+        "message": "EmphasizedData.value 使用了已确认的非量化文本。",
+        "propertyPath": "/value",
+        "severity": "error",
+        "sourceLine": 4,
+        "validationClass": "semantic"
+      }
+    ],
+    "message": "component left_primary: EmphasizedData.value contains non-quantitative text; its content role requires a numeric value or a single measurement readout.",
+    "stage": "validation"
+  }
+]

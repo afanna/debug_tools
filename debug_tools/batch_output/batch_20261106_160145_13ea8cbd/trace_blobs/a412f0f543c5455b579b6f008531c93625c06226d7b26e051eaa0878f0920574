@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"今日步数","priority":"must","dataId":"/data/healthSport/dailySteps","componentHints":["DataDisplay"]}],"layoutHints":["S-center"],"assetAssignments":{"actions":[],"title":{"assetId":"asset.emoji_run","reason":"跑步人物素材与步数主题语义匹配，用于DataDisplay图标位"}}}}

@@ -1,0 +1,33 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "Component rows must form one tree rooted at root. Unreachable component(s): left_battery. Attach each component to a reachable parent's children list.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "layout_structure",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "4be23ec4c55e552a",
+      "instruction": "修复违反合同的父布局结构，重新分配完整信息组和动作槽。 先检查以 root 为根的完整组件树：所有引用存在、每个节点只有一个父引用、没有环或孤立节点，并核对父区允许的角色和有序 children。不得只把孤立节点挂到不接受该角色的 Region；必要时重组受控 Group 或更换合法父布局。保留全部事实、绑定、标签、单位和动作，不通过删除孤立业务节点规避错误；结构闭合后重新核算各区容量，不修改展开后的内部几何。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "layout_structure"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": null
+      },
+      "noProgress": false,
+      "repairStrategy": "parent_layout_recompose",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":\"天气与电量\",\"fontSize\":12}]\n[\"left_weather\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_battery\",\"InfoBlock\",{\"variant\":\"slot\",\"primaryText\":{\"path\":\"/data/phoneBattery/batterySOCText\"},\"secondaryText\":{\"path\":\"/data/phoneBattery/chargingStatusDesc\"}}]\n[\"left\",\"Region\",{\"variant\":\"title-content\"},[\"left_title\",\"left_weather\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"今日运动\",\"fontSize\":12}]\n[\"right_sport\",\"TextBlock\",{\"items\":[{\"label\":\"步数\",\"value\":\"{{ ${/data/healthSport/dailySteps} + '步' }}\"},{\"label\":\"消耗\",\"value\":{\"path\":\"/data/healthSport/dailyTotalCaloriesText\"}},{\"label\":\"最近运动\",\"value\":{\"path\":\"/data/healthSport/exerciseTypeName\"}}]}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_sport\"]]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/phoneBattery/batterySOCText\",\"68%\"]\n[\"/data/phoneBattery/chargingStatusDesc\",\"未充电\"]\n[\"/data/phoneBattery/batterySOC\",68]\n[\"/data/healthSport/dailySteps\",6200]\n[\"/data/healthSport/dailyTotalCaloriesText\",\"420 千卡\"]\n[\"/data/healthSport/exerciseTypeName\",\"户外跑步\"]\n[\"/data/healthSport/exerciseDurationText\",\"40分\"]\n[\"/data/powerRanking/rankingList/0/appName\",\"示例\"]\n[\"/data/powerRanking/rankingList/0/powerText\",\"示例\"]\n[\"/data/powerRanking/rankingList/1/appName\",\"示例\"]\n[\"/data/powerRanking/rankingList/1/powerText\",\"示例\"]\n[\"/data/powerRanking/rankingList/2/appName\",\"示例\"]\n[\"/data/powerRanking/rankingList/2/powerText\",\"示例\"]"
+  }
+]

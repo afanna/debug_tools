@@ -1,0 +1,21 @@
+{
+  "id": "Q391",
+  "fileName": "Q391.json",
+  "title": "时间日期",
+  "query": "做一张桌面小组件卡片，显示当前时间和日期，点击打开闹钟应用。",
+  "size": "2x2",
+  "sequence": 52,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4106.43,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4093.77,
+  "uid": "batch-7664fcb9-00052-000",
+  "finalAttempt": 0
+}

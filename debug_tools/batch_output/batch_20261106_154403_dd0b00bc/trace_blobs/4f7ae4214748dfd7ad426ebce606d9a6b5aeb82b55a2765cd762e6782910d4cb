@@ -1,0 +1,9 @@
+{
+  "errors": [],
+  "informationCoverageSeverity": "warning",
+  "omittedFacts": [],
+  "warnings": [
+    "COMPACT_STATIC_GROUP_MISMATCH: 正文有2个对象，计划含1个核心组、共1组；不能删除核心对象或以共享说明代替本条目。",
+    "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。"
+  ]
+}

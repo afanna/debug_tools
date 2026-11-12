@@ -1,0 +1,9 @@
+{
+  "errors": [
+    "Plan fact is missing from visible DSL: 当前公历日期 (/data/currentTime/currentDate).",
+    "Plan fact is missing from visible DSL: 当前星期 (/data/currentTime/dayOfWeek)."
+  ],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [],
+  "warnings": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q505",
+  "fileName": "Q505.json",
+  "title": "耳机电量",
+  "query": "做一张耳机小组件卡片，显示蓝牙耳机的名称、耳机盒电量、左右耳电量及充电状态。",
+  "size": "2x2",
+  "sequence": 93,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4751.97,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4743.33,
+  "uid": "batch-13ea8cbd-00093-000",
+  "finalAttempt": 0
+}

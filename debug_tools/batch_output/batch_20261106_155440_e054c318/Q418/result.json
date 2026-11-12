@@ -1,0 +1,21 @@
+{
+  "id": "Q418",
+  "fileName": "Q418.json",
+  "title": "家人纪念日",
+  "query": "制作一张家人重要日子倒计时卡片，标注每位家人的名字和对应的公历日期，每天自动更新倒计时天数。奶奶生日：2027年10月5日（农历九月初六）；爷爷生日：2027年6月24日（农历五月二十）；爸爸生日：2027年4月19日（农历三月十三）；妈妈生日：2027年4月12日（农历三月初六）；崔景会生日：2027年10月28日（农历九月廿九）；父母结婚纪念日：2027年1月23日（农历腊月十六）。\n本轮卡片静态内容（用作展示的外部事实）：奶奶生日10月5日、爷爷生日6月24日、爸爸生日4月19日、妈妈生日4月12日、崔景会生日10月28日、父母结婚纪念日1月23日",
+  "size": "2x4",
+  "sequence": 6,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2051.33,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00006-000",
+  "finalAttempt": 0
+}

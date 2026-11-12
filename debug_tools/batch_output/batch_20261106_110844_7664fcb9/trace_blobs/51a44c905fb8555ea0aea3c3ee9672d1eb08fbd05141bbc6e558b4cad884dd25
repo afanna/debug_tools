@@ -1,0 +1,74 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/currentDate",
+        "/dayOfWeek",
+        "/lunarDate"
+      ],
+      "capabilityId": "GetCurrentTime",
+      "writeResultTo": "/data/time"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/currentDate",
+          "/dayOfWeek",
+          "/lunarDate"
+        ],
+        "capabilityId": "GetCurrentTime",
+        "writeResultTo": "/data/time"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "日期农历速览",
+    "size": "2x2",
+    "title": "日历农历",
+    "uid": "batch-7664fcb9-00022-000",
+    "userQuery": "帮我把农历添加到日历卡片里，制作一张显示当前日期和农历的日历卡片，展示公历日期、星期和农历日期。"
+  },
+  "description": "日期农历速览",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261030002234808"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMM-AL10 7.0.0.111",
+  "session": {
+    "interactionId": "Q332-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x2",
+  "title": "日历农历",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00022-000"
+    }
+  },
+  "userQuery": "帮我把农历添加到日历卡片里，制作一张显示当前日期和农历的日历卡片，展示公历日期、星期和农历日期。",
+  "utterance": {
+    "original": "帮我把农历添加到日历卡片里，制作一张显示当前日期和农历的日历卡片，展示公历日期、星期和农历日期。",
+    "type": "text"
+  },
+  "version": "1.0"
+}

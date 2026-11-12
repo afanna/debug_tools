@@ -1,0 +1,5 @@
+```genui
+["root","Layout",{"layout":"S-center"},["content"]]
+["content","DataDisplay",{"label":"今日步数","icon":"resources/base/media/emoji_run.png","value":"{{ ${/data/healthSport/dailySteps} + '步' }}","supportingText":"步"}]
+["/data/healthSport/dailySteps",6200]
+```

@@ -1,0 +1,21 @@
+{
+  "id": "Q447",
+  "fileName": "Q447.json",
+  "title": "运动数据",
+  "query": "将运动数据显示到桌面，创建一张运动健康卡片，展示今日步数、热量消耗、运动距离等运动数据。",
+  "size": "2x2",
+  "sequence": 35,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4009.71,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 3993.49,
+  "uid": "batch-dd0b00bc-00035-000",
+  "finalAttempt": 0
+}

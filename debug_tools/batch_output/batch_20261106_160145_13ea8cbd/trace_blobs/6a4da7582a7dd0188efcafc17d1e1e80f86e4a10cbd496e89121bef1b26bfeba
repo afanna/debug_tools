@@ -1,0 +1,33 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "time": {
+        "currentDate": {
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "dayOfWeek": {
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "lunarDate": {
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "updatedAt": {
+          "description": "端侧完成该时间数据组装的时间戳字符串，格式如 '2026-07-09 15:30:00'。",
+          "sampleValue": "示例",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "eventCandidates": [],
+  "size": "2x2",
+  "userQuery": "修改桌面卡片中的数字时钟文字颜色"
+}

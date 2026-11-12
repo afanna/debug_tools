@@ -1,0 +1,80 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/batterySOCText",
+        "/chargingStatusDesc",
+        "/batteryTemperatureText",
+        "/nowCurrentText",
+        "/voltageText",
+        "/batterySOC"
+      ],
+      "capabilityId": "GetPhoneBatteryInfo",
+      "writeResultTo": "/data/phoneBattery"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/batterySOCText",
+          "/chargingStatusDesc",
+          "/batteryTemperatureText",
+          "/nowCurrentText",
+          "/voltageText",
+          "/batterySOC"
+        ],
+        "capabilityId": "GetPhoneBatteryInfo",
+        "writeResultTo": "/data/phoneBattery"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "电池信息速览",
+    "size": "2x2",
+    "title": "电池状态",
+    "uid": "batch-7664fcb9-00033-000",
+    "userQuery": "创建一张电池状态卡片，显示当前电量、充电状态、电池温度、电流、电压等电池信息。"
+  },
+  "description": "电池信息速览",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMU-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261030130425457"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMU-AL10 7.0.0.111",
+  "session": {
+    "interactionId": "Q358-000",
+    "isNew": true,
+    "sessionId": "batch-7664fcb9"
+  },
+  "size": "2x2",
+  "title": "电池状态",
+  "userAuth": {
+    "user": {
+      "userId": "batch-7664fcb9-00033-000"
+    }
+  },
+  "userQuery": "创建一张电池状态卡片，显示当前电量、充电状态、电池温度、电流、电压等电池信息。",
+  "utterance": {
+    "original": "创建一张电池状态卡片，显示当前电量、充电状态、电池温度、电流、电压等电池信息。",
+    "type": "text"
+  },
+  "version": "1.0"
+}

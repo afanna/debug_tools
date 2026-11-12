@@ -1,0 +1,7 @@
+["root","Layout",{"layout":"S-title-dual-content"},["title","steps","details"]]
+["title","SingleLineTitle",{"title":"今日运动","icon":"resources/base/media/emoji_run.png","fontSize":12}]
+["steps","EmphasizedData",{"value":"{{ ${/data/healthSport/dailySteps} + '步' }}","fontSize":30}]
+["details","SecondaryBody",{"items":[{"label":"距离","value":{"path":"/data/healthSport/dailyDistanceText"}},{"label":"热量","value":{"path":"/data/healthSport/dailyTotalCaloriesText"}}],"separator":" | ","fontSize":14}]
+["/data/healthSport/dailySteps",6200]
+["/data/healthSport/dailyDistanceText","4.60 公里"]
+["/data/healthSport/dailyTotalCaloriesText","420 千卡"]

@@ -1,0 +1,26 @@
+{
+  "title": "时间天气",
+  "description": "河间实时天气与预报",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "GetCurrentTime",
+      "arguments": {},
+      "writeResultTo": "/data/time"
+    },
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "河间市",
+        "forecastDays": 3,
+        "prefectureName": "沧州市"
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}

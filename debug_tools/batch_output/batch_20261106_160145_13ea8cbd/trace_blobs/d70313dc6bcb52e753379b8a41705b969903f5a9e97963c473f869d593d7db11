@@ -1,0 +1,80 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.cake_fill"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "targetDate": "2027-01-08"
+      },
+      "candidateOutputFields": [
+        "/countdownDays"
+      ],
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.cake_fill"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "targetDate": "2027-01-08"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "我的生日倒计时",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "size": "2x2",
+    "title": "生日倒计时",
+    "uid": "batch-13ea8cbd-00017-000",
+    "userQuery": "我的生日是农历腊月初一，帮我做一个生日倒计时卡片。本轮卡片静态内容（用作展示的外部事实）：我的生日是农历腊月初一，对应公历2027年1月8日。"
+  },
+  "description": "我的生日倒计时",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261101041046369"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q429-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x2",
+  "title": "生日倒计时",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00017-000"
+    }
+  },
+  "userQuery": "我的生日是农历腊月初一，帮我做一个生日倒计时卡片。本轮卡片静态内容（用作展示的外部事实）：我的生日是农历腊月初一，对应公历2027年1月8日。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

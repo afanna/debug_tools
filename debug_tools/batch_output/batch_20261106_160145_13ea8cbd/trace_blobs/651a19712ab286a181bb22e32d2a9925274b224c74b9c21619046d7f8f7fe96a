@@ -1,0 +1,45 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.open.weather",
+        "assetId": null,
+        "reason": "Whole-card detail has no button icon."
+      }
+    ],
+    "title": {
+      "assetId": null,
+      "reason": "素材已分配给动作图标，且2x2图标预算内不再为标题复用"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/daily/0/condition",
+      "priority": "must",
+      "requirement": "明天青浦区的天气现象"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/daily/0/temperatureRangeText",
+      "priority": "must",
+      "requirement": "明天青浦区的最低温和最高温范围"
+    },
+    {
+      "actionId": "event.open.weather",
+      "priority": "must",
+      "requirement": "点击查看青浦区天气详情"
+    }
+  ],
+  "layoutHints": [
+    "S-title-content",
+    "S-title-dual-content"
+  ],
+  "wholeCardActionId": "event.open.weather"
+}

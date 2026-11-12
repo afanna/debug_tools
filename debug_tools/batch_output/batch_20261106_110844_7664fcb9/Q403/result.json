@@ -1,0 +1,21 @@
+{
+  "id": "Q403",
+  "fileName": "Q403.json",
+  "title": "Q版时钟天气",
+  "query": "设计一张2x4的Q版可爱风格桌面卡片，包含时间和天气信息。上方显示大号数字时钟（当前时间、日期、星期），下方显示当前天气（天气现象、温度），整体采用圆润可爱的Q版设计风格，色彩柔和温暖，与桌面壁纸自然融合，文字清晰易读。",
+  "size": "2x4",
+  "sequence": 61,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4491.52,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 74,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4482.03,
+  "uid": "batch-7664fcb9-00061-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 睡眠综合得分与状态.",
+    "stage": "validation"
+  }
+]

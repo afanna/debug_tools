@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 当前相对湿度.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "id": "Q424",
+  "fileName": "Q424.json",
+  "title": "算题面板",
+  "query": "做一个空白面板卡片，用于写算题。本轮卡片静态内容（用作展示的外部事实）：空白面板，用于书写算题。",
+  "size": "2x4",
+  "sequence": 12,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4952.48,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 86,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4943.9,
+  "uid": "batch-dd0b00bc-00012-000",
+  "finalAttempt": 0
+}

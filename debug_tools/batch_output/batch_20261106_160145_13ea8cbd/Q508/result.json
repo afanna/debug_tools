@@ -1,0 +1,21 @@
+{
+  "id": "Q508",
+  "fileName": "Q508.json",
+  "title": "今日天气",
+  "query": "做一张萧山今日天气卡片，显示当前温度和天气现象。本轮卡片静态内容（用作展示的外部事实）：萧山区今日小雨转中雨，14℃~19℃。",
+  "size": "2x2",
+  "sequence": 96,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5084.8,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5053.04,
+  "uid": "batch-13ea8cbd-00096-000",
+  "finalAttempt": 0
+}

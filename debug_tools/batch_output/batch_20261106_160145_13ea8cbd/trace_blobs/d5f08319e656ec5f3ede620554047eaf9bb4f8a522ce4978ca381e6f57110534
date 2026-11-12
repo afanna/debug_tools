@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 睡眠综合得分与状态 (/data/healthSport/sleepScore).",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

@@ -1,0 +1,4 @@
+["root","Layout",{"layout":"S-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"11月学术活动日程"}]
+["body","TextList",{"items":[{"primaryText":"镇江","secondaryText":"11月6日 PC镇江实地指导"},{"primaryText":"北京","secondaryText":"11月7日 PC天坛学习班"}]}]
+["/state/ready",true]

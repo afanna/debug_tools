@@ -1,0 +1,5 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"center","justifyContent":"center","padding":12},["content"]]
+["content","DataDisplay",{"label":"今天","value":{"path":"/data/currentTime/currentDate"},"supportingText":"{{ ${/data/currentTime/dayOfWeek} + ' · ' + ${/data/currentTime/lunarDate} }}","width":"matchParent"}]
+["/data/currentTime/currentDate","示例"]
+["/data/currentTime/dayOfWeek","示例"]
+["/data/currentTime/lunarDate","示例"]

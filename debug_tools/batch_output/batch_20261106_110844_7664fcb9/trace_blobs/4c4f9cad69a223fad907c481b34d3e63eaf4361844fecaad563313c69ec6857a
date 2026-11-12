@@ -1,0 +1,91 @@
+{
+  "appVersion": "11.7.8.372",
+  "assetCandidates": [
+    {
+      "description": "样式：浅灰渐变云朵内带深色感叹号的天气预警图标，原始尺寸为 24×24，SVG 矢量图（保留原色，禁止染色）保留渐变配色；适用：天气卡片中的气象预警提示，可结合 ViewWeather 输出的 alertLevel 字段展示，也可作为天气预警详情入口的辅助图标。不表示所有天气变化或空气质量异常；无预警时不应显示该图标，也不替代具体预警等级文案。",
+      "id": "asset.ic_weatherWarning",
+      "src": "resources/base/media/ic_weatherWarning.svg"
+    },
+    {
+      "description": "样式：蓝色纵向渐变圆形底上的白色电话听筒图标，原始尺寸为 20×20，SVG 矢量图（保留原色，禁止染色）需保留原始渐变配色，禁止染色；适用：拨号、联系人呼叫或电话快捷操作卡片，可配合 event.call.phone 跳转到指定号码的拨号界面。图标不表示正在通话、来电或联系人身份。",
+      "id": "asset.ic_call_bule",
+      "src": "resources/base/media/ic_call_bule.svg"
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "weather": {
+        "current": {
+          "alertLevel": {
+            "description": "预警信息。当前气象预警信息，例如'暴雨橙色预警'、'高温黄色预警'、'台风蓝色预警'。无预警时为空字符串。",
+            "sampleValue": "大风蓝色预警",
+            "type": "string"
+          },
+          "condition": {
+            "description": "当前天气现象，例如“阴”“多云”“小雨”。",
+            "sampleValue": "多云",
+            "type": "string"
+          },
+          "temperatureText": {
+            "description": "可直接显示的当前温度文本，已包含“℃”单位；展示时不得再次追加温度单位。例如“29℃”。",
+            "sampleValue": "29℃",
+            "type": "string"
+          }
+        },
+        "daily": [
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            }
+          },
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            }
+          },
+          {
+            "condition": {
+              "description": "白天天气现象，来源于weather_icon。",
+              "sampleValue": "多云",
+              "type": "string"
+            },
+            "temperatureRangeText": {
+              "description": "可直接显示的最低温与最高温范围文本，每个温度值均已包含“℃”单位；展示时不得再次追加温度单位。例如“25℃ / 32℃”。",
+              "sampleValue": "25℃ / 32℃",
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "eventCandidates": [
+    {
+      "args": {
+        "intentName": "CallPhone",
+        "params": {
+          "phoneNumber": "15251852906"
+        }
+      },
+      "call": "clickToApi",
+      "description": "点击跳转至华为电话应用中指定号码的拨号界面。",
+      "id": "event.call.phone"
+    }
+  ],
+  "size": "2x4",
+  "userQuery": "生成一个异常天气家人关怀提醒卡片，显示天气和温度变化，具备天气预警功能，有一个可以直接联系家人的电话按钮。家人电话号码绑定王苏东，手机号码15251852906。本轮卡片静态内容（用作展示的外部事实）：家人王苏东的电话号码为15251852906。"
+}

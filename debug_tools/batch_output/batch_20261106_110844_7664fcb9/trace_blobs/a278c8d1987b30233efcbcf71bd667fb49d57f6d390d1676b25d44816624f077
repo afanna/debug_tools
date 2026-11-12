@@ -1,0 +1,62 @@
+{
+  "appVersion": "11.7.8.342",
+  "assetCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "battery": {
+        "batterySOC": {
+          "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+          "sampleValue": 68,
+          "type": "integer"
+        },
+        "batterySOCText": {
+          "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+          "numericSource": "/data/battery/batterySOC",
+          "sampleValue": "68%",
+          "type": "string"
+        },
+        "chargingStatusDesc": {
+          "description": "当前设备电池的充电状态文本描述。",
+          "sampleValue": "未充电",
+          "type": "string"
+        }
+      },
+      "steps": {
+        "mostUsedApps": [
+          {
+            "appName": {
+              "description": "应用名称文本，例如：'微信'、'设置'。若无法获取则回退为 '--'。",
+              "sampleValue": "示例",
+              "type": "string"
+            },
+            "totalDuration": {
+              "description": "应用使用时长的格式化文本，例如：'2小时30分钟'、'45分钟'、'12秒'。若无法解析则回退为 '--'。",
+              "sampleValue": "示例",
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "time": {
+        "currentDate": {
+          "description": "格式化的当前公历日期（年-月-日），例如 '2026-07-09'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "dayOfWeek": {
+          "description": "中文的星期描述，例如 '星期四'。",
+          "sampleValue": "示例",
+          "type": "string"
+        },
+        "lunarDate": {
+          "description": "格式化的中国传统农历日期，例如 '五月廿六'。若系统获取失败则可能为空字符串。",
+          "sampleValue": "示例",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "eventCandidates": [],
+  "size": "2x4",
+  "userQuery": "做一张桌面卡片，显示时间、日期、电量、步数和小艺简报内容。"
+}

@@ -1,0 +1,44 @@
+{
+  "userQuery": "每周三都开例会，帮我做一张到下一次例会的倒计时卡。",
+  "size": "2x2",
+  "appVersion": "11.9.9.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {
+      "dateCounter": {
+        "days": {
+          "type": "integer",
+          "description": "今天与本次实际目标日期之间的非负自然日天数，不包含单位。大于0时可搭配relationText和“天”展示；等于0时仅展示relationText。",
+          "sampleValue": 3
+        },
+        "relationText": {
+          "type": "string",
+          "description": "枚举字符串：['还剩','已过','就是今天']。根据当前日期与目标日期的关系，返回一个关联文本，便于直接拼接展示。例如与倒计时事件名称拼接：{'xx事件 '+{relationText}}作为标题，显示为“xx事件 还剩”。",
+          "sampleValue": "还剩"
+        },
+        "targetDateText": {
+          "type": "string",
+          "description": "本次实际目标的公历日期，格式为YYYY/MM/DD。单次计时返回目标日期对应的公历日期；周期计时返回本次选中的周期日期对应的公历日期。",
+          "sampleValue": "2026/11/09"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.stopwatch_fill",
+      "src": "resources/base/media/stopwatch_fill.svg",
+      "description": "样式：默认黑色的单色秒表实心图标，内部通过镂空表现表盘指针，支持通过 fillColor 与卡片配色统一；适用：计时功能、运动计时、倒计时。"
+    },
+    {
+      "id": "asset.calendar_fill",
+      "src": "resources/base/media/calendar_fill.svg",
+      "description": "样式：日历实心图标，默认黑色，图形为带格线的日历本造型；适用：日程管理、日历事件查看、当日安排。"
+    },
+    {
+      "id": "photo-ux-texture-purple-diamond-square",
+      "src": "https://lfcontentcenterdev.hwcloudtest.cn/pub_5/FaStore_fa_900_9/bb/v3/fa/osms/1/1/7016f2bb9242499a99b3439c2fb2ed26/fe04c25a2ecd41ea94617315efd39925.jpg",
+      "description": "主题背景"
+    }
+  ]
+}

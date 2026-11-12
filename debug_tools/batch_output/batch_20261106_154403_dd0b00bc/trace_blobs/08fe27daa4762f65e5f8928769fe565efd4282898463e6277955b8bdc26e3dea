@@ -1,0 +1,133 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "id": "fields",
+      "identity": "工资表项目",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "整卡主题标题",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "工资表"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "姓名项目",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "姓名"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "基本工资项目",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "基本工资"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "奖金项目",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "奖金"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "补贴项目",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "补贴"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "扣款项目",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "扣款"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "实发工资项目",
+      "sourceTexts": [
+        "通用工资表，包含项目：姓名、基本工资、奖金、补贴、扣款、实发工资"
+      ],
+      "text": "实发工资"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [],
+  "paletteFamily": "auto",
+  "presentationStyle": "rows",
+  "selectionNotes": [
+    "用户仅要求展示通用工资表格式及项目清单，无具体人员数据，按字段清单组织。",
+    "六个项目名均为短标签，右侧无具体数值，assist用省略号占位，保持单行可读。",
+    "标题取“工资表”，SingleLineList必须配标题。",
+    "无动态读取需求，静态展示即可。"
+  ],
+  "staticPresentationFeedback": [
+    "Compact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: body.item0_assist 完整文字需要 2 行，189vp 区域仅允许 1 行；请保持已接受文字与字号，换用更合适的组件；Plan阶段才能忠实精简。"
+  ]
+}

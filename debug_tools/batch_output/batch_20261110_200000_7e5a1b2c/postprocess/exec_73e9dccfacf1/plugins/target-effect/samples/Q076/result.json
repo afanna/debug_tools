@@ -1,0 +1,230 @@
+{
+  "sampleId": "Q076",
+  "status": "failed",
+  "summary": "可见性失败 · 65.8 分",
+  "facts": {
+    "verdict": "可见性失败",
+    "scenario": "repeat_day",
+    "gate": false,
+    "theme": "橙色无主体纹理 · 菱格（photo · 图+蒙层）",
+    "size": "2x2",
+    "specApplicable": true,
+    "score": 65.8,
+    "scoreVisibility": 17.9,
+    "scoreSpec": 15.0,
+    "passed": 23,
+    "failed": 10,
+    "pending": 0
+  },
+  "artifacts": [
+    {
+      "key": "verdict",
+      "data": [
+        {
+          "label": "尺寸",
+          "value": "2x2"
+        },
+        {
+          "label": "主题",
+          "value": "橙色无主体纹理 · 菱格（photo · 图+蒙层）"
+        },
+        {
+          "label": "规范布局",
+          "value": "12/20 项通过"
+        }
+      ],
+      "title": "规范布局",
+      "dataType": "metrics",
+      "renderer": "kpi"
+    },
+    {
+      "key": "issues",
+      "data": [
+        {
+          "规则": "SPEC.MASK",
+          "说明": "黑色蒙层 60%",
+          "状态": "失败",
+          "扣分": 1.2,
+          "预期": "黑色蒙层 60%（55%–70%）",
+          "实际": "未找到黑色蒙层",
+          "证据": {}
+        },
+        {
+          "规则": "SPEC.TITLE_FONT",
+          "说明": "标题 16/20fp",
+          "状态": "失败",
+          "扣分": 1.2,
+          "预期": "主 16 或 20，副 16",
+          "实际": "主 12.0",
+          "证据": {
+            "component": "title_title",
+            "subtitle": null
+          }
+        },
+        {
+          "规则": "SPEC.TITLE_ELLIPSIS",
+          "说明": "标题单行省略",
+          "状态": "失败",
+          "扣分": 1.2,
+          "预期": "maxLines=1 且 textOverflow=ellipsis",
+          "实际": "未设置：title_title",
+          "证据": {
+            "components": [
+              "title_title"
+            ]
+          }
+        },
+        {
+          "规则": "SPEC.TITLE_COLOR",
+          "说明": "标题白色",
+          "状态": "失败",
+          "扣分": 1.2,
+          "预期": "主 100% 白，副 60% 白",
+          "实际": "主 alpha=0.8",
+          "证据": {
+            "component": "title_title",
+            "subtitle": null
+          }
+        },
+        {
+          "规则": "SPEC.PRIMARY_FONT",
+          "说明": "主值 56/38fp",
+          "状态": "失败",
+          "扣分": 1.2,
+          "预期": "56 或 38",
+          "实际": "30.0",
+          "证据": {
+            "component": "days_value",
+            "expectedDays": 0,
+            "digits": 1
+          }
+        },
+        {
+          "规则": "SPEC.UNIT_FONT",
+          "说明": "单位 16fp 独立",
+          "状态": "失败",
+          "扣分": 1.2,
+          "预期": "16",
+          "实际": "days_unit=12.0",
+          "证据": {
+            "components": [
+              "days_unit"
+            ]
+          }
+        },
+        {
+          "规则": "SPEC.SUPPORT_FONT",
+          "说明": "副文本 16fp",
+          "状态": "失败",
+          "扣分": 1.2,
+          "预期": "16",
+          "实际": "target_item0_value=12.0",
+          "证据": {
+            "failed": [
+              "target_item0_value"
+            ]
+          }
+        },
+        {
+          "规则": "SPEC.SUPPORT_COLOR",
+          "说明": "副文本 60% 白",
+          "状态": "失败",
+          "扣分": 1.2,
+          "预期": "白色 60%",
+          "实际": "target_item0_value alpha=1.0",
+          "证据": {
+            "failed": [
+              "target_item0_value alpha=1.0"
+            ]
+          }
+        },
+        {
+          "规则": "VIS.TEXT_CLIPPED",
+          "说明": "文字未被裁切",
+          "状态": "失败",
+          "扣分": 3.6,
+          "预期": "对应可见性规则通过",
+          "实际": "Web 渲染中文字被裁剪或省略",
+          "证据": {
+            "findings": [
+              {
+                "components": [
+                  "days_value:18"
+                ],
+                "source": "GEOMETRY.CLIP_TEXT",
+                "text": "0",
+                "box": {
+                  "x": 12,
+                  "y": 38,
+                  "width": 18.03125,
+                  "height": 30
+                },
+                "component": "days_value"
+              }
+            ],
+            "count": 1
+          }
+        },
+        {
+          "规则": "VIS.CONTRAST_LOW",
+          "说明": "文字对比度",
+          "状态": "失败",
+          "扣分": 3.6,
+          "预期": "普通文字 ≥ 4.5:1，大字号 ≥ 3:1",
+          "实际": "5 个文本节点对比度偏低",
+          "证据": {
+            "nodes": [
+              {
+                "id": "title_title",
+                "ratio": 1.54,
+                "threshold": 4.5,
+                "status": "fail",
+                "variance": 0.2
+              },
+              {
+                "id": "days_value",
+                "ratio": 1.26,
+                "threshold": 3.0,
+                "status": "fail",
+                "variance": 0.3
+              },
+              {
+                "id": "days_unit",
+                "ratio": 1.54,
+                "threshold": 4.5,
+                "status": "fail",
+                "variance": 0.1
+              },
+              {
+                "id": "target_item0_label",
+                "ratio": 1.41,
+                "threshold": 4.5,
+                "status": "fail",
+                "variance": 0.1
+              },
+              {
+                "id": "target_item0_value",
+                "ratio": 1.47,
+                "threshold": 4.5,
+                "status": "fail",
+                "variance": 0.2
+              }
+            ]
+          }
+        }
+      ],
+      "title": "失败与待复核项",
+      "dataType": "issues",
+      "renderer": "table"
+    },
+    {
+      "key": "original-image",
+      "path": "original.png",
+      "alt": "Q076 模型渲染",
+      "title": "模型渲染",
+      "dataType": "image",
+      "renderer": "gallery",
+      "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_73e9dccfacf1/assets/target-effect/samples/Q076/original.png"
+    }
+  ]
+}

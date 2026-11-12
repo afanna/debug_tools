@@ -1,0 +1,40 @@
+[
+  {
+    "actual": {
+      "minimumRequiredWidth": 208.0,
+      "occupancy": [
+        {
+          "componentId": "right_sport_item0",
+          "margin": 0.0,
+          "minimumWidth": 64.0
+        },
+        {
+          "componentId": "right_sport_item1",
+          "margin": 0.0,
+          "minimumWidth": 64.0
+        },
+        {
+          "componentId": "right_sport_item2",
+          "margin": 0.0,
+          "minimumWidth": 64.0
+        },
+        {
+          "gaps": 16.0
+        }
+      ],
+      "overflow": 92.0
+    },
+    "category": "layout",
+    "code": "COMPACT_LAYOUT_WIDTH_OVERFLOW",
+    "evidenceSource": "expanded",
+    "expected": {
+      "maximumWidth": 116.0,
+      "preserveFixedContent": true
+    },
+    "fixHint": "根据子项占用与可用宽度调整区域分配，或改用合法组合。保留全部必要读数、标签、绑定和动作；尺寸与字号调整须遵守对应组件的设计约束和最小可读尺寸。调整后重新校验，不能依靠裁切、遮挡或丢失内容消除报错。",
+    "legacyMessage": "component right_sport: horizontal layout requires at least 208vp within 116vp; it overflows by 92vp.",
+    "message": "component right_sport: horizontal layout requires at least 208vp within 116vp; it overflows by 92vp.",
+    "severity": "error",
+    "validationClass": "semantic"
+  }
+]

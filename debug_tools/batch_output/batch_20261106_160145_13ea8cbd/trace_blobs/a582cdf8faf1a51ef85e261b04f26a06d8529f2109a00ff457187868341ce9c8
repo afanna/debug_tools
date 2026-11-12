@@ -1,0 +1,7 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"start","justifyContent":"start","padding":8,"itemMargin":8},["first","second"]]
+["first","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/noteCount"},"secondaryText":"笔记","unit":"篇","width":"matchParent","layoutWeight":1}]
+["second","InfoBlock",{"surfaceRole":"panel","primaryText":{"path":"/data/memo/todoTotalCount"},"secondaryText":"{{ '未完成 ' + ${/data/memo/todoPendingCount} + ' · 已完成 ' + ${/data/memo/todoCompletedCount} }}","unit":"项","width":"matchParent","layoutWeight":1}]
+["/data/memo/noteCount",0]
+["/data/memo/todoTotalCount",0]
+["/data/memo/todoPendingCount",0]
+["/data/memo/todoCompletedCount",0]

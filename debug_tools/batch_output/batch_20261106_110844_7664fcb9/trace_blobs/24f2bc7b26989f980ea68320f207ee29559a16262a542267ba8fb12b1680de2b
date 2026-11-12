@@ -1,0 +1,40 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "duplicateFacts": [
+      {
+        "actualVisibleCount": 2,
+        "dataId": "/data/calendar/events/0/title",
+        "expectedVisibleCount": 1,
+        "occurrences": [
+          {
+            "componentId": "primary_body",
+            "componentType": "EmphasisText",
+            "property": "mainText"
+          },
+          {
+            "componentId": "details",
+            "componentType": "EventCard",
+            "property": "items[0].title"
+          }
+        ],
+        "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+        "requiredDisplayPositions": [
+          {
+            "componentId": "primary_body",
+            "componentType": "EmphasisText",
+            "property": "mainText"
+          }
+        ],
+        "requirement": "日程标题"
+      }
+    ],
+    "message": "Plan fact is displayed more than once in visible DSL: 日程标题 (/data/calendar/events/0/title); expected 1, got 2; occurrences: primary_body (EmphasisText).mainText, details (EventCard).items[0].title.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 距离日程开始的倒计天数 (/data/calendar/events/0/countdownDays).",
+    "stage": "validation"
+  }
+]

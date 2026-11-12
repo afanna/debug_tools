@@ -1,0 +1,181 @@
+{
+  "status": "failed",
+  "summary": "规范失败",
+  "facts": {
+    "verdict": "规范失败",
+    "scenario": "repeat_day",
+    "gate": false,
+    "expectedDays": 0,
+    "theme": "橙色无主体纹理 · 菱格（photo · 图+蒙层）",
+    "specApplicable": true,
+    "passed": 15,
+    "failed": 8,
+    "pending": 0
+  },
+  "artifacts": [
+    {
+      "key": "verdict",
+      "data": [
+        {
+          "label": "结论",
+          "value": "规范失败"
+        },
+        {
+          "label": "场景",
+          "value": "repeat_day"
+        },
+        {
+          "label": "期望天数",
+          "value": 0
+        },
+        {
+          "label": "门禁",
+          "value": "仅展示"
+        },
+        {
+          "label": "主题",
+          "value": "橙色无主体纹理 · 菱格（photo · 图+蒙层）"
+        }
+      ]
+    },
+    {
+      "key": "issues",
+      "data": [
+        {
+          "规则": "SPEC.MASK",
+          "说明": "黑色蒙层 60%",
+          "状态": "失败",
+          "扣分": "—",
+          "预期": "黑色蒙层 60%（55%–70%）",
+          "实际": "未找到黑色蒙层",
+          "证据": {}
+        },
+        {
+          "规则": "SPEC.TITLE_FONT",
+          "说明": "标题 16/20fp",
+          "状态": "失败",
+          "扣分": "—",
+          "预期": "主 16 或 20，副 16",
+          "实际": "主 12.0",
+          "证据": {
+            "component": "title_title",
+            "subtitle": null
+          }
+        },
+        {
+          "规则": "SPEC.TITLE_ELLIPSIS",
+          "说明": "标题单行省略",
+          "状态": "失败",
+          "扣分": "—",
+          "预期": "maxLines=1 且 textOverflow=ellipsis",
+          "实际": "未设置：title_title",
+          "证据": {
+            "components": [
+              "title_title"
+            ]
+          }
+        },
+        {
+          "规则": "SPEC.TITLE_COLOR",
+          "说明": "标题白色",
+          "状态": "失败",
+          "扣分": "—",
+          "预期": "主 100% 白，副 60% 白",
+          "实际": "主 alpha=0.8",
+          "证据": {
+            "component": "title_title",
+            "subtitle": null
+          }
+        },
+        {
+          "规则": "SPEC.PRIMARY_FONT",
+          "说明": "主值 56/38fp",
+          "状态": "失败",
+          "扣分": "—",
+          "预期": "56 或 38",
+          "实际": "30.0",
+          "证据": {
+            "component": "days_value",
+            "expectedDays": 0,
+            "digits": 1
+          }
+        },
+        {
+          "规则": "SPEC.UNIT_FONT",
+          "说明": "单位 16fp 独立",
+          "状态": "失败",
+          "扣分": "—",
+          "预期": "16",
+          "实际": "days_unit=12.0",
+          "证据": {
+            "components": [
+              "days_unit"
+            ]
+          }
+        },
+        {
+          "规则": "SPEC.SUPPORT_FONT",
+          "说明": "副文本 16fp",
+          "状态": "失败",
+          "扣分": "—",
+          "预期": "16",
+          "实际": "target_item0_value=12.0",
+          "证据": {
+            "failed": [
+              "target_item0_value"
+            ]
+          }
+        },
+        {
+          "规则": "SPEC.SUPPORT_COLOR",
+          "说明": "副文本 60% 白",
+          "状态": "失败",
+          "扣分": "—",
+          "预期": "白色 60%",
+          "实际": "target_item0_value alpha=1.0",
+          "证据": {
+            "failed": [
+              "target_item0_value alpha=1.0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "oracle",
+      "data": {
+        "sampleId": "Q076",
+        "scenario": "repeat_day",
+        "timezone": "Asia/Shanghai",
+        "referenceDate": "2026-11-03",
+        "targetDate": "2026-11-03",
+        "expectedDays": 0,
+        "expectedRelationText": "就是今天",
+        "expectedTargetDateText": "2026/11/03",
+        "writeResultTo": "/data/dateCounter",
+        "fields": [
+          "/days",
+          "/relationText",
+          "/targetDateText"
+        ],
+        "arguments": {
+          "targetDate": "2026-10-14",
+          "repeat": {
+            "unit": "day",
+            "interval": 2
+          }
+        },
+        "gate": false,
+        "provenance": {
+          "targetDate": "explicit",
+          "days": "ambiguous",
+          "relationText": "ambiguous",
+          "targetDateText": "ambiguous"
+        },
+        "notes": [
+          "下一次触发日与参考日相同，需确认“今天是否算下一次”"
+        ]
+      }
+    }
+  ]
+}

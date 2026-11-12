@@ -1,0 +1,22 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.cake_fill"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "DataDisplay",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/countdown/countdownDays",
+      "priority": "must",
+      "requirement": "距离生日（农历腊月初一，公历2027年1月8日）的倒计时天数"
+    }
+  ],
+  "layoutHints": [
+    "S-center"
+  ]
+}

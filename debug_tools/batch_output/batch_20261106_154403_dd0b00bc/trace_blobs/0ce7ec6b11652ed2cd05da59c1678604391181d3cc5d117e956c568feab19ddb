@@ -1,0 +1,12 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "Plan static text is not fully visible in DSL: 展示航班号 FU6686 与航线郑州新郑国际机场→厦门高崎国际机场的行程标题.",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "details: SummaryList.items requires 2 to 3 entries.",
+    "stage": "validation"
+  }
+]

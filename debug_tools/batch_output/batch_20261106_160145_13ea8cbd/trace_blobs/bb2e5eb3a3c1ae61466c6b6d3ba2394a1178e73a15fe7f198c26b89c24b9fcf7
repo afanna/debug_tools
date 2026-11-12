@@ -1,0 +1,85 @@
+{
+  "assetAssignments": {
+    "actions": [],
+    "title": {
+      "assetId": "asset.emoji_bluetooth_earbuds_black"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "InfoBlock"
+      ],
+      "dataId": "/data/earphone/isConnected",
+      "priority": "must",
+      "requirement": "耳机连接状态"
+    },
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "dataId": "/data/earphone/earphoneName",
+      "priority": "must",
+      "requirement": "耳机设备名称"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/earphone/batteryLevel",
+      "priority": "must",
+      "requirement": "耳机盒电量百分比"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/earphone/chargingStatusDesc",
+      "priority": "must",
+      "requirement": "耳机盒充电状态"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/earphone/leftBatteryLevel",
+      "priority": "must",
+      "requirement": "左耳机电量百分比"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/earphone/leftChargingStatusDesc",
+      "priority": "must",
+      "requirement": "左耳机充电状态"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "EmphasizedData"
+      ],
+      "dataId": "/data/earphone/rightBatteryLevel",
+      "priority": "must",
+      "requirement": "右耳机电量百分比"
+    },
+    {
+      "componentHints": [
+        "InfoBlock",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/earphone/rightChargingStatusDesc",
+      "priority": "must",
+      "requirement": "右耳机充电状态"
+    }
+  ],
+  "layoutHints": [
+    "S-title-dual-content",
+    "S-title-primary-secondary-action"
+  ]
+}

@@ -1,0 +1,11 @@
+```genui
+["root","Layout",{"layout":"S-title-primary-secondary-action"},["title","primary","support","action"]]
+["title","SingleLineTitle",{"title":"最近运动","fontSize":12}]
+["primary","EmphasisText",{"mainText":{"path":"/data/healthSport/exerciseTypeName"},"fontSize":18}]
+["support","SecondaryBody",{"items":[{"label":"开始 ","value":{"path":"/data/healthSport/exerciseStartTimeText"}},{"label":"结束 ","value":{"path":"/data/healthSport/exerciseEndTimeText"}},{"label":"时长 ","value":{"path":"/data/healthSport/exerciseDurationText"}}],"columns":1,"fontSize":12}]
+["action","PillButton",{"label":"去锻炼","onClick":[{"call":"clickToDeeplink","args":{"abilityName":"","bundleName":"","intentName":"Health","uri":"huaweischeme://healthapp/home/sport?sportType=2"}}]}]
+["/data/healthSport/exerciseTypeName","户外跑步"]
+["/data/healthSport/exerciseStartTimeText","18:30"]
+["/data/healthSport/exerciseEndTimeText","19:10"]
+["/data/healthSport/exerciseDurationText","40分"]
+```

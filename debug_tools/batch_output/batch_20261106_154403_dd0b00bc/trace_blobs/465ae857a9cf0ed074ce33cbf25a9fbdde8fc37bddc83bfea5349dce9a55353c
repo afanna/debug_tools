@@ -1,0 +1,83 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "topic",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "event_1106",
+      "identity": "PC镇江实地指导",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "event_1107",
+      "identity": "PC天坛学习班",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 48,
+          "start": 30
+        }
+      ],
+      "sourceText": "11月6日 PC镇江实地指导(镇江)"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 48,
+          "start": 30
+        }
+      ],
+      "sourceText": "11月6日 PC镇江实地指导(镇江)"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 48,
+          "start": 30
+        }
+      ],
+      "sourceText": "11月6日 PC镇江实地指导(镇江)"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 116,
+          "start": 49
+        }
+      ],
+      "sourceText": "11月7日 PC天坛学习班(北京)、PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会"
+    },
+    {
+      "factIndex": 4,
+      "positions": [
+        {
+          "end": 116,
+          "start": 49
+        }
+      ],
+      "sourceText": "11月7日 PC天坛学习班(北京)、PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会"
+    }
+  ],
+  "version": "static-content-v1"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "Q512",
+  "fileName": "Q512.json",
+  "title": "湖州新闻",
+  "query": "生成一张新闻卡，展示湖州今日新闻：2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕，来自全市20支代表队、60名检测精英同场竞技，申苏浙皖改扩建第TJ01标工地试验室摘得团体一等奖。本轮卡片静态内容（用作展示的外部事实）：2026年湖州市交通建设工程试验检测公路工程路面专项竞赛圆满落幕，来自全市公路水运工程试验检测机构及在建项目工地试验室的20支代表队、60名检测精英同场竞技。申苏浙皖改扩建第TJ01标工地试验室凭借扎实的理论功底和出色的现场发挥摘得团体一等奖，另有两家单位分获团体二等奖、三家单位分获团体三等奖。",
+  "size": "2x2",
+  "sequence": 97,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2035.04,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00097-000",
+  "finalAttempt": 0
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "primary: ProgressCircleSingle requires icon.",
+    "stage": "validation"
+  }
+]

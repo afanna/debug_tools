@@ -1,0 +1,21 @@
+{
+  "id": "Q311",
+  "fileName": "Q311.json",
+  "title": "运动健康",
+  "query": "将运动健康卡片放到桌面第1页，展示今日步数、热量消耗、睡眠等健康数据。",
+  "size": "2x2",
+  "sequence": 15,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7283.97,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 86,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7277.62,
+  "uid": "batch-7664fcb9-00015-000",
+  "finalAttempt": 0
+}

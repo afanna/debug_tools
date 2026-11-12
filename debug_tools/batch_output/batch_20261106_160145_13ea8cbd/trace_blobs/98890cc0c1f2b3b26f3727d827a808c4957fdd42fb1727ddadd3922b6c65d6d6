@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "语义布局不符合合同：节点 left：当前父区域不支持 Region.variant（实际为 'title-hero-support-action'）；紧凑版 Region 允许的变体：center, title-content, title-content-action, title-hero-support。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+    "stage": "validation"
+  }
+]

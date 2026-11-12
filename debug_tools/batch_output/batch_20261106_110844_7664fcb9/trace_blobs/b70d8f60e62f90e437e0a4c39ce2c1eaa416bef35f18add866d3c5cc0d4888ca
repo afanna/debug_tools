@@ -1,0 +1,17 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 第1天天气现象 (/data/weather/daily/0/condition).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 第2天天气现象 (/data/weather/daily/1/condition).",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 第3天天气现象 (/data/weather/daily/2/condition).",
+    "stage": "validation"
+  }
+]

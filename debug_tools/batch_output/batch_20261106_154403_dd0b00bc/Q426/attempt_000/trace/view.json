@@ -1,0 +1,785 @@
+{
+  "viewVersion": "trace-view-v2",
+  "instrumentationVersion": 2,
+  "uid": "batch-dd0b00bc-00014-000",
+  "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+  "sourceSchemaVersion": "generation-trace-v2",
+  "status": "complete",
+  "timingMode": "exact",
+  "recordCount": 13,
+  "summary": {
+    "totalDurationMs": 21.65,
+    "latencyByStage": {
+      "generation.branch": 11.7,
+      "generationPreflight": 7.28,
+      "interfaceAttempt.total": 14.0,
+      "prepare": 11.3,
+      "protocolSelection": 0.36,
+      "registry": 2.2
+    },
+    "attemptCounts": {
+      "generationBranches": 1,
+      "interfaceAttempts": 1
+    },
+    "errorCode": "UNKNOWN_CAPABILITY",
+    "status": "failed",
+    "modelPhysicalCalls": 0,
+    "totalTokens": 0,
+    "firstTokenMs": null,
+    "retryCount": 0
+  },
+  "nodes": [
+    {
+      "id": "11be9b3abf9e4e72",
+      "parentId": "82d2e0467af349a2",
+      "operation": "protocol.selection.completed",
+      "title": "选择卡片协议",
+      "kind": "step",
+      "name": "protocol.selection.completed",
+      "description": "",
+      "category": "protocol",
+      "stage": "protocolSelection",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 5.7,
+      "durationMs": 0.36,
+      "attempts": {
+        "interface": 1
+      },
+      "attributes": {},
+      "metrics": {},
+      "artifacts": [],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+        "spanId": "11be9b3abf9e4e72",
+        "sequence": 4,
+        "timestamp": "2026-11-06T07:44:26.491690+00:00",
+        "recordType": "span",
+        "event": "protocol.selection.completed",
+        "category": "protocol",
+        "startOffsetMs": 5.7,
+        "parentSpanId": "82d2e0467af349a2",
+        "operation": "protocol.selection.completed",
+        "kind": "step",
+        "stage": "protocolSelection",
+        "status": "success",
+        "durationMs": 0.36,
+        "attempts": {
+          "interface": 1
+        }
+      }
+    },
+    {
+      "id": "0ea8dcf73bab425f",
+      "parentId": "94cf35b9cfc6493d",
+      "operation": "registry.completed",
+      "title": "读取能力清单",
+      "kind": "step",
+      "name": "registry.completed",
+      "description": "",
+      "category": "protocol",
+      "stage": "registry",
+      "status": "success",
+      "recordType": "span",
+      "startOffsetMs": 7.08,
+      "durationMs": 2.2,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0"
+      },
+      "metrics": {},
+      "artifacts": [],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+        "spanId": "0ea8dcf73bab425f",
+        "sequence": 8,
+        "timestamp": "2026-11-06T07:44:26.494693+00:00",
+        "recordType": "span",
+        "event": "registry.completed",
+        "category": "protocol",
+        "startOffsetMs": 7.08,
+        "parentSpanId": "94cf35b9cfc6493d",
+        "operation": "registry.completed",
+        "kind": "step",
+        "stage": "registry",
+        "status": "success",
+        "durationMs": 2.2,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0"
+        }
+      }
+    },
+    {
+      "id": "b48e5182d8664f37",
+      "parentId": "94cf35b9cfc6493d",
+      "operation": "generation_preflight.completed",
+      "title": "能力裁决与生成预检",
+      "kind": "step",
+      "name": "generation_preflight.completed",
+      "description": "",
+      "category": "preflight",
+      "stage": "generationPreflight",
+      "status": "failed",
+      "recordType": "span",
+      "startOffsetMs": 10.27,
+      "durationMs": 7.28,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "issueCount": 1
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "b48e5182d8664f37:preflight_issues:bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+          "name": "preflight_issues",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 606,
+          "sha256": "bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "b48e5182d8664f37",
+          "label": "预检问题"
+        }
+      ],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+        "spanId": "b48e5182d8664f37",
+        "sequence": 9,
+        "timestamp": "2026-11-06T07:44:26.503109+00:00",
+        "recordType": "span",
+        "event": "generation_preflight.completed",
+        "category": "preflight",
+        "startOffsetMs": 10.27,
+        "parentSpanId": "94cf35b9cfc6493d",
+        "operation": "generation_preflight.completed",
+        "kind": "step",
+        "stage": "generationPreflight",
+        "status": "failed",
+        "durationMs": 7.28,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "issueCount": 1
+        },
+        "artifacts": {
+          "preflight_issues": {
+            "path": "artifacts/0004_preflight_issues_attempt-1.json",
+            "sha256": "bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+            "bytes": 606,
+            "chars": 470,
+            "mediaType": "application/json",
+            "role": "snapshot"
+          }
+        }
+      }
+    },
+    {
+      "id": "94cf35b9cfc6493d",
+      "parentId": "a4547bbc8b3340b9",
+      "operation": "prepare",
+      "title": "请求准备",
+      "kind": "group",
+      "name": "prepare",
+      "description": "generation preflight rejected 1 issue(s)",
+      "category": "other",
+      "stage": "prepare",
+      "status": "failed",
+      "recordType": "span",
+      "startOffsetMs": 7.05,
+      "durationMs": 11.3,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "exceptionType": "GenerationPreflightError",
+        "message": "generation preflight rejected 1 issue(s)"
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "94cf35b9cfc6493d:normalized_generation_request:a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+          "name": "normalized_generation_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 4337,
+          "sha256": "a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "94cf35b9cfc6493d",
+          "label": "归一化请求"
+        }
+      ],
+      "events": [
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+          "spanId": "94cf35b9cfc6493d",
+          "sequence": 6,
+          "timestamp": "2026-11-06T07:44:26.492690+00:00",
+          "recordType": "event",
+          "event": "generation.started",
+          "category": "other",
+          "startOffsetMs": 7.47,
+          "eventId": "1198661315f34e0d8ec3bdd4accb21b7",
+          "stage": "generation",
+          "status": "started",
+          "attempts": {
+            "interface": 1,
+            "generation": 1
+          },
+          "details": {
+            "generationBranch": "fusion",
+            "generationMode": "create",
+            "operation": "generateWidgetCardCompactDsl",
+            "backend": "openai",
+            "sourceFormat": "design-compact-dsl"
+          },
+          "artifacts": {
+            "normalized_generation_request": {
+              "path": "artifacts/0003_normalized_generation_request_attempt-1.json",
+              "sha256": "a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+              "bytes": 4337,
+              "chars": 3969,
+              "mediaType": "application/json",
+              "role": "input"
+            }
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+          "spanId": "94cf35b9cfc6493d",
+          "sequence": 7,
+          "timestamp": "2026-11-06T07:44:26.493690+00:00",
+          "recordType": "event",
+          "event": "source_artifact.skipped",
+          "category": "source",
+          "startOffsetMs": 7.71,
+          "eventId": "ced57a98cc2b4b9986a571d3e0472e18",
+          "stage": "sourceArtifact",
+          "status": "skipped",
+          "attempts": {
+            "interface": 1,
+            "generation": 1
+          },
+          "details": {
+            "generationBranch": "fusion",
+            "reason": "create_request"
+          }
+        }
+      ],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+        "spanId": "94cf35b9cfc6493d",
+        "sequence": 10,
+        "timestamp": "2026-11-06T07:44:26.503109+00:00",
+        "recordType": "span",
+        "event": "prepare",
+        "category": "other",
+        "startOffsetMs": 7.05,
+        "parentSpanId": "a4547bbc8b3340b9",
+        "operation": "prepare",
+        "kind": "group",
+        "stage": "prepare",
+        "status": "failed",
+        "durationMs": 11.3,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "exceptionType": "GenerationPreflightError",
+          "message": "generation preflight rejected 1 issue(s)"
+        }
+      },
+      "contentIndex": [
+        {
+          "id": "94cf35b9cfc6493d:normalized_generation_request:a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+          "name": "normalized_generation_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 4337,
+          "sha256": "a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "94cf35b9cfc6493d",
+          "label": "归一化请求"
+        },
+        {
+          "id": "b48e5182d8664f37:preflight_issues:bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+          "name": "preflight_issues",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 606,
+          "sha256": "bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "b48e5182d8664f37",
+          "label": "预检问题"
+        }
+      ]
+    },
+    {
+      "id": "a4547bbc8b3340b9",
+      "parentId": "82d2e0467af349a2",
+      "operation": "generation.branch",
+      "title": "生成分支 · 第 1 次",
+      "kind": "group",
+      "name": "generation.branch",
+      "description": "generation preflight rejected 1 issue(s)",
+      "category": "other",
+      "stage": "generation.branch",
+      "status": "failed",
+      "recordType": "span",
+      "startOffsetMs": 7.04,
+      "durationMs": 11.7,
+      "attempts": {
+        "interface": 1,
+        "generation": 1
+      },
+      "attributes": {
+        "generationBranch": "fusion",
+        "exceptionType": "GenerationPreflightError",
+        "message": "generation preflight rejected 1 issue(s)"
+      },
+      "metrics": {},
+      "artifacts": [],
+      "events": [],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+        "spanId": "a4547bbc8b3340b9",
+        "sequence": 11,
+        "timestamp": "2026-11-06T07:44:26.504616+00:00",
+        "recordType": "span",
+        "event": "generation.branch",
+        "category": "other",
+        "startOffsetMs": 7.04,
+        "parentSpanId": "82d2e0467af349a2",
+        "operation": "generation.branch",
+        "kind": "group",
+        "stage": "generation.branch",
+        "status": "failed",
+        "durationMs": 11.7,
+        "attempts": {
+          "interface": 1,
+          "generation": 1
+        },
+        "details": {
+          "generationBranch": "fusion",
+          "exceptionType": "GenerationPreflightError",
+          "message": "generation preflight rejected 1 issue(s)"
+        }
+      },
+      "contentIndex": [
+        {
+          "id": "b48e5182d8664f37:preflight_issues:bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+          "name": "preflight_issues",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 606,
+          "sha256": "bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "b48e5182d8664f37",
+          "label": "预检问题"
+        },
+        {
+          "id": "94cf35b9cfc6493d:normalized_generation_request:a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+          "name": "normalized_generation_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 4337,
+          "sha256": "a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "94cf35b9cfc6493d",
+          "label": "归一化请求"
+        }
+      ]
+    },
+    {
+      "id": "82d2e0467af349a2",
+      "parentId": "4dc286c0cd64499a",
+      "operation": "interface.attempt",
+      "title": "生成尝试 · 第 1 次",
+      "kind": "group",
+      "name": "interface.attempt",
+      "description": "generation preflight rejected 1 issue(s)",
+      "category": "request",
+      "stage": "interfaceAttempt.total",
+      "status": "failed",
+      "recordType": "span",
+      "startOffsetMs": 4.96,
+      "durationMs": 14.0,
+      "attempts": {
+        "interface": 1
+      },
+      "attributes": {
+        "attempt": 1,
+        "maxAttempts": 2,
+        "capacityRecovery": false,
+        "exceptionType": "GenerationPreflightError",
+        "message": "generation preflight rejected 1 issue(s)"
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "82d2e0467af349a2:protocol_selection:65ffbabc15572efbd0d1d00914f6b557cdfb0c3cad3cdab25b0560c832b0f272",
+          "name": "protocol_selection",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 165,
+          "sha256": "65ffbabc15572efbd0d1d00914f6b557cdfb0c3cad3cdab25b0560c832b0f272",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "82d2e0467af349a2",
+          "label": "协议选择结果"
+        }
+      ],
+      "events": [
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+          "spanId": "82d2e0467af349a2",
+          "sequence": 3,
+          "timestamp": "2026-11-06T07:44:26.490694+00:00",
+          "recordType": "event",
+          "event": "interface.attempt.started",
+          "category": "request",
+          "startOffsetMs": 4.97,
+          "eventId": "a65b0a4c8abb4c58bede57ef4d067e55",
+          "stage": "interfaceAttempt",
+          "status": "started",
+          "attempts": {
+            "interface": 1
+          },
+          "details": {
+            "maxAttempts": 2,
+            "requestId": "batch-dd0b00bc&Q426-000"
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+          "spanId": "82d2e0467af349a2",
+          "sequence": 5,
+          "timestamp": "2026-11-06T07:44:26.492690+00:00",
+          "recordType": "event",
+          "event": "protocol.selection.result",
+          "category": "protocol",
+          "startOffsetMs": 6.79,
+          "eventId": "a8fe4c67401e4a3684663e371be6052e",
+          "stage": "protocolSelection",
+          "status": "success",
+          "attempts": {
+            "interface": 1
+          },
+          "details": {
+            "protocolProfileId": "a2ui-form-rom6.0-v1",
+            "designProfileId": "design-compact-dsl",
+            "normalizedAppVersion": "11.7.8.342",
+            "normalizedRomVersion": "7.0"
+          },
+          "artifacts": {
+            "protocol_selection": {
+              "path": "artifacts/0002_protocol_selection_attempt-1.json",
+              "sha256": "65ffbabc15572efbd0d1d00914f6b557cdfb0c3cad3cdab25b0560c832b0f272",
+              "bytes": 165,
+              "chars": 165,
+              "mediaType": "application/json",
+              "role": "output"
+            }
+          }
+        }
+      ],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+        "spanId": "82d2e0467af349a2",
+        "sequence": 12,
+        "timestamp": "2026-11-06T07:44:26.504616+00:00",
+        "recordType": "span",
+        "event": "interface.attempt",
+        "category": "request",
+        "startOffsetMs": 4.96,
+        "parentSpanId": "4dc286c0cd64499a",
+        "operation": "interface.attempt",
+        "kind": "group",
+        "stage": "interfaceAttempt.total",
+        "status": "failed",
+        "durationMs": 14.0,
+        "attempts": {
+          "interface": 1
+        },
+        "details": {
+          "attempt": 1,
+          "maxAttempts": 2,
+          "capacityRecovery": false,
+          "exceptionType": "GenerationPreflightError",
+          "message": "generation preflight rejected 1 issue(s)"
+        }
+      },
+      "contentIndex": [
+        {
+          "id": "82d2e0467af349a2:protocol_selection:65ffbabc15572efbd0d1d00914f6b557cdfb0c3cad3cdab25b0560c832b0f272",
+          "name": "protocol_selection",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 165,
+          "sha256": "65ffbabc15572efbd0d1d00914f6b557cdfb0c3cad3cdab25b0560c832b0f272",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "82d2e0467af349a2",
+          "label": "协议选择结果"
+        },
+        {
+          "id": "b48e5182d8664f37:preflight_issues:bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+          "name": "preflight_issues",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 606,
+          "sha256": "bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "b48e5182d8664f37",
+          "label": "预检问题"
+        },
+        {
+          "id": "94cf35b9cfc6493d:normalized_generation_request:a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+          "name": "normalized_generation_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 4337,
+          "sha256": "a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "94cf35b9cfc6493d",
+          "label": "归一化请求"
+        }
+      ]
+    },
+    {
+      "id": "4dc286c0cd64499a",
+      "parentId": null,
+      "operation": "request",
+      "title": "请求全链路",
+      "kind": "group",
+      "name": "request.completed",
+      "description": "",
+      "category": "request",
+      "stage": "request.total",
+      "status": "failed",
+      "recordType": "span",
+      "startOffsetMs": 0.0,
+      "durationMs": 21.65,
+      "attempts": {},
+      "attributes": {
+        "totalDurationMs": 21.65,
+        "latencyByStage": {
+          "generation.branch": 11.7,
+          "generationPreflight": 7.28,
+          "interfaceAttempt.total": 14.0,
+          "prepare": 11.3,
+          "protocolSelection": 0.36,
+          "registry": 2.2
+        },
+        "attemptCounts": {
+          "generationBranches": 1,
+          "interfaceAttempts": 1
+        },
+        "errorCode": "UNKNOWN_CAPABILITY"
+      },
+      "metrics": {},
+      "artifacts": [
+        {
+          "id": "4dc286c0cd64499a:raw_request:087d0e93673c2866138b7b25cfcb1c9c993937cb6ded2e821eef8631f1230ceb",
+          "name": "raw_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 5039,
+          "sha256": "087d0e93673c2866138b7b25cfcb1c9c993937cb6ded2e821eef8631f1230ceb",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "4dc286c0cd64499a",
+          "label": "原始请求"
+        }
+      ],
+      "events": [
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+          "spanId": "4dc286c0cd64499a",
+          "sequence": 1,
+          "timestamp": "2026-11-06T07:44:26.487177+00:00",
+          "recordType": "event",
+          "event": "request.received",
+          "category": "request",
+          "startOffsetMs": 1.22,
+          "eventId": "c4bedc926a284ef1ac879e853b259242",
+          "stage": "request",
+          "status": "started",
+          "details": {
+            "operation": "generateWidgetCardCompactDsl",
+            "requestId": "batch-dd0b00bc&Q426-000"
+          },
+          "artifacts": {
+            "raw_request": {
+              "path": "artifacts/0001_raw_request.json",
+              "sha256": "087d0e93673c2866138b7b25cfcb1c9c993937cb6ded2e821eef8631f1230ceb",
+              "bytes": 5039,
+              "chars": 4671,
+              "mediaType": "application/json",
+              "role": "input"
+            }
+          }
+        },
+        {
+          "schemaVersion": "generation-trace-v2",
+          "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+          "spanId": "4dc286c0cd64499a",
+          "sequence": 2,
+          "timestamp": "2026-11-06T07:44:26.489683+00:00",
+          "recordType": "event",
+          "event": "retry.policy.configured",
+          "category": "other",
+          "startOffsetMs": 3.65,
+          "eventId": "af6983eb9a7b430cb2e331d2f01323f0",
+          "stage": "configuration",
+          "status": "success",
+          "details": {
+            "interfaceRetryEnabled": true,
+            "interfaceExtraRetries": 1,
+            "qualityRepairEnabled": true,
+            "qualityRepairMaxAttempts": 5,
+            "singleStepGenerationFallbackEnabled": false,
+            "singleStepWidgetEditEnabled": true,
+            "dropPlanFactValidationEnabled": false,
+            "photoBackgroundThemeEnabled": false,
+            "subjectlessWideThemeEnabled": false,
+            "squareMusicPhotoExpansionEnabled": false,
+            "squarePhotoExpansionEnabled": false,
+            "deepseekOfficialHttpUseSdkEnabled": true,
+            "modelFailureRetryEnabled": true,
+            "modelFailureExtraRetries": 1,
+            "fallbackModelFailureExtraRetries": 1,
+            "fallbackEnabled": true,
+            "argumentRepairEnabled": false,
+            "argumentRepairMaxAttempts": 2,
+            "argumentRepairReminderCount": 1
+          }
+        }
+      ],
+      "raw": {
+        "schemaVersion": "generation-trace-v2",
+        "traceId": "aa075eb5fec24a14b98408d29e8ee451",
+        "spanId": "4dc286c0cd64499a",
+        "sequence": 13,
+        "timestamp": "2026-11-06T07:44:26.507807+00:00",
+        "recordType": "span",
+        "event": "request.completed",
+        "category": "request",
+        "startOffsetMs": 0.0,
+        "operation": "request",
+        "kind": "group",
+        "stage": "request.total",
+        "status": "failed",
+        "durationMs": 21.65,
+        "details": {
+          "totalDurationMs": 21.65,
+          "latencyByStage": {
+            "generation.branch": 11.7,
+            "generationPreflight": 7.28,
+            "interfaceAttempt.total": 14.0,
+            "prepare": 11.3,
+            "protocolSelection": 0.36,
+            "registry": 2.2
+          },
+          "attemptCounts": {
+            "generationBranches": 1,
+            "interfaceAttempts": 1
+          },
+          "errorCode": "UNKNOWN_CAPABILITY"
+        }
+      },
+      "contentIndex": [
+        {
+          "id": "4dc286c0cd64499a:raw_request:087d0e93673c2866138b7b25cfcb1c9c993937cb6ded2e821eef8631f1230ceb",
+          "name": "raw_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 5039,
+          "sha256": "087d0e93673c2866138b7b25cfcb1c9c993937cb6ded2e821eef8631f1230ceb",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "4dc286c0cd64499a",
+          "label": "原始请求"
+        },
+        {
+          "id": "b48e5182d8664f37:preflight_issues:bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+          "name": "preflight_issues",
+          "role": "snapshot",
+          "mediaType": "application/json",
+          "bytes": 606,
+          "sha256": "bd37c39fa316e8dc2399447eaa83f6c1acf7eb4bc431251c986fd42d24bb45a4",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "b48e5182d8664f37",
+          "label": "预检问题"
+        },
+        {
+          "id": "94cf35b9cfc6493d:normalized_generation_request:a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+          "name": "normalized_generation_request",
+          "role": "input",
+          "mediaType": "application/json",
+          "bytes": 4337,
+          "sha256": "a3a1b405ffa73d6f097120c10e100b0aadf3127ef38cfc5f968db0d301a2fbd8",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "94cf35b9cfc6493d",
+          "label": "归一化请求"
+        },
+        {
+          "id": "82d2e0467af349a2:protocol_selection:65ffbabc15572efbd0d1d00914f6b557cdfb0c3cad3cdab25b0560c832b0f272",
+          "name": "protocol_selection",
+          "role": "output",
+          "mediaType": "application/json",
+          "bytes": 165,
+          "sha256": "65ffbabc15572efbd0d1d00914f6b557cdfb0c3cad3cdab25b0560c832b0f272",
+          "available": true,
+          "error": "",
+          "ownerNodeId": "82d2e0467af349a2",
+          "label": "协议选择结果"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

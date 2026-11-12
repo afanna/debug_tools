@@ -1,0 +1,11 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-top-bottom\",\"variant\":\"continuous\"},[\"title\",\"primary\",\"details\"]]\n[\"title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/earphone/earphoneName\"},\"fontSize\":12}]\n[\"primary\",\"ProgressCircleSingle\",{\"surfaceRole\":\"panel\",\"value\":{\"path\":\"/data/earphone/batteryLevel\"},\"total\":100,\"displayValue\":\"{{ ${/data/earphone/batteryLevel} + '%' }}\",\"label\":\"耳机盒电量\",\"secondaryLabel\":{\"path\":\"/data/earphone/chargingStatusDesc\"}}]\n[\"details\",\"TextBlock\",{\"items\":[{\"label\":\"左耳\",\"value\":\"{{ ${/data/earphone/leftBatteryLevel} + '%' }}\"},{\"label\":\"右耳\",\"value\":\"{{ ${/data/earphone/rightBatteryLevel} + '%' }}\"}]}]\n[\"/data/earphone/earphoneName\",\"示例耳机\"]\n[\"/data/earphone/batteryLevel\",80]\n[\"/data/earphone/leftBatteryLevel\",76]\n[\"/data/earphone/rightBatteryLevel\",78]\n[\"/data/earphone/chargingStatusDesc\",\"未充电\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_DSL_VALIDATION_FAILED",
+      "message": "primary: ProgressCircleSingle requires icon."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_FAILED",
+    "message": "Plan fact is missing from visible DSL: 日程倒计时天数 (/data/calendar/events/0/countdownDays).",
+    "severity": "error",
+    "stage": "validation"
+  }
+]

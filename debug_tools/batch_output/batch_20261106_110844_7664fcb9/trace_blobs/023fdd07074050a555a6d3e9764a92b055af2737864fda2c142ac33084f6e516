@@ -1,0 +1,47 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1
+      ],
+      "id": "birthday_wish",
+      "identity": "生日祝福",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 62,
+          "start": 55
+        },
+        {
+          "end": 191,
+          "start": 184
+        }
+      ],
+      "sourceText": "祝你生日快乐！"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 265,
+          "start": 178
+        }
+      ],
+      "sourceText": "亲爱的同学：祝你生日快乐！今天是你＿＿周岁。愿你感恩党、感恩祖国，勤学上进、学业有成；强健体魄、阳光成长；与各族同学像石榴籽一样紧紧相拥，铸牢中华民族共同体意识，共筑中国梦！"
+    }
+  ],
+  "version": "static-content-v1"
+}

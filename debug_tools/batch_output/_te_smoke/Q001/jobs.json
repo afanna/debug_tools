@@ -1,0 +1,20 @@
+[
+ {
+  "id": "Q001",
+  "size": "2x2",
+  "variants": [
+   {
+    "name": "original",
+    "source": "C:\\Users\\afan\\Downloads\\batch_20261109_201846_615f11cd\\batch_20261109_201846_615f11cd\\Q001\\attempt_000\\genui.jsonl",
+    "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\_te_smoke\\Q001\\original.png",
+    "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\_te_smoke\\Q001\\dom_original.json"
+   },
+   {
+    "name": "injected",
+    "source": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\_te_smoke\\Q001\\injected_genui.jsonl",
+    "png": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\_te_smoke\\Q001\\injected.png",
+    "evidence": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\_te_smoke\\Q001\\dom_injected.json"
+   }
+  ]
+ }
+]

@@ -1,0 +1,349 @@
+[
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "Component rows must form one tree rooted at root. Unreachable component(s): left_support. Attach each component to a reachable parent's children list.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 1,
+    "selectedRepairStrategy": {
+      "category": "layout_structure",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "681a5ef01313c613",
+      "instruction": "修复违反合同的父布局结构，重新分配完整信息组和动作槽。 先检查以 root 为根的完整组件树：所有引用存在、每个节点只有一个父引用、没有环或孤立节点，并核对父区允许的角色和有序 children。不得只把孤立节点挂到不接受该角色的 Region；必要时重组受控 Group 或更换合法父布局。保留全部事实、绑定、标签、单位和动作，不通过删除孤立业务节点规避错误；结构闭合后重新核算各区容量，不修改展开后的内部几何。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": false,
+        "observedCategories": [
+          "layout_structure"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": null
+      },
+      "noProgress": false,
+      "repairStrategy": "parent_layout_recompose",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"left_body\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_support\",\"SecondaryBody\",{\"items\":[{\"label\":\"{{ ${/data/weather/daily/0/weekday} + ' ' }}\",\"value\":{\"path\":\"/data/weather/daily/0/temperatureRangeText\"}}],\"fontSize\":14}]\n[\"left_action\",\"PillButton\",{\"label\":\"查看天气\",\"icon\":\"resources/base/media/ic_weather_monochrome.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_body\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"近期日程\",\"icon\":\"resources/base/media/calendar_fill.svg\",\"fontSize\":12}]\n[\"right_body\",\"EventCard\",{\"items\":[{\"title\":{\"path\":\"/data/calendar/events/0/title\"},\"time\":{\"path\":\"/data/calendar/events/0/dtStart\"}},{\"title\":{\"path\":\"/data/calendar/events/1/title\"},\"time\":{\"path\":\"/data/calendar/events/1/dtStart\"}}],\"density\":\"compact\"}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/daily/0/weekday\",\"星期四\"]\n[\"/data/weather/daily/0/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/calendar/events/0/title\",\"项目例会\"]\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/data/calendar/events/1/title\",\"项目例会\"]\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]\n[\"/data/calendar/events/1/entityId\",\"example-event-002\"]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "message": "语义布局不符合合同：节点 left：当前父区域不支持 Region.variant（实际为 'title-hero-support-action'）；紧凑版 Region 允许的变体：center, title-content, title-content-action, title-hero-support。请选择已登记的 Layout、Region 或 Group 变体，不要修改展开后的几何。",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 2,
+    "selectedRepairStrategy": {
+      "category": "layout_structure",
+      "categoryAttempt": 2,
+      "consecutiveFailures": 1,
+      "fingerprint": "87407414df076357",
+      "instruction": "只修复错误消息定位的 Layout、Region 或 Group 节点：严格按消息给出的合同调整该节点直属 children 的数量、顺序和角色，并补齐或替换错误角色。Group 整体只占一个直属角色；title-count 只占标题角色；title-content-action 的动作角色必须使用 PillButton；W-content-side-slots 的固定动作槽使用 CardButton。保持其它区域、事实、绑定、Action 及已经合法的 layout/variant 不变，不修改语义展开后的 Row/Column 几何。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": true,
+        "observedCategories": [
+          "layout_structure",
+          "layout_structure"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "4f63549825155d23"
+      },
+      "noProgress": false,
+      "repairStrategy": "semantic_layout_contract_repair",
+      "retryTarget": "dsl_local_repair",
+      "retryable": true,
+      "scope": "parent_layout"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"left_body\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_support\",\"SecondaryBody\",{\"items\":[{\"label\":\"预报 \",\"value\":\"{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}\"}],\"fontSize\":14}]\n[\"left_action\",\"PillButton\",{\"label\":\"查看天气\",\"icon\":\"resources/base/media/ic_weather_monochrome.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-hero-support-action\"},[\"left_title\",\"left_body\",\"left_support\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"近期日程\",\"icon\":\"resources/base/media/calendar_fill.svg\",\"fontSize\":12}]\n[\"right_body\",\"EventCard\",{\"items\":[{\"title\":{\"path\":\"/data/calendar/events/0/title\"},\"time\":{\"path\":\"/data/calendar/events/0/dtStart\"}},{\"title\":{\"path\":\"/data/calendar/events/1/title\"},\"time\":{\"path\":\"/data/calendar/events/1/dtStart\"}}],\"density\":\"compact\"}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/daily/0/weekday\",\"星期四\"]\n[\"/data/weather/daily/0/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/calendar/events/0/title\",\"项目例会\"]\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/data/calendar/events/1/title\",\"项目例会\"]\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]\n[\"/data/calendar/events/1/entityId\",\"example-event-002\"]"
+  },
+  {
+    "qualityErrors": [
+      {
+        "capacityFits": [
+          {
+            "actualItemCount": 1,
+            "actualRowCount": 1,
+            "componentId": "left_support",
+            "componentType": "SecondaryBody",
+            "directlyFits": [],
+            "doesNotFit": [
+              {
+                "itemIndex": 0,
+                "planFacts": [
+                  {
+                    "factIndex": 3,
+                    "priority": "must",
+                    "requirement": "展示第一天天气预报的星期与温度范围"
+                  },
+                  {
+                    "factIndex": 4,
+                    "priority": "must",
+                    "requirement": "展示第一天天气预报的温度范围"
+                  }
+                ],
+                "value": {
+                  "label": "预报 ",
+                  "value": "{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"
+                }
+              }
+            ],
+            "effectiveColumnCount": 1,
+            "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+            "maxRetainedRowCount": 0,
+            "overflowFactCount": 2,
+            "overflowItemCount": 1,
+            "parentAvailableHeight": 110.0,
+            "parentId": "left",
+            "rowHeights": [
+              24.0
+            ],
+            "rowSpacing": 2.0,
+            "scope": "currentComponentItemsOnly"
+          }
+        ],
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "compactDiagnostics": [
+          {
+            "actual": {
+              "minimumRequiredHeight": 122.0,
+              "occupancy": "__layout__left__sub=122vp+margin(0vp), gaps=0vp",
+              "overflow": 12.0,
+              "secondaryBodyFits": [
+                {
+                  "actualRowCount": 1,
+                  "componentId": "left_support",
+                  "directlyFitsItemIndexes": [],
+                  "doesNotFitItemIndexes": [
+                    0
+                  ],
+                  "effectiveColumnCount": 1,
+                  "maxRetainedRowCount": 0,
+                  "parentAvailableHeight": 110.0,
+                  "parentId": "left",
+                  "rowHeights": [
+                    24.0
+                  ],
+                  "rowSpacing": 2.0
+                }
+              ]
+            },
+            "category": "layout",
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "componentId": "left",
+            "evidenceSource": "expanded",
+            "expected": {
+              "heightTolerance": 2.0,
+              "maximumHeight": 110.0,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true
+            },
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+            "legacyMessage": "component left: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__left__sub=122vp+margin(0vp), gaps=0vp.",
+            "message": "component left: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Occupancy: __layout__left__sub=122vp+margin(0vp), gaps=0vp.",
+            "severity": "error",
+            "sourceLine": 2,
+            "validationClass": "semantic"
+          }
+        ],
+        "message": "component left: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: __layout__left__sub=122vp+margin(0vp), gaps=0vp.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "compactDiagnostics": [
+          {
+            "actual": {
+              "minimumRequiredHeight": 122.0,
+              "occupancy": "left_title=12vp+margin(0vp), __layout__left__body=62vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp",
+              "overflow": 12.0,
+              "secondaryBodyFits": [
+                {
+                  "actualRowCount": 1,
+                  "componentId": "left_support",
+                  "directlyFitsItemIndexes": [],
+                  "doesNotFitItemIndexes": [
+                    0
+                  ],
+                  "effectiveColumnCount": 1,
+                  "maxRetainedRowCount": 0,
+                  "parentAvailableHeight": 110.0,
+                  "parentId": "__layout__left__sub",
+                  "rowHeights": [
+                    24.0
+                  ],
+                  "rowSpacing": 2.0
+                }
+              ]
+            },
+            "category": "layout",
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "componentId": "left",
+            "evidenceSource": "expanded",
+            "expected": {
+              "heightTolerance": 2.0,
+              "maximumHeight": 110.0,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true
+            },
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+            "legacyMessage": "component __layout__left__sub: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_title=12vp+margin(0vp), __layout__left__body=62vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp.",
+            "message": "component __layout__left__sub: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Occupancy: left_title=12vp+margin(0vp), __layout__left__body=62vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp.",
+            "severity": "error",
+            "sourceLine": 2,
+            "validationClass": "semantic"
+          }
+        ],
+        "message": "component __layout__left__sub: vertical layout requires at least 122vp within 110vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_title=12vp+margin(0vp), __layout__left__body=62vp+margin(0vp), left_action=36vp+margin(0vp), gaps=12vp.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "compactDiagnostics": [
+          {
+            "actual": {
+              "minimumRequiredHeight": 62.0,
+              "occupancy": "left_content=62vp+margin(0vp), gaps=0vp",
+              "overflow": 12.0,
+              "secondaryBodyFits": [
+                {
+                  "actualRowCount": 1,
+                  "componentId": "left_support",
+                  "directlyFitsItemIndexes": [],
+                  "doesNotFitItemIndexes": [
+                    0
+                  ],
+                  "effectiveColumnCount": 1,
+                  "maxRetainedRowCount": 0,
+                  "parentAvailableHeight": 50.0,
+                  "parentId": "__layout__left__body",
+                  "rowHeights": [
+                    24.0
+                  ],
+                  "rowSpacing": 2.0
+                }
+              ]
+            },
+            "category": "layout",
+            "code": "COMPACT_LAYOUT_HEIGHT_OVERFLOW",
+            "componentId": "left",
+            "evidenceSource": "expanded",
+            "expected": {
+              "heightTolerance": 2.0,
+              "maximumHeight": 50.0,
+              "overflowConstraint": "不能依靠权重、裁剪、flex shrink 或分布式对齐消除内容高度超限。",
+              "preserveFixedDesignSizes": true,
+              "preserveRequiredTextAndActions": true
+            },
+            "fixHint": "根据占用明细重新组合完整信息或选择合法布局，保留必要事实、动作、字号和固定设计高度；不能靠裁剪、收缩或调整权重消除负预算。",
+            "legacyMessage": "component __layout__left__body: vertical layout requires at least 62vp within 50vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_content=62vp+margin(0vp), gaps=0vp.",
+            "message": "component __layout__left__body: vertical layout requires at least 62vp within 50vp; it overflows by 12vp. Occupancy: left_content=62vp+margin(0vp), gaps=0vp.",
+            "severity": "error",
+            "sourceLine": 2,
+            "validationClass": "semantic"
+          }
+        ],
+        "message": "component __layout__left__body: vertical layout requires at least 62vp within 50vp; it overflows by 12vp. Regroup facts or choose a layout with enough body space; preserve required text, actions, font sizes and fixed design heights. Weight, clipping, flex shrink and distributed alignment cannot eliminate content height. Occupancy: left_content=62vp+margin(0vp), gaps=0vp.",
+        "stage": "validation"
+      },
+      {
+        "code": "COMPACT_DSL_VALIDATION_FAILED",
+        "compactDiagnostics": [
+          {
+            "actual": {
+              "declared": false,
+              "path": "/data/calendar/events/1/entityId"
+            },
+            "category": "cross_file",
+            "code": "COMPACT_CROSS_FILE_UNDECLARED_PATH",
+            "evidenceSource": "validation",
+            "expected": {
+              "declaredByTaskSchema": true
+            },
+            "fixHint": "对照本轮已声明的数据字段修正引用，保留用户必需内容；不要改写服务端的数据声明。",
+            "legacyMessage": "/data/calendar/events/1/entityId: path is not declared by TaskSpec.dataModelSchema; remove it or use a declared field.",
+            "message": "路径 /data/calendar/events/1/entityId 未在本轮数据 schema 中声明。",
+            "severity": "error",
+            "sourceLine": 22,
+            "validationClass": "semantic"
+          }
+        ],
+        "message": "/data/calendar/events/1/entityId: path is not declared by TaskSpec.dataModelSchema; remove it or use a declared field.",
+        "stage": "validation"
+      }
+    ],
+    "repairAttempt": 3,
+    "selectedRepairStrategy": {
+      "capacityFits": [
+        {
+          "actualItemCount": 1,
+          "actualRowCount": 1,
+          "componentId": "left_support",
+          "componentType": "SecondaryBody",
+          "directlyFits": [],
+          "doesNotFit": [
+            {
+              "itemIndex": 0,
+              "planFacts": [
+                {
+                  "factIndex": 3,
+                  "priority": "must",
+                  "requirement": "展示第一天天气预报的星期与温度范围"
+                },
+                {
+                  "factIndex": 4,
+                  "priority": "must",
+                  "requirement": "展示第一天天气预报的温度范围"
+                }
+              ],
+              "value": {
+                "label": "预报 ",
+                "value": "{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}"
+              }
+            }
+          ],
+          "effectiveColumnCount": 1,
+          "instruction": "父区域剩余高度结合当前列分组、展开后行高和行间距，只能保留 maxRetainedRowCount 行；doesNotFit 是当前组件中无法容纳的条目。该切分不是省略授权；只有 repairStrategy.optionalDrop 或 approvedOmissions 明确列出的非 Action 事实才允许删除。",
+          "maxRetainedRowCount": 0,
+          "overflowFactCount": 2,
+          "overflowItemCount": 1,
+          "parentAvailableHeight": 110.0,
+          "parentId": "left",
+          "rowHeights": [
+            24.0
+          ],
+          "rowSpacing": 2.0,
+          "scope": "currentComponentItemsOnly"
+        }
+      ],
+      "category": "layout_capacity",
+      "categoryAttempt": 1,
+      "consecutiveFailures": 1,
+      "fingerprint": "c7b5880f33fb870f",
+      "instruction": "此前布局已失败，本轮把结构、容量、事实、动作和素材作为同一重组问题处理，不要因错误类别切换退回单点修补。先按全部保留事实和完整动作计算各区预算，比较不同合法承载组合；放不下的旧堆叠不能只改ID、间距或包装层。仅在合同允许且不是用户必需标题时移除装饰标题；不缩固定字号，不削减事实或动作。随后一起复查树闭合、事实唯一可见、动作参数准确与入口可达、动作图标分配和横纵容量。",
+      "jointRecomposition": {
+        "layoutPreviouslyFailed": true,
+        "observedCategories": [
+          "layout_structure",
+          "layout_structure",
+          "layout_capacity"
+        ],
+        "revisitedTopology": false,
+        "topologyFingerprint": "c42d60739a50cafa"
+      },
+      "noProgress": false,
+      "repairStrategy": "plan_guided_recompose",
+      "retryTarget": "dsl_recompose",
+      "retryable": true,
+      "scope": "full_dsl"
+    },
+    "sourceDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/prefectureName\"},\"fontSize\":12}]\n[\"left_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/temperatureText\"},\"secondaryText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"left_support\",\"SecondaryBody\",{\"items\":[{\"label\":\"预报 \",\"value\":\"{{ ${/data/weather/daily/0/weekday} + ' ' + ${/data/weather/daily/0/temperatureRangeText} }}\"}],\"fontSize\":14}]\n[\"left_content\",\"Group\",{\"variant\":\"hero-support\"},[\"left_primary\",\"left_support\"]]\n[\"left_action\",\"PillButton\",{\"label\":\"查看天气\",\"icon\":\"resources/base/media/ic_weather_monochrome.svg\",\"onClick\":[{\"call\":\"clickToDeeplink\",\"args\":{\"abilityName\":\"\",\"bundleName\":\"\",\"intentName\":\"Weather_CityCode\",\"uri\":\"{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}\"}}]}]\n[\"left\",\"Region\",{\"variant\":\"title-content-action\"},[\"left_title\",\"left_content\",\"left_action\"]]\n[\"right_title\",\"SingleLineTitle\",{\"title\":\"近期日程\",\"icon\":\"resources/base/media/calendar_fill.svg\",\"fontSize\":12}]\n[\"right_body\",\"EventCard\",{\"items\":[{\"title\":{\"path\":\"/data/calendar/events/0/title\"},\"time\":{\"path\":\"/data/calendar/events/0/dtStart\"}},{\"title\":{\"path\":\"/data/calendar/events/1/title\"},\"time\":{\"path\":\"/data/calendar/events/1/dtStart\"}}],\"density\":\"compact\"}]\n[\"right\",\"Region\",{\"variant\":\"title-content\"},[\"right_title\",\"right_body\"]]\n[\"/data/weather/location/prefectureName\",\"上海市\"]\n[\"/data/weather/location/cityCode\",\"60814\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/daily/0/weekday\",\"星期四\"]\n[\"/data/weather/daily/0/temperatureRangeText\",\"25℃ / 32℃\"]\n[\"/data/calendar/events/0/title\",\"项目例会\"]\n[\"/data/calendar/events/0/dtStart\",\"14:00\"]\n[\"/data/calendar/events/0/entityId\",\"example-event-001\"]\n[\"/data/calendar/events/1/title\",\"项目例会\"]\n[\"/data/calendar/events/1/dtStart\",\"14:00\"]\n[\"/data/calendar/events/1/entityId\",\"example-event-002\"]"
+  }
+]

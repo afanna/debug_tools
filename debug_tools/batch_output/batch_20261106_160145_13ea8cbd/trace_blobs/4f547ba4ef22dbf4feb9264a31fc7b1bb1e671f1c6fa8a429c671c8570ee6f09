@@ -1,0 +1,6 @@
+{
+  "errors": [],
+  "warnings": [
+    "component second_secondary: InfoBlock.secondaryText exceeds its 118vp single-line text area and will be rendered with an ellipsis."
+  ]
+}

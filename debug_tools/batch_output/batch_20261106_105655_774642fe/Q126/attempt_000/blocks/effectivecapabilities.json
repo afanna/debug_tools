@@ -1,0 +1,21 @@
+{
+  "data": [
+    "ViewWeather"
+  ],
+  "event": [
+    {
+      "id": "event.open.weather",
+      "description": "打开华为天气应用某城市页，uri为固定值勿更改。cityCode来自于数据能力中ViewWeather出参cityCode字段，进行动态拼接，表示跳转到指定城市天气页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "intentName": "Weather_CityCode",
+        "bundleName": "",
+        "abilityName": "",
+        "uri": "{{ 'hww://www.huawei.com/totemweather?enterType=share&cityCode=' + ${/data/weather/location/cityCode} }}"
+      }
+    }
+  ],
+  "asset": [
+    "asset.ic_weather_monochrome"
+  ]
+}

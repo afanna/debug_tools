@@ -1,0 +1,1 @@
+{"name":"submit_card_plan","arguments":{"info_required":[{"requirement":"展示距离生日（农历腊月初一，公历2027年1月8日）的天数，数值后追加“天”","priority":"must","dataId":"/data/countdown/countdownDays","componentHints":["DataDisplay","EmphasizedData","EmphasisText"]}],"layoutHints":["S-center"],"assetAssignments":{"actions":[],"title":{"assetId":"asset.cake_fill","reason":"生日主题匹配蛋糕图标，用于文本模式上方标识"}}}}

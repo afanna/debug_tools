@@ -1,0 +1,21 @@
+{
+  "id": "Q447",
+  "fileName": "Q447.json",
+  "title": "运动数据",
+  "query": "将运动数据显示到桌面，创建一张运动健康卡片，展示今日步数、热量消耗、运动距离等运动数据。",
+  "size": "2x2",
+  "sequence": 38,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2034.7,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00038-000",
+  "finalAttempt": 0
+}

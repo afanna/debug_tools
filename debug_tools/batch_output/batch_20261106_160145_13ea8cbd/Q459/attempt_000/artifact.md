@@ -1,0 +1,139 @@
+```cardspec
+{
+  "title": "11月日程",
+  "description": "11月日程总览",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ]
+}
+```
+```genui
+{"version":"v0.9","createSurface":{"surfaceId":"surface_card","catalogId":"ohos.a2ui.extended.catalog.form"}}
+{"version":"v0.9","updateComponents":{"surfaceId":"surface_card","root":"root","components":[{"id":"root","component":"Column","children":["__layout__root__static_header","__layout__root__static_body"],"itemMargin":6.0,"styles":{"width":"matchParent","height":"matchParent","padding":{"top":12.0,"bottom":12.0,"left":0,"right":0},"borderRadius":20.0,"clip":true,"alignItems":"start","justifyContent":"start","linearGradient":{"direction":"RightBottom","colors":[["#FFFFE0CC",0],["#FFFFF7F2",1]]}}},{"id":"__layout__root__static_header","component":"Column","children":["header"],"styles":{"width":"matchParent","alignItems":"start","justifyContent":"start","padding":{"left":12.0,"right":12.0},"height":16.0},"itemMargin":0},{"id":"header","component":"Column","children":["header__static_title"],"itemMargin":0.0,"styles":{"width":"matchParent","height":16.0,"alignItems":"start","justifyContent":"start","flexShrink":0}},{"id":"header__static_title","component":"Text","content":"11月会议日程","styles":{"fontSize":12.0,"fontWeight":400,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":"matchParent","flexShrink":0,"fontColor":"#FF8C4B1C","textOverflow":"clip","wordBreak":"normal"}},{"id":"__layout__root__static_body","component":"Column","children":["body"],"itemMargin":6.0,"styles":{"width":"matchParent","layoutWeight":1,"alignItems":"start","justifyContent":"end","padding":{"left":12.0,"right":12.0}}},{"id":"body","component":"Column","children":["body__static_item0","body__static_divider0","body__static_item1"],"itemMargin":12.0,"styles":{"width":"matchParent","height":91.0,"alignItems":"start","justifyContent":"start","flexShrink":0}},{"id":"body__static_item0_primaryText","component":"Text","content":"PC镇江实地指导(镇江)","styles":{"fontSize":12.0,"fontWeight":500,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":"matchParent","flexShrink":1,"fontColor":"#FF8C4B1C","textOverflow":"ellipsis","constraintSize":{"minWidth":0},"wordBreak":"normal"}},{"id":"body__static_item0_secondaryText","component":"Text","content":"11月6日","styles":{"fontSize":10.0,"fontWeight":400,"lineHeight":1.3,"maxLines":1,"height":13.0,"width":"matchParent","flexShrink":1,"fontColor":"#998C4B1C","textOverflow":"ellipsis","constraintSize":{"minWidth":0},"wordBreak":"normal"}},{"id":"body__static_item0_main","component":"Column","children":["body__static_item0_primaryText","body__static_item0_secondaryText"],"itemMargin":4.0,"styles":{"height":33.0,"alignItems":"start","justifyContent":"start","flexShrink":1,"layoutWeight":1,"constraintSize":{"minWidth":0}}},{"id":"body__static_item0_badge","component":"Text","content":"1","styles":{"fontSize":10.0,"fontWeight":500,"lineHeight":1.6,"maxLines":1,"height":16.0,"width":16.0,"flexShrink":0,"fontColor":"#FF8C4B1C","textAlign":"center","backgroundColor":"#338C4B1C","borderRadius":8.0,"textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item0_text","component":"Row","children":["body__static_item0_main"],"itemMargin":0.0,"styles":{"height":33.0,"layoutWeight":1,"alignItems":"center","flexShrink":0,"constraintSize":{"minWidth":0}}},{"id":"body__static_item0","component":"Row","children":["body__static_item0_badge","body__static_item0_text"],"itemMargin":8.0,"styles":{"width":"matchParent","height":33.0,"alignItems":"center","flexShrink":0}},{"id":"body__static_divider0","component":"Divider","styles":{"width":"matchParent","height":1.0,"strokeWidth":1.0,"flexShrink":0,"color":"#1F8C4B1C"}},{"id":"body__static_item1_primaryText","component":"Text","content":"PC天坛学习班(北京)","styles":{"fontSize":12.0,"fontWeight":500,"lineHeight":1.3333333333333333,"maxLines":1,"height":16.0,"width":"matchParent","flexShrink":1,"fontColor":"#FF8C4B1C","textOverflow":"ellipsis","constraintSize":{"minWidth":0},"wordBreak":"normal"}},{"id":"body__static_item1_secondaryText","component":"Text","content":"11月7日","styles":{"fontSize":10.0,"fontWeight":400,"lineHeight":1.3,"maxLines":1,"height":13.0,"width":"matchParent","flexShrink":1,"fontColor":"#998C4B1C","textOverflow":"ellipsis","constraintSize":{"minWidth":0},"wordBreak":"normal"}},{"id":"body__static_item1_main","component":"Column","children":["body__static_item1_primaryText","body__static_item1_secondaryText"],"itemMargin":4.0,"styles":{"height":33.0,"alignItems":"start","justifyContent":"start","flexShrink":1,"layoutWeight":1,"constraintSize":{"minWidth":0}}},{"id":"body__static_item1_badge","component":"Text","content":"2","styles":{"fontSize":10.0,"fontWeight":500,"lineHeight":1.6,"maxLines":1,"height":16.0,"width":16.0,"flexShrink":0,"fontColor":"#FF8C4B1C","textAlign":"center","backgroundColor":"#338C4B1C","borderRadius":8.0,"textOverflow":"clip","wordBreak":"normal"}},{"id":"body__static_item1_text","component":"Row","children":["body__static_item1_main"],"itemMargin":0.0,"styles":{"height":33.0,"layoutWeight":1,"alignItems":"center","flexShrink":0,"constraintSize":{"minWidth":0}}},{"id":"body__static_item1","component":"Row","children":["body__static_item1_badge","body__static_item1_text"],"itemMargin":8.0,"styles":{"width":"matchParent","height":33.0,"alignItems":"center","flexShrink":0}}]}}
+{"version":"v0.9","updateDataModel":{"surfaceId":"surface_card","path":"/","value":{"state":{"ready":true}}}}
+```
+```schema
+{
+  "schemaVersion": "widget-artifact-v2"
+}
+```
+```taskspec
+{
+  "userQuery": "制作个静态卡片\n\n本轮卡片静态内容（用作展示的外部事实）：\n11月6日 PC镇江实地指导(镇江)\n11月7日 PC天坛学习班(北京)、PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会\n11月12日 AI CPP特训营（上海）\n11月13日 AI CPP特训营(苏州)、CPP苏儿学习班(苏州/11.13-14）、中国医师妇产科年会(沈阳/11.13-15)\n11月14日 PC运河之光(天津)、PC鲲鹏社(上海)、PC实地指导孙逸仙医院(宜宾）、PC省级机关学习班(南京)\n11月18日 PC常熟一院学习班(常熟)\n11月19日 PC 3i Vision会议(武汉)\n11月19-23日 CUA年会（武汉）\n11月20日 CPP AI特训营（沈阳）、CPP河北儿童&儿研所交流（石家庄）、CPP盛京儿泌学习班（沈阳/11.20-21）\n11月21日 CPP济南儿童赞助(济南)\n11月26日 PC天津一中心实地指导(天津)\n11月27日 PC武汉协和互访（武汉）、PC鼓楼-淮安实地指导(淮安)、PC江苏人民学习班-HIMA领航会(南京)、PC苏北人民学习班(扬州/11.27-28)\n11月28日 PC湘雅二院互访(长沙）、CPP河北儿童赞助会议(石家庄）、中国医大四会议赞助(沈阳/11.28-29)\n11月29日 CPP上海亚太会、PC天津人民会议赞助",
+  "size": "2x2",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [],
+  "dataModelSchema": {
+    "data": {}
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.calendar_fill",
+      "src": "resources/base/media/calendar_fill.svg",
+      "description": "样式：日历实心图标，默认黑色，图形为带格线的日历本造型；适用：日程管理、日历事件查看、当日安排。"
+    }
+  ]
+}
+```
+```effectivecapabilities
+{
+  "data": [],
+  "event": [],
+  "asset": [
+    "asset.calendar_fill"
+  ]
+}
+```
+```removedcapabilities
+[]
+```
+```generationplan
+{
+  "candidateDataBindings": [],
+  "candidateEventCandidates": [],
+  "candidateAssetIds": [
+    "asset.calendar_fill"
+  ]
+}
+```
+```meta
+{
+  "apiVersion": "v1",
+  "taskSpecVersion": "task-spec-v1",
+  "cardSpecVersion": "card-spec-v1",
+  "dslProtocolVersion": "v0.9",
+  "skillVersion": "skill-widget-v1",
+  "protocolProfileId": "a2ui-form-rom6.0-v1",
+  "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+  "artifactSchemaVersion": "widget-artifact-v2",
+  "generationMode": "create",
+  "artifactId": "bbac8cd7-f213-422b-912e-c1fc1ebae35d",
+  "createdAt": 1793952209209
+}
+```
+```designcompactdsl
+["root","Layout",{"layout":"S-static-content"},["header","body"]]
+["header","SingleLineTitle",{"title":"11月会议日程"}]
+["body","TextList",{"items":[{"primaryText":"PC镇江实地指导(镇江)","secondaryText":"11月6日"},{"primaryText":"PC天坛学习班(北京)","secondaryText":"11月7日"}]}]
+["/state/ready",true]
+```
+```request
+{
+  "content": {
+    "size": "2x2",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMM-AL10P 7.0.0.111",
+    "candidateAssetIds": [
+      "asset.calendar_fill"
+    ],
+    "candidateEventCandidates": [],
+    "bundleName": "com.huawei.genui",
+    "description": "11月日程总览",
+    "userQuery": "制作个静态卡片\n\n本轮卡片静态内容（用作展示的外部事实）：\n11月6日 PC镇江实地指导(镇江)\n11月7日 PC天坛学习班(北京)、PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会\n11月12日 AI CPP特训营（上海）\n11月13日 AI CPP特训营(苏州)、CPP苏儿学习班(苏州/11.13-14）、中国医师妇产科年会(沈阳/11.13-15)\n11月14日 PC运河之光(天津)、PC鲲鹏社(上海)、PC实地指导孙逸仙医院(宜宾）、PC省级机关学习班(南京)\n11月18日 PC常熟一院学习班(常熟)\n11月19日 PC 3i Vision会议(武汉)\n11月19-23日 CUA年会（武汉）\n11月20日 CPP AI特训营（沈阳）、CPP河北儿童&儿研所交流（石家庄）、CPP盛京儿泌学习班（沈阳/11.20-21）\n11月21日 CPP济南儿童赞助(济南)\n11月26日 PC天津一中心实地指导(天津)\n11月27日 PC武汉协和互访（武汉）、PC鼓楼-淮安实地指导(淮安)、PC江苏人民学习班-HIMA领航会(南京)、PC苏北人民学习班(扬州/11.27-28)\n11月28日 PC湘雅二院互访(长沙）、CPP河北儿童赞助会议(石家庄）、中国医大四会议赞助(沈阳/11.28-29)\n11月29日 CPP上海亚太会、PC天津人民会议赞助",
+    "title": "11月日程",
+    "candidateDataBindings": []
+  },
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMM-AL10",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261101154359606"
+  },
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "session": {
+    "interactionId": "Q459-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "userAuth": {
+    "user": {}
+  },
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0",
+  "size": "2x2",
+  "functionName": "generateWidgetCardCompactDsl",
+  "romVersion": "CMM-AL10P 7.0.0.111",
+  "candidateAssetIds": [
+    "asset.calendar_fill"
+  ],
+  "candidateEventCandidates": [],
+  "bundleName": "com.huawei.genui",
+  "description": "11月日程总览",
+  "userQuery": "制作个静态卡片\n\n本轮卡片静态内容（用作展示的外部事实）：\n11月6日 PC镇江实地指导(镇江)\n11月7日 PC天坛学习班(北京)、PC镇江市一学习班(镇江)、CPP南儿学习班（南京/11.7-8）、PC南京市中医院泌尿生殖研讨会\n11月12日 AI CPP特训营（上海）\n11月13日 AI CPP特训营(苏州)、CPP苏儿学习班(苏州/11.13-14）、中国医师妇产科年会(沈阳/11.13-15)\n11月14日 PC运河之光(天津)、PC鲲鹏社(上海)、PC实地指导孙逸仙医院(宜宾）、PC省级机关学习班(南京)\n11月18日 PC常熟一院学习班(常熟)\n11月19日 PC 3i Vision会议(武汉)\n11月19-23日 CUA年会（武汉）\n11月20日 CPP AI特训营（沈阳）、CPP河北儿童&儿研所交流（石家庄）、CPP盛京儿泌学习班（沈阳/11.20-21）\n11月21日 CPP济南儿童赞助(济南)\n11月26日 PC天津一中心实地指导(天津)\n11月27日 PC武汉协和互访（武汉）、PC鼓楼-淮安实地指导(淮安)、PC江苏人民学习班-HIMA领航会(南京)、PC苏北人民学习班(扬州/11.27-28)\n11月28日 PC湘雅二院互访(长沙）、CPP河北儿童赞助会议(石家庄）、中国医大四会议赞助(沈阳/11.28-29)\n11月29日 CPP上海亚太会、PC天津人民会议赞助",
+  "title": "11月日程",
+  "candidateDataBindings": []
+}
+```

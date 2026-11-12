@@ -1,0 +1,2175 @@
+{
+  "status": "success",
+  "summary": "目标效果评测完成：6 个样本，通过 0，待复核 0，失败 6",
+  "facts": {
+    "total": 6,
+    "passed": 0,
+    "partial": 0,
+    "failed": 6,
+    "passRate": 77.6,
+    "averageScore": 61.1,
+    "averageTarget": 0.0,
+    "averageVisibility": 37.5,
+    "averageSpec": 23.6,
+    "specApplicable": 6,
+    "specExcluded": 0
+  },
+  "artifacts": [
+    {
+      "key": "overview",
+      "data": [
+        {
+          "label": "样本数",
+          "value": 6
+        },
+        {
+          "label": "平均总分",
+          "value": 61.1
+        },
+        {
+          "label": "平均目标语义 /25",
+          "value": "0.0"
+        },
+        {
+          "label": "平均可见性 /37.5",
+          "value": "37.5"
+        },
+        {
+          "label": "平均规范符合 /37.5",
+          "value": "23.6"
+        },
+        {
+          "label": "通过",
+          "value": 0
+        },
+        {
+          "label": "待复核",
+          "value": 0
+        },
+        {
+          "label": "失败",
+          "value": 6
+        },
+        {
+          "label": "规则通过率",
+          "value": "77.6%"
+        }
+      ],
+      "title": "整批概览",
+      "dataType": "metrics",
+      "renderer": "kpi"
+    },
+    {
+      "key": "rules",
+      "data": [
+        {
+          "维度": "目标语义（不适用）",
+          "均分 / 满分": "0.0 / 25.0",
+          "通过率": "—",
+          "计分样本": 0,
+          "items": []
+        },
+        {
+          "维度": "可见性",
+          "均分 / 满分": "37.5 / 37.5",
+          "通过率": "100.0%",
+          "计分样本": 6,
+          "items": [
+            {
+              "规则": "VIS.TEXT_CLIPPED 文字未被裁切",
+              "含义": "文字没有被容器裁切或省略",
+              "均分 / 满分": "6.2 / 6.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "VIS.TEXT_OVERFLOW 文字未越出画布",
+              "含义": "文字没有越出卡片边界",
+              "均分 / 满分": "6.2 / 6.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "VIS.TEXT_OVERLAP 文字未互相遮挡",
+              "含义": "文字之间没有互相遮挡",
+              "均分 / 满分": "6.2 / 6.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "VIS.IMAGE_OVERFLOW 图片未越出画布",
+              "含义": "图标或图片没有越出卡片边界",
+              "均分 / 满分": "6.2 / 6.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "VIS.IMAGE_LOAD_FAILED 素材真实加载",
+              "含义": "图片资源在渲染时真实加载成功",
+              "均分 / 满分": "6.2 / 6.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "VIS.FONT_TOO_SMALL 正文字号下限",
+              "含义": "正文字号不低于可读下限",
+              "均分 / 满分": "6.2 / 6.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "VIS.CONTRAST_LOW 文字对比度",
+              "含义": "正文对比度不低于 4.5:1，大字不低于 3:1",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            },
+            {
+              "规则": "VIS.EVIDENCE_MISSING 可见性证据完整",
+              "含义": "DOM 与截图证据完整，能支撑可见性判定",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            }
+          ]
+        },
+        {
+          "维度": "规范符合",
+          "均分 / 满分": "23.6 / 37.5",
+          "通过率": "63.1%",
+          "计分样本": 6,
+          "items": [
+            {
+              "规则": "SPEC.RADIUS 圆角 20",
+              "含义": "卡片圆角为 20",
+              "均分 / 满分": "2.0 / 2.0–2.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.CLIP 内容不越出圆角",
+              "含义": "内容区开启裁切，不越出 20 圆角",
+              "均分 / 满分": "2.0 / 2.0–2.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.PADDING 内边距 12",
+              "含义": "内容区距卡片边缘 12",
+              "均分 / 满分": "2.0 / 2.0–2.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.BG_FULL_BLEED 背景铺满",
+              "含义": "背景图铺满整卡，四周不留边",
+              "均分 / 满分": "2.0 / 2.0–2.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.BG_SINGLE 背景图唯一",
+              "含义": "整卡只有一张全屏背景图，避免叠图发灰",
+              "均分 / 满分": "2.0 / 2.0–2.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.MASK 黑色蒙层 60%",
+              "含义": "背景图上覆盖 60%（55%–70%）黑色蒙层，位于背景与内容之间",
+              "均分 / 满分": "0.0 / 2.0–2.2",
+              "通过率": "0.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.TITLE_REQUIRED 标题必选",
+              "含义": "卡片必须带标题",
+              "均分 / 满分": "2.0 / 2.0–2.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.TITLE_FONT 标题 16/20fp",
+              "含义": "标题为 T1–T4：主标题 16 或 20fp，副标题 16fp",
+              "均分 / 满分": "0.0 / 2.0–2.2",
+              "通过率": "0.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.TITLE_ELLIPSIS 标题单行省略",
+              "含义": "主副标题都最多一行，超出用省略号",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            },
+            {
+              "规则": "SPEC.TITLE_COLOR 标题白色",
+              "含义": "主标题 100% 纯白，副标题 60% 白",
+              "均分 / 满分": "0.0 / 2.0–2.2",
+              "通过率": "0.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.PRIMARY_FONT 主值 56/38fp",
+              "含义": "倒计时主数字字号：C1 为 56fp，C3 为 38fp，长数字最小 29fp",
+              "均分 / 满分": "0.3 / 2.0–2.2",
+              "通过率": "16.7%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.PRIMARY_COLOR 主数字白色",
+              "含义": "主数字为白色（100% 或 90%）",
+              "均分 / 满分": "2.0 / 2.0–2.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.UNIT_FONT 单位 16fp 独立",
+              "含义": "“天 / 小时”等单位单独成文本，字号 16fp",
+              "均分 / 满分": "0.0 / 2.0–2.2",
+              "通过率": "0.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.UNIT_COLOR 单位 60% 白",
+              "含义": "单位为 60% 白色",
+              "均分 / 满分": "2.0 / 2.0",
+              "通过率": "100.0%",
+              "参与样本": 4
+            },
+            {
+              "规则": "SPEC.SUPPORT_FONT 副文本 16fp",
+              "含义": "日期、说明等副文本字号 16fp",
+              "均分 / 满分": "0.0 / 2.0–2.2",
+              "通过率": "0.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.SUPPORT_COLOR 副文本 60% 白",
+              "含义": "副文本为 60% 白色",
+              "均分 / 满分": "0.0 / 2.0–2.2",
+              "通过率": "0.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.CONTENT_TYPE 内容属于 C1–C5",
+              "含义": "内容属于规范允许的 C1–C5，且数字与图案不并存",
+              "均分 / 满分": "2.0 / 2.0–2.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.PATTERN_GEOMETRY 图案数量",
+              "含义": "图案数量暂不判定：只记录数量；圆点=当月天数、柱体=一周天数，待确认",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            },
+            {
+              "规则": "SPEC.DIGIT_LIMIT 数字最多 6 位",
+              "含义": "主数字最多 6 位",
+              "均分 / 满分": "2.0 / 2.0–2.1",
+              "通过率": "100.0%",
+              "参与样本": 5
+            },
+            {
+              "规则": "SPEC.ACTION_PATTERN 整卡点击",
+              "含义": "整卡点击，不放独立按钮",
+              "均分 / 满分": "2.0 / 2.0–2.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            },
+            {
+              "规则": "SPEC.SAFE_AREA 安全区内",
+              "含义": "内容全部落在安全区内",
+              "均分 / 满分": "2.0 / 2.0–2.2",
+              "通过率": "100.0%",
+              "参与样本": 6
+            }
+          ]
+        },
+        {
+          "维度": "前置条件（不适用）",
+          "均分 / 满分": "—",
+          "通过率": "—",
+          "计分样本": 0,
+          "items": [
+            {
+              "规则": "L0.RESULT_STATUS 样本执行状态",
+              "含义": "样本本身执行成功，才继续评分",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            },
+            {
+              "规则": "L0.ARTIFACT_MISSING 可渲染产物存在",
+              "含义": "存在可渲染的最终卡片产物",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            },
+            {
+              "规则": "L0.PARSE_FAILED A2UI 解析",
+              "含义": "A2UI 能被解析成组件树",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            }
+          ]
+        },
+        {
+          "维度": "其他（不适用）",
+          "均分 / 满分": "—",
+          "通过率": "—",
+          "计分样本": 0,
+          "items": [
+            {
+              "规则": "LAYOUT.CARD_OVERFLOW 内容未越出卡片画布",
+              "含义": "可见节点的内容矩形不越出卡片画布；只做诊断，不计分",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            },
+            {
+              "规则": "LAYOUT.PARENT_CLIP 内容未被父容器裁切",
+              "含义": "非文本节点不被中间容器裁切；只做诊断，不计分",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            },
+            {
+              "规则": "LAYOUT.SIBLING_OVERLAP 兄弟节点未互相遮挡",
+              "含义": "同一父容器内的图文兄弟节点不互相遮挡；只做诊断，不计分",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            }
+          ]
+        },
+        {
+          "维度": "素材（仅诊断）（不适用）",
+          "均分 / 满分": "—",
+          "通过率": "100.0%",
+          "计分样本": 0,
+          "items": [
+            {
+              "规则": "ASSET.FILE_MISSING 本地素材文件存在",
+              "含义": "卡片引用的本地素材文件存在",
+              "均分 / 满分": "— / —",
+              "通过率": "100.0%",
+              "参与样本": 0
+            },
+            {
+              "规则": "ASSET.RENDERED 素材真实渲染",
+              "含义": "素材在 3x 渲染截图中真实绘制",
+              "均分 / 满分": "— / —",
+              "通过率": "100.0%",
+              "参与样本": 0
+            }
+          ]
+        },
+        {
+          "维度": "规范（仅诊断）（不适用）",
+          "均分 / 满分": "—",
+          "通过率": "100.0%",
+          "计分样本": 0,
+          "items": [
+            {
+              "规则": "SPEC.THEME_ELIGIBLE 主题属于图+蒙层路线",
+              "含义": "主题属于 Pixso 图 + 黑蒙层路线；融球、渐变、纯色和黑字主题不计入规范分",
+              "均分 / 满分": "— / —",
+              "通过率": "100.0%",
+              "参与样本": 0
+            },
+            {
+              "规则": "SPEC.BG_FIT 背景填充方式",
+              "含义": "背景填充方式（fill/cover），其余仅诊断",
+              "均分 / 满分": "— / —",
+              "通过率": "100.0%",
+              "参与样本": 0
+            },
+            {
+              "规则": "SPEC.ICON 图标规格",
+              "含义": "图标不超过 20×20 且为白色；只做诊断，不计分",
+              "均分 / 满分": "— / —",
+              "通过率": "100.0%",
+              "参与样本": 0
+            },
+            {
+              "规则": "SPEC.PATTERN_PITCH 图案间距",
+              "含义": "图案间距只做诊断：柱距 19.34/33.25，圆球列距 10.7/11.16",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            },
+            {
+              "规则": "SPEC.UNIT_BASELINE 数字单位基线",
+              "含义": "数字与单位同行基线对齐；只做诊断，不计分",
+              "均分 / 满分": "— / —",
+              "通过率": "—",
+              "参与样本": 0
+            },
+            {
+              "规则": "SPEC.USER_PREFERENCE 用户样式偏好",
+              "含义": "用户显式要求背景、配色或字号时，冲突规范项豁免而不是判失败",
+              "均分 / 满分": "— / —",
+              "通过率": "100.0%",
+              "参与样本": 0
+            }
+          ]
+        }
+      ],
+      "title": "细分维度平均",
+      "dataType": "records",
+      "renderer": "grouped-table",
+      "wide": true
+    },
+    {
+      "key": "samples",
+      "data": [
+        {
+          "样本": "Q001",
+          "状态": "failed",
+          "结论": "规范失败",
+          "场景": "once",
+          "主题": "蓝色无主体纹理 · 斜纹（photo · 图+蒙层）",
+          "总分": 61.2,
+          "目标语义": 0.0,
+          "可见性": 37.5,
+          "规范符合": 23.7,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+          "待复核项": "",
+          "尺寸": "2x2"
+        },
+        {
+          "样本": "Q031",
+          "状态": "failed",
+          "结论": "规范失败",
+          "场景": "repeat_week",
+          "主题": "紫色无主体纹理 · 菱格（photo · 图+蒙层）",
+          "总分": 61.2,
+          "目标语义": 0.0,
+          "可见性": 37.5,
+          "规范符合": 23.7,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+          "待复核项": "",
+          "尺寸": "2x2"
+        },
+        {
+          "样本": "Q061",
+          "状态": "failed",
+          "结论": "规范失败",
+          "场景": "lunar_once",
+          "主题": "蓝色无主体纹理 · 斜纹（photo · 图+蒙层）",
+          "总分": 59.6,
+          "目标语义": 0.0,
+          "可见性": 37.5,
+          "规范符合": 22.1,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+          "待复核项": "",
+          "尺寸": "2x2"
+        },
+        {
+          "样本": "Q076",
+          "状态": "failed",
+          "结论": "规范失败",
+          "场景": "repeat_day",
+          "主题": "橙色无主体纹理 · 菱格（photo · 图+蒙层）",
+          "总分": 61.2,
+          "目标语义": 0.0,
+          "可见性": 37.5,
+          "规范符合": 23.7,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+          "待复核项": "",
+          "尺寸": "2x2"
+        },
+        {
+          "样本": "Q086",
+          "状态": "failed",
+          "结论": "规范失败",
+          "场景": "repeat_month",
+          "主题": "蓝色无主体纹理 · 斜纹（photo · 图+蒙层）",
+          "总分": 60.4,
+          "目标语义": 0.0,
+          "可见性": 37.5,
+          "规范符合": 22.9,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_COLOR, SPEC.PRIMARY_FONT, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+          "待复核项": "",
+          "尺寸": "2x2"
+        },
+        {
+          "样本": "Q091",
+          "状态": "failed",
+          "结论": "规范失败",
+          "场景": "repeat_year",
+          "主题": "蓝色无主体纹理 · 菱格（photo · 图+蒙层）",
+          "总分": 63.2,
+          "目标语义": 0.0,
+          "可见性": 37.5,
+          "规范符合": 25.7,
+          "失败项": "SPEC.MASK, SPEC.TITLE_FONT, SPEC.TITLE_COLOR, SPEC.UNIT_FONT, SPEC.SUPPORT_FONT, SPEC.SUPPORT_COLOR",
+          "待复核项": "",
+          "尺寸": "2x2"
+        }
+      ],
+      "title": "全部样本",
+      "dataType": "records",
+      "renderer": "table",
+      "wide": true
+    },
+    {
+      "key": "scores",
+      "data": [
+        {
+          "sampleId": "Q001",
+          "title": "Q001",
+          "status": "failed",
+          "verdict": "规范失败",
+          "total": 61.2,
+          "band": "及格",
+          "image": "samples/Q001/original.png",
+          "size": "2x2",
+          "dimensions": [
+            {
+              "key": "target",
+              "label": "目标语义",
+              "max": 25.0,
+              "score": 0.0,
+              "ratio": 0.0,
+              "checks": 0,
+              "passed": 0,
+              "pending": 0,
+              "applicable": false,
+              "reason": "期望日期由 mock 设备时间推导，仅作参考；目标语义记 0 分",
+              "items": []
+            },
+            {
+              "key": "visibility",
+              "label": "可见性",
+              "max": 37.5,
+              "score": 37.5,
+              "ratio": 100.0,
+              "checks": 6,
+              "passed": 6,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "VIS.TEXT_CLIPPED",
+                  "title": "文字未被裁切",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现横向裁剪（1 处纵向行框溢出不计入）"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERFLOW",
+                  "title": "文字未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_OVERFLOW",
+                  "title": "图片未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERLAP",
+                  "title": "文字未互相遮挡",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_LOAD_FAILED",
+                  "title": "素材真实加载",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.FONT_TOO_SMALL",
+                  "title": "正文字号下限",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "正文字号 ≥ 12",
+                  "actual": "全部文本达到下限"
+                }
+              ]
+            },
+            {
+              "key": "spec",
+              "label": "规范符合",
+              "max": 37.5,
+              "score": 23.7,
+              "ratio": 63.2,
+              "checks": 19,
+              "passed": 12,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "SPEC.RADIUS",
+                  "title": "圆角 20",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "20",
+                  "actual": "20"
+                },
+                {
+                  "rule": "SPEC.CLIP",
+                  "title": "内容不越出圆角",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "true",
+                  "actual": "root=True, content=True"
+                },
+                {
+                  "rule": "SPEC.PADDING",
+                  "title": "内边距 12",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "12",
+                  "actual": "12.0"
+                },
+                {
+                  "rule": "SPEC.BG_FULL_BLEED",
+                  "title": "背景铺满",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "铺满的背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.BG_SINGLE",
+                  "title": "背景图唯一",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "单张满铺背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.MASK",
+                  "title": "黑色蒙层 60%",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "黑色蒙层 60%（55%–70%）",
+                  "actual": "未找到黑色蒙层"
+                },
+                {
+                  "rule": "SPEC.TITLE_REQUIRED",
+                  "title": "标题必选",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "存在标题区",
+                  "actual": "title_title"
+                },
+                {
+                  "rule": "SPEC.TITLE_FONT",
+                  "title": "标题 16/20fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "主 16 或 20，副 16",
+                  "actual": "主 12.0"
+                },
+                {
+                  "rule": "SPEC.TITLE_COLOR",
+                  "title": "标题白色",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "主 100% 白，副 60% 白",
+                  "actual": "主 alpha=0.8"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_FONT",
+                  "title": "主值 56/38fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "56 或 38",
+                  "actual": "30.0"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_COLOR",
+                  "title": "主数字白色",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "白色 100%/90%",
+                  "actual": "alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.UNIT_FONT",
+                  "title": "单位 16fp 独立",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "16",
+                  "actual": "primary_unit=12.0"
+                },
+                {
+                  "rule": "SPEC.UNIT_COLOR",
+                  "title": "单位 60% 白",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "白色 60%",
+                  "actual": "全部 60% 白"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_FONT",
+                  "title": "副文本 16fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "16",
+                  "actual": "support_item0_value=12.0, support_item0_label=12.0"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_COLOR",
+                  "title": "副文本 60% 白",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "白色 60%",
+                  "actual": "support_item0_value alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.CONTENT_TYPE",
+                  "title": "内容属于 C1–C5",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "C1–C5 之一",
+                  "actual": "C3 小数字"
+                },
+                {
+                  "rule": "SPEC.DIGIT_LIMIT",
+                  "title": "数字最多 6 位",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "最多 6 位",
+                  "actual": "2 位"
+                },
+                {
+                  "rule": "SPEC.ACTION_PATTERN",
+                  "title": "整卡点击",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "整卡点击，不放独立按钮",
+                  "actual": "未发现独立按钮"
+                },
+                {
+                  "rule": "SPEC.SAFE_AREA",
+                  "title": "安全区内",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "全部文本在 inset(12) 内",
+                  "actual": "全部在安全区"
+                }
+              ]
+            }
+          ],
+          "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_6cc845decfcf/assets/target-effect/samples/Q001/original.png"
+        },
+        {
+          "sampleId": "Q031",
+          "title": "Q031",
+          "status": "failed",
+          "verdict": "规范失败",
+          "total": 61.2,
+          "band": "及格",
+          "image": "samples/Q031/original.png",
+          "size": "2x2",
+          "dimensions": [
+            {
+              "key": "target",
+              "label": "目标语义",
+              "max": 25.0,
+              "score": 0.0,
+              "ratio": 0.0,
+              "checks": 0,
+              "passed": 0,
+              "pending": 0,
+              "applicable": false,
+              "reason": "期望日期由 mock 设备时间推导，仅作参考；目标语义记 0 分",
+              "items": []
+            },
+            {
+              "key": "visibility",
+              "label": "可见性",
+              "max": 37.5,
+              "score": 37.5,
+              "ratio": 100.0,
+              "checks": 6,
+              "passed": 6,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "VIS.TEXT_CLIPPED",
+                  "title": "文字未被裁切",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现横向裁剪（3 处纵向行框溢出不计入）"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERFLOW",
+                  "title": "文字未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_OVERFLOW",
+                  "title": "图片未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERLAP",
+                  "title": "文字未互相遮挡",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_LOAD_FAILED",
+                  "title": "素材真实加载",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.FONT_TOO_SMALL",
+                  "title": "正文字号下限",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "正文字号 ≥ 12",
+                  "actual": "全部文本达到下限"
+                }
+              ]
+            },
+            {
+              "key": "spec",
+              "label": "规范符合",
+              "max": 37.5,
+              "score": 23.7,
+              "ratio": 63.2,
+              "checks": 19,
+              "passed": 12,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "SPEC.RADIUS",
+                  "title": "圆角 20",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "20",
+                  "actual": "20"
+                },
+                {
+                  "rule": "SPEC.CLIP",
+                  "title": "内容不越出圆角",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "true",
+                  "actual": "root=True, content=True"
+                },
+                {
+                  "rule": "SPEC.PADDING",
+                  "title": "内边距 12",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "12",
+                  "actual": "12.0"
+                },
+                {
+                  "rule": "SPEC.BG_FULL_BLEED",
+                  "title": "背景铺满",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "铺满的背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.BG_SINGLE",
+                  "title": "背景图唯一",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "单张满铺背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.MASK",
+                  "title": "黑色蒙层 60%",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "黑色蒙层 60%（55%–70%）",
+                  "actual": "未找到黑色蒙层"
+                },
+                {
+                  "rule": "SPEC.TITLE_REQUIRED",
+                  "title": "标题必选",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "存在标题区",
+                  "actual": "title_title"
+                },
+                {
+                  "rule": "SPEC.TITLE_FONT",
+                  "title": "标题 16/20fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "主 16 或 20，副 16",
+                  "actual": "主 12.0"
+                },
+                {
+                  "rule": "SPEC.TITLE_COLOR",
+                  "title": "标题白色",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "主 100% 白，副 60% 白",
+                  "actual": "主 alpha=0.8"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_FONT",
+                  "title": "主值 56/38fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "56 或 38",
+                  "actual": "30.0"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_COLOR",
+                  "title": "主数字白色",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "白色 100%/90%",
+                  "actual": "alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.UNIT_FONT",
+                  "title": "单位 16fp 独立",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "16",
+                  "actual": "primary_unit=12.0"
+                },
+                {
+                  "rule": "SPEC.UNIT_COLOR",
+                  "title": "单位 60% 白",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "白色 60%",
+                  "actual": "全部 60% 白"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_FONT",
+                  "title": "副文本 16fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "16",
+                  "actual": "support_item0_value=14.0, support_item0_label=14.0"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_COLOR",
+                  "title": "副文本 60% 白",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "白色 60%",
+                  "actual": "support_item0_value alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.CONTENT_TYPE",
+                  "title": "内容属于 C1–C5",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "C1–C5 之一",
+                  "actual": "C3 小数字"
+                },
+                {
+                  "rule": "SPEC.DIGIT_LIMIT",
+                  "title": "数字最多 6 位",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "最多 6 位",
+                  "actual": "1 位"
+                },
+                {
+                  "rule": "SPEC.ACTION_PATTERN",
+                  "title": "整卡点击",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "整卡点击，不放独立按钮",
+                  "actual": "未发现独立按钮"
+                },
+                {
+                  "rule": "SPEC.SAFE_AREA",
+                  "title": "安全区内",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "全部文本在 inset(12) 内",
+                  "actual": "全部在安全区"
+                }
+              ]
+            }
+          ],
+          "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_6cc845decfcf/assets/target-effect/samples/Q031/original.png"
+        },
+        {
+          "sampleId": "Q061",
+          "title": "Q061",
+          "status": "failed",
+          "verdict": "规范失败",
+          "total": 59.6,
+          "band": "不合格",
+          "image": "samples/Q061/original.png",
+          "size": "2x2",
+          "dimensions": [
+            {
+              "key": "target",
+              "label": "目标语义",
+              "max": 25.0,
+              "score": 0.0,
+              "ratio": 0.0,
+              "checks": 0,
+              "passed": 0,
+              "pending": 0,
+              "applicable": false,
+              "reason": "未提供显式期望；目标语义记 0 分",
+              "items": []
+            },
+            {
+              "key": "visibility",
+              "label": "可见性",
+              "max": 37.5,
+              "score": 37.5,
+              "ratio": 100.0,
+              "checks": 6,
+              "passed": 6,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "VIS.TEXT_CLIPPED",
+                  "title": "文字未被裁切",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现横向裁剪（3 处纵向行框溢出不计入）"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERFLOW",
+                  "title": "文字未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_OVERFLOW",
+                  "title": "图片未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERLAP",
+                  "title": "文字未互相遮挡",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_LOAD_FAILED",
+                  "title": "素材真实加载",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.FONT_TOO_SMALL",
+                  "title": "正文字号下限",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "正文字号 ≥ 12",
+                  "actual": "全部文本达到下限"
+                }
+              ]
+            },
+            {
+              "key": "spec",
+              "label": "规范符合",
+              "max": 37.5,
+              "score": 22.1,
+              "ratio": 58.8,
+              "checks": 17,
+              "passed": 10,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "SPEC.RADIUS",
+                  "title": "圆角 20",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.2,
+                  "expected": "20",
+                  "actual": "20"
+                },
+                {
+                  "rule": "SPEC.CLIP",
+                  "title": "内容不越出圆角",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.2,
+                  "expected": "true",
+                  "actual": "root=True, content=True"
+                },
+                {
+                  "rule": "SPEC.PADDING",
+                  "title": "内边距 12",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.2,
+                  "expected": "12",
+                  "actual": "12.0"
+                },
+                {
+                  "rule": "SPEC.BG_FULL_BLEED",
+                  "title": "背景铺满",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.2,
+                  "expected": "铺满的背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.BG_SINGLE",
+                  "title": "背景图唯一",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.2,
+                  "expected": "单张满铺背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.MASK",
+                  "title": "黑色蒙层 60%",
+                  "status": "fail",
+                  "deduction": 2.2,
+                  "weight": 2.2,
+                  "expected": "黑色蒙层 60%（55%–70%）",
+                  "actual": "未找到黑色蒙层"
+                },
+                {
+                  "rule": "SPEC.TITLE_REQUIRED",
+                  "title": "标题必选",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.2,
+                  "expected": "存在标题区",
+                  "actual": "title_title"
+                },
+                {
+                  "rule": "SPEC.TITLE_FONT",
+                  "title": "标题 16/20fp",
+                  "status": "fail",
+                  "deduction": 2.2,
+                  "weight": 2.2,
+                  "expected": "主 16 或 20，副 16",
+                  "actual": "主 12.0"
+                },
+                {
+                  "rule": "SPEC.TITLE_COLOR",
+                  "title": "标题白色",
+                  "status": "fail",
+                  "deduction": 2.2,
+                  "weight": 2.2,
+                  "expected": "主 100% 白，副 60% 白",
+                  "actual": "主 alpha=0.8"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_FONT",
+                  "title": "主值 56/38fp",
+                  "status": "fail",
+                  "deduction": 2.2,
+                  "weight": 2.2,
+                  "expected": "56 或 38",
+                  "actual": "18.0"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_COLOR",
+                  "title": "主数字白色",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.2,
+                  "expected": "白色 100%/90%",
+                  "actual": "alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.UNIT_FONT",
+                  "title": "单位 16fp 独立",
+                  "status": "fail",
+                  "deduction": 2.2,
+                  "weight": 2.2,
+                  "expected": "单位独立 16fp",
+                  "actual": "单位与数字同一文本节点"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_FONT",
+                  "title": "副文本 16fp",
+                  "status": "fail",
+                  "deduction": 2.2,
+                  "weight": 2.2,
+                  "expected": "16",
+                  "actual": "support_item0_value=14.0, support_item0_label=14.0"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_COLOR",
+                  "title": "副文本 60% 白",
+                  "status": "fail",
+                  "deduction": 2.2,
+                  "weight": 2.2,
+                  "expected": "白色 60%",
+                  "actual": "support_item0_value alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.CONTENT_TYPE",
+                  "title": "内容属于 C1–C5",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.2,
+                  "expected": "C1–C5 之一",
+                  "actual": "C3 小数字"
+                },
+                {
+                  "rule": "SPEC.ACTION_PATTERN",
+                  "title": "整卡点击",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.2,
+                  "expected": "整卡点击，不放独立按钮",
+                  "actual": "未发现独立按钮"
+                },
+                {
+                  "rule": "SPEC.SAFE_AREA",
+                  "title": "安全区内",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.2,
+                  "expected": "全部文本在 inset(12) 内",
+                  "actual": "全部在安全区"
+                }
+              ]
+            }
+          ],
+          "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_6cc845decfcf/assets/target-effect/samples/Q061/original.png"
+        },
+        {
+          "sampleId": "Q076",
+          "title": "Q076",
+          "status": "failed",
+          "verdict": "规范失败",
+          "total": 61.2,
+          "band": "及格",
+          "image": "samples/Q076/original.png",
+          "size": "2x2",
+          "dimensions": [
+            {
+              "key": "target",
+              "label": "目标语义",
+              "max": 25.0,
+              "score": 0.0,
+              "ratio": 0.0,
+              "checks": 0,
+              "passed": 0,
+              "pending": 0,
+              "applicable": false,
+              "reason": "期望日期由 mock 设备时间推导，仅作参考；目标语义记 0 分",
+              "items": []
+            },
+            {
+              "key": "visibility",
+              "label": "可见性",
+              "max": 37.5,
+              "score": 37.5,
+              "ratio": 100.0,
+              "checks": 6,
+              "passed": 6,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "VIS.TEXT_CLIPPED",
+                  "title": "文字未被裁切",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现横向裁剪（1 处纵向行框溢出不计入）"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERFLOW",
+                  "title": "文字未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_OVERFLOW",
+                  "title": "图片未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERLAP",
+                  "title": "文字未互相遮挡",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_LOAD_FAILED",
+                  "title": "素材真实加载",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.FONT_TOO_SMALL",
+                  "title": "正文字号下限",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "正文字号 ≥ 12",
+                  "actual": "全部文本达到下限"
+                }
+              ]
+            },
+            {
+              "key": "spec",
+              "label": "规范符合",
+              "max": 37.5,
+              "score": 23.7,
+              "ratio": 63.2,
+              "checks": 19,
+              "passed": 12,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "SPEC.RADIUS",
+                  "title": "圆角 20",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "20",
+                  "actual": "20"
+                },
+                {
+                  "rule": "SPEC.CLIP",
+                  "title": "内容不越出圆角",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "true",
+                  "actual": "root=True, content=True"
+                },
+                {
+                  "rule": "SPEC.PADDING",
+                  "title": "内边距 12",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "12",
+                  "actual": "12.0"
+                },
+                {
+                  "rule": "SPEC.BG_FULL_BLEED",
+                  "title": "背景铺满",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "铺满的背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.BG_SINGLE",
+                  "title": "背景图唯一",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "单张满铺背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.MASK",
+                  "title": "黑色蒙层 60%",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "黑色蒙层 60%（55%–70%）",
+                  "actual": "未找到黑色蒙层"
+                },
+                {
+                  "rule": "SPEC.TITLE_REQUIRED",
+                  "title": "标题必选",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "存在标题区",
+                  "actual": "title_title"
+                },
+                {
+                  "rule": "SPEC.TITLE_FONT",
+                  "title": "标题 16/20fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "主 16 或 20，副 16",
+                  "actual": "主 12.0"
+                },
+                {
+                  "rule": "SPEC.TITLE_COLOR",
+                  "title": "标题白色",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "主 100% 白，副 60% 白",
+                  "actual": "主 alpha=0.8"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_FONT",
+                  "title": "主值 56/38fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "56 或 38",
+                  "actual": "30.0"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_COLOR",
+                  "title": "主数字白色",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "白色 100%/90%",
+                  "actual": "alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.UNIT_FONT",
+                  "title": "单位 16fp 独立",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "16",
+                  "actual": "days_unit=12.0"
+                },
+                {
+                  "rule": "SPEC.UNIT_COLOR",
+                  "title": "单位 60% 白",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "白色 60%",
+                  "actual": "全部 60% 白"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_FONT",
+                  "title": "副文本 16fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "16",
+                  "actual": "target_item0_value=12.0"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_COLOR",
+                  "title": "副文本 60% 白",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "白色 60%",
+                  "actual": "target_item0_value alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.CONTENT_TYPE",
+                  "title": "内容属于 C1–C5",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "C1–C5 之一",
+                  "actual": "C3 小数字"
+                },
+                {
+                  "rule": "SPEC.DIGIT_LIMIT",
+                  "title": "数字最多 6 位",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "最多 6 位",
+                  "actual": "1 位"
+                },
+                {
+                  "rule": "SPEC.ACTION_PATTERN",
+                  "title": "整卡点击",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "整卡点击，不放独立按钮",
+                  "actual": "未发现独立按钮"
+                },
+                {
+                  "rule": "SPEC.SAFE_AREA",
+                  "title": "安全区内",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "全部文本在 inset(12) 内",
+                  "actual": "全部在安全区"
+                }
+              ]
+            }
+          ],
+          "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_6cc845decfcf/assets/target-effect/samples/Q076/original.png"
+        },
+        {
+          "sampleId": "Q086",
+          "title": "Q086",
+          "status": "failed",
+          "verdict": "规范失败",
+          "total": 60.4,
+          "band": "及格",
+          "image": "samples/Q086/original.png",
+          "size": "2x2",
+          "dimensions": [
+            {
+              "key": "target",
+              "label": "目标语义",
+              "max": 25.0,
+              "score": 0.0,
+              "ratio": 0.0,
+              "checks": 0,
+              "passed": 0,
+              "pending": 0,
+              "applicable": false,
+              "reason": "期望日期由 mock 设备时间推导，仅作参考；目标语义记 0 分",
+              "items": []
+            },
+            {
+              "key": "visibility",
+              "label": "可见性",
+              "max": 37.5,
+              "score": 37.5,
+              "ratio": 100.0,
+              "checks": 6,
+              "passed": 6,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "VIS.TEXT_CLIPPED",
+                  "title": "文字未被裁切",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现横向裁剪（1 处纵向行框溢出不计入）"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERFLOW",
+                  "title": "文字未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_OVERFLOW",
+                  "title": "图片未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERLAP",
+                  "title": "文字未互相遮挡",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_LOAD_FAILED",
+                  "title": "素材真实加载",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.FONT_TOO_SMALL",
+                  "title": "正文字号下限",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "正文字号 ≥ 12",
+                  "actual": "全部文本达到下限"
+                }
+              ]
+            },
+            {
+              "key": "spec",
+              "label": "规范符合",
+              "max": 37.5,
+              "score": 22.9,
+              "ratio": 61.1,
+              "checks": 18,
+              "passed": 11,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "SPEC.RADIUS",
+                  "title": "圆角 20",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "20",
+                  "actual": "20"
+                },
+                {
+                  "rule": "SPEC.CLIP",
+                  "title": "内容不越出圆角",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "true",
+                  "actual": "root=True, content=True"
+                },
+                {
+                  "rule": "SPEC.PADDING",
+                  "title": "内边距 12",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "12",
+                  "actual": "12.0"
+                },
+                {
+                  "rule": "SPEC.BG_FULL_BLEED",
+                  "title": "背景铺满",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "铺满的背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.BG_SINGLE",
+                  "title": "背景图唯一",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "单张满铺背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.MASK",
+                  "title": "黑色蒙层 60%",
+                  "status": "fail",
+                  "deduction": 2.1,
+                  "weight": 2.1,
+                  "expected": "黑色蒙层 60%（55%–70%）",
+                  "actual": "未找到黑色蒙层"
+                },
+                {
+                  "rule": "SPEC.TITLE_REQUIRED",
+                  "title": "标题必选",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "存在标题区",
+                  "actual": "title_title"
+                },
+                {
+                  "rule": "SPEC.TITLE_FONT",
+                  "title": "标题 16/20fp",
+                  "status": "fail",
+                  "deduction": 2.1,
+                  "weight": 2.1,
+                  "expected": "主 16 或 20，副 16",
+                  "actual": "主 12.0"
+                },
+                {
+                  "rule": "SPEC.TITLE_COLOR",
+                  "title": "标题白色",
+                  "status": "fail",
+                  "deduction": 2.1,
+                  "weight": 2.1,
+                  "expected": "主 100% 白，副 60% 白",
+                  "actual": "主 alpha=0.8"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_FONT",
+                  "title": "主值 56/38fp",
+                  "status": "fail",
+                  "deduction": 2.1,
+                  "weight": 2.1,
+                  "expected": "56 或 38",
+                  "actual": "18.0"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_COLOR",
+                  "title": "主数字白色",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "白色 100%/90%",
+                  "actual": "alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.UNIT_FONT",
+                  "title": "单位 16fp 独立",
+                  "status": "fail",
+                  "deduction": 2.1,
+                  "weight": 2.1,
+                  "expected": "单位独立 16fp",
+                  "actual": "单位与数字同一文本节点"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_FONT",
+                  "title": "副文本 16fp",
+                  "status": "fail",
+                  "deduction": 2.1,
+                  "weight": 2.1,
+                  "expected": "16",
+                  "actual": "support_item0_value=12.0, support_item0_label=12.0"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_COLOR",
+                  "title": "副文本 60% 白",
+                  "status": "fail",
+                  "deduction": 2.1,
+                  "weight": 2.1,
+                  "expected": "白色 60%",
+                  "actual": "support_item0_value alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.CONTENT_TYPE",
+                  "title": "内容属于 C1–C5",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "C1–C5 之一",
+                  "actual": "C3 小数字"
+                },
+                {
+                  "rule": "SPEC.DIGIT_LIMIT",
+                  "title": "数字最多 6 位",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "最多 6 位",
+                  "actual": "2 位"
+                },
+                {
+                  "rule": "SPEC.ACTION_PATTERN",
+                  "title": "整卡点击",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "整卡点击，不放独立按钮",
+                  "actual": "未发现独立按钮"
+                },
+                {
+                  "rule": "SPEC.SAFE_AREA",
+                  "title": "安全区内",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.1,
+                  "expected": "全部文本在 inset(12) 内",
+                  "actual": "全部在安全区"
+                }
+              ]
+            }
+          ],
+          "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_6cc845decfcf/assets/target-effect/samples/Q086/original.png"
+        },
+        {
+          "sampleId": "Q091",
+          "title": "Q091",
+          "status": "failed",
+          "verdict": "规范失败",
+          "total": 63.2,
+          "band": "及格",
+          "image": "samples/Q091/original.png",
+          "size": "2x2",
+          "dimensions": [
+            {
+              "key": "target",
+              "label": "目标语义",
+              "max": 25.0,
+              "score": 0.0,
+              "ratio": 0.0,
+              "checks": 0,
+              "passed": 0,
+              "pending": 0,
+              "applicable": false,
+              "reason": "期望日期由 mock 设备时间推导，仅作参考；目标语义记 0 分",
+              "items": []
+            },
+            {
+              "key": "visibility",
+              "label": "可见性",
+              "max": 37.5,
+              "score": 37.5,
+              "ratio": 100.0,
+              "checks": 6,
+              "passed": 6,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "VIS.TEXT_CLIPPED",
+                  "title": "文字未被裁切",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现横向裁剪（1 处纵向行框溢出不计入）"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERFLOW",
+                  "title": "文字未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_OVERFLOW",
+                  "title": "图片未越出画布",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.TEXT_OVERLAP",
+                  "title": "文字未互相遮挡",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.IMAGE_LOAD_FAILED",
+                  "title": "素材真实加载",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "对应可见性规则通过",
+                  "actual": "未发现问题"
+                },
+                {
+                  "rule": "VIS.FONT_TOO_SMALL",
+                  "title": "正文字号下限",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 6.2,
+                  "expected": "正文字号 ≥ 12",
+                  "actual": "全部文本达到下限"
+                }
+              ]
+            },
+            {
+              "key": "spec",
+              "label": "规范符合",
+              "max": 37.5,
+              "score": 25.7,
+              "ratio": 68.4,
+              "checks": 19,
+              "passed": 13,
+              "pending": 0,
+              "applicable": true,
+              "items": [
+                {
+                  "rule": "SPEC.RADIUS",
+                  "title": "圆角 20",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "20",
+                  "actual": "20"
+                },
+                {
+                  "rule": "SPEC.CLIP",
+                  "title": "内容不越出圆角",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "true",
+                  "actual": "root=True, content=True"
+                },
+                {
+                  "rule": "SPEC.PADDING",
+                  "title": "内边距 12",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "12",
+                  "actual": "12.0"
+                },
+                {
+                  "rule": "SPEC.BG_FULL_BLEED",
+                  "title": "背景铺满",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "铺满的背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.BG_SINGLE",
+                  "title": "背景图唯一",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "单张满铺背景图",
+                  "actual": "__post_theme_base"
+                },
+                {
+                  "rule": "SPEC.MASK",
+                  "title": "黑色蒙层 60%",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "黑色蒙层 60%（55%–70%）",
+                  "actual": "未找到黑色蒙层"
+                },
+                {
+                  "rule": "SPEC.TITLE_REQUIRED",
+                  "title": "标题必选",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "存在标题区",
+                  "actual": "title_title"
+                },
+                {
+                  "rule": "SPEC.TITLE_FONT",
+                  "title": "标题 16/20fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "主 16 或 20，副 16",
+                  "actual": "主 12.0"
+                },
+                {
+                  "rule": "SPEC.TITLE_COLOR",
+                  "title": "标题白色",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "主 100% 白，副 60% 白",
+                  "actual": "主 alpha=0.8"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_FONT",
+                  "title": "主值 56/38fp",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "长数字 29–56",
+                  "actual": "30.0"
+                },
+                {
+                  "rule": "SPEC.PRIMARY_COLOR",
+                  "title": "主数字白色",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "白色 100%/90%",
+                  "actual": "alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.UNIT_FONT",
+                  "title": "单位 16fp 独立",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "16",
+                  "actual": "primary_unit=12.0"
+                },
+                {
+                  "rule": "SPEC.UNIT_COLOR",
+                  "title": "单位 60% 白",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "白色 60%",
+                  "actual": "全部 60% 白"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_FONT",
+                  "title": "副文本 16fp",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "16",
+                  "actual": "support_item0_value=12.0, support_item0_label=12.0"
+                },
+                {
+                  "rule": "SPEC.SUPPORT_COLOR",
+                  "title": "副文本 60% 白",
+                  "status": "fail",
+                  "deduction": 2.0,
+                  "weight": 2.0,
+                  "expected": "白色 60%",
+                  "actual": "support_item0_value alpha=1.0"
+                },
+                {
+                  "rule": "SPEC.CONTENT_TYPE",
+                  "title": "内容属于 C1–C5",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "C1–C5 之一",
+                  "actual": "C3 小数字"
+                },
+                {
+                  "rule": "SPEC.DIGIT_LIMIT",
+                  "title": "数字最多 6 位",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "最多 6 位",
+                  "actual": "3 位"
+                },
+                {
+                  "rule": "SPEC.ACTION_PATTERN",
+                  "title": "整卡点击",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "整卡点击，不放独立按钮",
+                  "actual": "未发现独立按钮"
+                },
+                {
+                  "rule": "SPEC.SAFE_AREA",
+                  "title": "安全区内",
+                  "status": "pass",
+                  "deduction": 0.0,
+                  "weight": 2.0,
+                  "expected": "全部文本在 inset(12) 内",
+                  "actual": "全部在安全区"
+                }
+              ]
+            }
+          ],
+          "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_6cc845decfcf/assets/target-effect/samples/Q091/original.png"
+        }
+      ],
+      "title": "卡片评分总览",
+      "dataType": "records",
+      "renderer": "score-grid",
+      "wide": true
+    },
+    {
+      "key": "report",
+      "path": "report.html",
+      "alt": "目标效果评测报告",
+      "title": "HTML 报告",
+      "dataType": "file",
+      "renderer": "download",
+      "toolbar": true,
+      "url": "/debug/batch/runs/batch_20261110_200000_7e5a1b2c/postprocess/exec_6cc845decfcf/assets/target-effect/dataset/report.html"
+    }
+  ]
+}

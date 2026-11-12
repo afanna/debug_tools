@@ -1,0 +1,40 @@
+{
+  "approvedOmittedFactIndexes": [
+    0
+  ],
+  "category": "layout_capacity",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fallbackAttempt": 0,
+  "fallbackAttemptLimit": 1,
+  "fallbackRemainingAttempts": 1,
+  "fallbackStage": "drop_optional_component",
+  "fingerprint": "842d31be136d387a",
+  "instruction": "已进入有界删除兜底。只允许删除程序指定的一个非 Action 业务展示组件：content_title (SingleLineTitle)，对应信息：展示航班号 FU6686。必须同时从直接父组件 children 中移除该组件 ID，并重排其余全部 must/should 事实与 Action；本轮不得删除任何其他组件、改变动态绑定、缩字、裁切或隐藏内容。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": true,
+    "observedCategories": [
+      "layout_structure",
+      "plan_coverage",
+      "layout_capacity"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "97f72c49171cca2f"
+  },
+  "noProgress": false,
+  "optionalDrop": {
+    "allowedOmittedFactIndexes": [
+      0
+    ],
+    "componentId": "content_title",
+    "componentType": "SingleLineTitle",
+    "containsMustFacts": true,
+    "requirements": [
+      "展示航班号 FU6686"
+    ]
+  },
+  "repairStrategy": "drop_optional_component",
+  "retryTarget": "dsl_recompose",
+  "retryable": true,
+  "scope": "full_dsl"
+}

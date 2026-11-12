@@ -1,0 +1,219 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2
+      ],
+      "id": "week1",
+      "identity": "11/2-11/8",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        3,
+        4
+      ],
+      "id": "week2",
+      "identity": "11/9-11/15",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        5,
+        6
+      ],
+      "id": "week3",
+      "identity": "11/16-11/22",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        7,
+        8
+      ],
+      "id": "week4",
+      "identity": "11/23-11/29",
+      "kind": "object"
+    },
+    {
+      "factIndexes": [
+        9,
+        10
+      ],
+      "id": "week5",
+      "identity": "11/30-12/6",
+      "kind": "object"
+    }
+  ],
+  "info_required": [
+    {
+      "componentHints": [
+        "SingleLineTitle"
+      ],
+      "displayRole": "title",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "卡片共同主题：2026年11月2日至12月31日大小周排班，大小周交替轮换",
+      "sourceTexts": [
+        "2026年11月2日至12月31日大小周排班"
+      ],
+      "text": "11/2–12/31 大小周排班"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "第1周11/2-11/8为小周，周日休息",
+      "sourceTexts": [
+        "小周：11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31"
+      ],
+      "text": "11/2–11/8"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "该周为小周，上六休一，周日休息",
+      "sourceTexts": [
+        "小周上六休一（周日休）"
+      ],
+      "text": "小周·周日休"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "第2周11/9-11/15为大周，周六周日休息",
+      "sourceTexts": [
+        "大周：11/9-11/15、11/23-11/29、12/7-12/13、12/21-12/27"
+      ],
+      "text": "11/9–11/15"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "该周为大周，上五休二，周六周日休息",
+      "sourceTexts": [
+        "大周上五休二（周六周日休）"
+      ],
+      "text": "大周·周六日休"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "第3周11/16-11/22为小周，周日休息",
+      "sourceTexts": [
+        "小周：11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31"
+      ],
+      "text": "11/16–11/22"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "该周为小周，周日休息",
+      "sourceTexts": [
+        "小周上六休一（周日休）"
+      ],
+      "text": "小周·周日休"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "第4周11/23-11/29为大周，周六周日休息",
+      "sourceTexts": [
+        "大周：11/9-11/15、11/23-11/29、12/7-12/13、12/21-12/27"
+      ],
+      "text": "11/23–11/29"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "该周为大周，周六周日休息",
+      "sourceTexts": [
+        "大周上五休二（周六周日休）"
+      ],
+      "text": "大周·周六日休"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "label",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "第5周11/30-12/6为小周，周日休息",
+      "sourceTexts": [
+        "小周：11/2-11/8、11/16-11/22、11/30-12/6、12/14-12/20、12/28-12/31"
+      ],
+      "text": "11/30–12/6"
+    },
+    {
+      "componentHints": [
+        "SingleLineList"
+      ],
+      "displayRole": "value",
+      "priority": "must",
+      "protectedTexts": [],
+      "requirement": "该周为小周，周日休息",
+      "sourceTexts": [
+        "小周上六休一（周日休）"
+      ],
+      "text": "小周·周日休"
+    }
+  ],
+  "layoutHints": [
+    "W-static-content"
+  ],
+  "omittedContents": [
+    "12/7-12/13 大周（周六周日休息）",
+    "12/14-12/20 小周（周日休息）",
+    "12/21-12/27 大周（周六周日休息）",
+    "12/28-12/31 小周（周日休息）"
+  ],
+  "paletteFamily": "auto",
+  "presentationStyle": "rows",
+  "selectionNotes": [
+    "排班以周为单位，短标签（周次日期）+短值（大小周与休息日）可单行读完，选用SingleLineList",
+    "2x4正文最多5行，优先展示最靠前的5周，其余周次记入omittedContents",
+    "标题概括周期与交替规则"
+  ],
+  "staticPresentation": "[\"root\", \"Layout\", {\"layout\": \"W-static-content\"}, [\"header\", \"body\"]]\n[\"header\", \"SingleLineTitle\", {\"title\": \"11/2–12/31 大小周排班\"}]\n[\"body\", \"SingleLineList\", {\"items\": [{\"text\": \"11/2-11/8 · 11/2–11/8\", \"assist\": \"小周·周日休\"}, {\"text\": \"11/9-11/15 · 11/9–11/15\", \"assist\": \"大周·周六日休\"}, {\"text\": \"11/16-11/22 · 11/16–11/22\", \"assist\": \"小周·周日休\"}, {\"text\": \"11/23-11/29 · 11/23–11/29\", \"assist\": \"大周·周六日休\"}, {\"text\": \"11/30-12/6 · 11/30–12/6\", \"assist\": \"小周·周日休\"}]}]\n[\"/state/ready\", true]"
+}

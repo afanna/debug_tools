@@ -1,0 +1,20 @@
+{
+  "category": "layout_structure",
+  "categoryAttempt": 1,
+  "consecutiveFailures": 1,
+  "fingerprint": "c8245b9fbda8c4cc",
+  "instruction": "只修复错误消息定位的 Layout、Region 或 Group 节点：严格按消息给出的合同调整该节点直属 children 的数量、顺序和角色，并补齐或替换错误角色。Group 整体只占一个直属角色；title-count 只占标题角色；title-content-action 的动作角色必须使用 PillButton；W-content-side-slots 的固定动作槽使用 CardButton。保持其它区域、事实、绑定、Action 及已经合法的 layout/variant 不变，不修改语义展开后的 Row/Column 几何。",
+  "jointRecomposition": {
+    "layoutPreviouslyFailed": false,
+    "observedCategories": [
+      "layout_structure"
+    ],
+    "revisitedTopology": false,
+    "topologyFingerprint": "7cab1832e1a623bc"
+  },
+  "noProgress": false,
+  "repairStrategy": "semantic_layout_contract_repair",
+  "retryTarget": "dsl_local_repair",
+  "retryable": true,
+  "scope": "parent_layout"
+}

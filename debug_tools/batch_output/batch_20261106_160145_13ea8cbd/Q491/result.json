@@ -1,0 +1,21 @@
+{
+  "id": "Q491",
+  "fileName": "Q491.json",
+  "title": "南京天气",
+  "query": "创建一张桌面卡片显示南京天气，展示当前天气状况和温度",
+  "size": "2x2",
+  "sequence": 79,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5347.29,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5336.52,
+  "uid": "batch-13ea8cbd-00079-000",
+  "finalAttempt": 0
+}

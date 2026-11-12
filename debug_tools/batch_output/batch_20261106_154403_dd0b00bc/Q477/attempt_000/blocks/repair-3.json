@@ -1,0 +1,39 @@
+{
+  "modelGeneratedCompactDsl": "[\"root\",\"Layout\",{\"layout\":\"W-split-panels\"},[\"left\",\"right\"]]\n[\"left\",\"Region\",{\"variant\":\"title-hero-support\"},[\"left_title\",\"left_primary\",\"left_support\"]]\n[\"left_title\",\"SingleLineTitle\",{\"title\":{\"path\":\"/data/weather/location/districtName\"},\"fontSize\":12}]\n[\"left_primary\",\"EmphasizedData\",{\"value\":{\"path\":\"/data/weather/current/temperatureText\"},\"fontSize\":30}]\n[\"left_support\",\"SecondaryBody\",{\"items\":[{\"value\":{\"path\":\"/data/weather/current/condition\"}}],\"fontSize\":14}]\n[\"right\",\"Region\",{\"variant\":\"center\"},[\"right_primary\"]]\n[\"right_primary\",\"EmphasisText\",{\"mainText\":{\"path\":\"/data/weather/current/condition\"},\"fontSize\":18}]\n[\"/data/weather/location/districtName\",\"青浦区\"]\n[\"/data/weather/current/temperatureText\",\"29℃\"]\n[\"/data/weather/current/condition\",\"多云\"]\n[\"/data/weather/location/cityCode\",\"60814\"]",
+  "generatedDsl": "",
+  "validationErrors": [
+    {
+      "stage": "validation",
+      "code": "COMPACT_PLAN_COVERAGE_FAILED",
+      "message": "Plan fact is displayed more than once in visible DSL: 当前天气现象 (/data/weather/current/condition); expected 1, got 2; occurrences: left_support (SecondaryBody).items[0].value, right_primary (EmphasisText).mainText.",
+      "duplicateFacts": [
+        {
+          "requirement": "当前天气现象",
+          "dataId": "/data/weather/current/condition",
+          "expectedVisibleCount": 1,
+          "actualVisibleCount": 2,
+          "occurrences": [
+            {
+              "componentId": "left_support",
+              "componentType": "SecondaryBody",
+              "property": "items[0].value"
+            },
+            {
+              "componentId": "right_primary",
+              "componentType": "EmphasisText",
+              "property": "mainText"
+            }
+          ],
+          "ownershipInstruction": "按同一 dataId 选择唯一完整展示落点，保留已有对象标签、单位、绑定和动作；不得按相同样值去重，不得删除独有事实或造新事实填槽。若requiredDisplayPositions确认同一事实占据至少两个不同必填展示槽，不能清空属性、删除固定槽或放入占位文字；仅在repairStrategy允许范围内重新分配已有独立事实或调整必要父布局的合法组合，并补齐全部角色后完整复检。普通重复保持信息组内修复，不据此扩大为整卡重建。",
+          "requiredDisplayPositions": [
+            {
+              "componentId": "right_primary",
+              "componentType": "EmphasisText",
+              "property": "mainText"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

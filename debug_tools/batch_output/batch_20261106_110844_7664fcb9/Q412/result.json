@@ -1,0 +1,21 @@
+{
+  "id": "Q412",
+  "fileName": "Q412.json",
+  "title": "运动健康",
+  "query": "做一张运动健康卡片，显示每日步数、运动量和运动公里数。",
+  "size": "2x2",
+  "sequence": 66,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5322.15,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 75,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5314.16,
+  "uid": "batch-7664fcb9-00066-000",
+  "finalAttempt": 0
+}

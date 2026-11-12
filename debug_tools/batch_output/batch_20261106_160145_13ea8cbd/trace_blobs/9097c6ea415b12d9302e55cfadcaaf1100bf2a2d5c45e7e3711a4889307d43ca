@@ -1,0 +1,176 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [],
+  "candidateDataBindings": [
+    {
+      "arguments": {
+        "targetDate": "2027-10-05"
+      },
+      "candidateOutputFields": [
+        "/countdownDays"
+      ],
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown0"
+    },
+    {
+      "arguments": {
+        "targetDate": "2027-06-24"
+      },
+      "candidateOutputFields": [
+        "/countdownDays"
+      ],
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown1"
+    },
+    {
+      "arguments": {
+        "targetDate": "2027-04-19"
+      },
+      "candidateOutputFields": [
+        "/countdownDays"
+      ],
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown2"
+    },
+    {
+      "arguments": {
+        "targetDate": "2028-01-12"
+      },
+      "candidateOutputFields": [
+        "/countdownDays"
+      ],
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown3"
+    },
+    {
+      "arguments": {
+        "targetDate": "2027-04-12"
+      },
+      "candidateOutputFields": [
+        "/countdownDays"
+      ],
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown4"
+    },
+    {
+      "arguments": {
+        "targetDate": "2027-10-28"
+      },
+      "candidateOutputFields": [
+        "/countdownDays"
+      ],
+      "capabilityId": "GetCountdownDays",
+      "writeResultTo": "/data/countdown5"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [],
+    "candidateDataBindings": [
+      {
+        "arguments": {
+          "targetDate": "2027-10-05"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown0"
+      },
+      {
+        "arguments": {
+          "targetDate": "2027-06-24"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown1"
+      },
+      {
+        "arguments": {
+          "targetDate": "2027-04-19"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown2"
+      },
+      {
+        "arguments": {
+          "targetDate": "2028-01-12"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown3"
+      },
+      {
+        "arguments": {
+          "targetDate": "2027-04-12"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown4"
+      },
+      {
+        "arguments": {
+          "targetDate": "2027-10-28"
+        },
+        "candidateOutputFields": [
+          "/countdownDays"
+        ],
+        "capabilityId": "GetCountdownDays",
+        "writeResultTo": "/data/countdown5"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "多个重要农历日期倒计时",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "CMS-AL20 7.0.0.111",
+    "size": "2x4",
+    "title": "重要日期倒计时",
+    "uid": "batch-13ea8cbd-00078-000",
+    "userQuery": "创建倒计时卡片，显示以下日期的倒计时天数：农历九月初六（2027年10月5日）、农历五月二十（2027年6月24日）、农历三月十三（2027年4月19日）、农历腊月十六（2028年1月12日）、农历三月初六（2027年4月12日）、农历九月廿九（2027年10月28日）。本轮卡片静态内容（用作展示的外部事实）：农历九月初六对应公历2027年10月5日，农历五月二十对应公历2027年6月24日，农历三月十三对应公历2027年4月19日，农历腊月十六对应公历2028年1月12日，农历三月初六对应公历2027年4月12日，2027年农历九月没有三十，九月廿九为公历2027年10月28日。"
+  },
+  "description": "多个重要农历日期倒计时",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "CMS-AL20",
+    "prdVer": "11.7.8.342",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261103015037169"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "CMS-AL20 7.0.0.111",
+  "session": {
+    "interactionId": "Q490-000",
+    "isNew": true,
+    "sessionId": "batch-13ea8cbd"
+  },
+  "size": "2x4",
+  "title": "重要日期倒计时",
+  "userAuth": {
+    "user": {
+      "userId": "batch-13ea8cbd-00078-000"
+    }
+  },
+  "userQuery": "创建倒计时卡片，显示以下日期的倒计时天数：农历九月初六（2027年10月5日）、农历五月二十（2027年6月24日）、农历三月十三（2027年4月19日）、农历腊月十六（2028年1月12日）、农历三月初六（2027年4月12日）、农历九月廿九（2027年10月28日）。本轮卡片静态内容（用作展示的外部事实）：农历九月初六对应公历2027年10月5日，农历五月二十对应公历2027年6月24日，农历三月十三对应公历2027年4月19日，农历腊月十六对应公历2028年1月12日，农历三月初六对应公历2027年4月12日，2027年农历九月没有三十，九月廿九为公历2027年10月28日。",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

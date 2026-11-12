@@ -1,0 +1,4 @@
+[
+  "Compact DSL validation failed:\n- COMPACT_STATIC_CORE_MISSING: 组 pwd 缺少完整展示文字 '类型：永久'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+  "Compact DSL validation failed:\n- COMPACT_STATIC_TEXT_CAPACITY: body: COMPACT_STATIC_TEXT_CAPACITY: body.item0_text 占用109.62vp，扣除背板内边距与间距后item0_assist无可用宽度；保持完整标签和值，换用能分层承载的合法组件。"
+]

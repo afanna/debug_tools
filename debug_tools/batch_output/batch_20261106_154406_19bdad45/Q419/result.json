@@ -1,0 +1,21 @@
+{
+  "id": "Q419",
+  "fileName": "Q419.json",
+  "title": "当前时间",
+  "query": "做一张时间卡片，显示当前日期、时间和星期。",
+  "size": "2x2",
+  "sequence": 7,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 4252.85,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 96,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 4246.15,
+  "uid": "batch-19bdad45-00007-000",
+  "finalAttempt": 0
+}

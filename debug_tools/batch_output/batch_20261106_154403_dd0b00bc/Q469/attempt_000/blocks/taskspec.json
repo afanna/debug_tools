@@ -1,0 +1,141 @@
+{
+  "userQuery": "在手机主屏幕放一个可视化备忘录卡片，展示备忘录笔记和待办事项的汇总信息，包括笔记总数、最近笔记列表、待办总数及待办明细。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.viewNote",
+      "description": "打开华为备忘录应用。",
+      "call": "clickToIntent",
+      "args": {
+        "abilityName": "MainAbility",
+        "bundleName": "com.huawei.hmos.notepad",
+        "intentName": "ViewNote",
+        "params": {
+          "launchSource": "1",
+          "launchType": "0"
+        }
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "memo": {
+        "noteCount": {
+          "type": "integer",
+          "description": "查询到的笔记总数量（已过滤已删除笔记）。",
+          "sampleValue": 0
+        },
+        "favoriteNoteCount": {
+          "type": "integer",
+          "description": "收藏笔记数。",
+          "sampleValue": 0
+        },
+        "notes": [
+          {
+            "title": {
+              "type": "string",
+              "description": "笔记标题，若无标题则回退为'无标题'。",
+              "sampleValue": "示例"
+            },
+            "content": {
+              "type": "string",
+              "description": "笔记正文（可截断），若无正文则为空字符串。",
+              "sampleValue": "示例"
+            },
+            "modifiedTimeText": {
+              "type": "string",
+              "description": "修改时间格式化文本，格式为 'MM/DD HH:mm'，如 '07/16 14:35'。",
+              "sampleValue": "示例"
+            }
+          },
+          {
+            "title": {
+              "type": "string",
+              "description": "笔记标题，若无标题则回退为'无标题'。",
+              "sampleValue": "示例"
+            },
+            "content": {
+              "type": "string",
+              "description": "笔记正文（可截断），若无正文则为空字符串。",
+              "sampleValue": "示例"
+            },
+            "modifiedTimeText": {
+              "type": "string",
+              "description": "修改时间格式化文本，格式为 'MM/DD HH:mm'，如 '07/16 14:35'。",
+              "sampleValue": "示例"
+            }
+          }
+        ],
+        "todoTotalCount": {
+          "type": "integer",
+          "description": "查询到的待办总数量（已过滤已删除待办）。",
+          "sampleValue": 0
+        },
+        "todoCompletedCount": {
+          "type": "integer",
+          "description": "已完成的待办记录数。",
+          "sampleValue": 0
+        },
+        "todoPendingCount": {
+          "type": "integer",
+          "description": "未完成的待办记录数。",
+          "sampleValue": 0
+        },
+        "todos": [
+          {
+            "title": {
+              "type": "string",
+              "description": "待办标题，若无标题则回退为'无标题'。",
+              "sampleValue": "示例"
+            },
+            "isComplete": {
+              "type": "boolean",
+              "description": "该条待办是否已完成。true代表已完成，false代表未完成。",
+              "sampleValue": false
+            },
+            "reminderTimeText": {
+              "type": "string",
+              "description": "提醒时间格式化文本，格式为 'HH:mm'，如 '14:30'；无提醒则显示 '--:--'。",
+              "sampleValue": "示例"
+            }
+          },
+          {
+            "title": {
+              "type": "string",
+              "description": "待办标题，若无标题则回退为'无标题'。",
+              "sampleValue": "示例"
+            },
+            "isComplete": {
+              "type": "boolean",
+              "description": "该条待办是否已完成。true代表已完成，false代表未完成。",
+              "sampleValue": false
+            },
+            "reminderTimeText": {
+              "type": "string",
+              "description": "提醒时间格式化文本，格式为 'HH:mm'，如 '14:30'；无提醒则显示 '--:--'。",
+              "sampleValue": "示例"
+            }
+          }
+        ],
+        "hasReminderToday": {
+          "type": "boolean",
+          "description": "今日是否存在未完成的提醒待办。true代表今日有提醒，false代表今日无提醒。",
+          "sampleValue": false
+        },
+        "nextReminderTimeText": {
+          "type": "string",
+          "description": "最近一次未过期未完成提醒的格式化时间，格式为 'HH:mm'，如 '14:30'；无提醒则显示 '--:--'。",
+          "sampleValue": "示例"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.list_book_fill",
+      "src": "resources/base/media/list_book_fill.svg",
+      "description": "样式：默认黑色的单色实心书册图标，内部带列表与文字线条，原始尺寸为 24×24；适用：目录、清单、记录册、备忘录列表、日程列表与健康记录列表。"
+    }
+  ]
+}

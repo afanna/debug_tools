@@ -1,0 +1,56 @@
+{
+  "userQuery": "做一张每日锻炼打卡卡片，每天锻炼计划：10个俯卧撑、20个深蹲、30个开合跳。展示当天运动健康数据（步数、热量消耗），提醒每天坚持锻炼打卡。本轮卡片静态内容（用作展示的外部事实）：每天锻炼计划：俯卧撑10个、深蹲20个、开合跳30个，每天坚持打卡锻炼。",
+  "size": "2x4",
+  "appVersion": "11.7.8.342",
+  "eventCandidates": [
+    {
+      "id": "event.open.health.sport",
+      "description": "打开华为运动健康应用的锻炼Tab页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "",
+        "bundleName": "",
+        "intentName": "Health",
+        "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "healthSport": {
+        "dailySteps": {
+          "type": "integer",
+          "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+          "sampleValue": 6200
+        },
+        "dailyTotalCaloriesText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+          "sampleValue": "420 千卡"
+        },
+        "dailyDistanceText": {
+          "type": "string",
+          "description": "可直接显示的日常活动总距离文本，端侧已根据数值大小换算并包含“米”或“公里”单位；展示时不得再次追加距离单位。例如“5.42 公里”或“755 米”。",
+          "sampleValue": "4.60 公里"
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.checkmark_calendar_fill",
+      "src": "resources/base/media/checkmark_calendar_fill.svg",
+      "description": "样式：默认黑色的单色实心日历图标，内部叠加对勾并通过镂空表现细节，原始尺寸为 24×24，支持通过 fillColor 与卡片配色统一；适用：已完成日程、日程或计划确认、签到、待办完成、任务或运动打卡与健康计划。"
+    },
+    {
+      "id": "asset.figure_run",
+      "src": "resources/base/media/figure_run.svg",
+      "description": "样式：跑步人物图标，默认黑色，图形为人体奔跑动作侧视轮廓；适用：运动记录、跑步锻炼追踪、步数统计。"
+    },
+    {
+      "id": "asset.flame_fill",
+      "src": "resources/base/media/flame_fill.svg",
+      "description": "样式：默认黑色的单色实心火焰图标；适用：运动热量消耗、燃烧、火焰或加热状态。"
+    }
+  ]
+}

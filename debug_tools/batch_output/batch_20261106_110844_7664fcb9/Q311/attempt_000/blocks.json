@@ -1,0 +1,269 @@
+{
+  "cardspec": {
+    "title": "运动健康",
+    "description": "运动健康数据卡片",
+    "suggestSize": "2x2",
+    "imageDomainWhitelist": [
+      "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+      "lfcontentcenterdev.hwcloudtest.cn",
+      "hagres-drcn.dbankcdn.com"
+    ],
+    "dataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {
+          "targetDayOffset": 0
+        },
+        "writeResultTo": "/data/healthSport"
+      }
+    ]
+  },
+  "genui": "{\"version\":\"v0.9\",\"createSurface\":{\"surfaceId\":\"surface_card\",\"catalogId\":\"ohos.a2ui.extended.catalog.form\"}}\r\n{\"version\":\"v0.9\",\"updateComponents\":{\"surfaceId\":\"surface_card\",\"root\":\"root\",\"components\":[{\"id\":\"root\",\"component\":\"Column\",\"children\":[\"first\",\"second\"],\"itemMargin\":8,\"styles\":{\"width\":\"matchParent\",\"height\":\"matchParent\",\"borderRadius\":20,\"clip\":true,\"alignItems\":\"start\",\"justifyContent\":\"start\",\"padding\":8,\"linearGradient\":{\"direction\":\"RightBottom\",\"colors\":[[\"#FFDBCCFF\",0],[\"#FFF6F2FF\",1]]}}},{\"id\":\"first\",\"component\":\"Column\",\"children\":[\"first_text\"],\"itemMargin\":0,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"clip\":true,\"flexShrink\":0,\"width\":\"matchParent\",\"height\":63,\"backgroundColor\":\"#CCFFFFFF\",\"layoutWeight\":1}},{\"id\":\"first_text\",\"component\":\"Column\",\"children\":[\"first_primary\",\"first_secondary\"],\"itemMargin\":0,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"center\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"first_primary\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/dailySteps} + ' 步' }}\",\"styles\":{\"height\":22,\"fontSize\":16,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"fontColor\":\"#FF563D99\",\"textOverflow\":\"clip\"}},{\"id\":\"first_secondary\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/dailyTotalCaloriesText} + ' | ' + ${/data/healthSport/dailyDistanceText} }}\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"fontColor\":\"#FF563D99\"}},{\"id\":\"second\",\"component\":\"Column\",\"children\":[\"second_text\"],\"itemMargin\":0,\"styles\":{\"padding\":{\"left\":8,\"right\":8},\"borderRadius\":16,\"alignItems\":\"start\",\"justifyContent\":\"center\",\"clip\":true,\"flexShrink\":0,\"width\":\"matchParent\",\"height\":63,\"backgroundColor\":\"#CCFFFFFF\",\"layoutWeight\":1}},{\"id\":\"second_text\",\"component\":\"Column\",\"children\":[\"second_primary\",\"second_secondary\"],\"itemMargin\":0,\"styles\":{\"alignItems\":\"start\",\"justifyContent\":\"center\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\"}},{\"id\":\"second_primary\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/sleepScore} + ' 分 ' + ${/data/healthSport/sleepStatus} }}\",\"styles\":{\"height\":22,\"fontSize\":16,\"fontWeight\":700,\"maxLines\":1,\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"fontColor\":\"#FF563D99\",\"textOverflow\":\"clip\"}},{\"id\":\"second_secondary\",\"component\":\"Text\",\"content\":\"{{ ${/data/healthSport/nightSleepDurationText} }}\",\"styles\":{\"height\":16,\"fontSize\":12,\"fontWeight\":500,\"maxLines\":1,\"textOverflow\":\"ellipsis\",\"flexShrink\":1,\"constraintSize\":{\"minWidth\":0},\"width\":\"matchParent\",\"fontColor\":\"#FF563D99\"}}]}}\r\n{\"version\":\"v0.9\",\"updateDataModel\":{\"surfaceId\":\"surface_card\",\"path\":\"/\",\"value\":{\"data\":{\"healthSport\":{\"dailySteps\":6200,\"dailyTotalCaloriesText\":\"420 千卡\",\"dailyDistanceText\":\"4.60 公里\",\"sleepScore\":82,\"sleepStatus\":\"良好\",\"nightSleepDurationText\":\"7小时1分\"}}}}}",
+  "schema": {
+    "schemaVersion": "widget-artifact-v2"
+  },
+  "taskspec": {
+    "userQuery": "将运动健康卡片放到桌面第1页，展示今日步数、热量消耗、睡眠等健康数据。",
+    "size": "2x2",
+    "appVersion": "11.7.8.342",
+    "eventCandidates": [
+      {
+        "id": "event.open.health.sport",
+        "description": "打开华为运动健康应用的锻炼Tab页。",
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    ],
+    "dataModelSchema": {
+      "data": {
+        "healthSport": {
+          "dailySteps": {
+            "type": "integer",
+            "description": "与最新睡眠同属一天的日常全天累计活动总步数纯整数，返回值不包含“步”。若直接用于文本展示，必须在数值后追加“步”。",
+            "sampleValue": 6200
+          },
+          "dailyTotalCaloriesText": {
+            "type": "string",
+            "description": "可直接显示的日常活动总消耗热量文本，已完成千分位归一化并包含“千卡”单位；展示时不得再次追加热量单位。例如“998 千卡”。",
+            "sampleValue": "420 千卡"
+          },
+          "dailyDistanceText": {
+            "type": "string",
+            "description": "可直接显示的日常活动总距离文本，端侧已根据数值大小换算并包含“米”或“公里”单位；展示时不得再次追加距离单位。例如“5.42 公里”或“755 米”。",
+            "sampleValue": "4.60 公里"
+          },
+          "sleepScore": {
+            "type": "integer",
+            "description": "睡眠综合得分，取值范围 0-100。",
+            "sampleValue": 82
+          },
+          "sleepStatus": {
+            "type": "string",
+            "description": "基于得分智能生成的睡眠状态语义判定，包括：'优秀'、'良好'、'一般'、'较差'。",
+            "sampleValue": "良好"
+          },
+          "nightSleepDurationText": {
+            "type": "string",
+            "description": "可直接显示的夜间正式睡眠总时长文本，已包含“小时”或“分”等时间单位；展示时不得再次追加时间单位。例如“7小时1分”。",
+            "sampleValue": "7小时1分"
+          }
+        }
+      }
+    },
+    "assetCandidates": [
+      {
+        "id": "asset.emoji_run",
+        "src": "resources/base/media/emoji_run.png",
+        "description": "样式：灰色运动上衣与深色短裤装扮的写实 3D 跑步人物，透明背景，原始尺寸为 512×512，PNG 位图需保留原色；适用：跑步记录、步数、配速或运动目标相关卡片。不适用：睡眠或泛健康卡片。"
+      }
+    ]
+  },
+  "effectivecapabilities": {
+    "data": [
+      "GetHealthAndSportSummary"
+    ],
+    "event": [
+      {
+        "id": "event.open.health.sport",
+        "description": "打开华为运动健康应用的锻炼Tab页。",
+        "call": "clickToDeeplink",
+        "args": {
+          "abilityName": "",
+          "bundleName": "",
+          "intentName": "Health",
+          "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+        }
+      }
+    ],
+    "asset": [
+      "asset.emoji_run"
+    ]
+  },
+  "removedcapabilities": [],
+  "generationplan": {
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {
+          "targetDayOffset": 0
+        },
+        "writeResultTo": "/data/healthSport",
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyTotalCaloriesText",
+          "/dailyDistanceText",
+          "/sleepScore",
+          "/sleepStatus",
+          "/nightSleepDurationText"
+        ]
+      }
+    ],
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.health.sport",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          }
+        }
+      }
+    ],
+    "candidateAssetIds": [
+      "asset.emoji_run"
+    ]
+  },
+  "meta": {
+    "apiVersion": "v1",
+    "taskSpecVersion": "task-spec-v1",
+    "cardSpecVersion": "card-spec-v1",
+    "dslProtocolVersion": "v0.9",
+    "skillVersion": "skill-widget-v1",
+    "protocolProfileId": "a2ui-form-rom6.0-v1",
+    "capabilityRegistryVersion": "app-11.7.7.300_rom-7.0",
+    "artifactSchemaVersion": "widget-artifact-v2",
+    "generationMode": "create",
+    "artifactId": "423809a0-538b-4c44-9dd9-aa6c5088cd70",
+    "createdAt": 1793934558995
+  },
+  "designcompactdsl": "[\"root\",\"Layout\",{\"layout\":\"S-dual-info\"},[\"first\",\"second\"]]\r\n[\"first\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":\"{{ ${/data/healthSport/dailySteps} + ' 步' }}\",\"secondaryText\":\"{{ ${/data/healthSport/dailyTotalCaloriesText} + ' | ' + ${/data/healthSport/dailyDistanceText} }}\"}]\r\n[\"second\",\"InfoBlock\",{\"surfaceRole\":\"panel\",\"primaryText\":\"{{ ${/data/healthSport/sleepScore} + ' 分 ' + ${/data/healthSport/sleepStatus} }}\",\"secondaryText\":{\"path\":\"/data/healthSport/nightSleepDurationText\"}}]\r\n[\"/data/healthSport/dailySteps\",6200]\r\n[\"/data/healthSport/dailyTotalCaloriesText\",\"420 千卡\"]\r\n[\"/data/healthSport/dailyDistanceText\",\"4.60 公里\"]\r\n[\"/data/healthSport/sleepScore\",82]\r\n[\"/data/healthSport/sleepStatus\",\"良好\"]\r\n[\"/data/healthSport/nightSleepDurationText\",\"7小时1分\"]",
+  "request": {
+    "content": {
+      "bundleName": "com.huawei.genui",
+      "userQuery": "将运动健康卡片放到桌面第1页，展示今日步数、热量消耗、睡眠等健康数据。",
+      "candidateDataBindings": [
+        {
+          "capabilityId": "GetHealthAndSportSummary",
+          "arguments": {
+            "targetDayOffset": 0
+          },
+          "writeResultTo": "/data/healthSport",
+          "candidateOutputFields": [
+            "/dailySteps",
+            "/dailyTotalCaloriesText",
+            "/dailyDistanceText",
+            "/sleepScore",
+            "/sleepStatus",
+            "/nightSleepDurationText"
+          ]
+        }
+      ],
+      "title": "运动健康",
+      "size": "2x2",
+      "candidateEventCandidates": [
+        {
+          "capabilityId": "event.open.health.sport",
+          "action": {
+            "call": "clickToDeeplink",
+            "args": {
+              "abilityName": "",
+              "bundleName": "",
+              "intentName": "Health",
+              "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+            }
+          }
+        }
+      ],
+      "description": "运动健康数据卡片",
+      "candidateAssetIds": [
+        "asset.emoji_run"
+      ]
+    },
+    "deviceInfo": {
+      "countryCode": "CN",
+      "deviceFormation": "HDSpeaker",
+      "deviceType": 0,
+      "locale": "zh-CN",
+      "phoneType": "HLS-AL00",
+      "prdVer": "11.7.8.342",
+      "sysVer": "EmotionUI_9.0.0",
+      "time": "20261029100021977"
+    },
+    "pagination": {
+      "limit": 5,
+      "start": ""
+    },
+    "session": {
+      "interactionId": "Q311-000",
+      "isNew": true,
+      "sessionId": "batch-7664fcb9"
+    },
+    "userAuth": {
+      "user": {}
+    },
+    "utterance": {
+      "original": "将运动健康卡片放到桌面第1页，展示今日步数、热量消耗、睡眠等健康数据。",
+      "type": "text"
+    },
+    "version": "1.0",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "HLS-AL00 7.0.0.111",
+    "bundleName": "com.huawei.genui",
+    "userQuery": "将运动健康卡片放到桌面第1页，展示今日步数、热量消耗、睡眠等健康数据。",
+    "candidateDataBindings": [
+      {
+        "capabilityId": "GetHealthAndSportSummary",
+        "arguments": {
+          "targetDayOffset": 0
+        },
+        "writeResultTo": "/data/healthSport",
+        "candidateOutputFields": [
+          "/dailySteps",
+          "/dailyTotalCaloriesText",
+          "/dailyDistanceText",
+          "/sleepScore",
+          "/sleepStatus",
+          "/nightSleepDurationText"
+        ]
+      }
+    ],
+    "title": "运动健康",
+    "size": "2x2",
+    "candidateEventCandidates": [
+      {
+        "capabilityId": "event.open.health.sport",
+        "action": {
+          "call": "clickToDeeplink",
+          "args": {
+            "abilityName": "",
+            "bundleName": "",
+            "intentName": "Health",
+            "uri": "huaweischeme://healthapp/home/sport?sportType=2"
+          }
+        }
+      }
+    ],
+    "description": "运动健康数据卡片",
+    "candidateAssetIds": [
+      "asset.emoji_run"
+    ]
+  }
+}

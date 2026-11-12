@@ -1,0 +1,30 @@
+{
+  "frames": [
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "",
+          "streamingTextId": "batch-0360acc5&Q234-000",
+          "streamType": "start",
+          "textType": "markdown"
+        },
+        "items": []
+      }
+    },
+    {
+      "errorCode": "0",
+      "errorMessage": "",
+      "reply": {
+        "streamInfo": {
+          "streamContent": "{\"message\":\"生成所需的动态数据输入不完整。\",\"retryable\":true,\"requiredActions\":[\"REFRESH_CAPABILITIES\",\"FIX_AND_RETRY\"],\"agentInstruction\":\"核对本轮可用数据能力，补齐全部 issues 后提交完整 invoke.arguments 重试，沿用三次总调用预算。缺必要业务值先澄清，核心不支持时停止。\",\"issues\":[{\"path\":\"/candidateDataBindings\",\"message\":\"未来三天降雨概率需要三天的数据，但当前数据模型只声明了 daily[0]（明天），缺少后天和第三天的降雨概率字段要求：必要动态数据具有本轮真实可用的绑定和完整展示字段。仅用本轮可用能力补齐绑定、参数或展示字段，复查最终集合权限；不猜测能力或读数。\"}]}",
+          "streamingTextId": "batch-0360acc5&Q234-000",
+          "streamType": "final",
+          "textType": "plainText"
+        },
+        "items": []
+      }
+    }
+  ]
+}

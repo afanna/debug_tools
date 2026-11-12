@@ -1,0 +1,21 @@
+{
+  "id": "Q402",
+  "fileName": "Q402.json",
+  "title": "时钟天气",
+  "query": "设计一张2x4的数字时钟与天气组合桌面卡片，上方显示大号数字时钟（当前时间、日期、星期），下方显示当前天气（天气现象、温度、空气质量），整体风格简洁通透，与桌面壁纸自然融合。",
+  "size": "2x4",
+  "sequence": 60,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 5914.75,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 85,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 5901.87,
+  "uid": "batch-7664fcb9-00060-000",
+  "finalAttempt": 0
+}

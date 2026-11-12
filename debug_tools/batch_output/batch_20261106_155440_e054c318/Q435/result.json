@@ -1,0 +1,21 @@
+{
+  "id": "Q435",
+  "fileName": "Q435.json",
+  "title": "电池状态",
+  "query": "做一张手机电池电量卡片，显示当前电量百分比和充电状态，当手机充满电时播报充电完成。",
+  "size": "2x2",
+  "sequence": 26,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2046.68,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00026-000",
+  "finalAttempt": 0
+}

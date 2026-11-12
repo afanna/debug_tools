@@ -1,0 +1,21 @@
+{
+  "id": "Q471",
+  "fileName": "Q471.json",
+  "title": "天气日历",
+  "query": "创建一张天气和日历桌面卡片，显示当前天气（温度、天气现象）和近期日程安排。",
+  "size": "2x4",
+  "sequence": 61,
+  "status": "failed",
+  "attemptCount": 1,
+  "elapsedMs": 2040.61,
+  "errorCode": "",
+  "error": "UpstreamToolError: 正式工具 WebSocket 调用失败: ConnectionRefusedError",
+  "artifactAvailable": false,
+  "dslAvailable": false,
+  "traceStatus": "missing",
+  "traceRecordCount": 0,
+  "traceSchemaVersion": "",
+  "traceDurationMs": 0.0,
+  "uid": "batch-e054c318-00061-000",
+  "finalAttempt": 0
+}

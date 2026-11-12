@@ -1,0 +1,223 @@
+{
+  "businessSummary": {
+    "businesses": [
+      "weather",
+      "calendar"
+    ],
+    "complete": true,
+    "firstBusiness": "weather",
+    "hasUnknown": false,
+    "primaryBusiness": null,
+    "primaryRegionId": null,
+    "regions": [
+      {
+        "businesses": [],
+        "firstBusiness": null,
+        "hasUnknown": false,
+        "id": "title",
+        "role": null,
+        "singleBusiness": null
+      },
+      {
+        "businesses": [
+          "weather"
+        ],
+        "firstBusiness": "weather",
+        "hasUnknown": false,
+        "id": "temperature",
+        "role": null,
+        "singleBusiness": "weather"
+      },
+      {
+        "businesses": [
+          "weather",
+          "calendar"
+        ],
+        "firstBusiness": "weather",
+        "hasUnknown": false,
+        "id": "details",
+        "role": null,
+        "singleBusiness": null
+      }
+    ],
+    "singleBusiness": null,
+    "source": "final-visible-content"
+  },
+  "candidates": [
+    "gradient-blue",
+    "gradient-purple",
+    "gradient-warm",
+    "solid-blue",
+    "solid-purple",
+    "solid-warm"
+  ],
+  "defaultPalette": null,
+  "deviceGeometryKnown": false,
+  "finalValidationErrors": [],
+  "foregroundSignature": "eb90ce057f756505503a2d60234188df38ea5cd68a86f562ffc4c6f995a18841",
+  "fusionEligibility": {
+    "actionCount": 0,
+    "allowedTokens": [],
+    "businessCount": 2,
+    "conditionalFusionTokens": [
+      "fusion-ball-battery-teal",
+      "fusion-ball-schedule-blue",
+      "fusion-ball-sleep-violet",
+      "fusion-ball-sport-orange"
+    ],
+    "layoutId": "S-title-dual-content",
+    "palettePreferenceTokens": [],
+    "reason": "原规则：不是单业务",
+    "visibleBusinesses": {
+      "businesses": [
+        "weather",
+        "calendar"
+      ],
+      "firstBusiness": "weather",
+      "hasUnknown": false,
+      "singleBusiness": null
+    },
+    "visibleDataPaths": [
+      "/data/currentTime/currentDate",
+      "/data/currentTime/dayOfWeek",
+      "/data/currentTime/lunarDate",
+      "/data/weather/current/condition",
+      "/data/weather/current/temperatureText"
+    ],
+    "visibleFieldCount": 5
+  },
+  "geometryCheckBasis": "foreground-structure",
+  "geometryUnchanged": true,
+  "layoutEvidence": {
+    "basis": "layout-only",
+    "complete": false,
+    "deviceGeometryKnown": false,
+    "reason": "图片主题已关闭"
+  },
+  "modelCandidates": [
+    "gradient-blue",
+    "gradient-purple",
+    "gradient-warm",
+    "solid-blue",
+    "solid-purple",
+    "solid-warm",
+    "fusion-ball-battery-teal",
+    "fusion-ball-schedule-blue",
+    "fusion-ball-sleep-violet",
+    "fusion-ball-sport-orange"
+  ],
+  "modelPreferences": [],
+  "outputSize": "2x2",
+  "photoAssetExclusions": [],
+  "photoSelection": {},
+  "preferenceStatus": "confirmed",
+  "preferenceWarning": null,
+  "rejected": {
+    "fusion-ball-battery-teal": "默认融球门禁未通过，且没有对应的肯定色系偏好",
+    "fusion-ball-schedule-blue": "默认融球门禁未通过，且没有对应的肯定色系偏好",
+    "fusion-ball-sleep-violet": "默认融球门禁未通过，且没有对应的肯定色系偏好",
+    "fusion-ball-sport-orange": "默认融球门禁未通过，且没有对应的肯定色系偏好",
+    "photo-ux-airplane-tarmac-wide": "尺寸不匹配",
+    "photo-ux-birds-countdown-square": "图片主题已关闭",
+    "photo-ux-car-night-lake-square": "图片主题已关闭",
+    "photo-ux-car-night-lake-wide": "尺寸不匹配",
+    "photo-ux-concert-stage-wide": "尺寸不匹配",
+    "photo-ux-cumulus-blue-square": "图片主题已关闭",
+    "photo-ux-cumulus-blue-wide": "尺寸不匹配",
+    "photo-ux-digital-wave-wide": "尺寸不匹配",
+    "photo-ux-fireworks-square": "图片主题已关闭",
+    "photo-ux-glass-hourglass-square": "图片主题已关闭",
+    "photo-ux-glass-hourglass-wide": "尺寸不匹配",
+    "photo-ux-gradient-wide": "尺寸不匹配",
+    "photo-ux-hourglass-square": "图片主题已关闭",
+    "photo-ux-ice-wide": "尺寸不匹配",
+    "photo-ux-meeting-room-brown-chairs-square": "图片主题已关闭",
+    "photo-ux-meeting-room-square": "图片主题已关闭",
+    "photo-ux-metal-gear-square": "图片主题已关闭",
+    "photo-ux-metal-gear-wide": "尺寸不匹配",
+    "photo-ux-mountain-sunset-lake-square": "图片主题已关闭",
+    "photo-ux-mountain-sunset-lake-wide": "尺寸不匹配",
+    "photo-ux-pink-sunset-lake-square": "图片主题已关闭",
+    "photo-ux-pink-sunset-lake-wide": "尺寸不匹配",
+    "photo-ux-sand-arch-square": "图片主题已关闭",
+    "photo-ux-sleep-new-square": "图片主题已关闭",
+    "photo-ux-sleep-new-wide": "尺寸不匹配",
+    "photo-ux-sleep-square": "图片主题已关闭",
+    "photo-ux-sleep-wide": "尺寸不匹配",
+    "photo-ux-sport-center-wide": "尺寸不匹配",
+    "photo-ux-starry-sky-square": "图片主题已关闭",
+    "photo-ux-starry-sky-wide": "尺寸不匹配",
+    "photo-ux-texture-blue-circles-square": "图片主题已关闭",
+    "photo-ux-texture-blue-diagonal-square": "图片主题已关闭",
+    "photo-ux-texture-blue-diagonal-wide": "尺寸不匹配",
+    "photo-ux-texture-blue-diamond-square": "图片主题已关闭",
+    "photo-ux-texture-blue-diamond-wide": "尺寸不匹配",
+    "photo-ux-texture-orange-circles-square": "图片主题已关闭",
+    "photo-ux-texture-orange-diagonal-square": "图片主题已关闭",
+    "photo-ux-texture-orange-diagonal-wide": "尺寸不匹配",
+    "photo-ux-texture-orange-diamond-square": "图片主题已关闭",
+    "photo-ux-texture-orange-diamond-wide": "尺寸不匹配",
+    "photo-ux-texture-purple-circles-square": "图片主题已关闭",
+    "photo-ux-texture-purple-diagonal-square": "图片主题已关闭",
+    "photo-ux-texture-purple-diagonal-wide": "尺寸不匹配",
+    "photo-ux-texture-purple-diamond-square": "图片主题已关闭",
+    "photo-ux-texture-purple-diamond-wide": "尺寸不匹配",
+    "photo-ux-violin-stage-square": "图片主题已关闭"
+  },
+  "selectorError": null,
+  "sourceSize": "2x2",
+  "subjectlessWideGate": null,
+  "theme": {
+    "background": {
+      "colors": [
+        "#FFCBDDFE",
+        "#FFF1F6FE"
+      ],
+      "direction": "RightBottom"
+    },
+    "backgroundAliases": [
+      "#FFE5EDFE",
+      "#FFCBDDFE",
+      "#FFF1F6FE"
+    ],
+    "content": {
+      "explicitTextAlpha": {
+        "secondary": 204,
+        "tertiary": 153
+      },
+      "panelBySize": {
+        "2x2": "#CCFFFFFF",
+        "2x4": "#99FFFFFF"
+      },
+      "roles": {
+        "componentSecondary": "#331F4799",
+        "componentTertiary": "#1A1F4799",
+        "graphicPrimary": "#FF1F4799",
+        "graphicSecondary": "#991F4799",
+        "graphicTertiary": "#661F4799",
+        "primary": "#FF1F4799",
+        "secondary": "#991F4799",
+        "tertiary": "#661F4799"
+      }
+    },
+    "description": "蓝色浅色微渐变，沿用原业务配色。",
+    "enabled": true,
+    "family": "blue",
+    "id": "gradient-blue",
+    "kind": "gradient",
+    "name": "蓝色浅色微渐变",
+    "paletteFamilies": [
+      "blue",
+      "cool"
+    ],
+    "pool": "standard",
+    "sizes": [
+      "2x2",
+      "2x4"
+    ]
+  },
+  "themeId": "gradient-blue",
+  "unmetPreferences": [],
+  "userColors": {},
+  "userPreferences": []
+}

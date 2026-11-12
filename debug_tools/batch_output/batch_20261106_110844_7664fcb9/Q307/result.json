@@ -1,0 +1,21 @@
+{
+  "id": "Q307",
+  "fileName": "Q307.json",
+  "title": "透明时间",
+  "query": "生成一个二乘四比例的透明的时间桌面卡片，显示当前时间和日期。",
+  "size": "2x4",
+  "sequence": 12,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 7840.08,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 132,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 7833.79,
+  "uid": "batch-7664fcb9-00012-000",
+  "finalAttempt": 0
+}

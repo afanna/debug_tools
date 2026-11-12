@@ -1,0 +1,8 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component details_item3_value: TextBlock.value exceeds its 47vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

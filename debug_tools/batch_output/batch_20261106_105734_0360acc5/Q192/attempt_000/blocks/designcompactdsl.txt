@@ -1,0 +1,5 @@
+["root","Layout",{"layout":"S-title-dual-content"},["title","primary","support"]]
+["title","SingleLineTitle",{"title":"新年倒计时","fontSize":12}]
+["primary","EmphasizedData",{"value":{"path":"/data/countdown/countdownDays"},"unit":"天","fontSize":30}]
+["support","SecondaryBody",{"items":[{"value":"距离2027年1月1日新年倒计时","maxLines":2}],"fontSize":12}]
+["/data/countdown/countdownDays",30]

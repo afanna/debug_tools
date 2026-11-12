@@ -1,0 +1,21 @@
+{
+  "id": "Q351",
+  "fileName": "Q351.json",
+  "title": "桌面聚合卡片",
+  "query": "创建一张聚合卡片，显示当前天气、手机电量、今日运动健康数据和耗电应用排行。",
+  "size": "2x4",
+  "sequence": 15,
+  "status": "success",
+  "attemptCount": 1,
+  "elapsedMs": 6799.1,
+  "errorCode": "",
+  "error": "",
+  "artifactAvailable": true,
+  "dslAvailable": true,
+  "traceStatus": "complete",
+  "traceRecordCount": 74,
+  "traceSchemaVersion": "generation-trace-v2",
+  "traceDurationMs": 6793.67,
+  "uid": "batch-0360acc5-00015-000",
+  "finalAttempt": 0
+}

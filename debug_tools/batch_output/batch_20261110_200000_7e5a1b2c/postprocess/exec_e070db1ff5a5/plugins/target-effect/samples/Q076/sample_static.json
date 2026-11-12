@@ -1,0 +1,200 @@
+{
+  "sampleId": "Q076",
+  "size": "2x2",
+  "genuiPath": "D:\\卡片\\query\\CreateMyCard\\debug_tools\\batch_output\\batch_20261110_200000_7e5a1b2c\\Q076\\attempt_000\\genui.jsonl",
+  "oracle": {
+    "sampleId": "Q076",
+    "scenario": "repeat_day",
+    "timezone": "Asia/Shanghai",
+    "referenceDate": "2026-11-03",
+    "targetDate": "2026-11-03",
+    "expectedDays": 0,
+    "expectedRelationText": "就是今天",
+    "expectedTargetDateText": "2026/11/03",
+    "writeResultTo": "/data/dateCounter",
+    "fields": [
+      "/days",
+      "/relationText",
+      "/targetDateText"
+    ],
+    "arguments": {
+      "targetDate": "2026-10-14",
+      "repeat": {
+        "unit": "day",
+        "interval": 2
+      }
+    },
+    "gate": false,
+    "provenance": {
+      "targetDate": "explicit",
+      "days": "ambiguous",
+      "relationText": "ambiguous",
+      "targetDateText": "ambiguous"
+    },
+    "notes": [
+      "下一次触发日与参考日相同，需确认“今天是否算下一次”"
+    ]
+  },
+  "injected": [
+    {
+      "path": "/data/dateCounter/days",
+      "value": 0
+    },
+    {
+      "path": "/data/dateCounter/relationText",
+      "value": "就是今天"
+    },
+    {
+      "path": "/data/dateCounter/targetDateText",
+      "value": "2026/11/03"
+    }
+  ],
+  "spec": [
+    {
+      "rule": "SPEC.RADIUS",
+      "status": "pass",
+      "expected": "20",
+      "actual": "20",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.PADDING",
+      "status": "pass",
+      "expected": "12",
+      "actual": "12.0",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.BG_FULL_BLEED",
+      "status": "pass",
+      "expected": "铺满的背景图",
+      "actual": "__post_theme_base",
+      "severity": "major",
+      "evidence": {
+        "images": [
+          "__post_theme_base"
+        ]
+      }
+    },
+    {
+      "rule": "SPEC.MASK",
+      "status": "fail",
+      "expected": "黑色蒙层 60%",
+      "actual": "最接近的黑色层 无 alpha=0.00",
+      "severity": "major",
+      "evidence": {
+        "component": "",
+        "alpha": 0.0
+      }
+    },
+    {
+      "rule": "SPEC.TITLE_REQUIRED",
+      "status": "pass",
+      "expected": "存在标题区",
+      "actual": "title_title",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.TITLE_FONT",
+      "status": "fail",
+      "expected": "16 或 20",
+      "actual": "12.0",
+      "severity": "major",
+      "evidence": {
+        "component": "title_title"
+      }
+    },
+    {
+      "rule": "SPEC.TITLE_ELLIPSIS",
+      "status": "fail",
+      "expected": "maxLines=1 且 textOverflow=ellipsis",
+      "actual": "maxLines=1, textOverflow=None",
+      "severity": "major",
+      "evidence": {
+        "component": "title_title"
+      }
+    },
+    {
+      "rule": "SPEC.TITLE_COLOR",
+      "status": "fail",
+      "expected": "白色 100%",
+      "actual": "alpha=0.8",
+      "severity": "minor",
+      "evidence": {
+        "component": "title_title"
+      }
+    },
+    {
+      "rule": "SPEC.PRIMARY_FONT",
+      "status": "fail",
+      "expected": "56 或 38",
+      "actual": "30.0",
+      "severity": "major",
+      "evidence": {
+        "component": "days_value",
+        "expectedDays": 0,
+        "digits": 1
+      }
+    },
+    {
+      "rule": "SPEC.UNIT_FONT",
+      "status": "fail",
+      "expected": "16",
+      "actual": "12.0",
+      "severity": "major",
+      "evidence": {
+        "component": "days_unit"
+      }
+    },
+    {
+      "rule": "SPEC.SUPPORT_FONT",
+      "status": "fail",
+      "expected": "16",
+      "actual": "12.0",
+      "severity": "major",
+      "evidence": {
+        "component": "target_item0_value"
+      }
+    },
+    {
+      "rule": "SPEC.SUPPORT_COLOR",
+      "status": "fail",
+      "expected": "白色 60%",
+      "actual": "alpha=1.0",
+      "severity": "minor",
+      "evidence": {
+        "component": "target_item0_value"
+      }
+    },
+    {
+      "rule": "SPEC.CONTENT_TYPE",
+      "status": "pass",
+      "expected": "C1–C5 之一",
+      "actual": "C3 小数字",
+      "severity": "minor",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.PATTERN_GEOMETRY",
+      "status": "na",
+      "expected": "图案几何",
+      "actual": "非图案类",
+      "severity": "major",
+      "evidence": {}
+    },
+    {
+      "rule": "SPEC.DIGIT_LIMIT",
+      "status": "pass",
+      "expected": "最多 6 位",
+      "actual": "1 位",
+      "severity": "major",
+      "evidence": {
+        "expectedDays": 0,
+        "hasPrimary": true
+      }
+    }
+  ]
+}

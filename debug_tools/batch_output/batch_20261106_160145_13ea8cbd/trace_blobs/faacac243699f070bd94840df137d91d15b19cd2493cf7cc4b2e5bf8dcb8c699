@@ -1,0 +1,19 @@
+{
+  "agentInstruction": "已返回生成结果，本轮无需且不得再次调用生成接口。不要为确认结果、继续优化、补内容、补回复或补 URL 重调，也不要切换入口或自动转编辑。请按实际结果处理来源，并在宿主允许时回复；本指引不向用户展示。只有用户后续明确提出新的创建或修改需求，才可开始新任务。",
+  "artifactDigest": "sha256:2714729f27f1dd141375d8283fa97d6cb256afc1fa62c4b42280dd6a039b7d94",
+  "artifactUrl": "https://obs.todo.local/widget/artifact_bbac8cd7-f213-422b-912e-c1fc1ebae35d.md",
+  "effectiveCapabilities": {
+    "asset": [
+      "asset.calendar_fill"
+    ],
+    "data": [],
+    "event": []
+  },
+  "errorCode": "",
+  "omittedRequirements": [
+    "11月12日及之后全部会议日程未展示"
+  ],
+  "removedCapabilities": [],
+  "status": "degraded",
+  "suggestSize": "2x2"
+}

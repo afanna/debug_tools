@@ -1,0 +1,44 @@
+[
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文有2个对象，计划含1个核心组、共1组；不能删除核心对象或以共享说明代替本条目。",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 contest 缺少完整展示文字 '申苏浙皖改扩建第TJ01标工地试验室摘得团体一等奖'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "COMPACT_STATIC_CORE_MISSING: 组 contest 缺少完整展示文字 '20支代表队、60名检测精英同场竞技'；须在该对象或条目内恢复，不能从其它栏或note补足。",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_COVERAGE_WARNING",
+    "message": "COMPACT_STATIC_GROUP_MISMATCH: 正文存在未匹配计划的额外对象。",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_PLAN_FACT_OMITTED",
+    "message": "Plan fact was omitted by the bounded fallback: 另有两家单位获团体二等奖、三家单位获团体三等奖的补充信息，因主结论文字已占两行且剩余高度不足，整条省略.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item0_secondaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  },
+  {
+    "code": "COMPACT_DSL_VALIDATION_WARNING",
+    "message": "component body__static_item1_secondaryText: static text exceeds its 102vp single-line text area and will be rendered with an ellipsis.",
+    "severity": "warning",
+    "stage": "validation"
+  }
+]

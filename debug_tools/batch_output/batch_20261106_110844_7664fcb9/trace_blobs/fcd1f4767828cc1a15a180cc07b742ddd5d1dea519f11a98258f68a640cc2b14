@@ -1,0 +1,72 @@
+{
+  "assetAssignments": {
+    "actions": [
+      {
+        "actionId": "event.call.phone",
+        "assetId": "asset.ic_call_bule"
+      }
+    ],
+    "title": {
+      "assetId": "asset.ic_weatherWarning"
+    }
+  },
+  "info_required": [
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/condition",
+      "priority": "must",
+      "requirement": "当前天气现象"
+    },
+    {
+      "componentHints": [
+        "EmphasisText",
+        "SecondaryBody"
+      ],
+      "dataId": "/data/weather/current/temperatureText",
+      "priority": "must",
+      "requirement": "当前温度"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "dataId": "/data/weather/current/alertLevel",
+      "priority": "must",
+      "requirement": "气象预警等级"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "TableText"
+      ],
+      "dataId": "/data/weather/daily/0/temperatureRangeText",
+      "priority": "must",
+      "requirement": "今日温度范围"
+    },
+    {
+      "componentHints": [
+        "SecondaryBody",
+        "EmphasisText"
+      ],
+      "priority": "must",
+      "requirement": "家人王苏东的电话号码 15251852906",
+      "text": "家人王苏东的电话号码为15251852906"
+    },
+    {
+      "actionId": "event.call.phone",
+      "componentHints": [
+        "CardButton",
+        "PillButton"
+      ],
+      "priority": "must",
+      "requirement": "拨打家人王苏东电话 15251852906"
+    }
+  ],
+  "layoutHints": [
+    "W-content-side-slots"
+  ]
+}

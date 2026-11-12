@@ -1,0 +1,7 @@
+[
+  {
+    "code": "COMPACT_DSL_VALIDATION_FAILED",
+    "message": "content: TableText.items requires 2 to 3 entries.",
+    "stage": "validation"
+  }
+]

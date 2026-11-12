@@ -1,0 +1,4 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"center","justifyContent":"center","padding":12},["content"]]
+["content","DataDisplay",{"icon":"resources/base/media/ic_weather_monochrome.svg","value":{"path":"/data/weather/current/temperatureText"},"supportingText":{"path":"/data/weather/current/condition"},"width":"matchParent"}]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]

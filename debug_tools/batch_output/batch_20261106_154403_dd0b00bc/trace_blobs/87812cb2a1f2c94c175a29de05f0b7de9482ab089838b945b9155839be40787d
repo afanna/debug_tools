@@ -1,0 +1,94 @@
+{
+  "bundleName": "com.huawei.genui",
+  "candidateAssetIds": [
+    "asset.emoji_bluetooth_earbuds_black",
+    "asset.emoji_earbud_case_black",
+    "asset.ic_Bluetooth"
+  ],
+  "candidateDataBindings": [
+    {
+      "arguments": {},
+      "candidateOutputFields": [
+        "/isConnected",
+        "/earphoneName",
+        "/batteryLevel",
+        "/chargingStatusDesc",
+        "/leftBatteryLevel",
+        "/leftChargingStatusDesc",
+        "/rightBatteryLevel",
+        "/rightChargingStatusDesc"
+      ],
+      "capabilityId": "GetEarphoneInfo",
+      "writeResultTo": "/data/earphone"
+    }
+  ],
+  "candidateEventCandidates": [],
+  "content": {
+    "bundleName": "com.huawei.genui",
+    "candidateAssetIds": [
+      "asset.emoji_bluetooth_earbuds_black",
+      "asset.emoji_earbud_case_black",
+      "asset.ic_Bluetooth"
+    ],
+    "candidateDataBindings": [
+      {
+        "arguments": {},
+        "candidateOutputFields": [
+          "/isConnected",
+          "/earphoneName",
+          "/batteryLevel",
+          "/chargingStatusDesc",
+          "/leftBatteryLevel",
+          "/leftChargingStatusDesc",
+          "/rightBatteryLevel",
+          "/rightChargingStatusDesc"
+        ],
+        "capabilityId": "GetEarphoneInfo",
+        "writeResultTo": "/data/earphone"
+      }
+    ],
+    "candidateEventCandidates": [],
+    "description": "连接与电量速览",
+    "functionName": "generateWidgetCardCompactDsl",
+    "romVersion": "HOP-AL10 7.0.0.109",
+    "size": "2x2",
+    "title": "耳机状态",
+    "uid": "batch-dd0b00bc-00044-000",
+    "userQuery": "创建耳机卡片，展示耳机连接状态、设备名称、耳机盒电量、左右耳机电量及充电状态"
+  },
+  "description": "连接与电量速览",
+  "deviceInfo": {
+    "countryCode": "CN",
+    "deviceFormation": "HDSpeaker",
+    "deviceType": 0,
+    "locale": "zh-CN",
+    "phoneType": "ohos",
+    "prdVer": "11.7.8.303",
+    "sysVer": "EmotionUI_9.0.0",
+    "time": "20261104090602633"
+  },
+  "functionName": "generateWidgetCardCompactDsl",
+  "pagination": {
+    "limit": 5,
+    "start": ""
+  },
+  "romVersion": "HOP-AL10 7.0.0.109",
+  "session": {
+    "interactionId": "Q456-000",
+    "isNew": true,
+    "sessionId": "batch-dd0b00bc"
+  },
+  "size": "2x2",
+  "title": "耳机状态",
+  "userAuth": {
+    "user": {
+      "userId": "batch-dd0b00bc-00044-000"
+    }
+  },
+  "userQuery": "创建耳机卡片，展示耳机连接状态、设备名称、耳机盒电量、左右耳机电量及充电状态",
+  "utterance": {
+    "original": "",
+    "type": "text"
+  },
+  "version": "1.0"
+}

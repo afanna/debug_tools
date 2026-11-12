@@ -1,0 +1,21 @@
+{
+  "title": "实时天气",
+  "description": "实时天气卡片，显示当前位置、实时温度、天气变化和空气质量，支持一键拨打电话",
+  "suggestSize": "2x2",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "districtName": "滨江区",
+        "forecastDays": 3,
+        "prefectureName": "杭州市"
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}

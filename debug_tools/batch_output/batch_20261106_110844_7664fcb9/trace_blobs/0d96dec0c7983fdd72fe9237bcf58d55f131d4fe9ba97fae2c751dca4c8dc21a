@@ -1,0 +1,76 @@
+{
+  "contentGroups": [
+    {
+      "factIndexes": [
+        0
+      ],
+      "id": "pwd_title",
+      "identity": null,
+      "kind": "shared"
+    },
+    {
+      "factIndexes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "id": "pwd",
+      "identity": "密码",
+      "kind": "object"
+    }
+  ],
+  "sourcePositions": [
+    {
+      "factIndex": 0,
+      "positions": [
+        {
+          "end": 68,
+          "start": 40
+        }
+      ],
+      "sourceText": "图片显示操作成功，密码为 88122092，类型为永久。"
+    },
+    {
+      "factIndex": 1,
+      "positions": [
+        {
+          "end": 68,
+          "start": 40
+        }
+      ],
+      "sourceText": "图片显示操作成功，密码为 88122092，类型为永久。"
+    },
+    {
+      "factIndex": 2,
+      "positions": [
+        {
+          "end": 68,
+          "start": 40
+        }
+      ],
+      "sourceText": "图片显示操作成功，密码为 88122092，类型为永久。"
+    },
+    {
+      "factIndex": 3,
+      "positions": [
+        {
+          "end": 68,
+          "start": 40
+        }
+      ],
+      "sourceText": "图片显示操作成功，密码为 88122092，类型为永久。"
+    },
+    {
+      "factIndex": 4,
+      "positions": [
+        {
+          "end": 68,
+          "start": 40
+        }
+      ],
+      "sourceText": "图片显示操作成功，密码为 88122092，类型为永久。"
+    }
+  ],
+  "version": "static-content-v1"
+}

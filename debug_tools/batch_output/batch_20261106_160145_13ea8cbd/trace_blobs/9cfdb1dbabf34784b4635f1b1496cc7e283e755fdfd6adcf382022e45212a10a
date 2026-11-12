@@ -1,0 +1,8 @@
+{
+  "errors": [
+    "Plan static text is not fully visible in DSL: 每日锻炼计划：俯卧撑10个、深蹲20个、开合跳30个."
+  ],
+  "informationCoverageSeverity": "error",
+  "omittedFacts": [],
+  "warnings": []
+}

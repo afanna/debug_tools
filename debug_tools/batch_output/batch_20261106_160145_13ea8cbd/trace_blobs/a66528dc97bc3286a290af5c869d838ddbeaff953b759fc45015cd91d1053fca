@@ -1,0 +1,5 @@
+["root","Column",{"width":"matchParent","height":"matchParent","borderRadius":20,"clip":true,"alignItems":"center","justifyContent":"center","padding":12},["content"]]
+["content","DataDisplay",{"label":"辉县市今日","value":{"path":"/data/weather/current/temperatureText"},"supportingText":{"path":"/data/weather/current/condition"},"width":"matchParent"}]
+["/data/weather/current/temperatureText","29℃"]
+["/data/weather/current/condition","多云"]
+["/data/weather/location/cityCode","60814"]

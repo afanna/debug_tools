@@ -1,0 +1,117 @@
+# Batch batch_20261106_154406_19bdad45
+
+- 状态: running
+- 开始时间: 2026-11-06T07:46:37.573425Z
+- 总数: 107
+- 成功/降级/失败: 5/1/0
+- Trace 告警: 0
+
+| 样本 | 状态 | 尝试 | 耗时(ms) | Trace | 错误码 |
+|---|---|---:|---:|---|---|
+| Q413 | success | 1 | 4157.28 | complete |  |
+| Q414 | degraded | 1 | 12282.54 | complete |  |
+| Q415 | success | 1 | 4205.27 | complete |  |
+| Q416 | success | 1 | 3944.94 | complete |  |
+| Q417 | success | 1 | 9178.93 | pending |  |
+| Q418 | running | 1 | 0.0 | pending |  |
+| Q419 | success | 1 | 4252.85 | complete |  |
+| Q420 | running | 1 | 0.0 | pending |  |
+| Q421 | running | 1 | 0.0 | pending |  |
+| Q422 | queued | 0 | 0.0 | pending |  |
+| Q423 | queued | 0 | 0.0 | pending |  |
+| Q424 | queued | 0 | 0.0 | pending |  |
+| Q425 | queued | 0 | 0.0 | pending |  |
+| Q426 | queued | 0 | 0.0 | pending |  |
+| Q427 | queued | 0 | 0.0 | pending |  |
+| Q428 | queued | 0 | 0.0 | pending |  |
+| Q429 | queued | 0 | 0.0 | pending |  |
+| Q430 | queued | 0 | 0.0 | pending |  |
+| Q431 | queued | 0 | 0.0 | pending |  |
+| Q432 | queued | 0 | 0.0 | pending |  |
+| Q433 | queued | 0 | 0.0 | pending |  |
+| Q434 | queued | 0 | 0.0 | pending |  |
+| Q435 | queued | 0 | 0.0 | pending |  |
+| Q436 | queued | 0 | 0.0 | pending |  |
+| Q437 | queued | 0 | 0.0 | pending |  |
+| Q438 | queued | 0 | 0.0 | pending |  |
+| Q439 | queued | 0 | 0.0 | pending |  |
+| Q440 | queued | 0 | 0.0 | pending |  |
+| Q441 | queued | 0 | 0.0 | pending |  |
+| Q442 | queued | 0 | 0.0 | pending |  |
+| Q443 | queued | 0 | 0.0 | pending |  |
+| Q444 | queued | 0 | 0.0 | pending |  |
+| Q445 | queued | 0 | 0.0 | pending |  |
+| Q446 | queued | 0 | 0.0 | pending |  |
+| Q447 | queued | 0 | 0.0 | pending |  |
+| Q448 | queued | 0 | 0.0 | pending |  |
+| Q449 | queued | 0 | 0.0 | pending |  |
+| Q450 | queued | 0 | 0.0 | pending |  |
+| Q451 | queued | 0 | 0.0 | pending |  |
+| Q452 | queued | 0 | 0.0 | pending |  |
+| Q453 | queued | 0 | 0.0 | pending |  |
+| Q454 | queued | 0 | 0.0 | pending |  |
+| Q455 | queued | 0 | 0.0 | pending |  |
+| Q456 | queued | 0 | 0.0 | pending |  |
+| Q457 | queued | 0 | 0.0 | pending |  |
+| Q458 | queued | 0 | 0.0 | pending |  |
+| Q459 | queued | 0 | 0.0 | pending |  |
+| Q460 | queued | 0 | 0.0 | pending |  |
+| Q461 | queued | 0 | 0.0 | pending |  |
+| Q462 | queued | 0 | 0.0 | pending |  |
+| Q463 | queued | 0 | 0.0 | pending |  |
+| Q464 | queued | 0 | 0.0 | pending |  |
+| Q465 | queued | 0 | 0.0 | pending |  |
+| Q466 | queued | 0 | 0.0 | pending |  |
+| Q467 | queued | 0 | 0.0 | pending |  |
+| Q468 | queued | 0 | 0.0 | pending |  |
+| Q469 | queued | 0 | 0.0 | pending |  |
+| Q470 | queued | 0 | 0.0 | pending |  |
+| Q471 | queued | 0 | 0.0 | pending |  |
+| Q472 | queued | 0 | 0.0 | pending |  |
+| Q473 | queued | 0 | 0.0 | pending |  |
+| Q474 | queued | 0 | 0.0 | pending |  |
+| Q475 | queued | 0 | 0.0 | pending |  |
+| Q476 | queued | 0 | 0.0 | pending |  |
+| Q477 | queued | 0 | 0.0 | pending |  |
+| Q478 | queued | 0 | 0.0 | pending |  |
+| Q479 | queued | 0 | 0.0 | pending |  |
+| Q480 | queued | 0 | 0.0 | pending |  |
+| Q481 | queued | 0 | 0.0 | pending |  |
+| Q482 | queued | 0 | 0.0 | pending |  |
+| Q483 | queued | 0 | 0.0 | pending |  |
+| Q484 | queued | 0 | 0.0 | pending |  |
+| Q485 | queued | 0 | 0.0 | pending |  |
+| Q486 | queued | 0 | 0.0 | pending |  |
+| Q487 | queued | 0 | 0.0 | pending |  |
+| Q488 | queued | 0 | 0.0 | pending |  |
+| Q489 | queued | 0 | 0.0 | pending |  |
+| Q490 | queued | 0 | 0.0 | pending |  |
+| Q491 | queued | 0 | 0.0 | pending |  |
+| Q492 | queued | 0 | 0.0 | pending |  |
+| Q493 | queued | 0 | 0.0 | pending |  |
+| Q494 | queued | 0 | 0.0 | pending |  |
+| Q495 | queued | 0 | 0.0 | pending |  |
+| Q496 | queued | 0 | 0.0 | pending |  |
+| Q497 | queued | 0 | 0.0 | pending |  |
+| Q498 | queued | 0 | 0.0 | pending |  |
+| Q499 | queued | 0 | 0.0 | pending |  |
+| Q500 | queued | 0 | 0.0 | pending |  |
+| Q501 | queued | 0 | 0.0 | pending |  |
+| Q502 | queued | 0 | 0.0 | pending |  |
+| Q503 | queued | 0 | 0.0 | pending |  |
+| Q504 | queued | 0 | 0.0 | pending |  |
+| Q505 | queued | 0 | 0.0 | pending |  |
+| Q506 | queued | 0 | 0.0 | pending |  |
+| Q507 | queued | 0 | 0.0 | pending |  |
+| Q508 | queued | 0 | 0.0 | pending |  |
+| Q509 | queued | 0 | 0.0 | pending |  |
+| Q510 | queued | 0 | 0.0 | pending |  |
+| Q511 | queued | 0 | 0.0 | pending |  |
+| Q512 | queued | 0 | 0.0 | pending |  |
+| Q513 | queued | 0 | 0.0 | pending |  |
+| Q514 | queued | 0 | 0.0 | pending |  |
+| Q515 | queued | 0 | 0.0 | pending |  |
+| Q516 | queued | 0 | 0.0 | pending |  |
+| Q517 | queued | 0 | 0.0 | pending |  |
+| Q518 | queued | 0 | 0.0 | pending |  |
+| Q519 | queued | 0 | 0.0 | pending |  |

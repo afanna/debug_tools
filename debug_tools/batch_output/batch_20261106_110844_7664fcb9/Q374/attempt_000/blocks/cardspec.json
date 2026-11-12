@@ -1,0 +1,19 @@
+{
+  "title": "多日天气",
+  "description": "多日天气预报",
+  "suggestSize": "2x4",
+  "imageDomainWhitelist": [
+    "hag-ability-test.obs.cn-north-1.myhuaweicloud.com",
+    "lfcontentcenterdev.hwcloudtest.cn",
+    "hagres-drcn.dbankcdn.com"
+  ],
+  "dataBindings": [
+    {
+      "capabilityId": "ViewWeather",
+      "arguments": {
+        "forecastDays": 5
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}

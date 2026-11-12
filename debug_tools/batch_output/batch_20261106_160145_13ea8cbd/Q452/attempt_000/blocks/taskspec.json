@@ -1,0 +1,52 @@
+{
+  "userQuery": "创建一张低电量卡片，显示当前手机电量",
+  "size": "2x2",
+  "appVersion": "11.7.9.300",
+  "eventCandidates": [
+    {
+      "id": "event.open.settings.battery",
+      "description": "打开华为手机自带的系统设置中的电池页。",
+      "call": "clickToDeeplink",
+      "args": {
+        "abilityName": "com.huawei.hmos.settings.MainAbility",
+        "bundleName": "com.huawei.hmos.settings",
+        "intentName": "Settings",
+        "uri": "battery"
+      }
+    }
+  ],
+  "dataModelSchema": {
+    "data": {
+      "phoneBattery": {
+        "batterySOCText": {
+          "type": "string",
+          "description": "可直接显示的当前手机设备剩余电量文本，已包含“%”单位；展示时不得再次追加“%”。",
+          "sampleValue": "68%",
+          "numericSource": "/data/phoneBattery/batterySOC"
+        },
+        "chargingStatusDesc": {
+          "type": "string",
+          "description": "当前设备电池的充电状态文本描述。",
+          "sampleValue": "未充电"
+        },
+        "batteryCapacityLevelDesc": {
+          "type": "string",
+          "description": "设备电池电量等级的语义化文本描述。",
+          "sampleValue": "正常电量"
+        },
+        "batterySOC": {
+          "type": "integer",
+          "description": "当前手机设备剩余电量的纯整数百分比，取值范围为 0 到 100，返回值不包含“%”。若直接用于文本展示，必须在数值后追加“%”；优先使用 batterySOCText。",
+          "sampleValue": 68
+        }
+      }
+    }
+  },
+  "assetCandidates": [
+    {
+      "id": "asset.battery_leaf_fill",
+      "src": "resources/base/media/battery_leaf_fill.svg",
+      "description": "样式：默认黑色的单色实心横向电池图标，电池内部为叶片留白；适用：电池相关场景，包括电量、省电模式、节能电池、绿色用电状态，也可作为电池健康或电池温度信息的辅助图标，相关数据可结合 GetPhoneBatteryInfo 展示。图标本身不表示具体电量、健康等级或温度高低。"
+    }
+  ]
+}
